@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="ie7 no-js" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 no-js" lang="fr"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 no-js" lang="fr"> <![endif]-->
+<html lang="fr" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<title>Ronan Levesque - Automatiser son workflow avec Grunt</title>
+	<!-- Remove this if Modernizr is used -->
+	<script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
+	<meta name="description" content="Comment tirer parti de la puissance de Grunt pour optimiser votre workflow Frontend">
+	<meta name="author" content="Ronan Levesque">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--[if lte IE 8]><link rel="stylesheet" href="/css/fox-ie.css"><![endif]-->
+	<!--[if gt IE 8]><!--><link rel="stylesheet" href="/css/fox.css"><!--<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700%7CMerriweather+Sans:400,800' rel='stylesheet' type='text/css'>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ 	<![endif]-->
+</head>
+
+<body>
+
+	<header class="main-header" role="banner">
+		<div class="main-header__inner">
+			<div class="main-header__left">
+				<a href="/" class="logo"><img src="/img/logo-ronan-levesque.svg" alt="Logo Ronan Levesque"></a>
+			</div><!--
+			--><div class="main-header__right">
+				<a href="#" class="nav-mobile" data-state="closed">Menu</a>
+			</div><!--
+			--><nav class="main-nav" role="navigation">
+				<ul data-state="closed">
+					<li><a href="/projets">Projets</a></li><!--
+					--><li><a href="/articles" class="selected">Articles</a></li><!--
+					--><li><a href="/a-propos">A propos</a></li><!--
+					--><li><a href="/contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main role="main">
+		<article>
+		  <div class="article__inner">
+				<p class="article__date">Le 02 Septembre 2013</p>
+				<h1>Automatiser son workflow avec Grunt</h1>
+				<p><a href="http://gruntjs.com/">Grunt</a> est un <em>task runner</em> dont le but est d&#39;automatiser certaines tâches répétitives (compilation, minification etc). Il est écrit en JavaScript et fonctionne avec <a href="http://nodejs.org/">Node.js</a>. Dans cet article j&#39;expliquerai comment le configurer et le lancer de manière basique en me basant sur l&#39;exemple de FOX-Boilerplate.</p>
+
+<p class="credits">Mise à jour (29/09/2013) : attention, FOX Boilerplate est régulièrement sujet à des changements et améliorations, il y a donc des risques que la version en ligne ne corresponde plus avec la version décrite dans cet article.</p> 
+
+<p class="liens"><a href="https://github.com/eskiiss/FOX-Boilerplate">Voir FOX-Boilerplate sur Github</a></p>
+
+<h2>Un outil extrêmement puissant</h2>
+
+<p>Le gros avantage de Grunt est donc son automatisation. En quelques secondes et une ligne de commande, il sera capable de conduire un très large nombre de tâches :</p>
+
+<ul>
+<li>Minifier et concaténer des fichiers JS</li>
+<li>Tester les fichiers JS avec JSHint</li>
+<li>Optimiser des images</li>
+<li>Compiler et optimiser des fichiers Sass</li>
+<li>Nettoyer des sprites inutiles</li>
+<li>etc.</li>
+</ul>
+
+<p>Ceci n&#39;est qu&#39;un petit aperçu, sachant qu&#39;il existe des centaines de tâches différentes. Dans l&#39;exemple d&#39;aujourd&#39;hui, je n&#39;en présenterai que quelques unes.</p>
+
+<h2>Installation</h2>
+
+<p>Avant toute chose, il vous faudra installer <a href="http://nodejs.org/">Node.js et NPM</a> sur votre ordinateur. NPM est le <em>package manager</em> de Node, qui va permettre d&#39;installer Grunt.</p>
+
+<p>Ensuite, il va falloir installer l&#39;interface de commande de Grunt. Depuis votre ligne de commande habituelle, entrez la commande suivante :</p>
+
+<pre class="prettyprint">npm install -g grunt-cli</pre>
+
+<p>Cela va permettre de lancer Grunt de n&#39;importe où sur votre système.</p>
+
+<h2>Configuration</h2>
+
+<p>Grunt a besoin de deux fichiers pour fonctionner : <code>package.json</code> et <code>Gruntfile.js</code>. Ce seront les deux fichiers de configuration de votre projet.</p>
+
+<h3>package.json</h3>
+
+<p>Ce fichier doit être situé à la racine du projet. Il contient des métadonnées (nom du projet, version etc.) ainsi que les modules Grunt utilisés, appelés <code>devDependencies</code>. On peut créer un <code>package.json</code> de plusieurs manières : avec <a href="http://gruntjs.com/project-scaffolding">grunt init</a> (automatisation de la création du projet), <a href="https://npmjs.org/doc/init.html">npm init</a> (création d&#39;un fichier sur mesure via NPM), ou en créant soi-même le fichier. Choisissons la dernière solution, en prenant l&#39;exemple de FOX-boilerplate :</p>
+
+<pre class="prettyprint">{
+  "name": "FOX-Boilerplate",
+  "version": "0.1.0",
+  "description": "Boilerplate with Grunt and FOX CSS",
+  "author": "Ronan Levesque",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-autoprefixer": "~0.3.0",
+    "grunt-csso": "~0.5.0",
+    "grunt-contrib-imagemin": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-concat": "~0.3.0",
+    "matchdep": "~0.1.2" 
+  }
+}</pre>
+
+<p>On a donc défini ici le nom, la version, la description et l&#39;auteur du projet ainsi que les différentes dépendances du projet. Celles-ci sont équivalentes aux plugins que l&#39;on devra installer pour que Grunt fonctionne correctement. Ces plugins s&#39;installent de la manière suivante :</p>
+
+<pre class="prettyprint">npm install &lt;nom-du-plugin&gt; --save-dev</pre>
+
+<p>Le flag <code>--save-dev</code> permet d&#39;inscrire le plugin dans dans la section <code>devDependencies</code> du <code>package.json</code>.</p>
+
+<h3>Gruntfile.js</h3>
+
+<p>Ce fichier doit également être placé à la racine du projet. C&#39;est le fichier de configuration dans lequel toutes les tâches seront définies. Nous allons regarder en détails sa construction. Tout d&#39;abord, on commence par créer une fonction principale dans laquelle ira l&#39;ensemble de notre code :</p>
+
+<pre class="pre-js prettyprint">module.exports = function(grunt) {}</pre>
+
+<p>Ensuite, on loade l&#39;ensemble de nos tâches :</p>
+
+<pre class="pre-js prettyprint">require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);</pre>
+
+<p>NOTE : l&#39;exemple du site officiel préconise de le faire d&#39;une <a href="http://gruntjs.com/sample-gruntfile">manière différente <sup>EN</sup></a>, en loadant les plugins ligne par ligne, mais <code>matchdep</code> permet de tous les loader en une seule ligne de code.</p>
+
+<p>On configure après cela les différentes tâches nécessaires au projet de cette façon :</p>
+
+<pre class="pre-js prettyprint">grunt.initConfig({
+  pkg: grunt.file.readJSON('package.json'),
+
+  sass: {
+    // Config Compass
+  },
+
+  concat: {
+    // Config concaténation
+  },
+
+  uglify: {
+    // Config uglify
+  },
+
+  etc.
+
+});</pre>
+
+<p>Il est important de bien comprendre la façon dont ces tâches se configurent. Différentes écritures existent, bien détaillées <a href="http://gruntjs.com/configuring-tasks">sur le site officiel <sup>EN</sup></a>.</p>
+
+<p>La dernière partie du code contient les tâches et leur customisation. Une tâche par défaut s&#39;écrira de la manière suivante :</p>
+
+<pre class="pre-js prettyprint">grunt.registerTask('default', 'watch');</pre>
+
+<p>Et se lancera depuis la ligne de commande avec un simple <code>grunt</code>.</p>
+
+<p>Les tâches peuvent aussi être customisées. Par exemple, si on souhaite uniquement lancer JSHint, concaténer et minifier nos scripts, on pourra ajouter une nouvelle tâche qui s&#39;écrira de la façon suivante :</p>
+
+<pre class="pre-js prettyprint">grunt.registerTask('js', ['jshint', 'concat', 'uglify']);</pre>
+
+<p>La tâche sera ensuite lancée grâce à <code>grunt js</code>.</p>
+
+<h3>Configuration des tâches</h3>
+
+<p>Cette partie est en quelque sorte le coeur de votre Gruntfile, puisqu&#39;elle va déterminer ce que chaque tâche qui a été installée est supposée faire. Je vais rentrer ici dans le détail des <a href="https://github.com/eskiiss/FOX-Boilerplate/blob/master/Gruntfile.js">différentes tâches</a> de FOX-Boilerplate. Pour info, <a href="http://integralist.co.uk/Grunt-Boilerplate.html">cet article</a> de <a href="https://twitter.com/integralist">@integralist</a> m&#39;a bien aidé à y voir plus clair sur la config des tâches.</p>
+
+<p><strong>SASS</strong></p>
+
+<pre class="pre-js prettyprint">sass: {
+  dist: {
+    options: {
+      style: 'expanded'
+    },
+    expand: true,
+    cwd: 'css/sass/',
+    src: ['*.scss', '!_*.scss'],
+    dest: 'css/',
+    ext: '.css'
+  }
+}</pre>
+
+<p>Je pense qu&#39;il n&#39;est plus besoin de présenter Sass, mais au besoin je vous invite à lire cet <a href="http://ronanlevesque.fr/le-jour-ou-jai-teste-sass/">article</a>. Ici, on définit d&#39;abord les options de Sass (le CSS ne sera pas compressé après compilation), puis les différents paramètres : <code>expand: true</code> permet de cibler des fichiers multiples, <code>cwd</code> est le dossier dans lequel aller chercher les fichiers, <code>src</code> seront les fichiers sources. Le <code>!</code> permet d&#39;exclure certains fichiers (dans ce cas de figure, les fichiers partiels Sass qui n&#39;ont pas besoin d&#39;être compilés). <code>dest</code> est le dossier de destination, <code>ext</code> le format auquel les fichiers seront compilés.</p>
+
+<p><strong>AUTOPREFIXER</strong></p>
+
+<pre class="pre-js prettyprint">autoprefixer: {
+  multiple_files: {
+    expand: true,
+    flatten: true,
+    src: 'css/*.css',
+    dest: 'css/'
+  }
+}</pre>
+
+<p>Autoprefixer est un outil puissant qui permet de préfixer automatiquement les différentes propriétés CSS3 ou de supprimer des préfixes obsolètes en allant chercher les infos directement dans la base de <a href="http://caniuse.com/">CanIuse</a>. Dans cet exemple, c&#39;est grosso modo la même chose que pour Sass, à la différence que <code>flatten: true</code> va permettre &quot;d&#39;aplatir&quot; les résultats à un même niveau.</p>
+
+<p><strong>JSHINT</strong></p>
+
+<pre class="pre-js prettyprint">jshint: {
+  files: ['gruntfile.js', 'js/**/*.js', '!js/plugins/*.js']
+}</pre>
+
+<p>Cette tâche permet de lancer les tests JSHint sur l&#39;ensemble de mes fichiers JavaScript, à l&#39;exception des plugins externes qui sont régulièrement sources de messages d&#39;erreurs.</p>
+
+<p><strong>CSSO</strong></p>
+
+<pre class="pre-js prettyprint">csso: {
+  multiple_files: {
+    expand: true,
+    flatten: true,
+    src: 'css/*.css',
+    dest: 'css/'
+  }
+}</pre>
+
+<p>CSSO minifiera tous les fichiers situés dans le dossier <code>css/</code>. On retrouve ici nos paramètres habituels.</p>
+
+<p><strong>IMAGEMIN</strong></p>
+
+<pre class="pre-js prettyprint">imagemin: {
+  png: {
+    options: {
+      optimizationLevel: 7
+    },
+    files: [
+      {
+        expand: true,
+        cwd: './img/',
+        src: ['**/*.png'],
+        dest: './img/',
+        ext: '.png'
+      }
+    ]
+  },
+  jpg: {
+    options: {
+      progressive: true
+    },
+    files: [
+      {
+        expand: true,
+        cwd: './img/',
+        src: ['**/*.jpg'],
+        dest: './img/',
+        ext: '.jpg'
+      }
+    ]
+  }
+}</pre>
+
+<p>Imagemin optimise et compresse les images (PNG et JPG). Dans l&#39;exemple ci-dessus, deux sous-tâches ont été créées, une par type de fichier. Si besoin, elles peuvent être ciblées spécifiquement par <code>[imagemin:png]</code> ou <code>[imagemin:jpg]</code>. La première sous-tâche définit le niveau d&#39;optimisation, la deuxième optimise les JPG en les enregistrant au format progressif.</p>
+
+<p><strong>CONCAT</strong></p>
+
+<pre class="pre-js prettyprint">concat: {
+  options: {
+    separator: ';'
+  },
+  dist: {
+    files: {
+      'js/main.js': ['js/plugins/**/*.js']
+    }
+  }
+}</pre>
+
+<p>Concat regroupera tous les fichiers JS située dans le dossier <code>plugin</code> (ou un de ses sous-dossiers) en un seul fichier appelé <code>main.js</code>. Les différents fichiers concaténés seront séparés grâce à <code>;</code>.</p>
+
+<p><strong>UGLIFY</strong></p>
+
+<pre class="pre-js prettyprint">uglify: {
+  js: {
+    files: {
+      'js/main.js': ['js/main.js']
+    }
+  }
+}</pre>
+
+<p>Le rôle d&#39;Uglify et de minifier le fichier <code>main.js</code>.</p>
+
+<p><strong>WATCH</strong></p>
+
+<pre class="pre-js prettyprint">watch: {
+  options: {
+    livereload: true
+  },
+  sass: {
+    files: ['css/sass/**/*.scss'],
+    tasks: ['sass:dist', 'autoprefixer:multiple_files']
+  },
+  html: {
+    files: ['*.html']
+  },
+}</pre>
+
+<p>Cette tâche va surveiller automatiquement certains changements et mettre en place certaines actions, ce qui permet par exemple d&#39;éviter d&#39;avoir à exécuter une commande à chaque changement d&#39;un fichier spécifique. Trois sous-tâches sont définies ici :</p>
+
+<ul>
+<li><code>livereload</code> : couplé à l'extension Livereload (disponible pour <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei">Chrome</a>), <code>livereload</code> rechargera le browser à chaque modification des fichiers surveillés.</li>
+<li><code>sass</code> : surveille tous les fichiers Sass et effectue automatiquement la compilation et "l'auto-préfixage" des fichiers SCSS.</li>
+<li><code>html</code> : mise à jour du browser à chaque modification d'un fichier HTML.</li>
+</ul>
+
+<p>Voilà pour le rapide survol des différentes tâches que j&#39;utilise avec Grunt. Par ailleurs l&#39;ensemble de mon Gruntfile.js est disponible sur <a href="https://github.com/eskiiss/FOX-Boilerplate/blob/master/Gruntfile.js">Github</a>.</p>
+
+<h2>Conclusion</h2>
+
+<p>Ce tutoriel ne fait qu&#39;effleurer une partie des possibilités de Grunt; de nombreuses autres tâches existent en effet afin de faciliter votre workflow à travers l&#39;optimisation de nombreuses tâches répétitives. La liste des plugins est accessible sur le <a href="http://gruntjs.com/plugins">site officiel</a>.</p>
+
+        <div class="article__footer">
+          <p class="article__share">Cet article vous a plu ? Partagez-le :
+            <span class="social">
+              <a href="http://twitter.com/home?status=Automatiser son workflow avec Grunt http://ronanlevesque.fr/articles/automatiser-workflow-grunt" class="twitter">
+                <img src="/img/twitter-bw.svg" alt="Partager sur Twitter">
+                <img src="/img/twitter.svg" class="bw-hover" alt="Partager sur Twitter">
+              </a>
+              <a href="https://plus.google.com/share?url=http://ronanlevesque.fr/articles/automatiser-workflow-grunt" class="google">
+                <img src="/img/google-bw.svg" alt="Partager sur Google+">
+                <img src="/img/google.svg" class="bw-hover" alt="Partager sur Google+">
+              </a>
+              <a href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://ronanlevesque.fr/articles/automatiser-workflow-grunt&amp;p[title]=Automatiser son workflow avec Grunt" class="facebook">
+                <img src="/img/facebook-bw.svg" alt="Partager sur Facebook">
+                <img src="/img/facebook.svg" class="bw-hover" alt="Partager sur Facebook">
+              </a>
+            </span>
+          </p>
+        </div>
+			</div>
+		</article>
+	</main>
+	<footer class="main-footer" role="contentinfo">
+		<div class="main-footer__inner">
+			<p class="main-footer__left">(c) Ronan Levesque 2014</p><!--
+			--><div class="main-footer__right">
+				<a href="https://twitter.com/ronanlevesque" class="twitter-follow-button" data-show-count="false" data-lang="fr" data-size="large">Suivre @ronanlevesque</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>
+		</div>
+	</footer>
+	<div class="spinner"></div>
+  <!--[if (gte IE 6)&(lte IE 9)]>
+ 	<script src="/js/ie/matchmedia.js"></script>
+ 	<![endif]-->
+	<script src="/js/main.js"></script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-29762874-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body>
+</html>
+
