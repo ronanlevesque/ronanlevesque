@@ -1,4 +1,4 @@
 Ronan Levesque
 ==============
 
-My website assets. Smoooth.
+My website assets.
