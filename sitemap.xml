@@ -8,262 +8,140 @@
 
 <url>
   <loc>http://ronanlevesque.fr/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/a-propos/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/contact/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categories/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/ma-configuration-gulp/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/dans-l-enfer-de-font-face/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/nouvelle-annee-nouveau-site/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/les-anciens-navigateurs/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/like-plus-share/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/automatiser-workflow-grunt/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/css-notation-bem/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/friday-links-5/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/page2/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/html/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/css/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/responsive-design/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/js-jquery/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/sass/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/svg/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/tutoriels/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/outils-ressources/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/friday-links/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/user-experience/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/categorie/divers/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/projets/fox-boilerplate/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/projets/moovies/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/demos/boutons-partage.html</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/refonte-graphique-du-site-et-friday-links/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/android-ergonomie/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/i-hate-u-flat/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/plugins-utiles-pour-sublime-text-2/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/font-size-quelles-solutions/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/friday-links-4/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/fox-css-est-passe-sous-sass/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/text-align-justify-pour-une-nouvelle-technique-de-grilles/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/friday-links-3/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/friday-links-2/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/les-animations-en-css-un-cas-pratique/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/friday-links-1/</loc>
-  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/articles/refonte-graphique-du-site-et-friday-links/</loc>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/les-animations-en-css/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/page3/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/a-propos-du-responsive-design/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/mise-en-page-et-positionnement/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/un-template-complexe-pour-le-responsive-design/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/fox-css-un-framework-css-light/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/les-atouts-de-box-sizing-border-box/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/styler-les-formulaires-sur-iphone/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://ronanlevesque.fr/articles/webdesign-liste-de-ressources-utiles/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/le-scrolling-ce-mal-absolu/</loc>
-  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/articles/un-template-complexe-pour-le-responsive-design/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/articles/fox-css-un-framework-css-light/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/articles/les-atouts-de-box-sizing-border-box/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/articles/webdesign-liste-de-ressources-utiles/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/articles/a-propos-du-responsive-design/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/articles/mise-en-page-et-positionnement/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/articles/styler-les-formulaires-sur-iphone/</loc>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/articles/ouverture-du-blog/</loc>
-  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/html/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/css/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/js-jquery/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/sass/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/outils/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/tutoriels/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/projets/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/friday-links/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/webdesign/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/user-experience/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/iphone/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/categorie/divers/</loc>
+</url>
+<url>
+  <loc>http://ronanlevesque.fr/a-propos/</loc>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/projets/ihateuflat/</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/demos/animations-css3.html</loc>
-  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://ronanlevesque.fr/demos/menu-dropdown-css3.html</loc>
-  <changefreq>weekly</changefreq>
 </url>
 </urlset>
