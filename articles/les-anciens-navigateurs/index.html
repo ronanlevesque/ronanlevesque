@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="ie7 no-js" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 no-js" lang="fr"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 no-js" lang="fr"> <![endif]-->
+<html lang="fr" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<title>Ronan Levesque - Les anciens navigateurs</title>
+	<!-- Remove this if Modernizr is used -->
+	<script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
+	<meta name="description" content="Support des anciens navigateurs grâce à différentes méthodes">
+	<meta name="author" content="Ronan Levesque">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--[if lte IE 8]><link rel="stylesheet" href="/css/fox-ie.css"><![endif]-->
+	<!--[if gt IE 8]><!--><link rel="stylesheet" href="/css/fox.css"><!--<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700%7CMerriweather+Sans:400,800' rel='stylesheet' type='text/css'>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ 	<![endif]-->
+</head>
+
+<body>
+
+	<header class="main-header" role="banner">
+		<div class="main-header__inner">
+			<div class="main-header__left">
+				<a href="/" class="logo"><img src="/img/logo-ronan-levesque.svg" alt="Logo Ronan Levesque"></a>
+			</div><!--
+			--><div class="main-header__right">
+				<a href="#" class="nav-mobile" data-state="closed">Menu</a>
+			</div><!--
+			--><nav class="main-nav" role="navigation">
+				<ul data-state="closed">
+					<li><a href="/projets">Projets</a></li><!--
+					--><li><a href="/articles" class="selected">Articles</a></li><!--
+					--><li><a href="/a-propos">A propos</a></li><!--
+					--><li><a href="/contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main role="main">
+		<article>
+		  <div class="article__inner">
+				<p class="article__date">Le 12 Octobre 2013</p>
+				<h1>Les anciens navigateurs</h1>
+				<p>La vie serait beaucoup plus simple si on n&#39;avait plus à assurer le support des antiquités que sont IE6, 7 et 8. Malheureusement au quotidien ça n&#39;est pas toujours possible; on se retrouve souvent contraints de réaliser le grand écart entre moderne et vieux. Si l&#39;on souhaite se tourner vers une conception moderne en responsive design, comment s&#39;assurer du meilleur support possible ?</p>
+
+<p class="credits">Cet article s'attardera uniquement sur la gestion des media queries en responsive design; je ne parlerai pas ici d'autres propriétés CSS3 non supportés par certains de ces navigateurs, par exemple flexbox, border-box etc.</p>
+
+<p>J&#39;ai identifié ci-dessous différentes approches qui permettent de partir d&#39;un modèle de design <em>mobile first</em> pour s&#39;assurer que notre site ressemble quand même à quelque chose sur les vieux dinosaures du web.</p>
+
+<h2>1. Ne rien faire</h2>
+
+<p>Approche la plus simple, puisqu&#39;elle ne demande quasiment aucun effort de notre part. Les media queries n&#39;étant pas compris par IE&lt;9, le navigateur affichera la version mobile du site. Pour rendre tout ça un peu moins moche, rien n&#39;empêche de limiter la largeur maximum du contenu à coups de <code>max-width</code> et de <a href="http://briangelhaus.com/blog/target-ie-in-css/">commentaires conditionnels</a>.</p>
+
+<p>A priori, cette approche n&#39;est pas idéale, puisque les utilisateurs risquent d&#39;être un peu perturbés par le fait de naviguer sur une version mobile. Ceci dit c&#39;est toujours mieux qu&#39;un site sur lequel il est impossible de naviguer.</p>
+
+<h2>2. Cibler IE9 en CSS</h2>
+
+<p>Grâce aux <a href="http://briangelhaus.com/blog/target-ie-in-css/">commentaires conditionnels</a> dont je parlais ci-dessus, il est assez facile de créer des classes spécifiques, par exemple :</p>
+
+<pre class="pre-css prettyprint">
+.ie8 .header {
+  // bla bla bla
+}
+</pre>
+
+<p>Cette approche est toutefois assez fastidieuse, elle nécessite en effet de réecrire toutes les propriétés css comprises dans les media queries qui se situent autour des dimensions &quot;habituelles&quot; de ces navigateurs (1000-1200 px). Niveau maintenance, ça n&#39;est pas non plus idéal puisque l&#39;on doit mettre à jour le CSS spécifique à IE en même temps que le CSS global.</p>
+
+<h2>3. Cibler IE&lt;9 avec Sass</h2>
+
+<p>Une technique très intéressante, <a href="http://jakearchibald.github.io/sass-ie/">démontrée ici</a> par <a href="http://jakearchibald.com/">Jake Archibald</a> (Google Chrome). Elle tire parti de la puissance de Sass et de ses <code>@mixin</code> pour créer une feuille de styles spécifique à IE&lt;9.</p>
+
+<p>Il est ainsi facile de définir les media queries que l&#39;on souhaite intégrer dans celle-ci, par exemple toutes celles qui sont inférieures à 1200px. La feuille de style ajoutera ensuite tous les styles des media queries jusqu&#39;à 1200px.</p>
+
+<p>Cette méthode implique en revanche d&#39;écrire des media queries propres à chaque élément, par exemple :</p>
+
+<pre class="pre-scss prettyprint">
+.element {
+  color: red;
+
+  @media screen and (min-width: 1100px) {
+    color: blue;
+  }
+}   
+</pre>
+
+<p>Un &quot;inconvénient&quot; quasiment négligeable si vous prenez soin de minifier et gzipper vos CSS, sans compter un gros gain en maintenabilité.</p>
+
+<h2>4. Respond.js</h2>
+
+<p>Contrairement aux techniques ci-dessus, ce polyfill très léger (3ko) assure le support des media queries pour <code>max-width</code> et <code>min-width</code>. On n&#39;a donc plus à se soucier de créer une feuille de styles spécifique puisque le script se chargera de tout. Le fichier devra être intégré dans le <code>&lt;head&gt;</code> de la page pour qu&#39;il soit exécuté le plus tôt possible.</p>
+
+<p class="liens"><a href="https://github.com/scottjehl/Respond">Voir Respond.js sur Github</a></p>
+
+<p>Le seul bémol que je vois à son utilisation est qu&#39;il doit être hébergé sur le même serveur que la page; si ça n&#39;est pas le cas il faudra uploader une page proxy pour permettre la communication cross-domain (cf. l&#39;exemple sur Github).</p>
+
+<p class="credits">Mon approche favorite reste la n°3 (Sass). Grâce à celle-ci, une fois la feuille de styles pour IE créée on n'a plus à s'en soucier jusqu'à la fin du projet. Quant à Respond.js, même si il assure le support des media queries, sa fiabilité n'est pas de 100% d'après mes tests.</p>
+
+        <div class="article__footer">
+          <p class="article__share">Cet article vous a plu ? Partagez-le :
+            <span class="social">
+              <a href="http://twitter.com/home?status=Les anciens navigateurs http://ronanlevesque.fr/articles/les-anciens-navigateurs" class="twitter">
+                <img src="/img/twitter-bw.svg" alt="Partager sur Twitter">
+                <img src="/img/twitter.svg" class="bw-hover" alt="Partager sur Twitter">
+              </a>
+              <a href="https://plus.google.com/share?url=http://ronanlevesque.fr/articles/les-anciens-navigateurs" class="google">
+                <img src="/img/google-bw.svg" alt="Partager sur Google+">
+                <img src="/img/google.svg" class="bw-hover" alt="Partager sur Google+">
+              </a>
+              <a href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://ronanlevesque.fr/articles/les-anciens-navigateurs&amp;p[title]=Les anciens navigateurs" class="facebook">
+                <img src="/img/facebook-bw.svg" alt="Partager sur Facebook">
+                <img src="/img/facebook.svg" class="bw-hover" alt="Partager sur Facebook">
+              </a>
+            </span>
+          </p>
+        </div>
+			</div>
+		</article>
+	</main>
+	<footer class="main-footer" role="contentinfo">
+		<div class="main-footer__inner">
+			<p class="main-footer__left">(c) Ronan Levesque 2014</p><!--
+			--><div class="main-footer__right">
+				<a href="https://twitter.com/ronanlevesque" class="twitter-follow-button" data-show-count="false" data-lang="fr" data-size="large">Suivre @ronanlevesque</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>
+		</div>
+	</footer>
+	<div class="spinner"></div>
+  <!--[if (gte IE 6)&(lte IE 9)]>
+ 	<script src="/js/ie/matchmedia.js"></script>
+ 	<![endif]-->
+	<script src="/js/main.js"></script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-29762874-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body>
+</html>
+

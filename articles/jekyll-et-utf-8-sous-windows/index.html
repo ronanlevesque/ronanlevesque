@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="ie7 no-js" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 no-js" lang="fr"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 no-js" lang="fr"> <![endif]-->
+<html lang="fr" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<title>Ronan Levesque - Jekyll et UTF-8 sous Windows</title>
+	<!-- Remove this if Modernizr is used -->
+	<script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
+	<meta name="description" content="Comment régler le problème d'UTF-8 avec Jekyll facilement sous Windows">
+	<meta name="author" content="Ronan Levesque">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--[if lte IE 8]><link rel="stylesheet" href="/css/fox-ie.css"><![endif]-->
+	<!--[if gt IE 8]><!--><link rel="stylesheet" href="/css/fox.css"><!--<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700%7CMerriweather+Sans:400,800' rel='stylesheet' type='text/css'>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ 	<![endif]-->
+</head>
+
+<body>
+
+	<header class="main-header" role="banner">
+		<div class="main-header__inner">
+			<div class="main-header__left">
+				<a href="/" class="logo"><img src="/img/logo-ronan-levesque.svg" alt="Logo Ronan Levesque"></a>
+			</div><!--
+			--><div class="main-header__right">
+				<a href="#" class="nav-mobile" data-state="closed">Menu</a>
+			</div><!--
+			--><nav class="main-nav" role="navigation">
+				<ul data-state="closed">
+					<li><a href="/projets">Projets</a></li><!--
+					--><li><a href="/articles" class="selected">Articles</a></li><!--
+					--><li><a href="/a-propos">A propos</a></li><!--
+					--><li><a href="/contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main role="main">
+		<article>
+		  <div class="article__inner">
+				<p class="article__date">Le 29 Novembre 2013</p>
+				<h1>Jekyll et UTF-8 sous Windows</h1>
+				<p>La première fois que j&#39;ai installé et lancé Jekyll pour mon blog sous Windows, je suis tombé sur une erreur liée à UTF-8. En fouillant un peu, j&#39;ai trouvé la raison de ce problème dans cet <a href="http://joseoncode.com/2011/11/27/solving-utf-problem-with-jekyll-on-windows/">article</a> : il semblerait que la console Ruby ne fonctionne pas avec les caractères UTF-8, d&#39;une manière ou d&#39;une autre.</p>
+
+<p>L&#39;erreur affichée était la suivante :</p>
+
+<pre class="prettyprint">Liquid Exception: incompatible character encodings: UTF-8 and IBM437 in whatever.html</pre>
+
+<p>La solution à ce problème est facile. Au lieu de :</p>
+
+<pre class="prettyprint">jekyll serve --watch</pre>
+
+<p>Il suffit de taper :</p>
+
+<pre class="prettyprint">
+chcp 65001
+jekyll serve --watch
+</pre>
+
+<p>La première commande permet de changer le code-page. En revanche, il vaut mieux éviter de définir cette commande sur une clé de base de registres, puisque apparemment cela risque d&#39;impacter le bon fonctionnement de Windows.</p>
+
+        <div class="article__footer">
+          <p class="article__share">Cet article vous a plu ? Partagez-le :
+            <span class="social">
+              <a href="http://twitter.com/home?status=Jekyll et UTF-8 sous Windows http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows" class="twitter">
+                <img src="/img/twitter-bw.svg" alt="Partager sur Twitter">
+                <img src="/img/twitter.svg" class="bw-hover" alt="Partager sur Twitter">
+              </a>
+              <a href="https://plus.google.com/share?url=http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows" class="google">
+                <img src="/img/google-bw.svg" alt="Partager sur Google+">
+                <img src="/img/google.svg" class="bw-hover" alt="Partager sur Google+">
+              </a>
+              <a href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows&amp;p[title]=Jekyll et UTF-8 sous Windows" class="facebook">
+                <img src="/img/facebook-bw.svg" alt="Partager sur Facebook">
+                <img src="/img/facebook.svg" class="bw-hover" alt="Partager sur Facebook">
+              </a>
+            </span>
+          </p>
+        </div>
+			</div>
+		</article>
+	</main>
+	<footer class="main-footer" role="contentinfo">
+		<div class="main-footer__inner">
+			<p class="main-footer__left">(c) Ronan Levesque 2014</p><!--
+			--><div class="main-footer__right">
+				<a href="https://twitter.com/ronanlevesque" class="twitter-follow-button" data-show-count="false" data-lang="fr" data-size="large">Suivre @ronanlevesque</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>
+		</div>
+	</footer>
+	<div class="spinner"></div>
+  <!--[if (gte IE 6)&(lte IE 9)]>
+ 	<script src="/js/ie/matchmedia.js"></script>
+ 	<![endif]-->
+	<script src="/js/main.js"></script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-29762874-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body>
+</html>
+

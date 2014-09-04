@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="ie7 no-js" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 no-js" lang="fr"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 no-js" lang="fr"> <![endif]-->
+<html lang="fr" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<title>Ronan Levesque - Créer un menu avec dropdown en CSS3</title>
+	<!-- Remove this if Modernizr is used -->
+	<script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
+	<meta name="description" content="Tutoriel de création d'un menu complexe en dropdown, avec CSS3">
+	<meta name="author" content="Ronan Levesque">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--[if lte IE 8]><link rel="stylesheet" href="/css/fox-ie.css"><![endif]-->
+	<!--[if gt IE 8]><!--><link rel="stylesheet" href="/css/fox.css"><!--<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700%7CMerriweather+Sans:400,800' rel='stylesheet' type='text/css'>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+ 	<![endif]-->
+</head>
+
+<body>
+
+	<header class="main-header" role="banner">
+		<div class="main-header__inner">
+			<div class="main-header__left">
+				<a href="/" class="logo"><img src="/img/logo-ronan-levesque.svg" alt="Logo Ronan Levesque"></a>
+			</div><!--
+			--><div class="main-header__right">
+				<a href="#" class="nav-mobile" data-state="closed">Menu</a>
+			</div><!--
+			--><nav class="main-nav" role="navigation">
+				<ul data-state="closed">
+					<li><a href="/projets">Projets</a></li><!--
+					--><li><a href="/articles" class="selected">Articles</a></li><!--
+					--><li><a href="/a-propos">A propos</a></li><!--
+					--><li><a href="/contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main role="main">
+		<article>
+		  <div class="article__inner">
+				<p class="article__date">Le 02 Juillet 2012</p>
+				<h1>Créer un menu avec dropdown en CSS3</h1>
+				<p>Les menus avec dropdown sont de nos jours fortement utilisés sur les sites possédant beaucoup de contenu. Ils s&#39;appuient en général sur du JavaScript pour fonctionner. Pourtant il existe un moyen simple de créer des dropdown uniquement en CSS3 (malgré une très légère exception en fin d&#39;article). Dans cet article nous allons voir comment mettre ce type de dropdown en place.</p>
+
+<p><img src="/img/menu-dropdown-css-1.jpg" alt="Menu dropdown CSS 1" /></p>
+
+<p class="demo"><a href="http://ronanlevesque.fr/demos/menu-dropdown-css3.html">Voir la démo</a></p>
+
+<p>Voici le tutoriel détaillé pour arriver à ce résultat.</p>
+
+<h2>1. La structure HTML</h2>
+
+<p>Le but est de commencer par une structure HTML claire et simple sous forme de liste :</p>
+
+<pre class="pre-html prettyprint">&lt;ul id="menu"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#"&gt;Catégories&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;CSS&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Webdesign&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Autres&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Travaux&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;A propos&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p>Pour l&#39;instant, aucun style n&#39;a été appliqué, mais l&#39;important est ici que le code respecte la <a href="http://en.wikipedia.org/wiki/Semantic_HTML">sémantique HTML <sup>EN</sup></a>.</p>
+
+<p><img src="/img/menu-dropdown-css-2.jpg" alt="Menu dropdown CSS 2" /></p>
+
+<p>Dans cet exemple, une seule sous-catégorie a été créée, mais rien ne vous empêche d&#39;en créer plus en respectant la sémantique initiale.</p>
+
+<h2>2. Le CSS</h2>
+
+<p>Il va ensuite falloir appliquer vos styles CSS à cette liste, histoire de rendre tout ça un peu plus sexy, attention restez bien concentrés...</p>
+
+<pre class="pre-css prettyprint">#menu {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 0 0;
+  list-style: none;  
+  background: #111;
+  background: -moz-linear-gradient(#444, #111); 
+  background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));
+  background: -webkit-linear-gradient(#444, #111);
+  background: -o-linear-gradient(#444, #111);
+  background: -ms-linear-gradient(#444, #111);
+  background: linear-gradient(#444, #111);
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#menu li {
+  float: left;
+  padding: 0 0 10px 0;
+  position: relative;
+  line-height: 0;
+}
+
+#menu a {
+  float: left;
+  height: 25px;
+  padding: 0 25px;
+  color: #999;
+  text-transform: uppercase;
+  font: bold 12px/25px Arial, Helvetica;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #000;
+}
+
+#menu li:hover > a {
+  color: #fafafa;
+}
+
+*html #menu li a:hover /* IE6 */ {
+  color: #fafafa;
+}
+
+#menu li:hover > ul {
+  display: block;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  z-index: 99999;
+  background: #444;
+  background: -moz-linear-gradient(#444, #111);
+  background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));
+  background: -webkit-linear-gradient(#444, #111);
+  background: -o-linear-gradient(#444, #111);
+  background: -ms-linear-gradient(#444, #111);
+  background: linear-gradient(#444, #111);
+  -moz-box-shadow: 0 0 2px rgba(255,255,255,.5);
+  -webkit-box-shadow: 0 0 2px rgba(255,255,255,.5);
+  box-shadow: 0 0 2px rgba(255,255,255,.5);
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#menu ul ul {
+  top: 0;
+  left: 150px;
+}
+
+#menu ul li {
+  float: none;
+  margin: 0;
+  padding: 0;
+  display: block;  
+  -moz-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+  -webkit-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+  box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+}
+
+#menu ul li:last-child {   
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#menu ul a {
+  padding: 10px;
+  height: 10px;
+  width: 130px;
+  height: auto;
+  line-height: 1;
+  display: block;
+  white-space: nowrap;
+  float: none;
+  text-transform: none;
+}
+
+*html #menu ul a /* IE6 */ {
+  height: 10px;
+}
+
+*:first-child+html #menu ul a /* IE7 */ {
+  height: 10px;
+}
+
+#menu ul a:hover {
+  background: #0186ba;
+  background: -moz-linear-gradient(#04acec,  #0186ba);
+  background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba));
+  background: -webkit-linear-gradient(#04acec,  #0186ba);
+  background: -o-linear-gradient(#04acec,  #0186ba);
+  background: -ms-linear-gradient(#04acec,  #0186ba);
+  background: linear-gradient(#04acec,  #0186ba);
+}
+
+#menu ul li:first-child > a {
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+
+#menu ul li:first-child > a:after {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: -8px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid #444;
+}
+
+#menu ul ul li:first-child a:after {
+  left: -8px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-left: 0;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-right: 8px solid #444;
+}
+
+#menu ul li:first-child a:hover:after {
+  border-bottom-color: #04acec; 
+}
+
+#menu ul ul li:first-child a:hover:after {
+  border-right-color: #04acec; 
+  border-bottom-color: transparent; 
+}
+
+#menu ul li:last-child > a {
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+#menu:after  {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+</pre>
+
+<p>En regardant la démo de près, vous avez sans doute pu remarquer une flèche située juste en dessous ou à côté du menu principal ou des menus secondaires, afin d&#39;améliorer la lisibilité du menu :</p>
+
+<p><img class="imgb" src="/img/menu-dropdown-css-3.jpg" alt="Menu dropdown CSS 3" /></p>
+
+<p>Cette flèche est simplement créée en utilisant le pseudo-élément <code>after</code>. Voici un zoom sur le code en question :</p>
+
+<pre class="pre-css prettyprint">#menu ul ul li:first-child a:after {
+  left: -8px;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-left: 0;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-right: 8px solid #444;
+}
+</pre>
+
+<p>Cela marchera sur la plupart des navigateurs récents, et jusqu&#39;à IE8 compris.</p>
+
+<h2 id="fallback">3. Fallback pour IE6</h2>
+
+<p>Bien évidemment, IE6 va poser (comme souvent) un problème si on en reste là. En effet, les sous-menus s&#39;affichent quand on survole les éléments <code>li</code> du menu. Or IE6 ne supporte pas le survol d&#39;éléments sans ancre. Pour s&#39;assurer que ce menu fonctionne correctement sous ce dernier, il va donc falloir utiliser un peu de JavaScript, couplé à la librairie <a href="http://jquery.com/">jQuery</a> :</p>
+
+<pre class="pre-html prettyprint">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  $(function() {
+    if ($.browser.msie &amp;&amp; $.browser.version.substr(0,1)&lt;7)
+    {
+    $('li').has('ul').mouseover(function(){
+      $(this).children('ul').show();
+      }).mouseout(function(){
+      $(this).children('ul').hide();
+      })
+    }
+  });        
+&lt;/script&gt;
+</pre>
+
+<p>Vous pouvez choisir de sauter cette étape, en effet IE6 est en passe de disparaître complètement de notre paysage (vivement qu&#39;IE7 suive la même voie...).</p>
+
+<p class="credits">Crédits : Article originalement rédigé par <a href="http://www.red-team-design.com/about">Catalin Rosu</a> (Version originale en anglais accessible <a href="http://www.red-team-design.com/css3-dropdown-menu">ici</a>.)</p>
+
+        <div class="article__footer">
+          <p class="article__share">Cet article vous a plu ? Partagez-le :
+            <span class="social">
+              <a href="http://twitter.com/home?status=Créer un menu avec dropdown en CSS3 http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3" class="twitter">
+                <img src="/img/twitter-bw.svg" alt="Partager sur Twitter">
+                <img src="/img/twitter.svg" class="bw-hover" alt="Partager sur Twitter">
+              </a>
+              <a href="https://plus.google.com/share?url=http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3" class="google">
+                <img src="/img/google-bw.svg" alt="Partager sur Google+">
+                <img src="/img/google.svg" class="bw-hover" alt="Partager sur Google+">
+              </a>
+              <a href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3&amp;p[title]=Créer un menu avec dropdown en CSS3" class="facebook">
+                <img src="/img/facebook-bw.svg" alt="Partager sur Facebook">
+                <img src="/img/facebook.svg" class="bw-hover" alt="Partager sur Facebook">
+              </a>
+            </span>
+          </p>
+        </div>
+			</div>
+		</article>
+	</main>
+	<footer class="main-footer" role="contentinfo">
+		<div class="main-footer__inner">
+			<p class="main-footer__left">(c) Ronan Levesque 2014</p><!--
+			--><div class="main-footer__right">
+				<a href="https://twitter.com/ronanlevesque" class="twitter-follow-button" data-show-count="false" data-lang="fr" data-size="large">Suivre @ronanlevesque</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>
+		</div>
+	</footer>
+	<div class="spinner"></div>
+  <!--[if (gte IE 6)&(lte IE 9)]>
+ 	<script src="/js/ie/matchmedia.js"></script>
+ 	<![endif]-->
+	<script src="/js/main.js"></script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+	<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-29762874-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body>
+</html>
+
