@@ -126,7 +126,7 @@
 					<?php
 					    }
 					?>
-					<p>Vous avez un projet ou une question en tête ? Contactez-moi via le formulaire ci-dessous. Vous pouvez également me joindre sur les réseaux sociaux : <a href="https://github.com/eskiiss">Github</a>, <a href="https://twitter.com/ronanlevesque">Twitter</a>, <a href="http://fr.linkedin.com/in/ronanlevesque">Linkedin</a> ou <a href="http://www.viadeo.com/fr/profile/ronan.levesque">Viadeo</a>.</p>
+					<p>Vous avez un projet ou une question en tête ? Contactez-moi via le formulaire ci-dessous. Vous pouvez également me joindre sur les réseaux sociaux : <a href="https://github.com/ronanlevesque">Github</a>, <a href="https://twitter.com/ronanlevesque">Twitter</a>, <a href="http://fr.linkedin.com/in/ronanlevesque">Linkedin</a> ou <a href="http://www.viadeo.com/fr/profile/ronan.levesque">Viadeo</a>.</p>
 					<label for="name">Nom</label><input type="text" name="name" id="name" value="<?php echo( $name ); ?>" />
 					<label for="from">Email</label><input type="text" name="from" id="from" value="<?php echo( $from ); ?>" />
 					<label for="object">Objet</label><input type="text" name="object" id="object" value="<?php echo( $object ); ?>" />
