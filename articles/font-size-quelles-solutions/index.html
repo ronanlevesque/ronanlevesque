@@ -78,7 +78,7 @@
 
 <p>Si on ne souhaite pas utiliser de polyfill, on se retrouve donc face à un casse-tête à chaque fois qu&#39;on utilise des <code>rem</code>, car il faudra également prévoir et calculer un fallback en <code>px</code> pour les navigateurs ne reconnaissant pas cette unité...</p>
 
-<p>Et c&#39;est précisément là que Sass intervient : il va faire le calcul à notre place grâce à un <code>@mixin</code>. Celui que j&#39;utilise est le suivant : </p>
+<p>Et c&#39;est précisément là que Sass intervient : il va faire le calcul à notre place grâce à un <code>@mixin</code>. Celui que j&#39;utilise est le suivant :</p>
 
 <pre class="pre-scss prettyprint">@mixin fs($fontsize: 16, $fontbase: 16) {
   font-size: $fontsize + px;
