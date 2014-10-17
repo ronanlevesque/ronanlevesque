@@ -4,94 +4,106 @@
 <!--[if IE 9]> <html class="ie9 no-js" lang="fr"> <![endif]-->
 <html lang="fr" class="no-js">
 <head>
-	<meta charset="UTF-8">
-	<title>Ronan Levesque - Création de sites Internet et applications web</title>
-	<!-- Remove this if Modernizr is used -->
-	<script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
-	<meta name="description" content="Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...">
-	<meta name="author" content="Ronan Levesque">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--[if lte IE 8]><link rel="stylesheet" href="/css/fox-ie.css"><![endif]-->
-	<!--[if gt IE 8]><!--><link rel="stylesheet" href="/css/fox.css"><!--<![endif]-->
-	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700%7CMerriweather+Sans:400,800' rel='stylesheet' type='text/css'>
-	<!--[if (gte IE 6)&(lte IE 8)]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
- 	<![endif]-->
+  <meta charset="UTF-8">
+  <title>Ronan Levesque - Création de sites Internet et applications web</title>
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+    if(( navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/g) ? true : false ) == true) {
+      document.documentElement.className += ' mobile';
+    }
+  </script>
+  <meta name="description" content="Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...">
+  <meta name="author" content="Ronan Levesque">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/fox.css">
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Merriweather+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
-
 <body>
-
-	<header class="main-header" role="banner">
-		<div class="main-header__inner">
-			<div class="main-header__left">
-				<a href="/" class="logo"><img src="/img/logo-ronan-levesque.svg" alt="Logo Ronan Levesque"></a>
-			</div><!--
-			--><div class="main-header__right">
-				<a href="#" class="nav-mobile" data-state="closed">Menu</a>
-			</div><!--
-			--><nav class="main-nav" role="navigation">
-				<ul data-state="closed">
-					<li><a href="/projets">Projets</a></li><!--
-					--><li><a href="/articles">Articles</a></li><!--
-					--><li><a href="/a-propos">A propos</a></li><!--
-					--><li><a href="/contact">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-  <div class="main-banner">
-    <h1>Hello ! Je suis <strong id="bump-anim-1">Ronan Levesque</strong>, je crée vos <strong id="bump-anim-2">sites</strong> &amp; <strong id="bump-anim-3">applications web</strong>.</h1>
-  </div>
-	<main role="main">
-    <div class="main__inner">
-      <section class="col-hp col-hp--first">
-        <img src="/img/a-propos.jpg" alt="A propos" class="col-hp__img">
-        <h2>A propos</h2>
-        <p class="column">Je suis Ronan Levesque, un webdesigner et développeur front-end de 30 ans passionné par mon métier. Pour en savoir plus sur moi, je vous invite à lire la description de mon profil.</p>
-        <p class="cta"><a href="/a-propos">En savoir plus</a></p>
-      </section><!--
-      --><section class="col-hp">
-        <img src="/img/blog.jpg" alt="Blog" class="col-hp__img">
-        <h2>Sur le blog</h2>
-        
-        <p class="column">Animer ses SVG avec Snap.svg - Cet article montre les possibilités offertes par Snap.svg pour animer sans prise de tête vos SVG de manière convaincante (avec des exemples à l'appui).</p>
-        <p class="cta"><a href="/articles/animer-ses-svg-avec-snap-svg">Lire la suite</a></p>
-        
-      </section><!--
-      --><section class="col-hp">
-        <img src="/img/contact.jpg" alt="Contact" class="col-hp__img">
-        <h2>Contact</h2>
-        <p class="column">Vous avec un projet en tête, ou vous souhaitez simplement me poser une question ? Aucun problème, vous pouvez me joindre via les réseaux sociaux ou bien m'envoyer directement un e-mail.</p>
-        <p class="cta"><a href="/contact">Me contacter</a></p>
-      </section>
+  <header class="header" role="banner">
+    <div class="header__left">
+      <a href="/" class="logo"><img src="/img/logo-ronan-levesque.svg" alt="Logo Ronan Levesque"></a>
     </div>
-	</main>
-	<footer class="main-footer main-footer--hp" role="contentinfo">
-		<div class="main-footer__inner">
-			<p class="main-footer__left">(c) Ronan Levesque 2014</p><!--
-			--><div class="main-footer__right">
-				<a href="https://twitter.com/ronanlevesque" class="twitter-follow-button" data-show-count="false" data-lang="fr" data-size="large">Suivre @ronanlevesque</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-			</div>
-		</div>
-	</footer>
-	<div class="spinner"></div>
-  <!--[if (gte IE 6)&(lte IE 9)]>
- 	<script src="/js/ie/matchmedia.js"></script>
- 	<![endif]-->
-	<script src="/js/main.js"></script>
-	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
-	<script>
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-29762874-1']);
-		_gaq.push(['_trackPageview']);
+    <div class="header__right">
+      <button class="mobile-nav" id="open-nav"><img src="/img/icones/icone-menu.svg" alt="Icône menu" class="logo"> Menu</button>
+      <button class="mobile-nav mobile-nav--hidden" id="close-nav"><img src="/img/icones/icone-close.svg" alt="Icône menu" class="logo"> Close</button>
+    </div>
+  </header>
 
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
+  <nav class="nav" role="navigation">
+    <ul class="nav__list">
+      <li class="nav__item" id="nav__item-1"><a href="/projets">Projets</a></li>
+      <li class="nav__item" id="nav__item-2"><a href="/articles">Articles</a></li>
+      <li class="nav__item" id="nav__item-3"><a href="/a-propos">A propos</a></li>
+      <li class="nav__item" id="nav__item-4"><a href="mailto:ronan.levesque@gmail.com">Contact</a></li>
+      <li class="nav__item" id="nav__item-5"></li>
+    </ul>
+  </nav>
+  <div class="big-title">
+    <div class="big-title__center">
+      <canvas class="big-title__canvas"></canvas>
+      <p class="big-title__small">Hello !</p>
+      <h1 class="big-title__title">Je suis Ronan Levesque, je crée vos sites et applications web...</h1>
+    </div>
+  </div>
+  <div class="wrapper">
+    <main class="main" role="main">
+      <div class="section-wrapper">
+        <section class="section">
+          <h2 class="section__title">A propos</h2>
+          <p class="section__p">Je suis Ronan Levesque, un webdesigner et développeur front-end de 30 ans passionné par mon métier. Pour en savoir plus sur moi, je vous invite à lire la description de mon profil.</p>
+          <p class="section__cta"><a href="a-propos" class="cta">En savoir plus</a></p>
+        </section>
+        <section class="section">
+          <h2 class="section__title">Sur le blog</h2>
+          
+          <p class="section__p">Animer ses SVG avec Snap.svg - Cet article montre les possibilités offertes par Snap.svg pour animer sans prise de tête vos SVG de manière convaincante (avec des exemples à l'appui).</p>
+          <p class="section__cta"><a href="/articles/animer-ses-svg-avec-snap-svg" class="cta">Lire la suite</a></p>
+          
+        </section>
+        <section class="section">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__p">Vous avez un projet en tête, ou vous souhaitez simplement me poser une question ? Aucun problème, vous pouvez me joindre via les réseaux sociaux ou bien m'envoyer directement un e-mail.</p>
+          <p class="section__cta"><a href="mailto:ronan.levesque@gmail.com" class="cta">Me contacter</a></p>
+        </section>
+      </div>
+    </main>
+  </div>
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <p>Contenu (c) Ronan Levesque 2012-2014</p>
+      <ul class="footer__social">
+        <li><a href="https://twitter.com/ronanlevesque"><img src="/img/icones/icone-footer-twitter.svg" alt="Icône Twitter"></a></li><!--
+        --><li><a href="https://github.com/ronanlevesque"><img src="/img/icones/icone-footer-github.svg" alt=""></a></li><!--
+        --><li><a href="mailto:ronan.levesque@gmail.com"><img src="/img/icones/icone-footer-mail.svg" alt=""></a></li><!--
+        --><li><a href="https://plus.google.com/117241456277987276836"><img src="/img/icones/icone-footer-google-plus.svg" alt=""></a></li><!--
+        --><li><a href="skype:ronan.levesque?call"><img src="/img/icones/icone-footer-skype.svg" alt=""></a></li><!--
+        --><li><a href="http://fr.linkedin.com/in/ronanlevesque"><img src="/img/icones/icone-footer-linkedin.svg" alt=""></a></li>
+      </ul>
+    </div>
+  </footer>
+<!--   <div class="loader" id="loader">
+  <img class="spinner" id="spinner" src="/img/goutte.svg" alt="Goutte">
+</div> -->
+  <div class="ie-warning">
+    <p>Désolé, ce site ne supporte plus les navigateurs obsolètes. Essayez-en un <a href="http://browsehappy.com/">plus récent</a> :)</p>
+    <img src="/img/logo-ie.jpg" alt="Logo IE">
+  </div>
+  <script src="/js/main.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29762874-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </body>
 </html>
 

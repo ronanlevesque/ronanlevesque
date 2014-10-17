@@ -4,147 +4,132 @@
 <!--[if IE 9]> <html class="ie9 no-js" lang="fr"> <![endif]-->
 <html lang="fr" class="no-js">
 <head>
-	<meta charset="UTF-8">
-	<title>Ronan Levesque - Projets</title>
-	<!-- Remove this if Modernizr is used -->
-	<script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
-	<meta name="description" content="Découvrez mes derniers projets et réalisation web.">
-	<meta name="author" content="Ronan Levesque">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--[if lte IE 8]><link rel="stylesheet" href="/css/fox-ie.css"><![endif]-->
-	<!--[if gt IE 8]><!--><link rel="stylesheet" href="/css/fox.css"><!--<![endif]-->
-	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700%7CMerriweather+Sans:400,800' rel='stylesheet' type='text/css'>
-	<!--[if (gte IE 6)&(lte IE 8)]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
- 	<![endif]-->
+  <meta charset="UTF-8">
+  <title>Ronan Levesque - Projets</title>
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+    if(( navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/g) ? true : false ) == true) {
+      document.documentElement.className += ' mobile';
+    }
+  </script>
+  <meta name="description" content="Découvrez mes derniers projets et réalisation web.">
+  <meta name="author" content="Ronan Levesque">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/fox.css">
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400italic,400,700|Merriweather+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
-
 <body>
+  <header class="header" role="banner">
+    <div class="header__left">
+      <a href="/" class="logo"><img src="/img/logo-ronan-levesque.svg" alt="Logo Ronan Levesque"></a>
+    </div>
+    <div class="header__right">
+      <button class="mobile-nav" id="open-nav"><img src="/img/icones/icone-menu.svg" alt="Icône menu" class="logo"> Menu</button>
+      <button class="mobile-nav mobile-nav--hidden" id="close-nav"><img src="/img/icones/icone-close.svg" alt="Icône menu" class="logo"> Close</button>
+    </div>
+  </header>
 
-	<header class="main-header" role="banner">
-		<div class="main-header__inner">
-			<div class="main-header__left">
-				<a href="/" class="logo"><img src="/img/logo-ronan-levesque.svg" alt="Logo Ronan Levesque"></a>
-			</div><!--
-			--><div class="main-header__right">
-				<a href="#" class="nav-mobile" data-state="closed">Menu</a>
-			</div><!--
-			--><nav class="main-nav" role="navigation">
-				<ul data-state="closed">
-					<li><a href="/projets" class="selected">Projets</a></li><!--
-					--><li><a href="/articles">Articles</a></li><!--
-					--><li><a href="/a-propos">A propos</a></li><!--
-					--><li><a href="/contact">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<main role="main">
-		<article class="article--page">
-			<div class="article__inner">
-				<h1>Dernières réalisations</h1>
-				<div class="projet">
-					<a href="/img/projet-foxcss.jpg" class="projet__img">
-						<img src="/img/blank.gif" data-src="/img/projet-foxcss.jpg" alt="Projet : FOX CSS" class="lazy">
-						<noscript><img src="/img/projet-foxcss.jpg" alt="Projet : Moovies"></noscript>
-					</a><!--
-					--><section class="projet__desc">
-						<h2>FOX CSS</h2>
-						<p>FOX CSS est un framework CSS poids-plume dont j&#39;ai eu l&#39;idée en voyant la complexité et la taille que certains frameworks connus pouvaient posséder. L&#39;idée était d&#39;avoir une base simple, flexible et modulable, tournée vers le responsive design, et adaptable à des petits comme des gros sites. Il est également disponible en version <a href="http://sass-lang.com/">Sass</a>.</p>
-						<p class="liens"><a href="http://fox-css.com/">Voir le site</a></p>
-					</section>
-				</div>
-				<div class="projet">
-					<a href="/img/projet-foxbp.jpg" class="projet__img">
-						<img src="/img/blank.gif" data-src="/img/projet-foxbp.jpg" alt="Projet : FOX Boilerplate" class="lazy">
-						<noscript><img src="/img/projet-foxbp.jpg" alt="Projet : Moovies"></noscript>
-					</a><!--
-					--><section class="projet__desc">
-						<h2>FOX Boilerplate</h2>
-						<p>J&#39;ai développé FOX Boilerplate avec comme noyau central <a href="http://gulpjs.com/">Gulp</a>, un outil de gestion des tâches front-end. Couplé à FOX CSS, FOX BP offre une base de départ pour tout projet web, incluant : création d&#39;un serveur local, compilation et autopréfixage des fichiers Sass, test des fichiers JS, HTML et CSS, <em>livereload</em>, et optimisation de la mise en production (optimisation, minification et concaténation des différents fichiers).</p>
-						<p class="liens"><a href="/projets/fox-boilerplate/">Voir le site</a></p>
-					</section>
-				</div>
-				<div class="projet">
-					<a href="/img/projet-moovies.jpg" class="projet__img">
-						<img src="/img/blank.gif" data-src="/img/projet-moovies.jpg" alt="Projet : Moovies" class="lazy">
-						<noscript><img src="/img/projet-moovies.jpg" alt="Projet : Moovies"></noscript>
-					</a><!--
-					--><section class="projet__desc">
-						<h2>Moovies</h2>
-						<p>Moovies est une app qui me permet de dresser une liste de films à regarder, avec une partie admin autorisant l&#39;ajout, l&#39;édition ou la suppression des films. J&#39;ai créé cette app avec pour objectif de me familiariser avec le framework JavaScript de Google, <a href="http://angularjs.org/">AngularJS</a>.</p>
-						<p class="liens"><a href="/mv/">Voir le site</a></p>
-					</section>
-				</div>
-				<div class="projet">
-					<a href="/img/projet-ihateuflat.jpg" class="projet__img">
-						<img src="/img/blank.gif" data-src="/img/projet-ihateuflat.jpg" alt="Projet : I hate U flat !" class="lazy">
-						<noscript><img src="/img/projet-ihateuflat.jpg" alt="Projet : Moovies"></noscript>
-					</a><!--
-					--><section class="projet__desc">
-						<h2>I hate U flat !</h2>
-						<p>I hate U flat ! est né en voulant prendre un peu à contre-pied la tendance hype du moment, le <em>flat design</em>. Je suis parti du postulat que CSS3 avait apporté avec lui beaucoup de nouveaux effet visuels (dégradés, ombres etc.) et qu&#39;il était dommage de s&#39;en priver complètement sous prétexte de suivre les grandes tendances du design. Ce projet est une libraire de boutons avec de subtils effets graphiques et une dégradation gracieuse pour les plus vieux navigateurs.</p>
-						<p class="liens"><a href="/projets/ihateuflat">Voir le site</a></p>
-					</section>
-				</div>
-				<div class="projet projet--last">
-					<a href="/img/projet-dg.jpg" class="projet__img">
-						<img src ="/img/blank.gif" data-src="/img/projet-dg.jpg" alt="Projet : Delphine Gauchi" class="lazy">
-						<noscript><img src="/img/projet-dg.jpg" alt="Projet : Moovies"></noscript>
-					</a><!--
-					--><section class="projet__desc">
-						<h2>DelphineGauchi.fr</h2>
-						<p>Delphine est une designer produit et mobilier. Ce site est un portfolio qui lui permet de mettre en avant les dernières oeuvres qu'elle a réalisées. Il a été construit avec WordPress ainsi qu'un thème créé de A à Z pour l'occasion.</p>
-						<p class="liens"><a href="http://delphinegauchi.fr/">Voir le site</a></p>
-					</section>
-				</div>
-        <div class="article__footer">
-          <p class="article__share">Cet article vous a plu ? Partagez-le :
-            <span class="social">
-              <a href="http://twitter.com/home?status=Projets http://ronanlevesque.fr/projets/index.html" class="twitter">
-                <img src="/img/twitter-bw.svg" alt="Partager sur Twitter">
-                <img src="/img/twitter.svg" class="bw-hover" alt="Partager sur Twitter">
-              </a>
-              <a href="https://plus.google.com/share?url=http://ronanlevesque.fr/projets/index.html" class="google">
-                <img src="/img/google-bw.svg" alt="Partager sur Google+">
-                <img src="/img/google.svg" class="bw-hover" alt="Partager sur Google+">
-              </a>
-              <a href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://ronanlevesque.fr/projets/index.html&amp;p[title]=Projets" class="facebook">
-                <img src="/img/facebook-bw.svg" alt="Partager sur Facebook">
-                <img src="/img/facebook.svg" class="bw-hover" alt="Partager sur Facebook">
-              </a>
-            </span>
-          </p>
-        </div>
-			</div>
-		</article>
-	</main>
-	<footer class="main-footer" role="contentinfo">
-		<div class="main-footer__inner">
-			<p class="main-footer__left">(c) Ronan Levesque 2014</p><!--
-			--><div class="main-footer__right">
-				<a href="https://twitter.com/ronanlevesque" class="twitter-follow-button" data-show-count="false" data-lang="fr" data-size="large">Suivre @ronanlevesque</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-			</div>
-		</div>
-	</footer>
-	<div class="spinner"></div>
-  <!--[if (gte IE 6)&(lte IE 9)]>
- 	<script src="/js/ie/matchmedia.js"></script>
- 	<![endif]-->
-	<script src="/js/main.js"></script>
-	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
-	<script>
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-29762874-1']);
-		_gaq.push(['_trackPageview']);
+  <nav class="nav" role="navigation">
+    <ul class="nav__list">
+      <li class="nav__item" id="nav__item-1"><a class="selected" href="/projets">Projets</a></li>
+      <li class="nav__item" id="nav__item-2"><a href="/articles">Articles</a></li>
+      <li class="nav__item" id="nav__item-3"><a href="/a-propos">A propos</a></li>
+      <li class="nav__item" id="nav__item-4"><a href="mailto:ronan.levesque@gmail.com">Contact</a></li>
+      <li class="nav__item" id="nav__item-5"></li>
+    </ul>
+  </nav>
+  <div class="big-title">
+    <div class="big-title__center">
+      <p class="big-title__small">Projets</p>
+      <h1 class="big-title__title">Dernières réalisations</h1>
+    </div>
+  </div>
+  <div class="wrapper">
+    <main class="main" role="main">
+      <div class="section-wrapper">
+        <section class="section">
+          <h2 class="section__title"><a href="http://fox-css.com/">Fox CSS</a></h2>
+          <div class="section__img-container">
+            <div class="section__img">
+              <img src="/img/blank.gif" data-src="/img/projet-foxcss.jpg" alt="Projet : FOX CSS" class="lazy">
+              <noscript><img src="/img/projet-foxcss.jpg" alt="Projet : FOX CSS"></noscript>
+            </div>
+          </div>
+          <p class="section__p">FOX CSS est un framework CSS poids-plume dont j&#39;ai eu l&#39;idée en voyant la complexité et la taille que certains frameworks connus pouvaient posséder. L&#39;idée était d&#39;avoir une base simple, flexible et modulable, tournée vers le responsive design, et adaptable à des petits comme des gros sites. Il est également disponible en version <a href="http://sass-lang.com/">Sass</a>.</p>
+          <p class="section__cta"><a href="http://fox-css.com/" class="cta">Voir le site</a></p>
+        </section>
+        <section class="section">
+          <h2 class="section__title"><a href="/projets/fox-boilerplate/">FOX Boilerplate</a></h2>
+          <div class="section__img-container">
+            <div class="section__img">
+              <img src="/img/blank.gif" data-src="/img/projet-foxbp.jpg" alt="Projet : FOX Boilerplate" class="lazy">
+              <noscript><img src="/img/projet-foxbp.jpg" alt="Projet : FOX Boilerplate"></noscript>
+            </div>
+          </div>
+          <p class="section__p">J'ai développé FOX Boilerplate avec comme noyau central <a href="http://gulpjs.com/">Gulp</a>, un outil de gestion des tâches front-end. Couplé à FOX CSS, FOX BP offre une base de départ pour tout projet web, incluant : création d'un serveur local, compilation et autopréfixage des fichiers Sass, test des fichiers JS, HTML et CSS, <em>livereload</em>, et optimisation de la mise en production (optimisation, minification et concaténation des différents fichiers).</p>
+          <p class="section__cta"><a href="/projets/fox-boilerplate/" class="cta">Voir le site</a></p>
+        </section>
+        <section class="section">
+          <h2 class="section__title"><a href="/mv/">Moovies</a></h2>
+          <div class="section__img-container">
+            <div class="section__img">
+              <img src="/img/blank.gif" data-src="/img/projet-moovies.jpg" alt="Projet : Moovies" class="lazy">
+              <noscript><img src="/img/projet-moovies.jpg" alt="Projet : Moovies"></noscript>
+            </div>
+          </div>
+          <p class="section__p">Moovies est une app qui me permet de dresser une liste de films à regarder, avec une partie admin autorisant l'ajout, l'édition ou la suppression des films. J'ai créé cette app avec pour objectif de me familiariser avec le framework JavaScript de Google, <a href="http://angularjs.org/">AngularJS</a>.</p>
+          <p class="section__cta"><a href="/mv/" class="cta">Voir le site</a></p>
+        </section>
+        <section class="section">
+          <h2 class="section__title"><a href="/projets/ihateuflat">I hate U flat !</a></h2>
+          <div class="section__img-container">
+            <div class="section__img">
+              <img src="/img/blank.gif" data-src="/img/projet-ihateuflat.jpg" alt="Projet : I hate U flat !" class="lazy">
+              <noscript><img src="/img/projet-ihateuflat.jpg" alt="Projet : I hate U flat !"></noscript>
+            </div>
+          </div>
+          <p class="section__p">I hate U flat ! est né en voulant prendre un peu à contre-pied la tendance hype du moment, le <em>flat design</em>. Je suis parti du postulat que CSS3 avait apporté avec lui beaucoup de nouveaux effet visuels (dégradés, ombres etc.) et qu'il était dommage de s'en priver complètement sous prétexte de suivre les grandes tendances du design. Ce projet est une libraire de boutons avec de subtils effets graphiques et une dégradation gracieuse pour les plus vieux navigateurs.</p>
+          <p class="section__cta"><a href="/projets/ihateuflat" class="cta">Voir le site</a></p>
+        </section>
+      </div>
+    </main>
+  </div>
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <p>Contenu (c) Ronan Levesque 2012-2014</p>
+      <ul class="footer__social">
+        <li><a href="https://twitter.com/ronanlevesque"><img src="/img/icones/icone-footer-twitter.svg" alt="Icône Twitter"></a></li><!--
+        --><li><a href="https://github.com/ronanlevesque"><img src="/img/icones/icone-footer-github.svg" alt=""></a></li><!--
+        --><li><a href="mailto:ronan.levesque@gmail.com"><img src="/img/icones/icone-footer-mail.svg" alt=""></a></li><!--
+        --><li><a href="https://plus.google.com/117241456277987276836"><img src="/img/icones/icone-footer-google-plus.svg" alt=""></a></li><!--
+        --><li><a href="skype:ronan.levesque?call"><img src="/img/icones/icone-footer-skype.svg" alt=""></a></li><!--
+        --><li><a href="http://fr.linkedin.com/in/ronanlevesque"><img src="/img/icones/icone-footer-linkedin.svg" alt=""></a></li>
+      </ul>
+    </div>
+  </footer>
+<!--   <div class="loader" id="loader">
+  <img class="spinner" id="spinner" src="/img/goutte.svg" alt="Goutte">
+</div> -->
+  <div class="ie-warning">
+    <p>Désolé, ce site ne supporte plus les navigateurs obsolètes. Essayez-en un <a href="http://browsehappy.com/">plus récent</a> :)</p>
+    <img src="/img/logo-ie.jpg" alt="Logo IE">
+  </div>
+  <script src="/js/main.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29762874-1']);
+    _gaq.push(['_trackPageview']);
 
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </body>
 </html>
 
