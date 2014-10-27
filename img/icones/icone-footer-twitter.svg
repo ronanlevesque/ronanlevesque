@@ -1,29 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-
-<!-- The icon can be used freely in both personal and commercial projects with no attribution required, but always appreciated.
-You may NOT sub-license, resell, rent, redistribute or otherwise transfer the icon without express written permission from iconmonstr.com -->
-
-
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-
-	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-
-<path fill="#fff" id="twitter-4-icon" d="M256,50C142.229,50,50,142.229,50,256s92.229,206,206,206s206-92.229,206-206S369.771,50,256,50z
-
-	 M359.599,220.506c3.021,67.199-47.096,142.124-135.802,142.124c-26.981,0-52.096-7.911-73.238-21.466
-
-	c25.347,2.987,50.646-4.044,70.734-19.786c-20.907-0.386-38.554-14.198-44.632-33.181c7.486,1.432,14.851,1.013,21.575-0.816
-
-	c-22.976-4.617-38.839-25.317-38.321-47.453c6.44,3.58,13.81,5.729,21.642,5.977c-21.278-14.221-27.303-42.318-14.785-63.789
-
-	c23.563,28.906,58.77,47.928,98.478,49.92c-6.969-29.886,15.702-58.667,46.542-58.667c13.742,0,26.16,5.802,34.874,15.088
-
-	c10.884-2.143,21.108-6.119,30.341-11.594c-3.567,11.157-11.144,20.521-21.008,26.433c9.665-1.153,18.874-3.722,27.441-7.523
-
-	C377.035,205.355,368.935,213.771,359.599,220.506z"/>
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="412px" height="412px" viewBox="0 0 412 412" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
+    <title>twitter-4-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M206,0 C92.229,0 0,92.229 0,206 C0,319.771 92.229,412 206,412 C319.771,412 412,319.771 412,206 C412,92.229 319.771,0 206,0 L206,0 Z M309.599,170.506 C312.62,237.705 262.503,312.63 173.797,312.63 C146.816,312.63 121.701,304.719 100.559,291.164 C125.906,294.151 151.205,287.12 171.293,271.378 C150.386,270.992 132.739,257.18 126.661,238.197 C134.147,239.629 141.512,239.21 148.236,237.381 C125.26,232.764 109.397,212.064 109.915,189.928 C116.355,193.508 123.725,195.657 131.557,195.905 C110.279,181.684 104.254,153.587 116.772,132.116 C140.335,161.022 175.542,180.044 215.25,182.036 C208.281,152.15 230.952,123.369 261.792,123.369 C275.534,123.369 287.952,129.171 296.666,138.457 C307.55,136.314 317.774,132.338 327.007,126.863 C323.44,138.02 315.863,147.384 305.999,153.296 C315.664,152.143 324.873,149.574 333.44,145.773 C327.035,155.355 318.935,163.771 309.599,170.506 L309.599,170.506 Z" id="twitter-4-icon" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+    </g>
 </svg>
-
