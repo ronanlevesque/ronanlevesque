@@ -24,9 +24,6 @@
     if(( navigator.userAgent.match(/(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini)/g) ? true : false ) == true) {
       document.documentElement.className += ' mobile';
     }
-    // LoadJS
-    function loadJS(a,b){"use strict";var c=window.document.getElementsByTagName("script")[0],d=window.document.createElement("script");return d.src=a,d.async=!0,c.parentNode.insertBefore(d,c),b&&"function"==typeof b&&(d.onload=b),d}
-    loadJS('/js/main.js');
   </script>
   <!--[if (gte IE 6)&(lte IE 8)]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -141,6 +138,7 @@
     <p>Désolé, ce site ne supporte plus les navigateurs obsolètes. Essayez-en un <a href="http://browsehappy.com/">plus récent</a> :)</p>
     <img src="/img/logo-ie.jpg" alt="Logo IE">
   </div>
+  <script src="/js/main.js"></script>
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
   <script>
     var _gaq = _gaq || [];
