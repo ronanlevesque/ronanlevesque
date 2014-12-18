@@ -4,15 +4,15 @@
 <html lang="fr" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <title>Ronan Levesque - return false VS e.preventDefault()</title>
-  <meta name="description" content="Gérer la propagation d'événement avec JS et jQuery">
+  <title>Ronan Levesque - Versionner ses assets avec Jekyll</title>
+  <meta name="description" content="Cet article montre une astuce toute simple que j'utilise pour contourner les problèmes de cache que l'on peut rencontrer sur Jekyll avec différents assets.">
   <meta name="author" content="Ronan Levesque">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
-  <meta property="og:title" content="return false VS e.preventDefault()" />
-  <meta property="og:description" content="Gérer la propagation d'événement avec JS et jQuery">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault" />
+  <meta property="og:title" content="Versionner ses assets avec Jekyll" />
+  <meta property="og:description" content="Cet article montre une astuce toute simple que j'utilise pour contourner les problèmes de cache que l'on peut rencontrer sur Jekyll avec différents assets.">
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/versionner-ses-assets-avec-jekyll" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="stylesheet" href="/css/fox.css?v=141217161051">
@@ -52,48 +52,35 @@
   <div class="big-title">
     <div class="big-title__center">
       <p class="big-title__small">Article</p>
-      <h1 class="big-title__title">return false VS e.preventDefault()</h1>
-      <p class="big-title__subtitle">Publié le <time>13.05.13</time> - <span class="caps">JS</span></p>
+      <h1 class="big-title__title">Versionner ses assets avec Jekyll</h1>
+      <p class="big-title__subtitle">Publié le <time>17.12.14</time> - <span class="caps">Divers, outils</span></p>
     </div>
   </div>
   <div class="wrapper">
     <main class="main" role="main">
       <article class="article">
-        <p>J&#39;ai été confronté récemment à un problème plutôt pénible en écrivant une fonction jQuery pour un projet en cours, problème lié à l&#39;utilisation de <code>return false</code>. Pour rappel celui-ci permet d&#39;empêcher le comportement par défaut de l&#39;objet appelé par une fonction, par exemple il évitera un retour en haut de page si on utilise un <code>&lt;a href=&quot;#&quot;&gt;</code>. Le hic, c&#39;est qu&#39;il bloquera du coup la propagation à l&#39;utilisation d&#39;événements clicks additionnels.</p>
+        <p>Je partage aujourd&#39;hui une solution assez simple que l&#39;on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l&#39;on utilise soient correctement mis à jour.</p>
 
-<p>Prenons un exemple :</p>
+<p>Le principe est assez simple, on va se baser sur les formats date du système de templating <a href="http://liquidmarkup.org/">liquid</a> pour générer une ID. Ainsi, au lieu de :</p>
 
-<pre class="pre-jq prettyprint">$('a.blabla').click(function(){
-  // action
-  return false;
-});
+<pre class="pre-html prettyprint">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css"&gt;</pre>
 
-$('a').click() {
-  // action
-}
-</pre>
+<p>Il nous suffira d&#39;utiliser :</p>
 
-<p>Dans cet exemple, à cause du <code>return false</code> la deuxième fonction ne pourra pas être déclenchée. On pourrait contourner le problème en le supprimant, mais on se retrouve avec un rétablissement du comportement de l&#39;ancre par défaut, plutôt pénible. J&#39;ai heureusement trouvé une solution simple sur <a href="http://firebreaksice.com/avoid-return-false-in-jquery-click-bindings/">firebreaksice.com</a>, d&#39;où j&#39;ai tiré mon exemple. Il suffit de modifier notre code pour le faire ressembler à ceci :</p>
+<pre class="pre-html prettyprint">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css?v=&#123;&#123; site.time | date: '%y%m%d%k%M%S' &#125;&#125;"&gt;</pre>
 
-<pre class="pre-jq prettyprint">$('a.blabla').click(function(e){
-  e.preventDefault();
-  // action
-});
+<p>Ce qui générera, dans l&#39;ordre : l&#39;année, le mois, le jour, et l&#39;heure avec minutes et secondes. Ainsi le résultat obtenu sera de ce type :</p>
 
-$('a').click(e) {
-  e.preventDefault();
-  // action
-}
-</pre>
+<pre class="pre-html prettyprint">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css?v=141217192112"&gt;</pre>
 
-<p>En fait on rajoute un paramètre événement à chaque fonction, puis on appelle ensuite tout simplement <code>preventDefault()</code> avec, ce qui permet d&#39;éviter le comportement par défaut de notre événement tout en évitant que cela soit aussi propagé à la fonction suivante.</p>
+<p>De cette manière, on est sûr d&#39;avoir une ID <em>presque</em> unique puisqu&#39;à chaque seconde passée elle sera différente.</p>
 
         <p class="article__share">
           Partagez cet article :
           <span class="article__social-icons">
-            <a href="http://twitter.com/home?status=return false VS e.preventDefault() http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault" class="share-twitter"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="#bbb" d="M462 128.223c-15.158 6.724-31.45 11.27-48.547 13.31 17.45-10.46 30.854-27.025 37.164-46.764-16.333 9.686-34.422 16.72-53.676 20.51-15.417-16.428-37.385-26.69-61.697-26.69-54.56 0-94.668 50.915-82.337 103.786-70.25-3.524-132.534-37.177-174.223-88.314-22.142 37.983-11.485 87.69 26.158 112.85-13.853-.438-26.89-4.24-38.284-10.574-.917 39.162 27.146 75.78 67.795 83.95-11.895 3.236-24.925 3.977-38.17 1.446 10.755 33.58 41.973 58.018 78.96 58.7C139.605 378.28 94.847 390.72 50 385.435c37.406 23.982 81.837 37.977 129.57 37.977 156.933 0 245.596-132.55 240.252-251.435 16.517-11.917 30.846-26.804 42.178-43.755z" /></svg> Twitter</a><!--
-            --><a href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault&amp;p[title]=return false VS e.preventDefault()" class="share-fb"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="#bbb" d="M204.067 184.692h-43.144v70.426h43.144V462h82.965V254.238h57.882l6.162-69.546h-64.044v-39.615c0-16.398 3.302-22.89 19.147-22.89h44.895V50h-57.44c-61.735 0-89.568 27.18-89.568 79.23v55.462z" /></svg> Facebook</a><!--
-            --><a href="https://plus.google.com/share?url=http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault" class="share-gplus"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="#bbb" d="M462 141.347h-54.62v54.622h-27.312v-54.623h-54.622v-27.31h54.622v-54.62h27.31v54.62H462v27.31zM307.583 367.26c0 40.943-37.384 90.787-131.434 90.787-68.785 0-126.15-29.668-126.15-79.57 0-38.513 24.383-88.51 138.323-88.51-16.922-13.792-21.075-33.077-10.733-53.96-66.714 0-100.88-39.22-100.88-89.022 0-48.73 36.243-93.032 110.15-93.032h118.4L278.8 81.723h-31.08c21.926 12.562 33.587 38.433 33.587 66.95 0 26.174-14.414 47.374-34.984 63.278-36.503 28.223-27.158 43.98 11.087 71.873 37.708 28.25 50.17 50.06 50.17 83.437zm-73.845-216.807c-5.506-41.905-32.806-76.284-64.704-77.243-31.91-.95-53.31 31.12-47.798 73.035 5.51 41.905 35.834 71.178 67.75 72.14 31.896.948 50.256-26.022 44.752-67.932zm32.893 221.01c0-34.466-31.44-67.317-84.19-67.317-47.543-.523-87.833 30.042-87.833 65.47 0 36.155 34.335 66.25 81.88 66.25 60.78 0 90.144-28.25 90.144-64.403z" /></svg> Google+</a>
+            <a href="http://twitter.com/home?status=Versionner ses assets avec Jekyll http://ronanlevesque.fr/articles/versionner-ses-assets-avec-jekyll" class="share-twitter"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="#bbb" d="M462 128.223c-15.158 6.724-31.45 11.27-48.547 13.31 17.45-10.46 30.854-27.025 37.164-46.764-16.333 9.686-34.422 16.72-53.676 20.51-15.417-16.428-37.385-26.69-61.697-26.69-54.56 0-94.668 50.915-82.337 103.786-70.25-3.524-132.534-37.177-174.223-88.314-22.142 37.983-11.485 87.69 26.158 112.85-13.853-.438-26.89-4.24-38.284-10.574-.917 39.162 27.146 75.78 67.795 83.95-11.895 3.236-24.925 3.977-38.17 1.446 10.755 33.58 41.973 58.018 78.96 58.7C139.605 378.28 94.847 390.72 50 385.435c37.406 23.982 81.837 37.977 129.57 37.977 156.933 0 245.596-132.55 240.252-251.435 16.517-11.917 30.846-26.804 42.178-43.755z" /></svg> Twitter</a><!--
+            --><a href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http://ronanlevesque.fr/articles/versionner-ses-assets-avec-jekyll&amp;p[title]=Versionner ses assets avec Jekyll" class="share-fb"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="#bbb" d="M204.067 184.692h-43.144v70.426h43.144V462h82.965V254.238h57.882l6.162-69.546h-64.044v-39.615c0-16.398 3.302-22.89 19.147-22.89h44.895V50h-57.44c-61.735 0-89.568 27.18-89.568 79.23v55.462z" /></svg> Facebook</a><!--
+            --><a href="https://plus.google.com/share?url=http://ronanlevesque.fr/articles/versionner-ses-assets-avec-jekyll" class="share-gplus"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="#bbb" d="M462 141.347h-54.62v54.622h-27.312v-54.623h-54.622v-27.31h54.622v-54.62h27.31v54.62H462v27.31zM307.583 367.26c0 40.943-37.384 90.787-131.434 90.787-68.785 0-126.15-29.668-126.15-79.57 0-38.513 24.383-88.51 138.323-88.51-16.922-13.792-21.075-33.077-10.733-53.96-66.714 0-100.88-39.22-100.88-89.022 0-48.73 36.243-93.032 110.15-93.032h118.4L278.8 81.723h-31.08c21.926 12.562 33.587 38.433 33.587 66.95 0 26.174-14.414 47.374-34.984 63.278-36.503 28.223-27.158 43.98 11.087 71.873 37.708 28.25 50.17 50.06 50.17 83.437zm-73.845-216.807c-5.506-41.905-32.806-76.284-64.704-77.243-31.91-.95-53.31 31.12-47.798 73.035 5.51 41.905 35.834 71.178 67.75 72.14 31.896.948 50.256-26.022 44.752-67.932zm32.893 221.01c0-34.466-31.44-67.317-84.19-67.317-47.543-.523-87.833 30.042-87.833 65.47 0 36.155 34.335 66.25 81.88 66.25 60.78 0 90.144-28.25 90.144-64.403z" /></svg> Google+</a>
           </span>
         </p>
       </article>
