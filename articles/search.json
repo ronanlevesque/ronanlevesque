@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Dropbox et node_modules",
+      "category" : "",
+      "tags"     : "outils",
+      "url"      : "/articles/dropdox-et-node-modules",
+      "date"     : "2015-04-02 00:00:00 +0200"
+    } ,
+  
+    {
       "title"    : "Versionner ses assets avec Jekyll",
       "category" : "",
       "tags"     : "divers and outils",

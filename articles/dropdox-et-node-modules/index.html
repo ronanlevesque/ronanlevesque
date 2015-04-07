@@ -5,15 +5,15 @@
 <html lang="fr" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <title>Ronan Levesque - Divers</title>
-  <meta name="description" content="Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...">
+  <title>Ronan Levesque - Dropbox et node_modules</title>
+  <meta name="description" content="Cet article montre une astuce toute simple que j'utilise pour contourner les problèmes de cache que l'on peut rencontrer sur Jekyll avec différents assets.">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
-  <meta property="og:title" content="Divers" />
-  <meta property="og:description" content="Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/categorie/divers/index.html" />
+  <meta property="og:title" content="Dropbox et node_modules" />
+  <meta property="og:description" content="Cet article montre une astuce toute simple que j'utilise pour contourner les problèmes de cache que l'on peut rencontrer sur Jekyll avec différents assets.">
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/dropdox-et-node-modules" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="stylesheet" href="/css/fox.css?v=150407103318">
@@ -55,106 +55,46 @@
 
   <main role="main" class="main">
     <div class="page-header">
-      <h1 class="page-header__title">Résultats pour : Divers</h1>
+      <h1 class="page-header__title">Dropbox et node_modules</h1>
     </div>
-    <ul class="grid-posts">
-          
-      <li class="grid-posts__li classic">
-        <a href="/articles/versionner-ses-assets-avec-jekyll" class="grid-posts__link">
-          <h3 class="grid-posts__date">17.12.2014</h3>
-          <div class="grid-posts__separ"></div>
-          <h2 class="grid-posts__title">Versionner ses assets avec Jekyll</h2>
-        </a>
-      </li>
-      
-      <li class="grid-posts__li classic">
-        <a href="/articles/abandonner-le-support-d-ie8" class="grid-posts__link">
-          <h3 class="grid-posts__date">20.06.2014</h3>
-          <div class="grid-posts__separ"></div>
-          <h2 class="grid-posts__title">Abandonner le support d'IE8</h2>
-        </a>
-      </li>
-      
-      <li class="grid-posts__li classic">
-        <a href="/articles/nouvelle-annee-nouveau-site" class="grid-posts__link">
-          <h3 class="grid-posts__date">21.01.2014</h3>
-          <div class="grid-posts__separ"></div>
-          <h2 class="grid-posts__title">Nouvelle année, nouveau site</h2>
-        </a>
-      </li>
-      
-      <li class="grid-posts__li classic">
-        <a href="/articles/jekyll-et-utf-8-sous-windows" class="grid-posts__link">
-          <h3 class="grid-posts__date">29.11.2013</h3>
-          <div class="grid-posts__separ"></div>
-          <h2 class="grid-posts__title">Jekyll et UTF-8 sous Windows</h2>
-        </a>
-      </li>
-      
-      <li class="grid-posts__li classic">
-        <a href="/articles/like-plus-share" class="grid-posts__link">
-          <h3 class="grid-posts__date">08.10.2013</h3>
-          <div class="grid-posts__separ"></div>
-          <h2 class="grid-posts__title">Like, Plus, Share...</h2>
-        </a>
-      </li>
-      
-      <li class="grid-posts__li classic">
-        <a href="/articles/goodbye-wordpress-hello-jekyll" class="grid-posts__link">
-          <h3 class="grid-posts__date">28.09.2013</h3>
-          <div class="grid-posts__separ"></div>
-          <h2 class="grid-posts__title">Goodbye WordPress, hello Jekyll</h2>
-        </a>
-      </li>
-      
-      <li class="grid-posts__li classic">
-        <a href="/articles/plugins-utiles-pour-sublime-text-2" class="grid-posts__link">
-          <h3 class="grid-posts__date">27.06.2013</h3>
-          <div class="grid-posts__separ"></div>
-          <h2 class="grid-posts__title">Plugins utiles pour Sublime Text 2</h2>
-        </a>
-      </li>
-      
-      <li class="grid-posts__li classic">
-        <a href="/articles/refonte-graphique-du-site-et-friday-links" class="grid-posts__link">
-          <h3 class="grid-posts__date">29.04.2013</h3>
-          <div class="grid-posts__separ"></div>
-          <h2 class="grid-posts__title">Refonte graphique du site et Friday Links</h2>
-        </a>
-      </li>
-      
-      <li class="grid-posts__li classic">
-        <a href="/articles/ouverture-du-blog" class="grid-posts__link">
-          <h3 class="grid-posts__date">29.06.2012</h3>
-          <div class="grid-posts__separ"></div>
-          <h2 class="grid-posts__title">Ouverture du blog</h2>
-        </a>
-      </li>
-      
+    <article class="article">
+      <p>J&#39;utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j&#39;utilise. J&#39;ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux <code>node_modules</code> : ce dernier a tendance à se compter en milliers de fichiers, ce qui n&#39;est pas idéal pour la synchronisation de Dropbox.</p>
 
+<p>Heureusement il est possible d&#39;ignorer ces fichiers; je vais vous montrer dans cet article comment faire.</p>
 
+<p>Mettons que ayez un projet Gulp avec son <code>package.json</code>. Une simple commande <code>npm install</code> permettra d&#39;installer tous les modules contenus dans <code>package.json</code>. Mais avant cela, rendez-vous dans le dossier du projet, là où se situe le fichier en question, et créez-y un dossier <code>node_modules</code> vide.</p>
 
-    </ul>
-    <section class="section-blog section-blog--1 section--grey">
-      <h2 class="section-blog__title">Recherche par mot-clé</h2>
-      <input type="text" id="search-input" class="section-blog__search" placeholder="CSS, HTML, responsive, etc.">
-      <ul id="results-container" class="section-blog__list"></ul>
-    </section>
-    <section class="section-blog section--grey">
-      <h2 class="section-blog__title">Recherche par catégorie</h2>
-      <ul class="section-blog__list">
-        <li><a href="/articles/categorie/css">CSS</a></li>
-        <li><a href="/articles/categorie/html">HTML</a></li>
-        <li><a href="/articles/categorie/responsive">Responsive Design</a></li>
-        <li><a href="/articles/categorie/javascript">JavaScript &amp; jQuery</a></li>
-        <li><a href="/articles/categorie/sass">Sass</a></li>
-        <li><a href="/articles/categorie/svg">SVG</a></li>
-        <li><a href="/articles/categorie/tutoriels">Tutoriels</a></li>
-        <li><a href="/articles/categorie/outils">Outils &amp; ressources</a></li>
-        <li><a href="/articles/categorie/ux">User Experience</a></li>
-        <li><a href="/articles/categorie/divers">Divers</a></li>
-      </ul>
-    </section>
+<p>Ensuite, dans les préférences de Dropdox, direction <code>Compte &gt; Synchronisation sélective</code> et décochez le dossier <code>node_modules</code> :</p>
+
+<p><img src="/img/screen-dropbox-1.png" alt="Préférences Dropbox" style="border: none;"></p>
+
+<p>Celui-ci va être supprimé du dossier dans lequel il se trouvait. Il ne vous reste plus qu&#39;à lancer votre <code>npm install</code>; lorsque ceci est fait, le dossier node_modules apparaîtra comme ignoré par Dropbox :</p>
+
+<p><img src="/img/screen-node-modules.png" alt="Dossier node_modules" style="border: none;"></p>
+
+<p>La démarche peut sembler un brin fastidieuse, mais c&#39;est à ma connaissance la seule solution pour éviter d&#39;avoir à synchroniser à chaque fois vos <code>node_modules</code>.</p>
+
+    </article>
+    
+    
+    <a class="previous-post article-nav" href="/articles/versionner-ses-assets-avec-jekyll">
+      <span>Versionner ses assets avec Jekyll</span>
+    </a>
+    
+    <div class="article-footer">
+      <p class="article-footer__txt">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+        <path class="normal" id="pen-icon" d="M72.819,429.273l14.593,14.593l-15.117,15.11c-4.027,4.031-10.559,4.031-14.588,0.003
+          c-4.031-4.03-4.031-10.562,0-14.591L72.819,429.273z M354.941,57.21c-9.784-9.785-25.392-9.526-35.178,0.262l-99.539,99.536
+          c-9.785,9.788-10.044,25.392-0.258,35.177L354.941,57.21z M199.832,249.627l-58.925,58.925
+          c-30.745,30.745-46.211,60.295-60.268,101.438l26.058,26.058c41.143-14.06,70.689-29.523,101.434-60.264l58.93-58.929
+          L199.832,249.627z M441.451,75.232c-21.154-21.154-55.454-21.154-76.608,0L216.368,223.708l76.608,76.609L441.45,151.841
+          C462.605,130.685,462.605,96.387,441.451,75.232z"/>
+        </svg>
+        Publié le <time>02 Avril 2015</time> dans : outils
+      </p>
+    </div>
   </main>
   <footer class="footer" role="contentinfo">
     <p class="footer__left">&copy; Ronan Levesque 2012 - 2015</p>
