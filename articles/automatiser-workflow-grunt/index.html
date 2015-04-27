@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/automatiser-workflow-grunt" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -85,7 +85,7 @@
 
 <p>Ensuite, il va falloir installer l&#39;interface de commande de Grunt. Depuis votre ligne de commande habituelle, entrez la commande suivante :</p>
 
-<pre class="prettyprint">npm install -g grunt-cli</pre>
+<pre><code class="bash">npm install -g grunt-cli</code></pre>
 
 <p>Cela va permettre de lancer Grunt de n&#39;importe où sur votre système.</p>
 
@@ -97,7 +97,7 @@
 
 <p>Ce fichier doit être situé à la racine du projet. Il contient des métadonnées (nom du projet, version etc.) ainsi que les modules Grunt utilisés, appelés <code>devDependencies</code>. On peut créer un <code>package.json</code> de plusieurs manières : avec <a href="http://gruntjs.com/project-scaffolding">grunt init</a> (automatisation de la création du projet), <a href="https://npmjs.org/doc/init.html">npm init</a> (création d&#39;un fichier sur mesure via NPM), ou en créant soi-même le fichier. Choisissons la dernière solution, en prenant l&#39;exemple de FOX-boilerplate :</p>
 
-<pre class="prettyprint">{
+<pre><code class="js">{
   "name": "FOX-Boilerplate",
   "version": "0.1.0",
   "description": "Boilerplate with Grunt and FOX CSS",
@@ -114,11 +114,11 @@
     "grunt-contrib-concat": "~0.3.0",
     "matchdep": "~0.1.2"
   }
-}</pre>
+}</code></pre>
 
 <p>On a donc défini ici le nom, la version, la description et l&#39;auteur du projet ainsi que les différentes dépendances du projet. Celles-ci sont équivalentes aux plugins que l&#39;on devra installer pour que Grunt fonctionne correctement. Ces plugins s&#39;installent de la manière suivante :</p>
 
-<pre class="prettyprint">npm install &lt;nom-du-plugin&gt; --save-dev</pre>
+<pre><code class="bash">npm install &lt;nom-du-plugin&gt; --save-dev</code></pre>
 
 <p>Le flag <code>--save-dev</code> permet d&#39;inscrire le plugin dans dans la section <code>devDependencies</code> du <code>package.json</code>.</p>
 
@@ -126,17 +126,17 @@
 
 <p>Ce fichier doit également être placé à la racine du projet. C&#39;est le fichier de configuration dans lequel toutes les tâches seront définies. Nous allons regarder en détails sa construction. Tout d&#39;abord, on commence par créer une fonction principale dans laquelle ira l&#39;ensemble de notre code :</p>
 
-<pre class="pre-js prettyprint">module.exports = function(grunt) {}</pre>
+<pre><code class="js">module.exports = function(grunt) {}</code></pre>
 
 <p>Ensuite, on loade l&#39;ensemble de nos tâches :</p>
 
-<pre class="pre-js prettyprint">require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);</pre>
+<pre><code class="js">require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);</code></pre>
 
 <p>NOTE : l&#39;exemple du site officiel préconise de le faire d&#39;une <a href="http://gruntjs.com/sample-gruntfile">manière différente <sup>EN</sup></a>, en loadant les plugins ligne par ligne, mais <code>matchdep</code> permet de tous les loader en une seule ligne de code.</p>
 
 <p>On configure après cela les différentes tâches nécessaires au projet de cette façon :</p>
 
-<pre class="pre-js prettyprint">grunt.initConfig({
+<pre><code class="js">grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'),
 
   sass: {
@@ -153,19 +153,19 @@
 
   etc.
 
-});</pre>
+});</code></pre>
 
 <p>Il est important de bien comprendre la façon dont ces tâches se configurent. Différentes écritures existent, bien détaillées <a href="http://gruntjs.com/configuring-tasks">sur le site officiel <sup>EN</sup></a>.</p>
 
 <p>La dernière partie du code contient les tâches et leur customisation. Une tâche par défaut s&#39;écrira de la manière suivante :</p>
 
-<pre class="pre-js prettyprint">grunt.registerTask('default', 'watch');</pre>
+<pre><code class="js">grunt.registerTask('default', 'watch');</code></pre>
 
 <p>Et se lancera depuis la ligne de commande avec un simple <code>grunt</code>.</p>
 
 <p>Les tâches peuvent aussi être customisées. Par exemple, si on souhaite uniquement lancer JSHint, concaténer et minifier nos scripts, on pourra ajouter une nouvelle tâche qui s&#39;écrira de la façon suivante :</p>
 
-<pre class="pre-js prettyprint">grunt.registerTask('js', ['jshint', 'concat', 'uglify']);</pre>
+<pre><code class="js">grunt.registerTask('js', ['jshint', 'concat', 'uglify']);</code></pre>
 
 <p>La tâche sera ensuite lancée grâce à <code>grunt js</code>.</p>
 
@@ -175,7 +175,7 @@
 
 <p><strong>Sass</strong></p>
 
-<pre class="pre-js prettyprint">sass: {
+<pre><code class="js">sass: {
   dist: {
     options: {
       style: 'expanded'
@@ -186,47 +186,47 @@
     dest: 'css/',
     ext: '.css'
   }
-}</pre>
+}</code></pre>
 
 <p>Je pense qu&#39;il n&#39;est plus besoin de présenter Sass, mais au besoin je vous invite à lire cet <a href="http://ronanlevesque.fr/le-jour-ou-jai-teste-sass/">article</a>. Ici, on définit d&#39;abord les options de Sass (le CSS ne sera pas compressé après compilation), puis les différents paramètres : <code>expand: true</code> permet de cibler des fichiers multiples, <code>cwd</code> est le dossier dans lequel aller chercher les fichiers, <code>src</code> seront les fichiers sources. Le <code>!</code> permet d&#39;exclure certains fichiers (dans ce cas de figure, les fichiers partiels Sass qui n&#39;ont pas besoin d&#39;être compilés). <code>dest</code> est le dossier de destination, <code>ext</code> le format auquel les fichiers seront compilés.</p>
 
 <p><strong>Autoprefixer</strong></p>
 
-<pre class="pre-js prettyprint">autoprefixer: {
+<pre><code class="js">autoprefixer: {
   multiple_files: {
     expand: true,
     flatten: true,
     src: 'css/*.css',
     dest: 'css/'
   }
-}</pre>
+}</code></pre>
 
 <p>Autoprefixer est un outil puissant qui permet de préfixer automatiquement les différentes propriétés CSS3 ou de supprimer des préfixes obsolètes en allant chercher les infos directement dans la base de <a href="http://caniuse.com/">CanIuse</a>. Dans cet exemple, c&#39;est grosso modo la même chose que pour Sass, à la différence que <code>flatten: true</code> va permettre &quot;d&#39;aplatir&quot; les résultats à un même niveau.</p>
 
 <p><strong>JSHint</strong></p>
 
-<pre class="pre-js prettyprint">jshint: {
+<pre><code class="js">jshint: {
   files: ['gruntfile.js', 'js/**/*.js', '!js/plugins/*.js']
-}</pre>
+}</code></pre>
 
 <p>Cette tâche permet de lancer les tests JSHint sur l&#39;ensemble de mes fichiers JavaScript, à l&#39;exception des plugins externes qui sont régulièrement sources de messages d&#39;erreurs.</p>
 
 <p><strong>CSSO</strong></p>
 
-<pre class="pre-js prettyprint">csso: {
+<pre><code class="js">csso: {
   multiple_files: {
     expand: true,
     flatten: true,
     src: 'css/*.css',
     dest: 'css/'
   }
-}</pre>
+}</code></pre>
 
 <p>CSSO minifiera tous les fichiers situés dans le dossier <code>css/</code>. On retrouve ici nos paramètres habituels.</p>
 
 <p><strong>Imagemin</strong></p>
 
-<pre class="pre-js prettyprint">imagemin: {
+<pre><code class="js">imagemin: {
   png: {
     options: {
       optimizationLevel: 7
@@ -255,13 +255,13 @@
       }
     ]
   }
-}</pre>
+}</code></pre>
 
 <p>Imagemin optimise et compresse les images (PNG et JPG). Dans l&#39;exemple ci-dessus, deux sous-tâches ont été créées, une par type de fichier. Si besoin, elles peuvent être ciblées spécifiquement par <code>[imagemin:png]</code> ou <code>[imagemin:jpg]</code>. La première sous-tâche définit le niveau d&#39;optimisation, la deuxième optimise les JPG en les enregistrant au format progressif.</p>
 
 <p><strong>Concat</strong></p>
 
-<pre class="pre-js prettyprint">concat: {
+<pre><code class="js">concat: {
   options: {
     separator: ';'
   },
@@ -270,25 +270,25 @@
       'js/main.js': ['js/plugins/**/*.js']
     }
   }
-}</pre>
+}</code></pre>
 
 <p>Concat regroupera tous les fichiers JS située dans le dossier <code>plugin</code> (ou un de ses sous-dossiers) en un seul fichier appelé <code>main.js</code>. Les différents fichiers concaténés seront séparés grâce à <code>;</code>.</p>
 
 <p><strong>Uglify</strong></p>
 
-<pre class="pre-js prettyprint">uglify: {
+<pre><code class="js">uglify: {
   js: {
     files: {
       'js/main.js': ['js/main.js']
     }
   }
-}</pre>
+}</code></pre>
 
 <p>Le rôle d&#39;Uglify et de minifier le fichier <code>main.js</code>.</p>
 
 <p><strong>Watch</strong></p>
 
-<pre class="pre-js prettyprint">watch: {
+<pre><code class="js">watch: {
   options: {
     livereload: true
   },
@@ -299,7 +299,7 @@
   html: {
     files: ['*.html']
   },
-}</pre>
+}</code></pre>
 
 <p>Cette tâche va surveiller automatiquement certains changements et mettre en place certaines actions, ce qui permet par exemple d&#39;éviter d&#39;avoir à exécuter une commande à chaque changement d&#39;un fichier spécifique. Trois sous-tâches sont définies ici :</p>
 
@@ -349,8 +349,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

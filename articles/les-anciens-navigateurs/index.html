@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/les-anciens-navigateurs" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -74,11 +74,10 @@
 
 <p>Grâce aux <a href="http://briangelhaus.com/blog/target-ie-in-css/">commentaires conditionnels</a> dont je parlais ci-dessus, il est assez facile de créer des classes spécifiques, par exemple :</p>
 
-<pre class="pre-css prettyprint">
-.ie8 .header {
+<pre><code class="css">.ie8 .header {
   // bla bla bla
 }
-</pre>
+</code></pre>
 
 <p>Cette approche est toutefois assez fastidieuse, elle nécessite en effet de réecrire toutes les propriétés css comprises dans les media queries qui se situent autour des dimensions &quot;habituelles&quot; de ces navigateurs (1000-1200 px). Niveau maintenance, ça n&#39;est pas non plus idéal puisque l&#39;on doit mettre à jour le CSS spécifique à IE en même temps que le CSS global.</p>
 
@@ -90,15 +89,14 @@
 
 <p>Cette méthode implique en revanche d&#39;écrire des media queries propres à chaque élément, par exemple :</p>
 
-<pre class="pre-scss prettyprint">
-.element {
+<pre><code class="scss">.element {
   color: red;
 
   @media screen and (min-width: 1100px) {
     color: blue;
   }
 }
-</pre>
+</code></pre>
 
 <p>Un &quot;inconvénient&quot; quasiment négligeable si vous prenez soin de minifier et gzipper vos CSS, sans compter un gros gain en maintenabilité.</p>
 
@@ -146,8 +144,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/les-animations-en-css-un-cas-pratique" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -77,16 +77,16 @@
 
 <p>Il semblerait que la première solution soit celle à privilégier pour des <a href="http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/">soucis de performance <sup>EN</sup></a>. Le hic, c&#39;est que <code>translate()</code> ne bouge l&#39;élément que par rapport à sa position originale. Ça me posait un souci car dans ce cas, impossible d&#39;avoir un contrôle précis de la position de l&#39;élément par rapport à la fenêtre du navigateur. J&#39;ai donc eu recours à la deuxième solution, en utilisant le <code>@keyframes</code> suivant :</p>
 
-<pre class="pre-css prettyprint">@keyframes nuage1 {
+<pre><code class="css">@keyframes nuage1 {
   from {left: -200px;}
   to {left: 100%;}
-}</pre>
+}</code></pre>
 
 <p>De cette façon, mon nuage apparaîtra à chaque fois à 200px du bord gauche de ma fenêtre et se repositionnera bien après être arrivé à 100%. J&#39;ai ensuite attribué plusieurs vitesses à chacun de mes nuages pour leur donner un effet plus réaliste, par exemple :</p>
 
-<pre class="pre-css prettyprint">.nuage1 {
+<pre><code class="css">.nuage1 {
   animation: nuage1 32s linear infinite;
-}</pre>
+}</code></pre>
 
 <p>Les animations des nuages saccadent légèrement sur Chrome, mais sur Firefox et IE10 c&#39;est plutôt fluide, d&#39;après ce que j&#39;ai testé.</p>
 
@@ -96,9 +96,9 @@
 
 <p>Là, contrairement aux nuages, la montgolfière ne bouge que par rapport à sa position d&#39;origine, l&#39;idée étant de lui donner un léger effet &quot;flottant&quot; de haut en bas. J&#39;ai donc pu utiliser <code>translateY()</code> pour arriver à ce résultat :</p>
 
-<pre class="pre-css prettyprint">@keyframes montgolfiere {
+<pre><code class="css">@keyframes montgolfiere {
   50% {transform: translateY(10px);}
-}</pre>
+}</code></pre>
 
 <p>A noter qu&#39;un simple ligne revient ici au même résultat que si l&#39;on avait défini trois étapes à 0, 50 et 100% de notre <code>@keyframes</code>, l&#39;idée étant de faire revenir l&#39;élément à sa position de départ.</p>
 
@@ -106,11 +106,11 @@
 
 <p>Ici, même principe que pour l&#39;animation de la montgolfière : la fumée se déplacera à chaque fois par rapport à sa position initiale. J&#39;ai également ajouté un effet d&#39;opacité, pour la rendre un peu plus réaliste. Le code est le suivant :</p>
 
-<pre class="pre-css prettyprint">@keyframes fumee {
+<pre><code class="css">@keyframes fumee {
   from {transform: translate(0px, 0px); opacity: 0;}
   50% {transform: translate(7px, -7px); opacity: 1;}
   to {transform: translate(20px, -20px); opacity: 0;}
-}</pre>
+}</code></pre>
 
 <p>Arrivée à 100% de l&#39;animation, la fumée repartira de son point de départ.</p>
 
@@ -118,9 +118,9 @@
 
 <p>Pour donner l&#39;impression que le drapeau flotte au vent, c&#39;est plutôt simple : il suffit de changer sa <code>width</code> dans le temps, de la manière suivante :</p>
 
-<pre class="pre-css prettyprint">@keyframes flag {
+<pre><code class="css">@keyframes flag {
   50% {width: 4px;}
-}</pre>
+}</code></pre>
 
 <p>Le drapeau passera de 7 à 4px en boucle, donnant ainsi l&#39;impression qu&#39;il bouge.</p>
 
@@ -170,8 +170,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

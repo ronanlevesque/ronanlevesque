@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -178,14 +178,14 @@
 
 <p>Pour se faciliter la vie, l&#39;idée est de pouvoir animer chacune des parties du smiley indépendamment. La façon de faire est assez simple; on applique une ID à la section de notre SVG en question, et on la lie à Snap.Svg. Par exemple :</p>
 
-<pre class="pre-js prettyprint">var smiley = Snap.select('#smiley'),
+<pre><code class="js">var smiley = Snap.select('#smiley'),
     smileyBody = Snap.select('#smiley__body'),
     smileyMouth = Snap.select('#smiley__mouth');
-</pre>
+</code></pre>
 
 <p>Libre à nous de les animer ensuite comme l&#39;on souhaite. Pour toggle les changements d&#39;état, on applique un callback au <code>smiley.click</code> pour utiliser la fonction souhaitée (ici, <code>smileyDef()</code> et <code>smileyToggle</code>).</p>
 
-<pre class="pre-js prettyprint">toggle1 = false;
+<pre><code class="js">toggle1 = false;
 smiley.click(function() {
   if(toggle1) {
     smileyDef();
@@ -196,16 +196,16 @@ smiley.click(function() {
     toggle1 = true;
   }
 });
-</pre>
+</code></pre>
 
 <h2>Animation du corps</h2>
 
 <p>Les modifications apportées au corps sont assez simples : on change uniquement la couleur du fond et de la bordure. Cela se fait de la manière suivante :</p>
 
-<pre class="pre-js prettyprint">function smileyToggle() {
+<pre><code class="js">function smileyToggle() {
   smileyBody.animate({fill: '#A4DA69', stroke: '#5B9020'}, 150, mina.ease);
 }
-</pre>
+</code></pre>
 
 <p><code>150</code> représente la durée de l&#39;animation et <code>mina.ease</code> le type d&#39;easing souhaité.</p>
 
@@ -213,10 +213,10 @@ smiley.click(function() {
 
 <p>Il va s&#39;agir de modifier le <code>path</code> de la bouche pour faire arborer à notre smiley un gros sourire. Cela se fait d&#39;une manière identique à l&#39;animation des couleurs du body :</p>
 
-<pre class="pre-js prettyprint">function smileyToggle() {
+<pre><code class="js">function smileyToggle() {
   smileyMouth.animate({d: 'M90.7207031,217.580078 C129.926268,287.516842 285.592097,293.239314 300.232422,205.320312', stroke: '#5B9020'}, 150, mina.ease);
 }
-</pre>
+</code></pre>
 
 <h2>Animation des sourcils</h2>
 
@@ -224,10 +224,10 @@ smiley.click(function() {
 
 <p>Pour les <code>path</code>, j&#39;ai comme pour ma bouche simplement modifié mon attribut <code>d</code>. Pour les <code>polygon</code>, j&#39;ai dû appliquer des transformations pour que le sourcil en question se déplace à l&#39;endroit voulu.</p>
 
-<pre class="pre-js prettyprint">function smileyToggle() {
+<pre><code class="js">function smileyToggle() {
   smileyLeftEyebrow.animate({transform: 't0,-30', fill: '#5B9020'}, 150, mina.ease);
 }
-</pre>
+</code></pre>
 
 <p>Les transformations sur Snap.svg ont une syntaxe assez spéciale. Ainsi, <code>t0,-30</code> désigne une translation des valeurs x et y à 0 et -30 dans l&#39;espace. Pour plus d&#39;infos sur le sujet, je vous conseille de lire cet <a href="http://stackoverflow.com/questions/20302801/how-do-i-understand-transform-properties-in-snap-svg">article <sup>EN</sup></a> sur Stackoverflow.</p>
 
@@ -275,8 +275,7 @@ smiley.click(function() {
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

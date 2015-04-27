@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -62,18 +62,17 @@
 
 <p>L&#39;erreur affichée était la suivante :</p>
 
-<pre class="prettyprint">Liquid Exception: incompatible character encodings: UTF-8 and IBM437 in whatever.html</pre>
+<pre><code class="bash">Liquid Exception: incompatible character encodings: UTF-8 and IBM437 in whatever.html</code></pre>
 
 <p>La solution à ce problème est facile. Au lieu de :</p>
 
-<pre class="prettyprint">jekyll serve --watch</pre>
+<pre><code class="bash">jekyll serve --watch</code></pre>
 
 <p>Il suffit de taper :</p>
 
-<pre class="prettyprint">
-chcp 65001
+<pre><code class="bash">chcp 65001
 jekyll serve --watch
-</pre>
+</code></pre>
 
 <p>La première commande permet de changer le code-page. En revanche, il vaut mieux éviter de définir cette commande sur une clé de base de registres, puisque apparemment cela risque d&#39;impacter le bon fonctionnement de Windows.</p>
 
@@ -111,8 +110,7 @@ jekyll serve --watch
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

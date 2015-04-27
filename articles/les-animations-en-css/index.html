@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/les-animations-en-css" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -75,10 +75,10 @@
 
 <p>La syntaxe est la suivante :</p>
 
-<pre class="pre-css prettyprint">@keyframes &lt;identifiant&gt;  {
+<pre><code class="css">@keyframes &lt;identifiant&gt;  {
   [ [ from | to | &lt;pourcentage&gt; ] [, from | to | &lt;pourcentage&gt; ]* bloc ]*
 }
-</pre>
+</code></pre>
 
 <p>Regardons ça en détails :</p>
 
@@ -99,24 +99,24 @@
 
 <p>On cible d&#39;abord en HTML l&#39;élément que l&#39;on souhaite animer :</p>
 
-<pre class="pre-html prettyprint">&lt;h1&gt;Big&lt;span class="blue"&gt;Blue&lt;/span&gt;&lt;/h1&gt;</pre>
+<pre><code class="html">&lt;h1&gt;Big&lt;span class="blue"&gt;Blue&lt;/span&gt;&lt;/h1&gt;</code></pre>
 
 <p>On définit ensuite dans notre CSS les valeurs d&#39;animation: nom de l&#39;animation, durée et boucle souhaitée (de 1, valeur par défaut, à infinite). Ici j&#39;ai regroupé ensemble les 3 propriétés sous la propriété <code>animation</code>.</p>
 
-<pre class="pre-css prettyprint">.blue {
+<pre><code class="css">.blue {
   display: inline-block; /* nécessaire dans cet exemple pour l'animation mouvement */
   animation: bluemove 3s infinite;
 }
-</pre>
+</code></pre>
 
 <p>Puis on définit notre <code>@keyframes</code>, avec l&#39;état de départ, l&#39;état que l&#39;on souhaite à la moitié de l&#39;animation et l&#39;état de fin (identique à l&#39;état de départ afin de boucler la boucle proprement) :</p>
 
-<pre class="pre-css prettyprint">@keyframes bluemove {
+<pre><code class="css">@keyframes bluemove {
   from {transform: translateY(-5px); color: black;}
   50% {transform: translateY(5px); color: #1785BF;}
   to {transform: translateY(-5px); color: black;}
 }
-</pre>
+</code></pre>
 
 <p>Attention, dans cet exemple je n&#39;ai volontairement rien préfixé, mais pensez bien à rajouter les préfixes nécessaires de votre côté pour que cela fonctionne (<code>@-webkit-keyframes</code>, <code>@-moz-keyframes</code> etc).</p>
 
@@ -158,8 +158,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

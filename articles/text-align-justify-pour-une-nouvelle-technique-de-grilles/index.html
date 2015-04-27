@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/text-align-justify-pour-une-nouvelle-technique-de-grilles" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -81,16 +81,16 @@
 
 <p>Pour reprendre l&#39;exemple de Barrel il faudrait donc avoir le code suivant :</p>
 
-<pre class="pre-html prettyprint">&lt;ul class="grid"&gt;
+<pre><code class="html">&lt;ul class="grid"&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li class="break"&gt;&lt;/li&gt;
 &lt;ul&gt;
-</pre>
+</code></pre>
 
-<pre class="pre-css prettyprint">.grid {
+<pre><code class="css">.grid {
   text-align: justify;
   font-size: 0.1px; /* supprimer l'espace entre les différents éléments */
 }
@@ -104,16 +104,16 @@
   width: 100%;
   height: 0;
 }
-</pre>
+</code></pre>
 
 <p>Ou, pour une sémantique plus propre, se passer de l&#39;élément <code>.break</code> et ajouter un <code>:after</code> au conteneur :</p>
 
-<pre class="pre-css prettyprint">.grid:after {
+<pre><code class="css">.grid:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
-</pre>
+</code></pre>
 
 <p>Un autre souci à contourner, c&#39;est le nombre d&#39;éléments par ligne. Mettons qu&#39;on ait 4 éléments par ligne et que la dernière ligne n&#39;en affiche que 2. Les 2 éléments vont se justifier sur la longueur de la ligne, donnant un résultat plutôt indésirable :</p>
 
@@ -125,7 +125,7 @@
 
 <p>Le code ressemblera donc à :</p>
 
-<pre class="pre-html prettyprint">&lt;ul class="grid"&gt;
+<pre><code class="html">&lt;ul class="grid"&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
@@ -135,11 +135,11 @@
     &lt;li class="placeholder"&gt;&lt;/li&gt;
     &lt;li class="placeholder"&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</pre>
+</code></pre>
 
 <p>La formule à appliquer pour connaitre le nombre de placeholders à utiliser, et ce quelque soit le nombre d&#39;items présents sur la dernière ligne, est la suivante :</p>
 
-<pre>nombre de placeholders = nombre maximum d'éléments par ligne - 2</pre>
+<pre><code class="nohighlight">nombre de placeholders = nombre maximum d'éléments par ligne - 2</code></pre>
 
 <p>Pourquoi 2 ? Parce que si un seul produit s&#39;affiche sur la dernière ligne, il s&#39;affichera de toute façon tout à gauche.</p>
 
@@ -147,7 +147,7 @@
 
 <p>L&#39;énorme avantage de cette technique, c&#39;est qu&#39;elle est très facilement adaptable au responsive design, par exemple :</p>
 
-<pre class="pre-css prettyprint">.grid li {
+<pre><code class="css">.grid li {
   width: 100%;
   margin-bottom: 5%;
 }
@@ -172,7 +172,7 @@
     margin-bottom: 2.5%;
   }
 }
-</pre>
+</code></pre>
 
 <p>Beaucoup plus simple et moins casse-tête que les <code>nth-child</code> :) Par contre les marges horizontales sont calculées automatiquement, il faut donc un peu tâtonner pour trouver les valeurs exactes à appliquer aux <code>width</code> de nos éléments...</p>
 
@@ -216,8 +216,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

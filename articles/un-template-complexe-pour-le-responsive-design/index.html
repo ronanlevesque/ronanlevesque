@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/un-template-complexe-pour-le-responsive-design" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -64,7 +64,7 @@
 
 <p>La solution, c&#39;est de mettre en place un système intermédiaire qui va offrir plus de flexibilité. Prenons l&#39;exemple suivant :</p>
 
-<pre class="pre-css prettyprint">@media screen and (min-width: 40.0625em) {
+<pre><code class="css">@media screen and (min-width: 40.0625em) {
 
   .r50-25 {
     width: 50%;
@@ -78,7 +78,7 @@
   .r50-25 {width: 25%;}
 
 }
-</pre>
+</code></pre>
 
 <p>A 640px et en-dessous : une colonne. Entre 641px et 959px : deux colonnes. Au dessus : 4 colonnes. Un exemple est disponible <a href="http://fox-css.com/demo">ici</a> (bas de page). Bon, ça n&#39;a rien de très sorcier mais ça a le mérite d&#39;offrir plus de solutions en termes de mise en page. J&#39;ai également ajouté une autre possibilité, qui utilise les classes <code>.r66-33</code>, <code>.r33.33</code> et <code>r100-33</code>. En gros c&#39;est toujours la même chose : le premier nombre indique la largeur de la classe entre 641 et 959px, le deuxième indique sa largeur au-dessus. On pourrait ensuite imaginer des templates plus complexes, mais je vais déjà tester ça en production, on verra si ça s&#39;avère utile :)</p>
 
@@ -118,8 +118,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

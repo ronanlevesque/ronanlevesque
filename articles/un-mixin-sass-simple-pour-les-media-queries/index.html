@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -64,7 +64,7 @@
 
 <p>Je suis notamment tombé sur un <code>@mixin</code> assez intéressant pour gérer les media queries, publié dans un article de <a href="http://web-design-weekly.com/2013/05/12/handy-sass-mixins/">Web Design Weekly</a>. Le <code>@mixin</code> utilisé est le suivant :</p>
 
-<pre class="pre-scss prettyprint">@mixin breakpoint($point) {
+<pre><code class="scss">@mixin breakpoint($point) {
   @if $point == large {
     @media (min-width: 64.375em) { @content; }
   }
@@ -75,19 +75,19 @@
     @media (min-width: 37.5em)  { @content; }
   }
 }
-</pre>
+</code></pre>
 
 <p>Il permet donc d&#39;ajouter facilement des breakpoints à un design responsive. Ainsi pour reprendre l&#39;exemple de l&#39;article, le SCSS suivant :</p>
 
-<pre class="pre-scss prettyprint">.page-wrap {
+<pre><code class="scss">.page-wrap {
   width: 75%;
   @include breakpoint(large) { width: 60%; }
 }
-</pre>
+</code></pre>
 
 <p>Se transformera en :</p>
 
-<pre class="pre-css prettyprint">.page-wrap {
+<pre><code class="css">.page-wrap {
   width: 75%;
 }
 @media (min-width: 64.375em) {
@@ -95,14 +95,14 @@
     width: 60%;
   }
 }
-</pre>
+</code></pre>
 
 <p>C&#39;est un <code>@mixin</code> très utile mais je voulais le simplifier et le rendre un peu plus flexible, histoire de l&#39;adapter sur mesure à différents media queries. Je l&#39;ai donc transformé en ceci :</p>
 
-<pre class="pre-scss prettyprint">@mixin bp($point) {
+<pre><code class="scss">@mixin bp($point) {
   @media screen and (min-width: $point / 16 + em) { @content; }
 }
-</pre>
+</code></pre>
 
 <p>Il suffit ensuite simplement de remplacer la variable <code>$point</code> par la taille que l&#39;on souhaite pour notre media queries (query ?) en pixels, et celle-ci sera automatiquement convertie en <code>em</code>.</p>
 
@@ -140,8 +140,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

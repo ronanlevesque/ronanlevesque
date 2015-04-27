@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -62,7 +62,7 @@
 
 <p>Prenons un exemple :</p>
 
-<pre class="pre-jq prettyprint">$('a.blabla').click(function(){
+<pre><code class="js">$('a.blabla').click(function(){
   // action
   return false;
 });
@@ -70,11 +70,11 @@
 $('a').click() {
   // action
 }
-</pre>
+</code></pre>
 
 <p>Dans cet exemple, à cause du <code>return false</code> la deuxième fonction ne pourra pas être déclenchée. On pourrait contourner le problème en le supprimant, mais on se retrouve avec un rétablissement du comportement de l&#39;ancre par défaut, plutôt pénible. J&#39;ai heureusement trouvé une solution simple sur <a href="http://firebreaksice.com/avoid-return-false-in-jquery-click-bindings/">firebreaksice.com</a>, d&#39;où j&#39;ai tiré mon exemple. Il suffit de modifier notre code pour le faire ressembler à ceci :</p>
 
-<pre class="pre-jq prettyprint">$('a.blabla').click(function(e){
+<pre><code class="js">$('a.blabla').click(function(e){
   e.preventDefault();
   // action
 });
@@ -83,7 +83,7 @@ $('a').click(e) {
   e.preventDefault();
   // action
 }
-</pre>
+</code></pre>
 
 <p>En fait on rajoute un paramètre événement à chaque fonction, puis on appelle ensuite tout simplement <code>preventDefault()</code> avec, ce qui permet d&#39;éviter le comportement par défaut de notre événement tout en évitant que cela soit aussi propagé à la fonction suivante.</p>
 
@@ -121,8 +121,7 @@ $('a').click(e) {
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

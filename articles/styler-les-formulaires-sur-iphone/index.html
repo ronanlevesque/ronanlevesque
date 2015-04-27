@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/styler-les-formulaires-sur-iphone" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -64,7 +64,7 @@
 
 <p>Voilà par exemple les styles appliqués au bouton &quot;Go&quot; de la barre de recherche du blog :</p>
 
-<pre class="pre-css prettyprint">#submit {
+<pre><code class="css">#submit {
   background: #333;
   -moz-border-radius: 0px 8px 8px 0px;
   border-radius: 0px 8px 8px 0px;
@@ -76,7 +76,7 @@
   cursor: pointer;
   font: bold 13px "Gudea", Arial, Sans-serif;
   color: #fff;
-}</pre>
+}</code></pre>
 
 <p>Le résultat est plutôt décevant :</p>
 
@@ -84,7 +84,7 @@
 
 <p>Il suffit pourtant de rajouter une simple ligne au style concerné pour contourner le problème. Cela permet de réinitialiser les styles par défaut pour l&#39;iPhone (à confirmer si cela fonctionne également sur iPad...). Voici la ligne en question :</p>
 
-<pre class="pre-css prettyprint">-webkit-appearance: none;</pre>
+<pre><code class="css">-webkit-appearance: none;</code></pre>
 
 <p>Simple, non ? Voilà, j&#39;espère que cela vous sera aussi utile qu&#39;à moi :)</p>
 
@@ -122,8 +122,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

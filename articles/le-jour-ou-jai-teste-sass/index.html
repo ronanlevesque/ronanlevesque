@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -86,22 +86,22 @@
 
 <p>Le nesting, qu&#39;on pourrait plus ou moins traduire par imbrication, permet de regrouper ensemble plusieurs sélecteurs en les imbriquant pour plus de clarté. Par exemple, prenons le SCSS suivant :</p>
 
-<pre class="pre-scss prettyprint">ul {
+<pre><code class="scss">ul {
   padding: 2em;
   a {color: white;}
 }
-</pre>
+</code></pre>
 
 <p>Il se traduira en CSS par :</p>
 
-<pre class="pre-css prettyprint">ul {
+<pre><code class="css">ul {
   padding: 2em;
 }
 
 ul a {
   color: white;
 }
-</pre>
+</code></pre>
 
 <p>Le nesting est donc un bon moyen d&#39;organiser clairement ses informations. Par ailleurs, il marche non seulement avec les sélecteurs mais également avec leurs propriétés.</p>
 
@@ -113,7 +113,7 @@ ul a {
 
 <p>Ils permettent de réutiliser une partie de notre CSS n&#39;importe où grâce à la fonction <code>@include</code>. Ainsi le SCSS suivant :</p>
 
-<pre class="pre-scss prettyprint">@mixin list-padd {
+<pre><code class="scss">@mixin list-padd {
   ul {padding: 2em;}
   li {padding: 1em;}
 }
@@ -121,18 +121,18 @@ ul a {
 nav {
   @include list-padd;
 }
-</pre>
+</code></pre>
 
 <p>Sera traduit en CSS par :</p>
 
-<pre class="pre-css prettyprint">nav ul {
+<pre><code class="css">nav ul {
   padding: 2em;
 }
 
 nav li {
   padding: 1em;
 }
-</pre>
+</code></pre>
 
 <p>Simple non ? :)</p>
 
@@ -140,7 +140,7 @@ nav li {
 
 <p>Fonctionnant un peu sur le même principe que les <code>@mixins</code>, la fonction <code>@extend</code> permet d&#39;étendre les styles d&#39;un sélecteur à un autre. Par exemple, le SCSS suivant :</p>
 
-<pre class="pre-scss prettyprint">.red {
+<pre><code class="scss">.red {
   color: white;
   background: red;
 }
@@ -149,11 +149,11 @@ nav li {
   padding: 2em;
   @extend .red;
 }
-</pre>
+</code></pre>
 
 <p>donnera ce CSS :</p>
 
-<pre class="pre-css prettyprint">.red, .button {
+<pre><code class="css">.red, .button {
   color: white;
   background: red;
 }
@@ -161,7 +161,7 @@ nav li {
 .button {
   padding: 2em;
 }
-</pre>
+</code></pre>
 
 <p>Une fonction pratique donc, qui permet d&#39;éviter d&#39;avoir à copier/coller 20 fois le même code au moindre changement.</p>
 
@@ -209,8 +209,7 @@ nav li {
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

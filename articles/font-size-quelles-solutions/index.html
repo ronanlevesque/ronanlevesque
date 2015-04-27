@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/font-size-quelles-solutions" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -74,11 +74,11 @@
 
 <p>Afin de simplifier les calculs de taille de police en utilisant les <code>em</code>, une solution souvent utilisée est de définir le code suivant :</p>
 
-<pre class="pre-css prettyprint">body {font-size: 62.5%}</pre>
+<pre><code class="css">body {font-size: 62.5%}</code></pre>
 
 <p>Sachant que la taille de police par défaut des navigateurs modernes est (<a href="http://isitrwd.com/rfs/">presque ?</a>) tout le temps <code>16px</code> pour <code>1em</code>, la conversion est donc beaucoup plus simple suite à ce calcul et donnera le résultat suivant :</p>
 
-<pre class="prettyprint">10 px = 1 em</pre>
+<pre><code class="nohighlight">10 px = 1 em</code></pre>
 
 <p>L&#39;inconvénient de cette méthode, c&#39;est que suite à ce changement la taille par défaut du texte sera de <code>10px</code> à part si on ne le précise pas ailleurs. Utilisé en production, je trouve ça plutôt pénible et potentiellement source d&#39;erreurs.</p>
 
@@ -94,11 +94,11 @@
 
 <p>Et c&#39;est précisément là que Sass intervient : il va faire le calcul à notre place grâce à un <code>@mixin</code>. Celui que j&#39;utilise est le suivant :</p>
 
-<pre class="pre-scss prettyprint">@mixin fs($fontsize: 16, $fontbase: 16) {
+<pre><code class="scss">@mixin fs($fontsize: 16, $fontbase: 16) {
   font-size: $fontsize + px;
   font-size: ($fontsize / $fontbase) * 1rem;
 }
-</pre>
+</code></pre>
 
 <p>Il suffit ainsi d&#39;écrire <code>@include fs(16)</code> pour que nos <code>rem</code> soient convertis en l&#39;équivalent de <code>16px</code>, avec le fallback en <code>px</code> pour les vieux navigateurs.</p>
 
@@ -152,8 +152,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

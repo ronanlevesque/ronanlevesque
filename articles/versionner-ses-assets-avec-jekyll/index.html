@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/versionner-ses-assets-avec-jekyll" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -62,15 +62,15 @@
 
 <p>Le principe est assez simple, on va se baser sur les formats date du système de templating <a href="http://liquidmarkup.org/">liquid</a> pour générer une ID. Ainsi, au lieu de :</p>
 
-<pre class="pre-html prettyprint">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css"&gt;</pre>
+<pre><code class="html">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css"&gt;</code></pre>
 
 <p>Il nous suffira d&#39;utiliser :</p>
 
-<pre class="pre-html prettyprint">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css?v=&#123;&#123; site.time | date: '%y%m%d%k%M%S' &#125;&#125;"&gt;</pre>
+<pre><code class="html">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css?v=&#123;&#123; site.time | date: '%y%m%d%k%M%S' &#125;&#125;"&gt;</code></pre>
 
 <p>Ce qui générera, dans l&#39;ordre : l&#39;année, le mois, le jour, et l&#39;heure avec minutes et secondes. Ainsi le résultat obtenu sera de ce type :</p>
 
-<pre class="pre-html prettyprint">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css?v=141217192112"&gt;</pre>
+<pre><code class="html">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css?v=141217192112"&gt;</code></pre>
 
 <p>De cette manière, on est sûr d&#39;avoir une ID <em>presque</em> unique puisqu&#39;à chaque seconde passée elle sera différente.</p>
 
@@ -108,8 +108,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

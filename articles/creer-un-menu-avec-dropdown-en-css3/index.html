@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -70,7 +70,7 @@
 
 <p>Le but est de commencer par une structure HTML claire et simple sous forme de liste :</p>
 
-<pre class="pre-html prettyprint">&lt;ul id="menu"&gt;
+<pre><code class="html">&lt;ul id="menu"&gt;
   &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;
     &lt;a href="#"&gt;Catégories&lt;/a&gt;
@@ -85,7 +85,7 @@
   &lt;li&gt;&lt;a href="#"&gt;A propos&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</pre>
+</code></pre>
 
 <p>Pour l&#39;instant, aucun style n&#39;a été appliqué, mais l&#39;important est ici que le code respecte la <a href="http://en.wikipedia.org/wiki/Semantic_HTML">sémantique HTML <sup>EN</sup></a>.</p>
 
@@ -97,7 +97,7 @@
 
 <p>Il va ensuite falloir appliquer vos styles CSS à cette liste, histoire de rendre tout ça un peu plus sexy, attention restez bien concentrés...</p>
 
-<pre class="pre-css prettyprint">#menu {
+<pre><code class="css">#menu {
   width: 100%;
   margin: 0;
   padding: 10px 0 0 0;
@@ -270,7 +270,7 @@
 
 * html #menu             { zoom: 1; } /* IE6 */
 *:first-child+html #menu { zoom: 1; } /* IE7 */
-</pre>
+</code></pre>
 
 <p>En regardant la démo de près, vous avez sans doute pu remarquer une flèche située juste en dessous ou à côté du menu principal ou des menus secondaires, afin d&#39;améliorer la lisibilité du menu :</p>
 
@@ -278,7 +278,7 @@
 
 <p>Cette flèche est simplement créée en utilisant le pseudo-élément <code>after</code>. Voici un zoom sur le code en question :</p>
 
-<pre class="pre-css prettyprint">#menu ul ul li:first-child a:after {
+<pre><code class="css">#menu ul ul li:first-child a:after {
   left: -8px;
   top: 12px;
   width: 0;
@@ -288,7 +288,7 @@
   border-top: 5px solid transparent;
   border-right: 8px solid #444;
 }
-</pre>
+</code></pre>
 
 <p>Cela marchera sur la plupart des navigateurs récents, et jusqu&#39;à IE8 compris.</p>
 
@@ -296,7 +296,7 @@
 
 <p>Bien évidemment, IE6 va poser (comme souvent) un problème si on en reste là. En effet, les sous-menus s&#39;affichent quand on survole les éléments <code>li</code> du menu. Or IE6 ne supporte pas le survol d&#39;éléments sans ancre. Pour s&#39;assurer que ce menu fonctionne correctement sous ce dernier, il va donc falloir utiliser un peu de JavaScript, couplé à la librairie <a href="http://jquery.com/">jQuery</a> :</p>
 
-<pre class="pre-html prettyprint">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
+<pre><code class="html">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;
   $(function() {
     if ($.browser.msie &amp;&amp; $.browser.version.substr(0,1)&lt;7)
@@ -309,7 +309,7 @@
     }
   });
 &lt;/script&gt;
-</pre>
+</code></pre>
 
 <p>Vous pouvez choisir de sauter cette étape, en effet IE6 est en passe de disparaître complètement de notre paysage (vivement qu&#39;IE7 suive la même voie...).</p>
 
@@ -349,8 +349,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);

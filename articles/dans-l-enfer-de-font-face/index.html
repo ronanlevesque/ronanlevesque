@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/dans-l-enfer-de-font-face" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150407103318">
+  <link rel="stylesheet" href="/css/fox.css?v=150427122514">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -62,7 +62,7 @@
 
 <p>Si l&#39;on reprend l&#39;exemple de FontSquirrel, le code généré par le kit téléchargé est le suivant :</p>
 
-<pre class="pre-css prettyprint">@font-face {
+<pre><code class="css">@font-face {
   font-family: 'merriweather';
   src: url('merriweather.eot');
   src: url('merriweather.eot?#iefix') format('embedded-opentype'),
@@ -71,14 +71,14 @@
   url('merriweather.svg#merriweatherheavy') format('svg');
   font-weight: normal;
   font-style: normal;
-}</pre>
+}</code></pre>
 
 <p>Si l&#39;on veut définir différents types de cette police, on définit une <code>@font-face</code> propre à chacun (merriweather-italic, merriweather-bold etc.). Puis dans notre CSS, par exemple :</p>
 
-<pre class="pre-css prettyprint">strong {
+<pre><code class="css">strong {
   font-family: merriweather-bold, Serif;
   font-weight: normal;
-}</pre>
+}</code></pre>
 
 <p>Le hic avec cette façon de faire, c&#39;est qu&#39;en cas d&#39;impossibilité pour le navigateur d&#39;afficher les fontes personnalisées, la police de <em>fallback</em> s&#39;affichera sans italique ou sans gras.</p>
 
@@ -86,7 +86,7 @@
 
 <p>En fouillant un peu, j&#39;ai trouvé cette <a href="http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles">solution</a>, bien plus intéressante car elle évitera la suppression ou le passage en <em>faux</em> (c&#39;est-à-dire simulé par le navigateur) des styles italiques et gras :</p>
 
-<pre class="pre-css prettyprint">@font-face {
+<pre><code class="css">@font-face {
   font-family: 'Whatever';
   src: url('whatever.eot');
   font-weight: normal;
@@ -105,7 +105,7 @@
   src: url('whatever-bold.eot');
   font-weight: bold;
   font-style: normal;
-}</pre>
+}</code></pre>
 
 <p>On utilise un seul nom unique de <code>font-family</code> pour toutes nos <code>@font-face</code>, puis on y applique nos <code>font-weight</code> et <code>font-style</code> désirés. Problème réglé... Du moins sur la plupart des navigateurs.</p>
 
@@ -149,8 +149,7 @@
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150407103318"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert"></script>
+  <script src="/js/main.js?v=150427122514"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);
