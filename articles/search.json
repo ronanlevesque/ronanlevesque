@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Les principales nouveautés de ES6",
+      "category" : "",
+      "tags"     : "javascript",
+      "url"      : "/articles/les-principales-nouveautes-de-es6",
+      "date"     : "2015-04-27 00:00:00 +0200"
+    } ,
+  
+    {
       "title"    : "Dropbox et node_modules",
       "category" : "",
       "tags"     : "outils",

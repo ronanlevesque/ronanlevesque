@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="ie7 no-js" lang="fr"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 no-js" lang="fr"> <![endif]-->
+<!--[if IE 9]> <html class="ie9 no-js" lang="fr"> <![endif]-->
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <title>Ronan Levesque - Les principales nouveautés de ES6</title>
+  <meta name="description" content="Petit tour d'horizon des principales nouveautés d'ES6">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ronan Levesque" />
+  <meta property="og:title" content="Les principales nouveautés de ES6" />
+  <meta property="og:description" content="Petit tour d'horizon des principales nouveautés d'ES6">
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  <link rel="stylesheet" href="/css/fox.css?v=150429095027">
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
+  <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <div class="logo">
+        <a href="/">
+          <svg width="450" height="450" viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M57.217 85.967c22.26-7.77 44.397-15.496 66.538-23.22 32.036-11.18 64.076-22.343 96.103-33.55 2.748-.96 5.328-1.35 8.23-.334 53.696 18.79 107.417 37.507 161.13 56.25.455.16.857.475 1.52.85v274.775c-47.212 16.584-94.385 33.156-141.56 49.72-5.798 2.037-11.665 3.89-17.4 6.085-4.913 1.88-9.596 1.806-14.556.06-52.024-18.325-104.08-36.556-156.128-54.813-1.232-.433-2.466-.862-3.875-1.354-.003-91.33-.003-182.604-.003-274.47z" fill="#fff"/><path d="M284.11 148.303l88.557-29.98v189.723L233.31 355.314V165.45c8.796-2.954 17.552-5.897 27.026-9.08v164.173l87.363-30.646v-21.234L284.11 290.9V148.304z" fill="#151515" class="darker" /><path d="M214.683 355.31l-26.395-8.96V184.793l-87.056-30.465v95.164c6.35 3.312 14.003 4.2 20.614 8.462l-21.505 33.82c7.777 2.74 15.096 5.32 22.81 8.042l22.093-34.545c6.818 2.39 13.338 4.68 19.882 6.975v66.195l-89.81-30.362V118.334l139.368 47.12V355.31z" fill="#353535" class="normal" /><path d="M77.007 99.593l-.165-1.105 147.543-51.462c49.125 17.13 98.31 34.284 147.495 51.436l.006 1.088-147.523 51.41L77.007 99.594z" fill="#454545" class="lighter" /><path d="M218.732 399.713c-47.732-16.75-95.45-33.537-143.433-50.41v-23.82c1.73-1.083 3.16.34 4.56.83 47.603 16.647 95.176 33.375 142.756 50.086.78.272 1.584.466 2.377.697 1.188.75 1.894 1.81 2.002 3.22.44 5.75.453 11.5-.007 17.25-.114 1.43-.968 2.4-1.99 3.276-2.274.67-4.267-.428-6.266-1.13z" fill="#353535" class="normal" /><path d="M224.994 377.097c22.48-8 44.944-16.04 67.443-23.987 25.477-9 50.982-17.92 76.48-26.86 1.217-.425 2.483-.708 3.913-1.11v24.396c-29.733 10.458-59.41 20.897-89.086 31.332-17.827 6.27-35.647 12.556-53.5 18.755-1.672.58-3.292 1.715-5.245 1.22-.003-7.915-.004-15.83-.006-23.746z" fill="#151515" class="darker" /><path d="M165.206 198.815v51.347l-43.232-15.134v-51.38c14.69 5.152 28.923 10.146 43.232 15.167z" fill="#353535" class="normal" /></g></svg>
+        </a>
+      </div>
+      <div class="mobile-nav">
+        <button class="mobile-nav__open">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path id="menu-2-icon" fill="#fff" d="M123.027,413.5H50v-65h73.027V413.5z M123.027,223.5H50v65h73.027V223.5z M123.027,98.5H50v65h73.027V98.5z M168.027,98.5v65H462v-65H168.027z M168.027,288.5H462v-65H168.027V288.5z M168.027,413.5H462v-65H168.027V413.5z"/></svg>
+          Menu
+        </button>
+        <button class="mobile-nav__close">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><polygon id="x-mark-icon" fill="#fff" points="438.393,374.595 319.757,255.977 438.378,137.348 374.595,73.607 255.995,192.225 137.375,73.622 73.607,137.352 192.246,255.983 73.622,374.625 137.352,438.393 256.002,319.734 374.652,438.378 "/></svg>
+          Close
+        </button>
+      </div>
+    </div>
+    <nav class="nav" role="navigation">
+      
+      <ol>
+        <li><a href="/projets" ><span>1 .</span> Projets</a></li><!--
+        --><li><a href="/articles" class='selected'><span>2 .</span> Articles</a></li><!--
+        --><li><a href="/a-propos" ><span>3 .</span> A propos</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main role="main" class="main">
+    <div class="page-header">
+      <h1 class="page-header__title">Les principales nouveautés de ES6</h1>
+    </div>
+    <article class="article">
+      <p>JavaScript s&#39;apprête à vivre une petite révolution avec l&#39;arrivée d&#39;ES6, la prochaine version du standard ECMAScript. Et pour cause : c&#39;est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en <a href="http://kangax.github.io/compat-table/es6/">cours d&#39;implémentation</a> dans les différents moteurs JS.</p>
+
+<p>Heureusement, si vous êtes comme moi du genre impatient, il existe de nombreux <em>transpilers</em> qui permettent à l&#39;heure actuelle d&#39;écrire de l&#39;ES6 qui sera compilé en ES5... Une très bonne raison, à mes yeux, de tester cette nouvelle syntaxe dès aujourd&#39;hui. Voici ci-dessous quelques-unes de ses principales nouveautés.</p>
+
+<h2>Table des matières</h2>
+
+<ul>
+<li><a href="#arrows">Arrows</a></li>
+<li><a href="#let-et-const">Let et const</a></li>
+<li><a href="#templates">Templates</a></li>
+<li><a href="#objets-litteraux">Objets littéraux</a></li>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#parametres-par-defaut">Paramètres par défaut</a></li>
+<li><a href="#parametres-rest">Paramètres rest</a></li>
+<li><a href="#destructuration">Déstructuration</a></li>
+<li><a href="#for-of">For...of</a></li>
+<li><a href="#generateurs">Générateurs</a></li>
+<li><a href="#modules">Modules</a></li>
+<li><a href="#autres">Autres</a></li>
+</ul>
+
+<h2 id="arrows">Arrows</h2>
+
+<p>Une nouvelle manière, plus simple et plus rapide, d&#39;écrire les fonctions :</p>
+
+<pre><code class="js">// ES5
+link.addEventlistener('click', function(e) {
+  e.preventDefault();
+})
+
+// ES6
+link.addEventlistener('click', e => e.preventDefault());
+</code></pre>
+
+<p>Attention toutefois, car contrairement aux fonctions traditionnelles leur <code>this</code> est étendu au code qui les contient.</p>
+
+<h2 id="let-et-const">Let et const</h2>
+
+<p><code>Let</code> et <code>const</code> sont les nouveaux <code>var</code>, à la différence qu&#39;ils restent scopés au bloc le plus proche.</p>
+
+<pre><code class="js">function whatever() {
+  if (true) {
+    let a = 2;
+  }
+  console.log(a); // Erreur, a n'est pas défini
+}</code></pre>
+
+<p><code>Const</code> est immuable. Il n&#39;est accessible qu&#39;en lecture seule.</p>
+
+<pre><code class="js">const a = 1;
+a++; // Erreur
+</code></pre>
+
+<h2 id="templates">Templates</h2>
+
+<p>Les templates fournissent une manière plus simple de construire les strings en permettant de l&#39;interpolation.</p>
+
+<pre><code class="js">let fruit = {name: 'banana', color: 'yellow'};
+let describe = `This ${fruit.name} is ${fruit.color}`;
+console.log(describe); // Log 'This banana is yellow'</code></pre>
+
+<p>Par ailleurs, le caractère spécial <kbd>`</kbd> permet d&#39;écrire des strings multilignes.</p>
+
+<h2 id="objets-litteraux">Objets littéraux</h2>
+
+<p>Ceux-ci bénéficient de quelques nouveautés : définition du prototype à la construction, raccourcis pour les assignements de type <code>prop: prop</code>, noms de propriétés dynamiques, possibilité de définir des méthodes directement...</p>
+
+<pre><code class="js">var myObj = {
+  // Définition du protoype
+  __proto__: protoObj,
+  // Equivalent à prop: prop
+  prop,
+  // Nom de propriété dynamique
+  &#91;'foo' + 'bar'&#93;: 1,
+  // Méthode
+  myMethod() {}
+};
+</code></pre>
+
+<h2 id="classes">Classes</h2>
+
+<p>ES6 fournit une manière de gérer des classes via <code>class</code> et <code>extend</code>. Cette nouvelle syntaxe est du sucre syntaxique (sic) par-dessus les prototypes. En voici un petit exemple :</p>
+
+<pre><code class="js">class Car {
+  constructor(speed) {
+    this.speed = speed + 'km/h';
+    this.color = 'gray';
+  }
+  describe() {
+    console.log(`This car is ${this.color}`);
+  }
+}
+
+class Ferrari extends Car {
+  constructor(maxSpeed) {
+    super(maxSpeed);
+    this.color = 'red';
+  }
+  get newStats() {
+    return `Max speed : ${this.speed}`;
+  }
+}
+
+let f430 = new Ferrari(250);
+f430.describe(); // Log 'This car is red'
+console.log(f430.newStats); // Log 'Max speed: 250km/h'</code></pre>
+
+<h2 id="parametres-par-defaut">Paramètres par défaut</h2>
+
+<p>On peut dorénavant spécifier des paramètres par défaut dans nos fonctions :</p>
+
+<pre><code class="js">function car(color='red') {
+  console.log(`This car is ${color}.`);
+}
+car(); // Log 'This car is red.'</code></pre>
+
+<h2 id="parametres-rest">Paramètres rest</h2>
+
+<p>Ils permettent de représenter un nombre illimité de paramètres, sous forme d&#39;array.</p>
+
+<pre><code class="js">function fn(...args) {
+  console.log(args.length);
+}
+fn(); // Log 0
+fn(1, 2, 3, 4, 5); // Log 5
+fn(...&#91;1, 2, 3, 4, 5&#93;); // Log 5 également</code></pre>
+
+<h2 id="destructuration">Déstructuration</h2>
+
+<p>Celle-ci permet de lier des données (arrays et objets sont supportés). Si la valeur n&#39;est pas trouvée, <code>undefined</code> sera retourné.</p>
+
+<pre><code class="js">let [foo, baz, bar] = [1, , 3];
+console.log(foo); // Log 1
+console.log(baz); // Log undefined
+console.log(bar); // Log 3</code></pre>
+
+<h2 id="for-of">For...of</h2>
+
+<p>Cette déclaration crée une boucle sur des objets pouvant être itérés (array, map, paramètres etc.). La syntaxe est simple :</p>
+
+<pre><code class="js">let arr = ['red', 'yellow', 'blue'];
+for (let n of arr) {
+  console.log(n); // Log chaque valeur de l'array
+}</code></pre>
+
+<h2 id="generateurs">Générateurs</h2>
+
+<p>Leur syntaxte est particulière : On déclare une nouvelle instance générateur avec la syntaxe <code>function*</code>. A l&#39;intérieur de celle-ci, <code>yield</code> définit la valeur retournée. On peut appeler chaque valeur qui suit avec <code>next()</code>.</p>
+
+<pre><code class="js">function* fn() {
+  yield 'blue';
+  yield 'red';
+  yield 'green';
+}
+var a = fn();
+console.log(a.next()); // Log 'blue'
+console.log(a.next()); // Log 'red'
+console.log(a.next()); // Log 'green'</code></pre>
+
+<h2 id="modules">Modules</h2>
+
+<p>Ils permettent de démocratiser les solutions mises en place avec CommonJS ou AMD. Ces nouveaux modules fonctionnent sur un modèle asynchrone : le code n&#39;est pas exécuté tant que les modules requis n&#39;ont pas été exécutés.</p>
+
+<pre><code class="js">// Dans un fichier 'utils.js' :
+export function addOne(x) {
+  return x + 1;
+};
+
+// Dans un autre fichier :
+import addOne from 'utils';
+addOne(4);
+
+// Importation de tout le fichier :
+import * as utils from 'utils';
+utils.addOne(4);</code></pre>
+
+<h2 id="autres">Autres</h2>
+
+<p>J&#39;ai couvert ici les nouveautés qui paraissaient importantes à mes yeux, mais il en existe d&#39;autres : promises, symboles, WeakMaps et WeakSets... Pour une liste exhaustive de tous les ajouts, je vous invite à consulter <a href="https://github.com/lukehoban/es6features">es6-features</a> sur Github.</p>
+
+    </article>
+    
+    
+    <a class="previous-post article-nav" href="/articles/dropdox-et-node-modules">
+      <span>Dropbox et node_modules</span>
+    </a>
+    
+    <div class="article-footer">
+      <p class="article-footer__txt">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+        <path class="normal" id="pen-icon" d="M72.819,429.273l14.593,14.593l-15.117,15.11c-4.027,4.031-10.559,4.031-14.588,0.003
+          c-4.031-4.03-4.031-10.562,0-14.591L72.819,429.273z M354.941,57.21c-9.784-9.785-25.392-9.526-35.178,0.262l-99.539,99.536
+          c-9.785,9.788-10.044,25.392-0.258,35.177L354.941,57.21z M199.832,249.627l-58.925,58.925
+          c-30.745,30.745-46.211,60.295-60.268,101.438l26.058,26.058c41.143-14.06,70.689-29.523,101.434-60.264l58.93-58.929
+          L199.832,249.627z M441.451,75.232c-21.154-21.154-55.454-21.154-76.608,0L216.368,223.708l76.608,76.609L441.45,151.841
+          C462.605,130.685,462.605,96.387,441.451,75.232z"/>
+        </svg>
+        Publié le <time>27 Avril 2015</time> dans : javascript
+      </p>
+    </div>
+  </main>
+  <footer class="footer" role="contentinfo">
+    <p class="footer__left">&copy; Ronan Levesque 2012 - 2015</p>
+    <ul class="footer__right">
+      <li><a href="/a-propos">A propos</a></li><!--
+      --><li><a href="mailto:ronan.levesque@gmail.com">Me contacter</a></li>
+    </ul>
+  </footer>
+  <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
+  <script src="/js/main.js?v=150429095027"></script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29762874-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>
+
