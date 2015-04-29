@@ -16,7 +16,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link rel="stylesheet" href="/css/fox.css?v=150429095027">
+  <link rel="stylesheet" href="/css/fox.css?v=150429100106">
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic%7CRaleway:400,800' rel='stylesheet' type='text/css'>
   <script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
   <!--[if (gte IE 6)&(lte IE 8)]>
@@ -113,13 +113,13 @@ a++; // Erreur
 
 <h2 id="templates">Templates</h2>
 
-<p>Les templates fournissent une manière plus simple de construire les strings en permettant de l&#39;interpolation.</p>
+<p>Les templates fournissent une manière plus simple de construire les strings (avec le caractère <kbd>`</kbd>) en permettant de l&#39;interpolation.</p>
 
 <pre><code class="js">let fruit = {name: 'banana', color: 'yellow'};
 let describe = `This ${fruit.name} is ${fruit.color}`;
 console.log(describe); // Log 'This banana is yellow'</code></pre>
 
-<p>Par ailleurs, le caractère spécial <kbd>`</kbd> permet d&#39;écrire des strings multilignes.</p>
+<p>Par ailleurs, <kbd>`</kbd> permet d&#39;écrire des strings multilignes.</p>
 
 <h2 id="objets-litteraux">Objets littéraux</h2>
 
@@ -172,6 +172,7 @@ console.log(f430.newStats); // Log 'Max speed: 250km/h'</code></pre>
 <pre><code class="js">function car(color='red') {
   console.log(`This car is ${color}.`);
 }
+
 car(); // Log 'This car is red.'</code></pre>
 
 <h2 id="parametres-rest">Paramètres rest</h2>
@@ -181,6 +182,7 @@ car(); // Log 'This car is red.'</code></pre>
 <pre><code class="js">function fn(...args) {
   console.log(args.length);
 }
+
 fn(); // Log 0
 fn(1, 2, 3, 4, 5); // Log 5
 fn(...&#91;1, 2, 3, 4, 5&#93;); // Log 5 également</code></pre>
@@ -200,18 +202,19 @@ console.log(bar); // Log 3</code></pre>
 
 <pre><code class="js">let arr = ['red', 'yellow', 'blue'];
 for (let n of arr) {
-  console.log(n); // Log chaque valeur de l'array
+  console.log(n); // Log chaque valeur de l'array successivement
 }</code></pre>
 
 <h2 id="generateurs">Générateurs</h2>
 
-<p>Leur syntaxte est particulière : On déclare une nouvelle instance générateur avec la syntaxe <code>function*</code>. A l&#39;intérieur de celle-ci, <code>yield</code> définit la valeur retournée. On peut appeler chaque valeur qui suit avec <code>next()</code>.</p>
+<p>Leur syntaxe est particulière : On déclare une nouvelle instance générateur avec la syntaxe <code>function*</code>. A l&#39;intérieur de celle-ci, <code>yield</code> définit la valeur retournée. On peut appeler chaque valeur qui suit avec <code>next()</code>.</p>
 
 <pre><code class="js">function* fn() {
   yield 'blue';
   yield 'red';
   yield 'green';
 }
+
 var a = fn();
 console.log(a.next()); // Log 'blue'
 console.log(a.next()); // Log 'red'
@@ -268,7 +271,7 @@ utils.addOne(4);</code></pre>
     </ul>
   </footer>
   <!--[if IE 9]> <script src="/js/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/js/main.js?v=150429095027"></script>
+  <script src="/js/main.js?v=150429100106"></script>
   <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-29762874-1']);
