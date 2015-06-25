@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Une gestion responsable des webfonts",
+      "category" : "",
+      "tags"     : "tutoriels, javascript, and html",
+      "url"      : "/articles/une-gestion-responsable-des-webfonts",
+      "date"     : "2015-06-25 00:00:00 +0200"
+    } ,
+  
+    {
       "title"    : "Les principales nouveautés de ES6",
       "category" : "",
       "tags"     : "javascript",
