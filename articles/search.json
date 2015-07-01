@@ -25,10 +25,10 @@
     } ,
   
     {
-      "title"    : "Versionner ses assets avec Jekyll",
+      "title"    : "Mettre ses assets en cache avec Jekyll",
       "category" : "",
       "tags"     : "divers and outils",
-      "url"      : "/articles/versionner-ses-assets-avec-jekyll",
+      "url"      : "/articles/mettre-ses-assets-en-cache-avec-jekyll",
       "date"     : "2014-12-17 00:00:00 +0100"
     } ,
   
