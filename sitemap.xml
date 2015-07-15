@@ -196,6 +196,15 @@
     <loc>http://localhost:4000/</loc>
   </url>
   <url>
+    <loc>http://localhost:4000/articles/page2/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:4000/articles/page3/</loc>
+  </url>
+  <url>
+    <loc>http://localhost:4000/articles/page4/</loc>
+  </url>
+  <url>
     <loc>http://localhost:4000/demos/animations-css3.html</loc>
     <lastmod>2015-06-02T21:46:45+02:00</lastmod>
   </url>
