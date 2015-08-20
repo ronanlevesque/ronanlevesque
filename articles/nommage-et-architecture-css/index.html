@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Ronan Levesque - Articles</title>
-  <meta name="description" content="Blog de Ronan Levesque : Front-end et Webdesign. Astuces, tutoriels, ressources utiles, réflexions et questions autour des langages HTML, CSS (et Sass), JavaScript, et du responsive design.">
+  <title>Ronan Levesque - Nommage et architecture CSS</title>
+  <meta name="description" content="Explications sur la façon dont je structure mon CSS pour une maintenance optimale">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
-  <meta property="og:title" content="Articles" />
-  <meta property="og:description" content="Blog de Ronan Levesque : Front-end et Webdesign. Astuces, tutoriels, ressources utiles, réflexions et questions autour des langages HTML, CSS (et Sass), JavaScript, et du responsive design.">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/index.html" />
+  <meta property="og:title" content="Nommage et architecture CSS" />
+  <meta property="og:description" content="Explications sur la façon dont je structure mon CSS pour une maintenance optimale">
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/nommage-et-architecture-css" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link href="/assets/css/fox-8a0c4e0ccfcddfe8817ee7050890b1e2.css" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -59,124 +59,92 @@
       </ol>
     </nav>
 
-		<main class="main-page is-rotated" role="main">
-			<header class="page-header">
-				<div class="page-header__anim">
-					<h1 class="page-header__title">Articles du blog</h1>
-				</div>
-			</header>
-			<ul class="grid-posts">
-			
-				<li class="grid-posts__li css must-read">
-					<a href="/articles/nommage-et-architecture-css" class="grid-posts__link">
-						<h3 class="grid-posts__date">19.08.2015</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Nommage et architecture CSS</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li tutoriel classic">
-					<a href="/articles/une-gestion-responsable-des-webfonts" class="grid-posts__link">
-						<h3 class="grid-posts__date">25.06.2015</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Une gestion responsable des webfonts</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li js must-read">
-					<a href="/articles/les-principales-nouveautes-de-es6" class="grid-posts__link">
-						<h3 class="grid-posts__date">27.04.2015</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Les principales nouveautés de ES6</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li outils classic">
-					<a href="/articles/dropdox-et-node-modules" class="grid-posts__link">
-						<h3 class="grid-posts__date">02.04.2015</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Dropbox et node_modules</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li tutoriel classic">
-					<a href="/articles/mettre-ses-assets-en-cache-avec-jekyll" class="grid-posts__link">
-						<h3 class="grid-posts__date">17.12.2014</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Mettre ses assets en cache avec Jekyll</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li svg must-read">
-					<a href="/articles/animer-ses-svg-avec-snap-svg" class="grid-posts__link">
-						<h3 class="grid-posts__date">21.07.2014</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Animer ses SVG avec Snap.svg</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li divers classic">
-					<a href="/articles/abandonner-le-support-d-ie8" class="grid-posts__link">
-						<h3 class="grid-posts__date">20.06.2014</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Abandonner le support d'IE8</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li responsive must-read">
-					<a href="/articles/responsive-design-adoptez-un-process-intelligent" class="grid-posts__link">
-						<h3 class="grid-posts__date">13.03.2014</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Responsive design : adoptez un process intelligent !</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li js classic">
-					<a href="/articles/ma-configuration-gulp" class="grid-posts__link">
-						<h3 class="grid-posts__date">24.02.2014</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Ma configuration Gulp</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li js classic">
-					<a href="/articles/des-colonnes-de-meme-taille-en-vanilla-js" class="grid-posts__link">
-						<h3 class="grid-posts__date">04.02.2014</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Des colonnes de même taille en Vanilla JS</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li css classic">
-					<a href="/articles/dans-l-enfer-de-font-face" class="grid-posts__link">
-						<h3 class="grid-posts__date">30.01.2014</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Dans l'enfer de @font-face</h2>
-					</a>
-				</li>
-			
-				<li class="grid-posts__li divers classic">
-					<a href="/articles/nouvelle-annee-nouveau-site" class="grid-posts__link">
-						<h3 class="grid-posts__date">21.01.2014</h3>
-						<div class="grid-posts__separ"></div>
-						<h2 class="grid-posts__title">Nouvelle année, nouveau site</h2>
-					</a>
-				</li>
-			
-			</ul>
-			<div class="footer-posts">
-				<div class="footer-posts__inner">
-					<div class="search-posts">
-						<label for="search-input" class="search-posts__label">Recherche par mot clé :</label>
-						<input type="text" class="search-posts__input" id="search-input" placeholder="CSS, HTML, responsive...">
-					</div>
-					<ul class="list-posts" id="results-container"></ul>
-					<ul class="nav-posts">
-						<li class="nav-posts__next"><a href="/articles/page2">Suivant &rsaquo;</a></li>
-					</ul>
-				</div>
-			</div>
-		</main>
+    <main class="main-page" role="main">
+      <header class="page-header">
+        <div class="page-header__anim">
+          <time class="page-header__date">19 août 2015</time>
+          <h1 class="page-header__title">Nommage et architecture CSS</h1>
+        </div>
+      </header>
+      <article class="article">
+        <p>A ma connaissance, il n&#39;y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j&#39;ai adapté ces techniques à mon workflow.</p>
+
+<h2>Les bases : <abbr title="Block, Element, Modifier">BEM</abbr> et <abbr title="Structured class names and meaningful hyphens">SUIT</abbr></h2>
+
+<p>Si ces deux acronymes ne vous évoquent rien, je vous suggère avant toute chose de lire mon <a href="/articles/css-notation-bem/">article</a> sur le premier ainsi que la <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">documentation Github</a> du deuxième.</p>
+
+<p>J&#39;ai pour ma part commencé par utiliser <abbr title="Block, Element, Modifier">BEM</abbr> de manière traditionnelle avant d&#39;y incorporer une part de <abbr title="Structured class names and meaningful hyphens">SUIT</abbr>, ce qui me donnait quelque chose de ce genre :</p>
+
+<pre><code class="css">.blockName {}
+.blockName-element {}
+.blockName--modifier {}</code></pre>
+
+<p>Je préfère cette syntaxe par rapport au <abbr title="Block, Element, Modifier">BEM</abbr> classique, où l&#39;utilisation des <kbd>_</kbd> ne facilite pas vraiment l&#39;édition du nom des classes.</p>
+
+<h2>Pousser plus loin le concept des Modifiers</h2>
+
+<p>Le souci avec les <em>Modifiers</em>, c&#39;est qu&#39;ils créent des classes à rallonge, par exemple :</p>
+
+<pre><code class="html">&lt;button class="button button--small button--green button--caps"&gt;</code></pre>
+
+<p>J&#39;ai récemment vu passer un article d&#39;<a href="http://www.envato.com/">Envato</a> dans lequel était décrit le principe des <em><a href="http://webuild.envato.com/blog/chainable-bem-modifiers/">Chainable Modifiers</a></em>, qu&#39;ils avaient récemment mis en place.</p>
+
+<p>En se basant sur ce principe, le code ci-dessus se transformerait en :</p>
+
+<pre><code class="html">&lt;button class="button -small -green -caps"&gt;</code></pre>
+
+<p>C&#39;est quand même plus agréable à lire, non ?</p>
+
+<p>Et si vous utilisez Sass, le mettre en place et en assurer la maintenabilité devient un jeu d&#39;enfant.</p>
+
+<pre><code class="scss">.button {
+  padding: 2rem;
+
+  &.-small {
+    font-size: 1rem;
+  }
+
+  &.-green {
+    background-color: green;
+  }
+
+  &.-caps {
+    text-transform: uppercase;
+  }
+}</code></pre>
+
+<h2>Autres emprunts à <abbr title="Structured class names and meaningful hyphens">SUIT</abbr></h2>
+
+<p>J&#39;utilise également deux autres conventions provenant de <abbr title="Structured class names and meaningful hyphens">SUIT</abbr> : les classes utilitaires et les classes d&#39;état.</p>
+
+<h3>Classes utilitaires</h3>
+
+<p>Ce sont des classes génériques, identifiables par un préfixe <code>u-</code> :</p>
+
+<pre><code class="css">.u-white {}
+.u-floatLeft {}
+...</code></pre>
+
+<h3>Classes d&#39;état</h3>
+
+<p>Celles-ci permettent d&#39;identifier le changement d&#39;état d&#39;un composant; elles sont préfixées par <code>is-</code> :</p>
+
+<pre><code class="html">&lt;button class="button is-disabled"&gt;</code></pre>
+
+<h2>Sélecteurs JavaScript</h2>
+
+<p>Pour tous les sélecteurs que je vais cibler en JS, j&#39;ajoute une classe (ou une id) préfixée par <code>js-</code>. Cette classe ne doit jamais apparaître dans mes CSS afin de maintenir une séparation claire des rôles.</p>
+
+<h2>What&#39;s next ?</h2>
+
+<p>Même si la mise en place de cette méthodologie m&#39;a procuré un gain énorme en termes de maintenabilité et de lisibilité sur des grosses bases de code CSS, elle n&#39;est pas infaillible, et les risques de non-isolation et de spécificité du code existent toujours.</p>
+
+<p>Pour contourner &ndash; entre autres &ndash; ces problèmes, <a href="http://glenmaddern.com/articles/css-modules">Glenn Maddern</a> a créé un système de <a href="http://glenmaddern.com/articles/css-modules">modules CSS</a>. Grâce à du JS, les styles sont maintenus à leur création dans un <em>scope</em> local qui permet de résoudre les questions de nommage et d&#39;héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d&#39;en rebuter certains.</p>
+
+<p>Reste a espérer qu&#39;un standard verra enfin le jour pour corriger ce problème...</p>
+
+      </article>
+    </main>
     <footer class="main-footer" role="contentinfo">
       <div class="main-footer__inner">
         <a href="#top" data-scroll data-options='{"updateURL": false}' class="main-footer__logo flip-container">
