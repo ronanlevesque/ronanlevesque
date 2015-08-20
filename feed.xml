@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<generator uri="http://jekyllrb.com" version="2.5.3">Jekyll</generator>
+<link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
+<link href="http://localhost:4000/" rel="alternate" type="text/html" />
+<updated>2015-08-20T10:27:28+02:00</updated>
+<id>http://localhost:4000/</id>
+<title>Ronan Levesque - Frontend &amp; Webdesign</title>
+<subtitle>Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...</subtitle>
+<entry>
+<title>Nommage et architecture CSS</title>
+<link href="http://localhost:4000/articles/nommage-et-architecture-css" rel="alternate" type="text/html" title="Nommage et architecture CSS" />
+<published>2015-08-19T00:00:00+02:00</published>
+<updated>2015-08-19T00:00:00+02:00</updated>
+<id>http://localhost:4000/articles/nommage-et-architecture-css</id>
+<content type="html" xml:base="http://localhost:4000/articles/nommage-et-architecture-css">&lt;p&gt;A ma connaissance, il n&amp;#39;y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j&amp;#39;ai adapté ces techniques à mon workflow.&lt;/p&gt;
+
+&lt;h2&gt;Les bases : &lt;abbr title=&quot;Block, Element, Modifier&quot;&gt;BEM&lt;/abbr&gt; et &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt;&lt;/h2&gt;
+
+&lt;p&gt;Si ces deux acronymes ne vous évoquent rien, je vous suggère avant toute chose de lire mon &lt;a href=&quot;/articles/css-notation-bem/&quot;&gt;article&lt;/a&gt; sur le premier ainsi que la &lt;a href=&quot;https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md&quot;&gt;documentation Github&lt;/a&gt; du deuxième.&lt;/p&gt;
+
+&lt;p&gt;J&amp;#39;ai pour ma part commencé par utiliser &lt;abbr title=&quot;Block, Element, Modifier&quot;&gt;BEM&lt;/abbr&gt; de manière traditionnelle avant d&amp;#39;y incorporer une part de &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt;, ce qui me donnait quelque chose de ce genre :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;.blockName {}
+.blockName-element {}
+.blockName--modifier {}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Je préfère cette syntaxe par rapport au &lt;abbr title=&quot;Block, Element, Modifier&quot;&gt;BEM&lt;/abbr&gt; classique, où l&amp;#39;utilisation des &lt;kbd&gt;_&lt;/kbd&gt; ne facilite pas vraiment l&amp;#39;édition du nom des classes.&lt;/p&gt;
+
+&lt;h2&gt;Pousser plus loin le concept des Modifiers&lt;/h2&gt;
+
+&lt;p&gt;Le souci avec les &lt;em&gt;Modifiers&lt;/em&gt;, c&amp;#39;est qu&amp;#39;ils créent des classes à rallonge, par exemple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;button class=&quot;button button--small button--green button--caps&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;J&amp;#39;ai récemment vu passer un article d&amp;#39;&lt;a href=&quot;http://www.envato.com/&quot;&gt;Envato&lt;/a&gt; dans lequel était décrit le principe des &lt;em&gt;&lt;a href=&quot;http://webuild.envato.com/blog/chainable-bem-modifiers/&quot;&gt;Chainable Modifiers&lt;/a&gt;&lt;/em&gt;, principe qu&amp;#39;ils ont mis en place pour Envato Market.&lt;/p&gt;
+
+&lt;p&gt;En se basant sur cette convention, le code ci-dessus se transformerait en :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;button class=&quot;button -small -green -caps&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;C&amp;#39;est quand même plus agréable à lire, non ?&lt;/p&gt;
+
+&lt;p&gt;Et si vous utilisez Sass, le mettre en place et en assurer la maintenabilité devient un jeu d&amp;#39;enfant.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;scss&quot;&gt;.button {
+  padding: 2rem;
+
+  &amp;.-small {
+    font-size: 1rem;
+  }
+
+  &amp;.-green {
+    background-color: green;
+  }
+
+  &amp;.-caps {
+    text-transform: uppercase;
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Autres emprunts à &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt;&lt;/h2&gt;
+
+&lt;p&gt;J&amp;#39;utilise également deux autres conventions provenant de &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt; : les classes utilitaires et les classes d&amp;#39;état.&lt;/p&gt;
+
+&lt;h3&gt;Classes utilitaires&lt;/h3&gt;
+
+&lt;p&gt;Ce sont des classes génériques, identifiables par un préfixe &lt;code&gt;u-&lt;/code&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;.u-white {}
+.u-floatLeft {}
+...&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;Classes d&amp;#39;état&lt;/h3&gt;
+
+&lt;p&gt;Celles-ci permettent d&amp;#39;identifier le changement d&amp;#39;état d&amp;#39;un composant; elles sont préfixées par &lt;code&gt;is-&lt;/code&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;button class=&quot;button is-disabled&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Sélecteurs JavaScript&lt;/h2&gt;
+
+&lt;p&gt;Pour tous les sélecteurs que je vais cibler en JS, j&amp;#39;ajoute une classe (ou une id) préfixée par &lt;code&gt;js-&lt;/code&gt;. Cette classe ne doit jamais apparaître dans mes CSS afin de maintenir une séparation claire des rôles.&lt;/p&gt;
+
+&lt;h2&gt;What&amp;#39;s next ?&lt;/h2&gt;
+
+&lt;p&gt;Même si la mise en place de cette méthodologie m&amp;#39;a procuré un gain énorme en termes de maintenabilité et de lisibilité sur des grosses bases de code CSS, elle n&amp;#39;est pas infaillible, et les risques de non-isolation et de spécificité du code existent toujours.&lt;/p&gt;
+
+&lt;p&gt;Pour contourner &amp;ndash; entre autres &amp;ndash; ces problèmes, &lt;a href=&quot;http://glenmaddern.com/articles/css-modules&quot;&gt;Glenn Maddern&lt;/a&gt; a créé un système de &lt;a href=&quot;http://glenmaddern.com/articles/css-modules&quot;&gt;modules CSS&lt;/a&gt;. Grâce à du JS, les styles sont maintenus à leur création dans un &lt;em&gt;scope&lt;/em&gt; local qui permet de résoudre les questions de nommage et d&amp;#39;héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d&amp;#39;en rebuter certains.&lt;/p&gt;
+
+&lt;p&gt;Reste a espérer qu&amp;#39;un standard verra enfin le jour pour corriger ce casse-tête...&lt;/p&gt;
+</content>
+<category term="css" />
+<summary>A ma connaissance, il n&amp;#39;y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j&amp;#39;ai adapté ces techniques à mon workflow.</summary>
+</entry>
+<entry>
+<title>Une gestion responsable des webfonts</title>
+<link href="http://localhost:4000/articles/une-gestion-responsable-des-webfonts" rel="alternate" type="text/html" title="Une gestion responsable des webfonts" />
+<published>2015-06-25T00:00:00+02:00</published>
+<updated>2015-06-25T00:00:00+02:00</updated>
+<id>http://localhost:4000/articles/une-gestion-responsable-des-webfonts</id>
+<content type="html" xml:base="http://localhost:4000/articles/une-gestion-responsable-des-webfonts">&lt;p&gt;Jusqu&amp;#39;à très récemment, j&amp;#39;avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l&amp;#39;apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j&amp;#39;ai mise en place dernièrement, et dont je suis pleinement satisfait.&lt;/p&gt;
+
+&lt;h2&gt;Quelques précisions&lt;/h2&gt;
+
+&lt;p&gt;La notion de &lt;em&gt;FOIT&lt;/em&gt; ne parlant pas à tout le monde, commençons par une petite explication : tant que votre navigateur n&amp;#39;a pas téléchargé les &lt;em&gt;webfonts&lt;/em&gt; de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d&amp;#39;afficher les polices que vous avez définies par défaut. C&amp;#39;est ce qu&amp;#39;on appelle le &lt;em&gt;FOIT&lt;/em&gt;, pour &lt;em&gt;Flash Of Invisible Text&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Le problème, c&amp;#39;est que ce temps varie selon les navigateurs; et s&amp;#39;il reste raisonnable sur Chrome ou Firefox (de l&amp;#39;ordre de 3 secondes), il peut aller jusqu&amp;#39;à 30 secondes pour Safari iOS par exemple.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/img/webfonts-invision.jpg&quot; alt=&quot;Exemple de site avec FOIT&quot;&gt;
+  &lt;figcaption&gt;Exemple de FOIT : sur ce site, il m&#39;a fallu une dizaine de secondes pour pouvoir accéder au contenu - malgré ma connexion en WiFi.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Si l&amp;#39;on considère en outre qu&amp;#39;un site doit en moyenne se charger en 1 seconde avec une connexion rapide, ne pas pouvoir accéder au contenu du site avant 3 secondes n&amp;#39;est de toute façon pas l&amp;#39;idéal.&lt;/p&gt;
+
+&lt;h2&gt;La solution au problème&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://crocodillon.com/blog/non-blocking-web-fonts-using-localstorage&quot;&gt;Plusieurs&lt;/a&gt; &lt;a href=&quot;http://jaicab.com/localFont/&quot;&gt;techniques&lt;/a&gt; ont émergé récemment, mais celle qui a retenu mon attention est celle mise en place par &lt;a href=&quot;https://www.filamentgroup.com/lab/font-events.html&quot;&gt;filament group&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;L&amp;#39;idée est d&amp;#39;utiliser par défaut les polices &lt;em&gt;websafe&lt;/em&gt; (cf. &lt;a href=&quot;http://www.cssfontstack.com/&quot;&gt;CSS Font Stack&lt;/a&gt;) et de prévoir une classe contenant les &lt;em&gt;webfonts&lt;/em&gt;, par exemple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;body {
+  font-family: Sans-serif;
+}
+
+.font-loaded {
+  font-family: &#39;Open Sans&#39;, Sans-serif;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On utilise ensuite le loader JS &lt;a href=&quot;https://github.com/bramstein/fontfaceobserver&quot;&gt;Font Face Observer&lt;/a&gt; créé par &lt;a href=&quot;https://twitter.com/bram_stein&quot;&gt;Bram Stein&lt;/a&gt; pour détecter le moment où toutes les &lt;em&gt;webfonts&lt;/em&gt; seront loadées, et une fois que c&amp;#39;est fait on ajoute notre classe &lt;code&gt;font-loaded&lt;/code&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;(function(w) {
+  if (w.document.documentElement.className.indexOf(&#39;fonts-loaded&#39;) &gt; -1) {
+    return;
+  }
+  var fontA = new w.FontFaceObserver(&#39;Open Sans&#39;, {
+    weight: 300
+  });
+  var fontB = new w.FontFaceObserver(&#39;Open Sans&#39;, {
+    weight: 300,
+    style: &#39;italic&#39;
+  });
+  w.Promise
+  .all([fontA.check(), fontB.check()])
+  .then(function() {
+    w.document.documentElement.className += &#39; fonts-loaded&#39;;
+    localStorage.setItem(&#39;fontsLoaded&#39;, true);
+  });
+}(this));&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;L&amp;#39;approche de filament group privilégie l&amp;#39;utilisation de cookies, mais quant à moi j&amp;#39;ai préféré me rabattre sur &lt;em&gt;localStorage&lt;/em&gt;. On crée avec celui-ci un item &lt;code&gt;fontsLoaded&lt;/code&gt; grâce auquel on pourra ajouter dans notre &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; la classe &lt;code&gt;fonts-loaded&lt;/code&gt; à notre html, comme ceci :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;script&amp;gt;
+  if (localStorage.getItem(&#39;fontsLoaded&#39;)) {
+    document.documentElement.className += &#39; fonts-loaded&#39;;
+  }
+&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ainsi, tant que cet item sera encore présent dans notre &lt;em&gt;localStorage&lt;/em&gt;, la classe en question sera appliquée avant le rendu de la page.&lt;/p&gt;
+
+&lt;h2&gt;Une future alternative&lt;/h2&gt;
+
+&lt;p&gt;L&amp;#39;approche décrite ici me paraît pour l&amp;#39;instant la plus efficace, en attendant une meilleure solution... Celle-ci pourrait bien venir de la proposition &lt;em&gt;CSS font-rendering&lt;/em&gt; dont le but est de contrôler directement via CSS le comportement d&amp;#39;affichage de nos &lt;em&gt;webfonts&lt;/em&gt;. Je vous invite à consulter son &lt;a href=&quot;https://github.com/KenjiBaheux/css-font-rendering&quot;&gt;repo Github&lt;/a&gt; pour de plus amples informations.&lt;/p&gt;
+</content>
+<category term="tutoriels" />
+<category term="javascript" />
+<category term="html" />
+<summary>Jusqu&amp;#39;à très récemment, j&amp;#39;avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l&amp;#39;apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j&amp;#39;ai mise en place dernièrement, et dont je suis pleinement satisfait.</summary>
+</entry>
+<entry>
+<title>Les principales nouveautés de ES6</title>
+<link href="http://localhost:4000/articles/les-principales-nouveautes-de-es6" rel="alternate" type="text/html" title="Les principales nouveautés de ES6" />
+<published>2015-04-27T00:00:00+02:00</published>
+<updated>2015-04-27T00:00:00+02:00</updated>
+<id>http://localhost:4000/articles/les-principales-nouveautes-de-es6</id>
+<content type="html" xml:base="http://localhost:4000/articles/les-principales-nouveautes-de-es6">&lt;p&gt;JavaScript s&amp;#39;apprête à vivre une petite révolution avec l&amp;#39;arrivée d&amp;#39;ES6, la prochaine version du standard ECMAScript. Et pour cause : c&amp;#39;est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en &lt;a href=&quot;http://kangax.github.io/compat-table/es6/&quot;&gt;cours d&amp;#39;implémentation&lt;/a&gt; dans les différents moteurs JS.&lt;/p&gt;
+
+&lt;p&gt;Si vous êtes comme moi du genre impatient, il existe de nombreux &lt;em&gt;transpilers&lt;/em&gt; qui permettent à l&amp;#39;heure actuelle d&amp;#39;écrire de l&amp;#39;ES6 qui sera compilé en ES5... Une très bonne raison, à mes yeux, de tester cette nouvelle syntaxe dès aujourd&amp;#39;hui. Voici ci-dessous quelques-unes de ses principales nouveautés.&lt;/p&gt;
+
+&lt;h2&gt;Table des matières&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#arrows&quot;&gt;Arrows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#let-et-const&quot;&gt;Let et const&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#templates&quot;&gt;Templates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#objets-litteraux&quot;&gt;Objets littéraux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#classes&quot;&gt;Classes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#parametres-par-defaut&quot;&gt;Paramètres par défaut&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#parametres-rest&quot;&gt;Paramètres rest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#destructuration&quot;&gt;Déstructuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#for-of&quot;&gt;For...of&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#generateurs&quot;&gt;Générateurs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#modules&quot;&gt;Modules&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#autres&quot;&gt;Autres&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;arrows&quot;&gt;Arrows&lt;/h2&gt;
+
+&lt;p&gt;Une nouvelle manière, plus simple et plus rapide, d&amp;#39;écrire les fonctions :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;// ES5
+link.addEventlistener(&#39;click&#39;, function(e) {
+  e.preventDefault();
+})
+
+// ES6
+link.addEventListener(&#39;click&#39;, e =&gt; { e.preventDefault(); });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Attention : contrairement aux fonctions traditionnelles la valeur de &lt;code&gt;this&lt;/code&gt; est liée de façon lexicale (permet par exemple d&amp;#39;éviter les &lt;code&gt;var self = this;&lt;/code&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;let-et-const&quot;&gt;Let et const&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;Let&lt;/code&gt; et &lt;code&gt;const&lt;/code&gt; sont les nouveaux &lt;code&gt;var&lt;/code&gt;, à la différence qu&amp;#39;ils restent scopés au bloc le plus proche.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function whatever() {
+  if (true) {
+    let a = 2;
+  }
+  console.log(a); // Erreur, a n&#39;est pas défini
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;Const&lt;/code&gt; est immuable. Il n&amp;#39;est accessible qu&amp;#39;en lecture seule.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;const a = 1;
+a++; // Erreur
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;templates&quot;&gt;Templates&lt;/h2&gt;
+
+&lt;p&gt;Les templates fournissent une manière plus simple de construire les strings (avec le caractère &lt;kbd&gt;`&lt;/kbd&gt;) en permettant de l&amp;#39;interpolation.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;let fruit = {name: &#39;banana&#39;, color: &#39;yellow&#39;};
+let describe = `This ${fruit.name} is ${fruit.color}`;
+console.log(describe); // Log &#39;This banana is yellow&#39;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Par ailleurs, &lt;kbd&gt;`&lt;/kbd&gt; permet d&amp;#39;écrire des strings multilignes.&lt;/p&gt;
+
+&lt;h2 id=&quot;objets-litteraux&quot;&gt;Objets littéraux&lt;/h2&gt;
+
+&lt;p&gt;Ceux-ci bénéficient de quelques nouveautés : définition du prototype à la construction, raccourcis pour les assignements de type &lt;code&gt;prop: prop&lt;/code&gt;, noms de propriétés dynamiques, possibilité de définir des méthodes directement...&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;var myObj = {
+  // Définition du protoype
+  __proto__: protoObj,
+  // Equivalent à prop: prop
+  prop,
+  // Nom de propriété dynamique
+  &amp;#91;&#39;foo&#39; + &#39;bar&#39;&amp;#93;: 1,
+  // Méthode
+  myMethod() {}
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;classes&quot;&gt;Classes&lt;/h2&gt;
+
+&lt;p&gt;ES6 fournit une manière de gérer des classes via &lt;code&gt;class&lt;/code&gt; et &lt;code&gt;extend&lt;/code&gt;. Cette nouvelle syntaxe est du sucre syntaxique (sic) par-dessus les prototypes. En voici un petit exemple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;class Car {
+  constructor(speed) {
+    this.speed = `${speed}km/h`;
+    this.color = &#39;gray&#39;;
+  }
+  describe() {
+    console.log(`This car is ${this.color}`);
+  }
+}
+
+class Ferrari extends Car {
+  constructor(maxSpeed) {
+    super(maxSpeed);
+    this.color = &#39;red&#39;;
+  }
+  get newStats() {
+    return `Max speed : ${this.speed}`;
+  }
+}
+
+let f430 = new Ferrari(250);
+f430.describe(); // Log &#39;This car is red&#39;
+console.log(f430.newStats); // Log &#39;Max speed: 250km/h&#39;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;parametres-par-defaut&quot;&gt;Paramètres par défaut&lt;/h2&gt;
+
+&lt;p&gt;On peut dorénavant spécifier des paramètres par défaut dans nos fonctions :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function car(color=&#39;red&#39;) {
+  console.log(`This car is ${color}.`);
+}
+
+car(); // Log &#39;This car is red.&#39;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;parametres-rest&quot;&gt;Paramètres rest&lt;/h2&gt;
+
+&lt;p&gt;Ils permettent de représenter un nombre illimité de paramètres, sous forme d&amp;#39;array.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function fn(...args) {
+  console.log(args.length);
+}
+
+fn(); // Log 0
+fn(1, 2, 3, 4, 5); // Log 5
+fn(...&amp;#91;1, 2, 3, 4, 5&amp;#93;); // Log 5 également&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;destructuration&quot;&gt;Déstructuration&lt;/h2&gt;
+
+&lt;p&gt;Celle-ci permet de lier des données (arrays et objets sont supportés). Si la valeur n&amp;#39;est pas trouvée, &lt;code&gt;undefined&lt;/code&gt; sera retourné.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;let [foo, baz, bar] = [1, , 3];
+console.log(foo); // Log 1
+console.log(baz); // Log undefined
+console.log(bar); // Log 3&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;for-of&quot;&gt;For...of&lt;/h2&gt;
+
+&lt;p&gt;Cette déclaration crée une boucle sur des objets pouvant être itérés (array, map, paramètres etc.). La syntaxe est simple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;let arr = [&#39;red&#39;, &#39;yellow&#39;, &#39;blue&#39;];
+for (let n of arr) {
+  console.log(n); // Log chaque valeur de l&#39;array successivement
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;generateurs&quot;&gt;Générateurs&lt;/h2&gt;
+
+&lt;p&gt;Leur syntaxe est particulière : On déclare une nouvelle instance générateur avec la syntaxe &lt;code&gt;function*&lt;/code&gt;. A l&amp;#39;intérieur de celle-ci, &lt;code&gt;yield&lt;/code&gt; définit la valeur retournée. On peut appeler chaque valeur qui suit avec &lt;code&gt;next()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function* fn() {
+  yield &#39;blue&#39;;
+  yield &#39;red&#39;;
+  yield &#39;green&#39;;
+}
+
+var a = fn();
+console.log(a.next()); // Log &#39;blue&#39;
+console.log(a.next()); // Log &#39;red&#39;
+console.log(a.next()); // Log &#39;green&#39;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;modules&quot;&gt;Modules&lt;/h2&gt;
+
+&lt;p&gt;Ils permettent de démocratiser les solutions mises en place avec CommonJS ou AMD. Ces nouveaux modules fonctionnent sur un modèle asynchrone : le code n&amp;#39;est pas exécuté tant que les modules requis n&amp;#39;ont pas été exécutés.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;// Dans un fichier &#39;utils.js&#39; :
+export function addOne(x) {
+  return x + 1;
+};
+
+// Dans un autre fichier :
+import addOne from &#39;utils&#39;;
+addOne(4);
+
+// Importation de tout le fichier :
+import * as utils from &#39;utils&#39;;
+utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;autres&quot;&gt;Autres&lt;/h2&gt;
+
+&lt;p&gt;J&amp;#39;ai couvert ici les nouveautés qui paraissaient importantes à mes yeux, mais il en existe d&amp;#39;autres : promises, symboles, WeakMaps et WeakSets... Pour une liste exhaustive de tous les ajouts, je vous invite à consulter &lt;a href=&quot;https://github.com/lukehoban/es6features&quot;&gt;es6-features&lt;/a&gt; sur Github.&lt;/p&gt;
+</content>
+<category term="javascript" />
+<summary>JavaScript s&amp;#39;apprête à vivre une petite révolution avec l&amp;#39;arrivée d&amp;#39;ES6, la prochaine version du standard ECMAScript. Et pour cause : c&amp;#39;est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en cours d&amp;#39;implémentation dans les différents moteurs JS.</summary>
+</entry>
+<entry>
+<title>Dropbox et node_modules</title>
+<link href="http://localhost:4000/articles/dropdox-et-node-modules" rel="alternate" type="text/html" title="Dropbox et node_modules" />
+<published>2015-04-02T00:00:00+02:00</published>
+<updated>2015-04-02T00:00:00+02:00</updated>
+<id>http://localhost:4000/articles/dropdox-et-node-modules</id>
+<content type="html" xml:base="http://localhost:4000/articles/dropdox-et-node-modules">&lt;p&gt;J&amp;#39;utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j&amp;#39;utilise. J&amp;#39;ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux &lt;code&gt;node_modules&lt;/code&gt; : ce dernier a tendance à se compter en milliers de fichiers, ce qui n&amp;#39;est pas idéal pour la synchronisation de Dropbox.&lt;/p&gt;
+
+&lt;p&gt;Heureusement il est possible d&amp;#39;ignorer ces fichiers; je vais vous montrer dans cet article comment faire.&lt;/p&gt;
+
+&lt;p&gt;Mettons que ayez un projet Gulp avec son &lt;code&gt;package.json&lt;/code&gt;. Une simple commande &lt;code&gt;npm install&lt;/code&gt; permettra d&amp;#39;installer tous les modules contenus dans &lt;code&gt;package.json&lt;/code&gt;. Mais avant cela, rendez-vous dans le dossier du projet, là où se situe le fichier en question, et créez-y un dossier &lt;code&gt;node_modules&lt;/code&gt; vide.&lt;/p&gt;
+
+&lt;p&gt;Ensuite, dans les préférences de Dropdox, direction &lt;code&gt;Compte &amp;gt; Synchronisation sélective&lt;/code&gt; et décochez le dossier &lt;code&gt;node_modules&lt;/code&gt; :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/screen-dropbox-1.png&quot; alt=&quot;Préférences Dropbox&quot; style=&quot;border: none;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Celui-ci va être supprimé du dossier dans lequel il se trouvait. Il ne vous reste plus qu&amp;#39;à lancer votre &lt;code&gt;npm install&lt;/code&gt;; lorsque ceci est fait, le dossier node_modules apparaîtra comme ignoré par Dropbox :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/screen-node-modules.png&quot; alt=&quot;Dossier node_modules&quot; style=&quot;border: none;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;La démarche peut sembler un brin fastidieuse, mais c&amp;#39;est à ma connaissance la seule solution pour éviter d&amp;#39;avoir à synchroniser à chaque fois vos &lt;code&gt;node_modules&lt;/code&gt;.&lt;/p&gt;
+</content>
+<category term="outils" />
+<summary>J&amp;#39;utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j&amp;#39;utilise. J&amp;#39;ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux node_modules : ce dernier a tendance à se compter en milliers de fichiers, ce qui n&amp;#39;est pas idéal pour la synchronisation de Dropbox.</summary>
+</entry>
+<entry>
+<title>Mettre ses assets en cache avec Jekyll</title>
+<link href="http://localhost:4000/articles/mettre-ses-assets-en-cache-avec-jekyll" rel="alternate" type="text/html" title="Mettre ses assets en cache avec Jekyll" />
+<published>2014-12-17T00:00:00+01:00</published>
+<updated>2014-12-17T00:00:00+01:00</updated>
+<id>http://localhost:4000/articles/mettre-ses-assets-en-cache-avec-jekyll</id>
+<content type="html" xml:base="http://localhost:4000/articles/mettre-ses-assets-en-cache-avec-jekyll">&lt;p&gt;Je partage aujourd&amp;#39;hui une solution assez simple que l&amp;#39;on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l&amp;#39;on utilise soient correctement mis à jour.&lt;/p&gt;
+
+&lt;p class=&quot;info&quot;&gt;Mise à jour (01/07/2015) : depuis l&#39;écriture de cette article, j&#39;ai mis en place un système bien plus pertinent que je détaille dans cet article.&lt;/p&gt;
+
+&lt;h2&gt;L&amp;#39;ancienne solution&lt;/h2&gt;
+
+&lt;p&gt;Celle-ci se base sur les formats date du système de templating &lt;a href=&quot;http://liquidmarkup.org/&quot;&gt;liquid&lt;/a&gt; pour générer une ID. Ainsi, au lieu de :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;/css/myawesomestylesheet.css&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Il nous suffira d&amp;#39;utiliser :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;/css/myawesomestylesheet.css?v=&amp;#123;&amp;#123; site.time | date: &#39;%y%m%d%k%M%S&#39; &amp;#125;&amp;#125;&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ce qui générera, dans l&amp;#39;ordre : l&amp;#39;année, le mois, le jour, et l&amp;#39;heure avec minutes et secondes. Ainsi le résultat obtenu sera de ce type :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;/css/myawesomestylesheet.css?v=141217192112&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;De cette manière, on est sûr d&amp;#39;avoir une ID &lt;em&gt;presque&lt;/em&gt; unique puisqu&amp;#39;à chaque seconde passée elle sera différente.&lt;/p&gt;
+
+&lt;h2&gt;Les limites de cette solution&lt;/h2&gt;
+
+&lt;p&gt;En appliquant cette façon de faire, tous les fichiers HTML seront mis à jour avec une nouvelle version du CSS, même si celui-ci n&amp;#39;a pas changé. La mise en cache perd un peu de son intérêt... Autre argument, Google &lt;a href=&quot;https://developers.google.com/speed/docs/insights/LeverageBrowserCaching&quot;&gt;conseille&lt;/a&gt; d&amp;#39;éviter les &lt;em&gt;query parameters&lt;/em&gt; au profit des &lt;em&gt;fingerprints&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Un autre système&lt;/h2&gt;
+
+&lt;p&gt;Je suis allé chercher du côté des plugins Jekyll et j&amp;#39;ai déniché &lt;a href=&quot;https://github.com/tkareine/jekyll-minibundle&quot;&gt;Jekyll-minibundle&lt;/a&gt;, qui fait exactement ce que je cherche. Une fois le plugin installé, les &lt;em&gt;fingerprints&lt;/em&gt; s&amp;#39;ajoutent de cette manière :&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot;&gt;&lt;code&gt;&amp;lt;link href=&quot;&amp;#123;&amp;#37; ministamp /_assets/css/fox.css /assets/css/fox.css &amp;#37;&amp;#125;&quot; rel=&quot;stylesheet&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Le premier lien est le fichier source, le deuxième est le fichier de destination. Le code généré donne ça :&lt;/p&gt;
+
+&lt;pre class=&quot;html&quot;&gt;&lt;code&gt;&amp;lt;link href=&quot;/assets/css/fox-86e4c5e39ca8a41719996d783a87c702.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+<category term="divers" />
+<category term="outils" />
+<summary>Je partage aujourd&amp;#39;hui une solution assez simple que l&amp;#39;on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l&amp;#39;on utilise soient correctement mis à jour.</summary>
+</entry>
+<entry>
+<title>Animer ses SVG avec Snap.svg</title>
+<link href="http://localhost:4000/articles/animer-ses-svg-avec-snap-svg" rel="alternate" type="text/html" title="Animer ses SVG avec Snap.svg" />
+<published>2014-07-21T00:00:00+02:00</published>
+<updated>2014-07-21T00:00:00+02:00</updated>
+<id>http://localhost:4000/articles/animer-ses-svg-avec-snap-svg</id>
+<content type="html" xml:base="http://localhost:4000/articles/animer-ses-svg-avec-snap-svg">&lt;p&gt;Ces derniers temps, j&amp;#39;ai un peu expérimenté l&amp;#39;animation de SVG. Mon premier essai a été cet &lt;a href=&quot;http://codepen.io/eskiiss/full/kFphn&quot;&gt;oiseau&lt;/a&gt;, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j&amp;#39;ai trouvée est &lt;a href=&quot;http://snapsvg.io/&quot;&gt;Snap.svg&lt;/a&gt;. Je vais vous expliquer le processus en détails.&lt;/p&gt;
+
+&lt;p class=&quot;info&quot;&gt;Attention, pour bien saisir ce tutoriel il est préférable d&#39;être à l&#39;aise sur le mode de fonctionnement des SVG.&lt;/p&gt;
+
+&lt;h2&gt;L&amp;#39;idée de départ&lt;/h2&gt;
+
+&lt;p&gt;Je suis parti sur une idée relativement simple : je crée des smileys sous Sketch, chacun avec deux états différents, et je fais en sorte de les faire changer d&amp;#39;état au clic.&lt;/p&gt;
+
+&lt;style&gt;
+  svg {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+  }
+
+  svg:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (min-width:50em) {
+    svg {
+      width: 110px;
+      height: 110px;
+    }
+  }
+
+  @media screen and (min-width:81.25em) {
+    svg {
+      width: 150px;
+      height: 150px;
+    }
+  }
+&lt;/style&gt;
+
+&lt;figure&gt;
+  &lt;svg width=&quot;390px&quot; height=&quot;390px&quot; viewBox=&quot;0 0 390 390&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; id=&quot;smiley&quot;&gt;
+    &lt;defs&gt;
+      &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterUnits=&quot;objectBoundingBox&quot; id=&quot;filter-1&quot;&gt;
+        &lt;feOffset dx=&quot;-30&quot; dy=&quot;-30&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetInner1&quot;&gt;&lt;/feOffset&gt;
+        &lt;feGaussianBlur stdDeviation=&quot;0&quot; in=&quot;shadowOffsetInner1&quot; result=&quot;shadowBlurInner1&quot;&gt;&lt;/feGaussianBlur&gt;
+        &lt;feComposite in=&quot;shadowBlurInner1&quot; in2=&quot;SourceAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot; result=&quot;shadowInnerInner1&quot;&gt;&lt;/feComposite&gt;
+        &lt;feColorMatrix values=&quot;0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0&quot; in=&quot;shadowInnerInner1&quot; type=&quot;matrix&quot; result=&quot;shadowMatrixInner1&quot;&gt;&lt;/feColorMatrix&gt;
+        &lt;feMerge&gt;
+          &lt;feMergeNode in=&quot;SourceGraphic&quot;&gt;&lt;/feMergeNode&gt;
+          &lt;feMergeNode in=&quot;shadowMatrixInner1&quot;&gt;&lt;/feMergeNode&gt;
+        &lt;/feMerge&gt;
+      &lt;/filter&gt;
+      &lt;rect id=&quot;path-2&quot; x=&quot;45&quot; y=&quot;45&quot; width=&quot;300&quot; height=&quot;300&quot; rx=&quot;70&quot;&gt;&lt;/rect&gt;
+    &lt;/defs&gt;
+    &lt;g stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;
+      &lt;g filter=&quot;url(#filter-1)&quot;&gt;
+        &lt;use stroke=&quot;#33639B&quot; stroke-width=&quot;16&quot; fill=&quot;#69A4E9&quot; fill-rule=&quot;evenodd&quot; xlink:href=&quot;#path-2&quot; id=&quot;smiley__body&quot;&gt;&lt;/use&gt;
+        &lt;use stroke=&quot;none&quot; fill=&quot;none&quot; xlink:href=&quot;#path-2&quot;&gt;&lt;/use&gt;
+      &lt;/g&gt;
+      &lt;path d=&quot;M164,219 C172.836556,219 180,210.941125 180,201 C180,191.058875 172.836556,183 164,183 C155.163444,183 148,191.058875 148,201 C148,210.941125 155.163444,219 164,219 Z&quot; id=&quot;smiley__left-eye&quot; fill=&quot;#33639B&quot;&gt;&lt;/path&gt;
+      &lt;ellipse id=&quot;smiley__right-eye&quot; fill=&quot;#33639B&quot; cx=&quot;227.5&quot; cy=&quot;199.5&quot; rx=&quot;20.5&quot; ry=&quot;25.5&quot;&gt;&lt;/ellipse&gt;
+      &lt;polygon id=&quot;smiley__left-eyebrow&quot; fill=&quot;#33639B&quot; transform=&quot;translate(155.000000, 159.500000) translate(-155.000000, -159.500000) &quot; points=&quot;170.921875 151.863281 178 167 132 167 &quot;&gt;&lt;/polygon&gt;
+      &lt;path d=&quot;M206.778449,154.125766 L215.978379,135.080539 L262.460072,173.170994 L206.778449,154.125766 Z&quot; id=&quot;smiley__right-eyebrow&quot; fill=&quot;#33639B&quot; transform=&quot;translate(234.474884, 154.269042) rotate(-17.000000) translate(-234.474884, -154.269042) &quot;&gt;&lt;/path&gt;
+      &lt;path d=&quot;M122.5,268.5 L268.5,268.5&quot; id=&quot;smiley__mouth&quot; stroke=&quot;#33639B&quot; stroke-width=&quot;15&quot; stroke-linecap=&quot;square&quot;&gt;&lt;/path&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;svg id=&quot;smiley-angry&quot; width=&quot;390px&quot; height=&quot;390px&quot; viewBox=&quot;0 0 390 390&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+    &lt;defs&gt;
+      &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterUnits=&quot;objectBoundingBox&quot; id=&quot;filter-1&quot;&gt;
+        &lt;feOffset dx=&quot;-30&quot; dy=&quot;-30&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetInner1&quot;&gt;&lt;/feOffset&gt;
+        &lt;feGaussianBlur stdDeviation=&quot;0&quot; in=&quot;shadowOffsetInner1&quot; result=&quot;shadowBlurInner1&quot;&gt;&lt;/feGaussianBlur&gt;
+        &lt;feComposite in=&quot;shadowBlurInner1&quot; in2=&quot;SourceAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot; result=&quot;shadowInnerInner1&quot;&gt;&lt;/feComposite&gt;
+        &lt;feColorMatrix values=&quot;0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0&quot; in=&quot;shadowInnerInner1&quot; type=&quot;matrix&quot; result=&quot;shadowMatrixInner1&quot;&gt;&lt;/feColorMatrix&gt;
+        &lt;feMerge&gt;
+          &lt;feMergeNode in=&quot;SourceGraphic&quot;&gt;&lt;/feMergeNode&gt;
+          &lt;feMergeNode in=&quot;shadowMatrixInner1&quot;&gt;&lt;/feMergeNode&gt;
+        &lt;/feMerge&gt;
+      &lt;/filter&gt;
+      &lt;rect id=&quot;path-2&quot; x=&quot;45&quot; y=&quot;45&quot; width=&quot;300&quot; height=&quot;300&quot; rx=&quot;70&quot;&gt;&lt;/rect&gt;
+    &lt;/defs&gt;
+    &lt;g id=&quot;Page-1&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;
+      &lt;g filter=&quot;url(#filter-1)&quot;&gt;
+        &lt;use stroke=&quot;#33639B&quot; stroke-width=&quot;16&quot; fill=&quot;#69A4E9&quot; fill-rule=&quot;evenodd&quot; xlink:href=&quot;#path-2&quot; id=&quot;smiley-angry__body&quot;&gt;&lt;/use&gt;
+        &lt;use stroke=&quot;none&quot; fill=&quot;none&quot; xlink:href=&quot;#path-2&quot;&gt;&lt;/use&gt;
+      &lt;/g&gt;
+      &lt;path d=&quot;M164,230 C178.359403,230 190,217.911688 190,203 C190,188.088312 178.359403,176 164,176 C149.640597,176 138,188.088312 138,203 C138,217.911688 149.640597,230 164,230 Z&quot; id=&quot;smiley-angry__left-eye&quot; fill=&quot;#33639B&quot;&gt;&lt;/path&gt;
+      &lt;ellipse id=&quot;smiley-angry__right-eye&quot; fill=&quot;#33639B&quot; cx=&quot;224&quot; cy=&quot;208.5&quot; rx=&quot;23&quot; ry=&quot;25.5&quot;&gt;&lt;/ellipse&gt;
+      &lt;polygon id=&quot;smiley-angry__left-eyebrow&quot; fill=&quot;#33639B&quot; transform=&quot;translate(154.637117, 149.601532) rotate(23.000000) translate(-154.637117, -149.601532) &quot; points=&quot;177.637117 140.514229 177.637117 158.891193 131.637117 155.601532 &quot;&gt;&lt;/polygon&gt;
+      &lt;path d=&quot;M204.076423,160.168344 L211.200827,136.552495 L253.534648,162.326529 L204.076423,160.168344 Z&quot; id=&quot;smiley-angry__right-eyebrow&quot; fill=&quot;#33639B&quot; transform=&quot;translate(229.049460, 149.424577) rotate(-32.000000) translate(-229.049460, -149.424577) &quot;&gt;&lt;/path&gt;
+      &lt;path d=&quot;M179.5,281.5 L211.5,281.5&quot; id=&quot;smiley-angry__mouth&quot; stroke=&quot;#33639B&quot; stroke-width=&quot;15&quot; stroke-linecap=&quot;square&quot;&gt;&lt;/path&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;svg id=&quot;smiley-sad&quot; width=&quot;390px&quot; height=&quot;390px&quot; viewBox=&quot;0 0 390 390&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+    &lt;defs&gt;
+      &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterUnits=&quot;objectBoundingBox&quot; id=&quot;filter-1&quot;&gt;
+        &lt;feOffset dx=&quot;-30&quot; dy=&quot;-30&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetInner1&quot;&gt;&lt;/feOffset&gt;
+        &lt;feGaussianBlur stdDeviation=&quot;0&quot; in=&quot;shadowOffsetInner1&quot; result=&quot;shadowBlurInner1&quot;&gt;&lt;/feGaussianBlur&gt;
+        &lt;feComposite in=&quot;shadowBlurInner1&quot; in2=&quot;SourceAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot; result=&quot;shadowInnerInner1&quot;&gt;&lt;/feComposite&gt;
+        &lt;feColorMatrix values=&quot;0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0&quot; in=&quot;shadowInnerInner1&quot; type=&quot;matrix&quot; result=&quot;shadowMatrixInner1&quot;&gt;&lt;/feColorMatrix&gt;
+        &lt;feMerge&gt;
+          &lt;feMergeNode in=&quot;SourceGraphic&quot;&gt;&lt;/feMergeNode&gt;
+          &lt;feMergeNode in=&quot;shadowMatrixInner1&quot;&gt;&lt;/feMergeNode&gt;
+        &lt;/feMerge&gt;
+      &lt;/filter&gt;
+      &lt;rect id=&quot;path-2&quot; x=&quot;45&quot; y=&quot;45&quot; width=&quot;300&quot; height=&quot;300&quot; rx=&quot;70&quot;&gt;&lt;/rect&gt;
+    &lt;/defs&gt;
+    &lt;g id=&quot;Page-1&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;
+      &lt;g&gt;
+        &lt;g filter=&quot;url(#filter-1)&quot;&gt;
+          &lt;use stroke=&quot;#33639B&quot; stroke-width=&quot;16&quot; fill=&quot;#69A4E9&quot; fill-rule=&quot;evenodd&quot; xlink:href=&quot;#path-2&quot; id=&quot;smiley-sad__body&quot;&gt;&lt;/use&gt;
+          &lt;use stroke=&quot;none&quot; fill=&quot;none&quot; xlink:href=&quot;#path-2&quot;&gt;&lt;/use&gt;
+        &lt;/g&gt;
+        &lt;polygon id=&quot;smiley-sad__left-eyebrow&quot; fill=&quot;#33639B&quot; transform=&quot;translate(139.489906, 148.445197) rotate(-22.000000) translate(-139.489906, -148.445197) &quot; points=&quot;155.702015 135.633087 161.177979 161.445197 117.940234 161.445197 &quot;&gt;&lt;/polygon&gt;
+        &lt;path d=&quot;M156,236 C170.359403,236 182,223.911688 182,209 C182,194.088312 170.359403,182 156,182 C141.640597,182 130,194.088312 130,209 C130,223.911688 141.640597,236 156,236 Z&quot; id=&quot;smiley-sad__left-eye&quot; fill=&quot;#33639B&quot;&gt;&lt;/path&gt;
+        &lt;ellipse id=&quot;smiley-sad__right-eye&quot; fill=&quot;#33639B&quot; cx=&quot;234&quot; cy=&quot;207.5&quot; rx=&quot;32&quot; ry=&quot;31.5&quot;&gt;&lt;/ellipse&gt;
+        &lt;path d=&quot;M213.076423,146.168344 L220.200827,122.552495 L262.534648,148.326529 L213.076423,146.168344 Z&quot; id=&quot;smiley-sad__right-eyebrow&quot; fill=&quot;#33639B&quot; transform=&quot;translate(238.049460, 135.424577) rotate(17.000000) translate(-238.049460, -135.424577) &quot;&gt;&lt;/path&gt;
+        &lt;path d=&quot;M156.3125,283.484375 C183.857004,258.058436 201.207184,257.26089 233.867188,278.996094&quot; id=&quot;smiley-sad__mouth&quot; stroke=&quot;#33639B&quot; stroke-width=&quot;15&quot;&gt;&lt;/path&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+&lt;figcaption&gt;Cliquez pour tester...&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Pour se faciliter la vie, l&amp;#39;idée est de pouvoir animer chacune des parties du smiley indépendamment. La façon de faire est assez simple; on applique une ID à la section de notre SVG en question, et on la lie à Snap.Svg. Par exemple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;var smiley = Snap.select(&#39;#smiley&#39;),
+    smileyBody = Snap.select(&#39;#smiley__body&#39;),
+    smileyMouth = Snap.select(&#39;#smiley__mouth&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Libre à nous de les animer ensuite comme l&amp;#39;on souhaite. Pour toggle les changements d&amp;#39;état, on applique un callback au &lt;code&gt;smiley.click&lt;/code&gt; pour utiliser la fonction souhaitée (ici, &lt;code&gt;smileyDef()&lt;/code&gt; et &lt;code&gt;smileyToggle&lt;/code&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;toggle1 = false;
+smiley.click(function() {
+  if(toggle1) {
+    smileyDef();
+    toggle1 = false;
+  }
+  else {
+    smileyToggle();
+    toggle1 = true;
+  }
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Animation du corps&lt;/h2&gt;
+
+&lt;p&gt;Les modifications apportées au corps sont assez simples : on change uniquement la couleur du fond et de la bordure. Cela se fait de la manière suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function smileyToggle() {
+  smileyBody.animate({fill: &#39;#A4DA69&#39;, stroke: &#39;#5B9020&#39;}, 150, mina.ease);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;150&lt;/code&gt; représente la durée de l&amp;#39;animation et &lt;code&gt;mina.ease&lt;/code&gt; le type d&amp;#39;easing souhaité.&lt;/p&gt;
+
+&lt;h2&gt;Animation de la bouche&lt;/h2&gt;
+
+&lt;p&gt;Il va s&amp;#39;agir de modifier le &lt;code&gt;path&lt;/code&gt; de la bouche pour faire arborer à notre smiley un gros sourire. Cela se fait d&amp;#39;une manière identique à l&amp;#39;animation des couleurs du body :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function smileyToggle() {
+  smileyMouth.animate({d: &#39;M90.7207031,217.580078 C129.926268,287.516842 285.592097,293.239314 300.232422,205.320312&#39;, stroke: &#39;#5B9020&#39;}, 150, mina.ease);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Animation des sourcils&lt;/h2&gt;
+
+&lt;p&gt;Sketch a un peu compliqué les choses sur cette partie, puisque pour certains de mes soucils il a utilisé des &lt;code&gt;path&lt;/code&gt; et pour d&amp;#39;autres des &lt;code&gt;polygon&lt;/code&gt;. J&amp;#39;ai décidé de garder cette structure afin de me familiariser un peu plus avec les fonctionnalités de base de Snap.svg.&lt;/p&gt;
+
+&lt;p&gt;Pour les &lt;code&gt;path&lt;/code&gt;, j&amp;#39;ai comme pour ma bouche simplement modifié mon attribut &lt;code&gt;d&lt;/code&gt;. Pour les &lt;code&gt;polygon&lt;/code&gt;, j&amp;#39;ai dû appliquer des transformations pour que le sourcil en question se déplace à l&amp;#39;endroit voulu.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function smileyToggle() {
+  smileyLeftEyebrow.animate({transform: &#39;t0,-30&#39;, fill: &#39;#5B9020&#39;}, 150, mina.ease);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Les transformations sur Snap.svg ont une syntaxe assez spéciale. Ainsi, &lt;code&gt;t0,-30&lt;/code&gt; désigne une translation des valeurs x et y à 0 et -30 dans l&amp;#39;espace. Pour plus d&amp;#39;infos sur le sujet, je vous conseille de lire cet &lt;a href=&quot;http://stackoverflow.com/questions/20302801/how-do-i-understand-transform-properties-in-snap-svg&quot;&gt;article &lt;sup&gt;EN&lt;/sup&gt;&lt;/a&gt; sur Stackoverflow.&lt;/p&gt;
+
+&lt;h2&gt;Quelques précisions pour finir&lt;/h2&gt;
+
+&lt;p&gt;Puisque mes animations sont basée sur un retour à l&amp;#39;état initial, il est nécessaire de prévoir une fonction qui réinitialisera les valeurs par défaut du SVG. (D&amp;#39;où la fonction &lt;code&gt;smileyDef()&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Le détail de mon code est disponible ci-dessous, mais gardez en tête que ça n&amp;#39;est qu&amp;#39;une démo et que je n&amp;#39;ai pas vraiment cherché à l&amp;#39;optimiser. J&amp;#39;imagine qu&amp;#39;il sera plus facile à lire ainsi.&lt;/p&gt;
+
+&lt;script src=&quot;/demos/snapsvg.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;p class=&quot;demo&quot;&gt;&lt;a href=&quot;http://codepen.io/eskiiss/full/gxqsr&quot;&gt;Voir la démo&lt;/a&gt;&lt;/p&gt;
+</content>
+<category term="svg" />
+<category term="tutoriels" />
+<summary>Ces derniers temps, j&amp;#39;ai un peu expérimenté l&amp;#39;animation de SVG. Mon premier essai a été cet oiseau, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j&amp;#39;ai trouvée est Snap.svg. Je vais vous expliquer le processus en détails.</summary>
+</entry>
+<entry>
+<title>Abandonner le support d&amp;#39;IE8</title>
+<link href="http://localhost:4000/articles/abandonner-le-support-d-ie8" rel="alternate" type="text/html" title="Abandonner le support d&#39;IE8" />
+<published>2014-06-20T00:00:00+02:00</published>
+<updated>2014-06-20T00:00:00+02:00</updated>
+<id>http://localhost:4000/articles/abandonner-le-support-d-ie8</id>
+<content type="html" xml:base="http://localhost:4000/articles/abandonner-le-support-d-ie8">&lt;p&gt;La décision de Microsoft &lt;a href=&quot;http://windows.microsoft.com/fr-fr/windows/end-support-help&quot;&gt;de ne plus assurer le support d&amp;#39;XP&lt;/a&gt; a eu pour conséquence de sonner le glas définitif d&amp;#39;Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d&amp;#39;éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d&amp;#39;autres navigateurs. Pour nous, webdesigners et développeurs, c&amp;#39;est un vrai soulagement et surtout un gros pas en avant...&lt;/p&gt;
+
+&lt;h2&gt;En intro : quelques statistiques&lt;/h2&gt;
+
+&lt;p&gt;Concrètement, si on décide d&amp;#39;arrêter tout support pour IE8, on se prive en moyenne de &lt;a href=&quot;http://gs.statcounter.com/#desktop-browser_version_partially_combined-FR-monthly-201404-201406-bar&quot;&gt;3% de nos visiteurs&lt;/a&gt; (données France). Un chiffre que je considère comme raisonnable, surtout si l&amp;#39;on garde en tête que l&amp;#39;on peut décider de proposer à nos visiteurs des navigateurs plus fiables pour mieux protéger leur machine.&lt;/p&gt;
+
+&lt;h2&gt;Ce que ça implique&lt;/h2&gt;
+
+&lt;p&gt;En faisant le choix d&amp;#39;exclure IE8 de la liste des navigateurs supportés, de nombreux avantages immédiats vont pouvoir s&amp;#39;offrir à nous; en voici les principaux à mes yeux.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Eléments HTML5 :&lt;/strong&gt; on peut mettre de côté les &lt;a href=&quot;https://code.google.com/p/html5shiv/&quot;&gt;shiv HTML5&lt;/a&gt; puisque ces éléments sont supportés nativement par IE9. Les navigateurs gèrent également très bien les éléments &lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt; et &lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt; par eux-même, plus besoin de plugins flash !&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript :&lt;/strong&gt; manipuler le DOM devient plus facile grâce à &lt;code&gt;getElementsByClassName&lt;/code&gt; et &lt;code&gt;addEventListener&lt;/code&gt; entre autres. ECMAScript 5, qui introduit de nouvelles méthodes, bénéficie d&amp;#39;un meilleur support.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Un meilleur support de CSS3 :&lt;/strong&gt; Plus de possibilités en termes de layouts : transformations, utilisation de &lt;code&gt;calc&lt;/code&gt;. D&amp;#39;autres propriétés et pseudo-classes utilisables sans risques : &lt;code&gt;opacity&lt;/code&gt;, &lt;code&gt;nth-child&lt;/code&gt;, &lt;code&gt;last-child&lt;/code&gt;... Enfin, On peut abandonner l&amp;#39;utilisation des &lt;code&gt;em&lt;/code&gt; au profit des &lt;code&gt;rem&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Responsive design :&lt;/strong&gt; finies les prises de tête pour &lt;a href=&quot;/articles/les-anciens-navigateurs/&quot;&gt;décider comment gérer&lt;/a&gt; les media queries, on peut maintenant faire de l&amp;#39;intégration mobile-first sans aucun risque.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SVG :&lt;/strong&gt; le format vectoriel du SVG en fait un format parfait pour les écrans HD et Retina. Plus besoin de prévoir des fallbacks en PNG !&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Comment gérer nos visiteurs sur IE8 ?&lt;/h2&gt;
+
+&lt;p&gt;Faire le choix d&amp;#39;utiliser les features citées ci-dessus, c&amp;#39;est décider d&amp;#39;abandonner tout support d&amp;#39;IE8 par opposé à une simple dégradation de l&amp;#39;expérience. Les avocats de l&amp;#39;accessibilité pourraient sans doute y trouver à redire, mais je pars du principe qu&amp;#39;il faut parfois forcer la main des utilisateurs pour assurer leur sécurité.&lt;/p&gt;
+
+&lt;p&gt;A mes yeux, la méthode la plus &amp;quot;propre&amp;quot; pour ce faire est de détecter IE8 (via JS ou par un commentaire conditionnel) et d&amp;#39;appliquer un overlay couvrant la totalité de l&amp;#39;écran, informant le visiteur des raisons de ce non-support et proposant une liste de navigateurs plus fiables et sécurisés.&lt;/p&gt;
+
+&lt;h2&gt;Le mot de la fin&lt;/h2&gt;
+
+&lt;p&gt;Pour conclure sur une petite touche ironique, sachez que mon site supporte malgré tout IE8 :) Mais il y a de fortes chances pour que ça ne soit plus le cas si je décide de le refondre un de ces jours... et je vous conseille d&amp;#39;en faire autant.&lt;/p&gt;
+</content>
+<category term="ux" />
+<category term="divers" />
+<summary>La décision de Microsoft de ne plus assurer le support d&amp;#39;XP a eu pour conséquence de sonner le glas définitif d&amp;#39;Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d&amp;#39;éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d&amp;#39;autres navigateurs. Pour nous, webdesigners et développeurs, c&amp;#39;est un vrai soulagement et surtout un gros pas en avant...</summary>
+</entry>
+<entry>
+<title>Responsive design : adoptez un process intelligent !</title>
+<link href="http://localhost:4000/articles/responsive-design-adoptez-un-process-intelligent" rel="alternate" type="text/html" title="Responsive design : adoptez un process intelligent !" />
+<published>2014-03-13T00:00:00+01:00</published>
+<updated>2014-03-13T00:00:00+01:00</updated>
+<id>http://localhost:4000/articles/responsive-design-adoptez-un-process-intelligent</id>
+<content type="html" xml:base="http://localhost:4000/articles/responsive-design-adoptez-un-process-intelligent">&lt;p&gt;Ce n&amp;#39;est plus vraiment une nouveauté : le responsive design est la tendance &lt;em&gt;hype&lt;/em&gt; du moment. De plus en plus d&amp;#39;acteurs du web ont réalisé qu&amp;#39;il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n&amp;#39;est pas toujours le cas.&lt;/p&gt;
+
+&lt;p class=&quot;info&quot;&gt;Les processes décrits ci-dessous interviennent entre la définition des besoins client et de la stratégie (contenu, architecture etc.) et les phases de test/déploiement (tests cross-browsers, UAT, etc.).&lt;/p&gt;
+
+&lt;h2&gt;Responsive : the wrong way&lt;/h2&gt;
+
+&lt;p&gt;Je vais partir d&amp;#39;un modèle que j&amp;#39;ai hélas rencontré fréquemment par le passé, dans le cadre d&amp;#39;une relation agence/client.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;L&amp;#39;équipe créative propose des maquettes en version &lt;em&gt;desktop&lt;/em&gt; au client.&lt;/li&gt;
+&lt;li&gt;Le client fait ses retours, les maquettes sont validées.&lt;/li&gt;
+&lt;li&gt;Les versions &amp;quot;petit écran&amp;quot; sont maquettées.&lt;/li&gt;
+&lt;li&gt;Les maquettes sont transmises pour intégration / développement.&lt;/li&gt;
+&lt;li&gt;Les problèmes commencent.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Qu&amp;#39;est ce qui cloche avec cette façon de faire ?&lt;/strong&gt; Le problème saute d&amp;#39;emblée aux yeux, l&amp;#39;équipe technique est intégrée en fin de boucle. Pour comprendre pourquoi cela est un gros souci, il est nécessaire de bien saisir la nuance entre responsive design et adaptive design. Rien de mieux qu&amp;#39;un schéma pour ça :&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/img/responsive-iceberg.jpg&quot; alt=&quot;Responsive Iceberg&quot;&gt;
+    &lt;figcaption&gt;Responsive Iceberg, &amp;copy; Brad Frost&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Le responsive design n&amp;#39;est en réalité qu&amp;#39;une partie de ce qu&amp;#39;on appelle l&amp;#39;adaptive design. Celui-ci ajoute une forte touche de complexité qui ne doit pas être prise à la légère : gestion des performances, des médias (notamment images), primauté du contenu sur le contenant, chargement conditionnel, amélioration progressive etc.&lt;/p&gt;
+
+&lt;p&gt;Les deux notions sont indissociables si l&amp;#39;on veut pouvoir fournir une bonne expérience aux utilisateurs. L&amp;#39;équipe technique doit donc se trouver au centre des processes, sinon on court droit à la catastrophe. En partant directement d&amp;#39;une version &lt;em&gt;desktop&lt;/em&gt;, on occulte les petits écrans et toutes les contraintes qui y sont liées.&lt;/p&gt;
+
+&lt;h2&gt;Responsive : the good way&lt;/h2&gt;
+
+&lt;p&gt;En prenant en compte ces informations, le schéma de création d&amp;#39;un site devrait être le suivant, ou au moins s&amp;#39;en approcher :&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Création de wireframes grossiers faisant intervenir l&amp;#39;équipe créa, l&amp;#39;équipe technique et idéalement l&amp;#39;équipe UX; le tout dans une démarche &lt;em&gt;mobile first&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Créations de prototypes HTML afin d&amp;#39;identifier les interactions intervenant de manière responsive.&lt;/li&gt;
+&lt;li&gt;Mise en place du design visuel, création de guides de styles.&lt;/li&gt;
+&lt;li&gt;Création des différents blocs réutilisables à travers toutes les pages.&lt;/li&gt;
+&lt;li&gt;Intégration et développement.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cette façon de faire apporte une flexibilité vitale à la réalisation d&amp;#39;un site adaptable au plus large nombre de supports.&lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Le responsive design doit être réfléchi en amont pour pouvoir être efficient. Il est impératif que nos processes s&amp;#39;adaptent à cette nouvelle façon de réfléchir, &lt;strong&gt;et non l&amp;#39;inverse&lt;/strong&gt;. Dans le cas contraire, on se retrouvera avec des sites plus lourds que nécessaires, difficilement modifiables, fonctionnant grâce à des bidouillages bancals.&lt;/p&gt;
+
+&lt;p&gt;Pour une description complète d&amp;#39;un process responsive, je vous invite à consulter &lt;a href=&quot;http://responsiveprocess.com/&quot;&gt;responsiveprocess.com&lt;/a&gt;.&lt;/p&gt;
+</content>
+<category term="rwd" />
+<summary>Ce n&amp;#39;est plus vraiment une nouveauté : le responsive design est la tendance hype du moment. De plus en plus d&amp;#39;acteurs du web ont réalisé qu&amp;#39;il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n&amp;#39;est pas toujours le cas.</summary>
+</entry>
+<entry>
+<title>Ma configuration Gulp</title>
+<link href="http://localhost:4000/articles/ma-configuration-gulp" rel="alternate" type="text/html" title="Ma configuration Gulp" />
+<published>2014-02-24T00:00:00+01:00</published>
+<updated>2014-02-24T00:00:00+01:00</updated>
+<id>http://localhost:4000/articles/ma-configuration-gulp</id>
+<content type="html" xml:base="http://localhost:4000/articles/ma-configuration-gulp">&lt;p&gt;Quand &lt;a href=&quot;http://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt; a commencé à faire parler de lui, j&amp;#39;ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l&amp;#39;outil idéal pour l&amp;#39;automatisation de mes tâches front-end; j&amp;#39;ai d&amp;#39;ailleurs très vite créé ma &lt;a href=&quot;/fox-bp&quot;&gt;boilerplate&lt;/a&gt; suite à ça. Mais la donne a un peu changé avec l&amp;#39;arrivée d&amp;#39;un petit nouveau : &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;info&quot;&gt;Mise à jour (14/03/2014) : j&#39;ai créé une &lt;a href=&quot;https://github.com/eskiiss/FOX-Boilerplate-2&quot;&gt;boilerplate&lt;/a&gt; pour Gulp, avec une configuration bien plus poussée que celle décrite ci-dessous. Je vous invite à aller consulter son &lt;a href=&quot;https://github.com/eskiiss/FOX-Boilerplate-2/blob/master/gulpfile.js&quot;&gt;gulpfile.js&lt;/a&gt; pour plus d&#39;infos.&lt;/p&gt;
+
+&lt;h2&gt;Grunt VS Gulp&lt;/h2&gt;
+
+&lt;p&gt;Il existe déjà une &lt;a href=&quot;http://www.100percentjs.com/just-like-grunt-gulp-browserify-now/&quot;&gt;foule&lt;/a&gt; d&amp;#39;&lt;a href=&quot;http://jaysoo.ca/2014/01/27/gruntjs-vs-gulpjs/&quot;&gt;articles&lt;/a&gt; sur le &lt;a href=&quot;http://www.insertafter.com/articles-gulp_vs_grunt.html&quot;&gt;sujet&lt;/a&gt;, je ne vais donc pas m&amp;#39;étendre outre mesure sur la comparaison entre ces deux outils. Mais pour résumer rapidement, Gulp est plus intéressant de mon point de vue pour les raisons suivantes :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rapidité d&amp;#39;exécution grâce à son fonctionnement asynchrone&lt;/li&gt;
+&lt;li&gt;Rapidité de configuration grâce à son écriture en fonctions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;J&amp;#39;ai donc décidé de tester Gulp en production pour voir ce qu&amp;#39;il avait dans le ventre, et le résultat est à la hauteur de mes attentes.&lt;/p&gt;
+
+&lt;h2&gt;Gulpfile.js&lt;/h2&gt;
+
+&lt;p&gt;A l&amp;#39;instar de Grunt, la configuration des tâches se fait via un fichier &lt;code&gt;gulpfile.js&lt;/code&gt;. Voilà en détails le fichier que j&amp;#39;utilise pour l&amp;#39;instant :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;// On définit nos dépendances
+var gulp = require(&#39;gulp&#39;),
+    connect = require(&#39;gulp-connect&#39;),
+    sass = require(&#39;gulp-ruby-sass&#39;),
+    autoprefixer = require(&#39;gulp-autoprefixer&#39;),
+    minify = require(&#39;gulp-minify-css&#39;),
+    concat = require(&#39;gulp-concat&#39;),
+    uglify = require(&#39;gulp-uglify&#39;);
+
+// Serveur + livereload + ouverture de Chrome
+gulp.task(&#39;connect&#39;, connect.server({
+    root: [&#39;dev&#39;],
+    port: 1337,
+    livereload: true,
+    open: {
+        browser: &#39;chrome&#39;
+    }
+}));
+
+// Fonction qui gère les erreurs Gulp
+function handleError(err) {
+    console.log(err.toString());
+    this.emit(&#39;end&#39;);
+}
+
+// Compilation des fichiers SCSS, auto-préfixage et livereload
+gulp.task(&#39;sass&#39;, function() {
+    return gulp.src([&#39;./dev/css/**/*.scss&#39;, &#39;!./dev/css/**/_*.scss&#39;])
+    .pipe(sass({style: &#39;expanded&#39;, quiet: true}))
+    .on(&#39;error&#39;, handleError)
+    .pipe(autoprefixer(&#39;last 2 version&#39;, &#39;safari 5&#39;, &#39;ie 8&#39;, &#39;ie 9&#39;, &#39;opera 12.1&#39;, &#39;ios 6&#39;, &#39;android 4&#39;))
+    .pipe(gulp.dest(&#39;./dev/css&#39;))
+    .pipe(connect.reload());
+});
+
+// Livereload du HTML
+gulp.task(&#39;html&#39;, function () {
+    return gulp.src(&#39;./dev/*.html&#39;)
+    .pipe(connect.reload());
+});
+
+// Concaténation des JS et livereload
+gulp.task(&#39;scripts&#39;, function() {
+    return gulp.src([&#39;./dev/js/**/*.js&#39;, &#39;!./dev/js/ie/*.js&#39;, &#39;!./dev/js/**/main.js&#39;])
+    .pipe(concat(&#39;main.js&#39;))
+    .pipe(gulp.dest(&#39;./dev/js&#39;))
+    .pipe(connect.reload());
+});
+
+// Minification du CSS et déplacement vers /dist
+gulp.task(&#39;minify&#39;, function() {
+    return gulp.src(&#39;./dev/css/*.css&#39;)
+    .pipe(minify(opts))
+    .pipe(gulp.dest(&#39;./dist/css&#39;))
+});
+
+// Minification du JS et déplacement vers /dist
+gulp.task(&#39;uglify&#39;, function() {
+    return gulp.src(&#39;./dev/js/main.js&#39;)
+    .pipe(uglify())
+    .pipe(gulp.dest(&#39;./dist/js&#39;))
+});
+
+// Tâches à surveiller
+gulp.task(&#39;watch&#39;, function () {
+    gulp.watch(&#39;./dev/css/**/*.scss&#39;, [&#39;sass&#39;]);
+    gulp.watch(&#39;./dev/**/*.html&#39;, [&#39;html&#39;]);
+    gulp.watch(&#39;./dev/js/**/*.js&#39;, [&#39;scripts&#39;, &#39;uglify&#39;]);
+    gulp.watch(&#39;./dev/css/**/*.css&#39;, [&#39;minify&#39;]);
+});
+
+// Tâche par défaut
+gulp.task(&#39;default&#39;, [&#39;connect&#39;, &#39;watch&#39;]);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Si jamais vous voyez des moyens de l&amp;#39;optimiser ou de l&amp;#39;améliorer, n&amp;#39;hésitez pas à m&amp;#39;en faire part sur Twitter.&lt;/p&gt;
+</content>
+<category term="tutoriels" />
+<category term="outils" />
+<category term="javascript" />
+<summary>Quand Grunt a commencé à faire parler de lui, j&amp;#39;ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l&amp;#39;outil idéal pour l&amp;#39;automatisation de mes tâches front-end; j&amp;#39;ai d&amp;#39;ailleurs très vite créé ma boilerplate suite à ça. Mais la donne a un peu changé avec l&amp;#39;arrivée d&amp;#39;un petit nouveau : Gulp.</summary>
+</entry>
+<entry>
+<title>Des colonnes de même taille en Vanilla JS</title>
+<link href="http://localhost:4000/articles/des-colonnes-de-meme-taille-en-vanilla-js" rel="alternate" type="text/html" title="Des colonnes de même taille en Vanilla JS" />
+<published>2014-02-04T00:00:00+01:00</published>
+<updated>2014-02-04T00:00:00+01:00</updated>
+<id>http://localhost:4000/articles/des-colonnes-de-meme-taille-en-vanilla-js</id>
+<content type="html" xml:base="http://localhost:4000/articles/des-colonnes-de-meme-taille-en-vanilla-js">&lt;p&gt;CSS3 a apporté son lot de nouveautés, parmi lesquelles &lt;code&gt;flexbox&lt;/code&gt;, un modèle qui propose de &lt;a href=&quot;http://philipwalton.github.io/solved-by-flexbox/&quot;&gt;nombreuses solutions&lt;/a&gt; de mise en page dont celle qui nous intéresse aujourd&amp;#39;hui : la création de colonnes de hauteur égale. Malheureusement l&amp;#39;utilisation de &lt;code&gt;flexbox&lt;/code&gt; en production est encore &lt;a href=&quot;http://caniuse.com/flexbox&quot;&gt;mitigée&lt;/a&gt;. Du coup, la meilleure alternative reste pour l&amp;#39;instant le recours au JavaScript.&lt;/p&gt;
+
+&lt;p&gt;Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la même hauteur. L&amp;#39;idée que j&amp;#39;avais en tête était de basculer cette façon de faire en Vanilla JS et pousser le concept un peu plus loin en mixant ma mise en page à du responsive design. Pour résumer le principe : En dessous d&amp;#39;une certaine résolution, les blocs sont positionnés les uns en dessous des autres. Au-dessus, ils sont alignés côte-à-côte et prennent la même hauteur. Je vais disséquer ici le code créé pour l&amp;#39;occasion.&lt;/p&gt;
+
+&lt;p&gt;On commence par sélectionner toutes nos div possédant la classe &lt;code&gt;.column&lt;/code&gt; :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;var column = document.querySelectorAll(&#39;.column&#39;);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Puis on crée la fonction qui va récupérer la taille maximum de &lt;code&gt;.column&lt;/code&gt; et on applique cette taille à toutes les autres (on boucle à travers toutes nos &lt;code&gt;.column&lt;/code&gt; grâce à &lt;code&gt;for&lt;/code&gt;) :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function sameHeight(el) {
+  var maxHeight = 0;
+    for (var i = 0; i &amp;lt; el.length; i++) {
+      thisHeight = el[i].clientHeight;
+      if(thisHeight &gt; maxHeight) {
+        maxHeight = thisHeight;
+      }
+    }
+    for (var i = 0; i &amp;lt; el.length; i++) {
+      el[i].style.height = maxHeight + &#39;px&#39;;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La fonction n&amp;#39;est appelée qu&amp;#39;au dessus d&amp;#39;une certaine résolution :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;if (window.matchMedia(&quot;(min-width: 30em)&quot;).matches) {
+  sameHeight(column);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Histoire de garder tout ça propre, on applique une fonction au resize de la fenêtre, tout en continuant de prendre en compte nos media queries :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;window.addEventListener(&#39;resize&#39;, function () {
+  if (window.matchMedia(&quot;(min-width: 30em)&quot;).matches) {
+    for (var i = 0; i &amp;lt; column.length; i++) {
+      column[i].style.height = &#39;auto&#39;;
+    }
+    sameHeight(column);
+  }
+  else {
+    for (var i = 0; i &amp;lt; column.length; i++) {
+      column[i].style.height = &#39;auto&#39;;
+    }
+  }
+}, false);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Et pour finir, dans notre CSS on définit nos &lt;code&gt;.column&lt;/code&gt; de la manière suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;.column {
+  border: 1px solid red;
+}
+
+@media screen and (min-width: 30em) {
+  .column {
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p class=&quot;liens&quot;&gt;&lt;a href=&quot;http://jsfiddle.net/JFLQu/1/&quot;&gt;Voir l&#39;exemple sur JSFiddle&lt;/a&gt;&lt;/p&gt;
+
+&lt;p class=&quot;info&quot;&gt;Tel quel, cet exemple ne fonctionne pas sous IE9, qui ne reconnaît pas &lt;code&gt;window.matchMedia&lt;/code&gt;, ni sous IE8 qui en plus de cela ne reconnaît pas &lt;code&gt;addEventListener&lt;/code&gt;. Pour le premier cas, on utilisera un simple &lt;a href=&quot;https://github.com/paulirish/matchMedia.js/&quot;&gt;polyfill&lt;/a&gt;, et pour le deuxième on remplacera la méthode standard par &lt;code&gt;attachEvent&lt;/code&gt;.&lt;/p&gt;
+</content>
+<category term="javascript" />
+<category term="tutoriels" />
+<summary>CSS3 a apporté son lot de nouveautés, parmi lesquelles flexbox, un modèle qui propose de nombreuses solutions de mise en page dont celle qui nous intéresse aujourd&amp;#39;hui : la création de colonnes de hauteur égale. Malheureusement l&amp;#39;utilisation de flexbox en production est encore mitigée. Du coup, la meilleure alternative reste pour l&amp;#39;instant le recours au JavaScript.</summary>
+</entry>
+</feed>
