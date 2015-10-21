@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Ronan Levesque - Le jour où j'ai testé Sass</title>
+  <title>Ronan Levesque &ndash; Le jour où j'ai testé Sass</title>
   <meta name="description" content="Retour d'expérience sur ma première expérience approfondie de Sass">
-  <meta name="author" content="">
+  <meta name="author" content="Ronan Levesque">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
@@ -13,73 +13,83 @@
   <meta property="og:description" content="Retour d'expérience sur ma première expérience approfondie de Sass">
   <meta property="og:url" content="http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link href="/assets/css/fox-8a0c4e0ccfcddfe8817ee7050890b1e2.css" rel="stylesheet">
-  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link href="/assets/css/styles-fd3db9b39284a841470ee78411cd7aec.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans:700|PT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/favicons/manifest.json">
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#23668f">
+  <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+  <meta name="msapplication-config" content="/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <script>
     document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
-    if (localStorage.getItem('ronanLevesqueFontsLoaded')) { document.documentElement.className += ' fonts-loaded'; }
+    if (localStorage.getItem('fontsLoaded')) { document.documentElement.className += ' fonts-loaded'; }
   </script>
 </head>
+
+
 <body>
-  <div class="wrapper" id="top">
 
-    <nav class="main-nav" role="navigation">
-      <div class="main-nav__top">
-        <a href="/" class="main-nav__logo flip-container">
-          <div class="flip">
-            <svg class="front" xmlns="http://www.w3.org/2000/svg" width="200.003" height="200.003" viewBox="0 0 200.003 200.003"><path fill="#222" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#222" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-            <svg class="back" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h200v200H0V0z" fill="#222"/><path d="M150.302 106.097v51.14h-36.54v-27.793H86.238v27.792H49.696v-51.14H36.62L100 42.765l63.38 63.333h-13.078zm-7.82-57.64h-14.744v11.786L142.48 75.02V48.455z" fill="#FFF"/></g></svg>
-        </div>
-        </a>
-        <a href="/" class="main-nav__close">
-          <svg width="205" height="205" viewBox="0 0 205 205" xmlns="http://www.w3.org/2000/svg"><g stroke="#ccc" stroke-width="16" stroke-linecap="square" fill="none" fill-rule="evenodd"><path d="M11 11l183 183M194.02 10.963l-183 183"/></g></svg>
-        </a>
-      </div>
-      <ol class="main-nav__menu">
-        
-        <li><a href="/projets" >Projets</a></li>
-        <li><a href="/articles" class="selected">Articles</a></li>
-        <li><a href="/a-propos" >A propos</a></li>
-      </ol>
-    </nav>
 
-    <main class="main-page" role="main">
-      <header class="page-header">
-        <div class="page-header__anim">
-          <time class="page-header__date">15 octobre 2012</time>
-          <h1 class="page-header__title">Le jour où j'ai testé Sass</h1>
-        </div>
-      </header>
+
+  <div class="js-content">
+    <div class="wrapper">
+        <header class="mainHeader">
+    <div class="mainHeader-logo">
+      <svg class="logo -header" width="136" height="114" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#74b3d9" fill-rule="evenodd"/></svg>
+      <p class="mainHeader-title">Ronan Levesque</p>
+    </div>
+    <div class="mainHeader-nav">
+      <nav class="mainNav -header">
+          <ul class="mainNav-list">
+            
+            <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+            <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
+            <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+
+      
       <article class="article">
-        <p>J&#39;ai lu récemment pas mal de débats sur l&#39;intérêt d&#39;intégrer ou non les préprocesseurs CSS dans nos workflows. Certains  pour, d&#39;autres contre, bref, les avis semblaient vraiment partagés sur le sujet. D&#39;après ce que j&#39;avais pu en lire, ils pouvaient pourtant présenter un réel intérêt dans certains cas, notamment sur de gros projets. Curieux d&#39;en savoir un peu plus sur le sujet, j&#39;ai récemment plongé mon nez dans Sass, qui semblait le plus populaire des différents préprocesseurs.</p>
+      
+        <header class="article-header">
+          <p class="article-date">15 octobre 2012</p>
+          <h1 class="article-title">Le jour où j'ai testé Sass</h1>
+        </header>
+        
+        <div class="article-content">
+        
+          <p>J&#39;ai lu récemment pas mal de débats sur l&#39;intérêt d&#39;intégrer ou non les préprocesseurs CSS dans nos workflows. Certains  pour, d&#39;autres contre, bref, les avis semblaient vraiment partagés sur le sujet. D&#39;après ce que j&#39;avais pu en lire, ils pouvaient pourtant présenter un réel intérêt dans certains cas, notamment sur de gros projets. Curieux d&#39;en savoir un peu plus sur le sujet, j&#39;ai récemment plongé mon nez dans Sass, qui semblait le plus populaire des différents préprocesseurs.</p>
 
 <!--more-->
 
-<h2>1. Sass en quelques mots</h2>
+<h2>Sass en quelques mots</h2>
 
-<p><a href="http://sass-lang.com/">Sass</a> est, dixit son site officiel, une extension de CSS3 qui permet d&#39;introduire de nouveaux concepts au sein de CSS : variables, imbrication d&#39;éléments, héritage de sélecteurs etc. La syntaxe utilisée est le SCSS (pour Sassy CSS), qui permet de créer des fichiers .scss facilement convertibles en fichiers .css au moyen de l&#39;outil de commande en ligne ou par le biais d&#39;apps.</p>
+<p><a href="http://sass-lang.com/">Sass</a> est, dixit son site officiel, une extension de CSS3 qui permet d&#39;introduire de nouveaux concepts au sein de CSS&nbsp;: variables, imbrication d&#39;éléments, héritage de sélecteurs etc. La syntaxe utilisée est le SCSS (pour Sassy CSS), qui permet de créer des fichiers .scss facilement convertibles en fichiers .css au moyen de l&#39;outil de commande en ligne ou par le biais d&#39;apps.</p>
 
 <h2>2. Comment l'installer ?</h2>
 
 <p>Le site officiel préconise d&#39;utiliser Ruby (installé par défaut sous Mac, à <a href="http://rubyinstaller.org/downloads/">installer</a> sous Windows). On installe ensuite Sass avec la commande <code>gem install sass</code>. On crée un fichier SCSS, par exemple <code>style.scss</code> et on le &quot;surveille&quot; avec <code>sass --watch style.scss:style.css</code>.</p>
 
-<p>Ou sinon, pour les paresseux (dont je fais partie) on installe un logiciel qui fait automatiquement le boulot; en voici une petite liste :</p>
+<p>Ou sinon, pour les paresseux (dont je fais partie) on installe un logiciel qui fait automatiquement le boulot; en voici une petite liste&nbsp;:</p>
 
 <ul>
 <li><a href="http://incident57.com/codekit/">Codekit</a> (Mac, payant)</li>
@@ -87,13 +97,13 @@
 <li><a href="http://compass.handlino.com/">Compass.app</a> (Windows, payant)</li>
 </ul>
 
-<h2>3. Les avantages de Sass</h2>
+<h2>Les avantages de Sass</h2>
 
-<p>La page d&#39;accueil de Sass en dénombre 4. Il suffit en effet de les mettre en pratique pour rapidement comprendre la puissance de l&#39;outil, et son énorme potentiel lors de la réalisation de projets complexes... Regardons ça un peu plus en détails :</p>
+<p>La page d&#39;accueil de Sass en dénombre 4. Il suffit en effet de les mettre en pratique pour rapidement comprendre la puissance de l&#39;outil, et son énorme potentiel lors de la réalisation de projets complexes... Regardons ça un peu plus en détails&nbsp;:</p>
 
-<h3>a. Nesting</h3>
+<h3>Nesting</h3>
 
-<p>Le nesting, qu&#39;on pourrait plus ou moins traduire par imbrication, permet de regrouper ensemble plusieurs sélecteurs en les imbriquant pour plus de clarté. Par exemple, prenons le SCSS suivant :</p>
+<p>Le nesting, qu&#39;on pourrait plus ou moins traduire par imbrication, permet de regrouper ensemble plusieurs sélecteurs en les imbriquant pour plus de clarté. Par exemple, prenons le SCSS suivant&nbsp;:</p>
 
 <pre><code class="scss">ul {
   padding: 2em;
@@ -101,7 +111,7 @@
 }
 </code></pre>
 
-<p>Il se traduira en CSS par :</p>
+<p>Il se traduira en CSS par&nbsp;:</p>
 
 <pre><code class="css">ul {
   padding: 2em;
@@ -114,13 +124,13 @@ ul a {
 
 <p>Le nesting est donc un bon moyen d&#39;organiser clairement ses informations. Par ailleurs, il marche non seulement avec les sélecteurs mais également avec leurs propriétés.</p>
 
-<h3>b. Variables</h3>
+<h3>Variables</h3>
 
-<p>Sass permet d&#39;intégrer la notion de variables en CSS, variables qui peuvent être couplées avec certaines opérations mathématiques ou fonctions : on peut ainsi définir une variable <code>$couleur</code>, qui correspondra par exemple à la couleur principale de notre site, puis styler certains éléments à partir de celle-ci en les rendant légèrement plus clairs : <code>lighten($couleur, 10%)</code>. Il suffit ensuite de changer la valeur de notre variable <code>$couleur</code> pour qu&#39;automatiquement les autres propriétés dépendant de celle-ci se mettent à jour.</p>
+<p>Sass permet d&#39;intégrer la notion de variables en CSS, variables qui peuvent être couplées avec certaines opérations mathématiques ou fonctions&nbsp;: on peut ainsi définir une variable <code>$couleur</code>, qui correspondra par exemple à la couleur principale de notre site, puis styler certains éléments à partir de celle-ci en les rendant légèrement plus clairs&nbsp;: <code>lighten($couleur, 10%)</code>. Il suffit ensuite de changer la valeur de notre variable <code>$couleur</code> pour qu&#39;automatiquement les autres propriétés dépendant de celle-ci se mettent à jour.</p>
 
-<h3>c. Les @mixins</h3>
+<h3>Les @mixins</h3>
 
-<p>Ils permettent de réutiliser une partie de notre CSS n&#39;importe où grâce à la fonction <code>@include</code>. Ainsi le SCSS suivant :</p>
+<p>Ils permettent de réutiliser une partie de notre CSS n&#39;importe où grâce à la fonction <code>@include</code>. Ainsi le SCSS suivant&nbsp;:</p>
 
 <pre><code class="scss">@mixin list-padd {
   ul {padding: 2em;}
@@ -132,7 +142,7 @@ nav {
 }
 </code></pre>
 
-<p>Sera traduit en CSS par :</p>
+<p>Sera traduit en CSS par&nbsp;:</p>
 
 <pre><code class="css">nav ul {
   padding: 2em;
@@ -143,11 +153,11 @@ nav li {
 }
 </code></pre>
 
-<p>Simple non ? :)</p>
+<p>Simple non ?&nbsp;:)</p>
 
-<h3>d. Héritage de sélecteurs</h3>
+<h3>Héritage de sélecteurs</h3>
 
-<p>Fonctionnant un peu sur le même principe que les <code>@mixins</code>, la fonction <code>@extend</code> permet d&#39;étendre les styles d&#39;un sélecteur à un autre. Par exemple, le SCSS suivant :</p>
+<p>Fonctionnant un peu sur le même principe que les <code>@mixins</code>, la fonction <code>@extend</code> permet d&#39;étendre les styles d&#39;un sélecteur à un autre. Par exemple, le SCSS suivant&nbsp;:</p>
 
 <pre><code class="scss">.red {
   color: white;
@@ -160,7 +170,7 @@ nav li {
 }
 </code></pre>
 
-<p>donnera ce CSS :</p>
+<p>donnera ce CSS&nbsp;:</p>
 
 <pre><code class="css">.red, .button {
   color: white;
@@ -174,42 +184,30 @@ nav li {
 
 <p>Une fonction pratique donc, qui permet d&#39;éviter d&#39;avoir à copier/coller 20 fois le même code au moindre changement.</p>
 
-<h2>4. En conclusion...</h2>
+<h2>En conclusion...</h2>
 
-<p>... L&#39;essayer, c&#39;est l&#39;adopter :) Plus sérieusement, après quelques temps d&#39;utilisation, Sass m’apparaît comme un outil indispensable lors de la réalisation de projets complexes. Les outils qu&#39;il intègre permettent à mon sens de rationaliser et optimiser très fortement notre workflow. Il présente en revanche peut-être moins d&#39;intérêt sur des projets plus petits, quoique...</p>
+<p>... L&#39;essayer, c&#39;est l&#39;adopter&nbsp;:) Plus sérieusement, après quelques temps d&#39;utilisation, Sass m’apparaît comme un outil indispensable lors de la réalisation de projets complexes. Les outils qu&#39;il intègre permettent à mon sens de rationaliser et optimiser très fortement notre workflow. Il présente en revanche peut-être moins d&#39;intérêt sur des projets plus petits, quoique...</p>
 
 <p>Par ailleurs, je n&#39;ai cité qu&#39;une partie de ses possibilités, pour plus d&#39;informations sur son potentiel je vous invite à consulter son très riche <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">fichier de référence <sup>EN</sup></a>.</p>
 
+<hr>
+
 <p>Pour terminer sur les préprocesseurs, sachez qu&#39;il en existe d&#39;autres, et notamment <a href="http://lesscss.org/">LESS</a>, que je n&#39;ai pas eu l&#39;occasion de tester. <a href="http://chriscoyier.net/">Chris Coyier</a> a d&#39;ailleurs rédigé un <a href="http://css-tricks.com/sass-vs-less/">comparatif sur le sujet <sup>EN</sup></a>, désignant plus ou moins Sass comme la version gagnante par rapport à LESS...</p>
 
-<p>Enfin, si vous voulez peser le pour et le contre de l&#39;utilisation des préprocesseurs, je vous invite à lire ces deux articles  : <a href="http://blog.kaelig.fr/post/24877648508/preprocesseurs-css-renoncer-par-choix-ou-par">Préprocesseurs CSS : renoncer par choix, ou par ignorance ?</a>, et <a href="http://www.amberweinberg.com/why-im-still-against-sass-less/">Why I&#39;m still against Sass/LESS <sup>EN</sup></a>.</p>
+<p>Enfin, si vous voulez peser le pour et le contre de l&#39;utilisation des préprocesseurs, je vous invite à lire ces deux articles &nbsp;: <a href="http://blog.kaelig.fr/post/24877648508/preprocesseurs-css-renoncer-par-choix-ou-par">Préprocesseurs CSS&nbsp;: renoncer par choix, ou par ignorance ?</a>, et <a href="http://www.amberweinberg.com/why-im-still-against-sass-less/">Why I&#39;m still against Sass/LESS <sup>EN</sup></a>.</p>
 
+        </div>
       </article>
-    </main>
-    <footer class="main-footer" role="contentinfo">
-      <div class="main-footer__inner">
-        <a href="#top" data-scroll data-options='{"updateURL": false}' class="main-footer__logo flip-container">
-          <div class="flip">
-            <svg class="front" xmlns="http://www.w3.org/2000/svg" width="200.003" height="200.003" viewBox="0 0 200.003 200.003"><path fill="#fff" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#222" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-            <svg class="back" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h200v200H0V0z" fill="#FFF"/><path d="M158.308 118.845l-20.244 20.34L100 101.304l-38.064 37.883-20.244-20.34L100 60.813l58.308 58.03z" fill="#222"/></g></svg>
-          </div>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <!--[if IE 9]> <script src="/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/assets/js/main-824ea786537e82c54e68ae1e0a2351ad.js"></script>
-  <script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-29762874-1']);
-    _gaq.push(['_trackPageview']);
+        
+  <footer class="mainFooter">
+  
+    <svg class="logo -footer" xmlns="http://www.w3.org/2000/svg" width="200.003" height="200.003" viewBox="0 0 200.003 200.003"><path fill="#74b3d9" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#74b3d9" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+  </footer>
 
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-</body>
+    </div>
+  </div>
+
+  <script src="/assets/js/bundle-d72442e222b32cad6f20f033e6632a16.js"></script>
+  </body>
 </html>
 

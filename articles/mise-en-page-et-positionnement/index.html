@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Ronan Levesque - Mise en page et positionnement</title>
+  <title>Ronan Levesque &ndash; Mise en page et positionnement</title>
   <meta name="description" content="Présentation des différentes possibilités de positionnements d'éléments avec CSS">
-  <meta name="author" content="">
+  <meta name="author" content="Ronan Levesque">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
@@ -13,67 +13,77 @@
   <meta property="og:description" content="Présentation des différentes possibilités de positionnements d'éléments avec CSS">
   <meta property="og:url" content="http://ronanlevesque.fr/articles/mise-en-page-et-positionnement" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
-  <link href="/assets/css/fox-8a0c4e0ccfcddfe8817ee7050890b1e2.css" rel="stylesheet">
-  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/favicon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link href="/assets/css/styles-fd3db9b39284a841470ee78411cd7aec.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans:700|PT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/favicons/manifest.json">
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#23668f">
+  <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+  <meta name="msapplication-config" content="/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <script>
     document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
-    if (localStorage.getItem('ronanLevesqueFontsLoaded')) { document.documentElement.className += ' fonts-loaded'; }
+    if (localStorage.getItem('fontsLoaded')) { document.documentElement.className += ' fonts-loaded'; }
   </script>
 </head>
+
+
 <body>
-  <div class="wrapper" id="top">
 
-    <nav class="main-nav" role="navigation">
-      <div class="main-nav__top">
-        <a href="/" class="main-nav__logo flip-container">
-          <div class="flip">
-            <svg class="front" xmlns="http://www.w3.org/2000/svg" width="200.003" height="200.003" viewBox="0 0 200.003 200.003"><path fill="#222" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#222" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-            <svg class="back" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h200v200H0V0z" fill="#222"/><path d="M150.302 106.097v51.14h-36.54v-27.793H86.238v27.792H49.696v-51.14H36.62L100 42.765l63.38 63.333h-13.078zm-7.82-57.64h-14.744v11.786L142.48 75.02V48.455z" fill="#FFF"/></g></svg>
-        </div>
-        </a>
-        <a href="/" class="main-nav__close">
-          <svg width="205" height="205" viewBox="0 0 205 205" xmlns="http://www.w3.org/2000/svg"><g stroke="#ccc" stroke-width="16" stroke-linecap="square" fill="none" fill-rule="evenodd"><path d="M11 11l183 183M194.02 10.963l-183 183"/></g></svg>
-        </a>
-      </div>
-      <ol class="main-nav__menu">
-        
-        <li><a href="/projets" >Projets</a></li>
-        <li><a href="/articles" class="selected">Articles</a></li>
-        <li><a href="/a-propos" >A propos</a></li>
-      </ol>
-    </nav>
 
-    <main class="main-page" role="main">
-      <header class="page-header">
-        <div class="page-header__anim">
-          <time class="page-header__date">12 juillet 2012</time>
-          <h1 class="page-header__title">Mise en page et positionnement</h1>
-        </div>
-      </header>
+
+  <div class="js-content">
+    <div class="wrapper">
+        <header class="mainHeader">
+    <div class="mainHeader-logo">
+      <svg class="logo -header" width="136" height="114" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#74b3d9" fill-rule="evenodd"/></svg>
+      <p class="mainHeader-title">Ronan Levesque</p>
+    </div>
+    <div class="mainHeader-nav">
+      <nav class="mainNav -header">
+          <ul class="mainNav-list">
+            
+            <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+            <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
+            <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+
+      
       <article class="article">
-        <p>Il existe plusieurs manières de positionner différents éléments au sein d&#39;une page. Certaines, telles que l&#39;utilisation des tableaux sont décriées, à tort ou à raison selon les points de vue, d&#39;autres sont fortement plébiscitées et très souvent utilisées. Le but de cet article et de faire un point sur les différentes méthodes mises à notre disposition, et de finir par un cas pratique centré autour de la <code>position: absolute</code>.</p>
+      
+        <header class="article-header">
+          <p class="article-date">12 juillet 2012</p>
+          <h1 class="article-title">Mise en page et positionnement</h1>
+        </header>
+        
+        <div class="article-content">
+        
+          <p>Il existe plusieurs manières de positionner différents éléments au sein d&#39;une page. Certaines, telles que l&#39;utilisation des tableaux sont décriées, à tort ou à raison selon les points de vue, d&#39;autres sont fortement plébiscitées et très souvent utilisées. Le but de cet article et de faire un point sur les différentes méthodes mises à notre disposition, et de finir par un cas pratique centré autour de la <code>position: absolute</code>.</p>
 
-<h2>1. Récapitulatif des différents positionnements</h2>
+<h2>Récapitulatif des différents positionnements</h2>
 
-<h3>a. Les éléments flottants</h3>
+<h3>Les éléments flottants</h3>
 
-<p>Pour rappel, voici la définition de la propriété <code>float</code>, traduite d&#39;après <a href="http://www.w3.org/TR/CSS2/visuren.html#floats">w3.org <sup>EN</sup></a> :</p>
+<p>Pour rappel, voici la définition de la propriété <code>float</code>, traduite d&#39;après <a href="http://www.w3.org/TR/CSS2/visuren.html#floats">w3.org <sup>EN</sup></a>&nbsp;:</p>
 
 <blockquote>
 <p>Un élément flottant est une boîte qui est déplacée vers la gauche ou vers la droite sur la ligne actuelle. [...]L&#39;élément sera décalé vers la gauche ou la droite jusqu&#39;à toucher le bord de son contenant.</p>
@@ -83,11 +93,11 @@
 
 <p>Cette technique de mise en page est fortement plébiscitée, je l&#39;utilisais d&#39;ailleurs sur la version précédente de mon blog pour afficher ma colonne de contenu principal juxtaposée à la colonne de navigation située à droite. Elle est relativement simple à mettre en place, et joue bien son rôle - ou tout du moins le rôle qu&#39;elle remplit aujourd&#39;hui et <a title="Article d'Alsacréations sur les floats" href="http://www.alsacreations.com/article/lire/972-float-le-grand-bluff.html">qui n&#39;était pas forcément le sien</a> au départ.</p>
 
-<p>Pourtant, malgré tout ses avantages, elle est connue pour créer de nombreux bugs d&#39;affichage (Guillotine bug, escaping floats bug, IE6 Peekaboo bug, double floated-margin bug et bien d&#39;autres : voici une liste exhaustive de ces <a href="http://coding.smashingmagazine.com/2007/05/01/css-float-theory-things-you-should-know/">bugs <sup>EN</sup></a>).</p>
+<p>Pourtant, malgré tout ses avantages, elle est connue pour créer de nombreux bugs d&#39;affichage (Guillotine bug, escaping floats bug, IE6 Peekaboo bug, double floated-margin bug et bien d&#39;autres&nbsp;: voici une liste exhaustive de ces <a href="http://coding.smashingmagazine.com/2007/05/01/css-float-theory-things-you-should-know/">bugs <sup>EN</sup></a>).</p>
 
-<h3>b. Inline-block</h3>
+<h3>Inline-block</h3>
 
-<p>La valeur <code>inline-block</code> de la propriété <code>display</code> peut représenter une bonne alternative à l&#39;utilisation des <code>float</code>. Elle est moins connue et utilisée que cette dernière, et pour cause : elle n&#39;est pas reconnue par Internet Explorer 7 et versions précédentes. Elle présente pourtant de clairs avantages. Toujours d&#39;après <a href="http://www.w3.org/TR/CSS2/visuren.html#propdef-display">w3.org <sup>EN</sup></a> :</p>
+<p>La valeur <code>inline-block</code> de la propriété <code>display</code> peut représenter une bonne alternative à l&#39;utilisation des <code>float</code>. Elle est moins connue et utilisée que cette dernière, et pour cause&nbsp;: elle n&#39;est pas reconnue par Internet Explorer 7 et versions précédentes. Elle présente pourtant de clairs avantages. Toujours d&#39;après <a href="http://www.w3.org/TR/CSS2/visuren.html#propdef-display">w3.org <sup>EN</sup></a>&nbsp;:</p>
 
 <blockquote>
 <p>La valeur <code>inline-block</code> permet de générer un contenant fonctionnant en ligne, mais dont le contenu sera formaté comme une boîte de type &quot;bloc&quot;.</p>
@@ -95,7 +105,7 @@
 
 <p>L&#39;intérêt de l&#39;utilisation de <code>inline-block</code> est que, contrairement aux éléments en ligne, ils permettront, comme sur un élément de type bloc, que l&#39;on puisse agir sur leur taille, marge etc.</p>
 
-<p>Par ailleurs, le problème rencontré sur IE7 et versions inférieures pourra être facilement corrigé grâce à la mise en place de commentaires conditionnels ciblant ces navigateurs et en appliquant à l&#39;élément concerné le CSS suivant :</p>
+<p>Par ailleurs, le problème rencontré sur IE7 et versions inférieures pourra être facilement corrigé grâce à la mise en place de commentaires conditionnels ciblant ces navigateurs et en appliquant à l&#39;élément concerné le CSS suivant&nbsp;:</p>
 
 <pre><code class="css">#bloc {
   zoom: 1;
@@ -105,22 +115,22 @@
 
 <p>Grâce au <code>zoom:1;</code> l&#39;élément en question se comportera comme un élément de type <code>inline-block</code>.</p>
 
-<h3>c. Les tableaux</h3>
+<h3>Les tableaux</h3>
 
-<p>A l&#39;origine, les tableaux avaient été créés pour présenter des données tabulaires. Logique, non ? Ils ont pourtant été détournés de leur premier usage afin de proposer des solutions de mise en page alors que le CSS n&#39;existait pas encore. Cette technique semble pourtant être devenue obsolète de nos jours pour des raisons à mes yeux évidentes :</p>
+<p>A l&#39;origine, les tableaux avaient été créés pour présenter des données tabulaires. Logique, non ? Ils ont pourtant été détournés de leur premier usage afin de proposer des solutions de mise en page alors que le CSS n&#39;existait pas encore. Cette technique semble pourtant être devenue obsolète de nos jours pour des raisons à mes yeux évidentes&nbsp;:</p>
 
 <ul>
-<li>Problèmes d&#39;accessibilité : la lecture d&#39;un tableau par un outil de lecture ne se fera pas de manière naturelle si il est utilisé pour une mise en page mais ligne par ligne, pouvant ainsi engendrer de nombreux soucis de compréhension.</li>
-<li>Problèmes de mise à jour : une mise en page en tableaux est particulièrement fastidieuse à changer, de par la complexité de sa construction.</li>
-<li>Problèmes de poids : les tableaux alourdiront vos pages car ils nécessitent de nombreuses balises dans leur construction.</li>
-<li>Problèmes de sémantique : à l&#39;origine, ils sont créés pour présenter des données tabulaires, en les utilisant pour la mise en page d&#39;un site ils sortent de leur rôle initial.</li>
+<li>Problèmes d&#39;accessibilité&nbsp;: la lecture d&#39;un tableau par un outil de lecture ne se fera pas de manière naturelle si il est utilisé pour une mise en page mais ligne par ligne, pouvant ainsi engendrer de nombreux soucis de compréhension.</li>
+<li>Problèmes de mise à jour&nbsp;: une mise en page en tableaux est particulièrement fastidieuse à changer, de par la complexité de sa construction.</li>
+<li>Problèmes de poids&nbsp;: les tableaux alourdiront vos pages car ils nécessitent de nombreuses balises dans leur construction.</li>
+<li>Problèmes de sémantique&nbsp;: à l&#39;origine, ils sont créés pour présenter des données tabulaires, en les utilisant pour la mise en page d&#39;un site ils sortent de leur rôle initial.</li>
 </ul>
 
 <p>Mon point de vue est qu&#39;il faut limiter dans la mesure du possible l&#39;utilisation des tableaux à leur rôle premier, à savoir la présentation de données tabulaires.</p>
 
-<h3>d. Position absolue</h3>
+<h3>Position absolue</h3>
 
-<p>La valeur <code>absolute</code> de la propriété <code>position</code> est une autre alternative pour positionner un élément. Une fois de plus, reprenons la définition donnée par <a href="http://www.w3.org/TR/CSS2/visuren.html#absolute-positioning">w3.org <sup>EN</sup></a> :</p>
+<p>La valeur <code>absolute</code> de la propriété <code>position</code> est une autre alternative pour positionner un élément. Une fois de plus, reprenons la définition donnée par <a href="http://www.w3.org/TR/CSS2/visuren.html#absolute-positioning">w3.org <sup>EN</sup></a>&nbsp;:</p>
 
 <blockquote>
 <p>Dans le modèle de la position absolue, une boîte est retirée du flux normal de la page. Son contenu ne s&#39;écoulera pas &gt; autour des autres boîtes, mais pourra les masquer ou être masqué (<code>z-index</code>).</p>
@@ -128,26 +138,26 @@
 
 <p>Un élément positionné en absolu se positionne par rapport à la page html par défaut, ou par rapport à son parent le plus proche, si celui-ci s&#39;est vu assigner une position autre que <code>static</code> (positionnement par défaut).</p>
 
-<h2>2. Position absolue : un exemple concret</h2>
+<h2>Position absolue&nbsp;: un exemple concret</h2>
 
 <p>Cette méthode de positionnement semble être peu appréciée de la plupart des intégrateurs. En effet, des outils d&#39;édition de contenu de type WYSIWYG (Dreamweaver) l&#39;utilisent un peu à tort et à travers, lui attribuant par défaut certaines valeurs qui semblent en faire un outil peu flexible. Raphaël Goetter résume assez bien la chose dans son article <a href="http://www.alsacreations.com/actu/lire/104-rendez-moi-ma-position-absolue.html/">défendant la position absolue</a>.</p>
 
-<p>Pour ma part j&#39;ai très souvent recours à cette méthode pour deux raisons principales :</p>
+<p>Pour ma part j&#39;ai très souvent recours à cette méthode pour deux raisons principales&nbsp;:</p>
 
 <ul>
 <li>Elle est simple à visualiser dans l&#39;espace (imaginons qu&#39;on cherche tout simplement à disposer divers éléments au sein d&#39;un même bloc).</li>
 <li>Elle génère à ma connaissance peu, voire pas de bugs, même sur d&#39;anciens navigateurs.</li>
 </ul>
 
-<p>Prenons un cas concret : nous souhaitons construire un bloc mettant en avant une offre promotionnelle pour la vente d&#39;un de mes splendides <a title="Visitez ! :)" href="http://www.eskiiss.fr">dessins</a> avec image, titre, court descriptif, prix et <em>call to action</em>. Le résultat souhaité est visible ci-dessous.</p>
+<p>Prenons un cas concret&nbsp;: nous souhaitons construire un bloc mettant en avant une offre promotionnelle pour la vente d&#39;un de mes splendides <a title="Visitez !&nbsp;:)" href="http://www.eskiiss.fr">dessins</a> avec image, titre, court descriptif, prix et <em>call to action</em>. Le résultat souhaité est visible ci-dessous.</p>
 
-<p><img src="/img/wire-1.jpg" alt="wire 1" /></p>
+<p><img src="/assets/img/wire-1.jpg" alt="wire 1" style="border: 1px solid #ddd; "/></p>
 
-<p>Nous avons donc 6 éléments : le bloc &quot;conteneur&quot; et les 5 éléments que nous souhaitons faire apparaître dedans :</p>
+<p>Nous avons donc 6 éléments&nbsp;: le bloc &quot;conteneur&quot; et les 5 éléments que nous souhaitons faire apparaître dedans&nbsp;:</p>
 
-<p><img src="/img/wire-2.jpg" alt="wire 2" /></p>
+<p><img src="/assets/img/wire-2.jpg" alt="wire 2" style="border: 1px solid #ddd;"" /></p>
 
-<p>Pour arriver à ce résultat, on utilisera le code suivant :</p>
+<p>Pour arriver à ce résultat, on utilisera le code suivant&nbsp;:</p>
 
 <pre><code class="css">#conteneur {
   width: 500px;
@@ -196,7 +206,7 @@
 
 <pre><code class="html">&lt;div id="conteneur"&gt;
     &lt;img src="image.jpg" id="image" alt="image" /&gt;
-    &lt;h2&gt;Fan Art : the Wire&lt;/h2&gt;
+    &lt;h2&gt;Fan Art&nbsp;: the Wire&lt;/h2&gt;
     &lt;p&gt;Découvrez à un tarif défiant toute concurrence etc.&lt;/p&gt;
     &lt;span id="prix"&gt;2500 €&lt;/span&gt;
     &lt;div id="commander"&gt;JE COMMANDE &gt;&lt;/div&gt;
@@ -207,36 +217,22 @@
 
 <p>A mes yeux l&#39;utilisation de <code>position:absolute;</code> est la solution idéale dans ce cas précis, où le but est de disposer plusieurs éléments au sein d&#39;un contenu principal dont on connait les dimensions. Par ailleurs, j&#39;ai utilisé dans mon exemple des valeurs absolues pour dimensionner les éléments mais rien n&#39;empêche d&#39;utiliser des <code>em</code> ou même des pourcentages, permettant ainsi d&#39;adapter notre design en fonction des résolutions d&#39;écran.</p>
 
-<h2>3. TL;DR : en conclusion...</h2>
+<h2>TL;DR&nbsp;: en conclusion...</h2>
 
 <p>Pour clore le sujet, il faut donc retenir qu&#39;il existe plusieurs moyens de positionner nos éléments au sein d&#39;une page, certains étant pour moi plus pertinents que d&#39;autres. La mise en page sous forme de tableaux parait aujourd&#39;hui plutôt obsolète, même si elle peut s&#39;avérer une solution viable dans certains cas précis. <code>Float</code> est une solution populaire, quoique victime de nombreux bugs. La propriété <code>display:inline-block</code> reste trop peu utilisée, malgré d&#39;évidents avantages en terme d&#39;utilisation. Enfin, la <code>position:absolute</code>, souvent décriée, reste un outil extrêmement intéressant qu&#39;il ne faudrait surtout pas enterrer trop vite.</p>
 
+        </div>
       </article>
-    </main>
-    <footer class="main-footer" role="contentinfo">
-      <div class="main-footer__inner">
-        <a href="#top" data-scroll data-options='{"updateURL": false}' class="main-footer__logo flip-container">
-          <div class="flip">
-            <svg class="front" xmlns="http://www.w3.org/2000/svg" width="200.003" height="200.003" viewBox="0 0 200.003 200.003"><path fill="#fff" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#222" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-            <svg class="back" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h200v200H0V0z" fill="#FFF"/><path d="M158.308 118.845l-20.244 20.34L100 101.304l-38.064 37.883-20.244-20.34L100 60.813l58.308 58.03z" fill="#222"/></g></svg>
-          </div>
-        </a>
-      </div>
-    </footer>
-  </div>
-  <!--[if IE 9]> <script src="/ie/matchMedia.js"></script> <![endif]-->
-  <script src="/assets/js/main-824ea786537e82c54e68ae1e0a2351ad.js"></script>
-  <script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-29762874-1']);
-    _gaq.push(['_trackPageview']);
+        
+  <footer class="mainFooter">
+  
+    <svg class="logo -footer" xmlns="http://www.w3.org/2000/svg" width="200.003" height="200.003" viewBox="0 0 200.003 200.003"><path fill="#74b3d9" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#74b3d9" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+  </footer>
 
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-</body>
+    </div>
+  </div>
+
+  <script src="/assets/js/bundle-d72442e222b32cad6f20f033e6632a16.js"></script>
+  </body>
 </html>
 

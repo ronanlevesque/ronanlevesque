@@ -77,10 +77,6 @@
     <lastmod>2013-08-29T00:00:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://ronanlevesque.fr/articles/friday-links-5</loc>
-    <lastmod>2013-08-23T00:00:00+02:00</lastmod>
-  </url>
-  <url>
     <loc>http://ronanlevesque.fr/articles/android-ergonomie</loc>
     <lastmod>2013-08-13T00:00:00+02:00</lastmod>
   </url>
@@ -97,10 +93,6 @@
     <lastmod>2013-06-20T00:00:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://ronanlevesque.fr/articles/friday-links-4</loc>
-    <lastmod>2013-06-14T00:00:00+02:00</lastmod>
-  </url>
-  <url>
     <loc>http://ronanlevesque.fr/articles/fox-css-est-passe-sous-sass</loc>
     <lastmod>2013-06-12T00:00:00+02:00</lastmod>
   </url>
@@ -113,27 +105,15 @@
     <lastmod>2013-05-27T00:00:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://ronanlevesque.fr/articles/friday-links-3</loc>
-    <lastmod>2013-05-17T00:00:00+02:00</lastmod>
-  </url>
-  <url>
     <loc>http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault</loc>
     <lastmod>2013-05-13T00:00:00+02:00</lastmod>
-  </url>
-  <url>
-    <loc>http://ronanlevesque.fr/articles/friday-links-2</loc>
-    <lastmod>2013-05-10T00:00:00+02:00</lastmod>
   </url>
   <url>
     <loc>http://ronanlevesque.fr/articles/les-animations-en-css-un-cas-pratique</loc>
     <lastmod>2013-05-07T00:00:00+02:00</lastmod>
   </url>
   <url>
-    <loc>http://ronanlevesque.fr/articles/friday-links-1</loc>
-    <lastmod>2013-05-03T00:00:00+02:00</lastmod>
-  </url>
-  <url>
-    <loc>http://ronanlevesque.fr/articles/refonte-graphique-du-site-et-friday-links</loc>
+    <loc>http://ronanlevesque.fr/articles/refonte-graphique-du-site</loc>
     <lastmod>2013-04-29T00:00:00+02:00</lastmod>
   </url>
   <url>
@@ -194,19 +174,10 @@
     <loc>http://ronanlevesque.fr/articles/</loc>
   </url>
   <url>
-    <loc>http://ronanlevesque.fr/projets/</loc>
-  </url>
-  <url>
     <loc>http://ronanlevesque.fr/</loc>
   </url>
   <url>
-    <loc>http://ronanlevesque.fr/articles/page2/</loc>
-  </url>
-  <url>
-    <loc>http://ronanlevesque.fr/articles/page3/</loc>
-  </url>
-  <url>
-    <loc>http://ronanlevesque.fr/articles/page4/</loc>
+    <loc>http://ronanlevesque.fr/projets/</loc>
   </url>
   <url>
     <loc>http://ronanlevesque.fr/demos/animations-css3.html</loc>

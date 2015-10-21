@@ -3,9 +3,7 @@ Disallow: /old
 
 User-agent: Googlebot
 Disallow: /*.php$
-Disallow: /*.js$
 Disallow: /*.inc$
-Disallow: /*.css$
 Disallow: /*.gz$
 Disallow: /*.swf$
 Disallow: /*.wmv$

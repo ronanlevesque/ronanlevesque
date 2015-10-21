@@ -125,6 +125,11 @@ Redirect 301 /android-ergonomie/ /articles/android-ergonomie/
 Redirect 301 /friday-links-5/ /articles/friday-links-5/
 Redirect 301 /css-notation-bem/ /articles/css-notation-bem/
 Redirect 301 /automatiser-workflow-grunt/ /articles/automatiser-workflow-grunt/
+Redirect 301 /articles/friday-links-1/ /articles/
+Redirect 301 /articles/friday-links-2/ /articles/
+Redirect 301 /articles/friday-links-3/ /articles/
+Redirect 301 /articles/friday-links-4/ /articles/
+Redirect 301 /articles/friday-links-5/ /articles/
 
 # 404
 
