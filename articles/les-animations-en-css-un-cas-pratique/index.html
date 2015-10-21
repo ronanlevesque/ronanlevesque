@@ -96,7 +96,7 @@
 <li>En utilisant <code>position:absolute</code> et <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code>.</li>
 </ol>
 
-<p>Il semblerait que la première solution soit celle à privilégier pour des <a href="http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/">soucis de performance <sup>EN</sup></a>. Le hic, c&#39;est que <code>translate()</code> ne bouge l&#39;élément que par rapport à sa position originale. Ça me posait un souci car dans ce cas, impossible d&#39;avoir un contrôle précis de la position de l&#39;élément par rapport à la fenêtre du navigateur. J&#39;ai donc eu recours à la deuxième solution, en utilisant le <code>@keyframes</code> suivant&nbsp;:</p>
+<p>Il semblerait que la première solution soit celle à privilégier pour des <a href="http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/">soucis de performance&nbsp;<sup>EN</sup></a>. Le hic, c&#39;est que <code>translate()</code> ne bouge l&#39;élément que par rapport à sa position originale. Ça me posait un souci car dans ce cas, impossible d&#39;avoir un contrôle précis de la position de l&#39;élément par rapport à la fenêtre du navigateur. J&#39;ai donc eu recours à la deuxième solution, en utilisant le <code>@keyframes</code> suivant&nbsp;:</p>
 
 <pre><code class="css">@keyframes nuage1 {
   from {left: -200px;}
