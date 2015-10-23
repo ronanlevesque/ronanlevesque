@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.5.3">Jekyll</generator>
 <link href="http://ronanlevesque.fr/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://ronanlevesque.fr/" rel="alternate" type="text/html" />
-<updated>2015-10-22T14:33:49+02:00</updated>
+<updated>2015-10-23T19:41:20+02:00</updated>
 <id>http://ronanlevesque.fr/</id>
 <title>Ronan Levesque - Frontend &amp; Webdesign</title>
 <subtitle>Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...</subtitle>
@@ -621,7 +621,7 @@ smiley.click(function() {
 
 &lt;p&gt;Le détail de mon code est disponible ci-dessous, mais gardez en tête que ça n&amp;#39;est qu&amp;#39;une démo et que je n&amp;#39;ai pas vraiment cherché à l&amp;#39;optimiser. J&amp;#39;imagine qu&amp;#39;il sera plus facile à lire ainsi.&lt;/p&gt;
 
-&lt;script src=&quot;/demos/snapsvg.min.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;script src=&quot;/demos/snapsvg.min.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p class=&quot;demo&quot;&gt;&lt;a href=&quot;http://codepen.io/eskiiss/full/gxqsr&quot;&gt;Voir la démo&lt;/a&gt;&lt;/p&gt;
 </content>
