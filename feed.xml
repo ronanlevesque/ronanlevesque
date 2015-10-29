@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.5.3">Jekyll</generator>
 <link href="http://ronanlevesque.fr/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://ronanlevesque.fr/" rel="alternate" type="text/html" />
-<updated>2015-10-28T10:03:58+01:00</updated>
+<updated>2015-10-29T10:34:55+01:00</updated>
 <id>http://ronanlevesque.fr/</id>
 <title>Ronan Levesque - Frontend &amp; Webdesign</title>
 <subtitle>Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...</subtitle>
@@ -914,7 +914,7 @@ gulp.task(&#39;default&#39;, [&#39;connect&#39;, &#39;watch&#39;]);&lt;/code&gt;
 
 &lt;hr&gt;
 
-&lt;p class=&quot;info&quot;&gt;Tel quel, cet exemple ne fonctionne pas sous IE9, qui ne reconnaît pas &lt;code&gt;window.matchMedia&lt;/code&gt;, ni sous IE8 qui en plus de cela ne reconnaît pas &lt;code&gt;addEventListener&lt;/code&gt;. Pour le premier cas, on utilisera un simple &lt;a href=&quot;https://github.com/paulirish/matchMedia.js/&quot;&gt;polyfill&lt;/a&gt;, et pour le deuxième on remplacera la méthode standard par &lt;code&gt;attachEvent&lt;/code&gt;.&lt;/p&gt;
+&lt;p class=&quot;info&quot;&gt;Mise à jour (29/10/2015) : le support de flexbox ayant beaucoup &lt;a href=&quot;http://caniuse.com/#search=flexbox&quot;&gt;évolué&lt;/a&gt;, plus besoin de recourir à du JS pour ça.&lt;/p&gt;
 </content>
 <category term="javascript" />
 <category term="tutoriels" />
