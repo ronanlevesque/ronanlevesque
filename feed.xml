@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.5.3">Jekyll</generator>
 <link href="http://ronanlevesque.fr/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://ronanlevesque.fr/" rel="alternate" type="text/html" />
-<updated>2015-12-04T11:54:13+01:00</updated>
+<updated>2015-12-06T10:19:16+01:00</updated>
 <id>http://ronanlevesque.fr/</id>
 <title>Ronan Levesque - Frontend &amp; Webdesign</title>
 <subtitle>Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...</subtitle>
@@ -14,6 +14,8 @@
 <updated>2015-08-19T00:00:00+02:00</updated>
 <id>http://ronanlevesque.fr/articles/nommage-et-architecture-css</id>
 <content type="html" xml:base="http://ronanlevesque.fr/articles/nommage-et-architecture-css">&lt;p&gt;A ma connaissance, il n&amp;#39;y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j&amp;#39;ai adapté ces techniques à mon workflow.&lt;/p&gt;
+
+&lt;hr&gt;
 
 &lt;h2&gt;Les bases&amp;nbsp;: &lt;abbr title=&quot;Block, Element, Modifier&quot;&gt;BEM&lt;/abbr&gt; et &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt;&lt;/h2&gt;
 
@@ -100,6 +102,8 @@
 <id>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts</id>
 <content type="html" xml:base="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts">&lt;p&gt;Jusqu&amp;#39;à très récemment, j&amp;#39;avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l&amp;#39;apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j&amp;#39;ai mise en place dernièrement, et dont je suis pleinement satisfait.&lt;/p&gt;
 
+&lt;hr&gt;
+
 &lt;h2&gt;Quelques précisions&lt;/h2&gt;
 
 &lt;p&gt;La notion de &lt;em&gt;FOIT&lt;/em&gt; ne parlant pas à tout le monde, commençons par une petite explication&amp;nbsp;: tant que votre navigateur n&amp;#39;a pas téléchargé les &lt;em&gt;webfonts&lt;/em&gt; de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d&amp;#39;afficher les polices que vous avez définies par défaut. C&amp;#39;est ce qu&amp;#39;on appelle le &lt;em&gt;FOIT&lt;/em&gt;, pour &lt;em&gt;Flash Of Invisible Text&lt;/em&gt;.&lt;/p&gt;
@@ -174,6 +178,8 @@
 <updated>2015-04-27T00:00:00+02:00</updated>
 <id>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6</id>
 <content type="html" xml:base="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6">&lt;p&gt;JavaScript s&amp;#39;apprête à vivre une petite révolution avec l&amp;#39;arrivée d&amp;#39;ES6, la prochaine version du standard ECMAScript. Et pour cause&amp;nbsp;: c&amp;#39;est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en &lt;a href=&quot;http://kangax.github.io/compat-table/es6/&quot;&gt;cours d&amp;#39;implémentation&lt;/a&gt; dans les différents moteurs JS.&lt;/p&gt;
+
+&lt;hr&gt;
 
 &lt;p&gt;Si vous êtes comme moi du genre impatient, il existe de nombreux &lt;em&gt;transpilers&lt;/em&gt; qui permettent à l&amp;#39;heure actuelle d&amp;#39;écrire de l&amp;#39;ES6 qui sera compilé en ES5... Une très bonne raison, à mes yeux, de tester cette nouvelle syntaxe dès aujourd&amp;#39;hui. Voici ci-dessous quelques-unes de ses principales nouveautés.&lt;/p&gt;
 
@@ -366,6 +372,8 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 <updated>2015-04-02T00:00:00+02:00</updated>
 <id>http://ronanlevesque.fr/articles/dropdox-et-node-modules</id>
 <content type="html" xml:base="http://ronanlevesque.fr/articles/dropdox-et-node-modules">&lt;p&gt;J&amp;#39;utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j&amp;#39;utilise. J&amp;#39;ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux &lt;code&gt;node_modules&lt;/code&gt;&amp;nbsp;: ce dernier a tendance à se compter en milliers de fichiers, ce qui n&amp;#39;est pas idéal pour la synchronisation de Dropbox.&lt;/p&gt;
+
+&lt;hr&gt;
 
 &lt;p&gt;Heureusement il est possible d&amp;#39;ignorer ces fichiers; je vais vous montrer dans cet article comment faire.&lt;/p&gt;
 
@@ -621,7 +629,7 @@ smiley.click(function() {
 
 &lt;p&gt;Le détail de mon code est disponible ci-dessous, mais gardez en tête que ça n&amp;#39;est qu&amp;#39;une démo et que je n&amp;#39;ai pas vraiment cherché à l&amp;#39;optimiser. J&amp;#39;imagine qu&amp;#39;il sera plus facile à lire ainsi.&lt;/p&gt;
 
-&lt;script src=&quot;/demos/snapsvg.min.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;script src=&quot;/demos/snapsvg.min.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p class=&quot;demo&quot;&gt;&lt;a href=&quot;http://codepen.io/eskiiss/full/gxqsr&quot;&gt;Voir la démo&lt;/a&gt;&lt;/p&gt;
 </content>
@@ -636,6 +644,8 @@ smiley.click(function() {
 <updated>2014-06-20T00:00:00+02:00</updated>
 <id>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8</id>
 <content type="html" xml:base="http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8">&lt;p&gt;La décision de Microsoft &lt;a href=&quot;http://windows.microsoft.com/fr-fr/windows/end-support-help&quot;&gt;de ne plus assurer le support d&amp;#39;XP&lt;/a&gt; a eu pour conséquence de sonner le glas définitif d&amp;#39;Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d&amp;#39;éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d&amp;#39;autres navigateurs. Pour nous, webdesigners et développeurs, c&amp;#39;est un vrai soulagement et surtout un gros pas en avant...&lt;/p&gt;
+
+&lt;hr&gt;
 
 &lt;h2&gt;En intro&amp;nbsp;: quelques statistiques&lt;/h2&gt;
 
@@ -848,6 +858,8 @@ gulp.task(&#39;default&#39;, [&#39;connect&#39;, &#39;watch&#39;]);&lt;/code&gt;
 <updated>2014-02-04T00:00:00+01:00</updated>
 <id>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js</id>
 <content type="html" xml:base="http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js">&lt;p&gt;CSS3 a apporté son lot de nouveautés, parmi lesquelles &lt;code&gt;flexbox&lt;/code&gt;, un modèle qui propose de &lt;a href=&quot;http://philipwalton.github.io/solved-by-flexbox/&quot;&gt;nombreuses solutions&lt;/a&gt; de mise en page dont celle qui nous intéresse aujourd&amp;#39;hui&amp;nbsp;: la création de colonnes de hauteur égale. Malheureusement l&amp;#39;utilisation de &lt;code&gt;flexbox&lt;/code&gt; en production est encore &lt;a href=&quot;http://caniuse.com/flexbox&quot;&gt;mitigée&lt;/a&gt;. Du coup, la meilleure alternative reste pour l&amp;#39;instant le recours au JavaScript.&lt;/p&gt;
+
+&lt;hr&gt;
 
 &lt;p&gt;Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la même hauteur. L&amp;#39;idée que j&amp;#39;avais en tête était de basculer cette façon de faire en Vanilla JS et pousser le concept un peu plus loin en mixant ma mise en page à du responsive design. Pour résumer le principe&amp;nbsp;: En dessous d&amp;#39;une certaine résolution, les blocs sont positionnés les uns en dessous des autres. Au-dessus, ils sont alignés côte-à-côte et prennent la même hauteur. Je vais disséquer ici le code créé pour l&amp;#39;occasion.&lt;/p&gt;
 

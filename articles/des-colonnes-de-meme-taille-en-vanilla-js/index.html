@@ -14,7 +14,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-1de95721354df29a3a1f0a4e5291a2ca.css" rel="stylesheet">
+  <link href="/assets/css/styles-d320e8bb9a80f1c14255cd7da274b9f6.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=PT+Mono%7CPT+Sans:700%7CPT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
@@ -80,6 +80,8 @@
         <div class="article-content">
         
           <p>CSS3 a apporté son lot de nouveautés, parmi lesquelles <code>flexbox</code>, un modèle qui propose de <a href="http://philipwalton.github.io/solved-by-flexbox/">nombreuses solutions</a> de mise en page dont celle qui nous intéresse aujourd&#39;hui&nbsp;: la création de colonnes de hauteur égale. Malheureusement l&#39;utilisation de <code>flexbox</code> en production est encore <a href="http://caniuse.com/flexbox">mitigée</a>. Du coup, la meilleure alternative reste pour l&#39;instant le recours au JavaScript.</p>
+
+<hr>
 
 <p>Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la même hauteur. L&#39;idée que j&#39;avais en tête était de basculer cette façon de faire en Vanilla JS et pousser le concept un peu plus loin en mixant ma mise en page à du responsive design. Pour résumer le principe&nbsp;: En dessous d&#39;une certaine résolution, les blocs sont positionnés les uns en dessous des autres. Au-dessus, ils sont alignés côte-à-côte et prennent la même hauteur. Je vais disséquer ici le code créé pour l&#39;occasion.</p>
 
