@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Ronan Levesque &ndash; Font-size&nbsp;: quelles solutions ?</title>
+  <title>Ronan Levesque &ndash; Font-size&nbsp;: quelles solutions&nbsp;?</title>
   <meta name="description" content="Comment gérer les tailles de police de votre site au mieux">
   <meta name="author" content="Ronan Levesque">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
-  <meta property="og:title" content="Font-size&nbsp;: quelles solutions ?" />
+  <meta property="og:title" content="Font-size&nbsp;: quelles solutions&nbsp;?" />
   <meta property="og:description" content="Comment gérer les tailles de police de votre site au mieux">
   <meta property="og:url" content="http://ronanlevesque.fr/articles/font-size-quelles-solutions" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-d320e8bb9a80f1c14255cd7da274b9f6.css" rel="stylesheet">
+  <link href="/assets/css/styles-c9b9292c5f4b01ec7344179837c5a8a8.css" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=PT+Mono%7CPT+Sans:700%7CPT+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
@@ -74,7 +74,7 @@
       
         <header class="article-header">
           <p class="article-date">20 juin 2013</p>
-          <h1 class="article-title">Font-size&nbsp;: quelles solutions ?</h1>
+          <h1 class="article-title">Font-size&nbsp;: quelles solutions&nbsp;?</h1>
         </header>
         
         <div class="article-content">
@@ -93,13 +93,13 @@
 
 <p>De mon point de vue, il est préférable d&#39;utiliser des <code>em</code> afin de permettre que le texte soit redimensionnable afin de mieux s&#39;adapter aux différentes résolutions (pour info les navigateurs modernes redimensionnent automatiquement les dimensions en <code>px</code>).</p>
 
-<h2>62.5%&nbsp;: le nombre magique ?</h2>
+<h2>62.5%&nbsp;: le nombre magique&nbsp;?</h2>
 
 <p>Afin de simplifier les calculs de taille de police en utilisant les <code>em</code>, une solution souvent utilisée est de définir le code suivant&nbsp;:</p>
 
 <pre><code class="css">body {font-size: 62.5%}</code></pre>
 
-<p>Sachant que la taille de police par défaut des navigateurs modernes est (<a href="http://isitrwd.com/rfs/">presque ?</a>) tout le temps <code>16px</code> pour <code>1em</code>, la conversion est donc beaucoup plus simple suite à ce calcul et donnera le résultat suivant&nbsp;:</p>
+<p>Sachant que la taille de police par défaut des navigateurs modernes est (<a href="http://isitrwd.com/rfs/">presque&nbsp;?</a>) tout le temps <code>16px</code> pour <code>1em</code>, la conversion est donc beaucoup plus simple suite à ce calcul et donnera le résultat suivant&nbsp;:</p>
 
 <pre><code class="nohighlight">10 px = 1 em</code></pre>
 
@@ -125,7 +125,7 @@
 
 <p>Il suffit ainsi d&#39;écrire <code>@include fs(16)</code> pour que nos <code>rem</code> soient convertis en l&#39;équivalent de <code>16px</code>, avec le fallback en <code>px</code> pour les vieux navigateurs.</p>
 
-<h2>Et le responsive design ?</h2>
+<h2>Et le responsive design&nbsp;?</h2>
 
 <p>L&#39;avantage du responsive design, c&#39;est que si l&#39;on utilise <code>em</code> ou <code>rem</code> pour nos tailles de police, un changement de taille du <code>body</code> grâce aux <code>@media queries</code> permet d&#39;impacter l&#39;ensemble de nos éléments.</p>
 

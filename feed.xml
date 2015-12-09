@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="2.5.3">Jekyll</generator>
 <link href="http://ronanlevesque.fr/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://ronanlevesque.fr/" rel="alternate" type="text/html" />
-<updated>2015-12-06T10:19:16+01:00</updated>
+<updated>2015-12-09T17:12:53+01:00</updated>
 <id>http://ronanlevesque.fr/</id>
 <title>Ronan Levesque - Frontend &amp; Webdesign</title>
 <subtitle>Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...</subtitle>
@@ -41,7 +41,7 @@
 
 &lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;button class=&quot;button -small -green -caps&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;C&amp;#39;est quand même plus agréable à lire, non ?&lt;/p&gt;
+&lt;p&gt;C&amp;#39;est quand même plus agréable à lire, non&amp;nbsp;?&lt;/p&gt;
 
 &lt;p&gt;Et si vous utilisez Sass, le mettre en place et en assurer la maintenabilité devient un jeu d&amp;#39;enfant.&lt;/p&gt;
 
@@ -83,7 +83,7 @@
 
 &lt;p&gt;Pour tous les sélecteurs que je vais cibler en JS, j&amp;#39;ajoute une classe (ou une id) préfixée par &lt;code&gt;js-&lt;/code&gt;. Cette classe ne doit jamais apparaître dans mes CSS afin de maintenir une séparation claire des rôles.&lt;/p&gt;
 
-&lt;h2&gt;What&amp;#39;s next ?&lt;/h2&gt;
+&lt;h2&gt;What&amp;#39;s next&amp;nbsp;?&lt;/h2&gt;
 
 &lt;p&gt;Même si la mise en place de cette méthodologie m&amp;#39;a procuré un gain énorme en termes de maintenabilité et de lisibilité sur des grosses bases de code CSS, elle n&amp;#39;est pas infaillible, et les risques de non-isolation et de spécificité du code existent toujours.&lt;/p&gt;
 
@@ -629,7 +629,7 @@ smiley.click(function() {
 
 &lt;p&gt;Le détail de mon code est disponible ci-dessous, mais gardez en tête que ça n&amp;#39;est qu&amp;#39;une démo et que je n&amp;#39;ai pas vraiment cherché à l&amp;#39;optimiser. J&amp;#39;imagine qu&amp;#39;il sera plus facile à lire ainsi.&lt;/p&gt;
 
-&lt;p&gt;&lt;script src=&quot;/demos/snapsvg.min.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;script src=&quot;/demos/snapsvg.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;p class=&quot;demo&quot;&gt;&lt;a href=&quot;http://codepen.io/eskiiss/full/gxqsr&quot;&gt;Voir la démo&lt;/a&gt;&lt;/p&gt;
 </content>
@@ -663,7 +663,7 @@ smiley.click(function() {
 &lt;li&gt;&lt;strong&gt;SVG&amp;nbsp;:&lt;/strong&gt; le format vectoriel du SVG en fait un format parfait pour les écrans HD et Retina. Plus besoin de prévoir des fallbacks en PNG !&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;Comment gérer nos visiteurs sur IE8 ?&lt;/h2&gt;
+&lt;h2&gt;Comment gérer nos visiteurs sur IE8&amp;nbsp;?&lt;/h2&gt;
 
 &lt;p&gt;Faire le choix d&amp;#39;utiliser les features citées ci-dessus, c&amp;#39;est décider d&amp;#39;abandonner tout support d&amp;#39;IE8 par opposé à une simple dégradation de l&amp;#39;expérience. Les avocats de l&amp;#39;accessibilité pourraient sans doute y trouver à redire, mais je pars du principe qu&amp;#39;il faut parfois forcer la main des utilisateurs pour assurer leur sécurité.&lt;/p&gt;
 
@@ -707,7 +707,7 @@ smiley.click(function() {
 &lt;li&gt;Les problèmes commencent.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;Qu&amp;#39;est ce qui cloche avec cette façon de faire ?&lt;/strong&gt; Le problème saute d&amp;#39;emblée aux yeux, l&amp;#39;équipe technique est intégrée en fin de boucle. Pour comprendre pourquoi cela est un gros souci, il est nécessaire de bien saisir la nuance entre responsive design et adaptive design. Rien de mieux qu&amp;#39;un schéma pour ça&amp;nbsp;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Qu&amp;#39;est ce qui cloche avec cette façon de faire&amp;nbsp;?&lt;/strong&gt; Le problème saute d&amp;#39;emblée aux yeux, l&amp;#39;équipe technique est intégrée en fin de boucle. Pour comprendre pourquoi cela est un gros souci, il est nécessaire de bien saisir la nuance entre responsive design et adaptive design. Rien de mieux qu&amp;#39;un schéma pour ça&amp;nbsp;:&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img src=&quot;/assets/img/responsive-iceberg.jpg&quot; alt=&quot;Responsive Iceberg&quot;&gt;
