@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Ronan Levesque &ndash; A propos du responsive design</title>
-  <meta name="description" content="Article explicatif sur les grands principes et l'intérêt du responsive design">
+  <title>Ronan Levesque &ndash; Dropbox et node_modules</title>
+  <meta name="description" content="Un article sur les problèmes de synchronisation que j'ai pu rencontrer par le passé en utilisant Gulp et ses node_module sur Dropbox">
   <meta name="author" content="Ronan Levesque">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
-  <meta property="og:title" content="A propos du responsive design" />
-  <meta property="og:description" content="Article explicatif sur les grands principes et l'intérêt du responsive design">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/a-propos-du-responsive-design" />
+  <meta property="og:title" content="Dropbox et node_modules" />
+  <meta property="og:description" content="Un article sur les problèmes de synchronisation que j'ai pu rencontrer par le passé en utilisant Gulp et ses node_module sur Dropbox">
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/dropdox-et-node-modules" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-1482a07540bb3bda875ae6058e1dde88.css" rel="stylesheet">
@@ -73,53 +73,29 @@
       <article class="article">
       
         <header class="article-header">
-          <p class="article-date">20 juillet 2012</p>
-          <h1 class="article-title">A propos du responsive design</h1>
+          <p class="article-date">02 avril 2015</p>
+          <h1 class="article-title">Dropbox et node_modules</h1>
         </header>
         
         <div class="article-content">
         
-          <p>Ce site a été construit sur le principe du responsive design. Cela signifie en fait qu&#39;il est construit de manière à s&#39;adapter automatiquement à la résolution des différents écrans. A partir du moment où vous êtes équipés d&#39;un navigateur moderne (c&#39;est à dire à peu près tous les navigateurs à part Internet Explorer 8 et versions inférieures), il s&#39;ajustera de lui-même à votre écran.</p>
+          <p>J&#39;utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j&#39;utilise. J&#39;ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux <code>node_modules</code>&nbsp;: ce dernier a tendance à se compter en milliers de fichiers, ce qui n&#39;est pas idéal pour la synchronisation de Dropbox.</p>
 
 <hr>
 
-<p>Pour tester cela il vous suffit simplement de redimensionner la fenêtre de votre navigateur pour voir si les éléments se repositionnent automatiquement d&#39;eux-même afin de respecter la largeur de la fenêtre.</p>
+<p>Heureusement il est possible d&#39;ignorer ces fichiers; je vais vous montrer dans cet article comment faire.</p>
 
-<p>Si vous surfez sur ce site via une tablette tactile ou la plupart des smartphones actuels (à quelques exceptions près), le rendu sera différent et les éléments de la page réajustés afin de pouvoir en faciliter la lecture et la navigation. Cela permet également de pouvoir naviguer sans avoir à systématiquement zoomer/dézoomer (comme c&#39;est souvent le cas avec le surf sur iPhone...)</p>
+<p>Mettons que ayez un projet Gulp avec son <code>package.json</code>. Une simple commande <code>npm install</code> permettra d&#39;installer tous les modules contenus dans <code>package.json</code>. Mais avant cela, rendez-vous dans le dossier du projet, là où se situe le fichier en question, et créez-y un dossier <code>node_modules</code> vide.</p>
 
-<h2>Une technique d'avenir</h2>
+<p>Ensuite, dans les préférences de Dropdox, direction <code>Compte &gt; Synchronisation sélective</code> et décochez le dossier <code>node_modules</code>&nbsp;:</p>
 
-<p>Le responsive design utilise le principe des <a href="http://www.alsacreations.com/article/lire/930-css3-media-queries.html">media queries</a> institué par <a href="http://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade">CSS3</a> afin de pouvoir ajuster automatiquement l&#39;apparence du site en fonction de la résolution de votre navigateur.</p>
+<p><img src="/assets/img/screen-dropbox-1.png" alt="Préférences Dropbox" style="border: none;"></p>
 
-<p>Je suis un fervent défenseur de cette technique; en effet elle permet, en collaboration avec le design dit &quot;liquide&quot;, de s&#39;affranchir de la vision traditionnelle de sites Internet rigides et basés sur des designs calculés en pixels plutôt qu&#39;en pourcentages. Le nombre de navigateurs supportant cette technique est de plus très large&nbsp;:</p>
+<p>Celui-ci va être supprimé du dossier dans lequel il se trouvait. Il ne vous reste plus qu&#39;à lancer votre <code>npm install</code>; lorsque ceci est fait, le dossier node_modules apparaîtra comme ignoré par Dropbox&nbsp;:</p>
 
-<ul>
-<li>Mozilla Firefox&nbsp;: 3.5+</li>
-<li>Internet Explorer&nbsp;: 9+</li>
-<li>Google Chrome&nbsp;: 5+</li>
-<li>Opera&nbsp;: 10.5+, Opera Mobile&nbsp;: 10+, Opera Mini&nbsp;: 5+</li>
-<li>Apple Safari&nbsp;: 4+ et iOS (mobile) 3.2+</li>
-<li>Android&nbsp;: 2.1+</li>
-<li>Webkit en général</li>
-</ul>
+<p><img src="/assets/img/screen-node-modules.png" alt="Dossier node_modules" style="border: none;"></p>
 
-<p>(source <a href="http://www.alsacreations.com/article/lire/930-css3-media-queries.html">Alsacréations</a>)</p>
-
-<p>Le surf &quot;nomade&quot; tend à se développer de plus en plus, il y a donc un enjeu clé pour les développeurs de sites Internet&nbsp;: réussir à s&#39;adapter à cette évolution des appareils, qu&#39;ils soient portables, mobiles, tablettes ou autres. L&#39;utilisation du responsive design et des media queries me parait être la réponse parfaite à cette problématique.</p>
-
-<h2>Quelques exemples</h2>
-
-<p>Le site e-commerce de <a href="http://www.sony.com/index.php">Sony</a> est un bel exemple de site appliquant ces techniques. En voici d&#39;autres pêle-mêle&nbsp;:</p>
-
-<ul>
-<li><a href="http://convergese.com/">Convergese</a></li>
-<li><a href="http://www.vivelohoy.com/">Vivelohoy</a></li>
-<li><a href="http://brickartist.com/">Brickartist</a></li>
-<li><a href="http://www.unitedpixelworkers.com/">United Pixelworkers</a></li>
-<li><a href="http://johnmartz.com/">John Martz</a></li>
-</ul>
-
-<p>(via <a href="https://twitter.com/RWD">@RWD</a> - D&#39;autres exemples sont disponibles sur <a href="http://webdesignerwall.com/trends/inspiration-fluid-responsive-design">webdesignerwall.com</a>)</p>
+<p>La démarche peut sembler un brin fastidieuse, mais c&#39;est à ma connaissance la seule solution pour éviter d&#39;avoir à synchroniser à chaque fois vos <code>node_modules</code>.</p>
 
         </div>
       </article>
