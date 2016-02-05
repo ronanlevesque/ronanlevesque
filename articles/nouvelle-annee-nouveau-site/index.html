@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Nouvelle année, nouveau site" />
   <meta property="og:description" content="Nouvelle refonte pour mon site, avec un regard en arrière sur les différentes formes qu'il a pu prendre par le passé.">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/nouvelle-annee-nouveau-site" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/nouvelle-annee-nouveau-site/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,60 +79,60 @@
         
         <div class="article-content">
         
-          <p>2014 est un bon prétexte pour mettre en place une énième refonte de mon site. Cette fois-ci, le but était de tester l&#39;intégration de polices enfin lissées sous Chrome ainsi que le passage au Vanilla JS. Je vais aussi profiter de l&#39;occasion pour revenir sur les différents designs que le site a connu (avec plus ou moins de réussite je dois dire&nbsp;:))</p>
+          <p>2014 est un bon prétexte pour mettre en place une énième refonte de mon site. Cette fois-ci, le but était de tester l’intégration de polices enfin lissées sous Chrome ainsi que le passage au Vanilla JS. Je vais aussi profiter de l’occasion pour revenir sur les différents designs que le site a connu (avec plus ou moins de réussite je dois dire :))</p>
 
-<hr>
+<hr />
 
-<h2>L&#39;aspect technique</h2>
+<h2 id="laspect-technique">L’aspect technique</h2>
 
-<h3>1er point&nbsp;: le lissage des polices</h3>
+<h3 id="er-pointnbsp-le-lissage-des-polices">1er point : le lissage des polices</h3>
 
-<p>Chrome accuse un retard catastrophique sur ce point par rapport à Firefox ou IE. En pixelisant les polices en-dessous d&#39;une certaine taille, il dégrade vraiment leur rendu final. Chrome 32 était supposé régler ce problème mais le résultat reste mitigé à mes yeux. Ceci dit, il est possible de traiter les polices une par une afin de les lisser. Cela se fait de la façon suivante&nbsp;:</p>
+<p>Chrome accuse un retard catastrophique sur ce point par rapport à Firefox ou IE. En pixelisant les polices en-dessous d’une certaine taille, il dégrade vraiment leur rendu final. Chrome 32 était supposé régler ce problème mais le résultat reste mitigé à mes yeux. Ceci dit, il est possible de traiter les polices une par une afin de les lisser. Cela se fait de la façon suivante :</p>
 
 <ol>
-<li>Posséder la police au format OTF (la convertir depuis TTF le cas échéant)</li>
-<li>Créer sa webfont de manière classique sur <a href="http://www.fontsquirrel.com/tools/webfont-generator">Fontsquirrel</a></li>
-<li>De ce kit, ne garder que les EOT et SVG</li>
-<li>Utiliser <a href="http://people.mozilla.org/%7Ejkew/woff/">sfnt2woff</a> pour obtenir le WOFF à partir de l&#39;OTF.</li>
+  <li>Posséder la police au format OTF (la convertir depuis TTF le cas échéant)</li>
+  <li>Créer sa webfont de manière classique sur <a href="http://www.fontsquirrel.com/tools/webfont-generator">Fontsquirrel</a></li>
+  <li>De ce kit, ne garder que les EOT et SVG</li>
+  <li>Utiliser <a href="http://people.mozilla.org/~jkew/woff/">sfnt2woff</a> pour obtenir le WOFF à partir de l’OTF.</li>
 </ol>
 
-<h3>2ème point&nbsp;: Vanilla JS</h3>
+<h3 id="me-pointnbsp-vanilla-js">2ème point : Vanilla JS</h3>
 
-<p>Exit jQuery, le JS de ce site ne sera plus que du Vanilla histoire de mettre en place de bonnes pratiques. A vrai dire, pour cette première version le JS du site est assez réduit. Entre autres détails, j&#39;ai notamment appliqué à ma navigation sur mobile le principe de <em>toggle</em> d&#39;un état en JS via l&#39;attribut HTML5 <code>data-*</code>, comme recommandé dans cet excellent <a href="http://toddmotto.com/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/">article</a> de Todd Motto.</p>
+<p>Exit jQuery, le JS de ce site ne sera plus que du Vanilla histoire de mettre en place de bonnes pratiques. A vrai dire, pour cette première version le JS du site est assez réduit. Entre autres détails, j’ai notamment appliqué à ma navigation sur mobile le principe de <em>toggle</em> d’un état en JS via l’attribut HTML5 <code class="highlighter-rouge">data-*</code>, comme recommandé dans cet excellent <a href="http://toddmotto.com/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/">article</a> de Todd Motto.</p>
 
-<h2>Regard vers le passé</h2>
+<h2 id="regard-vers-le-pass">Regard vers le passé</h2>
 
-<p>J&#39;ai créé ce site il y a maintenant près de deux ans; le moment semble bon pour revenir sur ses différents habillages. Et avec le recul certaines versions n&#39;étaient pas des plus réussies...</p>
+<p>J’ai créé ce site il y a maintenant près de deux ans; le moment semble bon pour revenir sur ses différents habillages. Et avec le recul certaines versions n’étaient pas des plus réussies…</p>
 
-<h3>Version 1</h3>
+<h3 id="version-1">Version 1</h3>
 
-<p><img src="/assets/img/site-v1.jpg" alt="Site v1" style="border:none"></p>
+<p><img src="/assets/img/site-v1.jpg" alt="Site v1" style="border:none" /></p>
 
-<h3>Version 2</h3>
+<h3 id="version-2">Version 2</h3>
 
-<p><img src="/assets/img/site-v2.jpg" alt="Site v2" style="border:none"></p>
+<p><img src="/assets/img/site-v2.jpg" alt="Site v2" style="border:none" /></p>
 
-<h3>Version 3</h3>
+<h3 id="version-3">Version 3</h3>
 
-<p><img src="/assets/img/site-v3.jpg" alt="Site v3" style="border:none"></p>
+<p><img src="/assets/img/site-v3.jpg" alt="Site v3" style="border:none" /></p>
 
-<h3>Version 4</h3>
+<h3 id="version-4">Version 4</h3>
 
-<p><img src="/assets/img/site-v4.jpg" alt="Site v4" style="border:none"></p>
+<p><img src="/assets/img/site-v4.jpg" alt="Site v4" style="border:none" /></p>
 
-<h3>Version 5</h3>
+<h3 id="version-5">Version 5</h3>
 
-<p><img src="/assets/img/site-v5.jpg" alt="Site v5" style="border:none"></p>
+<p><img src="/assets/img/site-v5.jpg" alt="Site v5" style="border:none" /></p>
 
-<h3>Version 6</h3>
+<h3 id="version-6">Version 6</h3>
 
-<p><img src="/assets/img/site-v6.jpg" alt="Site v6" style="border:none"></p>
+<p><img src="/assets/img/site-v6.jpg" alt="Site v6" style="border:none" /></p>
 
-<h3>Version 7</h3>
+<h3 id="version-7">Version 7</h3>
 
-<p><img src="/assets/img/site-v7.jpg" alt="Site v7" style="border:none"></p>
+<p><img src="/assets/img/site-v7.jpg" alt="Site v7" style="border:none" /></p>
 
-<hr>
+<hr />
 
 <p class="info">Mise à jour (11/01/2015)&nbsp;: le site a connu plusieurs refontes depuis l'écriture de cet article.</p>
 
@@ -152,7 +152,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

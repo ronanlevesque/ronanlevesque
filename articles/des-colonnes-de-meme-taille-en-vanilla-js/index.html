@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Des colonnes de même taille en Vanilla JS" />
   <meta property="og:description" content="Cet article décrit comment facilement mettre en place un système de colonnes de hauteur égale en Vanilla JS, tout en prenant en compte le responsive design.">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,23 +79,23 @@
         
         <div class="article-content">
         
-          <p>CSS3 a apporté son lot de nouveautés, parmi lesquelles <code>flexbox</code>, un modèle qui propose de <a href="http://philipwalton.github.io/solved-by-flexbox/">nombreuses solutions</a> de mise en page dont celle qui nous intéresse aujourd&#39;hui&nbsp;: la création de colonnes de hauteur égale. Malheureusement l&#39;utilisation de <code>flexbox</code> en production est encore <a href="http://caniuse.com/flexbox">mitigée</a>. Du coup, la meilleure alternative reste pour l&#39;instant le recours au JavaScript.</p>
+          <p>CSS3 a apporté son lot de nouveautés, parmi lesquelles <code class="highlighter-rouge">flexbox</code>, un modèle qui propose de <a href="http://philipwalton.github.io/solved-by-flexbox/">nombreuses solutions</a> de mise en page dont celle qui nous intéresse aujourd’hui : la création de colonnes de hauteur égale. Malheureusement l’utilisation de <code class="highlighter-rouge">flexbox</code> en production est encore <a href="http://caniuse.com/flexbox">mitigée</a>. Du coup, la meilleure alternative reste pour l’instant le recours au JavaScript.</p>
 
-<hr>
+<hr />
 
-<p>Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la même hauteur. L&#39;idée que j&#39;avais en tête était de basculer cette façon de faire en Vanilla JS et pousser le concept un peu plus loin en mixant ma mise en page à du responsive design. Pour résumer le principe&nbsp;: En dessous d&#39;une certaine résolution, les blocs sont positionnés les uns en dessous des autres. Au-dessus, ils sont alignés côte-à-côte et prennent la même hauteur. Je vais disséquer ici le code créé pour l&#39;occasion.</p>
+<p>Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la même hauteur. L’idée que j’avais en tête était de basculer cette façon de faire en Vanilla JS et pousser le concept un peu plus loin en mixant ma mise en page à du responsive design. Pour résumer le principe : En dessous d’une certaine résolution, les blocs sont positionnés les uns en dessous des autres. Au-dessus, ils sont alignés côte-à-côte et prennent la même hauteur. Je vais disséquer ici le code créé pour l’occasion.</p>
 
-<p>On commence par sélectionner toutes nos div possédant la classe <code>.column</code>&nbsp;:</p>
+<p>On commence par sélectionner toutes nos div possédant la classe <code class="highlighter-rouge">.column</code> :</p>
 
 <pre><code class="js">var column = document.querySelectorAll('.column');</code></pre>
 
-<p>Puis on crée la fonction qui va récupérer la taille maximum de <code>.column</code> et on applique cette taille à toutes les autres (on boucle à travers toutes nos <code>.column</code> grâce à <code>for</code>)&nbsp;:</p>
+<p>Puis on crée la fonction qui va récupérer la taille maximum de <code class="highlighter-rouge">.column</code> et on applique cette taille à toutes les autres (on boucle à travers toutes nos <code class="highlighter-rouge">.column</code> grâce à <code class="highlighter-rouge">for</code>) :</p>
 
 <pre><code class="js">function sameHeight(el) {
   var maxHeight = 0;
     for (var i = 0; i &lt; el.length; i++) {
       thisHeight = el[i].clientHeight;
-      if(thisHeight > maxHeight) {
+      if(thisHeight &gt; maxHeight) {
         maxHeight = thisHeight;
       }
     }
@@ -105,14 +105,14 @@
 }
 </code></pre>
 
-<p>La fonction n&#39;est appelée qu&#39;au dessus d&#39;une certaine résolution&nbsp;:</p>
+<p>La fonction n’est appelée qu’au dessus d’une certaine résolution :</p>
 
 <pre><code class="js">if (window.matchMedia("(min-width: 30em)").matches) {
   sameHeight(column);
 }
 </code></pre>
 
-<p>Histoire de garder tout ça propre, on applique une fonction au resize de la fenêtre, tout en continuant de prendre en compte nos media queries&nbsp;:</p>
+<p>Histoire de garder tout ça propre, on applique une fonction au resize de la fenêtre, tout en continuant de prendre en compte nos media queries :</p>
 
 <pre><code class="js">window.addEventListener('resize', function () {
   if (window.matchMedia("(min-width: 30em)").matches) {
@@ -129,7 +129,7 @@
 }, false);
 </code></pre>
 
-<p>Et pour finir, dans notre CSS on définit nos <code>.column</code> de la manière suivante&nbsp;:</p>
+<p>Et pour finir, dans notre CSS on définit nos <code class="highlighter-rouge">.column</code> de la manière suivante :</p>
 
 <pre><code class="css">.column {
   border: 1px solid red;
@@ -137,16 +137,16 @@
 
 @media screen and (min-width: 30em) {
   .column {
-    display: inline-block;
-    width: 32%;
-    vertical-align: top;
+	display: inline-block;
+	width: 32%;
+	vertical-align: top;
   }
 }
 </code></pre>
 
 <p class="liens"><a href="http://jsfiddle.net/JFLQu/1/">Voir l'exemple sur JSFiddle</a></p>
 
-<hr>
+<hr />
 
 <p class="info">Mise à jour (29/10/2015) : le support de flexbox ayant beaucoup <a href="http://caniuse.com/#search=flexbox">évolué</a>, plus besoin de recourir à du JS pour ça.</p>
 
@@ -166,7 +166,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Jekyll et UTF-8 sous Windows" />
   <meta property="og:description" content="Comment régler le problème d'UTF-8 avec Jekyll facilement sous Windows">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,25 +79,25 @@
         
         <div class="article-content">
         
-          <p>La première fois que j&#39;ai installé et lancé Jekyll pour mon blog sous Windows, je suis tombé sur une erreur liée à UTF-8. En fouillant un peu, j&#39;ai trouvé la raison de ce problème dans cet <a href="http://joseoncode.com/2011/11/27/solving-utf-problem-with-jekyll-on-windows/">article</a>&nbsp;: il semblerait que la console Ruby ne fonctionne pas avec les caractères UTF-8, d&#39;une manière ou d&#39;une autre.</p>
+          <p>La première fois que j’ai installé et lancé Jekyll pour mon blog sous Windows, je suis tombé sur une erreur liée à UTF-8. En fouillant un peu, j’ai trouvé la raison de ce problème dans cet <a href="http://joseoncode.com/2011/11/27/solving-utf-problem-with-jekyll-on-windows/">article</a> : il semblerait que la console Ruby ne fonctionne pas avec les caractères UTF-8, d’une manière ou d’une autre.</p>
 
-<hr>
+<hr />
 
-<p>L&#39;erreur affichée était la suivante&nbsp;:</p>
+<p>L’erreur affichée était la suivante :</p>
 
 <pre><code class="bash">Liquid Exception: incompatible character encodings: UTF-8 and IBM437 in whatever.html</code></pre>
 
-<p>La solution à ce problème est facile. Au lieu de&nbsp;:</p>
+<p>La solution à ce problème est facile. Au lieu de :</p>
 
 <pre><code class="bash">jekyll serve --watch</code></pre>
 
-<p>Il suffit de taper&nbsp;:</p>
+<p>Il suffit de taper :</p>
 
 <pre><code class="bash">chcp 65001
 jekyll serve --watch
 </code></pre>
 
-<p>La première commande permet de changer le code-page. En revanche, il vaut mieux éviter de définir cette commande sur une clé de base de registres, puisque apparemment cela risque d&#39;impacter le bon fonctionnement de Windows.</p>
+<p>La première commande permet de changer le code-page. En revanche, il vaut mieux éviter de définir cette commande sur une clé de base de registres, puisque apparemment cela risque d’impacter le bon fonctionnement de Windows.</p>
 
         </div>
       </article>
@@ -115,7 +115,7 @@ jekyll serve --watch
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

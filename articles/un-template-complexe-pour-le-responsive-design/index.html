@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Un template complexe pour le responsive design" />
   <meta property="og:description" content="Ajout de nouveaux templates pour mon framework, FOX CSS">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/un-template-complexe-pour-le-responsive-design" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/un-template-complexe-pour-le-responsive-design/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,13 +79,13 @@
         
         <div class="article-content">
         
-          <p>J&#39;ai intégré un template pour approche &quot;mobile first&quot; dans FOX CSS, le framework que j&#39;ai créé (cf. mon article précédent). Par exemple, un élément de type bloc s&#39;étant vu attribuer la classe .r50 occupera 100% de la largeur de son parent jusqu&#39;à 640px de largeur, puis il passera à 50% au-dessus. C&#39;est un bon début, mais comment faire si on veut plus de possibilités sur des résolutions supérieures&nbsp;?</p>
+          <p>J’ai intégré un template pour approche “mobile first” dans FOX CSS, le framework que j’ai créé (cf. mon article précédent). Par exemple, un élément de type bloc s’étant vu attribuer la classe .r50 occupera 100% de la largeur de son parent jusqu’à 640px de largeur, puis il passera à 50% au-dessus. C’est un bon début, mais comment faire si on veut plus de possibilités sur des résolutions supérieures ?</p>
 
-<hr>
+<hr />
 
-<p>Ainsi, avec cette classe <code>.r50</code>, on n&#39;aura jamais que la possibilité d&#39;avoir deux colonnes au dessus de 640px. Si on souhaite avoir 4 colonnes sur des résolutions plus hautes, on pourrait utiliser la classe <code>.r25</code> mais on se heurte à un autre problème&nbsp;: sur des résolutions plus faibles, 4 colonnes côte-à-côte ça n&#39;est pas vraiment l&#39;idéal...</p>
+<p>Ainsi, avec cette classe <code>.r50</code>, on n’aura jamais que la possibilité d’avoir deux colonnes au dessus de 640px. Si on souhaite avoir 4 colonnes sur des résolutions plus hautes, on pourrait utiliser la classe <code>.r25</code> mais on se heurte à un autre problème : sur des résolutions plus faibles, 4 colonnes côte-à-côte ça n’est pas vraiment l’idéal…</p>
 
-<p>La solution, c&#39;est de mettre en place un système intermédiaire qui va offrir plus de flexibilité. Prenons l&#39;exemple suivant&nbsp;:</p>
+<p>La solution, c’est de mettre en place un système intermédiaire qui va offrir plus de flexibilité. Prenons l’exemple suivant :</p>
 
 <pre><code class="css">@media screen and (min-width: 40.0625em) {
 
@@ -103,9 +103,9 @@
 }
 </code></pre>
 
-<p>A 640px et en-dessous&nbsp;: une colonne. Entre 641px et 959px&nbsp;: deux colonnes. Au dessus&nbsp;: 4 colonnes. Un exemple est disponible <a href="http://fox-css.com/demo">ici</a> (bas de page). Bon, ça n&#39;a rien de très sorcier mais ça a le mérite d&#39;offrir plus de solutions en termes de mise en page. J&#39;ai également ajouté une autre possibilité, qui utilise les classes <code>.r66-33</code>, <code>.r33.33</code> et <code>r100-33</code>. En gros c&#39;est toujours la même chose&nbsp;: le premier nombre indique la largeur de la classe entre 641 et 959px, le deuxième indique sa largeur au-dessus. On pourrait ensuite imaginer des templates plus complexes, mais je vais déjà tester ça en production, on verra si ça s&#39;avère utile&nbsp;:)</p>
+<p>A 640px et en-dessous : une colonne. Entre 641px et 959px : deux colonnes. Au dessus : 4 colonnes. Un exemple est disponible <a href="http://fox-css.com/demo">ici</a> (bas de page). Bon, ça n’a rien de très sorcier mais ça a le mérite d’offrir plus de solutions en termes de mise en page. J’ai également ajouté une autre possibilité, qui utilise les classes <code>.r66-33</code>, <code>.r33.33</code> et <code>r100-33</code>. En gros c’est toujours la même chose : le premier nombre indique la largeur de la classe entre 641 et 959px, le deuxième indique sa largeur au-dessus. On pourrait ensuite imaginer des templates plus complexes, mais je vais déjà tester ça en production, on verra si ça s’avère utile :)</p>
 
-<hr>
+<hr />
 
 <p class="info">Mise à jour (08/10/2012)&nbsp;: j'ai rajouté une nouvelle classe, <code>r.50-33</code>, fonctionnant toujours sur le même principe. Elle est visible directement sur la nouvelle version de <a href="http://fox-css.com">fox-css.com</a>.</p>
 
@@ -125,7 +125,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Le jour où j'ai testé Sass" />
   <meta property="og:description" content="Retour d'expérience sur ma première expérience approfondie de Sass">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,19 +79,19 @@
         
         <div class="article-content">
         
-          <p>J&#39;ai lu récemment pas mal de débats sur l&#39;intérêt d&#39;intégrer ou non les préprocesseurs CSS dans nos workflows. Certains  pour, d&#39;autres contre, bref, les avis semblaient vraiment partagés sur le sujet. D&#39;après ce que j&#39;avais pu en lire, ils pouvaient pourtant présenter un réel intérêt dans certains cas, notamment sur de gros projets. Curieux d&#39;en savoir un peu plus sur le sujet, j&#39;ai récemment plongé mon nez dans Sass, qui semblait le plus populaire des différents préprocesseurs.</p>
+          <p>J’ai lu récemment pas mal de débats sur l’intérêt d’intégrer ou non les préprocesseurs CSS dans nos workflows. Certains  pour, d’autres contre, bref, les avis semblaient vraiment partagés sur le sujet. D’après ce que j’avais pu en lire, ils pouvaient pourtant présenter un réel intérêt dans certains cas, notamment sur de gros projets. Curieux d’en savoir un peu plus sur le sujet, j’ai récemment plongé mon nez dans Sass, qui semblait le plus populaire des différents préprocesseurs.</p>
 
-<hr>
+<hr />
 
 <h2>Sass en quelques mots</h2>
 
-<p><a href="http://sass-lang.com/">Sass</a> est, dixit son site officiel, une extension de CSS3 qui permet d&#39;introduire de nouveaux concepts au sein de CSS&nbsp;: variables, imbrication d&#39;éléments, héritage de sélecteurs etc. La syntaxe utilisée est le SCSS (pour Sassy CSS), qui permet de créer des fichiers .scss facilement convertibles en fichiers .css au moyen de l&#39;outil de commande en ligne ou par le biais d&#39;apps.</p>
+<p><a href="http://sass-lang.com/">Sass</a> est, dixit son site officiel, une extension de CSS3 qui permet d’introduire de nouveaux concepts au sein de CSS : variables, imbrication d’éléments, héritage de sélecteurs etc. La syntaxe utilisée est le SCSS (pour Sassy CSS), qui permet de créer des fichiers .scss facilement convertibles en fichiers .css au moyen de l’outil de commande en ligne ou par le biais d’apps.</p>
 
 <h2>2. Comment l'installer&nbsp;?</h2>
 
-<p>Le site officiel préconise d&#39;utiliser Ruby (installé par défaut sous Mac, à <a href="http://rubyinstaller.org/downloads/">installer</a> sous Windows). On installe ensuite Sass avec la commande <code>gem install sass</code>. On crée un fichier SCSS, par exemple <code>style.scss</code> et on le &quot;surveille&quot; avec <code>sass --watch style.scss:style.css</code>.</p>
+<p>Le site officiel préconise d’utiliser Ruby (installé par défaut sous Mac, à <a href="http://rubyinstaller.org/downloads/">installer</a> sous Windows). On installe ensuite Sass avec la commande <code>gem install sass</code>. On crée un fichier SCSS, par exemple <code>style.scss</code> et on le “surveille” avec <code>sass --watch style.scss:style.css</code>.</p>
 
-<p>Ou sinon, pour les paresseux (dont je fais partie) on installe un logiciel qui fait automatiquement le boulot; en voici une petite liste&nbsp;:</p>
+<p>Ou sinon, pour les paresseux (dont je fais partie) on installe un logiciel qui fait automatiquement le boulot; en voici une petite liste :</p>
 
 <ul>
 <li><a href="http://incident57.com/codekit/">Codekit</a> (Mac, payant)</li>
@@ -101,11 +101,11 @@
 
 <h2>Les avantages de Sass</h2>
 
-<p>La page d&#39;accueil de Sass en dénombre 4. Il suffit en effet de les mettre en pratique pour rapidement comprendre la puissance de l&#39;outil, et son énorme potentiel lors de la réalisation de projets complexes... Regardons ça un peu plus en détails&nbsp;:</p>
+<p>La page d’accueil de Sass en dénombre 4. Il suffit en effet de les mettre en pratique pour rapidement comprendre la puissance de l’outil, et son énorme potentiel lors de la réalisation de projets complexes… Regardons ça un peu plus en détails :</p>
 
 <h3>Nesting</h3>
 
-<p>Le nesting, qu&#39;on pourrait plus ou moins traduire par imbrication, permet de regrouper ensemble plusieurs sélecteurs en les imbriquant pour plus de clarté. Par exemple, prenons le SCSS suivant&nbsp;:</p>
+<p>Le nesting, qu’on pourrait plus ou moins traduire par imbrication, permet de regrouper ensemble plusieurs sélecteurs en les imbriquant pour plus de clarté. Par exemple, prenons le SCSS suivant :</p>
 
 <pre><code class="scss">ul {
   padding: 2em;
@@ -113,7 +113,7 @@
 }
 </code></pre>
 
-<p>Il se traduira en CSS par&nbsp;:</p>
+<p>Il se traduira en CSS par :</p>
 
 <pre><code class="css">ul {
   padding: 2em;
@@ -124,15 +124,15 @@ ul a {
 }
 </code></pre>
 
-<p>Le nesting est donc un bon moyen d&#39;organiser clairement ses informations. Par ailleurs, il marche non seulement avec les sélecteurs mais également avec leurs propriétés.</p>
+<p>Le nesting est donc un bon moyen d’organiser clairement ses informations. Par ailleurs, il marche non seulement avec les sélecteurs mais également avec leurs propriétés.</p>
 
 <h3>Variables</h3>
 
-<p>Sass permet d&#39;intégrer la notion de variables en CSS, variables qui peuvent être couplées avec certaines opérations mathématiques ou fonctions&nbsp;: on peut ainsi définir une variable <code>$couleur</code>, qui correspondra par exemple à la couleur principale de notre site, puis styler certains éléments à partir de celle-ci en les rendant légèrement plus clairs&nbsp;: <code>lighten($couleur, 10%)</code>. Il suffit ensuite de changer la valeur de notre variable <code>$couleur</code> pour qu&#39;automatiquement les autres propriétés dépendant de celle-ci se mettent à jour.</p>
+<p>Sass permet d’intégrer la notion de variables en CSS, variables qui peuvent être couplées avec certaines opérations mathématiques ou fonctions : on peut ainsi définir une variable <code>$couleur</code>, qui correspondra par exemple à la couleur principale de notre site, puis styler certains éléments à partir de celle-ci en les rendant légèrement plus clairs : <code>lighten($couleur, 10%)</code>. Il suffit ensuite de changer la valeur de notre variable <code>$couleur</code> pour qu’automatiquement les autres propriétés dépendant de celle-ci se mettent à jour.</p>
 
 <h3>Les @mixins</h3>
 
-<p>Ils permettent de réutiliser une partie de notre CSS n&#39;importe où grâce à la fonction <code>@include</code>. Ainsi le SCSS suivant&nbsp;:</p>
+<p>Ils permettent de réutiliser une partie de notre CSS n’importe où grâce à la fonction <code>@include</code>. Ainsi le SCSS suivant :</p>
 
 <pre><code class="scss">@mixin list-padd {
   ul {padding: 2em;}
@@ -144,7 +144,7 @@ nav {
 }
 </code></pre>
 
-<p>Sera traduit en CSS par&nbsp;:</p>
+<p>Sera traduit en CSS par :</p>
 
 <pre><code class="css">nav ul {
   padding: 2em;
@@ -155,11 +155,11 @@ nav li {
 }
 </code></pre>
 
-<p>Simple non&nbsp;?&nbsp;:)</p>
+<p>Simple non ? :)</p>
 
 <h3>Héritage de sélecteurs</h3>
 
-<p>Fonctionnant un peu sur le même principe que les <code>@mixins</code>, la fonction <code>@extend</code> permet d&#39;étendre les styles d&#39;un sélecteur à un autre. Par exemple, le SCSS suivant&nbsp;:</p>
+<p>Fonctionnant un peu sur le même principe que les <code>@mixins</code>, la fonction <code>@extend</code> permet d’étendre les styles d’un sélecteur à un autre. Par exemple, le SCSS suivant :</p>
 
 <pre><code class="scss">.red {
   color: white;
@@ -172,7 +172,7 @@ nav li {
 }
 </code></pre>
 
-<p>donnera ce CSS&nbsp;:</p>
+<p>donnera ce CSS :</p>
 
 <pre><code class="css">.red, .button {
   color: white;
@@ -184,19 +184,19 @@ nav li {
 }
 </code></pre>
 
-<p>Une fonction pratique donc, qui permet d&#39;éviter d&#39;avoir à copier/coller 20 fois le même code au moindre changement.</p>
+<p>Une fonction pratique donc, qui permet d’éviter d’avoir à copier/coller 20 fois le même code au moindre changement.</p>
 
 <h2>En conclusion...</h2>
 
-<p>... L&#39;essayer, c&#39;est l&#39;adopter&nbsp;:) Plus sérieusement, après quelques temps d&#39;utilisation, Sass m’apparaît comme un outil indispensable lors de la réalisation de projets complexes. Les outils qu&#39;il intègre permettent à mon sens de rationaliser et optimiser très fortement notre workflow. Il présente en revanche peut-être moins d&#39;intérêt sur des projets plus petits, quoique...</p>
+<p>… L’essayer, c’est l’adopter :) Plus sérieusement, après quelques temps d’utilisation, Sass m’apparaît comme un outil indispensable lors de la réalisation de projets complexes. Les outils qu’il intègre permettent à mon sens de rationaliser et optimiser très fortement notre workflow. Il présente en revanche peut-être moins d’intérêt sur des projets plus petits, quoique…</p>
 
-<p>Par ailleurs, je n&#39;ai cité qu&#39;une partie de ses possibilités, pour plus d&#39;informations sur son potentiel je vous invite à consulter son très riche <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">fichier de référence&nbsp;<sup>EN</sup></a>.</p>
+<p>Par ailleurs, je n’ai cité qu’une partie de ses possibilités, pour plus d’informations sur son potentiel je vous invite à consulter son très riche <a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html">fichier de référence <sup>EN</sup></a>.</p>
 
-<hr>
+<hr />
 
-<p>Pour terminer sur les préprocesseurs, sachez qu&#39;il en existe d&#39;autres, et notamment <a href="http://lesscss.org/">LESS</a>, que je n&#39;ai pas eu l&#39;occasion de tester. <a href="http://chriscoyier.net/">Chris Coyier</a> a d&#39;ailleurs rédigé un <a href="http://css-tricks.com/sass-vs-less/">comparatif sur le sujet&nbsp;<sup>EN</sup></a>, désignant plus ou moins Sass comme la version gagnante par rapport à LESS...</p>
+<p>Pour terminer sur les préprocesseurs, sachez qu’il en existe d’autres, et notamment <a href="http://lesscss.org/">LESS</a>, que je n’ai pas eu l’occasion de tester. <a href="http://chriscoyier.net/">Chris Coyier</a> a d’ailleurs rédigé un <a href="http://css-tricks.com/sass-vs-less/">comparatif sur le sujet <sup>EN</sup></a>, désignant plus ou moins Sass comme la version gagnante par rapport à LESS…</p>
 
-<p>Enfin, si vous voulez peser le pour et le contre de l&#39;utilisation des préprocesseurs, je vous invite à lire ces deux articles &nbsp;: <a href="http://blog.kaelig.fr/post/24877648508/preprocesseurs-css-renoncer-par-choix-ou-par">Préprocesseurs CSS&nbsp;: renoncer par choix, ou par ignorance&nbsp;?</a>, et <a href="http://www.amberweinberg.com/why-im-still-against-sass-less/">Why I&#39;m still against Sass/LESS&nbsp;<sup>EN</sup></a>.</p>
+<p>Enfin, si vous voulez peser le pour et le contre de l’utilisation des préprocesseurs, je vous invite à lire ces deux articles  : <a href="http://blog.kaelig.fr/post/24877648508/preprocesseurs-css-renoncer-par-choix-ou-par">Préprocesseurs CSS : renoncer par choix, ou par ignorance ?</a>, et <a href="http://www.amberweinberg.com/why-im-still-against-sass-less/">Why I’m still against Sass/LESS <sup>EN</sup></a>.</p>
 
         </div>
       </article>
@@ -214,7 +214,7 @@ nav li {
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

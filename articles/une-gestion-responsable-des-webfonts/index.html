@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Une gestion responsable des webfonts" />
   <meta property="og:description" content="Une solution mise en place pour éviter l'apparition d'un FOIT avec les webfonts">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,28 +79,28 @@
         
         <div class="article-content">
         
-          <p>Jusqu&#39;à très récemment, j&#39;avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l&#39;apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j&#39;ai mise en place dernièrement, et dont je suis pleinement satisfait.</p>
+          <p>Jusqu’à très récemment, j’avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l’apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j’ai mise en place dernièrement, et dont je suis pleinement satisfait.</p>
 
-<hr>
+<hr />
 
-<h2>Quelques précisions</h2>
+<h2 id="quelques-prcisions">Quelques précisions</h2>
 
-<p>La notion de <em>FOIT</em> ne parlant pas à tout le monde, commençons par une petite explication&nbsp;: tant que votre navigateur n&#39;a pas téléchargé les <em>webfonts</em> de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d&#39;afficher les polices que vous avez définies par défaut. C&#39;est ce qu&#39;on appelle le <em>FOIT</em>, pour <em>Flash Of Invisible Text</em>.</p>
+<p>La notion de <em>FOIT</em> ne parlant pas à tout le monde, commençons par une petite explication : tant que votre navigateur n’a pas téléchargé les <em>webfonts</em> de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d’afficher les polices que vous avez définies par défaut. C’est ce qu’on appelle le <em>FOIT</em>, pour <em>Flash Of Invisible Text</em>.</p>
 
-<p>Le problème, c&#39;est que ce temps varie selon les navigateurs; et s&#39;il reste raisonnable sur Chrome ou Firefox (de l&#39;ordre de 3 secondes), il peut aller jusqu&#39;à 30 secondes pour Safari iOS par exemple.</p>
+<p>Le problème, c’est que ce temps varie selon les navigateurs; et s’il reste raisonnable sur Chrome ou Firefox (de l’ordre de 3 secondes), il peut aller jusqu’à 30 secondes pour Safari iOS par exemple.</p>
 
 <figure>
-  <img src="/assets/img/webfonts-invision.jpg" alt="Exemple de site avec FOIT">
+  <img src="/assets/img/webfonts-invision.jpg" alt="Exemple de site avec FOIT" />
   <figcaption>Exemple de FOIT&nbsp;: sur ce site, il m'a fallu une dizaine de secondes pour pouvoir accéder au contenu - malgré ma connexion en WiFi.</figcaption>
 </figure>
 
-<p>Si l&#39;on considère en outre qu&#39;un site doit en moyenne se charger en 1 seconde avec une connexion rapide, ne pas pouvoir accéder au contenu du site avant 3 secondes n&#39;est de toute façon pas l&#39;idéal.</p>
+<p>Si l’on considère en outre qu’un site doit en moyenne se charger en 1 seconde avec une connexion rapide, ne pas pouvoir accéder au contenu du site avant 3 secondes n’est de toute façon pas l’idéal.</p>
 
-<h2>La solution au problème</h2>
+<h2 id="la-solution-au-problme">La solution au problème</h2>
 
 <p><a href="http://crocodillon.com/blog/non-blocking-web-fonts-using-localstorage">Plusieurs</a> <a href="http://jaicab.com/localFont/">techniques</a> ont émergé récemment, mais celle qui a retenu mon attention est celle mise en place par <a href="https://www.filamentgroup.com/lab/font-events.html">filament group</a>.</p>
 
-<p>L&#39;idée est d&#39;utiliser par défaut les polices <em>websafe</em> (cf. <a href="http://www.cssfontstack.com/">CSS Font Stack</a>) et de prévoir une classe contenant les <em>webfonts</em>, par exemple&nbsp;:</p>
+<p>L’idée est d’utiliser par défaut les polices <em>websafe</em> (cf. <a href="http://www.cssfontstack.com/">CSS Font Stack</a>) et de prévoir une classe contenant les <em>webfonts</em>, par exemple :</p>
 
 <pre><code class="css">body {
   font-family: Sans-serif;
@@ -110,28 +110,28 @@
   font-family: 'Open Sans', Sans-serif;
 }</code></pre>
 
-<p>On utilise ensuite le loader JS <a href="https://github.com/bramstein/fontfaceobserver">Font Face Observer</a> créé par <a href="https://twitter.com/bram_stein">Bram Stein</a> pour détecter le moment où toutes les <em>webfonts</em> seront loadées, et une fois que c&#39;est fait on ajoute notre classe <code>font-loaded</code>&nbsp;:</p>
+<p>On utilise ensuite le loader JS <a href="https://github.com/bramstein/fontfaceobserver">Font Face Observer</a> créé par <a href="https://twitter.com/bram_stein">Bram Stein</a> pour détecter le moment où toutes les <em>webfonts</em> seront loadées, et une fois que c’est fait on ajoute notre classe <code class="highlighter-rouge">font-loaded</code> :</p>
 
 <pre><code class="js">(function(w) {
-  if (w.document.documentElement.className.indexOf('fonts-loaded') > -1) {
-    return;
+  if (w.document.documentElement.className.indexOf('fonts-loaded') &gt; -1) {
+  	return;
   }
   var fontA = new w.FontFaceObserver('Open Sans', {
-    weight: 300
+  	weight: 300
   });
   var fontB = new w.FontFaceObserver('Open Sans', {
-    weight: 300,
-    style: 'italic'
+  	weight: 300,
+  	style: 'italic'
   });
   w.Promise
   .all([fontA.check(), fontB.check()])
   .then(function() {
-    w.document.documentElement.className += ' fonts-loaded';
+  	w.document.documentElement.className += ' fonts-loaded';
     localStorage.setItem('fontsLoaded', true);
   });
 }(this));</code></pre>
 
-<p>L&#39;approche de filament group privilégie l&#39;utilisation de cookies, mais quant à moi j&#39;ai préféré me rabattre sur <em>localStorage</em>. On crée avec celui-ci un item <code>fontsLoaded</code> grâce auquel on pourra ajouter dans notre <code>&lt;head&gt;</code> la classe <code>fonts-loaded</code> à notre html, comme ceci&nbsp;:</p>
+<p>L’approche de filament group privilégie l’utilisation de cookies, mais quant à moi j’ai préféré me rabattre sur <em>localStorage</em>. On crée avec celui-ci un item <code class="highlighter-rouge">fontsLoaded</code> grâce auquel on pourra ajouter dans notre <code class="highlighter-rouge">&lt;head&gt;</code> la classe <code class="highlighter-rouge">fonts-loaded</code> à notre html, comme ceci :</p>
 
 <pre><code class="html">&lt;script&gt;
   if (localStorage.getItem('fontsLoaded')) {
@@ -141,9 +141,9 @@
 
 <p>Ainsi, tant que cet item sera encore présent dans notre <em>localStorage</em>, la classe en question sera appliquée avant le rendu de la page.</p>
 
-<h2>Une future alternative</h2>
+<h2 id="une-future-alternative">Une future alternative</h2>
 
-<p>L&#39;approche décrite ici me paraît pour l&#39;instant la plus efficace, en attendant une meilleure solution... Celle-ci pourrait bien venir de la proposition <em>CSS font-rendering</em> dont le but est de contrôler directement via CSS le comportement d&#39;affichage de nos <em>webfonts</em>. Je vous invite à consulter son <a href="https://github.com/KenjiBaheux/css-font-rendering">repo Github</a> pour de plus amples informations.</p>
+<p>L’approche décrite ici me paraît pour l’instant la plus efficace, en attendant une meilleure solution… Celle-ci pourrait bien venir de la proposition <em>CSS font-rendering</em> dont le but est de contrôler directement via CSS le comportement d’affichage de nos <em>webfonts</em>. Je vous invite à consulter son <a href="https://github.com/KenjiBaheux/css-font-rendering">repo Github</a> pour de plus amples informations.</p>
 
         </div>
       </article>
@@ -161,7 +161,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

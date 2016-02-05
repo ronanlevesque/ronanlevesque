@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Mettre ses assets en cache avec Jekyll" />
   <meta property="og:description" content="Cet article montre une astuce toute simple que j'utilise pour contourner les problèmes de cache que l'on peut rencontrer sur Jekyll avec différents assets.">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,37 +79,37 @@
         
         <div class="article-content">
         
-          <p>Je partage aujourd&#39;hui une solution assez simple que l&#39;on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l&#39;on utilise soient correctement mis à jour.</p>
+          <p>Je partage aujourd’hui une solution assez simple que l’on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l’on utilise soient correctement mis à jour.</p>
 
-<hr>
+<hr />
 
 <p class="info">Mise à jour (01/07/2015) : depuis l'écriture de cette article, j'ai mis en place un système bien plus pertinent que je détaille ci-dessous.</p>
 
-<hr>
+<hr />
 
-<h2>L&#39;ancienne solution</h2>
+<h2 id="lancienne-solution">L’ancienne solution</h2>
 
 <p>Celle-ci se base sur les formats date du système de templating <a href="http://liquidmarkup.org/">liquid</a> pour générer une ID. Ainsi, au lieu de :</p>
 
 <pre><code class="html">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css"&gt;</code></pre>
 
-<p>Il nous suffira d&#39;utiliser :</p>
+<p>Il nous suffira d’utiliser :</p>
 
 <pre><code class="html">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css?v=&#123;&#123; site.time | date: '%y%m%d%k%M%S' &#125;&#125;"&gt;</code></pre>
 
-<p>Ce qui générera, dans l&#39;ordre : l&#39;année, le mois, le jour, et l&#39;heure avec minutes et secondes. Ainsi le résultat obtenu sera de ce type :</p>
+<p>Ce qui générera, dans l’ordre : l’année, le mois, le jour, et l’heure avec minutes et secondes. Ainsi le résultat obtenu sera de ce type :</p>
 
 <pre><code class="html">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css?v=141217192112"&gt;</code></pre>
 
-<p>De cette manière, on est sûr d&#39;avoir une ID <em>presque</em> unique puisqu&#39;à chaque seconde passée elle sera différente.</p>
+<p>De cette manière, on est sûr d’avoir une ID <em>presque</em> unique puisqu’à chaque seconde passée elle sera différente.</p>
 
-<h2>Les limites de cette solution</h2>
+<h2 id="les-limites-de-cette-solution">Les limites de cette solution</h2>
 
-<p>En appliquant cette façon de faire, tous les fichiers HTML seront mis à jour avec une nouvelle version du CSS, même si celui-ci n&#39;a pas changé. La mise en cache perd un peu de son intérêt... Autre argument, Google <a href="https://developers.google.com/speed/docs/insights/LeverageBrowserCaching">conseille</a> d&#39;éviter les <em>query parameters</em> au profit des <em>fingerprints</em>.</p>
+<p>En appliquant cette façon de faire, tous les fichiers HTML seront mis à jour avec une nouvelle version du CSS, même si celui-ci n’a pas changé. La mise en cache perd un peu de son intérêt… Autre argument, Google <a href="https://developers.google.com/speed/docs/insights/LeverageBrowserCaching">conseille</a> d’éviter les <em>query parameters</em> au profit des <em>fingerprints</em>.</p>
 
-<h2>Un autre système</h2>
+<h2 id="un-autre-systme">Un autre système</h2>
 
-<p>Je suis allé chercher du côté des plugins Jekyll et j&#39;ai déniché <a href="https://github.com/tkareine/jekyll-minibundle">Jekyll-minibundle</a>, qui fait exactement ce que je cherche. Une fois le plugin installé, les <em>fingerprints</em> s&#39;ajoutent de cette manière :</p>
+<p>Je suis allé chercher du côté des plugins Jekyll et j’ai déniché <a href="https://github.com/tkareine/jekyll-minibundle">Jekyll-minibundle</a>, qui fait exactement ce que je cherche. Une fois le plugin installé, les <em>fingerprints</em> s’ajoutent de cette manière :</p>
 
 <pre class="html"><code>&lt;link href="&#123;&#37; ministamp /_assets/css/fox.css /assets/css/fox.css &#37;&#125;" rel="stylesheet"&gt;</code></pre>
 
@@ -133,7 +133,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

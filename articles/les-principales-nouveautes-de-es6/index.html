@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Les principales nouveautés de ES6" />
   <meta property="og:description" content="Petit tour d'horizon des principales nouveautés d'ES6">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,32 +79,32 @@
         
         <div class="article-content">
         
-          <p>JavaScript s&#39;apprête à vivre une petite révolution avec l&#39;arrivée d&#39;ES6, la prochaine version du standard ECMAScript. Et pour cause&nbsp;: c&#39;est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en <a href="http://kangax.github.io/compat-table/es6/">cours d&#39;implémentation</a> dans les différents moteurs JS.</p>
+          <p>JavaScript s’apprête à vivre une petite révolution avec l’arrivée d’ES6, la prochaine version du standard ECMAScript. Et pour cause : c’est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en <a href="http://kangax.github.io/compat-table/es6/">cours d’implémentation</a> dans les différents moteurs JS.</p>
 
-<hr>
+<hr />
 
-<p>Si vous êtes comme moi du genre impatient, il existe de nombreux <em>transpilers</em> qui permettent à l&#39;heure actuelle d&#39;écrire de l&#39;ES6 qui sera compilé en ES5... Une très bonne raison, à mes yeux, de tester cette nouvelle syntaxe dès aujourd&#39;hui. Voici ci-dessous quelques-unes de ses principales nouveautés.</p>
+<p>Si vous êtes comme moi du genre impatient, il existe de nombreux <em>transpilers</em> qui permettent à l’heure actuelle d’écrire de l’ES6 qui sera compilé en ES5… Une très bonne raison, à mes yeux, de tester cette nouvelle syntaxe dès aujourd’hui. Voici ci-dessous quelques-unes de ses principales nouveautés.</p>
 
-<h2>Table des matières</h2>
+<h2 id="table-des-matires">Table des matières</h2>
 
 <ul>
-<li><a href="#arrows">Arrows</a></li>
-<li><a href="#let-et-const">Let et const</a></li>
-<li><a href="#templates">Templates</a></li>
-<li><a href="#objets-litteraux">Objets littéraux</a></li>
-<li><a href="#classes">Classes</a></li>
-<li><a href="#parametres-par-defaut">Paramètres par défaut</a></li>
-<li><a href="#parametres-rest">Paramètres rest</a></li>
-<li><a href="#destructuration">Déstructuration</a></li>
-<li><a href="#for-of">For...of</a></li>
-<li><a href="#generateurs">Générateurs</a></li>
-<li><a href="#modules">Modules</a></li>
-<li><a href="#autres">Autres</a></li>
+  <li><a href="#arrows">Arrows</a></li>
+  <li><a href="#let-et-const">Let et const</a></li>
+  <li><a href="#templates">Templates</a></li>
+  <li><a href="#objets-litteraux">Objets littéraux</a></li>
+  <li><a href="#classes">Classes</a></li>
+  <li><a href="#parametres-par-defaut">Paramètres par défaut</a></li>
+  <li><a href="#parametres-rest">Paramètres rest</a></li>
+  <li><a href="#destructuration">Déstructuration</a></li>
+  <li><a href="#for-of">For…of</a></li>
+  <li><a href="#generateurs">Générateurs</a></li>
+  <li><a href="#modules">Modules</a></li>
+  <li><a href="#autres">Autres</a></li>
 </ul>
 
 <h2 id="arrows">Arrows</h2>
 
-<p>Une nouvelle manière, plus simple et plus rapide, d&#39;écrire les fonctions&nbsp;:</p>
+<p>Une nouvelle manière, plus simple et plus rapide, d’écrire les fonctions :</p>
 
 <pre><code class="js">// ES5
 link.addEventlistener('click', function(e) {
@@ -112,14 +112,14 @@ link.addEventlistener('click', function(e) {
 })
 
 // ES6
-link.addEventListener('click', e => { e.preventDefault(); });
+link.addEventListener('click', e =&gt; { e.preventDefault(); });
 </code></pre>
 
-<p>Attention&nbsp;: contrairement aux fonctions traditionnelles la valeur de <code>this</code> est liée de façon lexicale (permet par exemple d&#39;éviter les <code>var self = this;</code>).</p>
+<p>Attention : contrairement aux fonctions traditionnelles la valeur de <code class="highlighter-rouge">this</code> est liée de façon lexicale (permet par exemple d’éviter les <code class="highlighter-rouge">var self = this;</code>).</p>
 
 <h2 id="let-et-const">Let et const</h2>
 
-<p><code>Let</code> et <code>const</code> sont les nouveaux <code>var</code>, à la différence qu&#39;ils restent scopés au bloc le plus proche.</p>
+<p><code class="highlighter-rouge">Let</code> et <code class="highlighter-rouge">const</code> sont les nouveaux <code class="highlighter-rouge">var</code>, à la différence qu’ils restent scopés au bloc le plus proche.</p>
 
 <pre><code class="js">function whatever() {
   if (true) {
@@ -128,7 +128,7 @@ link.addEventListener('click', e => { e.preventDefault(); });
   console.log(a); // Erreur, a n'est pas défini
 }</code></pre>
 
-<p><code>Const</code> est immuable. Il n&#39;est accessible qu&#39;en lecture seule.</p>
+<p><code class="highlighter-rouge">Const</code> est immuable. Il n’est accessible qu’en lecture seule.</p>
 
 <pre><code class="js">const a = 1;
 a++; // Erreur
@@ -136,17 +136,17 @@ a++; // Erreur
 
 <h2 id="templates">Templates</h2>
 
-<p>Les templates fournissent une manière plus simple de construire les strings (avec le caractère <kbd>`</kbd>) en permettant de l&#39;interpolation.</p>
+<p>Les templates fournissent une manière plus simple de construire les strings (avec le caractère <kbd>`</kbd>) en permettant de l’interpolation.</p>
 
 <pre><code class="js">let fruit = {name: 'banana', color: 'yellow'};
 let describe = `This ${fruit.name} is ${fruit.color}`;
 console.log(describe); // Log 'This banana is yellow'</code></pre>
 
-<p>Par ailleurs, <kbd>`</kbd> permet d&#39;écrire des strings multilignes.</p>
+<p>Par ailleurs, <kbd>`</kbd> permet d’écrire des strings multilignes.</p>
 
 <h2 id="objets-litteraux">Objets littéraux</h2>
 
-<p>Ceux-ci bénéficient de quelques nouveautés&nbsp;: définition du prototype à la construction, raccourcis pour les assignements de type <code>prop: prop</code>, noms de propriétés dynamiques, possibilité de définir des méthodes directement...</p>
+<p>Ceux-ci bénéficient de quelques nouveautés : définition du prototype à la construction, raccourcis pour les assignements de type <code class="highlighter-rouge">prop: prop</code>, noms de propriétés dynamiques, possibilité de définir des méthodes directement…</p>
 
 <pre><code class="js">var myObj = {
   // Définition du protoype
@@ -162,7 +162,7 @@ console.log(describe); // Log 'This banana is yellow'</code></pre>
 
 <h2 id="classes">Classes</h2>
 
-<p>ES6 fournit une manière de gérer des classes via <code>class</code> et <code>extend</code>. Cette nouvelle syntaxe est du sucre syntaxique (sic) par-dessus les prototypes. En voici un petit exemple&nbsp;:</p>
+<p>ES6 fournit une manière de gérer des classes via <code class="highlighter-rouge">class</code> et <code class="highlighter-rouge">extend</code>. Cette nouvelle syntaxe est du sucre syntaxique (sic) par-dessus les prototypes. En voici un petit exemple :</p>
 
 <pre><code class="js">class Car {
   constructor(speed) {
@@ -190,7 +190,7 @@ console.log(f430.newStats); // Log 'Max speed: 250km/h'</code></pre>
 
 <h2 id="parametres-par-defaut">Paramètres par défaut</h2>
 
-<p>On peut dorénavant spécifier des paramètres par défaut dans nos fonctions&nbsp;:</p>
+<p>On peut dorénavant spécifier des paramètres par défaut dans nos fonctions :</p>
 
 <pre><code class="js">function car(color='red') {
   console.log(`This car is ${color}.`);
@@ -200,7 +200,7 @@ car(); // Log 'This car is red.'</code></pre>
 
 <h2 id="parametres-rest">Paramètres rest</h2>
 
-<p>Ils permettent de représenter un nombre illimité de paramètres, sous forme d&#39;array.</p>
+<p>Ils permettent de représenter un nombre illimité de paramètres, sous forme d’array.</p>
 
 <pre><code class="js">function fn(...args) {
   console.log(args.length);
@@ -212,7 +212,7 @@ fn(...&#91;1, 2, 3, 4, 5&#93;); // Log 5 également</code></pre>
 
 <h2 id="destructuration">Déstructuration</h2>
 
-<p>Celle-ci permet de lier des données (arrays et objets sont supportés). Si la valeur n&#39;est pas trouvée, <code>undefined</code> sera retourné.</p>
+<p>Celle-ci permet de lier des données (arrays et objets sont supportés). Si la valeur n’est pas trouvée, <code class="highlighter-rouge">undefined</code> sera retourné.</p>
 
 <pre><code class="js">let [foo, baz, bar] = [1, , 3];
 console.log(foo); // Log 1
@@ -221,7 +221,7 @@ console.log(bar); // Log 3</code></pre>
 
 <h2 id="for-of">For...of</h2>
 
-<p>Cette déclaration crée une boucle sur des objets pouvant être itérés (array, map, paramètres etc.). La syntaxe est simple&nbsp;:</p>
+<p>Cette déclaration crée une boucle sur des objets pouvant être itérés (array, map, paramètres etc.). La syntaxe est simple :</p>
 
 <pre><code class="js">let arr = ['red', 'yellow', 'blue'];
 for (let n of arr) {
@@ -230,7 +230,7 @@ for (let n of arr) {
 
 <h2 id="generateurs">Générateurs</h2>
 
-<p>Leur syntaxe est particulière&nbsp;: On déclare une nouvelle instance générateur avec la syntaxe <code>function*</code>. A l&#39;intérieur de celle-ci, <code>yield</code> définit la valeur retournée. On peut appeler chaque valeur qui suit avec <code>next()</code>.</p>
+<p>Leur syntaxe est particulière : On déclare une nouvelle instance générateur avec la syntaxe <code class="highlighter-rouge">function*</code>. A l’intérieur de celle-ci, <code class="highlighter-rouge">yield</code> définit la valeur retournée. On peut appeler chaque valeur qui suit avec <code class="highlighter-rouge">next()</code>.</p>
 
 <pre><code class="js">function* fn() {
   yield 'blue';
@@ -245,7 +245,7 @@ console.log(a.next()); // Log 'green'</code></pre>
 
 <h2 id="modules">Modules</h2>
 
-<p>Ils permettent de démocratiser les solutions mises en place avec CommonJS ou AMD. Ces nouveaux modules fonctionnent sur un modèle asynchrone&nbsp;: le code n&#39;est pas exécuté tant que les modules requis n&#39;ont pas été exécutés.</p>
+<p>Ils permettent de démocratiser les solutions mises en place avec CommonJS ou AMD. Ces nouveaux modules fonctionnent sur un modèle asynchrone : le code n’est pas exécuté tant que les modules requis n’ont pas été exécutés.</p>
 
 <pre><code class="js">// Dans un fichier 'utils.js'&nbsp;:
 export function addOne(x) {
@@ -262,7 +262,7 @@ utils.addOne(4);</code></pre>
 
 <h2 id="autres">Autres</h2>
 
-<p>J&#39;ai couvert ici les nouveautés qui paraissaient importantes à mes yeux, mais il en existe d&#39;autres&nbsp;: promises, symboles, WeakMaps et WeakSets... Pour une liste exhaustive de tous les ajouts, je vous invite à consulter <a href="https://github.com/lukehoban/es6features">es6-features</a> sur Github.</p>
+<p>J’ai couvert ici les nouveautés qui paraissaient importantes à mes yeux, mais il en existe d’autres : promises, symboles, WeakMaps et WeakSets… Pour une liste exhaustive de tous les ajouts, je vous invite à consulter <a href="https://github.com/lukehoban/es6features">es6-features</a> sur Github.</p>
 
         </div>
       </article>
@@ -280,7 +280,7 @@ utils.addOne(4);</code></pre>
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

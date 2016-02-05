@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Responsive design&nbsp;: adoptez un process intelligent !" />
   <meta property="og:description" content="Cet article s'attarde sur les problèmes que certains processes classiques en webdesign peuvent poser en responsive design.">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,56 +79,56 @@
         
         <div class="article-content">
         
-          <p>Ce n&#39;est plus vraiment une nouveauté&nbsp;: le responsive design est la tendance <em>hype</em> du moment. De plus en plus d&#39;acteurs du web ont réalisé qu&#39;il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n&#39;est pas toujours le cas.</p>
+          <p>Ce n’est plus vraiment une nouveauté : le responsive design est la tendance <em>hype</em> du moment. De plus en plus d’acteurs du web ont réalisé qu’il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n’est pas toujours le cas.</p>
 
-<hr>
+<hr />
 
 <p class="info">Les processes décrits ci-dessous interviennent entre la définition des besoins client et de la stratégie (contenu, architecture etc.) et les phases de test/déploiement (tests cross-browsers, UAT, etc.).</p>
 
-<hr>
+<hr />
 
-<h2>Responsive&nbsp;: the wrong way</h2>
+<h2 id="responsivenbsp-the-wrong-way">Responsive : the wrong way</h2>
 
-<p>Je vais partir d&#39;un modèle que j&#39;ai hélas rencontré fréquemment par le passé, dans le cadre d&#39;une relation agence/client.</p>
+<p>Je vais partir d’un modèle que j’ai hélas rencontré fréquemment par le passé, dans le cadre d’une relation agence/client.</p>
 
 <ol>
-<li>L&#39;équipe créative propose des maquettes en version <em>desktop</em> au client.</li>
-<li>Le client fait ses retours, les maquettes sont validées.</li>
-<li>Les versions &quot;petit écran&quot; sont maquettées.</li>
-<li>Les maquettes sont transmises pour intégration / développement.</li>
-<li>Les problèmes commencent.</li>
+  <li>L’équipe créative propose des maquettes en version <em>desktop</em> au client.</li>
+  <li>Le client fait ses retours, les maquettes sont validées.</li>
+  <li>Les versions “petit écran” sont maquettées.</li>
+  <li>Les maquettes sont transmises pour intégration / développement.</li>
+  <li>Les problèmes commencent.</li>
 </ol>
 
-<p><strong>Qu&#39;est ce qui cloche avec cette façon de faire&nbsp;?</strong> Le problème saute d&#39;emblée aux yeux, l&#39;équipe technique est intégrée en fin de boucle. Pour comprendre pourquoi cela est un gros souci, il est nécessaire de bien saisir la nuance entre responsive design et adaptive design. Rien de mieux qu&#39;un schéma pour ça&nbsp;:</p>
+<p><strong>Qu’est ce qui cloche avec cette façon de faire ?</strong> Le problème saute d’emblée aux yeux, l’équipe technique est intégrée en fin de boucle. Pour comprendre pourquoi cela est un gros souci, il est nécessaire de bien saisir la nuance entre responsive design et adaptive design. Rien de mieux qu’un schéma pour ça :</p>
 
 <figure>
-    <img src="/assets/img/responsive-iceberg.jpg" alt="Responsive Iceberg">
-    <figcaption>Responsive Iceberg, &copy; Brad Frost</figcaption>
+	<img src="/assets/img/responsive-iceberg.jpg" alt="Responsive Iceberg" />
+	<figcaption>Responsive Iceberg, &copy; Brad Frost</figcaption>
 </figure>
 
-<p>Le responsive design n&#39;est en réalité qu&#39;une partie de ce qu&#39;on appelle l&#39;adaptive design. Celui-ci ajoute une forte touche de complexité qui ne doit pas être prise à la légère&nbsp;: gestion des performances, des médias (notamment images), primauté du contenu sur le contenant, chargement conditionnel, amélioration progressive etc.</p>
+<p>Le responsive design n’est en réalité qu’une partie de ce qu’on appelle l’adaptive design. Celui-ci ajoute une forte touche de complexité qui ne doit pas être prise à la légère : gestion des performances, des médias (notamment images), primauté du contenu sur le contenant, chargement conditionnel, amélioration progressive etc.</p>
 
-<p>Les deux notions sont indissociables si l&#39;on veut pouvoir fournir une bonne expérience aux utilisateurs. L&#39;équipe technique doit donc se trouver au centre des processes, sinon on court droit à la catastrophe. En partant directement d&#39;une version <em>desktop</em>, on occulte les petits écrans et toutes les contraintes qui y sont liées.</p>
+<p>Les deux notions sont indissociables si l’on veut pouvoir fournir une bonne expérience aux utilisateurs. L’équipe technique doit donc se trouver au centre des processes, sinon on court droit à la catastrophe. En partant directement d’une version <em>desktop</em>, on occulte les petits écrans et toutes les contraintes qui y sont liées.</p>
 
-<h2>Responsive&nbsp;: the good way</h2>
+<h2 id="responsivenbsp-the-good-way">Responsive : the good way</h2>
 
-<p>En prenant en compte ces informations, le schéma de création d&#39;un site devrait être le suivant, ou au moins s&#39;en approcher&nbsp;:</p>
+<p>En prenant en compte ces informations, le schéma de création d’un site devrait être le suivant, ou au moins s’en approcher :</p>
 
 <ol>
-<li>Création de wireframes grossiers faisant intervenir l&#39;équipe créa, l&#39;équipe technique et idéalement l&#39;équipe UX; le tout dans une démarche <em>mobile first</em>.</li>
-<li>Créations de prototypes HTML afin d&#39;identifier les interactions intervenant de manière responsive.</li>
-<li>Mise en place du design visuel, création de guides de styles.</li>
-<li>Création des différents blocs réutilisables à travers toutes les pages.</li>
-<li>Intégration et développement.</li>
+  <li>Création de wireframes grossiers faisant intervenir l’équipe créa, l’équipe technique et idéalement l’équipe UX; le tout dans une démarche <em>mobile first</em>.</li>
+  <li>Créations de prototypes HTML afin d’identifier les interactions intervenant de manière responsive.</li>
+  <li>Mise en place du design visuel, création de guides de styles.</li>
+  <li>Création des différents blocs réutilisables à travers toutes les pages.</li>
+  <li>Intégration et développement.</li>
 </ol>
 
-<p>Cette façon de faire apporte une flexibilité vitale à la réalisation d&#39;un site adaptable au plus large nombre de supports.</p>
+<p>Cette façon de faire apporte une flexibilité vitale à la réalisation d’un site adaptable au plus large nombre de supports.</p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
-<p>Le responsive design doit être réfléchi en amont pour pouvoir être efficient. Il est impératif que nos processes s&#39;adaptent à cette nouvelle façon de réfléchir, <strong>et non l&#39;inverse</strong>. Dans le cas contraire, on se retrouvera avec des sites plus lourds que nécessaires, difficilement modifiables, fonctionnant grâce à des bidouillages bancals.</p>
+<p>Le responsive design doit être réfléchi en amont pour pouvoir être efficient. Il est impératif que nos processes s’adaptent à cette nouvelle façon de réfléchir, <strong>et non l’inverse</strong>. Dans le cas contraire, on se retrouvera avec des sites plus lourds que nécessaires, difficilement modifiables, fonctionnant grâce à des bidouillages bancals.</p>
 
-<p>Pour une description complète d&#39;un process responsive, je vous invite à consulter <a href="http://responsiveprocess.com/">responsiveprocess.com</a>.</p>
+<p>Pour une description complète d’un process responsive, je vous invite à consulter <a href="http://responsiveprocess.com/">responsiveprocess.com</a>.</p>
 
         </div>
       </article>
@@ -146,7 +146,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

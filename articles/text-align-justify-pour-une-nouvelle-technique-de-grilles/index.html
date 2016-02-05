@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Text-align: justify pour une nouvelle technique de grilles" />
   <meta property="og:description" content="Une nouvelle technique CSS pour facilement créer des grilles">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/text-align-justify-pour-une-nouvelle-technique-de-grilles" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/text-align-justify-pour-une-nouvelle-technique-de-grilles/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,30 +79,30 @@
         
         <div class="article-content">
         
-          <p>Je suis tombé sur une nouvelle technique publiée par l&#39;agence new-yorkaise <a href="http://www.barrelny.com/">Barrel</a> pour créer des grilles qui évitent ENFIN les prises de têtes que sont les marges horizontales. Je la partage aujourd&#39;hui en français et surtout je la conseille vivement comme méthode de remplacement des techniques traditionnelles.</p>
+          <p>Je suis tombé sur une nouvelle technique publiée par l’agence new-yorkaise <a href="http://www.barrelny.com/">Barrel</a> pour créer des grilles qui évitent ENFIN les prises de têtes que sont les marges horizontales. Je la partage aujourd’hui en français et surtout je la conseille vivement comme méthode de remplacement des techniques traditionnelles.</p>
 
-<hr>
+<hr />
 
 <h2>Les techniques habituelles</h2>
 
-<p>En fait quand je crée des grilles, par exemple de listings produits (le plus souvent responsive), j&#39;utilise une des deux techniques suivantes&nbsp;:</p>
+<p>En fait quand je crée des grilles, par exemple de listings produits (le plus souvent responsive), j’utilise une des deux techniques suivantes :</p>
 
 <ol>
 <li>Je fais flotter tous mes blocs à gauche à coups de <code>float:left</code> puis j'applique une méthode de <a href="http://nicolasgallagher.com/micro-clearfix-hack/">clearfix</a> au bloc conteneur pour éviter les effets annexes liés à l'utilisation de mes <code>floats</code>.</li>
 <li>Ou j'utilise le pseudo-sélecteur <code>nth-child</code> pour cibler chaque premier élément de ma ligne de produits et supprimer sa marge gauche.</li>
 </ol>
 
-<p>Le problème de la première méthode, c&#39;est qu&#39;elle oblige à recourir à du clearfix, dont je ne suis pas forcément fan. Elle rajoute aussi une marge (invisible) à droite, qui risque donc de créer du scolling horizontal sur des petites résolutions.</p>
+<p>Le problème de la première méthode, c’est qu’elle oblige à recourir à du clearfix, dont je ne suis pas forcément fan. Elle rajoute aussi une marge (invisible) à droite, qui risque donc de créer du scolling horizontal sur des petites résolutions.</p>
 
-<p>Le problème de la deuxième méthode, c&#39;est qu&#39;elle est plutôt pénible à gérer de manière responsive, car il faut recalculer tous les <code>nth-child</code> à chaque changement de nombre d&#39;items affichés par ligne. Sans compter que <code>nth-child</code> n&#39;est pas compris par IE8-.</p>
+<p>Le problème de la deuxième méthode, c’est qu’elle est plutôt pénible à gérer de manière responsive, car il faut recalculer tous les <code>nth-child</code> à chaque changement de nombre d’items affichés par ligne. Sans compter que <code>nth-child</code> n’est pas compris par IE8-.</p>
 
 <h2>Text-align: justify</h2>
 
-<p>La technique proposée par Barrel est la suivante&nbsp;: appliquer la propriété <code>text-align:justify</code> (fonctionnant avec <code>inline</code> ET <code>inline-block</code>) au conteneur pour laisser le navigateur gérer tout seul les marges horizontales entre chacun des éléments d&#39;une même ligne. Par contre, le comportement par défaut de <code>text-align:justify</code> opère sur toutes les lignes d&#39;un texte sauf la dernière. Si il y a une seule ligne, celle-ci sera aussi considérée comme la dernière. Pour que la magie opère il faut donc créer une &quot;ligne&quot; invisible située en-dessous de la ligne concernée (visible en bleu ci-dessous)&nbsp;:</p>
+<p>La technique proposée par Barrel est la suivante : appliquer la propriété <code>text-align:justify</code> (fonctionnant avec <code>inline</code> ET <code>inline-block</code>) au conteneur pour laisser le navigateur gérer tout seul les marges horizontales entre chacun des éléments d’une même ligne. Par contre, le comportement par défaut de <code>text-align:justify</code> opère sur toutes les lignes d’un texte sauf la dernière. Si il y a une seule ligne, celle-ci sera aussi considérée comme la dernière. Pour que la magie opère il faut donc créer une “ligne” invisible située en-dessous de la ligne concernée (visible en bleu ci-dessous) :</p>
 
 <p><img src="/assets/img/justify-1.jpg" alt="Justify 1" style="border: 1px solid #ddd;" /></p>
 
-<p>Pour reprendre l&#39;exemple de Barrel il faudrait donc avoir le code suivant&nbsp;:</p>
+<p>Pour reprendre l’exemple de Barrel il faudrait donc avoir le code suivant :</p>
 
 <pre><code class="html">&lt;ul class="grid"&gt;
     &lt;li&gt;&lt;/li&gt;
@@ -129,7 +129,7 @@
 }
 </code></pre>
 
-<p>Ou, pour une sémantique plus propre, se passer de l&#39;élément <code>.break</code> et ajouter un <code>:after</code> au conteneur&nbsp;:</p>
+<p>Ou, pour une sémantique plus propre, se passer de l’élément <code>.break</code> et ajouter un <code>:after</code> au conteneur :</p>
 
 <pre><code class="css">.grid:after {
   content: '';
@@ -138,15 +138,15 @@
 }
 </code></pre>
 
-<p>Un autre souci à contourner, c&#39;est le nombre d&#39;éléments par ligne. Mettons qu&#39;on ait 4 éléments par ligne et que la dernière ligne n&#39;en affiche que 2. Les 2 éléments vont se justifier sur la longueur de la ligne, donnant un résultat plutôt indésirable&nbsp;:</p>
+<p>Un autre souci à contourner, c’est le nombre d’éléments par ligne. Mettons qu’on ait 4 éléments par ligne et que la dernière ligne n’en affiche que 2. Les 2 éléments vont se justifier sur la longueur de la ligne, donnant un résultat plutôt indésirable :</p>
 
 <p><img src="/assets/img/justify-2.jpg" alt="Justify 2" style="border: 1px solid #ddd;" /></p>
 
-<p>Pour éviter ce problème il faudra rajouter des &quot;placeholders&quot; invisibles qui permettront de rétablir l&#39;équilibre. Dans cet exemple il en faudra donc 2 pour obtenir le résultat suivant&nbsp;:</p>
+<p>Pour éviter ce problème il faudra rajouter des “placeholders” invisibles qui permettront de rétablir l’équilibre. Dans cet exemple il en faudra donc 2 pour obtenir le résultat suivant :</p>
 
 <p><img src="/assets/img/justify-3.jpg" alt="Justify 3" style="border: 1px solid #ddd;" /></p>
 
-<p>Le code ressemblera donc à&nbsp;:</p>
+<p>Le code ressemblera donc à :</p>
 
 <pre><code class="html">&lt;ul class="grid"&gt;
     &lt;li&gt;&lt;/li&gt;
@@ -160,15 +160,15 @@
 &lt;/ul&gt;
 </code></pre>
 
-<p>La formule à appliquer pour connaitre le nombre de placeholders à utiliser, et ce quelque soit le nombre d&#39;items présents sur la dernière ligne, est la suivante&nbsp;:</p>
+<p>La formule à appliquer pour connaitre le nombre de placeholders à utiliser, et ce quelque soit le nombre d’items présents sur la dernière ligne, est la suivante :</p>
 
 <pre><code class="nohighlight">nombre de placeholders = nombre maximum d'éléments par ligne - 2</code></pre>
 
-<p>Pourquoi 2&nbsp;? Parce que si un seul produit s&#39;affiche sur la dernière ligne, il s&#39;affichera de toute façon tout à gauche.</p>
+<p>Pourquoi 2 ? Parce que si un seul produit s’affiche sur la dernière ligne, il s’affichera de toute façon tout à gauche.</p>
 
-<h2>Justify & Responsive design</h2>
+<h2>Justify &amp; Responsive design</h2>
 
-<p>L&#39;énorme avantage de cette technique, c&#39;est qu&#39;elle est très facilement adaptable au responsive design, par exemple&nbsp;:</p>
+<p>L’énorme avantage de cette technique, c’est qu’elle est très facilement adaptable au responsive design, par exemple :</p>
 
 <pre><code class="css">.grid li {
   width: 100%;
@@ -197,13 +197,13 @@
 }
 </code></pre>
 
-<p>Beaucoup plus simple et moins casse-tête que les <code>nth-child</code>&nbsp;:) Par contre les marges horizontales sont calculées automatiquement, il faut donc un peu tâtonner pour trouver les valeurs exactes à appliquer aux <code>width</code> de nos éléments...</p>
+<p>Beaucoup plus simple et moins casse-tête que les <code>nth-child</code> :) Par contre les marges horizontales sont calculées automatiquement, il faut donc un peu tâtonner pour trouver les valeurs exactes à appliquer aux <code>width</code> de nos éléments…</p>
 
 <h2>Le support</h2>
 
-<p>Voilà le gros avantage de cette méthode&nbsp;: en plus d&#39;être simple à intégrer, elle est compatible à partir de IE7 (même si pour celui-ci, il faudra recourir à quelques astuces). Je l&#39;ai déjà implémentée avec succès sur un projet en cours, et j&#39;y aurai sans doute de plus en plus recours avec le temps.</p>
+<p>Voilà le gros avantage de cette méthode : en plus d’être simple à intégrer, elle est compatible à partir de IE7 (même si pour celui-ci, il faudra recourir à quelques astuces). Je l’ai déjà implémentée avec succès sur un projet en cours, et j’y aurai sans doute de plus en plus recours avec le temps.</p>
 
-<hr>
+<hr />
 
 <p class="info">Cet article a été adapté de <a href="http://www.barrelny.com/blog/text-align-justify-and-rwd/">l'article&nbsp;<sup>EN</sup></a> originalement publié par <a href="http://www.barrelny.com/">Barrel</a>. Un exemple est disponible sur <a href="http://codepen.io/patrickkunka/pen/GECBF">Codepen</a>.</p>
 
@@ -223,7 +223,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Les anciens navigateurs" />
   <meta property="og:description" content="Support des anciens navigateurs grâce à différentes méthodes">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/les-anciens-navigateurs" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/les-anciens-navigateurs/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,40 +79,40 @@
         
         <div class="article-content">
         
-          <p>La vie serait beaucoup plus simple si on n&#39;avait plus à assurer le support des antiquités que sont IE6, 7 et 8. Malheureusement au quotidien ça n&#39;est pas toujours possible; on se retrouve souvent contraints de réaliser le grand écart entre moderne et vieux. Si l&#39;on souhaite se tourner vers une conception moderne en responsive design, comment s&#39;assurer du meilleur support possible&nbsp;?</p>
+          <p>La vie serait beaucoup plus simple si on n’avait plus à assurer le support des antiquités que sont IE6, 7 et 8. Malheureusement au quotidien ça n’est pas toujours possible; on se retrouve souvent contraints de réaliser le grand écart entre moderne et vieux. Si l’on souhaite se tourner vers une conception moderne en responsive design, comment s’assurer du meilleur support possible ?</p>
 
-<hr>
+<hr />
 
 <p class="info">Cet article s'attardera uniquement sur la gestion des media queries en responsive design; je ne parlerai pas ici d'autres propriétés CSS3 non supportés par certains de ces navigateurs, par exemple flexbox, border-box etc.</p>
 
-<hr>
+<hr />
 
-<p>J&#39;ai identifié ci-dessous différentes approches qui permettent de partir d&#39;un modèle de design <em>mobile first</em> pour s&#39;assurer que notre site ressemble quand même à quelque chose sur les vieux dinosaures du web.</p>
+<p>J’ai identifié ci-dessous différentes approches qui permettent de partir d’un modèle de design <em>mobile first</em> pour s’assurer que notre site ressemble quand même à quelque chose sur les vieux dinosaures du web.</p>
 
-<h2>Ne rien faire</h2>
+<h2 id="ne-rien-faire">Ne rien faire</h2>
 
-<p>Approche la plus simple, puisqu&#39;elle ne demande quasiment aucun effort de notre part. Les media queries n&#39;étant pas compris par IE&lt;9, le navigateur affichera la version mobile du site. Pour rendre tout ça un peu moins moche, rien n&#39;empêche de limiter la largeur maximum du contenu à coups de <code>max-width</code> et de <a href="http://briangelhaus.com/blog/target-ie-in-css/">commentaires conditionnels</a>.</p>
+<p>Approche la plus simple, puisqu’elle ne demande quasiment aucun effort de notre part. Les media queries n’étant pas compris par IE&lt;9, le navigateur affichera la version mobile du site. Pour rendre tout ça un peu moins moche, rien n’empêche de limiter la largeur maximum du contenu à coups de <code class="highlighter-rouge">max-width</code> et de <a href="http://briangelhaus.com/blog/target-ie-in-css/">commentaires conditionnels</a>.</p>
 
-<p>A priori, cette approche n&#39;est pas idéale, puisque les utilisateurs risquent d&#39;être un peu perturbés par le fait de naviguer sur une version mobile. Ceci dit c&#39;est toujours mieux qu&#39;un site sur lequel il est impossible de naviguer.</p>
+<p>A priori, cette approche n’est pas idéale, puisque les utilisateurs risquent d’être un peu perturbés par le fait de naviguer sur une version mobile. Ceci dit c’est toujours mieux qu’un site sur lequel il est impossible de naviguer.</p>
 
-<h2>Cibler IE&lt;9 en CSS</h2>
+<h2 id="cibler-ie9-en-css">Cibler IE&lt;9 en CSS</h2>
 
-<p>Grâce aux <a href="http://briangelhaus.com/blog/target-ie-in-css/">commentaires conditionnels</a> dont je parlais ci-dessus, il est assez facile de créer des classes spécifiques, par exemple&nbsp;:</p>
+<p>Grâce aux <a href="http://briangelhaus.com/blog/target-ie-in-css/">commentaires conditionnels</a> dont je parlais ci-dessus, il est assez facile de créer des classes spécifiques, par exemple :</p>
 
 <pre><code class="css">.ie8 .header {
   // bla bla bla
 }
 </code></pre>
 
-<p>Cette approche est toutefois assez fastidieuse, elle nécessite en effet de réecrire toutes les propriétés css comprises dans les media queries qui se situent autour des dimensions &quot;habituelles&quot; de ces navigateurs (1000-1200 px). Niveau maintenance, ça n&#39;est pas non plus idéal puisque l&#39;on doit mettre à jour le CSS spécifique à IE en même temps que le CSS global.</p>
+<p>Cette approche est toutefois assez fastidieuse, elle nécessite en effet de réecrire toutes les propriétés css comprises dans les media queries qui se situent autour des dimensions “habituelles” de ces navigateurs (1000-1200 px). Niveau maintenance, ça n’est pas non plus idéal puisque l’on doit mettre à jour le CSS spécifique à IE en même temps que le CSS global.</p>
 
-<h2>Cibler IE&lt;9 avec Sass</h2>
+<h2 id="cibler-ielt9-avec-sass">Cibler IE&lt;9 avec Sass</h2>
 
-<p>Une technique très intéressante, <a href="http://jakearchibald.github.io/sass-ie/">démontrée ici</a> par <a href="http://jakearchibald.com/">Jake Archibald</a> (Google Chrome). Elle tire parti de la puissance de Sass et de ses <code>@mixin</code> pour créer une feuille de styles spécifique à IE&lt;9.</p>
+<p>Une technique très intéressante, <a href="http://jakearchibald.github.io/sass-ie/">démontrée ici</a> par <a href="http://jakearchibald.com/">Jake Archibald</a> (Google Chrome). Elle tire parti de la puissance de Sass et de ses <code class="highlighter-rouge">@mixin</code> pour créer une feuille de styles spécifique à IE&lt;9.</p>
 
-<p>Il est ainsi facile de définir les media queries que l&#39;on souhaite intégrer dans celle-ci, par exemple toutes celles qui sont inférieures à 1200px. La feuille de style ajoutera ensuite tous les styles des media queries jusqu&#39;à 1200px.</p>
+<p>Il est ainsi facile de définir les media queries que l’on souhaite intégrer dans celle-ci, par exemple toutes celles qui sont inférieures à 1200px. La feuille de style ajoutera ensuite tous les styles des media queries jusqu’à 1200px.</p>
 
-<p>Cette méthode implique en revanche d&#39;écrire des media queries propres à chaque élément, par exemple&nbsp;:</p>
+<p>Cette méthode implique en revanche d’écrire des media queries propres à chaque élément, par exemple :</p>
 
 <pre><code class="scss">.element {
   color: red;
@@ -123,17 +123,17 @@
 }
 </code></pre>
 
-<p>Un &quot;inconvénient&quot; quasiment négligeable si vous prenez soin de minifier et gzipper vos CSS, sans compter un gros gain en maintenabilité.</p>
+<p>Un “inconvénient” quasiment négligeable si vous prenez soin de minifier et gzipper vos CSS, sans compter un gros gain en maintenabilité.</p>
 
-<h2>Respond.js</h2>
+<h2 id="respondjs">Respond.js</h2>
 
-<p>Contrairement aux techniques ci-dessus, ce polyfill très léger (3ko) assure le support des media queries pour <code>max-width</code> et <code>min-width</code>. On n&#39;a donc plus à se soucier de créer une feuille de styles spécifique puisque le script se chargera de tout. Le fichier devra être intégré dans le <code>&lt;head&gt;</code> de la page pour qu&#39;il soit exécuté le plus tôt possible.</p>
+<p>Contrairement aux techniques ci-dessus, ce polyfill très léger (3ko) assure le support des media queries pour <code class="highlighter-rouge">max-width</code> et <code class="highlighter-rouge">min-width</code>. On n’a donc plus à se soucier de créer une feuille de styles spécifique puisque le script se chargera de tout. Le fichier devra être intégré dans le <code class="highlighter-rouge">&lt;head&gt;</code> de la page pour qu’il soit exécuté le plus tôt possible.</p>
 
 <p class="liens"><a href="https://github.com/scottjehl/Respond">Voir Respond.js sur Github</a></p>
 
-<p>Le seul bémol que je vois à son utilisation est qu&#39;il doit être hébergé sur le même serveur que la page; si ça n&#39;est pas le cas il faudra uploader une page proxy pour permettre la communication cross-domain (cf. l&#39;exemple sur Github).</p>
+<p>Le seul bémol que je vois à son utilisation est qu’il doit être hébergé sur le même serveur que la page; si ça n’est pas le cas il faudra uploader une page proxy pour permettre la communication cross-domain (cf. l’exemple sur Github).</p>
 
-<hr>
+<hr />
 
 <p class="info">Mise à jour (29/10/2015) : étant donné que ces navigateurs ne sont plus maintenus, cet article peut être considéré comme obsolète :)</p>
 
@@ -153,7 +153,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

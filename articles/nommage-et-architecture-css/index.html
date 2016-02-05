@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Nommage et architecture CSS" />
   <meta property="og:description" content="Explications sur la façon dont je structure mon CSS pour une maintenance optimale">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/nommage-et-architecture-css" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/nommage-et-architecture-css/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,83 +79,83 @@
         
         <div class="article-content">
         
-          <p>A ma connaissance, il n&#39;y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j&#39;ai adapté ces techniques à mon workflow.</p>
+          <p>A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.</p>
 
-<hr>
+<hr />
 
-<h2>Les bases&nbsp;: <abbr title="Block, Element, Modifier">BEM</abbr> et <abbr title="Structured class names and meaningful hyphens">SUIT</abbr></h2>
+<h2 id="les-basesnbsp-abbr-titleblock-element-modifierbemabbr-et-abbr-titlestructured-class-names-and-meaningful-hyphenssuitabbr">Les bases : <abbr title="Block, Element, Modifier">BEM</abbr> et <abbr title="Structured class names and meaningful hyphens">SUIT</abbr></h2>
 
 <p>Si ces deux acronymes ne vous évoquent rien, je vous suggère avant toute chose de lire mon <a href="/articles/css-notation-bem/">article</a> sur le premier ainsi que la <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">documentation Github</a> du deuxième.</p>
 
-<p>J&#39;ai pour ma part commencé par utiliser <abbr title="Block, Element, Modifier">BEM</abbr> de manière traditionnelle avant d&#39;y incorporer une part de <abbr title="Structured class names and meaningful hyphens">SUIT</abbr>, ce qui me donnait quelque chose de ce genre&nbsp;:</p>
+<p>J’ai pour ma part commencé par utiliser <abbr title="Block, Element, Modifier">BEM</abbr> de manière traditionnelle avant d’y incorporer une part de <abbr title="Structured class names and meaningful hyphens">SUIT</abbr>, ce qui me donnait quelque chose de ce genre :</p>
 
 <pre><code class="css">.blockName {}
 .blockName-element {}
 .blockName--modifier {}</code></pre>
 
-<p>Je préfère cette syntaxe par rapport au <abbr title="Block, Element, Modifier">BEM</abbr> classique, où l&#39;utilisation des <kbd>_</kbd> ne facilite pas vraiment l&#39;édition du nom des classes.</p>
+<p>Je préfère cette syntaxe par rapport au <abbr title="Block, Element, Modifier">BEM</abbr> classique, où l’utilisation des <kbd>_</kbd> ne facilite pas vraiment l’édition du nom des classes.</p>
 
-<h2>Pousser plus loin le concept des Modifiers</h2>
+<h2 id="pousser-plus-loin-le-concept-des-modifiers">Pousser plus loin le concept des Modifiers</h2>
 
-<p>Le souci avec les <em>Modifiers</em>, c&#39;est qu&#39;ils créent des classes à rallonge, par exemple&nbsp;:</p>
+<p>Le souci avec les <em>Modifiers</em>, c’est qu’ils créent des classes à rallonge, par exemple :</p>
 
 <pre><code class="html">&lt;button class="button button--small button--green button--caps"&gt;</code></pre>
 
-<p>J&#39;ai récemment vu passer un article d&#39;<a href="http://www.envato.com/">Envato</a> dans lequel était décrit le principe des <em><a href="http://webuild.envato.com/blog/chainable-bem-modifiers/">Chainable Modifiers</a></em>, principe qu&#39;ils ont mis en place pour Envato Market.</p>
+<p>J’ai récemment vu passer un article d’<a href="http://www.envato.com/">Envato</a> dans lequel était décrit le principe des <em><a href="http://webuild.envato.com/blog/chainable-bem-modifiers/">Chainable Modifiers</a></em>, principe qu’ils ont mis en place pour Envato Market.</p>
 
-<p>En se basant sur cette convention, le code ci-dessus se transformerait en&nbsp;:</p>
+<p>En se basant sur cette convention, le code ci-dessus se transformerait en :</p>
 
 <pre><code class="html">&lt;button class="button -small -green -caps"&gt;</code></pre>
 
-<p>C&#39;est quand même plus agréable à lire, non&nbsp;?</p>
+<p>C’est quand même plus agréable à lire, non ?</p>
 
-<p>Et si vous utilisez Sass, le mettre en place et en assurer la maintenabilité devient un jeu d&#39;enfant.</p>
+<p>Et si vous utilisez Sass, le mettre en place et en assurer la maintenabilité devient un jeu d’enfant.</p>
 
 <pre><code class="scss">.button {
   padding: 2rem;
 
-  &.-small {
+  &amp;.-small {
     font-size: 1rem;
   }
 
-  &.-green {
+  &amp;.-green {
     background-color: green;
   }
 
-  &.-caps {
+  &amp;.-caps {
     text-transform: uppercase;
   }
 }</code></pre>
 
-<h2>Autres emprunts à <abbr title="Structured class names and meaningful hyphens">SUIT</abbr></h2>
+<h2 id="autres-emprunts--abbr-titlestructured-class-names-and-meaningful-hyphenssuitabbr">Autres emprunts à <abbr title="Structured class names and meaningful hyphens">SUIT</abbr></h2>
 
-<p>J&#39;utilise également deux autres conventions provenant de <abbr title="Structured class names and meaningful hyphens">SUIT</abbr>&nbsp;: les classes utilitaires et les classes d&#39;état.</p>
+<p>J’utilise également deux autres conventions provenant de <abbr title="Structured class names and meaningful hyphens">SUIT</abbr> : les classes utilitaires et les classes d’état.</p>
 
-<h3>Classes utilitaires</h3>
+<h3 id="classes-utilitaires">Classes utilitaires</h3>
 
-<p>Ce sont des classes génériques, identifiables par un préfixe <code>u-</code>&nbsp;:</p>
+<p>Ce sont des classes génériques, identifiables par un préfixe <code class="highlighter-rouge">u-</code> :</p>
 
 <pre><code class="css">.u-white {}
 .u-floatLeft {}
 ...</code></pre>
 
-<h3>Classes d&#39;état</h3>
+<h3 id="classes-dtat">Classes d’état</h3>
 
-<p>Celles-ci permettent d&#39;identifier le changement d&#39;état d&#39;un composant; elles sont préfixées par <code>is-</code>&nbsp;:</p>
+<p>Celles-ci permettent d’identifier le changement d’état d’un composant; elles sont préfixées par <code class="highlighter-rouge">is-</code> :</p>
 
 <pre><code class="html">&lt;button class="button is-disabled"&gt;</code></pre>
 
-<h2>Sélecteurs JavaScript</h2>
+<h2 id="slecteurs-javascript">Sélecteurs JavaScript</h2>
 
-<p>Pour tous les sélecteurs que je vais cibler en JS, j&#39;ajoute une classe (ou une id) préfixée par <code>js-</code>. Cette classe ne doit jamais apparaître dans mes CSS afin de maintenir une séparation claire des rôles.</p>
+<p>Pour tous les sélecteurs que je vais cibler en JS, j’ajoute une classe (ou une id) préfixée par <code class="highlighter-rouge">js-</code>. Cette classe ne doit jamais apparaître dans mes CSS afin de maintenir une séparation claire des rôles.</p>
 
-<h2>What&#39;s next&nbsp;?</h2>
+<h2 id="whats-nextnbsp">What’s next ?</h2>
 
-<p>Même si la mise en place de cette méthodologie m&#39;a procuré un gain énorme en termes de maintenabilité et de lisibilité sur des grosses bases de code CSS, elle n&#39;est pas infaillible, et les risques de non-isolation et de spécificité du code existent toujours.</p>
+<p>Même si la mise en place de cette méthodologie m’a procuré un gain énorme en termes de maintenabilité et de lisibilité sur des grosses bases de code CSS, elle n’est pas infaillible, et les risques de non-isolation et de spécificité du code existent toujours.</p>
 
-<p>Pour contourner &ndash; entre autres &ndash; ces problèmes, <a href="http://glenmaddern.com/articles/css-modules">Glenn Maddern</a> a créé un système de <a href="http://glenmaddern.com/articles/css-modules">modules CSS</a>. Grâce à du JS, les styles sont maintenus à leur création dans un <em>scope</em> local qui permet de résoudre les questions de nommage et d&#39;héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d&#39;en rebuter certains.</p>
+<p>Pour contourner – entre autres – ces problèmes, <a href="http://glenmaddern.com/articles/css-modules">Glenn Maddern</a> a créé un système de <a href="http://glenmaddern.com/articles/css-modules">modules CSS</a>. Grâce à du JS, les styles sont maintenus à leur création dans un <em>scope</em> local qui permet de résoudre les questions de nommage et d’héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d’en rebuter certains.</p>
 
-<p>Reste a espérer qu&#39;un standard verra enfin le jour pour corriger ce casse-tête...</p>
+<p>Reste a espérer qu’un standard verra enfin le jour pour corriger ce casse-tête…</p>
 
         </div>
       </article>
@@ -173,7 +173,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

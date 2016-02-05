@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Un @mixin Sass simple pour les media queries" />
   <meta property="og:description" content="Comment facilement gérer ses media queries avec Sass et un @mixin">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,13 +79,13 @@
         
         <div class="article-content">
         
-          <p>J&#39;avais <a href="http://ronanlevesque.fr/le-jour-ou-jai-teste-sass/">chanté les louanges</a> du préprocesseur Sass il y a quelques mois, convaincu de l&#39;intérêt de cet outil. Depuis je l&#39;ai intégré en production sur quelques projets, et son intérêt ne se dément vraiment pas. Combiné à les logiciels simples (je vous conseille vivement <a href="http://alphapixels.com/prepros/">Prepros</a> sur Windows) c&#39;est un bonheur à utiliser.</p>
+          <p>J’avais <a href="http://ronanlevesque.fr/le-jour-ou-jai-teste-sass/">chanté les louanges</a> du préprocesseur Sass il y a quelques mois, convaincu de l’intérêt de cet outil. Depuis je l’ai intégré en production sur quelques projets, et son intérêt ne se dément vraiment pas. Combiné à les logiciels simples (je vous conseille vivement <a href="http://alphapixels.com/prepros/">Prepros</a> sur Windows) c’est un bonheur à utiliser.</p>
 
-<hr>
+<hr />
 
-<p>Les <code>@mixins</code> sont un vrai plus de Sass. Pour rappel ils permettent de réutiliser grâce à <code>@include</code> une partie de notre CSS, qu&#39;on peut par exemple combiner avec des variables. J&#39;ai pu en récupérer quelques-uns assez utiles à droite et à gauche, que je partagerai prochainement ici.</p>
+<p>Les <code>@mixins</code> sont un vrai plus de Sass. Pour rappel ils permettent de réutiliser grâce à <code>@include</code> une partie de notre CSS, qu’on peut par exemple combiner avec des variables. J’ai pu en récupérer quelques-uns assez utiles à droite et à gauche, que je partagerai prochainement ici.</p>
 
-<p>Je suis notamment tombé sur un <code>@mixin</code> assez intéressant pour gérer les media queries, publié dans un article de <a href="http://web-design-weekly.com/2013/05/12/handy-sass-mixins/">Web Design Weekly</a>. Le <code>@mixin</code> utilisé est le suivant&nbsp;:</p>
+<p>Je suis notamment tombé sur un <code>@mixin</code> assez intéressant pour gérer les media queries, publié dans un article de <a href="http://web-design-weekly.com/2013/05/12/handy-sass-mixins/">Web Design Weekly</a>. Le <code>@mixin</code> utilisé est le suivant :</p>
 
 <pre><code class="scss">@mixin breakpoint($point) {
   @if $point == large {
@@ -100,7 +100,7 @@
 }
 </code></pre>
 
-<p>Il permet donc d&#39;ajouter facilement des breakpoints à un design responsive. Ainsi pour reprendre l&#39;exemple de l&#39;article, le SCSS suivant&nbsp;:</p>
+<p>Il permet donc d’ajouter facilement des breakpoints à un design responsive. Ainsi pour reprendre l’exemple de l’article, le SCSS suivant :</p>
 
 <pre><code class="scss">.page-wrap {
   width: 75%;
@@ -108,7 +108,7 @@
 }
 </code></pre>
 
-<p>Se transformera en&nbsp;:</p>
+<p>Se transformera en :</p>
 
 <pre><code class="css">.page-wrap {
   width: 75%;
@@ -120,14 +120,14 @@
 }
 </code></pre>
 
-<p>C&#39;est un <code>@mixin</code> très utile mais je voulais le simplifier et le rendre un peu plus flexible, histoire de l&#39;adapter sur mesure à différents media queries. Je l&#39;ai donc transformé en ceci&nbsp;:</p>
+<p>C’est un <code>@mixin</code> très utile mais je voulais le simplifier et le rendre un peu plus flexible, histoire de l’adapter sur mesure à différents media queries. Je l’ai donc transformé en ceci :</p>
 
 <pre><code class="scss">@mixin bp($point) {
   @media screen and (min-width: $point / 16 + em) { @content; }
 }
 </code></pre>
 
-<p>Il suffit ensuite simplement de remplacer la variable <code>$point</code> par la taille que l&#39;on souhaite pour notre media queries (query&nbsp;?) en pixels, et celle-ci sera automatiquement convertie en <code>em</code>.</p>
+<p>Il suffit ensuite simplement de remplacer la variable <code>$point</code> par la taille que l’on souhaite pour notre media queries (query ?) en pixels, et celle-ci sera automatiquement convertie en <code>em</code>.</p>
 
         </div>
       </article>
@@ -145,7 +145,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Créer un menu avec dropdown en CSS3" />
   <meta property="og:description" content="Tutoriel de création d'un menu complexe en dropdown, avec CSS3">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,9 +79,9 @@
         
         <div class="article-content">
         
-          <p>Les menus avec dropdown sont de nos jours fortement utilisés sur les sites possédant beaucoup de contenu. Ils s&#39;appuient en général sur du JavaScript pour fonctionner. Pourtant il existe un moyen simple de créer des dropdown uniquement en CSS3 (malgré une très légère exception en fin d&#39;article). Dans cet article nous allons voir comment mettre ce type de dropdown en place.</p>
+          <p>Les menus avec dropdown sont de nos jours fortement utilisés sur les sites possédant beaucoup de contenu. Ils s’appuient en général sur du JavaScript pour fonctionner. Pourtant il existe un moyen simple de créer des dropdown uniquement en CSS3 (malgré une très légère exception en fin d’article). Dans cet article nous allons voir comment mettre ce type de dropdown en place.</p>
 
-<hr>
+<hr />
 
 <p><img src="/assets/img/menu-dropdown-css-1.jpg" alt="Menu dropdown CSS 1" /></p>
 
@@ -89,9 +89,9 @@
 
 <p>Voici le tutoriel détaillé pour arriver à ce résultat.</p>
 
-<h2>La structure HTML</h2>
+<h2 id="la-structure-html">La structure HTML</h2>
 
-<p>Le but est de commencer par une structure HTML claire et simple sous forme de liste&nbsp;:</p>
+<p>Le but est de commencer par une structure HTML claire et simple sous forme de liste :</p>
 
 <pre><code class="html">&lt;ul id="menu"&gt;
   &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
@@ -110,15 +110,15 @@
 &lt;/ul&gt;
 </code></pre>
 
-<p>Pour l&#39;instant, aucun style n&#39;a été appliqué, mais l&#39;important est ici que le code respecte la <a href="http://en.wikipedia.org/wiki/Semantic_HTML">sémantique HTML&nbsp;<sup>EN</sup></a>.</p>
+<p>Pour l’instant, aucun style n’a été appliqué, mais l’important est ici que le code respecte la <a href="http://en.wikipedia.org/wiki/Semantic_HTML">sémantique HTML <sup>EN</sup></a>.</p>
 
 <p><img src="/assets/img/menu-dropdown-css-2.jpg" alt="Menu dropdown CSS 2" /></p>
 
-<p>Dans cet exemple, une seule sous-catégorie a été créée, mais rien ne vous empêche d&#39;en créer plus en respectant la sémantique initiale.</p>
+<p>Dans cet exemple, une seule sous-catégorie a été créée, mais rien ne vous empêche d’en créer plus en respectant la sémantique initiale.</p>
 
-<h2>Le CSS</h2>
+<h2 id="le-css">Le CSS</h2>
 
-<p>Il va ensuite falloir appliquer vos styles CSS à cette liste, histoire de rendre tout ça un peu plus sexy, attention restez bien concentrés...</p>
+<p>Il va ensuite falloir appliquer vos styles CSS à cette liste, histoire de rendre tout ça un peu plus sexy, attention restez bien concentrés…</p>
 
 <pre><code class="css">#menu {
   width: 100%;
@@ -154,7 +154,7 @@
   text-shadow: 0 1px 0 #000;
 }
 
-#menu li:hover > a {
+#menu li:hover &gt; a {
   color: #fafafa;
 }
 
@@ -162,7 +162,7 @@
   color: #fafafa;
 }
 
-#menu li:hover > ul {
+#menu li:hover &gt; ul {
   display: block;
 }
 
@@ -240,12 +240,12 @@
   background: linear-gradient(#04acec,  #0186ba);
 }
 
-#menu ul li:first-child > a {
+#menu ul li:first-child &gt; a {
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
 
-#menu ul li:first-child > a:after {
+#menu ul li:first-child &gt; a:after {
   content: '';
   position: absolute;
   left: 30px;
@@ -277,7 +277,7 @@
   border-bottom-color: transparent;
 }
 
-#menu ul li:last-child > a {
+#menu ul li:last-child &gt; a {
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
 }
@@ -295,11 +295,11 @@
 *:first-child+html #menu { zoom: 1; } /* IE7 */
 </code></pre>
 
-<p>En regardant la démo de près, vous avez sans doute pu remarquer une flèche située juste en dessous ou à côté du menu principal ou des menus secondaires, afin d&#39;améliorer la lisibilité du menu&nbsp;:</p>
+<p>En regardant la démo de près, vous avez sans doute pu remarquer une flèche située juste en dessous ou à côté du menu principal ou des menus secondaires, afin d’améliorer la lisibilité du menu :</p>
 
 <p><img class="imgb" src="/assets/img/menu-dropdown-css-3.jpg" alt="Menu dropdown CSS 3" /></p>
 
-<p>Cette flèche est simplement créée en utilisant le pseudo-élément <code>after</code>. Voici un zoom sur le code en question&nbsp;:</p>
+<p>Cette flèche est simplement créée en utilisant le pseudo-élément <code>after</code>. Voici un zoom sur le code en question :</p>
 
 <pre><code class="css">#menu ul ul li:first-child a:after {
   left: -8px;
@@ -313,11 +313,11 @@
 }
 </code></pre>
 
-<p>Cela marchera sur la plupart des navigateurs récents, et jusqu&#39;à IE8 compris.</p>
+<p>Cela marchera sur la plupart des navigateurs récents, et jusqu’à IE8 compris.</p>
 
-<h2>Fallback pour IE6</h2>
+<h2 id="fallback-pour-ie6">Fallback pour IE6</h2>
 
-<p>Bien évidemment, IE6 va poser (comme souvent) un problème si on en reste là. En effet, les sous-menus s&#39;affichent quand on survole les éléments <code>li</code> du menu. Or IE6 ne supporte pas le survol d&#39;éléments sans ancre. Pour s&#39;assurer que ce menu fonctionne correctement sous ce dernier, il va donc falloir utiliser un peu de JavaScript, couplé à la librairie <a href="http://jquery.com/">jQuery</a>&nbsp;:</p>
+<p>Bien évidemment, IE6 va poser (comme souvent) un problème si on en reste là. En effet, les sous-menus s’affichent quand on survole les éléments <code>li</code> du menu. Or IE6 ne supporte pas le survol d’éléments sans ancre. Pour s’assurer que ce menu fonctionne correctement sous ce dernier, il va donc falloir utiliser un peu de JavaScript, couplé à la librairie <a href="http://jquery.com/">jQuery</a> :</p>
 
 <pre><code class="html">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;
@@ -334,9 +334,9 @@
 &lt;/script&gt;
 </code></pre>
 
-<p>Vous pouvez choisir de sauter cette étape, en effet IE6 est en passe de disparaître complètement de notre paysage (vivement qu&#39;IE7 suive la même voie...).</p>
+<p>Vous pouvez choisir de sauter cette étape, en effet IE6 est en passe de disparaître complètement de notre paysage (vivement qu’IE7 suive la même voie…).</p>
 
-<hr>
+<hr />
 
 <p class="info">Crédits&nbsp;: Article originalement rédigé par <a href="http://www.red-team-design.com/about">Catalin Rosu</a> (Version originale en anglais accessible <a href="http://www.red-team-design.com/css3-dropdown-menu">ici</a>.)</p>
 
@@ -356,7 +356,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

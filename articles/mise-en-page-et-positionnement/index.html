@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Mise en page et positionnement" />
   <meta property="og:description" content="Présentation des différentes possibilités de positionnements d'éléments avec CSS">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/mise-en-page-et-positionnement" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/mise-en-page-et-positionnement/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,37 +79,37 @@
         
         <div class="article-content">
         
-          <p>Il existe plusieurs manières de positionner différents éléments au sein d&#39;une page. Certaines, telles que l&#39;utilisation des tableaux sont décriées, à tort ou à raison selon les points de vue, d&#39;autres sont fortement plébiscitées et très souvent utilisées. Le but de cet article et de faire un point sur les différentes méthodes mises à notre disposition, et de finir par un cas pratique centré autour de la <code>position: absolute</code>.</p>
+          <p>Il existe plusieurs manières de positionner différents éléments au sein d’une page. Certaines, telles que l’utilisation des tableaux sont décriées, à tort ou à raison selon les points de vue, d’autres sont fortement plébiscitées et très souvent utilisées. Le but de cet article et de faire un point sur les différentes méthodes mises à notre disposition, et de finir par un cas pratique centré autour de la <code>position: absolute</code>.</p>
 
-<hr>
+<hr />
 
-<h2>Récapitulatif des différents positionnements</h2>
+<h2 id="rcapitulatif-des-diffrents-positionnements">Récapitulatif des différents positionnements</h2>
 
-<h3>Les éléments flottants</h3>
+<h3 id="les-lments-flottants">Les éléments flottants</h3>
 
-<p>Pour rappel, voici la définition de la propriété <code>float</code>, traduite d&#39;après <a href="http://www.w3.org/TR/CSS2/visuren.html#floats">w3.org&nbsp;<sup>EN</sup></a>&nbsp;:</p>
-
-<blockquote>
-<p>Un élément flottant est une boîte qui est déplacée vers la gauche ou vers la droite sur la ligne actuelle. [...]L&#39;élément sera décalé vers la gauche ou la droite jusqu&#39;à toucher le bord de son contenant.</p>
-</blockquote>
-
-<p>En partant de cette définition, il est assez facile de construire des templates de page à 2 ou 3 colonnes, voire plus. Il suffira simplement de faire &quot;flotter&quot; les colonnes les unes à côté des autres, en prenant bien soin d&#39;appliquer un <code>clear: both</code> ou une autre méthode de clearfix afin que le contenu de la page reprenne son comportement normal en-dessous des éléments flottants.</p>
-
-<p>Cette technique de mise en page est fortement plébiscitée, je l&#39;utilisais d&#39;ailleurs sur la version précédente de mon blog pour afficher ma colonne de contenu principal juxtaposée à la colonne de navigation située à droite. Elle est relativement simple à mettre en place, et joue bien son rôle - ou tout du moins le rôle qu&#39;elle remplit aujourd&#39;hui et <a title="Article d'Alsacréations sur les floats" href="http://www.alsacreations.com/article/lire/972-float-le-grand-bluff.html">qui n&#39;était pas forcément le sien</a> au départ.</p>
-
-<p>Pourtant, malgré tout ses avantages, elle est connue pour créer de nombreux bugs d&#39;affichage (Guillotine bug, escaping floats bug, IE6 Peekaboo bug, double floated-margin bug et bien d&#39;autres&nbsp;: voici une liste exhaustive de ces <a href="http://coding.smashingmagazine.com/2007/05/01/css-float-theory-things-you-should-know/">bugs&nbsp;<sup>EN</sup></a>).</p>
-
-<h3>Inline-block</h3>
-
-<p>La valeur <code>inline-block</code> de la propriété <code>display</code> peut représenter une bonne alternative à l&#39;utilisation des <code>float</code>. Elle est moins connue et utilisée que cette dernière, et pour cause&nbsp;: elle n&#39;est pas reconnue par Internet Explorer 7 et versions précédentes. Elle présente pourtant de clairs avantages. Toujours d&#39;après <a href="http://www.w3.org/TR/CSS2/visuren.html#propdef-display">w3.org&nbsp;<sup>EN</sup></a>&nbsp;:</p>
+<p>Pour rappel, voici la définition de la propriété <code>float</code>, traduite d’après <a href="http://www.w3.org/TR/CSS2/visuren.html#floats">w3.org <sup>EN</sup></a> :</p>
 
 <blockquote>
-<p>La valeur <code>inline-block</code> permet de générer un contenant fonctionnant en ligne, mais dont le contenu sera formaté comme une boîte de type &quot;bloc&quot;.</p>
+  <p>Un élément flottant est une boîte qui est déplacée vers la gauche ou vers la droite sur la ligne actuelle. […]L’élément sera décalé vers la gauche ou la droite jusqu’à toucher le bord de son contenant.</p>
 </blockquote>
 
-<p>L&#39;intérêt de l&#39;utilisation de <code>inline-block</code> est que, contrairement aux éléments en ligne, ils permettront, comme sur un élément de type bloc, que l&#39;on puisse agir sur leur taille, marge etc.</p>
+<p>En partant de cette définition, il est assez facile de construire des templates de page à 2 ou 3 colonnes, voire plus. Il suffira simplement de faire “flotter” les colonnes les unes à côté des autres, en prenant bien soin d’appliquer un <code>clear: both</code> ou une autre méthode de clearfix afin que le contenu de la page reprenne son comportement normal en-dessous des éléments flottants.</p>
 
-<p>Par ailleurs, le problème rencontré sur IE7 et versions inférieures pourra être facilement corrigé grâce à la mise en place de commentaires conditionnels ciblant ces navigateurs et en appliquant à l&#39;élément concerné le CSS suivant&nbsp;:</p>
+<p>Cette technique de mise en page est fortement plébiscitée, je l’utilisais d’ailleurs sur la version précédente de mon blog pour afficher ma colonne de contenu principal juxtaposée à la colonne de navigation située à droite. Elle est relativement simple à mettre en place, et joue bien son rôle - ou tout du moins le rôle qu’elle remplit aujourd’hui et <a title="Article d'Alsacréations sur les floats" href="http://www.alsacreations.com/article/lire/972-float-le-grand-bluff.html">qui n’était pas forcément le sien</a> au départ.</p>
+
+<p>Pourtant, malgré tout ses avantages, elle est connue pour créer de nombreux bugs d’affichage (Guillotine bug, escaping floats bug, IE6 Peekaboo bug, double floated-margin bug et bien d’autres : voici une liste exhaustive de ces <a href="http://coding.smashingmagazine.com/2007/05/01/css-float-theory-things-you-should-know/">bugs <sup>EN</sup></a>).</p>
+
+<h3 id="inline-block">Inline-block</h3>
+
+<p>La valeur <code>inline-block</code> de la propriété <code>display</code> peut représenter une bonne alternative à l’utilisation des <code>float</code>. Elle est moins connue et utilisée que cette dernière, et pour cause : elle n’est pas reconnue par Internet Explorer 7 et versions précédentes. Elle présente pourtant de clairs avantages. Toujours d’après <a href="http://www.w3.org/TR/CSS2/visuren.html#propdef-display">w3.org <sup>EN</sup></a> :</p>
+
+<blockquote>
+  <p>La valeur <code>inline-block</code> permet de générer un contenant fonctionnant en ligne, mais dont le contenu sera formaté comme une boîte de type “bloc”.</p>
+</blockquote>
+
+<p>L’intérêt de l’utilisation de <code>inline-block</code> est que, contrairement aux éléments en ligne, ils permettront, comme sur un élément de type bloc, que l’on puisse agir sur leur taille, marge etc.</p>
+
+<p>Par ailleurs, le problème rencontré sur IE7 et versions inférieures pourra être facilement corrigé grâce à la mise en place de commentaires conditionnels ciblant ces navigateurs et en appliquant à l’élément concerné le CSS suivant :</p>
 
 <pre><code class="css">#bloc {
   zoom: 1;
@@ -117,51 +117,50 @@
 }
 </code></pre>
 
-<p>Grâce au <code>zoom:1;</code> l&#39;élément en question se comportera comme un élément de type <code>inline-block</code>.</p>
+<p>Grâce au <code>zoom:1;</code> l’élément en question se comportera comme un élément de type <code>inline-block</code>.</p>
 
-<h3>Les tableaux</h3>
-
-<p>A l&#39;origine, les tableaux avaient été créés pour présenter des données tabulaires. Logique, non&nbsp;? Ils ont pourtant été détournés de leur premier usage afin de proposer des solutions de mise en page alors que le CSS n&#39;existait pas encore. Cette technique semble pourtant être devenue obsolète de nos jours pour des raisons à mes yeux évidentes&nbsp;:</p>
+<h3 id="les-tableaux">Les tableaux</h3>
+<p>A l’origine, les tableaux avaient été créés pour présenter des données tabulaires. Logique, non ? Ils ont pourtant été détournés de leur premier usage afin de proposer des solutions de mise en page alors que le CSS n’existait pas encore. Cette technique semble pourtant être devenue obsolète de nos jours pour des raisons à mes yeux évidentes :</p>
 
 <ul>
-<li>Problèmes d&#39;accessibilité&nbsp;: la lecture d&#39;un tableau par un outil de lecture ne se fera pas de manière naturelle si il est utilisé pour une mise en page mais ligne par ligne, pouvant ainsi engendrer de nombreux soucis de compréhension.</li>
-<li>Problèmes de mise à jour&nbsp;: une mise en page en tableaux est particulièrement fastidieuse à changer, de par la complexité de sa construction.</li>
-<li>Problèmes de poids&nbsp;: les tableaux alourdiront vos pages car ils nécessitent de nombreuses balises dans leur construction.</li>
-<li>Problèmes de sémantique&nbsp;: à l&#39;origine, ils sont créés pour présenter des données tabulaires, en les utilisant pour la mise en page d&#39;un site ils sortent de leur rôle initial.</li>
+  <li>Problèmes d’accessibilité : la lecture d’un tableau par un outil de lecture ne se fera pas de manière naturelle si il est utilisé pour une mise en page mais ligne par ligne, pouvant ainsi engendrer de nombreux soucis de compréhension.</li>
+  <li>Problèmes de mise à jour : une mise en page en tableaux est particulièrement fastidieuse à changer, de par la complexité de sa construction.</li>
+  <li>Problèmes de poids : les tableaux alourdiront vos pages car ils nécessitent de nombreuses balises dans leur construction.</li>
+  <li>Problèmes de sémantique : à l’origine, ils sont créés pour présenter des données tabulaires, en les utilisant pour la mise en page d’un site ils sortent de leur rôle initial.</li>
 </ul>
 
-<p>Mon point de vue est qu&#39;il faut limiter dans la mesure du possible l&#39;utilisation des tableaux à leur rôle premier, à savoir la présentation de données tabulaires.</p>
+<p>Mon point de vue est qu’il faut limiter dans la mesure du possible l’utilisation des tableaux à leur rôle premier, à savoir la présentation de données tabulaires.</p>
 
-<h3>Position absolue</h3>
+<h3 id="position-absolue">Position absolue</h3>
 
-<p>La valeur <code>absolute</code> de la propriété <code>position</code> est une autre alternative pour positionner un élément. Une fois de plus, reprenons la définition donnée par <a href="http://www.w3.org/TR/CSS2/visuren.html#absolute-positioning">w3.org&nbsp;<sup>EN</sup></a>&nbsp;:</p>
+<p>La valeur <code>absolute</code> de la propriété <code>position</code> est une autre alternative pour positionner un élément. Une fois de plus, reprenons la définition donnée par <a href="http://www.w3.org/TR/CSS2/visuren.html#absolute-positioning">w3.org <sup>EN</sup></a> :</p>
 
 <blockquote>
-<p>Dans le modèle de la position absolue, une boîte est retirée du flux normal de la page. Son contenu ne s&#39;écoulera pas &gt; autour des autres boîtes, mais pourra les masquer ou être masqué (<code>z-index</code>).</p>
+  <p>Dans le modèle de la position absolue, une boîte est retirée du flux normal de la page. Son contenu ne s’écoulera pas &gt; autour des autres boîtes, mais pourra les masquer ou être masqué (<code>z-index</code>).</p>
 </blockquote>
 
-<p>Un élément positionné en absolu se positionne par rapport à la page html par défaut, ou par rapport à son parent le plus proche, si celui-ci s&#39;est vu assigner une position autre que <code>static</code> (positionnement par défaut).</p>
+<p>Un élément positionné en absolu se positionne par rapport à la page html par défaut, ou par rapport à son parent le plus proche, si celui-ci s’est vu assigner une position autre que <code>static</code> (positionnement par défaut).</p>
 
-<h2>Position absolue&nbsp;: un exemple concret</h2>
+<h2 id="position-absoluenbsp-un-exemple-concret">Position absolue : un exemple concret</h2>
 
-<p>Cette méthode de positionnement semble être peu appréciée de la plupart des intégrateurs. En effet, des outils d&#39;édition de contenu de type WYSIWYG (Dreamweaver) l&#39;utilisent un peu à tort et à travers, lui attribuant par défaut certaines valeurs qui semblent en faire un outil peu flexible. Raphaël Goetter résume assez bien la chose dans son article <a href="http://www.alsacreations.com/actu/lire/104-rendez-moi-ma-position-absolue.html/">défendant la position absolue</a>.</p>
+<p>Cette méthode de positionnement semble être peu appréciée de la plupart des intégrateurs. En effet, des outils d’édition de contenu de type WYSIWYG (Dreamweaver) l’utilisent un peu à tort et à travers, lui attribuant par défaut certaines valeurs qui semblent en faire un outil peu flexible. Raphaël Goetter résume assez bien la chose dans son article <a href="http://www.alsacreations.com/actu/lire/104-rendez-moi-ma-position-absolue.html/">défendant la position absolue</a>.</p>
 
-<p>Pour ma part j&#39;ai très souvent recours à cette méthode pour deux raisons principales&nbsp;:</p>
+<p>Pour ma part j’ai très souvent recours à cette méthode pour deux raisons principales :</p>
 
 <ul>
-<li>Elle est simple à visualiser dans l&#39;espace (imaginons qu&#39;on cherche tout simplement à disposer divers éléments au sein d&#39;un même bloc).</li>
-<li>Elle génère à ma connaissance peu, voire pas de bugs, même sur d&#39;anciens navigateurs.</li>
+  <li>Elle est simple à visualiser dans l’espace (imaginons qu’on cherche tout simplement à disposer divers éléments au sein d’un même bloc).</li>
+  <li>Elle génère à ma connaissance peu, voire pas de bugs, même sur d’anciens navigateurs.</li>
 </ul>
 
-<p>Prenons un cas concret&nbsp;: nous souhaitons construire un bloc mettant en avant une offre promotionnelle pour la vente d&#39;un de mes splendides <a title="Visitez !&nbsp;:)" href="http://www.eskiiss.fr">dessins</a> avec image, titre, court descriptif, prix et <em>call to action</em>. Le résultat souhaité est visible ci-dessous.</p>
+<p>Prenons un cas concret : nous souhaitons construire un bloc mettant en avant une offre promotionnelle pour la vente d’un de mes splendides <a title="Visitez !&nbsp;:)" href="http://www.eskiiss.fr">dessins</a> avec image, titre, court descriptif, prix et <em>call to action</em>. Le résultat souhaité est visible ci-dessous.</p>
 
-<p><img src="/assets/img/wire-1.jpg" alt="wire 1" style="border: 1px solid #ddd; "/></p>
+<p><img src="/assets/img/wire-1.jpg" alt="wire 1" style="border: 1px solid #ddd; " /></p>
 
-<p>Nous avons donc 6 éléments&nbsp;: le bloc &quot;conteneur&quot; et les 5 éléments que nous souhaitons faire apparaître dedans&nbsp;:</p>
+<p>Nous avons donc 6 éléments : le bloc “conteneur” et les 5 éléments que nous souhaitons faire apparaître dedans :</p>
 
-<p><img src="/assets/img/wire-2.jpg" alt="wire 2" style="border: 1px solid #ddd;"" /></p>
+<p>&lt;img src=”/assets/img/wire-2.jpg” alt=”wire 2” style=”border: 1px solid #ddd;”” /&gt;</p>
 
-<p>Pour arriver à ce résultat, on utilisera le code suivant&nbsp;:</p>
+<p>Pour arriver à ce résultat, on utilisera le code suivant :</p>
 
 <pre><code class="css">#conteneur {
   width: 500px;
@@ -209,21 +208,20 @@
 </code></pre>
 
 <pre><code class="html">&lt;div id="conteneur"&gt;
-    &lt;img src="image.jpg" id="image" alt="image" /&gt;
-    &lt;h2&gt;Fan Art&nbsp;: the Wire&lt;/h2&gt;
-    &lt;p&gt;Découvrez à un tarif défiant toute concurrence etc.&lt;/p&gt;
-    &lt;span id="prix"&gt;2500 €&lt;/span&gt;
-    &lt;div id="commander"&gt;JE COMMANDE &gt;&lt;/div&gt;
+	&lt;img src="image.jpg" id="image" alt="image" /&gt;
+	&lt;h2&gt;Fan Art&nbsp;: the Wire&lt;/h2&gt;
+	&lt;p&gt;Découvrez à un tarif défiant toute concurrence etc.&lt;/p&gt;
+	&lt;span id="prix"&gt;2500 €&lt;/span&gt;
+	&lt;div id="commander"&gt;JE COMMANDE &gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
 <p>Comme vous pouvez le voir, le markup HTML est relativement simple, clair et ordonné dans sa présentation. On peut ensuite jouer avec les propriétés <code>top</code>, <code>bottom</code>, <code>left</code> et <code>right</code> pour déplacer les éléments et les ajuster comme on le souhaite.</p>
 
-<p>A mes yeux l&#39;utilisation de <code>position:absolute;</code> est la solution idéale dans ce cas précis, où le but est de disposer plusieurs éléments au sein d&#39;un contenu principal dont on connait les dimensions. Par ailleurs, j&#39;ai utilisé dans mon exemple des valeurs absolues pour dimensionner les éléments mais rien n&#39;empêche d&#39;utiliser des <code>em</code> ou même des pourcentages, permettant ainsi d&#39;adapter notre design en fonction des résolutions d&#39;écran.</p>
+<p>A mes yeux l’utilisation de <code>position:absolute;</code> est la solution idéale dans ce cas précis, où le but est de disposer plusieurs éléments au sein d’un contenu principal dont on connait les dimensions. Par ailleurs, j’ai utilisé dans mon exemple des valeurs absolues pour dimensionner les éléments mais rien n’empêche d’utiliser des <code>em</code> ou même des pourcentages, permettant ainsi d’adapter notre design en fonction des résolutions d’écran.</p>
 
-<h2>TL;DR&nbsp;: en conclusion...</h2>
-
-<p>Pour clore le sujet, il faut donc retenir qu&#39;il existe plusieurs moyens de positionner nos éléments au sein d&#39;une page, certains étant pour moi plus pertinents que d&#39;autres. La mise en page sous forme de tableaux parait aujourd&#39;hui plutôt obsolète, même si elle peut s&#39;avérer une solution viable dans certains cas précis. <code>Float</code> est une solution populaire, quoique victime de nombreux bugs. La propriété <code>display:inline-block</code> reste trop peu utilisée, malgré d&#39;évidents avantages en terme d&#39;utilisation. Enfin, la <code>position:absolute</code>, souvent décriée, reste un outil extrêmement intéressant qu&#39;il ne faudrait surtout pas enterrer trop vite.</p>
+<h2 id="tldrnbsp-en-conclusion">TL;DR : en conclusion…</h2>
+<p>Pour clore le sujet, il faut donc retenir qu’il existe plusieurs moyens de positionner nos éléments au sein d’une page, certains étant pour moi plus pertinents que d’autres. La mise en page sous forme de tableaux parait aujourd’hui plutôt obsolète, même si elle peut s’avérer une solution viable dans certains cas précis. <code>Float</code> est une solution populaire, quoique victime de nombreux bugs. La propriété <code>display:inline-block</code> reste trop peu utilisée, malgré d’évidents avantages en terme d’utilisation. Enfin, la <code>position:absolute</code>, souvent décriée, reste un outil extrêmement intéressant qu’il ne faudrait surtout pas enterrer trop vite.</p>
 
         </div>
       </article>
@@ -241,7 +239,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

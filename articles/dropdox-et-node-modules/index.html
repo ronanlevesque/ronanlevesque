@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Dropbox et node_modules" />
   <meta property="og:description" content="Un article sur les problèmes de synchronisation que j'ai pu rencontrer par le passé en utilisant Gulp et ses node_module sur Dropbox">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/dropdox-et-node-modules" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/dropdox-et-node-modules/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,23 +79,23 @@
         
         <div class="article-content">
         
-          <p>J&#39;utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j&#39;utilise. J&#39;ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux <code>node_modules</code>&nbsp;: ce dernier a tendance à se compter en milliers de fichiers, ce qui n&#39;est pas idéal pour la synchronisation de Dropbox.</p>
+          <p>J’utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j’utilise. J’ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux <code class="highlighter-rouge">node_modules</code> : ce dernier a tendance à se compter en milliers de fichiers, ce qui n’est pas idéal pour la synchronisation de Dropbox.</p>
 
-<hr>
+<hr />
 
-<p>Heureusement il est possible d&#39;ignorer ces fichiers; je vais vous montrer dans cet article comment faire.</p>
+<p>Heureusement il est possible d’ignorer ces fichiers; je vais vous montrer dans cet article comment faire.</p>
 
-<p>Mettons que ayez un projet Gulp avec son <code>package.json</code>. Une simple commande <code>npm install</code> permettra d&#39;installer tous les modules contenus dans <code>package.json</code>. Mais avant cela, rendez-vous dans le dossier du projet, là où se situe le fichier en question, et créez-y un dossier <code>node_modules</code> vide.</p>
+<p>Mettons que ayez un projet Gulp avec son <code class="highlighter-rouge">package.json</code>. Une simple commande <code class="highlighter-rouge">npm install</code> permettra d’installer tous les modules contenus dans <code class="highlighter-rouge">package.json</code>. Mais avant cela, rendez-vous dans le dossier du projet, là où se situe le fichier en question, et créez-y un dossier <code class="highlighter-rouge">node_modules</code> vide.</p>
 
-<p>Ensuite, dans les préférences de Dropdox, direction <code>Compte &gt; Synchronisation sélective</code> et décochez le dossier <code>node_modules</code>&nbsp;:</p>
+<p>Ensuite, dans les préférences de Dropdox, direction <code class="highlighter-rouge">Compte &gt; Synchronisation sélective</code> et décochez le dossier <code class="highlighter-rouge">node_modules</code> :</p>
 
-<p><img src="/assets/img/screen-dropbox-1.png" alt="Préférences Dropbox" style="border: none;"></p>
+<p><img src="/assets/img/screen-dropbox-1.png" alt="Préférences Dropbox" style="border: none;" /></p>
 
-<p>Celui-ci va être supprimé du dossier dans lequel il se trouvait. Il ne vous reste plus qu&#39;à lancer votre <code>npm install</code>; lorsque ceci est fait, le dossier node_modules apparaîtra comme ignoré par Dropbox&nbsp;:</p>
+<p>Celui-ci va être supprimé du dossier dans lequel il se trouvait. Il ne vous reste plus qu’à lancer votre <code class="highlighter-rouge">npm install</code>; lorsque ceci est fait, le dossier node_modules apparaîtra comme ignoré par Dropbox :</p>
 
-<p><img src="/assets/img/screen-node-modules.png" alt="Dossier node_modules" style="border: none;"></p>
+<p><img src="/assets/img/screen-node-modules.png" alt="Dossier node_modules" style="border: none;" /></p>
 
-<p>La démarche peut sembler un brin fastidieuse, mais c&#39;est à ma connaissance la seule solution pour éviter d&#39;avoir à synchroniser à chaque fois vos <code>node_modules</code>.</p>
+<p>La démarche peut sembler un brin fastidieuse, mais c’est à ma connaissance la seule solution pour éviter d’avoir à synchroniser à chaque fois vos <code class="highlighter-rouge">node_modules</code>.</p>
 
         </div>
       </article>
@@ -113,7 +113,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 

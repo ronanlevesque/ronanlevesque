@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="CSS et notation BEM" />
   <meta property="og:description" content="Décryptage de la méthode d'écriture BEM en CSS">
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/css-notation-bem" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/css-notation-bem/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link href="/assets/css/styles-bf683fca1f4676a769577d8179533ed3.css" rel="stylesheet">
@@ -79,20 +79,20 @@
         
         <div class="article-content">
         
-          <p>Un des gros points noirs du CSS est la complexité que sa maintenance peut parfois engendrer. Cela s&#39;avère surtout vrai pour de gros sites, pour lesquels éditer un simple style peut vite tourner au cauchemar, au risque de casser entièrement votre mise en page. C&#39;est là que des concepts tels que BEM interviennent...</p>
+          <p>Un des gros points noirs du CSS est la complexité que sa maintenance peut parfois engendrer. Cela s’avère surtout vrai pour de gros sites, pour lesquels éditer un simple style peut vite tourner au cauchemar, au risque de casser entièrement votre mise en page. C’est là que des concepts tels que BEM interviennent…</p>
 
-<hr>
+<hr />
 
 <h2>Le principe</h2>
 
-<p><a href="http://bem.info/method/">BEM</a> est une méthodologie mise au point par <a href="http://www.yandex.com/">Yandex</a>. &quot;BEM&quot; signifie <em>Block, Element, Modifier</em>. l&#39;idée derrière cette méthodologie est de faciliter la lecture (et la ré-usabilité) du code par d&#39;autres développeurs. BEM met l&#39;accent sur la relation qui existe entre différents blocs et éléments. La convention de nommage que j&#39;utilise est la suivante&nbsp;:</p>
+<p><a href="http://bem.info/method/">BEM</a> est une méthodologie mise au point par <a href="http://www.yandex.com/">Yandex</a>. “BEM” signifie <em>Block, Element, Modifier</em>. l’idée derrière cette méthodologie est de faciliter la lecture (et la ré-usabilité) du code par d’autres développeurs. BEM met l’accent sur la relation qui existe entre différents blocs et éléments. La convention de nommage que j’utilise est la suivante :</p>
 
 <pre><code class="css">.block{}
 .block__element{}
 .block--modifier{}
 </code></pre>
 
-<p>La notation originale proposée par Yandex était différente, mais je préfère celle-ci (utilisée par <a href="http://csswizardry.com/">Harry Roberts</a>)&nbsp;:</p>
+<p>La notation originale proposée par Yandex était différente, mais je préfère celle-ci (utilisée par <a href="http://csswizardry.com/">Harry Roberts</a>) :</p>
 
 <ul>
 <li><code>.block</code> sera le niveau le plus haut d'un composant ou d'un module</li>
@@ -100,7 +100,7 @@
 <li><code>.block--modifier</code> sera une version différente de <code>.block</code></li>
 </ul>
 
-<p>Comme je le disais, l&#39;idée est de concrétiser la relation qui va exister entre différents éléments. Prenons l&#39;exemple d&#39;un bloc d&#39;informations contenant un titre, une image présentant différentes variations de style et un paragraphe de texte. Avec BEM, cela va donner&nbsp;:</p>
+<p>Comme je le disais, l’idée est de concrétiser la relation qui va exister entre différents éléments. Prenons l’exemple d’un bloc d’informations contenant un titre, une image présentant différentes variations de style et un paragraphe de texte. Avec BEM, cela va donner :</p>
 
 <pre><code class="css">.bloc-infos
 .bloc-infos__titre
@@ -110,29 +110,29 @@
 .bloc-infos__texte
 </code></pre>
 
-<p>Ici il est facile d&#39;interpréter que <code>.bloc-infos__titre</code>, <code>.bloc-infos__img</code> et <code>.bloc-infos__texte</code> sont des éléments descendants de <code>.bloc-infos</code> et que <code>.bloc-infos__img--var-1</code> et <code>.bloc-infos__img--var-2</code> sont des variations de <code>.bloc-infos__img</code>. Rien qu&#39;en changeant le nommage des classes, les relations entre les différents éléments sont maintenant évidentes.</p>
+<p>Ici il est facile d’interpréter que <code>.bloc-infos\_\_titre</code>, <code>.bloc-infos\_\_img</code> et <code>.bloc-infos\_\_texte</code> sont des éléments descendants de <code>.bloc-infos</code> et que <code>.bloc-infos\_\_img--var-1</code> et <code>.bloc-infos\_\_img--var-2</code> sont des variations de <code>.bloc-infos\_\_img</code>. Rien qu’en changeant le nommage des classes, les relations entre les différents éléments sont maintenant évidentes.</p>
 
 <h2>Les éventuelles limites de BEM </h2>
 
 <h3>Un code "moche"</h3>
 
-<p>Un argument récurrent semble être qu&#39;utiliser cette notation va produire un code inesthétique. Mais comme le dit très justement Harry Roberts dans son <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">article explicatif&nbsp;<sup>EN</sup></a>&nbsp;:</p>
+<p>Un argument récurrent semble être qu’utiliser cette notation va produire un code inesthétique. Mais comme le dit très justement Harry Roberts dans son <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">article explicatif <sup>EN</sup></a> :</p>
 
 <blockquote>
-<p>J&#39;affirme que que si vous fuyez le code basé simplement sur son apparence, alors vous ratez souvent l&#39;essentiel.</p>
+  <p>J’affirme que que si vous fuyez le code basé simplement sur son apparence, alors vous ratez souvent l’essentiel.</p>
 </blockquote>
 
-<p>En effet, le code produit sera plus bizarre que d&#39;habitude, mais cela parait négligeable au vu des bénéfices qu&#39;il apporte.</p>
+<p>En effet, le code produit sera plus bizarre que d’habitude, mais cela parait négligeable au vu des bénéfices qu’il apporte.</p>
 
 <h3>Une complexité inutile</h3>
 
-<p>Il peut paraître bien fastidieux de nommer l&#39;ensemble de nos éléments HTML selon cette méthode, créant ainsi une complexité qui n&#39;est pas forcément nécessaire. En fait, c&#39;est à chaque personne d&#39;ajuster sa notation en fonction de sa propre logique. Par exemple, certains éléments appartenant à un bloc n&#39;en seront pas dépendants, la notation BEM ne sera donc pas nécessaire pour eux.</p>
+<p>Il peut paraître bien fastidieux de nommer l’ensemble de nos éléments HTML selon cette méthode, créant ainsi une complexité qui n’est pas forcément nécessaire. En fait, c’est à chaque personne d’ajuster sa notation en fonction de sa propre logique. Par exemple, certains éléments appartenant à un bloc n’en seront pas dépendants, la notation BEM ne sera donc pas nécessaire pour eux.</p>
 
 <h2>Conclusion</h2>
 
-<p>BEM est un outil de notation extrêmement utile, favorisant la ré-usabilité et la clarté du code, avec peu ou pas d&#39;inconvénients. Pour l&#39;instant, je ne l&#39;ai testé que sur de petits projets, mais il ne fait aucun doute qu&#39;il montrera tout son potentiel sur un projet de grande envergure.</p>
+<p>BEM est un outil de notation extrêmement utile, favorisant la ré-usabilité et la clarté du code, avec peu ou pas d’inconvénients. Pour l’instant, je ne l’ai testé que sur de petits projets, mais il ne fait aucun doute qu’il montrera tout son potentiel sur un projet de grande envergure.</p>
 
-<hr>
+<hr />
 
 <p class="info">Cet article a été fortement influencé par l'article de Harry Roberts intitulé <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding – getting your head 'round BEM syntax&nbsp;<sup>EN</sup></a>, si vous êtes un peu anglophone je conseille vivement sa lecture.</p>
 
@@ -152,7 +152,7 @@
     </div>
   </div>
 
-  <script src="/assets/js/bundle-26af3eb8a5797a4e2bc763dd2290e385.js"></script>
+  <script src="/assets/js/bundle-cef23fe75f97853f253b0516f0223a34.js"></script>
   </body>
 </html>
 
