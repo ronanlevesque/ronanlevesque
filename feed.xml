@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.0">Jekyll</generator><link href="http://ronanlevesque.fr/feed.xml" rel="self" type="application/atom+xml" /><link href="http://ronanlevesque.fr/" rel="alternate" type="text/html" /><updated>2016-03-15T12:09:10+01:00</updated><id>http://ronanlevesque.fr/</id><title>Ronan Levesque - Frontend &amp; Webdesign</title><subtitle>Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...</subtitle><entry><title>Nommage et architecture CSS</title><link href="http://ronanlevesque.fr/articles/nommage-et-architecture-css/" rel="alternate" type="text/html" title="Nommage et architecture CSS" /><published>2015-08-19T00:00:00+02:00</published><updated>2015-08-19T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/nommage-et-architecture-css</id><content type="html" xml:base="http://ronanlevesque.fr/articles/nommage-et-architecture-css/">&lt;p&gt;A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator>
+<link href="http://ronanlevesque.fr/feed.xml" rel="self" type="application/atom+xml" />
+<link href="http://ronanlevesque.fr/" rel="alternate" type="text/html" />
+<updated>2016-03-20T16:49:54+01:00</updated>
+<id>http://ronanlevesque.fr/</id>
+<title>Ronan Levesque - Frontend &amp; Webdesign</title>
+<subtitle>Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...</subtitle>
+<entry>
+<title>Nommage et architecture CSS</title>
+<link href="http://ronanlevesque.fr/articles/nommage-et-architecture-css/" rel="alternate" type="text/html" title="Nommage et architecture CSS" />
+<published>2015-08-19T00:00:00+02:00</published>
+<updated>2015-08-19T00:00:00+02:00</updated>
+<id>http://ronanlevesque.fr/articles/nommage-et-architecture-css</id>
+<content type="html" xml:base="http://ronanlevesque.fr/articles/nommage-et-architecture-css/">&lt;p&gt;A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -74,7 +89,18 @@
 
 &lt;p&gt;Pour contourner – entre autres – ces problèmes, &lt;a href=&quot;http://glenmaddern.com/articles/css-modules&quot;&gt;Glenn Maddern&lt;/a&gt; a créé un système de &lt;a href=&quot;http://glenmaddern.com/articles/css-modules&quot;&gt;modules CSS&lt;/a&gt;. Grâce à du JS, les styles sont maintenus à leur création dans un &lt;em&gt;scope&lt;/em&gt; local qui permet de résoudre les questions de nommage et d’héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d’en rebuter certains.&lt;/p&gt;
 
-&lt;p&gt;Reste a espérer qu’un standard verra enfin le jour pour corriger ce casse-tête…&lt;/p&gt;</content><category term="css" /><summary>A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.</summary></entry><entry><title>Une gestion responsable des webfonts</title><link href="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/" rel="alternate" type="text/html" title="Une gestion responsable des webfonts" /><published>2015-06-25T00:00:00+02:00</published><updated>2015-06-25T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts</id><content type="html" xml:base="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/">&lt;p&gt;Jusqu’à très récemment, j’avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l’apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j’ai mise en place dernièrement, et dont je suis pleinement satisfait.&lt;/p&gt;
+&lt;p&gt;Reste a espérer qu’un standard verra enfin le jour pour corriger ce casse-tête…&lt;/p&gt;
+</content>
+<category term="css" />
+<summary>A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.</summary>
+</entry>
+<entry>
+<title>Une gestion responsable des webfonts</title>
+<link href="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/" rel="alternate" type="text/html" title="Une gestion responsable des webfonts" />
+<published>2015-06-25T00:00:00+02:00</published>
+<updated>2015-06-25T00:00:00+02:00</updated>
+<id>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts</id>
+<content type="html" xml:base="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/">&lt;p&gt;Jusqu’à très récemment, j’avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l’apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j’ai mise en place dernièrement, et dont je suis pleinement satisfait.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -138,7 +164,20 @@
 
 &lt;h2 id=&quot;une-future-alternative&quot;&gt;Une future alternative&lt;/h2&gt;
 
-&lt;p&gt;L’approche décrite ici me paraît pour l’instant la plus efficace, en attendant une meilleure solution… Celle-ci pourrait bien venir de la proposition &lt;em&gt;CSS font-rendering&lt;/em&gt; dont le but est de contrôler directement via CSS le comportement d’affichage de nos &lt;em&gt;webfonts&lt;/em&gt;. Je vous invite à consulter son &lt;a href=&quot;https://github.com/KenjiBaheux/css-font-rendering&quot;&gt;repo Github&lt;/a&gt; pour de plus amples informations.&lt;/p&gt;</content><category term="tutoriels" /><category term="javascript" /><category term="html" /><summary>Jusqu’à très récemment, j’avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l’apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j’ai mise en place dernièrement, et dont je suis pleinement satisfait.</summary></entry><entry><title>Les principales nouveautés de ES6</title><link href="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/" rel="alternate" type="text/html" title="Les principales nouveautés de ES6" /><published>2015-04-27T00:00:00+02:00</published><updated>2015-04-27T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6</id><content type="html" xml:base="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/">&lt;p&gt;JavaScript s’apprête à vivre une petite révolution avec l’arrivée d’ES6, la prochaine version du standard ECMAScript. Et pour cause : c’est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en &lt;a href=&quot;http://kangax.github.io/compat-table/es6/&quot;&gt;cours d’implémentation&lt;/a&gt; dans les différents moteurs JS.&lt;/p&gt;
+&lt;p&gt;L’approche décrite ici me paraît pour l’instant la plus efficace, en attendant une meilleure solution… Celle-ci pourrait bien venir de la proposition &lt;em&gt;CSS font-rendering&lt;/em&gt; dont le but est de contrôler directement via CSS le comportement d’affichage de nos &lt;em&gt;webfonts&lt;/em&gt;. Je vous invite à consulter son &lt;a href=&quot;https://github.com/KenjiBaheux/css-font-rendering&quot;&gt;repo Github&lt;/a&gt; pour de plus amples informations.&lt;/p&gt;
+</content>
+<category term="tutoriels" />
+<category term="javascript" />
+<category term="html" />
+<summary>Jusqu’à très récemment, j’avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l’apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j’ai mise en place dernièrement, et dont je suis pleinement satisfait.</summary>
+</entry>
+<entry>
+<title>Les principales nouveautés de ES6</title>
+<link href="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/" rel="alternate" type="text/html" title="Les principales nouveautés de ES6" />
+<published>2015-04-27T00:00:00+02:00</published>
+<updated>2015-04-27T00:00:00+02:00</updated>
+<id>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6</id>
+<content type="html" xml:base="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/">&lt;p&gt;JavaScript s’apprête à vivre une petite révolution avec l’arrivée d’ES6, la prochaine version du standard ECMAScript. Et pour cause : c’est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en &lt;a href=&quot;http://kangax.github.io/compat-table/es6/&quot;&gt;cours d’implémentation&lt;/a&gt; dans les différents moteurs JS.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -321,7 +360,18 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;autres&quot;&gt;Autres&lt;/h2&gt;
 
-&lt;p&gt;J’ai couvert ici les nouveautés qui paraissaient importantes à mes yeux, mais il en existe d’autres : promises, symboles, WeakMaps et WeakSets… Pour une liste exhaustive de tous les ajouts, je vous invite à consulter &lt;a href=&quot;https://github.com/lukehoban/es6features&quot;&gt;es6-features&lt;/a&gt; sur Github.&lt;/p&gt;</content><category term="javascript" /><summary>JavaScript s’apprête à vivre une petite révolution avec l’arrivée d’ES6, la prochaine version du standard ECMAScript. Et pour cause : c’est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en cours d’implémentation dans les différents moteurs JS.</summary></entry><entry><title>Dropbox et node_modules</title><link href="http://ronanlevesque.fr/articles/dropdox-et-node-modules/" rel="alternate" type="text/html" title="Dropbox et node_modules" /><published>2015-04-02T00:00:00+02:00</published><updated>2015-04-02T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/dropdox-et-node-modules</id><content type="html" xml:base="http://ronanlevesque.fr/articles/dropdox-et-node-modules/">&lt;p&gt;J’utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j’utilise. J’ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; : ce dernier a tendance à se compter en milliers de fichiers, ce qui n’est pas idéal pour la synchronisation de Dropbox.&lt;/p&gt;
+&lt;p&gt;J’ai couvert ici les nouveautés qui paraissaient importantes à mes yeux, mais il en existe d’autres : promises, symboles, WeakMaps et WeakSets… Pour une liste exhaustive de tous les ajouts, je vous invite à consulter &lt;a href=&quot;https://github.com/lukehoban/es6features&quot;&gt;es6-features&lt;/a&gt; sur Github.&lt;/p&gt;
+</content>
+<category term="javascript" />
+<summary>JavaScript s’apprête à vivre une petite révolution avec l’arrivée d’ES6, la prochaine version du standard ECMAScript. Et pour cause : c’est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en cours d’implémentation dans les différents moteurs JS.</summary>
+</entry>
+<entry>
+<title>Dropbox et node_modules</title>
+<link href="http://ronanlevesque.fr/articles/dropdox-et-node-modules/" rel="alternate" type="text/html" title="Dropbox et node_modules" />
+<published>2015-04-02T00:00:00+02:00</published>
+<updated>2015-04-02T00:00:00+02:00</updated>
+<id>http://ronanlevesque.fr/articles/dropdox-et-node-modules</id>
+<content type="html" xml:base="http://ronanlevesque.fr/articles/dropdox-et-node-modules/">&lt;p&gt;J’utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j’utilise. J’ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; : ce dernier a tendance à se compter en milliers de fichiers, ce qui n’est pas idéal pour la synchronisation de Dropbox.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -337,7 +387,18 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/screen-node-modules.png&quot; alt=&quot;Dossier node_modules&quot; style=&quot;border: none;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;La démarche peut sembler un brin fastidieuse, mais c’est à ma connaissance la seule solution pour éviter d’avoir à synchroniser à chaque fois vos &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;.&lt;/p&gt;</content><category term="outils" /><summary>J’utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j’utilise. J’ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux node_modules : ce dernier a tendance à se compter en milliers de fichiers, ce qui n’est pas idéal pour la synchronisation de Dropbox.</summary></entry><entry><title>Mettre ses assets en cache avec Jekyll</title><link href="http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/" rel="alternate" type="text/html" title="Mettre ses assets en cache avec Jekyll" /><published>2014-12-17T00:00:00+01:00</published><updated>2014-12-17T00:00:00+01:00</updated><id>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll</id><content type="html" xml:base="http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/">&lt;p&gt;Je partage aujourd’hui une solution assez simple que l’on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l’on utilise soient correctement mis à jour.&lt;/p&gt;
+&lt;p&gt;La démarche peut sembler un brin fastidieuse, mais c’est à ma connaissance la seule solution pour éviter d’avoir à synchroniser à chaque fois vos &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;.&lt;/p&gt;
+</content>
+<category term="outils" />
+<summary>J’utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j’utilise. J’ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux node_modules : ce dernier a tendance à se compter en milliers de fichiers, ce qui n’est pas idéal pour la synchronisation de Dropbox.</summary>
+</entry>
+<entry>
+<title>Mettre ses assets en cache avec Jekyll</title>
+<link href="http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/" rel="alternate" type="text/html" title="Mettre ses assets en cache avec Jekyll" />
+<published>2014-12-17T00:00:00+01:00</published>
+<updated>2014-12-17T00:00:00+01:00</updated>
+<id>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll</id>
+<content type="html" xml:base="http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/">&lt;p&gt;Je partage aujourd’hui une solution assez simple que l’on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l’on utilise soient correctement mis à jour.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -373,7 +434,19 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Le premier lien est le fichier source, le deuxième est le fichier de destination. Le code généré donne ça :&lt;/p&gt;
 
-&lt;pre class=&quot;html&quot;&gt;&lt;code&gt;&amp;lt;link href=&quot;/assets/css/fox-86e4c5e39ca8a41719996d783a87c702.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="divers" /><category term="outils" /><summary>Je partage aujourd’hui une solution assez simple que l’on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l’on utilise soient correctement mis à jour.</summary></entry><entry><title>Animer ses SVG avec Snap.svg</title><link href="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/" rel="alternate" type="text/html" title="Animer ses SVG avec Snap.svg" /><published>2014-07-21T00:00:00+02:00</published><updated>2014-07-21T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg</id><content type="html" xml:base="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/">&lt;p&gt;Ces derniers temps, j’ai un peu expérimenté l’animation de SVG. Mon premier essai a été cet &lt;a href=&quot;http://codepen.io/eskiiss/full/kFphn&quot;&gt;oiseau&lt;/a&gt;, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j’ai trouvée est &lt;a href=&quot;http://snapsvg.io/&quot;&gt;Snap.svg&lt;/a&gt;. Je vais vous expliquer le processus en détails.&lt;/p&gt;
+&lt;pre class=&quot;html&quot;&gt;&lt;code&gt;&amp;lt;link href=&quot;/assets/css/fox-86e4c5e39ca8a41719996d783a87c702.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+<category term="divers" />
+<category term="outils" />
+<summary>Je partage aujourd’hui une solution assez simple que l’on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l’on utilise soient correctement mis à jour.</summary>
+</entry>
+<entry>
+<title>Animer ses SVG avec Snap.svg</title>
+<link href="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/" rel="alternate" type="text/html" title="Animer ses SVG avec Snap.svg" />
+<published>2014-07-21T00:00:00+02:00</published>
+<updated>2014-07-21T00:00:00+02:00</updated>
+<id>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg</id>
+<content type="html" xml:base="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/">&lt;p&gt;Ces derniers temps, j’ai un peu expérimenté l’animation de SVG. Mon premier essai a été cet &lt;a href=&quot;http://codepen.io/eskiiss/full/kFphn&quot;&gt;oiseau&lt;/a&gt;, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j’ai trouvée est &lt;a href=&quot;http://snapsvg.io/&quot;&gt;Snap.svg&lt;/a&gt;. Je vais vous expliquer le processus en détails.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -558,7 +631,19 @@ smiley.click(function() {
 
 &lt;script src=&quot;/demos/snapsvg.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;p class=&quot;demo&quot;&gt;&lt;a href=&quot;http://codepen.io/eskiiss/full/gxqsr&quot;&gt;Voir la démo&lt;/a&gt;&lt;/p&gt;</content><category term="svg" /><category term="tutoriels" /><summary>Ces derniers temps, j’ai un peu expérimenté l’animation de SVG. Mon premier essai a été cet oiseau, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j’ai trouvée est Snap.svg. Je vais vous expliquer le processus en détails.</summary></entry><entry><title>Abandonner le support d’IE8</title><link href="http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/" rel="alternate" type="text/html" title="Abandonner le support d&#39;IE8" /><published>2014-06-20T00:00:00+02:00</published><updated>2014-06-20T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8</id><content type="html" xml:base="http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/">&lt;p&gt;La décision de Microsoft &lt;a href=&quot;http://windows.microsoft.com/fr-fr/windows/end-support-help&quot;&gt;de ne plus assurer le support d’XP&lt;/a&gt; a eu pour conséquence de sonner le glas définitif d’Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d’éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d’autres navigateurs. Pour nous, webdesigners et développeurs, c’est un vrai soulagement et surtout un gros pas en avant…&lt;/p&gt;
+&lt;p class=&quot;demo&quot;&gt;&lt;a href=&quot;http://codepen.io/eskiiss/full/gxqsr&quot;&gt;Voir la démo&lt;/a&gt;&lt;/p&gt;
+</content>
+<category term="svg" />
+<category term="tutoriels" />
+<summary>Ces derniers temps, j’ai un peu expérimenté l’animation de SVG. Mon premier essai a été cet oiseau, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j’ai trouvée est Snap.svg. Je vais vous expliquer le processus en détails.</summary>
+</entry>
+<entry>
+<title>Abandonner le support d’IE8</title>
+<link href="http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/" rel="alternate" type="text/html" title="Abandonner le support d&#39;IE8" />
+<published>2014-06-20T00:00:00+02:00</published>
+<updated>2014-06-20T00:00:00+02:00</updated>
+<id>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8</id>
+<content type="html" xml:base="http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/">&lt;p&gt;La décision de Microsoft &lt;a href=&quot;http://windows.microsoft.com/fr-fr/windows/end-support-help&quot;&gt;de ne plus assurer le support d’XP&lt;/a&gt; a eu pour conséquence de sonner le glas définitif d’Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d’éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d’autres navigateurs. Pour nous, webdesigners et développeurs, c’est un vrai soulagement et surtout un gros pas en avant…&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -590,7 +675,19 @@ smiley.click(function() {
 
 &lt;hr /&gt;
 
-&lt;p class=&quot;info&quot;&gt;Mise à jour (17/10/2015)&amp;nbsp;: depuis j&#39;ai non seulement abandonné le support d&#39;IE8, mais aussi celui d&#39;IE9...&lt;/p&gt;</content><category term="ux" /><category term="divers" /><summary>La décision de Microsoft de ne plus assurer le support d’XP a eu pour conséquence de sonner le glas définitif d’Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d’éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d’autres navigateurs. Pour nous, webdesigners et développeurs, c’est un vrai soulagement et surtout un gros pas en avant…</summary></entry><entry><title>Responsive design : adoptez un process intelligent !</title><link href="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/" rel="alternate" type="text/html" title="Responsive design&amp;nbsp;: adoptez un process intelligent !" /><published>2014-03-13T00:00:00+01:00</published><updated>2014-03-13T00:00:00+01:00</updated><id>http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent</id><content type="html" xml:base="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/">&lt;p&gt;Ce n’est plus vraiment une nouveauté : le responsive design est la tendance &lt;em&gt;hype&lt;/em&gt; du moment. De plus en plus d’acteurs du web ont réalisé qu’il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n’est pas toujours le cas.&lt;/p&gt;
+&lt;p class=&quot;info&quot;&gt;Mise à jour (17/10/2015)&amp;nbsp;: depuis j&#39;ai non seulement abandonné le support d&#39;IE8, mais aussi celui d&#39;IE9...&lt;/p&gt;
+</content>
+<category term="ux" />
+<category term="divers" />
+<summary>La décision de Microsoft de ne plus assurer le support d’XP a eu pour conséquence de sonner le glas définitif d’Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d’éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d’autres navigateurs. Pour nous, webdesigners et développeurs, c’est un vrai soulagement et surtout un gros pas en avant…</summary>
+</entry>
+<entry>
+<title>Responsive design : adoptez un process intelligent !</title>
+<link href="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/" rel="alternate" type="text/html" title="Responsive design&amp;nbsp;: adoptez un process intelligent !" />
+<published>2014-03-13T00:00:00+01:00</published>
+<updated>2014-03-13T00:00:00+01:00</updated>
+<id>http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent</id>
+<content type="html" xml:base="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/">&lt;p&gt;Ce n’est plus vraiment une nouveauté : le responsive design est la tendance &lt;em&gt;hype&lt;/em&gt; du moment. De plus en plus d’acteurs du web ont réalisé qu’il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n’est pas toujours le cas.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -639,7 +736,18 @@ smiley.click(function() {
 
 &lt;p&gt;Le responsive design doit être réfléchi en amont pour pouvoir être efficient. Il est impératif que nos processes s’adaptent à cette nouvelle façon de réfléchir, &lt;strong&gt;et non l’inverse&lt;/strong&gt;. Dans le cas contraire, on se retrouvera avec des sites plus lourds que nécessaires, difficilement modifiables, fonctionnant grâce à des bidouillages bancals.&lt;/p&gt;
 
-&lt;p&gt;Pour une description complète d’un process responsive, je vous invite à consulter &lt;a href=&quot;http://responsiveprocess.com/&quot;&gt;responsiveprocess.com&lt;/a&gt;.&lt;/p&gt;</content><category term="rwd" /><summary>Ce n’est plus vraiment une nouveauté : le responsive design est la tendance hype du moment. De plus en plus d’acteurs du web ont réalisé qu’il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n’est pas toujours le cas.</summary></entry><entry><title>Ma configuration Gulp</title><link href="http://ronanlevesque.fr/articles/ma-configuration-gulp/" rel="alternate" type="text/html" title="Ma configuration Gulp" /><published>2014-02-24T00:00:00+01:00</published><updated>2014-02-24T00:00:00+01:00</updated><id>http://ronanlevesque.fr/articles/ma-configuration-gulp</id><content type="html" xml:base="http://ronanlevesque.fr/articles/ma-configuration-gulp/">&lt;p&gt;Quand &lt;a href=&quot;http://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt; a commencé à faire parler de lui, j’ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l’outil idéal pour l’automatisation de mes tâches front-end; j’ai d’ailleurs très vite créé ma &lt;a href=&quot;/fox-bp&quot;&gt;boilerplate&lt;/a&gt; suite à ça. Mais la donne a un peu changé avec l’arrivée d’un petit nouveau : &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Pour une description complète d’un process responsive, je vous invite à consulter &lt;a href=&quot;http://responsiveprocess.com/&quot;&gt;responsiveprocess.com&lt;/a&gt;.&lt;/p&gt;
+</content>
+<category term="rwd" />
+<summary>Ce n’est plus vraiment une nouveauté : le responsive design est la tendance hype du moment. De plus en plus d’acteurs du web ont réalisé qu’il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n’est pas toujours le cas.</summary>
+</entry>
+<entry>
+<title>Ma configuration Gulp</title>
+<link href="http://ronanlevesque.fr/articles/ma-configuration-gulp/" rel="alternate" type="text/html" title="Ma configuration Gulp" />
+<published>2014-02-24T00:00:00+01:00</published>
+<updated>2014-02-24T00:00:00+01:00</updated>
+<id>http://ronanlevesque.fr/articles/ma-configuration-gulp</id>
+<content type="html" xml:base="http://ronanlevesque.fr/articles/ma-configuration-gulp/">&lt;p&gt;Quand &lt;a href=&quot;http://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt; a commencé à faire parler de lui, j’ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l’outil idéal pour l’automatisation de mes tâches front-end; j’ai d’ailleurs très vite créé ma &lt;a href=&quot;/fox-bp&quot;&gt;boilerplate&lt;/a&gt; suite à ça. Mais la donne a un peu changé avec l’arrivée d’un petit nouveau : &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -736,7 +844,20 @@ gulp.task(&#39;watch&#39;, function () {
 // Tâche par défaut
 gulp.task(&#39;default&#39;, [&#39;connect&#39;, &#39;watch&#39;]);&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Si jamais vous voyez des moyens de l’optimiser ou de l’améliorer, n’hésitez pas à m’en faire part sur Twitter.&lt;/p&gt;</content><category term="tutoriels" /><category term="outils" /><category term="javascript" /><summary>Quand Grunt a commencé à faire parler de lui, j’ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l’outil idéal pour l’automatisation de mes tâches front-end; j’ai d’ailleurs très vite créé ma boilerplate suite à ça. Mais la donne a un peu changé avec l’arrivée d’un petit nouveau : Gulp.</summary></entry><entry><title>Des colonnes de même taille en Vanilla JS</title><link href="http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/" rel="alternate" type="text/html" title="Des colonnes de même taille en Vanilla JS" /><published>2014-02-04T00:00:00+01:00</published><updated>2014-02-04T00:00:00+01:00</updated><id>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js</id><content type="html" xml:base="http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/">&lt;p&gt;CSS3 a apporté son lot de nouveautés, parmi lesquelles &lt;code class=&quot;highlighter-rouge&quot;&gt;flexbox&lt;/code&gt;, un modèle qui propose de &lt;a href=&quot;http://philipwalton.github.io/solved-by-flexbox/&quot;&gt;nombreuses solutions&lt;/a&gt; de mise en page dont celle qui nous intéresse aujourd’hui : la création de colonnes de hauteur égale. Malheureusement l’utilisation de &lt;code class=&quot;highlighter-rouge&quot;&gt;flexbox&lt;/code&gt; en production est encore &lt;a href=&quot;http://caniuse.com/flexbox&quot;&gt;mitigée&lt;/a&gt;. Du coup, la meilleure alternative reste pour l’instant le recours au JavaScript.&lt;/p&gt;
+&lt;p&gt;Si jamais vous voyez des moyens de l’optimiser ou de l’améliorer, n’hésitez pas à m’en faire part sur Twitter.&lt;/p&gt;
+</content>
+<category term="tutoriels" />
+<category term="outils" />
+<category term="javascript" />
+<summary>Quand Grunt a commencé à faire parler de lui, j’ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l’outil idéal pour l’automatisation de mes tâches front-end; j’ai d’ailleurs très vite créé ma boilerplate suite à ça. Mais la donne a un peu changé avec l’arrivée d’un petit nouveau : Gulp.</summary>
+</entry>
+<entry>
+<title>Des colonnes de même taille en Vanilla JS</title>
+<link href="http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/" rel="alternate" type="text/html" title="Des colonnes de même taille en Vanilla JS" />
+<published>2014-02-04T00:00:00+01:00</published>
+<updated>2014-02-04T00:00:00+01:00</updated>
+<id>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js</id>
+<content type="html" xml:base="http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/">&lt;p&gt;CSS3 a apporté son lot de nouveautés, parmi lesquelles &lt;code class=&quot;highlighter-rouge&quot;&gt;flexbox&lt;/code&gt;, un modèle qui propose de &lt;a href=&quot;http://philipwalton.github.io/solved-by-flexbox/&quot;&gt;nombreuses solutions&lt;/a&gt; de mise en page dont celle qui nous intéresse aujourd’hui : la création de colonnes de hauteur égale. Malheureusement l’utilisation de &lt;code class=&quot;highlighter-rouge&quot;&gt;flexbox&lt;/code&gt; en production est encore &lt;a href=&quot;http://caniuse.com/flexbox&quot;&gt;mitigée&lt;/a&gt;. Du coup, la meilleure alternative reste pour l’instant le recours au JavaScript.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -805,4 +926,10 @@ gulp.task(&#39;default&#39;, [&#39;connect&#39;, &#39;watch&#39;]);&lt;/code&gt;
 
 &lt;hr /&gt;
 
-&lt;p class=&quot;info&quot;&gt;Mise à jour (29/10/2015) : le support de flexbox ayant beaucoup &lt;a href=&quot;http://caniuse.com/#search=flexbox&quot;&gt;évolué&lt;/a&gt;, plus besoin de recourir à du JS pour ça.&lt;/p&gt;</content><category term="javascript" /><category term="tutoriels" /><summary>CSS3 a apporté son lot de nouveautés, parmi lesquelles flexbox, un modèle qui propose de nombreuses solutions de mise en page dont celle qui nous intéresse aujourd’hui : la création de colonnes de hauteur égale. Malheureusement l’utilisation de flexbox en production est encore mitigée. Du coup, la meilleure alternative reste pour l’instant le recours au JavaScript.</summary></entry></feed>
+&lt;p class=&quot;info&quot;&gt;Mise à jour (29/10/2015) : le support de flexbox ayant beaucoup &lt;a href=&quot;http://caniuse.com/#search=flexbox&quot;&gt;évolué&lt;/a&gt;, plus besoin de recourir à du JS pour ça.&lt;/p&gt;
+</content>
+<category term="javascript" />
+<category term="tutoriels" />
+<summary>CSS3 a apporté son lot de nouveautés, parmi lesquelles flexbox, un modèle qui propose de nombreuses solutions de mise en page dont celle qui nous intéresse aujourd’hui : la création de colonnes de hauteur égale. Malheureusement l’utilisation de flexbox en production est encore mitigée. Du coup, la meilleure alternative reste pour l’instant le recours au JavaScript.</summary>
+</entry>
+</feed>
