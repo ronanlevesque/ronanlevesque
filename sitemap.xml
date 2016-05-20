@@ -1,190 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>http://ronanlevesque.fr/articles/nommage-et-architecture-css/</loc>
-<lastmod>2015-08-19T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</loc>
-<lastmod>2015-06-25T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/</loc>
-<lastmod>2015-04-27T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/dropdox-et-node-modules/</loc>
-<lastmod>2015-04-02T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</loc>
-<lastmod>2014-12-17T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/</loc>
-<lastmod>2014-07-21T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/</loc>
-<lastmod>2014-06-20T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/</loc>
-<lastmod>2014-03-13T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/ma-configuration-gulp/</loc>
-<lastmod>2014-02-24T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/</loc>
-<lastmod>2014-02-04T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/dans-l-enfer-de-font-face/</loc>
-<lastmod>2014-01-30T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/nouvelle-annee-nouveau-site/</loc>
-<lastmod>2014-01-21T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</loc>
-<lastmod>2013-11-29T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/</loc>
-<lastmod>2013-11-26T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/les-anciens-navigateurs/</loc>
-<lastmod>2013-10-12T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/like-plus-share/</loc>
-<lastmod>2013-10-08T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</loc>
-<lastmod>2013-09-28T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/automatiser-workflow-grunt/</loc>
-<lastmod>2013-09-02T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/css-notation-bem/</loc>
-<lastmod>2013-08-29T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/android-ergonomie/</loc>
-<lastmod>2013-08-13T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/i-hate-u-flat/</loc>
-<lastmod>2013-07-12T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/plugins-utiles-pour-sublime-text-2/</loc>
-<lastmod>2013-06-27T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/font-size-quelles-solutions/</loc>
-<lastmod>2013-06-20T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/fox-css-est-passe-sous-sass/</loc>
-<lastmod>2013-06-12T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/text-align-justify-pour-une-nouvelle-technique-de-grilles/</loc>
-<lastmod>2013-06-03T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries/</loc>
-<lastmod>2013-05-27T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault/</loc>
-<lastmod>2013-05-13T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/les-animations-en-css-un-cas-pratique/</loc>
-<lastmod>2013-05-07T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/refonte-graphique-du-site/</loc>
-<lastmod>2013-04-29T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/les-animations-en-css/</loc>
-<lastmod>2012-12-21T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/le-scrolling-ce-mal-absolu/</loc>
-<lastmod>2012-12-09T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass/</loc>
-<lastmod>2012-10-15T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/un-template-complexe-pour-le-responsive-design/</loc>
-<lastmod>2012-09-24T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/fox-css-un-framework-css-light/</loc>
-<lastmod>2012-09-14T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/les-atouts-de-box-sizing-border-box/</loc>
-<lastmod>2012-08-15T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/webdesign-liste-de-ressources-utiles/</loc>
-<lastmod>2012-08-06T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/a-propos-du-responsive-design/</loc>
-<lastmod>2012-07-20T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/mise-en-page-et-positionnement/</loc>
-<lastmod>2012-07-12T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</loc>
-<lastmod>2012-07-02T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/styler-les-formulaires-sur-iphone/</loc>
-<lastmod>2012-06-30T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/ouverture-du-blog/</loc>
-<lastmod>2012-06-29T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/404/</loc>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/a-propos/</loc>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/articles/</loc>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/</loc>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/projets/</loc>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/demos/animations-css3.html</loc>
-<lastmod>2015-06-02T21:46:45+02:00</lastmod>
-</url>
-<url>
-<loc>http://ronanlevesque.fr/demos/menu-dropdown-css3.html</loc>
-<lastmod>2015-06-02T21:46:50+02:00</lastmod>
-</url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres/</loc>
+    <lastmod>2016-05-19T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/nommage-et-architecture-css/</loc>
+    <lastmod>2015-08-19T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</loc>
+    <lastmod>2015-06-25T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/</loc>
+    <lastmod>2015-04-27T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/dropdox-et-node-modules/</loc>
+    <lastmod>2015-04-02T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</loc>
+    <lastmod>2014-12-17T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/</loc>
+    <lastmod>2014-07-21T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/</loc>
+    <lastmod>2014-06-20T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/</loc>
+    <lastmod>2014-03-13T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/ma-configuration-gulp/</loc>
+    <lastmod>2014-02-24T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/</loc>
+    <lastmod>2014-02-04T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/dans-l-enfer-de-font-face/</loc>
+    <lastmod>2014-01-30T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/nouvelle-annee-nouveau-site/</loc>
+    <lastmod>2014-01-21T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</loc>
+    <lastmod>2013-11-29T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/</loc>
+    <lastmod>2013-11-26T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/les-anciens-navigateurs/</loc>
+    <lastmod>2013-10-12T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/like-plus-share/</loc>
+    <lastmod>2013-10-08T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</loc>
+    <lastmod>2013-09-28T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/automatiser-workflow-grunt/</loc>
+    <lastmod>2013-09-02T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/css-notation-bem/</loc>
+    <lastmod>2013-08-29T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/android-ergonomie/</loc>
+    <lastmod>2013-08-13T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/i-hate-u-flat/</loc>
+    <lastmod>2013-07-12T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/plugins-utiles-pour-sublime-text-2/</loc>
+    <lastmod>2013-06-27T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/font-size-quelles-solutions/</loc>
+    <lastmod>2013-06-20T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/fox-css-est-passe-sous-sass/</loc>
+    <lastmod>2013-06-12T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/text-align-justify-pour-une-nouvelle-technique-de-grilles/</loc>
+    <lastmod>2013-06-03T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries/</loc>
+    <lastmod>2013-05-27T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault/</loc>
+    <lastmod>2013-05-13T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/les-animations-en-css-un-cas-pratique/</loc>
+    <lastmod>2013-05-07T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/refonte-graphique-du-site/</loc>
+    <lastmod>2013-04-29T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/les-animations-en-css/</loc>
+    <lastmod>2012-12-21T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/le-scrolling-ce-mal-absolu/</loc>
+    <lastmod>2012-12-09T00:00:00+01:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass/</loc>
+    <lastmod>2012-10-15T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/un-template-complexe-pour-le-responsive-design/</loc>
+    <lastmod>2012-09-24T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/fox-css-un-framework-css-light/</loc>
+    <lastmod>2012-09-14T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/les-atouts-de-box-sizing-border-box/</loc>
+    <lastmod>2012-08-15T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/webdesign-liste-de-ressources-utiles/</loc>
+    <lastmod>2012-08-06T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/a-propos-du-responsive-design/</loc>
+    <lastmod>2012-07-20T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/mise-en-page-et-positionnement/</loc>
+    <lastmod>2012-07-12T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</loc>
+    <lastmod>2012-07-02T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/styler-les-formulaires-sur-iphone/</loc>
+    <lastmod>2012-06-30T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/ouverture-du-blog/</loc>
+    <lastmod>2012-06-29T00:00:00+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/404/</loc>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/a-propos/</loc>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/articles/</loc>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/</loc>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/projets/</loc>
+  </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/ouverture-du-blog/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/styler-les-formulaires-sur-iphone/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/mise-en-page-et-positionnement/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/a-propos-du-responsive-design/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/webdesign-liste-de-ressources-utiles/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/les-atouts-de-box-sizing-border-box/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/fox-css-un-framework-css-light/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/un-template-complexe-pour-le-responsive-design/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/le-scrolling-ce-mal-absolu/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/les-animations-en-css/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/refonte-graphique-du-site/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/les-animations-en-css-un-cas-pratique/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/text-align-justify-pour-une-nouvelle-technique-de-grilles/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/fox-css-est-passe-sous-sass/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/font-size-quelles-solutions/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/plugins-utiles-pour-sublime-text-2/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/i-hate-u-flat/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/android-ergonomie/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/css-notation-bem/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/automatiser-workflow-grunt/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/like-plus-share/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/les-anciens-navigateurs/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/nouvelle-annee-nouveau-site/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/dans-l-enfer-de-font-face/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/ma-configuration-gulp/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/dropdox-et-node-modules/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/nommage-et-architecture-css/</loc>
+    </url>
+    <url>
+      <loc>http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres/</loc>
+    </url>
+  <url>
+    <loc>http://ronanlevesque.fr/demos/animations-css3.html</loc>
+    <lastmod>2015-06-02T21:46:45+02:00</lastmod>
+  </url>
+  <url>
+    <loc>http://ronanlevesque.fr/demos/menu-dropdown-css3.html</loc>
+    <lastmod>2015-06-02T21:46:50+02:00</lastmod>
+  </url>
 </urlset>
