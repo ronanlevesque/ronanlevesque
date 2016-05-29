@@ -14,7 +14,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-04422c34c7dce115729fe0bbfd34356a.css" rel="stylesheet" />
+  <link href="/assets/css/styles-99e17276411535ca2739547410891328.css" rel="stylesheet" />
   <link href='https://fonts.googleapis.com/css?family=PT+Mono%7CPT+Sans:700%7CPT+Serif:400,400italic,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -100,7 +100,7 @@
 <p>Le code ci-dessous permettra d’afficher le symbole <code class="highlighter-rouge">#close</code> n’importe où sur votre page via la balise <code class="highlighter-rouge">use</code>.</p>
 
 <div class="example" style="padding:50px;">
-  <svg style="position: absolute; visibility: hidden" xmlns="http://www.w3.org/2000/svg">
+  <svg style="position:absolute;visibility:hidden;left:-9999px;top:-9999px;" xmlns="http://www.w3.org/2000/svg">
     <symbol id="close" viewbox="0 0 64 64"><path d="M32 1C16.537 1 4 13.537 4 29s12.537 28 28 28 28-12.537 28-28S47.463 1 32 1zm9.686 41.867l-9.667-9.57L22.41 43l-4.277-4.277 9.576-9.7-9.71-9.61 4.277-4.278 9.695 9.572L41.552 15l4.315 4.314-9.567 9.663 9.7 9.576-4.314 4.314z" fill="#fff" fill-rule="evenodd" /></symbol>
   </svg>
 
@@ -114,7 +114,7 @@
 <p>Heureusement, la solution est assez simple : il suffit de masquer le SVG un peu différemment pour que les icônes s’affichent à nouveau. Voici un nouvel exemple qui inclut cette fois des filtres :</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>// J'appelle mon sprite SVG et je le masque d'une manière différente
-&lt;svg style="position:absolute;visibility:hidden;" xmlns="http://www.w3.org/2000/svg"&gt;
+&lt;svg style="position:absolute;visibility:hidden;left:-9999px;top:-9999px;" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
     &lt;filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="a"&gt;&lt;feOffset dy="3" in="SourceAlpha" result="shadowOffsetOuter1"/&gt;&lt;feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/&gt;&lt;feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.28 0" in="shadowBlurOuter1" result="shadowMatrixOuter1"/&gt;&lt;feMerge&gt;&lt;feMergeNode in="shadowMatrixOuter1"/&gt;&lt;feMergeNode in="SourceGraphic"/&gt;&lt;/feMerge&gt;&lt;/filter&gt;
   &lt;/defs&gt;
@@ -131,7 +131,7 @@
 
 <p>Et voilà le résultat :</p>
 
-<svg style="position:absolute;visibility:hidden;" xmlns="http://www.w3.org/2000/svg">
+<svg style="position:absolute;visibility:hidden;left:-9999px;top:-9999px;" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter x="-50%" y="-50%" width="200%" height="200%" filterunits="objectBoundingBox" id="a"><feoffset dy="3" in="SourceAlpha" result="shadowOffsetOuter1" /><fegaussianblur stddeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1" /><fecolormatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.28 0" in="shadowBlurOuter1" result="shadowMatrixOuter1" /><femerge><femergenode in="shadowMatrixOuter1" /><femergenode in="SourceGraphic" /></femerge></filter>
   </defs>

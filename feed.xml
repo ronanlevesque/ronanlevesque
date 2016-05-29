@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator>
 <link href="http://ronanlevesque.fr/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://ronanlevesque.fr/" rel="alternate" type="text/html" />
-<updated>2016-05-20T09:02:39+02:00</updated>
+<updated>2016-05-29T15:44:14+02:00</updated>
 <id>http://ronanlevesque.fr/</id>
 <title>Ronan Levesque - Frontend &amp; Webdesign</title>
 <subtitle>Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...</subtitle>
@@ -36,7 +36,7 @@
 &lt;p&gt;Le code ci-dessous permettra d’afficher le symbole &lt;code class=&quot;highlighter-rouge&quot;&gt;#close&lt;/code&gt; n’importe où sur votre page via la balise &lt;code class=&quot;highlighter-rouge&quot;&gt;use&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;example&quot; style=&quot;padding:50px;&quot;&gt;
-  &lt;svg style=&quot;position: absolute; visibility: hidden&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+  &lt;svg style=&quot;position:absolute;visibility:hidden;left:-9999px;top:-9999px;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
     &lt;symbol id=&quot;close&quot; viewbox=&quot;0 0 64 64&quot;&gt;&lt;path d=&quot;M32 1C16.537 1 4 13.537 4 29s12.537 28 28 28 28-12.537 28-28S47.463 1 32 1zm9.686 41.867l-9.667-9.57L22.41 43l-4.277-4.277 9.576-9.7-9.71-9.61 4.277-4.278 9.695 9.572L41.552 15l4.315 4.314-9.567 9.663 9.7 9.576-4.314 4.314z&quot; fill=&quot;#fff&quot; fill-rule=&quot;evenodd&quot; /&gt;&lt;/symbol&gt;
   &lt;/svg&gt;
 
@@ -50,7 +50,7 @@
 &lt;p&gt;Heureusement, la solution est assez simple : il suffit de masquer le SVG un peu différemment pour que les icônes s’affichent à nouveau. Voici un nouvel exemple qui inclut cette fois des filtres :&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// J&#39;appelle mon sprite SVG et je le masque d&#39;une manière différente
-&amp;lt;svg style=&quot;position:absolute;visibility:hidden;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&amp;gt;
+&amp;lt;svg style=&quot;position:absolute;visibility:hidden;left:-9999px;top:-9999px;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&amp;gt;
   &amp;lt;defs&amp;gt;
     &amp;lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterUnits=&quot;objectBoundingBox&quot; id=&quot;a&quot;&amp;gt;&amp;lt;feOffset dy=&quot;3&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetOuter1&quot;/&amp;gt;&amp;lt;feGaussianBlur stdDeviation=&quot;2&quot; in=&quot;shadowOffsetOuter1&quot; result=&quot;shadowBlurOuter1&quot;/&amp;gt;&amp;lt;feColorMatrix values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.28 0&quot; in=&quot;shadowBlurOuter1&quot; result=&quot;shadowMatrixOuter1&quot;/&amp;gt;&amp;lt;feMerge&amp;gt;&amp;lt;feMergeNode in=&quot;shadowMatrixOuter1&quot;/&amp;gt;&amp;lt;feMergeNode in=&quot;SourceGraphic&quot;/&amp;gt;&amp;lt;/feMerge&amp;gt;&amp;lt;/filter&amp;gt;
   &amp;lt;/defs&amp;gt;
@@ -67,7 +67,7 @@
 
 &lt;p&gt;Et voilà le résultat :&lt;/p&gt;
 
-&lt;svg style=&quot;position:absolute;visibility:hidden;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;svg style=&quot;position:absolute;visibility:hidden;left:-9999px;top:-9999px;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
   &lt;defs&gt;
     &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterunits=&quot;objectBoundingBox&quot; id=&quot;a&quot;&gt;&lt;feoffset dy=&quot;3&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetOuter1&quot; /&gt;&lt;fegaussianblur stddeviation=&quot;2&quot; in=&quot;shadowOffsetOuter1&quot; result=&quot;shadowBlurOuter1&quot; /&gt;&lt;fecolormatrix values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.28 0&quot; in=&quot;shadowBlurOuter1&quot; result=&quot;shadowMatrixOuter1&quot; /&gt;&lt;femerge&gt;&lt;femergenode in=&quot;shadowMatrixOuter1&quot; /&gt;&lt;femergenode in=&quot;SourceGraphic&quot; /&gt;&lt;/femerge&gt;&lt;/filter&gt;
   &lt;/defs&gt;
@@ -91,21 +91,21 @@
 <published>2015-08-19T00:00:00+02:00</published>
 <updated>2015-08-19T00:00:00+02:00</updated>
 <id>http://ronanlevesque.fr/articles/nommage-et-architecture-css</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/nommage-et-architecture-css/">&lt;p&gt;A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.&lt;/p&gt;
+<content type="html" xml:base="http://ronanlevesque.fr/articles/nommage-et-architecture-css/">&lt;p&gt;A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme &lt;abbr title=&quot;Block, Element, Modifier&quot;&gt;BEM&lt;/abbr&gt; ou &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt;, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;les-basesnbsp-abbr-titleblock-element-modifierbemabbr-et-abbr-titlestructured-class-names-and-meaningful-hyphenssuitabbr&quot;&gt;Les bases : &lt;abbr title=&quot;Block, Element, Modifier&quot;&gt;BEM&lt;/abbr&gt; et &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;les-basesnbsp-bem-et-suit&quot;&gt;Les bases : BEM et SUIT&lt;/h2&gt;
 
 &lt;p&gt;Si ces deux acronymes ne vous évoquent rien, je vous suggère avant toute chose de lire mon &lt;a href=&quot;/articles/css-notation-bem/&quot;&gt;article&lt;/a&gt; sur le premier ainsi que la &lt;a href=&quot;https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md&quot;&gt;documentation Github&lt;/a&gt; du deuxième.&lt;/p&gt;
 
-&lt;p&gt;J’ai pour ma part commencé par utiliser &lt;abbr title=&quot;Block, Element, Modifier&quot;&gt;BEM&lt;/abbr&gt; de manière traditionnelle avant d’y incorporer une part de &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt;, ce qui me donnait quelque chose de ce genre :&lt;/p&gt;
+&lt;p&gt;J’ai pour ma part commencé par utiliser BEM de manière traditionnelle avant d’y incorporer une part de SUIT, ce qui me donnait quelque chose de ce genre :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;css&quot;&gt;.blockName {}
 .blockName-element {}
 .blockName--modifier {}&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Je préfère cette syntaxe par rapport au &lt;abbr title=&quot;Block, Element, Modifier&quot;&gt;BEM&lt;/abbr&gt; classique, où l’utilisation des &lt;kbd&gt;_&lt;/kbd&gt; ne facilite pas vraiment l’édition du nom des classes.&lt;/p&gt;
+&lt;p&gt;Je préfère cette syntaxe par rapport au BEM classique, où l’utilisation des &lt;kbd&gt;_&lt;/kbd&gt; ne facilite pas vraiment l’édition du nom des classes.&lt;/p&gt;
 
 &lt;h2 id=&quot;pousser-plus-loin-le-concept-des-modifiers&quot;&gt;Pousser plus loin le concept des Modifiers&lt;/h2&gt;
 
@@ -139,9 +139,9 @@
   }
 }&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;autres-emprunts--abbr-titlestructured-class-names-and-meaningful-hyphenssuitabbr&quot;&gt;Autres emprunts à &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;autres-emprunts--suit&quot;&gt;Autres emprunts à SUIT&lt;/h2&gt;
 
-&lt;p&gt;J’utilise également deux autres conventions provenant de &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt; : les classes utilitaires et les classes d’état.&lt;/p&gt;
+&lt;p&gt;J’utilise également deux autres conventions provenant de SUIT : les classes utilitaires et les classes d’état.&lt;/p&gt;
 
 &lt;h3 id=&quot;classes-utilitaires&quot;&gt;Classes utilitaires&lt;/h3&gt;
 

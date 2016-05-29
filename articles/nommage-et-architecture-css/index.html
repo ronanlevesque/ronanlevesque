@@ -14,7 +14,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/nommage-et-architecture-css/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-04422c34c7dce115729fe0bbfd34356a.css" rel="stylesheet" />
+  <link href="/assets/css/styles-99e17276411535ca2739547410891328.css" rel="stylesheet" />
   <link href='https://fonts.googleapis.com/css?family=PT+Mono%7CPT+Sans:700%7CPT+Serif:400,400italic,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -77,21 +77,21 @@
         
         <div class="article-content">
         
-          <p>A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.</p>
+          <p>A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme <abbr title="Block, Element, Modifier">BEM</abbr> ou <abbr title="Structured class names and meaningful hyphens">SUIT</abbr>, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.</p>
 
 <hr />
 
-<h2 id="les-basesnbsp-abbr-titleblock-element-modifierbemabbr-et-abbr-titlestructured-class-names-and-meaningful-hyphenssuitabbr">Les bases : <abbr title="Block, Element, Modifier">BEM</abbr> et <abbr title="Structured class names and meaningful hyphens">SUIT</abbr></h2>
+<h2 id="les-basesnbsp-bem-et-suit">Les bases : BEM et SUIT</h2>
 
 <p>Si ces deux acronymes ne vous évoquent rien, je vous suggère avant toute chose de lire mon <a href="/articles/css-notation-bem/">article</a> sur le premier ainsi que la <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">documentation Github</a> du deuxième.</p>
 
-<p>J’ai pour ma part commencé par utiliser <abbr title="Block, Element, Modifier">BEM</abbr> de manière traditionnelle avant d’y incorporer une part de <abbr title="Structured class names and meaningful hyphens">SUIT</abbr>, ce qui me donnait quelque chose de ce genre :</p>
+<p>J’ai pour ma part commencé par utiliser BEM de manière traditionnelle avant d’y incorporer une part de SUIT, ce qui me donnait quelque chose de ce genre :</p>
 
 <pre><code class="css">.blockName {}
 .blockName-element {}
 .blockName--modifier {}</code></pre>
 
-<p>Je préfère cette syntaxe par rapport au <abbr title="Block, Element, Modifier">BEM</abbr> classique, où l’utilisation des <kbd>_</kbd> ne facilite pas vraiment l’édition du nom des classes.</p>
+<p>Je préfère cette syntaxe par rapport au BEM classique, où l’utilisation des <kbd>_</kbd> ne facilite pas vraiment l’édition du nom des classes.</p>
 
 <h2 id="pousser-plus-loin-le-concept-des-modifiers">Pousser plus loin le concept des Modifiers</h2>
 
@@ -125,9 +125,9 @@
   }
 }</code></pre>
 
-<h2 id="autres-emprunts--abbr-titlestructured-class-names-and-meaningful-hyphenssuitabbr">Autres emprunts à <abbr title="Structured class names and meaningful hyphens">SUIT</abbr></h2>
+<h2 id="autres-emprunts--suit">Autres emprunts à SUIT</h2>
 
-<p>J’utilise également deux autres conventions provenant de <abbr title="Structured class names and meaningful hyphens">SUIT</abbr> : les classes utilitaires et les classes d’état.</p>
+<p>J’utilise également deux autres conventions provenant de SUIT : les classes utilitaires et les classes d’état.</p>
 
 <h3 id="classes-utilitaires">Classes utilitaires</h3>
 
