@@ -329,6 +329,7 @@ FileETag None
 
 Redirect 301 /ihateuflat /projets/ihateuflat
 Redirect 301 /fox-boilerplate /projets/fox-boilerplate
+Redirect 301 /fox-css /projets/fox-css
 Redirect 301 /fox-bp /projets/fox-boilerplate
 Redirect 301 /foxbp /projets/fox-boilerplate
 Redirect 301 /mv /projets/moovies
