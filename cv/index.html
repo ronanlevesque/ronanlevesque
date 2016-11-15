@@ -69,13 +69,18 @@
       display: block;
       width: 25px;
     }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
-  <button onclick=window.print();>Print me ?</button>
+  <button class="no-print" onclick=window.print();>Print me ?</button>
   <table class="intro">
     <tr>
-      <td style="width: 250px">
+      <td class="no-print">
         <img src="https://www.gravatar.com/avatar/59e808c09f2f0746b5418c6e1047803b?s=250" alt="Photo Ronan Levesque">
       </td>
       <td>
