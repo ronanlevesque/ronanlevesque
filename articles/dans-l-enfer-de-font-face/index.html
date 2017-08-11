@@ -14,7 +14,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/dans-l-enfer-de-font-face/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-ca46fdd9f6bd3fb850d50b80623e0189.css" rel="stylesheet" />
+  <link href="/assets/css/styles-30a97391849008bd4b7be6890016bd07.css" rel="stylesheet" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -102,7 +102,7 @@
 
 <p>Le hic avec cette façon de faire, c’est qu’en cas d’impossibilité pour le navigateur d’afficher les fontes personnalisées, la police de <em>fallback</em> s’affichera sans italique ou sans gras.</p>
 
-<h2 id="une-autre-solutionnbsp">Une autre solution ?</h2>
+<h2 id="une-autre-solution">Une autre solution ?</h2>
 
 <p>En fouillant un peu, j’ai trouvé cette <a href="http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles">solution</a>, bien plus intéressante car elle évitera la suppression ou le passage en <em>faux</em> (c’est-à-dire simulé par le navigateur) des styles italiques et gras :</p>
 
@@ -129,7 +129,7 @@
 
 <p>On utilise un seul nom unique de <code class="highlighter-rouge">font-family</code> pour toutes nos <code class="highlighter-rouge">@font-face</code>, puis on y applique nos <code class="highlighter-rouge">font-weight</code> et <code class="highlighter-rouge">font-style</code> désirés. Problème réglé… Du moins sur la plupart des navigateurs.</p>
 
-<h2 id="ie-lternel-vilain-petit-canard">IE, l’éternel vilain petit canard</h2>
+<h2 id="ie-léternel-vilain-petit-canard">IE, l’éternel vilain petit canard</h2>
 
 <p>Comme d’habitude, là où ça coince, c’est avec Internet Explorer (du moins jusqu’à la version 8). La raison, c’est que ce cher IE ne prend pas en compte <code class="highlighter-rouge">font-style</code> et <code class="highlighter-rouge">font-weight</code> dans la déclaration <code class="highlighter-rouge">@font-face</code> (<a href="http://itsravenous.com/blog/banishing-faux-italic-and-faux-bold--on-css3-fonts-in-IE-8-and-below">source</a>).</p>
 

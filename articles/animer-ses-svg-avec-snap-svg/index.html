@@ -14,7 +14,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-ca46fdd9f6bd3fb850d50b80623e0189.css" rel="stylesheet" />
+  <link href="/assets/css/styles-30a97391849008bd4b7be6890016bd07.css" rel="stylesheet" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -84,7 +84,7 @@
 
 <hr />
 
-<h2 id="lide-de-dpart">L’idée de départ</h2>
+<h2 id="lidée-de-départ">L’idée de départ</h2>
 
 <p>Je suis parti sur une idée relativement simple : je crée des smileys sous Sketch, chacun avec deux états différents, et je fais en sorte de les faire changer d’état au clic.</p>
 
@@ -115,17 +115,17 @@
 </style>
 
 <figure>
-  <svg width="390px" height="390px" viewbox="0 0 390 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="smiley">
+  <svg width="390px" height="390px" viewBox="0 0 390 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="smiley">
     <defs>
-      <filter x="-50%" y="-50%" width="200%" height="200%" filterunits="objectBoundingBox" id="filter-1">
-        <feoffset dx="-30" dy="-30" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
-        <fegaussianblur stddeviation="0" in="shadowOffsetInner1" result="shadowBlurInner1"></fegaussianblur>
-        <fecomposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></fecomposite>
-        <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></fecolormatrix>
-        <femerge>
-          <femergenode in="SourceGraphic"></femergenode>
-          <femergenode in="shadowMatrixInner1"></femergenode>
-        </femerge>
+      <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+        <feOffset dx="-30" dy="-30" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+        <feGaussianBlur stdDeviation="0" in="shadowOffsetInner1" result="shadowBlurInner1"></feGaussianBlur>
+        <feComposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></feColorMatrix>
+        <feMerge>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+          <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+        </feMerge>
       </filter>
       <rect id="path-2" x="45" y="45" width="300" height="300" rx="70"></rect>
     </defs>
@@ -141,17 +141,17 @@
       <path d="M122.5,268.5 L268.5,268.5" id="smiley__mouth" stroke="#33639B" stroke-width="15" stroke-linecap="square"></path>
     </g>
   </svg>
-  <svg id="smiley-angry" width="390px" height="390px" viewbox="0 0 390 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg id="smiley-angry" width="390px" height="390px" viewBox="0 0 390 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
-      <filter x="-50%" y="-50%" width="200%" height="200%" filterunits="objectBoundingBox" id="filter-1">
-        <feoffset dx="-30" dy="-30" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
-        <fegaussianblur stddeviation="0" in="shadowOffsetInner1" result="shadowBlurInner1"></fegaussianblur>
-        <fecomposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></fecomposite>
-        <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></fecolormatrix>
-        <femerge>
-          <femergenode in="SourceGraphic"></femergenode>
-          <femergenode in="shadowMatrixInner1"></femergenode>
-        </femerge>
+      <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+        <feOffset dx="-30" dy="-30" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+        <feGaussianBlur stdDeviation="0" in="shadowOffsetInner1" result="shadowBlurInner1"></feGaussianBlur>
+        <feComposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></feColorMatrix>
+        <feMerge>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+          <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+        </feMerge>
       </filter>
       <rect id="path-2" x="45" y="45" width="300" height="300" rx="70"></rect>
     </defs>
@@ -167,17 +167,17 @@
       <path d="M179.5,281.5 L211.5,281.5" id="smiley-angry__mouth" stroke="#33639B" stroke-width="15" stroke-linecap="square"></path>
     </g>
   </svg>
-  <svg id="smiley-sad" width="390px" height="390px" viewbox="0 0 390 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg id="smiley-sad" width="390px" height="390px" viewBox="0 0 390 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
-      <filter x="-50%" y="-50%" width="200%" height="200%" filterunits="objectBoundingBox" id="filter-1">
-        <feoffset dx="-30" dy="-30" in="SourceAlpha" result="shadowOffsetInner1"></feoffset>
-        <fegaussianblur stddeviation="0" in="shadowOffsetInner1" result="shadowBlurInner1"></fegaussianblur>
-        <fecomposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></fecomposite>
-        <fecolormatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></fecolormatrix>
-        <femerge>
-          <femergenode in="SourceGraphic"></femergenode>
-          <femergenode in="shadowMatrixInner1"></femergenode>
-        </femerge>
+      <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+        <feOffset dx="-30" dy="-30" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+        <feGaussianBlur stdDeviation="0" in="shadowOffsetInner1" result="shadowBlurInner1"></feGaussianBlur>
+        <feComposite in="shadowBlurInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0" in="shadowInnerInner1" type="matrix" result="shadowMatrixInner1"></feColorMatrix>
+        <feMerge>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+          <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+        </feMerge>
       </filter>
       <rect id="path-2" x="45" y="45" width="300" height="300" rx="70"></rect>
     </defs>
@@ -253,7 +253,7 @@ smiley.click(function() {
 
 <p>Les transformations sur Snap.svg ont une syntaxe assez spéciale. Ainsi, <code class="highlighter-rouge">t0,-30</code> désigne une translation des valeurs x et y à 0 et -30 dans l’espace. Pour plus d’infos sur le sujet, je vous conseille de lire cet <a href="http://stackoverflow.com/questions/20302801/how-do-i-understand-transform-properties-in-snap-svg">article <sup>EN</sup></a> sur Stackoverflow.</p>
 
-<h2 id="quelques-prcisions-pour-finir">Quelques précisions pour finir</h2>
+<h2 id="quelques-précisions-pour-finir">Quelques précisions pour finir</h2>
 
 <p>Puisque mes animations sont basée sur un retour à l’état initial, il est nécessaire de prévoir une fonction qui réinitialisera les valeurs par défaut du SVG. (D’où la fonction <code class="highlighter-rouge">smileyDef()</code>).</p>
 

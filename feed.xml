@@ -1,32 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-<generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator>
-<link href="http://ronanlevesque.fr/feed.xml" rel="self" type="application/atom+xml" />
-<link href="http://ronanlevesque.fr/" rel="alternate" type="text/html" />
-<updated>2017-07-29T09:21:36+02:00</updated>
-<id>http://ronanlevesque.fr/</id>
-<title>Ronan Levesque - Frontend &amp; Webdesign</title>
-<subtitle>Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...</subtitle>
-<entry>
-<title>Sprites SVG inline et filtres</title>
-<link href="http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres/" rel="alternate" type="text/html" title="Sprites SVG inline et filtres" />
-<published>2016-05-19T00:00:00+02:00</published>
-<updated>2016-05-19T00:00:00+02:00</updated>
-<id>http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres/">&lt;p&gt;Je me suis récemment arraché quelques cheveux sur un bug qui me semblait assez incompréhensible lorsque j’essayais d’utiliser des sprites SVG inline (directement intégrés dans mes pages) et que ceux-ci utilisaient des filtres : le sprite appelé ne s’affichait tout simplement pas. Ayant réussi à trouver d’où le problème venait, je le partage donc; ça peut toujours aider.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.1">Jekyll</generator><link href="http://ronanlevesque.fr/feed.xml" rel="self" type="application/atom+xml" /><link href="http://ronanlevesque.fr/" rel="alternate" type="text/html" /><updated>2017-08-11T10:25:04+02:00</updated><id>http://ronanlevesque.fr/</id><title type="html">Ronan Levesque - Frontend &amp;amp; Webdesign</title><subtitle>Site de Ronan Levesque : Front-end et Webdesign. Je crée vos sites Internet et applications web. HTML5, CSS3, Responsive design, JavaScript, WordPress...</subtitle><entry><title type="html">CSS “fonctionnel” et responsive design</title><link href="http://ronanlevesque.fr/articles/les-limites-du-css-fonctionnel/" rel="alternate" type="text/html" title="CSS &quot;fonctionnel&quot; et responsive design" /><published>2017-08-10T00:00:00+02:00</published><updated>2017-08-10T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/les-limites-du-css-fonctionnel</id><content type="html" xml:base="http://ronanlevesque.fr/articles/les-limites-du-css-fonctionnel/">&lt;p&gt;J’ai lu aujourd’hui un &lt;a href=&quot;https://adamwathan.me/css-utility-classes-and-separation-of-concerns/&quot;&gt;article&lt;/a&gt; très intéressant qui soulignait les bénéfices du CSS dit “fonctionnel” (on entend par fonctionnel l’utilisation généralisée de classes utilitaires à but unique). Le hic, c’est qu’il néglige également de parler d’un inconvénient majeur et de la manière de le traiter.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p class=&quot;info&quot;&gt;Les exemples suivants font usage de &lt;code&gt;symbol&lt;/code&gt; et &lt;code&gt;use&lt;/code&gt; pour afficher les icônes. Si vous n&#39;êtes pas à l&#39;aise avec le sujet, je vous invite à lire en amont cet &lt;a href=&quot;https://css-tricks.com/svg-symbol-good-choice-icons/&quot;&gt;article de CSS-Tricks&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;un-exemple-pour-commencer&quot;&gt;Un exemple pour commencer…&lt;/h2&gt;
+
+&lt;p&gt;Avant de rentrer dans le vif du sujet il peut être utile de faire un rappel de ce qu’est le CSS fonctionnel, cf. cette définition tirée de &lt;a href=&quot;https://css-tricks.com/lets-define-exactly-atomic-css/&quot;&gt;CSS-Tricks&lt;/a&gt; :&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Le CSS atomique (fonctionnel) est l’approche, en architecture CSS, qui favorise les petites classes à but unique avec des noms basés sur leurs fonctions visuelles.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Voici un exemple simple, mais &lt;strong&gt;volontairement verbeux&lt;/strong&gt; pour plus de clarté :&lt;/p&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;GvmOzV&quot; data-default-tab=&quot;html,css&quot; data-user=&quot;eskiiss&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;GvmOzV&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/eskiiss/pen/GvmOzV/&quot;&gt;GvmOzV&lt;/a&gt; by Ronan Levesque (&lt;a href=&quot;https://codepen.io/eskiiss&quot;&gt;@eskiiss&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;L’avantage saute immédiatement aux yeux; cette manière de faire permet de gagner en maintenabilité et en temps de développement. Cependant l’article élude un sujet capital et auquel la plupart des frameworks CSS qui suivent cette méthode peinent à offrir une solution pertinente : la &lt;strong&gt;transformabilité&lt;/strong&gt; des dites classes.&lt;/p&gt;
+
+&lt;p&gt;J’entends par là, la capacité d’une classe à faire évoluer ses styles (via &lt;em&gt;media queries&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Reprenons l’exemple ci-dessus : nos classes utilitaires vont très bien marcher pour une taille d’écran standard, mais qu’en est-il si on souhaite ajuster le bloc pour des petits / grands écrans ? Si on décide de maintenir une valeur par classe, alors on se retrouve avec un code assez horrible :&lt;/p&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;BdRYyJ&quot; data-default-tab=&quot;html,css&quot; data-user=&quot;eskiiss&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;BdRYyJ&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/eskiiss/pen/BdRYyJ/&quot;&gt;BdRYyJ&lt;/a&gt; by Ronan Levesque (&lt;a href=&quot;https://codepen.io/eskiiss&quot;&gt;@eskiiss&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Dans cet exemple, il n’y a que 3 &lt;em&gt;breakpoints&lt;/em&gt;. Mais on imagine aisément l’usine à gaz que cela va devenir si on doit en gérer 5, voire plus (cas fréquents lorsque l’on fait du responsive design).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Pour avoir expérimenté le CSS fonctionnel dans le passé, je vois les avantages qu’on peut tirer de cette méthodologie. Mais je reste mitigé car elle risque d’induire un niveau de complexité supplémentaire dans la gestion des classes. En inspectant le code de &lt;a href=&quot;https://tailwindcss.com/&quot;&gt;Tailwind CSS&lt;/a&gt;, créé par &lt;a href=&quot;https://twitter.com/adamwathan&quot;&gt;Adam Wathan&lt;/a&gt; (auteur de l’article), je me trouve par exemple face à ce genre de chose :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;h1 class=&quot;text-2xl sm:text-3xl text-thin text-dark-soft constrain-sm mx-auto leading-tight mb-8&quot;&amp;gt;A Utility-First CSS Framework for Rapid UI Development&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Et j’ai du mal à voir en quoi ça serait plus maintenable ou lisible que :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;h1 class=&quot;main-title&quot;&amp;gt;A Utility-First CSS Framework for Rapid UI Development&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ou alors, il faut envisager une approche différente.&lt;/p&gt;
+
+&lt;h2 id=&quot;utilitaires--media-queries&quot;&gt;Utilitaires + media queries&lt;/h2&gt;
+
+&lt;p&gt;À la lumière de ces différents exemples, on comprendra sans peine pourquoi il est sans doute préférable de traiter d’une autre manière les utilitaires contenant une valeur susceptible de changer selon les &lt;em&gt;breakpoints&lt;/em&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;margin&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;font-size&lt;/code&gt; etc.)…&lt;/p&gt;
+
+&lt;p&gt;Reprenons notre exemple de &lt;em&gt;random block&lt;/em&gt;. On sait que les valeurs de &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt; et de &lt;code class=&quot;highlighter-rouge&quot;&gt;font-size&lt;/code&gt; doivent évoluer d’un &lt;em&gt;breakpoint&lt;/em&gt; à un autre. Mais on veut garder cette notion de classe utilitaire, réutilisable ailleurs. On peut alors imaginer une approche identique à ceci :&lt;/p&gt;
+
+&lt;p data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;vJmdzp&quot; data-default-tab=&quot;html,css&quot; data-user=&quot;eskiiss&quot; data-embed-version=&quot;2&quot; data-pen-title=&quot;vJmdzp&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/eskiiss/pen/vJmdzp/&quot;&gt;vJmdzp&lt;/a&gt; by Ronan Levesque (&lt;a href=&quot;https://codepen.io/eskiiss&quot;&gt;@eskiiss&lt;/a&gt;) on &lt;a href=&quot;https://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Rien ne nous empêche par la suite de créer des classes telles que &lt;code class=&quot;highlighter-rouge&quot;&gt;padding-small&lt;/code&gt; et &lt;code class=&quot;highlighter-rouge&quot;&gt;padding-large&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;text-small&lt;/code&gt; et &lt;code class=&quot;highlighter-rouge&quot;&gt;text-large&lt;/code&gt; etc., qui seront toutes en charge de traiter leurs propres &lt;em&gt;breakpoints&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ainsi, on abstrait les notions de transformabilité au sein de la classe utilitaire, qui garde son côté réutilisable. Cela permet également de renforcer la consistance de nos styles.&lt;/p&gt;
+
+&lt;h2 id=&quot;css-fonctionnel-et-composants&quot;&gt;CSS fonctionnel et composants&lt;/h2&gt;
+
+&lt;p&gt;Adam précise dans son article qu’il n’est pas en faveur d’une approche 100% fonctionnelle car selon lui certains cas nécessitent d’utiliser des composants; il prend notamment un exemple tiré de &lt;a href=&quot;http://tachyons.io/&quot;&gt;Tachyons&lt;/a&gt; utilisé pour créer un bouton et démontre qu’il serait plus simple d’en faire un composant réutilisable.&lt;/p&gt;
+
+&lt;p&gt;En fait, toute la difficulté de l’exercice revient à savoir quand utiliser un utilitaire et quand utiliser un composant.&lt;/p&gt;
+
+&lt;p&gt;D’ailleurs, on pourrait même arriver à la conclusion qu’un utilitaire est en fait simplement un composant à but unique. 🤔&lt;/p&gt;
+
+&lt;script async=&quot;&quot; src=&quot;https://production-assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content><author><name></name></author><category term="svg" /><summary type="html">J’ai lu aujourd’hui un article très intéressant qui soulignait les bénéfices du CSS dit “fonctionnel” (on entend par fonctionnel l’utilisation généralisée de classes utilitaires à but unique). Le hic, c’est qu’il néglige également de parler d’un inconvénient majeur et de la manière de le traiter.</summary></entry><entry><title type="html">Sprites SVG inline et filtres</title><link href="http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres/" rel="alternate" type="text/html" title="Sprites SVG inline et filtres" /><published>2016-05-19T00:00:00+02:00</published><updated>2016-05-19T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres</id><content type="html" xml:base="http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres/">&lt;p&gt;Je me suis récemment arraché quelques cheveux sur un bug qui me semblait assez incompréhensible lorsque j’essayais d’utiliser des sprites SVG inline (directement intégrés dans mes pages) et que ceux-ci utilisaient des filtres : le sprite appelé ne s’affichait tout simplement pas. Ayant réussi à trouver d’où le problème venait, je le partage donc; ça peut toujours aider.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p class=&quot;info&quot;&gt;Les exemples suivants font usage de &lt;code&gt;symbol&lt;/code&gt; et &lt;code&gt;use&lt;/code&gt; pour afficher les icônes. Si vous n'êtes pas à l'aise avec le sujet, je vous invite à lire en amont cet &lt;a href=&quot;https://css-tricks.com/svg-symbol-good-choice-icons/&quot;&gt;article de CSS-Tricks&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Prenons un cas basique d’utilisation d’un sprite SVG :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// J&#39;appelle mon sprite et je le masque
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// J'appelle mon sprite et je le masque
 &amp;lt;svg style=&quot;display:none;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&amp;gt;
   &amp;lt;symbol id=&quot;close&quot; viewBox=&quot;0 0 64 64&quot;&amp;gt;&amp;lt;path d=&quot;M32 1C16.537 1 4 13.537 4 29s12.537 28 28 28 28-12.537 28-28S47.463 1 32 1zm9.686 41.867l-9.667-9.57L22.41 43l-4.277-4.277 9.576-9.7-9.71-9.61 4.277-4.278 9.695 9.572L41.552 15l4.315 4.314-9.567 9.663 9.7 9.576-4.314 4.314z&quot; fill=&quot;#fff&quot; fill-rule=&quot;evenodd&quot;/&amp;gt;&amp;lt;/symbol&amp;gt;
 &amp;lt;/svg&amp;gt;
 
-// J&#39;utilise le sprite &quot;close&quot;
+// J'utilise le sprite &quot;close&quot;
 &amp;lt;svg class=&quot;mainNav-icon&quot; aria-hidden=&quot;true&quot;&amp;gt;
   &amp;lt;use xlink:href=&quot;#close&quot;&amp;gt;&amp;lt;/use&amp;gt;
 &amp;lt;/svg&amp;gt;
@@ -37,7 +84,7 @@
 
 &lt;div class=&quot;example&quot; style=&quot;padding:50px;&quot;&gt;
   &lt;svg style=&quot;position:absolute;visibility:hidden;left:-9999px;top:-9999px;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-    &lt;symbol id=&quot;close&quot; viewbox=&quot;0 0 64 64&quot;&gt;&lt;path d=&quot;M32 1C16.537 1 4 13.537 4 29s12.537 28 28 28 28-12.537 28-28S47.463 1 32 1zm9.686 41.867l-9.667-9.57L22.41 43l-4.277-4.277 9.576-9.7-9.71-9.61 4.277-4.278 9.695 9.572L41.552 15l4.315 4.314-9.567 9.663 9.7 9.576-4.314 4.314z&quot; fill=&quot;#fff&quot; fill-rule=&quot;evenodd&quot; /&gt;&lt;/symbol&gt;
+    &lt;symbol id=&quot;close&quot; viewBox=&quot;0 0 64 64&quot;&gt;&lt;path d=&quot;M32 1C16.537 1 4 13.537 4 29s12.537 28 28 28 28-12.537 28-28S47.463 1 32 1zm9.686 41.867l-9.667-9.57L22.41 43l-4.277-4.277 9.576-9.7-9.71-9.61 4.277-4.278 9.695 9.572L41.552 15l4.315 4.314-9.567 9.663 9.7 9.576-4.314 4.314z&quot; fill=&quot;#fff&quot; fill-rule=&quot;evenodd&quot; /&gt;&lt;/symbol&gt;
   &lt;/svg&gt;
 
   &lt;svg class=&quot;mainNav-icon&quot; aria-hidden=&quot;true&quot; style=&quot;margin:auto;display:block;width:70px;height:70px;&quot;&gt;
@@ -49,16 +96,16 @@
 
 &lt;p&gt;Heureusement, la solution est assez simple : il suffit de masquer le SVG un peu différemment pour que les icônes s’affichent à nouveau. Voici un nouvel exemple qui inclut cette fois des filtres :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// J&#39;appelle mon sprite SVG et je le masque d&#39;une manière différente
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// J'appelle mon sprite SVG et je le masque d'une manière différente
 &amp;lt;svg style=&quot;position:absolute;visibility:hidden;left:-9999px;top:-9999px;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&amp;gt;
   &amp;lt;defs&amp;gt;
     &amp;lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterUnits=&quot;objectBoundingBox&quot; id=&quot;a&quot;&amp;gt;&amp;lt;feOffset dy=&quot;3&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetOuter1&quot;/&amp;gt;&amp;lt;feGaussianBlur stdDeviation=&quot;2&quot; in=&quot;shadowOffsetOuter1&quot; result=&quot;shadowBlurOuter1&quot;/&amp;gt;&amp;lt;feColorMatrix values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.28 0&quot; in=&quot;shadowBlurOuter1&quot; result=&quot;shadowMatrixOuter1&quot;/&amp;gt;&amp;lt;feMerge&amp;gt;&amp;lt;feMergeNode in=&quot;shadowMatrixOuter1&quot;/&amp;gt;&amp;lt;feMergeNode in=&quot;SourceGraphic&quot;/&amp;gt;&amp;lt;/feMerge&amp;gt;&amp;lt;/filter&amp;gt;
   &amp;lt;/defs&amp;gt;
-  // J&#39;applique un filtre
+  // J'applique un filtre
   &amp;lt;symbol id=&quot;close&quot; viewBox=&quot;0 0 64 64&quot;&amp;gt;&amp;lt;path d=&quot;M32 1C16.537 1 4 13.537 4 29s12.537 28 28 28 28-12.537 28-28S47.463 1 32 1zm9.686 41.867l-9.667-9.57L22.41 43l-4.277-4.277 9.576-9.7-9.71-9.61 4.277-4.278 9.695 9.572L41.552 15l4.315 4.314-9.567 9.663 9.7 9.576-4.314 4.314z&quot; fill=&quot;#fff&quot; fill-rule=&quot;evenodd&quot; filter=&quot;url(#a)&quot;/&amp;gt;&amp;lt;/symbol&amp;gt;
 &amp;lt;/svg&amp;gt;
 
-// J&#39;utilise le sprite &quot;close&quot;
+// J'utilise le sprite &quot;close&quot;
 &amp;lt;svg class=&quot;mainNav-icon&quot; aria-hidden=&quot;true&quot;&amp;gt;
   &amp;lt;use xlink:href=&quot;#close&quot;&amp;gt;&amp;lt;/use&amp;gt;
 &amp;lt;/svg&amp;gt;
@@ -69,9 +116,9 @@
 
 &lt;svg style=&quot;position:absolute;visibility:hidden;left:-9999px;top:-9999px;&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
   &lt;defs&gt;
-    &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterunits=&quot;objectBoundingBox&quot; id=&quot;a&quot;&gt;&lt;feoffset dy=&quot;3&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetOuter1&quot; /&gt;&lt;fegaussianblur stddeviation=&quot;2&quot; in=&quot;shadowOffsetOuter1&quot; result=&quot;shadowBlurOuter1&quot; /&gt;&lt;fecolormatrix values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.28 0&quot; in=&quot;shadowBlurOuter1&quot; result=&quot;shadowMatrixOuter1&quot; /&gt;&lt;femerge&gt;&lt;femergenode in=&quot;shadowMatrixOuter1&quot; /&gt;&lt;femergenode in=&quot;SourceGraphic&quot; /&gt;&lt;/femerge&gt;&lt;/filter&gt;
+    &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterUnits=&quot;objectBoundingBox&quot; id=&quot;a&quot;&gt;&lt;feOffset dy=&quot;3&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetOuter1&quot; /&gt;&lt;feGaussianBlur stdDeviation=&quot;2&quot; in=&quot;shadowOffsetOuter1&quot; result=&quot;shadowBlurOuter1&quot; /&gt;&lt;feColorMatrix values=&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.28 0&quot; in=&quot;shadowBlurOuter1&quot; result=&quot;shadowMatrixOuter1&quot; /&gt;&lt;feMerge&gt;&lt;feMergeNode in=&quot;shadowMatrixOuter1&quot; /&gt;&lt;feMergeNode in=&quot;SourceGraphic&quot; /&gt;&lt;/feMerge&gt;&lt;/filter&gt;
   &lt;/defs&gt;
-  &lt;symbol id=&quot;close2&quot; viewbox=&quot;0 0 64 64&quot;&gt;&lt;path d=&quot;M32 1C16.537 1 4 13.537 4 29s12.537 28 28 28 28-12.537 28-28S47.463 1 32 1zm9.686 41.867l-9.667-9.57L22.41 43l-4.277-4.277 9.576-9.7-9.71-9.61 4.277-4.278 9.695 9.572L41.552 15l4.315 4.314-9.567 9.663 9.7 9.576-4.314 4.314z&quot; fill=&quot;#fff&quot; fill-rule=&quot;evenodd&quot; filter=&quot;url(#a)&quot; /&gt;&lt;/symbol&gt;
+  &lt;symbol id=&quot;close2&quot; viewBox=&quot;0 0 64 64&quot;&gt;&lt;path d=&quot;M32 1C16.537 1 4 13.537 4 29s12.537 28 28 28 28-12.537 28-28S47.463 1 32 1zm9.686 41.867l-9.667-9.57L22.41 43l-4.277-4.277 9.576-9.7-9.71-9.61 4.277-4.278 9.695 9.572L41.552 15l4.315 4.314-9.567 9.663 9.7 9.576-4.314 4.314z&quot; fill=&quot;#fff&quot; fill-rule=&quot;evenodd&quot; filter=&quot;url(#a)&quot; /&gt;&lt;/symbol&gt;
 &lt;/svg&gt;
 
 &lt;div class=&quot;example&quot; style=&quot;padding:50px;&quot;&gt;
@@ -80,22 +127,11 @@
   &lt;/svg&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Pour information, j’ai pu observer ce bug sur des versions récentes de Chrome, Firefox et Opéra. Si jamais vous en savez plus sur le sujet, n’hésitez pas à m’en parler sur &lt;a href=&quot;https://twitter.com/ronanlevesque&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
-</content>
-<category term="svg" />
-<summary>Je me suis récemment arraché quelques cheveux sur un bug qui me semblait assez incompréhensible lorsque j’essayais d’utiliser des sprites SVG inline (directement intégrés dans mes pages) et que ceux-ci utilisaient des filtres : le sprite appelé ne s’affichait tout simplement pas. Ayant réussi à trouver d’où le problème venait, je le partage donc; ça peut toujours aider.</summary>
-</entry>
-<entry>
-<title>Nommage et architecture CSS</title>
-<link href="http://ronanlevesque.fr/articles/nommage-et-architecture-css/" rel="alternate" type="text/html" title="Nommage et architecture CSS" />
-<published>2015-08-19T00:00:00+02:00</published>
-<updated>2015-08-19T00:00:00+02:00</updated>
-<id>http://ronanlevesque.fr/articles/nommage-et-architecture-css</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/nommage-et-architecture-css/">&lt;p&gt;A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme &lt;abbr title=&quot;Block, Element, Modifier&quot;&gt;BEM&lt;/abbr&gt; ou &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt;, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.&lt;/p&gt;
+&lt;p&gt;Pour information, j’ai pu observer ce bug sur des versions récentes de Chrome, Firefox et Opéra. Si jamais vous en savez plus sur le sujet, n’hésitez pas à m’en parler sur &lt;a href=&quot;https://twitter.com/ronanlevesque&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="svg" /><summary type="html">Je me suis récemment arraché quelques cheveux sur un bug qui me semblait assez incompréhensible lorsque j’essayais d’utiliser des sprites SVG inline (directement intégrés dans mes pages) et que ceux-ci utilisaient des filtres : le sprite appelé ne s’affichait tout simplement pas. Ayant réussi à trouver d’où le problème venait, je le partage donc; ça peut toujours aider.</summary></entry><entry><title type="html">Nommage et architecture CSS</title><link href="http://ronanlevesque.fr/articles/nommage-et-architecture-css/" rel="alternate" type="text/html" title="Nommage et architecture CSS" /><published>2015-08-19T00:00:00+02:00</published><updated>2015-08-19T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/nommage-et-architecture-css</id><content type="html" xml:base="http://ronanlevesque.fr/articles/nommage-et-architecture-css/">&lt;p&gt;A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme &lt;abbr title=&quot;Block, Element, Modifier&quot;&gt;BEM&lt;/abbr&gt; ou &lt;abbr title=&quot;Structured class names and meaningful hyphens&quot;&gt;SUIT&lt;/abbr&gt;, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;les-basesnbsp-bem-et-suit&quot;&gt;Les bases : BEM et SUIT&lt;/h2&gt;
+&lt;h2 id=&quot;les-bases-bem-et-suit&quot;&gt;Les bases : BEM et SUIT&lt;/h2&gt;
 
 &lt;p&gt;Si ces deux acronymes ne vous évoquent rien, je vous suggère avant toute chose de lire mon &lt;a href=&quot;/articles/css-notation-bem/&quot;&gt;article&lt;/a&gt; sur le premier ainsi que la &lt;a href=&quot;https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md&quot;&gt;documentation Github&lt;/a&gt; du deuxième.&lt;/p&gt;
 
@@ -139,7 +175,7 @@
   }
 }&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;autres-emprunts--suit&quot;&gt;Autres emprunts à SUIT&lt;/h2&gt;
+&lt;h2 id=&quot;autres-emprunts-à-suit&quot;&gt;Autres emprunts à SUIT&lt;/h2&gt;
 
 &lt;p&gt;J’utilise également deux autres conventions provenant de SUIT : les classes utilitaires et les classes d’état.&lt;/p&gt;
 
@@ -151,38 +187,27 @@
 .u-floatLeft {}
 ...&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&quot;classes-dtat&quot;&gt;Classes d’état&lt;/h3&gt;
+&lt;h3 id=&quot;classes-détat&quot;&gt;Classes d’état&lt;/h3&gt;
 
 &lt;p&gt;Celles-ci permettent d’identifier le changement d’état d’un composant; elles sont préfixées par &lt;code class=&quot;highlighter-rouge&quot;&gt;is-&lt;/code&gt; :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;button class=&quot;button is-disabled&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;slecteurs-javascript&quot;&gt;Sélecteurs JavaScript&lt;/h2&gt;
+&lt;h2 id=&quot;sélecteurs-javascript&quot;&gt;Sélecteurs JavaScript&lt;/h2&gt;
 
 &lt;p&gt;Pour tous les sélecteurs que je vais cibler en JS, j’ajoute une classe (ou une id) préfixée par &lt;code class=&quot;highlighter-rouge&quot;&gt;js-&lt;/code&gt;. Cette classe ne doit jamais apparaître dans mes CSS afin de maintenir une séparation claire des rôles.&lt;/p&gt;
 
-&lt;h2 id=&quot;whats-nextnbsp&quot;&gt;What’s next ?&lt;/h2&gt;
+&lt;h2 id=&quot;whats-next&quot;&gt;What’s next ?&lt;/h2&gt;
 
 &lt;p&gt;Même si la mise en place de cette méthodologie m’a procuré un gain énorme en termes de maintenabilité et de lisibilité sur des grosses bases de code CSS, elle n’est pas infaillible, et les risques de non-isolation et de spécificité du code existent toujours.&lt;/p&gt;
 
 &lt;p&gt;Pour contourner – entre autres – ces problèmes, &lt;a href=&quot;http://glenmaddern.com/articles/css-modules&quot;&gt;Glenn Maddern&lt;/a&gt; a créé un système de &lt;a href=&quot;http://glenmaddern.com/articles/css-modules&quot;&gt;modules CSS&lt;/a&gt;. Grâce à du JS, les styles sont maintenus à leur création dans un &lt;em&gt;scope&lt;/em&gt; local qui permet de résoudre les questions de nommage et d’héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d’en rebuter certains.&lt;/p&gt;
 
-&lt;p&gt;Reste a espérer qu’un standard verra enfin le jour pour corriger ce casse-tête…&lt;/p&gt;
-</content>
-<category term="css" />
-<summary>A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.</summary>
-</entry>
-<entry>
-<title>Une gestion responsable des webfonts</title>
-<link href="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/" rel="alternate" type="text/html" title="Une gestion responsable des webfonts" />
-<published>2015-06-25T00:00:00+02:00</published>
-<updated>2015-06-25T00:00:00+02:00</updated>
-<id>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/">&lt;p&gt;Jusqu’à très récemment, j’avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l’apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j’ai mise en place dernièrement, et dont je suis pleinement satisfait.&lt;/p&gt;
+&lt;p&gt;Reste a espérer qu’un standard verra enfin le jour pour corriger ce casse-tête…&lt;/p&gt;</content><author><name></name></author><category term="css" /><summary type="html">A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.</summary></entry><entry><title type="html">Une gestion responsable des webfonts</title><link href="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/" rel="alternate" type="text/html" title="Une gestion responsable des webfonts" /><published>2015-06-25T00:00:00+02:00</published><updated>2015-06-25T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts</id><content type="html" xml:base="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/">&lt;p&gt;Jusqu’à très récemment, j’avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l’apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j’ai mise en place dernièrement, et dont je suis pleinement satisfait.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;quelques-prcisions&quot;&gt;Quelques précisions&lt;/h2&gt;
+&lt;h2 id=&quot;quelques-précisions&quot;&gt;Quelques précisions&lt;/h2&gt;
 
 &lt;p&gt;La notion de &lt;em&gt;FOIT&lt;/em&gt; ne parlant pas à tout le monde, commençons par une petite explication : tant que votre navigateur n’a pas téléchargé les &lt;em&gt;webfonts&lt;/em&gt; de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d’afficher les polices que vous avez définies par défaut. C’est ce qu’on appelle le &lt;em&gt;FOIT&lt;/em&gt;, pour &lt;em&gt;Flash Of Invisible Text&lt;/em&gt;.&lt;/p&gt;
 
@@ -190,12 +215,12 @@
 
 &lt;figure&gt;
   &lt;img src=&quot;/assets/img/webfonts-invision.jpg&quot; alt=&quot;Exemple de site avec FOIT&quot; /&gt;
-  &lt;figcaption&gt;Exemple de FOIT&amp;nbsp;: sur ce site, il m&#39;a fallu une dizaine de secondes pour pouvoir accéder au contenu - malgré ma connexion en WiFi.&lt;/figcaption&gt;
+  &lt;figcaption&gt;Exemple de FOIT&amp;nbsp;: sur ce site, il m'a fallu une dizaine de secondes pour pouvoir accéder au contenu - malgré ma connexion en WiFi.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Si l’on considère en outre qu’un site doit en moyenne se charger en 1 seconde avec une connexion rapide, ne pas pouvoir accéder au contenu du site avant 3 secondes n’est de toute façon pas l’idéal.&lt;/p&gt;
 
-&lt;h2 id=&quot;la-solution-au-problme&quot;&gt;La solution au problème&lt;/h2&gt;
+&lt;h2 id=&quot;la-solution-au-problème&quot;&gt;La solution au problème&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://crocodillon.com/blog/non-blocking-web-fonts-using-localstorage&quot;&gt;Plusieurs&lt;/a&gt; &lt;a href=&quot;http://jaicab.com/localFont/&quot;&gt;techniques&lt;/a&gt; ont émergé récemment, mais celle qui a retenu mon attention est celle mise en place par &lt;a href=&quot;https://www.filamentgroup.com/lab/font-events.html&quot;&gt;filament group&lt;/a&gt;.&lt;/p&gt;
 
@@ -206,35 +231,35 @@
 }
 
 .font-loaded {
-  font-family: &#39;Open Sans&#39;, Sans-serif;
+  font-family: 'Open Sans', Sans-serif;
 }&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;On utilise ensuite le loader JS &lt;a href=&quot;https://github.com/bramstein/fontfaceobserver&quot;&gt;Font Face Observer&lt;/a&gt; créé par &lt;a href=&quot;https://twitter.com/bram_stein&quot;&gt;Bram Stein&lt;/a&gt; pour détecter le moment où toutes les &lt;em&gt;webfonts&lt;/em&gt; seront loadées, et une fois que c’est fait on ajoute notre classe &lt;code class=&quot;highlighter-rouge&quot;&gt;font-loaded&lt;/code&gt; :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;js&quot;&gt;(function(w) {
-  if (w.document.documentElement.className.indexOf(&#39;fonts-loaded&#39;) &amp;gt; -1) {
+  if (w.document.documentElement.className.indexOf('fonts-loaded') &amp;gt; -1) {
   	return;
   }
-  var fontA = new w.FontFaceObserver(&#39;Open Sans&#39;, {
+  var fontA = new w.FontFaceObserver('Open Sans', {
   	weight: 300
   });
-  var fontB = new w.FontFaceObserver(&#39;Open Sans&#39;, {
+  var fontB = new w.FontFaceObserver('Open Sans', {
   	weight: 300,
-  	style: &#39;italic&#39;
+  	style: 'italic'
   });
   w.Promise
   .all([fontA.check(), fontB.check()])
   .then(function() {
-  	w.document.documentElement.className += &#39; fonts-loaded&#39;;
-    localStorage.setItem(&#39;fontsLoaded&#39;, true);
+  	w.document.documentElement.className += ' fonts-loaded';
+    localStorage.setItem('fontsLoaded', true);
   });
 }(this));&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;L’approche de filament group privilégie l’utilisation de cookies, mais quant à moi j’ai préféré me rabattre sur &lt;em&gt;localStorage&lt;/em&gt;. On crée avec celui-ci un item &lt;code class=&quot;highlighter-rouge&quot;&gt;fontsLoaded&lt;/code&gt; grâce auquel on pourra ajouter dans notre &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt; la classe &lt;code class=&quot;highlighter-rouge&quot;&gt;fonts-loaded&lt;/code&gt; à notre html, comme ceci :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;script&amp;gt;
-  if (localStorage.getItem(&#39;fontsLoaded&#39;)) {
-    document.documentElement.className += &#39; fonts-loaded&#39;;
+  if (localStorage.getItem('fontsLoaded')) {
+    document.documentElement.className += ' fonts-loaded';
   }
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 
@@ -242,26 +267,13 @@
 
 &lt;h2 id=&quot;une-future-alternative&quot;&gt;Une future alternative&lt;/h2&gt;
 
-&lt;p&gt;L’approche décrite ici me paraît pour l’instant la plus efficace, en attendant une meilleure solution… Celle-ci pourrait bien venir de la proposition &lt;em&gt;CSS font-rendering&lt;/em&gt; dont le but est de contrôler directement via CSS le comportement d’affichage de nos &lt;em&gt;webfonts&lt;/em&gt;. Je vous invite à consulter son &lt;a href=&quot;https://github.com/KenjiBaheux/css-font-rendering&quot;&gt;repo Github&lt;/a&gt; pour de plus amples informations.&lt;/p&gt;
-</content>
-<category term="tutoriels" />
-<category term="javascript" />
-<category term="html" />
-<summary>Jusqu’à très récemment, j’avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l’apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j’ai mise en place dernièrement, et dont je suis pleinement satisfait.</summary>
-</entry>
-<entry>
-<title>Les principales nouveautés de ES6</title>
-<link href="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/" rel="alternate" type="text/html" title="Les principales nouveautés de ES6" />
-<published>2015-04-27T00:00:00+02:00</published>
-<updated>2015-04-27T00:00:00+02:00</updated>
-<id>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/">&lt;p&gt;JavaScript s’apprête à vivre une petite révolution avec l’arrivée d’ES6, la prochaine version du standard ECMAScript. Et pour cause : c’est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en &lt;a href=&quot;http://kangax.github.io/compat-table/es6/&quot;&gt;cours d’implémentation&lt;/a&gt; dans les différents moteurs JS.&lt;/p&gt;
+&lt;p&gt;L’approche décrite ici me paraît pour l’instant la plus efficace, en attendant une meilleure solution… Celle-ci pourrait bien venir de la proposition &lt;em&gt;CSS font-rendering&lt;/em&gt; dont le but est de contrôler directement via CSS le comportement d’affichage de nos &lt;em&gt;webfonts&lt;/em&gt;. Je vous invite à consulter son &lt;a href=&quot;https://github.com/KenjiBaheux/css-font-rendering&quot;&gt;repo Github&lt;/a&gt; pour de plus amples informations.&lt;/p&gt;</content><author><name></name></author><category term="tutoriels" /><category term="javascript" /><category term="html" /><summary type="html">Jusqu’à très récemment, j’avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l’apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j’ai mise en place dernièrement, et dont je suis pleinement satisfait.</summary></entry><entry><title type="html">Les principales nouveautés de ES6</title><link href="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/" rel="alternate" type="text/html" title="Les principales nouveautés de ES6" /><published>2015-04-27T00:00:00+02:00</published><updated>2015-04-27T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6</id><content type="html" xml:base="http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/">&lt;p&gt;JavaScript s’apprête à vivre une petite révolution avec l’arrivée d’ES6, la prochaine version du standard ECMAScript. Et pour cause : c’est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en &lt;a href=&quot;http://kangax.github.io/compat-table/es6/&quot;&gt;cours d’implémentation&lt;/a&gt; dans les différents moteurs JS.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;Si vous êtes comme moi du genre impatient, il existe de nombreux &lt;em&gt;transpilers&lt;/em&gt; qui permettent à l’heure actuelle d’écrire de l’ES6 qui sera compilé en ES5… Une très bonne raison, à mes yeux, de tester cette nouvelle syntaxe dès aujourd’hui. Voici ci-dessous quelques-unes de ses principales nouveautés.&lt;/p&gt;
 
-&lt;h2 id=&quot;table-des-matires&quot;&gt;Table des matières&lt;/h2&gt;
+&lt;h2 id=&quot;table-des-matières&quot;&gt;Table des matières&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#arrows&quot;&gt;Arrows&lt;/a&gt;&lt;/li&gt;
@@ -283,12 +295,12 @@
 &lt;p&gt;Une nouvelle manière, plus simple et plus rapide, d’écrire les fonctions :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;js&quot;&gt;// ES5
-link.addEventlistener(&#39;click&#39;, function(e) {
+link.addEventlistener('click', function(e) {
   e.preventDefault();
 })
 
 // ES6
-link.addEventListener(&#39;click&#39;, e =&amp;gt; { e.preventDefault(); });
+link.addEventListener('click', e =&amp;gt; { e.preventDefault(); });
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Attention : contrairement aux fonctions traditionnelles la valeur de &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt; est liée de façon lexicale (permet par exemple d’éviter les &lt;code class=&quot;highlighter-rouge&quot;&gt;var self = this;&lt;/code&gt;).&lt;/p&gt;
@@ -301,7 +313,7 @@ link.addEventListener(&#39;click&#39;, e =&amp;gt; { e.preventDefault(); });
   if (true) {
     let a = 2;
   }
-  console.log(a); // Erreur, a n&#39;est pas défini
+  console.log(a); // Erreur, a n'est pas défini
 }&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Const&lt;/code&gt; est immuable. Il n’est accessible qu’en lecture seule.&lt;/p&gt;
@@ -314,9 +326,9 @@ a++; // Erreur
 
 &lt;p&gt;Les templates fournissent une manière plus simple de construire les strings (avec le caractère &lt;kbd&gt;`&lt;/kbd&gt;) en permettant de l’interpolation.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;let fruit = {name: &#39;banana&#39;, color: &#39;yellow&#39;};
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;let fruit = {name: 'banana', color: 'yellow'};
 let describe = `This ${fruit.name} is ${fruit.color}`;
-console.log(describe); // Log &#39;This banana is yellow&#39;&lt;/code&gt;&lt;/pre&gt;
+console.log(describe); // Log 'This banana is yellow'&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Par ailleurs, &lt;kbd&gt;`&lt;/kbd&gt; permet d’écrire des strings multilignes.&lt;/p&gt;
 
@@ -330,7 +342,7 @@ console.log(describe); // Log &#39;This banana is yellow&#39;&lt;/code&gt;&lt;/p
   // Equivalent à prop: prop
   prop,
   // Nom de propriété dynamique
-  &amp;#91;&#39;foo&#39; + &#39;bar&#39;&amp;#93;: 1,
+  &amp;#91;'foo' + 'bar'&amp;#93;: 1,
   // Méthode
   myMethod() {}
 };
@@ -343,7 +355,7 @@ console.log(describe); // Log &#39;This banana is yellow&#39;&lt;/code&gt;&lt;/p
 &lt;pre&gt;&lt;code class=&quot;js&quot;&gt;class Car {
   constructor(speed) {
     this.speed = `${speed}km/h`;
-    this.color = &#39;gray&#39;;
+    this.color = 'gray';
   }
   describe() {
     console.log(`This car is ${this.color}`);
@@ -353,7 +365,7 @@ console.log(describe); // Log &#39;This banana is yellow&#39;&lt;/code&gt;&lt;/p
 class Ferrari extends Car {
   constructor(maxSpeed) {
     super(maxSpeed);
-    this.color = &#39;red&#39;;
+    this.color = 'red';
   }
   get newStats() {
     return `Max speed&amp;nbsp;: ${this.speed}`;
@@ -361,18 +373,18 @@ class Ferrari extends Car {
 }
 
 let f430 = new Ferrari(250);
-f430.describe(); // Log &#39;This car is red&#39;
-console.log(f430.newStats); // Log &#39;Max speed: 250km/h&#39;&lt;/code&gt;&lt;/pre&gt;
+f430.describe(); // Log 'This car is red'
+console.log(f430.newStats); // Log 'Max speed: 250km/h'&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;parametres-par-defaut&quot;&gt;Paramètres par défaut&lt;/h2&gt;
 
 &lt;p&gt;On peut dorénavant spécifier des paramètres par défaut dans nos fonctions :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function car(color=&#39;red&#39;) {
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function car(color='red') {
   console.log(`This car is ${color}.`);
 }
 
-car(); // Log &#39;This car is red.&#39;&lt;/code&gt;&lt;/pre&gt;
+car(); // Log 'This car is red.'&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;parametres-rest&quot;&gt;Paramètres rest&lt;/h2&gt;
 
@@ -399,9 +411,9 @@ console.log(bar); // Log 3&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Cette déclaration crée une boucle sur des objets pouvant être itérés (array, map, paramètres etc.). La syntaxe est simple :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;let arr = [&#39;red&#39;, &#39;yellow&#39;, &#39;blue&#39;];
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;let arr = ['red', 'yellow', 'blue'];
 for (let n of arr) {
-  console.log(n); // Log chaque valeur de l&#39;array successivement
+  console.log(n); // Log chaque valeur de l'array successivement
 }&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;generateurs&quot;&gt;Générateurs&lt;/h2&gt;
@@ -409,47 +421,36 @@ for (let n of arr) {
 &lt;p&gt;Leur syntaxe est particulière : On déclare une nouvelle instance générateur avec la syntaxe &lt;code class=&quot;highlighter-rouge&quot;&gt;function*&lt;/code&gt;. A l’intérieur de celle-ci, &lt;code class=&quot;highlighter-rouge&quot;&gt;yield&lt;/code&gt; définit la valeur retournée. On peut appeler chaque valeur qui suit avec &lt;code class=&quot;highlighter-rouge&quot;&gt;next()&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function* fn() {
-  yield &#39;blue&#39;;
-  yield &#39;red&#39;;
-  yield &#39;green&#39;;
+  yield 'blue';
+  yield 'red';
+  yield 'green';
 }
 
 var a = fn();
-console.log(a.next()); // Log &#39;blue&#39;
-console.log(a.next()); // Log &#39;red&#39;
-console.log(a.next()); // Log &#39;green&#39;&lt;/code&gt;&lt;/pre&gt;
+console.log(a.next()); // Log 'blue'
+console.log(a.next()); // Log 'red'
+console.log(a.next()); // Log 'green'&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;modules&quot;&gt;Modules&lt;/h2&gt;
 
 &lt;p&gt;Ils permettent de démocratiser les solutions mises en place avec CommonJS ou AMD. Ces nouveaux modules fonctionnent sur un modèle asynchrone : le code n’est pas exécuté tant que les modules requis n’ont pas été exécutés.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;// Dans un fichier &#39;utils.js&#39;&amp;nbsp;:
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;// Dans un fichier 'utils.js'&amp;nbsp;:
 export function addOne(x) {
   return x + 1;
 };
 
 // Dans un autre fichier&amp;nbsp;:
-import addOne from &#39;utils&#39;;
+import addOne from 'utils';
 addOne(4);
 
 // Importation de tout le fichier&amp;nbsp;:
-import * as utils from &#39;utils&#39;;
+import * as utils from 'utils';
 utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;autres&quot;&gt;Autres&lt;/h2&gt;
 
-&lt;p&gt;J’ai couvert ici les nouveautés qui paraissaient importantes à mes yeux, mais il en existe d’autres : promises, symboles, WeakMaps et WeakSets… Pour une liste exhaustive de tous les ajouts, je vous invite à consulter &lt;a href=&quot;https://github.com/lukehoban/es6features&quot;&gt;es6-features&lt;/a&gt; sur Github.&lt;/p&gt;
-</content>
-<category term="javascript" />
-<summary>JavaScript s’apprête à vivre une petite révolution avec l’arrivée d’ES6, la prochaine version du standard ECMAScript. Et pour cause : c’est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en cours d’implémentation dans les différents moteurs JS.</summary>
-</entry>
-<entry>
-<title>Dropbox et node_modules</title>
-<link href="http://ronanlevesque.fr/articles/dropdox-et-node-modules/" rel="alternate" type="text/html" title="Dropbox et node_modules" />
-<published>2015-04-02T00:00:00+02:00</published>
-<updated>2015-04-02T00:00:00+02:00</updated>
-<id>http://ronanlevesque.fr/articles/dropdox-et-node-modules</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/dropdox-et-node-modules/">&lt;p&gt;J’utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j’utilise. J’ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; : ce dernier a tendance à se compter en milliers de fichiers, ce qui n’est pas idéal pour la synchronisation de Dropbox.&lt;/p&gt;
+&lt;p&gt;J’ai couvert ici les nouveautés qui paraissaient importantes à mes yeux, mais il en existe d’autres : promises, symboles, WeakMaps et WeakSets… Pour une liste exhaustive de tous les ajouts, je vous invite à consulter &lt;a href=&quot;https://github.com/lukehoban/es6features&quot;&gt;es6-features&lt;/a&gt; sur Github.&lt;/p&gt;</content><author><name></name></author><category term="javascript" /><summary type="html">JavaScript s’apprête à vivre une petite révolution avec l’arrivée d’ES6, la prochaine version du standard ECMAScript. Et pour cause : c’est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en cours d’implémentation dans les différents moteurs JS.</summary></entry><entry><title type="html">Dropbox et node_modules</title><link href="http://ronanlevesque.fr/articles/dropdox-et-node-modules/" rel="alternate" type="text/html" title="Dropbox et node_modules" /><published>2015-04-02T00:00:00+02:00</published><updated>2015-04-02T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/dropdox-et-node-modules</id><content type="html" xml:base="http://ronanlevesque.fr/articles/dropdox-et-node-modules/">&lt;p&gt;J’utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j’utilise. J’ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; : ce dernier a tendance à se compter en milliers de fichiers, ce qui n’est pas idéal pour la synchronisation de Dropbox.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -465,22 +466,11 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/screen-node-modules.png&quot; alt=&quot;Dossier node_modules&quot; style=&quot;border: none;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;La démarche peut sembler un brin fastidieuse, mais c’est à ma connaissance la seule solution pour éviter d’avoir à synchroniser à chaque fois vos &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;.&lt;/p&gt;
-</content>
-<category term="outils" />
-<summary>J’utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j’utilise. J’ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux node_modules : ce dernier a tendance à se compter en milliers de fichiers, ce qui n’est pas idéal pour la synchronisation de Dropbox.</summary>
-</entry>
-<entry>
-<title>Mettre ses assets en cache avec Jekyll</title>
-<link href="http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/" rel="alternate" type="text/html" title="Mettre ses assets en cache avec Jekyll" />
-<published>2014-12-17T00:00:00+01:00</published>
-<updated>2014-12-17T00:00:00+01:00</updated>
-<id>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/">&lt;p&gt;Je partage aujourd’hui une solution assez simple que l’on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l’on utilise soient correctement mis à jour.&lt;/p&gt;
+&lt;p&gt;La démarche peut sembler un brin fastidieuse, mais c’est à ma connaissance la seule solution pour éviter d’avoir à synchroniser à chaque fois vos &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><category term="outils" /><summary type="html">J’utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j’utilise. J’ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux node_modules : ce dernier a tendance à se compter en milliers de fichiers, ce qui n’est pas idéal pour la synchronisation de Dropbox.</summary></entry><entry><title type="html">Mettre ses assets en cache avec Jekyll</title><link href="http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/" rel="alternate" type="text/html" title="Mettre ses assets en cache avec Jekyll" /><published>2014-12-17T00:00:00+01:00</published><updated>2014-12-17T00:00:00+01:00</updated><id>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll</id><content type="html" xml:base="http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/">&lt;p&gt;Je partage aujourd’hui une solution assez simple que l’on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l’on utilise soient correctement mis à jour.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p class=&quot;info&quot;&gt;Mise à jour (01/07/2015) : depuis l&#39;écriture de cette article, j&#39;ai mis en place un système bien plus pertinent que je détaille ci-dessous.&lt;/p&gt;
+&lt;p class=&quot;info&quot;&gt;Mise à jour (01/07/2015) : depuis l'écriture de cette article, j'ai mis en place un système bien plus pertinent que je détaille ci-dessous.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -492,7 +482,7 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Il nous suffira d’utiliser :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;/css/myawesomestylesheet.css?v=&amp;#123;&amp;#123; site.time | date: &#39;%y%m%d%k%M%S&#39; &amp;#125;&amp;#125;&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;/css/myawesomestylesheet.css?v=&amp;#123;&amp;#123; site.time | date: '%y%m%d%k%M%S' &amp;#125;&amp;#125;&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Ce qui générera, dans l’ordre : l’année, le mois, le jour, et l’heure avec minutes et secondes. Ainsi le résultat obtenu sera de ce type :&lt;/p&gt;
 
@@ -504,7 +494,7 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;En appliquant cette façon de faire, tous les fichiers HTML seront mis à jour avec une nouvelle version du CSS, même si celui-ci n’a pas changé. La mise en cache perd un peu de son intérêt… Autre argument, Google &lt;a href=&quot;https://developers.google.com/speed/docs/insights/LeverageBrowserCaching&quot;&gt;conseille&lt;/a&gt; d’éviter les &lt;em&gt;query parameters&lt;/em&gt; au profit des &lt;em&gt;fingerprints&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;un-autre-systme&quot;&gt;Un autre système&lt;/h2&gt;
+&lt;h2 id=&quot;un-autre-système&quot;&gt;Un autre système&lt;/h2&gt;
 
 &lt;p&gt;Je suis allé chercher du côté des plugins Jekyll et j’ai déniché &lt;a href=&quot;https://github.com/tkareine/jekyll-minibundle&quot;&gt;Jekyll-minibundle&lt;/a&gt;, qui fait exactement ce que je cherche. Une fois le plugin installé, les &lt;em&gt;fingerprints&lt;/em&gt; s’ajoutent de cette manière :&lt;/p&gt;
 
@@ -512,27 +502,15 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Le premier lien est le fichier source, le deuxième est le fichier de destination. Le code généré donne ça :&lt;/p&gt;
 
-&lt;pre class=&quot;html&quot;&gt;&lt;code&gt;&amp;lt;link href=&quot;/assets/css/fox-86e4c5e39ca8a41719996d783a87c702.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-</content>
-<category term="divers" />
-<category term="outils" />
-<summary>Je partage aujourd’hui une solution assez simple que l’on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l’on utilise soient correctement mis à jour.</summary>
-</entry>
-<entry>
-<title>Animer ses SVG avec Snap.svg</title>
-<link href="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/" rel="alternate" type="text/html" title="Animer ses SVG avec Snap.svg" />
-<published>2014-07-21T00:00:00+02:00</published>
-<updated>2014-07-21T00:00:00+02:00</updated>
-<id>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/">&lt;p&gt;Ces derniers temps, j’ai un peu expérimenté l’animation de SVG. Mon premier essai a été cet &lt;a href=&quot;http://codepen.io/eskiiss/full/kFphn&quot;&gt;oiseau&lt;/a&gt;, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j’ai trouvée est &lt;a href=&quot;http://snapsvg.io/&quot;&gt;Snap.svg&lt;/a&gt;. Je vais vous expliquer le processus en détails.&lt;/p&gt;
+&lt;pre class=&quot;html&quot;&gt;&lt;code&gt;&amp;lt;link href=&quot;/assets/css/fox-86e4c5e39ca8a41719996d783a87c702.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="divers" /><category term="outils" /><summary type="html">Je partage aujourd’hui une solution assez simple que l’on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l’on utilise soient correctement mis à jour.</summary></entry><entry><title type="html">Animer ses SVG avec Snap.svg</title><link href="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/" rel="alternate" type="text/html" title="Animer ses SVG avec Snap.svg" /><published>2014-07-21T00:00:00+02:00</published><updated>2014-07-21T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg</id><content type="html" xml:base="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/">&lt;p&gt;Ces derniers temps, j’ai un peu expérimenté l’animation de SVG. Mon premier essai a été cet &lt;a href=&quot;http://codepen.io/eskiiss/full/kFphn&quot;&gt;oiseau&lt;/a&gt;, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j’ai trouvée est &lt;a href=&quot;http://snapsvg.io/&quot;&gt;Snap.svg&lt;/a&gt;. Je vais vous expliquer le processus en détails.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p class=&quot;info&quot;&gt;Attention, pour bien saisir ce tutoriel il est préférable d&#39;être à l&#39;aise sur le mode de fonctionnement des SVG.&lt;/p&gt;
+&lt;p class=&quot;info&quot;&gt;Attention, pour bien saisir ce tutoriel il est préférable d'être à l'aise sur le mode de fonctionnement des SVG.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;lide-de-dpart&quot;&gt;L’idée de départ&lt;/h2&gt;
+&lt;h2 id=&quot;lidée-de-départ&quot;&gt;L’idée de départ&lt;/h2&gt;
 
 &lt;p&gt;Je suis parti sur une idée relativement simple : je crée des smileys sous Sketch, chacun avec deux états différents, et je fais en sorte de les faire changer d’état au clic.&lt;/p&gt;
 
@@ -563,17 +541,17 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 &lt;/style&gt;
 
 &lt;figure&gt;
-  &lt;svg width=&quot;390px&quot; height=&quot;390px&quot; viewbox=&quot;0 0 390 390&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; id=&quot;smiley&quot;&gt;
+  &lt;svg width=&quot;390px&quot; height=&quot;390px&quot; viewBox=&quot;0 0 390 390&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; id=&quot;smiley&quot;&gt;
     &lt;defs&gt;
-      &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterunits=&quot;objectBoundingBox&quot; id=&quot;filter-1&quot;&gt;
-        &lt;feoffset dx=&quot;-30&quot; dy=&quot;-30&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetInner1&quot;&gt;&lt;/feoffset&gt;
-        &lt;fegaussianblur stddeviation=&quot;0&quot; in=&quot;shadowOffsetInner1&quot; result=&quot;shadowBlurInner1&quot;&gt;&lt;/fegaussianblur&gt;
-        &lt;fecomposite in=&quot;shadowBlurInner1&quot; in2=&quot;SourceAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot; result=&quot;shadowInnerInner1&quot;&gt;&lt;/fecomposite&gt;
-        &lt;fecolormatrix values=&quot;0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0&quot; in=&quot;shadowInnerInner1&quot; type=&quot;matrix&quot; result=&quot;shadowMatrixInner1&quot;&gt;&lt;/fecolormatrix&gt;
-        &lt;femerge&gt;
-          &lt;femergenode in=&quot;SourceGraphic&quot;&gt;&lt;/femergenode&gt;
-          &lt;femergenode in=&quot;shadowMatrixInner1&quot;&gt;&lt;/femergenode&gt;
-        &lt;/femerge&gt;
+      &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterUnits=&quot;objectBoundingBox&quot; id=&quot;filter-1&quot;&gt;
+        &lt;feOffset dx=&quot;-30&quot; dy=&quot;-30&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetInner1&quot;&gt;&lt;/feOffset&gt;
+        &lt;feGaussianBlur stdDeviation=&quot;0&quot; in=&quot;shadowOffsetInner1&quot; result=&quot;shadowBlurInner1&quot;&gt;&lt;/feGaussianBlur&gt;
+        &lt;feComposite in=&quot;shadowBlurInner1&quot; in2=&quot;SourceAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot; result=&quot;shadowInnerInner1&quot;&gt;&lt;/feComposite&gt;
+        &lt;feColorMatrix values=&quot;0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0&quot; in=&quot;shadowInnerInner1&quot; type=&quot;matrix&quot; result=&quot;shadowMatrixInner1&quot;&gt;&lt;/feColorMatrix&gt;
+        &lt;feMerge&gt;
+          &lt;feMergeNode in=&quot;SourceGraphic&quot;&gt;&lt;/feMergeNode&gt;
+          &lt;feMergeNode in=&quot;shadowMatrixInner1&quot;&gt;&lt;/feMergeNode&gt;
+        &lt;/feMerge&gt;
       &lt;/filter&gt;
       &lt;rect id=&quot;path-2&quot; x=&quot;45&quot; y=&quot;45&quot; width=&quot;300&quot; height=&quot;300&quot; rx=&quot;70&quot;&gt;&lt;/rect&gt;
     &lt;/defs&gt;
@@ -589,17 +567,17 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
       &lt;path d=&quot;M122.5,268.5 L268.5,268.5&quot; id=&quot;smiley__mouth&quot; stroke=&quot;#33639B&quot; stroke-width=&quot;15&quot; stroke-linecap=&quot;square&quot;&gt;&lt;/path&gt;
     &lt;/g&gt;
   &lt;/svg&gt;
-  &lt;svg id=&quot;smiley-angry&quot; width=&quot;390px&quot; height=&quot;390px&quot; viewbox=&quot;0 0 390 390&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+  &lt;svg id=&quot;smiley-angry&quot; width=&quot;390px&quot; height=&quot;390px&quot; viewBox=&quot;0 0 390 390&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
     &lt;defs&gt;
-      &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterunits=&quot;objectBoundingBox&quot; id=&quot;filter-1&quot;&gt;
-        &lt;feoffset dx=&quot;-30&quot; dy=&quot;-30&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetInner1&quot;&gt;&lt;/feoffset&gt;
-        &lt;fegaussianblur stddeviation=&quot;0&quot; in=&quot;shadowOffsetInner1&quot; result=&quot;shadowBlurInner1&quot;&gt;&lt;/fegaussianblur&gt;
-        &lt;fecomposite in=&quot;shadowBlurInner1&quot; in2=&quot;SourceAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot; result=&quot;shadowInnerInner1&quot;&gt;&lt;/fecomposite&gt;
-        &lt;fecolormatrix values=&quot;0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0&quot; in=&quot;shadowInnerInner1&quot; type=&quot;matrix&quot; result=&quot;shadowMatrixInner1&quot;&gt;&lt;/fecolormatrix&gt;
-        &lt;femerge&gt;
-          &lt;femergenode in=&quot;SourceGraphic&quot;&gt;&lt;/femergenode&gt;
-          &lt;femergenode in=&quot;shadowMatrixInner1&quot;&gt;&lt;/femergenode&gt;
-        &lt;/femerge&gt;
+      &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterUnits=&quot;objectBoundingBox&quot; id=&quot;filter-1&quot;&gt;
+        &lt;feOffset dx=&quot;-30&quot; dy=&quot;-30&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetInner1&quot;&gt;&lt;/feOffset&gt;
+        &lt;feGaussianBlur stdDeviation=&quot;0&quot; in=&quot;shadowOffsetInner1&quot; result=&quot;shadowBlurInner1&quot;&gt;&lt;/feGaussianBlur&gt;
+        &lt;feComposite in=&quot;shadowBlurInner1&quot; in2=&quot;SourceAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot; result=&quot;shadowInnerInner1&quot;&gt;&lt;/feComposite&gt;
+        &lt;feColorMatrix values=&quot;0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0&quot; in=&quot;shadowInnerInner1&quot; type=&quot;matrix&quot; result=&quot;shadowMatrixInner1&quot;&gt;&lt;/feColorMatrix&gt;
+        &lt;feMerge&gt;
+          &lt;feMergeNode in=&quot;SourceGraphic&quot;&gt;&lt;/feMergeNode&gt;
+          &lt;feMergeNode in=&quot;shadowMatrixInner1&quot;&gt;&lt;/feMergeNode&gt;
+        &lt;/feMerge&gt;
       &lt;/filter&gt;
       &lt;rect id=&quot;path-2&quot; x=&quot;45&quot; y=&quot;45&quot; width=&quot;300&quot; height=&quot;300&quot; rx=&quot;70&quot;&gt;&lt;/rect&gt;
     &lt;/defs&gt;
@@ -615,17 +593,17 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
       &lt;path d=&quot;M179.5,281.5 L211.5,281.5&quot; id=&quot;smiley-angry__mouth&quot; stroke=&quot;#33639B&quot; stroke-width=&quot;15&quot; stroke-linecap=&quot;square&quot;&gt;&lt;/path&gt;
     &lt;/g&gt;
   &lt;/svg&gt;
-  &lt;svg id=&quot;smiley-sad&quot; width=&quot;390px&quot; height=&quot;390px&quot; viewbox=&quot;0 0 390 390&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
+  &lt;svg id=&quot;smiley-sad&quot; width=&quot;390px&quot; height=&quot;390px&quot; viewBox=&quot;0 0 390 390&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;&gt;
     &lt;defs&gt;
-      &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterunits=&quot;objectBoundingBox&quot; id=&quot;filter-1&quot;&gt;
-        &lt;feoffset dx=&quot;-30&quot; dy=&quot;-30&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetInner1&quot;&gt;&lt;/feoffset&gt;
-        &lt;fegaussianblur stddeviation=&quot;0&quot; in=&quot;shadowOffsetInner1&quot; result=&quot;shadowBlurInner1&quot;&gt;&lt;/fegaussianblur&gt;
-        &lt;fecomposite in=&quot;shadowBlurInner1&quot; in2=&quot;SourceAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot; result=&quot;shadowInnerInner1&quot;&gt;&lt;/fecomposite&gt;
-        &lt;fecolormatrix values=&quot;0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0&quot; in=&quot;shadowInnerInner1&quot; type=&quot;matrix&quot; result=&quot;shadowMatrixInner1&quot;&gt;&lt;/fecolormatrix&gt;
-        &lt;femerge&gt;
-          &lt;femergenode in=&quot;SourceGraphic&quot;&gt;&lt;/femergenode&gt;
-          &lt;femergenode in=&quot;shadowMatrixInner1&quot;&gt;&lt;/femergenode&gt;
-        &lt;/femerge&gt;
+      &lt;filter x=&quot;-50%&quot; y=&quot;-50%&quot; width=&quot;200%&quot; height=&quot;200%&quot; filterUnits=&quot;objectBoundingBox&quot; id=&quot;filter-1&quot;&gt;
+        &lt;feOffset dx=&quot;-30&quot; dy=&quot;-30&quot; in=&quot;SourceAlpha&quot; result=&quot;shadowOffsetInner1&quot;&gt;&lt;/feOffset&gt;
+        &lt;feGaussianBlur stdDeviation=&quot;0&quot; in=&quot;shadowOffsetInner1&quot; result=&quot;shadowBlurInner1&quot;&gt;&lt;/feGaussianBlur&gt;
+        &lt;feComposite in=&quot;shadowBlurInner1&quot; in2=&quot;SourceAlpha&quot; operator=&quot;arithmetic&quot; k2=&quot;-1&quot; k3=&quot;1&quot; result=&quot;shadowInnerInner1&quot;&gt;&lt;/feComposite&gt;
+        &lt;feColorMatrix values=&quot;0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.21 0&quot; in=&quot;shadowInnerInner1&quot; type=&quot;matrix&quot; result=&quot;shadowMatrixInner1&quot;&gt;&lt;/feColorMatrix&gt;
+        &lt;feMerge&gt;
+          &lt;feMergeNode in=&quot;SourceGraphic&quot;&gt;&lt;/feMergeNode&gt;
+          &lt;feMergeNode in=&quot;shadowMatrixInner1&quot;&gt;&lt;/feMergeNode&gt;
+        &lt;/feMerge&gt;
       &lt;/filter&gt;
       &lt;rect id=&quot;path-2&quot; x=&quot;45&quot; y=&quot;45&quot; width=&quot;300&quot; height=&quot;300&quot; rx=&quot;70&quot;&gt;&lt;/rect&gt;
     &lt;/defs&gt;
@@ -648,9 +626,9 @@ utils.addOne(4);&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Pour se faciliter la vie, l’idée est de pouvoir animer chacune des parties du smiley indépendamment. La façon de faire est assez simple; on applique une ID à la section de notre SVG en question, et on la lie à Snap.Svg. Par exemple :&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;var smiley = Snap.select(&#39;#smiley&#39;),
-    smileyBody = Snap.select(&#39;#smiley__body&#39;),
-    smileyMouth = Snap.select(&#39;#smiley__mouth&#39;);
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;var smiley = Snap.select('#smiley'),
+    smileyBody = Snap.select('#smiley__body'),
+    smileyMouth = Snap.select('#smiley__mouth');
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Libre à nous de les animer ensuite comme l’on souhaite. Pour toggle les changements d’état, on applique un callback au &lt;code class=&quot;highlighter-rouge&quot;&gt;smiley.click&lt;/code&gt; pour utiliser la fonction souhaitée (ici, &lt;code class=&quot;highlighter-rouge&quot;&gt;smileyDef()&lt;/code&gt; et &lt;code class=&quot;highlighter-rouge&quot;&gt;smileyToggle&lt;/code&gt;).&lt;/p&gt;
@@ -673,7 +651,7 @@ smiley.click(function() {
 &lt;p&gt;Les modifications apportées au corps sont assez simples : on change uniquement la couleur du fond et de la bordure. Cela se fait de la manière suivante :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function smileyToggle() {
-  smileyBody.animate({fill: &#39;#A4DA69&#39;, stroke: &#39;#5B9020&#39;}, 150, mina.ease);
+  smileyBody.animate({fill: '#A4DA69', stroke: '#5B9020'}, 150, mina.ease);
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -684,7 +662,7 @@ smiley.click(function() {
 &lt;p&gt;Il va s’agir de modifier le &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; de la bouche pour faire arborer à notre smiley un gros sourire. Cela se fait d’une manière identique à l’animation des couleurs du body :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function smileyToggle() {
-  smileyMouth.animate({d: &#39;M90.7207031,217.580078 C129.926268,287.516842 285.592097,293.239314 300.232422,205.320312&#39;, stroke: &#39;#5B9020&#39;}, 150, mina.ease);
+  smileyMouth.animate({d: 'M90.7207031,217.580078 C129.926268,287.516842 285.592097,293.239314 300.232422,205.320312', stroke: '#5B9020'}, 150, mina.ease);
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -695,13 +673,13 @@ smiley.click(function() {
 &lt;p&gt;Pour les &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt;, j’ai comme pour ma bouche simplement modifié mon attribut &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt;. Pour les &lt;code class=&quot;highlighter-rouge&quot;&gt;polygon&lt;/code&gt;, j’ai dû appliquer des transformations pour que le sourcil en question se déplace à l’endroit voulu.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;js&quot;&gt;function smileyToggle() {
-  smileyLeftEyebrow.animate({transform: &#39;t0,-30&#39;, fill: &#39;#5B9020&#39;}, 150, mina.ease);
+  smileyLeftEyebrow.animate({transform: 't0,-30', fill: '#5B9020'}, 150, mina.ease);
 }
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Les transformations sur Snap.svg ont une syntaxe assez spéciale. Ainsi, &lt;code class=&quot;highlighter-rouge&quot;&gt;t0,-30&lt;/code&gt; désigne une translation des valeurs x et y à 0 et -30 dans l’espace. Pour plus d’infos sur le sujet, je vous conseille de lire cet &lt;a href=&quot;http://stackoverflow.com/questions/20302801/how-do-i-understand-transform-properties-in-snap-svg&quot;&gt;article &lt;sup&gt;EN&lt;/sup&gt;&lt;/a&gt; sur Stackoverflow.&lt;/p&gt;
 
-&lt;h2 id=&quot;quelques-prcisions-pour-finir&quot;&gt;Quelques précisions pour finir&lt;/h2&gt;
+&lt;h2 id=&quot;quelques-précisions-pour-finir&quot;&gt;Quelques précisions pour finir&lt;/h2&gt;
 
 &lt;p&gt;Puisque mes animations sont basée sur un retour à l’état initial, il est nécessaire de prévoir une fonction qui réinitialisera les valeurs par défaut du SVG. (D’où la fonction &lt;code class=&quot;highlighter-rouge&quot;&gt;smileyDef()&lt;/code&gt;).&lt;/p&gt;
 
@@ -709,27 +687,15 @@ smiley.click(function() {
 
 &lt;script src=&quot;/demos/snapsvg.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;p class=&quot;demo&quot;&gt;&lt;a href=&quot;http://codepen.io/eskiiss/full/gxqsr&quot;&gt;Voir la démo&lt;/a&gt;&lt;/p&gt;
-</content>
-<category term="svg" />
-<category term="tutoriels" />
-<summary>Ces derniers temps, j’ai un peu expérimenté l’animation de SVG. Mon premier essai a été cet oiseau, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j’ai trouvée est Snap.svg. Je vais vous expliquer le processus en détails.</summary>
-</entry>
-<entry>
-<title>Abandonner le support d’IE8</title>
-<link href="http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/" rel="alternate" type="text/html" title="Abandonner le support d&#39;IE8" />
-<published>2014-06-20T00:00:00+02:00</published>
-<updated>2014-06-20T00:00:00+02:00</updated>
-<id>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/">&lt;p&gt;La décision de Microsoft &lt;a href=&quot;http://windows.microsoft.com/fr-fr/windows/end-support-help&quot;&gt;de ne plus assurer le support d’XP&lt;/a&gt; a eu pour conséquence de sonner le glas définitif d’Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d’éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d’autres navigateurs. Pour nous, webdesigners et développeurs, c’est un vrai soulagement et surtout un gros pas en avant…&lt;/p&gt;
+&lt;p class=&quot;demo&quot;&gt;&lt;a href=&quot;http://codepen.io/eskiiss/full/gxqsr&quot;&gt;Voir la démo&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="svg" /><category term="tutoriels" /><summary type="html">Ces derniers temps, j’ai un peu expérimenté l’animation de SVG. Mon premier essai a été cet oiseau, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j’ai trouvée est Snap.svg. Je vais vous expliquer le processus en détails.</summary></entry><entry><title type="html">Abandonner le support d’IE8</title><link href="http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/" rel="alternate" type="text/html" title="Abandonner le support d'IE8" /><published>2014-06-20T00:00:00+02:00</published><updated>2014-06-20T00:00:00+02:00</updated><id>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8</id><content type="html" xml:base="http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/">&lt;p&gt;La décision de Microsoft &lt;a href=&quot;http://windows.microsoft.com/fr-fr/windows/end-support-help&quot;&gt;de ne plus assurer le support d’XP&lt;/a&gt; a eu pour conséquence de sonner le glas définitif d’Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d’éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d’autres navigateurs. Pour nous, webdesigners et développeurs, c’est un vrai soulagement et surtout un gros pas en avant…&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;en-intronbsp-quelques-statistiques&quot;&gt;En intro : quelques statistiques&lt;/h2&gt;
+&lt;h2 id=&quot;en-intro-quelques-statistiques&quot;&gt;En intro : quelques statistiques&lt;/h2&gt;
 
 &lt;p&gt;Concrètement, si on décide d’arrêter tout support pour IE8, on se prive en moyenne de &lt;a href=&quot;http://gs.statcounter.com/#desktop-browser_version_partially_combined-FR-monthly-201404-201406-bar&quot;&gt;3% de nos visiteurs&lt;/a&gt; (données France). Un chiffre que je considère comme raisonnable, surtout si l’on garde en tête que l’on peut décider de proposer à nos visiteurs des navigateurs plus fiables pour mieux protéger leur machine.&lt;/p&gt;
 
-&lt;h2 id=&quot;ce-que-a-implique&quot;&gt;Ce que ça implique&lt;/h2&gt;
+&lt;h2 id=&quot;ce-que-ça-implique&quot;&gt;Ce que ça implique&lt;/h2&gt;
 
 &lt;p&gt;En faisant le choix d’exclure IE8 de la liste des navigateurs supportés, de nombreux avantages immédiats vont pouvoir s’offrir à nous; en voici les principaux à mes yeux.&lt;/p&gt;
 
@@ -741,7 +707,7 @@ smiley.click(function() {
   &lt;li&gt;&lt;strong&gt;SVG :&lt;/strong&gt; le format vectoriel du SVG en fait un format parfait pour les écrans HD et Retina. Plus besoin de prévoir des fallbacks en PNG !&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;comment-grer-nos-visiteurs-sur-ie8nbsp&quot;&gt;Comment gérer nos visiteurs sur IE8 ?&lt;/h2&gt;
+&lt;h2 id=&quot;comment-gérer-nos-visiteurs-sur-ie8&quot;&gt;Comment gérer nos visiteurs sur IE8 ?&lt;/h2&gt;
 
 &lt;p&gt;Faire le choix d’utiliser les features citées ci-dessus, c’est décider d’abandonner tout support d’IE8 par opposé à une simple dégradation de l’expérience. Les avocats de l’accessibilité pourraient sans doute y trouver à redire, mais je pars du principe qu’il faut parfois forcer la main des utilisateurs pour assurer leur sécurité.&lt;/p&gt;
 
@@ -753,19 +719,7 @@ smiley.click(function() {
 
 &lt;hr /&gt;
 
-&lt;p class=&quot;info&quot;&gt;Mise à jour (17/10/2015)&amp;nbsp;: depuis j&#39;ai non seulement abandonné le support d&#39;IE8, mais aussi celui d&#39;IE9...&lt;/p&gt;
-</content>
-<category term="ux" />
-<category term="divers" />
-<summary>La décision de Microsoft de ne plus assurer le support d’XP a eu pour conséquence de sonner le glas définitif d’Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d’éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d’autres navigateurs. Pour nous, webdesigners et développeurs, c’est un vrai soulagement et surtout un gros pas en avant…</summary>
-</entry>
-<entry>
-<title>Responsive design : adoptez un process intelligent !</title>
-<link href="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/" rel="alternate" type="text/html" title="Responsive design&amp;nbsp;: adoptez un process intelligent !" />
-<published>2014-03-13T00:00:00+01:00</published>
-<updated>2014-03-13T00:00:00+01:00</updated>
-<id>http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/">&lt;p&gt;Ce n’est plus vraiment une nouveauté : le responsive design est la tendance &lt;em&gt;hype&lt;/em&gt; du moment. De plus en plus d’acteurs du web ont réalisé qu’il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n’est pas toujours le cas.&lt;/p&gt;
+&lt;p class=&quot;info&quot;&gt;Mise à jour (17/10/2015)&amp;nbsp;: depuis j'ai non seulement abandonné le support d'IE8, mais aussi celui d'IE9...&lt;/p&gt;</content><author><name></name></author><category term="ux" /><category term="divers" /><summary type="html">La décision de Microsoft de ne plus assurer le support d’XP a eu pour conséquence de sonner le glas définitif d’Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d’éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d’autres navigateurs. Pour nous, webdesigners et développeurs, c’est un vrai soulagement et surtout un gros pas en avant…</summary></entry><entry><title type="html">Responsive design : adoptez un process intelligent !</title><link href="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/" rel="alternate" type="text/html" title="Responsive design&amp;nbsp;: adoptez un process intelligent !" /><published>2014-03-13T00:00:00+01:00</published><updated>2014-03-13T00:00:00+01:00</updated><id>http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent</id><content type="html" xml:base="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/">&lt;p&gt;Ce n’est plus vraiment une nouveauté : le responsive design est la tendance &lt;em&gt;hype&lt;/em&gt; du moment. De plus en plus d’acteurs du web ont réalisé qu’il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n’est pas toujours le cas.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -773,7 +727,7 @@ smiley.click(function() {
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;responsivenbsp-the-wrong-way&quot;&gt;Responsive : the wrong way&lt;/h2&gt;
+&lt;h2 id=&quot;responsive-the-wrong-way&quot;&gt;Responsive : the wrong way&lt;/h2&gt;
 
 &lt;p&gt;Je vais partir d’un modèle que j’ai hélas rencontré fréquemment par le passé, dans le cadre d’une relation agence/client.&lt;/p&gt;
 
@@ -796,7 +750,7 @@ smiley.click(function() {
 
 &lt;p&gt;Les deux notions sont indissociables si l’on veut pouvoir fournir une bonne expérience aux utilisateurs. L’équipe technique doit donc se trouver au centre des processes, sinon on court droit à la catastrophe. En partant directement d’une version &lt;em&gt;desktop&lt;/em&gt;, on occulte les petits écrans et toutes les contraintes qui y sont liées.&lt;/p&gt;
 
-&lt;h2 id=&quot;responsivenbsp-the-good-way&quot;&gt;Responsive : the good way&lt;/h2&gt;
+&lt;h2 id=&quot;responsive-the-good-way&quot;&gt;Responsive : the good way&lt;/h2&gt;
 
 &lt;p&gt;En prenant en compte ces informations, le schéma de création d’un site devrait être le suivant, ou au moins s’en approcher :&lt;/p&gt;
 
@@ -814,119 +768,4 @@ smiley.click(function() {
 
 &lt;p&gt;Le responsive design doit être réfléchi en amont pour pouvoir être efficient. Il est impératif que nos processes s’adaptent à cette nouvelle façon de réfléchir, &lt;strong&gt;et non l’inverse&lt;/strong&gt;. Dans le cas contraire, on se retrouvera avec des sites plus lourds que nécessaires, difficilement modifiables, fonctionnant grâce à des bidouillages bancals.&lt;/p&gt;
 
-&lt;p&gt;Pour une description complète d’un process responsive, je vous invite à consulter &lt;a href=&quot;http://responsiveprocess.com/&quot;&gt;responsiveprocess.com&lt;/a&gt;.&lt;/p&gt;
-</content>
-<category term="rwd" />
-<summary>Ce n’est plus vraiment une nouveauté : le responsive design est la tendance hype du moment. De plus en plus d’acteurs du web ont réalisé qu’il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n’est pas toujours le cas.</summary>
-</entry>
-<entry>
-<title>Ma configuration Gulp</title>
-<link href="http://ronanlevesque.fr/articles/ma-configuration-gulp/" rel="alternate" type="text/html" title="Ma configuration Gulp" />
-<published>2014-02-24T00:00:00+01:00</published>
-<updated>2014-02-24T00:00:00+01:00</updated>
-<id>http://ronanlevesque.fr/articles/ma-configuration-gulp</id>
-<content type="html" xml:base="http://ronanlevesque.fr/articles/ma-configuration-gulp/">&lt;p&gt;Quand &lt;a href=&quot;http://gruntjs.com/&quot;&gt;Grunt&lt;/a&gt; a commencé à faire parler de lui, j’ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l’outil idéal pour l’automatisation de mes tâches front-end; j’ai d’ailleurs très vite créé ma &lt;a href=&quot;/fox-bp&quot;&gt;boilerplate&lt;/a&gt; suite à ça. Mais la donne a un peu changé avec l’arrivée d’un petit nouveau : &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p class=&quot;info&quot;&gt;Mise à jour (14/03/2014)&amp;nbsp;: j&#39;ai créé une &lt;a href=&quot;https://github.com/eskiiss/FOX-Boilerplate-2&quot;&gt;boilerplate&lt;/a&gt; pour Gulp, avec une configuration bien plus poussée que celle décrite ci-dessous. Je vous invite à aller consulter son &lt;a href=&quot;https://github.com/eskiiss/FOX-Boilerplate-2/blob/master/gulpfile.js&quot;&gt;gulpfile.js&lt;/a&gt; pour plus d&#39;infos.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;grunt-vs-gulp&quot;&gt;Grunt VS Gulp&lt;/h2&gt;
-
-&lt;p&gt;Il existe déjà une &lt;a href=&quot;http://www.100percentjs.com/just-like-grunt-gulp-browserify-now/&quot;&gt;foule&lt;/a&gt; d’&lt;a href=&quot;http://jaysoo.ca/2014/01/27/gruntjs-vs-gulpjs/&quot;&gt;articles&lt;/a&gt; sur le &lt;a href=&quot;http://www.insertafter.com/articles-gulp_vs_grunt.html&quot;&gt;sujet&lt;/a&gt;, je ne vais donc pas m’étendre outre mesure sur la comparaison entre ces deux outils. Mais pour résumer rapidement, Gulp est plus intéressant de mon point de vue pour les raisons suivantes :&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Rapidité d’exécution grâce à son fonctionnement asynchrone&lt;/li&gt;
-  &lt;li&gt;Rapidité de configuration grâce à son écriture en fonctions&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;J’ai donc décidé de tester Gulp en production pour voir ce qu’il avait dans le ventre, et le résultat est à la hauteur de mes attentes.&lt;/p&gt;
-
-&lt;h2 id=&quot;gulpfilejs&quot;&gt;Gulpfile.js&lt;/h2&gt;
-
-&lt;p&gt;A l’instar de Grunt, la configuration des tâches se fait via un fichier &lt;code class=&quot;highlighter-rouge&quot;&gt;gulpfile.js&lt;/code&gt;. Voilà en détails le fichier que j’utilise pour l’instant :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;// On définit nos dépendances
-var	gulp = require(&#39;gulp&#39;),
-	connect = require(&#39;gulp-connect&#39;),
-	sass = require(&#39;gulp-ruby-sass&#39;),
-	autoprefixer = require(&#39;gulp-autoprefixer&#39;),
-	minify = require(&#39;gulp-minify-css&#39;),
-	concat = require(&#39;gulp-concat&#39;),
-	uglify = require(&#39;gulp-uglify&#39;);
-
-// Serveur + livereload + ouverture de Chrome
-gulp.task(&#39;connect&#39;, connect.server({
-	root: [&#39;dev&#39;],
-	port: 1337,
-	livereload: true,
-	open: {
-		browser: &#39;chrome&#39;
-	}
-}));
-
-// Fonction qui gère les erreurs Gulp
-function handleError(err) {
-	console.log(err.toString());
-	this.emit(&#39;end&#39;);
-}
-
-// Compilation des fichiers SCSS, auto-préfixage et livereload
-gulp.task(&#39;sass&#39;, function() {
-	return gulp.src([&#39;./dev/css/**/*.scss&#39;, &#39;!./dev/css/**/_*.scss&#39;])
-	.pipe(sass({style: &#39;expanded&#39;, quiet: true}))
-	.on(&#39;error&#39;, handleError)
-	.pipe(autoprefixer(&#39;last 2 version&#39;, &#39;safari 5&#39;, &#39;ie 8&#39;, &#39;ie 9&#39;, &#39;opera 12.1&#39;, &#39;ios 6&#39;, &#39;android 4&#39;))
-	.pipe(gulp.dest(&#39;./dev/css&#39;))
- 	.pipe(connect.reload());
-});
-
-// Livereload du HTML
-gulp.task(&#39;html&#39;, function () {
-	return gulp.src(&#39;./dev/*.html&#39;)
-	.pipe(connect.reload());
-});
-
-// Concaténation des JS et livereload
-gulp.task(&#39;scripts&#39;, function() {
-	return gulp.src([&#39;./dev/js/**/*.js&#39;, &#39;!./dev/js/ie/*.js&#39;, &#39;!./dev/js/**/main.js&#39;])
-	.pipe(concat(&#39;main.js&#39;))
-	.pipe(gulp.dest(&#39;./dev/js&#39;))
-	.pipe(connect.reload());
-});
-
-// Minification du CSS et déplacement vers /dist
-gulp.task(&#39;minify&#39;, function() {
-	return gulp.src(&#39;./dev/css/*.css&#39;)
-	.pipe(minify(opts))
-	.pipe(gulp.dest(&#39;./dist/css&#39;))
-});
-
-// Minification du JS et déplacement vers /dist
-gulp.task(&#39;uglify&#39;, function() {
-	return gulp.src(&#39;./dev/js/main.js&#39;)
-	.pipe(uglify())
-	.pipe(gulp.dest(&#39;./dist/js&#39;))
-});
-
-// Tâches à surveiller
-gulp.task(&#39;watch&#39;, function () {
-	gulp.watch(&#39;./dev/css/**/*.scss&#39;, [&#39;sass&#39;]);
-	gulp.watch(&#39;./dev/**/*.html&#39;, [&#39;html&#39;]);
-	gulp.watch(&#39;./dev/js/**/*.js&#39;, [&#39;scripts&#39;, &#39;uglify&#39;]);
-	gulp.watch(&#39;./dev/css/**/*.css&#39;, [&#39;minify&#39;]);
-});
-
-// Tâche par défaut
-gulp.task(&#39;default&#39;, [&#39;connect&#39;, &#39;watch&#39;]);&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Si jamais vous voyez des moyens de l’optimiser ou de l’améliorer, n’hésitez pas à m’en faire part sur Twitter.&lt;/p&gt;
-</content>
-<category term="tutoriels" />
-<category term="outils" />
-<category term="javascript" />
-<summary>Quand Grunt a commencé à faire parler de lui, j’ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l’outil idéal pour l’automatisation de mes tâches front-end; j’ai d’ailleurs très vite créé ma boilerplate suite à ça. Mais la donne a un peu changé avec l’arrivée d’un petit nouveau : Gulp.</summary>
-</entry>
-</feed>
+&lt;p&gt;Pour une description complète d’un process responsive, je vous invite à consulter &lt;a href=&quot;http://responsiveprocess.com/&quot;&gt;responsiveprocess.com&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="rwd" /><summary type="html">Ce n’est plus vraiment une nouveauté : le responsive design est la tendance hype du moment. De plus en plus d’acteurs du web ont réalisé qu’il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n’est pas toujours le cas.</summary></entry></feed>

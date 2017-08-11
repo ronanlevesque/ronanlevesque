@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ronan Levesque &ndash; CSS "fonctionnel" et responsive design</title>
+  <meta name="description" content="Comment fixer un bug généré par l'utilisation des sprites SVG inline avec des filtres" />
+  <meta name="author" content="Ronan Levesque" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ronan Levesque" />
+  <meta property="og:title" content="CSS "fonctionnel" et responsive design" />
+  <meta property="og:description" content="Comment fixer un bug généré par l'utilisation des sprites SVG inline avec des filtres" />
+  <meta property="og:url" content="http://ronanlevesque.fr/articles/les-limites-du-css-fonctionnel/" />
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link href="/assets/css/styles-30a97391849008bd4b7be6890016bd07.css" rel="stylesheet" />
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194" />
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+  <link rel="manifest" href="/favicons/manifest.json" />
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#343838" />
+  <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png" />
+  <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+    if (localStorage.getItem('fontsLoaded')) { document.documentElement.className += ' fonts-loaded'; }
+  </script>
+</head>
+
+
+<body id="top">
+
+
+
+  <div class="js-content">
+    <div class="wrapper">
+        <header class="mainHeader">
+    <div class="mainHeader-logo">
+      <a href="/">
+        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+      </a>
+    </div>
+    <nav class="mainNav">
+        <ul class="mainNav-list">
+          
+          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
+          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+        </ul>
+    </nav>
+  </header>
+
+      
+      <article class="article">
+      
+        <header class="article-header">
+          <time class="article-date">10 août 2017</time>
+          <h1 class="article-title">CSS "fonctionnel" et responsive design</h1>
+        </header>
+        
+        <div class="article-content">
+        
+          <p>J’ai lu aujourd’hui un <a href="https://adamwathan.me/css-utility-classes-and-separation-of-concerns/">article</a> très intéressant qui soulignait les bénéfices du CSS dit “fonctionnel” (on entend par fonctionnel l’utilisation généralisée de classes utilitaires à but unique). Le hic, c’est qu’il néglige également de parler d’un inconvénient majeur et de la manière de le traiter.</p>
+
+<hr />
+
+<h2 id="un-exemple-pour-commencer">Un exemple pour commencer…</h2>
+
+<p>Avant de rentrer dans le vif du sujet il peut être utile de faire un rappel de ce qu’est le CSS fonctionnel, cf. cette définition tirée de <a href="https://css-tricks.com/lets-define-exactly-atomic-css/">CSS-Tricks</a> :</p>
+
+<blockquote>
+  <p>Le CSS atomique (fonctionnel) est l’approche, en architecture CSS, qui favorise les petites classes à but unique avec des noms basés sur leurs fonctions visuelles.</p>
+</blockquote>
+
+<p>Voici un exemple simple, mais <strong>volontairement verbeux</strong> pour plus de clarté :</p>
+
+<p data-height="265" data-theme-id="light" data-slug-hash="GvmOzV" data-default-tab="html,css" data-user="eskiiss" data-embed-version="2" data-pen-title="GvmOzV" class="codepen">See the Pen <a href="https://codepen.io/eskiiss/pen/GvmOzV/">GvmOzV</a> by Ronan Levesque (<a href="https://codepen.io/eskiiss">@eskiiss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+<p>L’avantage saute immédiatement aux yeux; cette manière de faire permet de gagner en maintenabilité et en temps de développement. Cependant l’article élude un sujet capital et auquel la plupart des frameworks CSS qui suivent cette méthode peinent à offrir une solution pertinente : la <strong>transformabilité</strong> des dites classes.</p>
+
+<p>J’entends par là, la capacité d’une classe à faire évoluer ses styles (via <em>media queries</em>).</p>
+
+<p>Reprenons l’exemple ci-dessus : nos classes utilitaires vont très bien marcher pour une taille d’écran standard, mais qu’en est-il si on souhaite ajuster le bloc pour des petits / grands écrans ? Si on décide de maintenir une valeur par classe, alors on se retrouve avec un code assez horrible :</p>
+
+<p data-height="265" data-theme-id="light" data-slug-hash="BdRYyJ" data-default-tab="html,css" data-user="eskiiss" data-embed-version="2" data-pen-title="BdRYyJ" class="codepen">See the Pen <a href="https://codepen.io/eskiiss/pen/BdRYyJ/">BdRYyJ</a> by Ronan Levesque (<a href="https://codepen.io/eskiiss">@eskiiss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+<p>Dans cet exemple, il n’y a que 3 <em>breakpoints</em>. Mais on imagine aisément l’usine à gaz que cela va devenir si on doit en gérer 5, voire plus (cas fréquents lorsque l’on fait du responsive design).</p>
+
+<hr />
+
+<p>Pour avoir expérimenté le CSS fonctionnel dans le passé, je vois les avantages qu’on peut tirer de cette méthodologie. Mais je reste mitigé car elle risque d’induire un niveau de complexité supplémentaire dans la gestion des classes. En inspectant le code de <a href="https://tailwindcss.com/">Tailwind CSS</a>, créé par <a href="https://twitter.com/adamwathan">Adam Wathan</a> (auteur de l’article), je me trouve par exemple face à ce genre de chose :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1 class="text-2xl sm:text-3xl text-thin text-dark-soft constrain-sm mx-auto leading-tight mb-8"&gt;A Utility-First CSS Framework for Rapid UI Development&lt;/h1&gt;
+</code></pre>
+</div>
+
+<p>Et j’ai du mal à voir en quoi ça serait plus maintenable ou lisible que :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;h1 class="main-title"&gt;A Utility-First CSS Framework for Rapid UI Development&lt;/h1&gt;
+</code></pre>
+</div>
+
+<p>Ou alors, il faut envisager une approche différente.</p>
+
+<h2 id="utilitaires--media-queries">Utilitaires + media queries</h2>
+
+<p>À la lumière de ces différents exemples, on comprendra sans peine pourquoi il est sans doute préférable de traiter d’une autre manière les utilitaires contenant une valeur susceptible de changer selon les <em>breakpoints</em> (<code class="highlighter-rouge">margin</code>, <code class="highlighter-rouge">padding</code>, <code class="highlighter-rouge">font-size</code> etc.)…</p>
+
+<p>Reprenons notre exemple de <em>random block</em>. On sait que les valeurs de <code class="highlighter-rouge">padding</code> et de <code class="highlighter-rouge">font-size</code> doivent évoluer d’un <em>breakpoint</em> à un autre. Mais on veut garder cette notion de classe utilitaire, réutilisable ailleurs. On peut alors imaginer une approche identique à ceci :</p>
+
+<p data-height="265" data-theme-id="light" data-slug-hash="vJmdzp" data-default-tab="html,css" data-user="eskiiss" data-embed-version="2" data-pen-title="vJmdzp" class="codepen">See the Pen <a href="https://codepen.io/eskiiss/pen/vJmdzp/">vJmdzp</a> by Ronan Levesque (<a href="https://codepen.io/eskiiss">@eskiiss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+<p>Rien ne nous empêche par la suite de créer des classes telles que <code class="highlighter-rouge">padding-small</code> et <code class="highlighter-rouge">padding-large</code>, <code class="highlighter-rouge">text-small</code> et <code class="highlighter-rouge">text-large</code> etc., qui seront toutes en charge de traiter leurs propres <em>breakpoints</em>.</p>
+
+<p>Ainsi, on abstrait les notions de transformabilité au sein de la classe utilitaire, qui garde son côté réutilisable. Cela permet également de renforcer la consistance de nos styles.</p>
+
+<h2 id="css-fonctionnel-et-composants">CSS fonctionnel et composants</h2>
+
+<p>Adam précise dans son article qu’il n’est pas en faveur d’une approche 100% fonctionnelle car selon lui certains cas nécessitent d’utiliser des composants; il prend notamment un exemple tiré de <a href="http://tachyons.io/">Tachyons</a> utilisé pour créer un bouton et démontre qu’il serait plus simple d’en faire un composant réutilisable.</p>
+
+<p>En fait, toute la difficulté de l’exercice revient à savoir quand utiliser un utilitaire et quand utiliser un composant.</p>
+
+<p>D’ailleurs, on pourrait même arriver à la conclusion qu’un utilitaire est en fait simplement un composant à but unique. 🤔</p>
+
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+        </div>
+      </article>
+        
+  <footer class="mainFooter">
+  
+    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+  </footer>
+
+    </div>
+  </div>
+
+  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
+  </body>
+</html>
+

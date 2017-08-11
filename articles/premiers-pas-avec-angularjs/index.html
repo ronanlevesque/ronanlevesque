@@ -14,7 +14,7 @@
   <meta property="og:url" content="http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-ca46fdd9f6bd3fb850d50b80623e0189.css" rel="stylesheet" />
+  <link href="/assets/css/styles-30a97391849008bd4b7be6890016bd07.css" rel="stylesheet" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -82,7 +82,7 @@
 
 <p>Attention, cet article n’est pas un tutoriel. Je cherche simplement à décrire ici l’app que j’ai créée, sa mise en place ainsi que les obstacles que j’ai rencontrés.</p>
 
-<h2 id="angular-cest-quoinbsp">Angular, c’est quoi ?</h2>
+<h2 id="angular-cest-quoi">Angular, c’est quoi ?</h2>
 
 <p>Angular est comme précisé plus haut un framework JS MVC. Il est développé en open-source par Google. L’explication donnée par <a href="http://fr.wikipedia.org/wiki/AngularJS">Wikipédia</a> me paraît excellente pour mieux saisir son concept :</p>
 
@@ -107,7 +107,7 @@
 
 <p class="link"><a href="http://ronanlevesque.fr/mv">Voir Moovies en action</a></p>
 
-<h2 id="par-o-commencernbsp">Par où commencer ?</h2>
+<h2 id="par-où-commencer">Par où commencer ?</h2>
 
 <p>Pour ceux qui comme moi débutent totalement avec Angular, je pense que l’idéal est de commencer par le <a href="http://docs.angularjs.org/tutorial">tutoriel officiel</a>. Je l’ai trouvé très clair et détaillé; il permet également de comprendre la philosophie d’Angular ainsi que de saisir ses concepts basiques.</p>
 
@@ -123,7 +123,7 @@
 
 <p>Par ailleurs, pour info Angular embarque par défaut jQuery lite.</p>
 
-<h2 id="les-bases-de-donnes">Les bases de données</h2>
+<h2 id="les-bases-de-données">Les bases de données</h2>
 
 <p>Angular utilise des données au format JSON comme structure de bases. C’est très pratique, car il est du coup facile d’exporter par exemple des données Excel vers son app.</p>
 
@@ -131,7 +131,7 @@
 
 <p>La deuxième piste a été de passer par <a href="https://www.firebase.com">Firebase</a>, un backend externalisé qui a en plus développé spécifiquement un module pour Angular : <a href="http://angularfire.com/">AngularFire</a>. L’avantage de cette solution, c’est qu’il n’y presque aucun code à écrire, ni aucune gestion à effectuer côté serveur. Son énorme atout, c’est qu’elle permet de créer du “<em>Three-way Data Binding</em>”, en ajoutant au <em>Binding</em> d’Angular ses propres données backend. Pour faire simple, une modification dans l’app mettra à jour les bases de données et réciproquement. En gros : surpuissant :)</p>
 
-<h2 id="une-question-de-scurit">Une question de sécurité</h2>
+<h2 id="une-question-de-sécurité">Une question de sécurité</h2>
 
 <p><strong>Moovies</strong> contient des données qui n’ont rien de sensible, mais je voulais quand même tester à quel point son niveau de sécurité pouvait être fiable.</p>
 
