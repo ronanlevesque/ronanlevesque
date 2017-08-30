@@ -82,21 +82,21 @@
 
 <h2 id="un-exemple-pour-commencer">Un exemple pour commencer&hellip;</h2>
 
-<p>Avant de rentrer dans le vif du sujet il peut être utile de faire un rappel de ce qu&rsquo;est le CSS fonctionnel, cf. cette définition tirée de <a href="https://css-tricks.com/lets-define-exactly-atomic-css/">CSS-Tricks</a> :</p>
+<p>Avant de rentrer dans le vif du sujet il peut être utile de faire un rappel de ce qu&rsquo;est le CSS fonctionnel, cf. cette définition tirée de <a href="https://css-tricks.com/lets-define-exactly-atomic-css/">CSS-Tricks</a>&nbsp;:</p>
 
 <blockquote>
 <p>Le CSS atomique (fonctionnel) est l&rsquo;approche, en architecture CSS, qui favorise les petites classes à but unique avec des noms basés sur leurs fonctions visuelles.</p>
 </blockquote>
 
-<p>Voici un exemple simple, mais <strong>volontairement verbeux</strong> pour plus de clarté :</p>
+<p>Voici un exemple simple, mais <strong>volontairement verbeux</strong> pour plus de clarté&nbsp;:</p>
 
 <p data-height="265" data-theme-id="light" data-slug-hash="GvmOzV" data-default-tab="html,css" data-user="eskiiss" data-embed-version="2" data-pen-title="GvmOzV" class="codepen">See the Pen <a href="https://codepen.io/eskiiss/pen/GvmOzV/">GvmOzV</a> by Ronan Levesque (<a href="https://codepen.io/eskiiss">@eskiiss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
-<p>L&rsquo;avantage saute immédiatement aux yeux; cette manière de faire permet de gagner en maintenabilité et en temps de développement. Cependant l&rsquo;article élude un sujet capital et auquel la plupart des frameworks CSS qui suivent cette méthode peinent à offrir une solution pertinente : la <strong>transformabilité</strong> des dites classes.</p>
+<p>L&rsquo;avantage saute immédiatement aux yeux; cette manière de faire permet de gagner en maintenabilité et en temps de développement. Cependant l&rsquo;article élude un sujet capital et auquel la plupart des frameworks CSS qui suivent cette méthode peinent à offrir une solution pertinente&nbsp;: la <strong>transformabilité</strong> des dites classes.</p>
 
 <p>J&rsquo;entends par là, la capacité d&rsquo;une classe à faire évoluer ses styles (via <em>media queries</em>).</p>
 
-<p>Reprenons l&rsquo;exemple ci-dessus : nos classes utilitaires vont très bien marcher pour une taille d&rsquo;écran standard, mais qu&rsquo;en est-il si on souhaite ajuster le bloc pour des petits / grands écrans ? Si on décide de maintenir une valeur par classe, alors on se retrouve avec un code assez horrible :</p>
+<p>Reprenons l&rsquo;exemple ci-dessus&nbsp;: nos classes utilitaires vont très bien marcher pour une taille d&rsquo;écran standard, mais qu&rsquo;en est-il si on souhaite ajuster le bloc pour des petits / grands écrans ? Si on décide de maintenir une valeur par classe, alors on se retrouve avec un code assez horrible&nbsp;:</p>
 
 <p data-height="265" data-theme-id="light" data-slug-hash="BdRYyJ" data-default-tab="html,css" data-user="eskiiss" data-embed-version="2" data-pen-title="BdRYyJ" class="codepen">See the Pen <a href="https://codepen.io/eskiiss/pen/BdRYyJ/">BdRYyJ</a> by Ronan Levesque (<a href="https://codepen.io/eskiiss">@eskiiss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
@@ -104,12 +104,12 @@
 
 <hr />
 
-<p>Pour avoir expérimenté le CSS fonctionnel dans le passé, je vois les avantages qu&rsquo;on peut tirer de cette méthodologie. Mais je reste mitigé car elle risque d&rsquo;induire un niveau de complexité supplémentaire dans la gestion des classes. En inspectant le code de <a href="https://tailwindcss.com/">Tailwind CSS</a>, créé par <a href="https://twitter.com/adamwathan">Adam Wathan</a> (auteur de l&rsquo;article), je me trouve par exemple face à ce genre de chose :</p>
+<p>Pour avoir expérimenté le CSS fonctionnel dans le passé, je vois les avantages qu&rsquo;on peut tirer de cette méthodologie. Mais je reste mitigé car elle risque d&rsquo;induire un niveau de complexité supplémentaire dans la gestion des classes. En inspectant le code de <a href="https://tailwindcss.com/">Tailwind CSS</a>, créé par <a href="https://twitter.com/adamwathan">Adam Wathan</a> (auteur de l&rsquo;article), je me trouve par exemple face à ce genre de chose&nbsp;:</p>
 
 <pre><code>&lt;h1 class=&quot;text-2xl sm:text-3xl text-thin text-dark-soft constrain-sm mx-auto leading-tight mb-8&quot;&gt;A Utility-First CSS Framework for Rapid UI Development&lt;/h1&gt;
 </code></pre>
 
-<p>Et j&rsquo;ai du mal à voir en quoi ça serait plus maintenable ou lisible que :</p>
+<p>Et j&rsquo;ai du mal à voir en quoi ça serait plus maintenable ou lisible que&nbsp;:</p>
 
 <pre><code>&lt;h1 class=&quot;main-title&quot;&gt;A Utility-First CSS Framework for Rapid UI Development&lt;/h1&gt;
 </code></pre>
@@ -120,7 +120,7 @@
 
 <p>À la lumière de ces différents exemples, on comprendra sans peine pourquoi il est sans doute préférable de traiter d&rsquo;une autre manière les utilitaires contenant une valeur susceptible de changer selon les <em>breakpoints</em> (<code>margin</code>, <code>padding</code>, <code>font-size</code> etc.)&hellip;</p>
 
-<p>Reprenons notre exemple de <em>random block</em>. On sait que les valeurs de <code>padding</code> et de <code>font-size</code> doivent évoluer d&rsquo;un <em>breakpoint</em> à un autre. Mais on veut garder cette notion de classe utilitaire, réutilisable ailleurs. On peut alors imaginer une approche identique à ceci :</p>
+<p>Reprenons notre exemple de <em>random block</em>. On sait que les valeurs de <code>padding</code> et de <code>font-size</code> doivent évoluer d&rsquo;un <em>breakpoint</em> à un autre. Mais on veut garder cette notion de classe utilitaire, réutilisable ailleurs. On peut alors imaginer une approche identique à ceci&nbsp;:</p>
 
 <p data-height="265" data-theme-id="light" data-slug-hash="ZJXyMY" data-default-tab="html,css" data-user="eskiiss" data-embed-version="2" data-pen-title="vJmdzp" class="codepen">See the Pen <a href="https://codepen.io/eskiiss/pen/ZJXyMY/">ZJXyMY</a> by Ronan Levesque (<a href="https://codepen.io/eskiiss">@eskiiss</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 
