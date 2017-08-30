@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Divers on Ronan Levesque - Front-end &amp; Webdesign</title>
+    <link>http://ronanlevesque.fr/tags/divers/</link>
+    <description>Recent content in Divers on Ronan Levesque - Front-end &amp; Webdesign</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Dec 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ronanlevesque.fr/tags/divers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mettre ses assets en cache avec Jekyll</title>
+      <link>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</link>
+      <pubDate>Wed, 17 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</guid>
+      <description>Je partage aujourd&amp;rsquo;hui une solution assez simple que l&amp;rsquo;on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l&amp;rsquo;on utilise soient correctement mis à jour.
+Mise à jour (01/07/2015) : depuis l&#39;écriture de cette article, j&#39;ai mis en place un système bien plus pertinent que je détaille ci-dessous.</description>
+    </item>
+    
+    <item>
+      <title>Abandonner le support d&#39;IE8</title>
+      <link>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/</link>
+      <pubDate>Fri, 20 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/</guid>
+      <description>La décision de Microsoft de ne plus assurer le support d&amp;rsquo;XP a eu pour conséquence de sonner le glas définitif d&amp;rsquo;Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d&amp;rsquo;éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d&amp;rsquo;autres navigateurs. Pour nous, webdesigners et développeurs, c&amp;rsquo;est un vrai soulagement et surtout un gros pas en avant&amp;hellip;
+En intro&amp;nbsp;: quelques statistiques Concrètement, si on décide d&amp;rsquo;arrêter tout support pour IE8, on se prive en moyenne de 3% de nos visiteurs (données France).</description>
+    </item>
+    
+    <item>
+      <title>Nouvelle année, nouveau site</title>
+      <link>http://ronanlevesque.fr/articles/nouvelle-annee-nouveau-site/</link>
+      <pubDate>Tue, 21 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/nouvelle-annee-nouveau-site/</guid>
+      <description>2014 est un bon prétexte pour mettre en place une énième refonte de mon site. Cette fois-ci, le but était de tester l&amp;rsquo;intégration de polices enfin lissées sous Chrome ainsi que le passage au Vanilla JS. Je vais aussi profiter de l&amp;rsquo;occasion pour revenir sur les différents designs que le site a connu (avec plus ou moins de réussite je dois dire&amp;nbsp;:))
+L&amp;rsquo;aspect technique 1er point&amp;nbsp;: le lissage des polices Chrome accuse un retard catastrophique sur ce point par rapport à Firefox ou IE.</description>
+    </item>
+    
+    <item>
+      <title>Jekyll et UTF-8 sous Windows</title>
+      <link>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</link>
+      <pubDate>Fri, 29 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</guid>
+      <description>La première fois que j&amp;rsquo;ai installé et lancé Jekyll pour mon blog sous Windows, je suis tombé sur une erreur liée à UTF-8. En fouillant un peu, j&amp;rsquo;ai trouvé la raison de ce problème dans cet article&amp;nbsp;: il semblerait que la console Ruby ne fonctionne pas avec les caractères UTF-8, d&amp;rsquo;une manière ou d&amp;rsquo;une autre.
+L&amp;rsquo;erreur affichée était la suivante&amp;nbsp;:
+Liquid Exception: incompatible character encodings: UTF-8 and IBM437 in whatever.html La solution à ce problème est facile.</description>
+    </item>
+    
+    <item>
+      <title>Like, Plus, Share...</title>
+      <link>http://ronanlevesque.fr/articles/like-plus-share/</link>
+      <pubDate>Tue, 08 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/like-plus-share/</guid>
+      <description>J&amp;rsquo;ai récemment lu un article intitulé &amp;ldquo;Sweep the Sleaze&amp;rdquo; (balayer les ordures), écrit par Oliver Reichenstein de chez iA. Dans cet article, Oliver tire à boulets rouges sur les boutons de partage qui ont envahi nos pages depuis quelques temps. Et je dois dire que je partage en effet la plupart de ses réticences.
+ Un aperçu désormais incontournable...  Il est aujourd&amp;rsquo;hui rare de voir un site qui n&amp;rsquo;est pas affublé de la ribambelles de boutons de partage en tout genre&amp;nbsp;: Twitter, Facebook, Google+, Pinterest, voire des réseaux moins connus&amp;hellip; ceux-ci paraissent être rentrés dans nos moeurs, mais sont-ils réellement indispensables&amp;nbsp;?</description>
+    </item>
+    
+    <item>
+      <title>Goodbye WordPress, hello Jekyll</title>
+      <link>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</link>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</guid>
+      <description>Cela fait un moment que je vois de plus en plus de bloggeurs tech se tourner vers Jekyll comme solution de blogging et abandonner leur ancienne plateforme pour l&amp;rsquo;occasion (souvent Tumblr ou WordPress). Mon site ayant besoin d&amp;rsquo;un sacré rafraîchissement au niveau de son code, j&amp;rsquo;en ai donc profité pour faire d&amp;rsquo;un pierre deux coups et le basculer sous Jekyll. Je listerai ici tous les avantages que j&amp;rsquo;y ai trouvé a par rapport à mon ancien CMS.</description>
+    </item>
+    
+    <item>
+      <title>Plugins utiles pour Sublime Text 2</title>
+      <link>http://ronanlevesque.fr/articles/plugins-utiles-pour-sublime-text-2/</link>
+      <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/plugins-utiles-pour-sublime-text-2/</guid>
+      <description>Plus besoin de présenter Sublime Text 2 (la v3 est en bêta), un éditeur de texte qui peut rapidement devenir surpuissant grâce à ses nombreux plugins. Voici ci-dessous une liste de ceux que j&amp;rsquo;utilise au quotidien.
+Les incontournables Hayaku Indispensable lorsque l&amp;rsquo;on écrit du CSS à longueur de journée&amp;nbsp;: Hayaku permet d&amp;rsquo;utiliser des abbréviations pour écrire des propriétés. L&amp;rsquo;outil est très intuitif et devine facilement les abréviations utilisées. Par exemple&amp;nbsp;:</description>
+    </item>
+    
+    <item>
+      <title>Refonte graphique du site</title>
+      <link>http://ronanlevesque.fr/articles/refonte-graphique-du-site/</link>
+      <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/refonte-graphique-du-site/</guid>
+      <description>J&amp;rsquo;avais depuis quelques mois un peu mis mon site entre parenthèses, pour des raisons de vacances méritées / changement de boulot. Il est maintenant grand temps de reprendre tout ça en main, et pour ça j&amp;rsquo;ai décidé de refondre (une fois de plus) mon site pour lui redonner quelques couleurs.
+Le but de la refonte était de faire de ce site quelque chose de clair et simple, centré autour de son contenu.</description>
+    </item>
+    
+    <item>
+      <title>Ouverture du blog</title>
+      <link>http://ronanlevesque.fr/articles/ouverture-du-blog/</link>
+      <pubDate>Fri, 29 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/ouverture-du-blog/</guid>
+      <description>J&amp;rsquo;ai décidé il y a peu d&amp;rsquo;ouvrir une section &amp;ldquo;Blog&amp;rdquo; sur mon site. Tout ça est parti d&amp;rsquo;un constat assez simple&amp;nbsp;: quand je recherche des informations sur tout ce qui touche au développement de sites Internet, je remarque que la communauté anglophone est souvent très riche à ce niveau-là. Je souhaite donc mettre ces éléments à disposition des francophones en traduisant les articles qui me semblent les plus pertinents, si leur auteur le permet bien sûr.</description>
+    </item>
+    
+  </channel>
+</rss>

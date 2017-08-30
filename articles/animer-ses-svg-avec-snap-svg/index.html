@@ -4,17 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ronan Levesque &ndash; Animer ses SVG avec Snap.svg</title>
-  <meta name="description" content="Cet article montre les possibilités offertes par Snap.svg pour animer sans prise de tête vos SVG de manière convaincante (avec des exemples à l'appui)." />
+  
+  <meta name="description" content="Cet article montre les possibilités offertes par Snap.svg pour animer sans prise de tête vos SVG de manière convaincante (avec des exemples à l&#39;appui)." />
+  
   <meta name="author" content="Ronan Levesque" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Animer ses SVG avec Snap.svg" />
-  <meta property="og:description" content="Cet article montre les possibilités offertes par Snap.svg pour animer sans prise de tête vos SVG de manière convaincante (avec des exemples à l'appui)." />
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/" />
+  
+  <meta property="og:description" content="Cet article montre les possibilités offertes par Snap.svg pour animer sans prise de tête vos SVG de manière convaincante (avec des exemples à l&#39;appui)." />
+  
+
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-4cd2471f642278b18e21b6558acff2b9.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles-9e724f46.css" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -43,40 +48,35 @@
   </script>
 </head>
 
-
-<body id="top">
-
+<body>
 
 
   <div class="js-content">
     <div class="wrapper">
-        <header class="mainHeader">
-    <div class="mainHeader-logo">
-      <a href="/">
-        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-      </a>
-    </div>
-    <nav class="mainNav">
-        <ul class="mainNav-list">
-          
-          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
-          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
-          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
-        </ul>
-    </nav>
-  </header>
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      
       <article class="article">
-      
         <header class="article-header">
           <time class="article-date">21 juillet 2014</time>
           <h1 class="article-title">Animer ses SVG avec Snap.svg</h1>
         </header>
-        
         <div class="article-content">
-        
-          <p>Ces derniers temps, j’ai un peu expérimenté l’animation de SVG. Mon premier essai a été cet <a href="http://codepen.io/eskiiss/full/kFphn">oiseau</a>, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités : si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j’ai trouvée est <a href="http://snapsvg.io/">Snap.svg</a>. Je vais vous expliquer le processus en détails.</p>
+          
+
+<p>Ces derniers temps, j&rsquo;ai un peu expérimenté l&rsquo;animation de SVG. Mon premier essai a été cet <a href="http://codepen.io/eskiiss/full/kFphn">oiseau</a>, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités&nbsp;: si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j&rsquo;ai trouvée est <a href="http://snapsvg.io/">Snap.svg</a>. Je vais vous expliquer le processus en détails.</p>
 
 <hr />
 
@@ -84,9 +84,9 @@
 
 <hr />
 
-<h2 id="lidée-de-départ">L’idée de départ</h2>
+<h2 id="l-idée-de-départ">L&rsquo;idée de départ</h2>
 
-<p>Je suis parti sur une idée relativement simple : je crée des smileys sous Sketch, chacun avec deux états différents, et je fais en sorte de les faire changer d’état au clic.</p>
+<p>Je suis parti sur une idée relativement simple&nbsp;: je crée des smileys sous Sketch, chacun avec deux états différents, et je fais en sorte de les faire changer d&rsquo;état au clic.</p>
 
 <style>
   svg {
@@ -198,14 +198,14 @@
 <figcaption>Cliquez pour tester...</figcaption>
 </figure>
 
-<p>Pour se faciliter la vie, l’idée est de pouvoir animer chacune des parties du smiley indépendamment. La façon de faire est assez simple; on applique une ID à la section de notre SVG en question, et on la lie à Snap.Svg. Par exemple :</p>
+<p>Pour se faciliter la vie, l&rsquo;idée est de pouvoir animer chacune des parties du smiley indépendamment. La façon de faire est assez simple; on applique une ID à la section de notre SVG en question, et on la lie à Snap.Svg. Par exemple&nbsp;:</p>
 
 <pre><code class="js">var smiley = Snap.select('#smiley'),
     smileyBody = Snap.select('#smiley__body'),
     smileyMouth = Snap.select('#smiley__mouth');
 </code></pre>
 
-<p>Libre à nous de les animer ensuite comme l’on souhaite. Pour toggle les changements d’état, on applique un callback au <code class="highlighter-rouge">smiley.click</code> pour utiliser la fonction souhaitée (ici, <code class="highlighter-rouge">smileyDef()</code> et <code class="highlighter-rouge">smileyToggle</code>).</p>
+<p>Libre à nous de les animer ensuite comme l&rsquo;on souhaite. Pour toggle les changements d&rsquo;état, on applique un callback au <code>smiley.click</code> pour utiliser la fonction souhaitée (ici, <code>smileyDef()</code> et <code>smileyToggle</code>).</p>
 
 <pre><code class="js">toggle1 = false;
 smiley.click(function() {
@@ -222,18 +222,18 @@ smiley.click(function() {
 
 <h2 id="animation-du-corps">Animation du corps</h2>
 
-<p>Les modifications apportées au corps sont assez simples : on change uniquement la couleur du fond et de la bordure. Cela se fait de la manière suivante :</p>
+<p>Les modifications apportées au corps sont assez simples&nbsp;: on change uniquement la couleur du fond et de la bordure. Cela se fait de la manière suivante&nbsp;:</p>
 
 <pre><code class="js">function smileyToggle() {
   smileyBody.animate({fill: '#A4DA69', stroke: '#5B9020'}, 150, mina.ease);
 }
 </code></pre>
 
-<p><code class="highlighter-rouge">150</code> représente la durée de l’animation et <code class="highlighter-rouge">mina.ease</code> le type d’easing souhaité.</p>
+<p><code>150</code> représente la durée de l&rsquo;animation et <code>mina.ease</code> le type d&rsquo;easing souhaité.</p>
 
 <h2 id="animation-de-la-bouche">Animation de la bouche</h2>
 
-<p>Il va s’agir de modifier le <code class="highlighter-rouge">path</code> de la bouche pour faire arborer à notre smiley un gros sourire. Cela se fait d’une manière identique à l’animation des couleurs du body :</p>
+<p>Il va s&rsquo;agir de modifier le <code>path</code> de la bouche pour faire arborer à notre smiley un gros sourire. Cela se fait d&rsquo;une manière identique à l&rsquo;animation des couleurs du body&nbsp;:</p>
 
 <pre><code class="js">function smileyToggle() {
   smileyMouth.animate({d: 'M90.7207031,217.580078 C129.926268,287.516842 285.592097,293.239314 300.232422,205.320312', stroke: '#5B9020'}, 150, mina.ease);
@@ -242,22 +242,22 @@ smiley.click(function() {
 
 <h2 id="animation-des-sourcils">Animation des sourcils</h2>
 
-<p>Sketch a un peu compliqué les choses sur cette partie, puisque pour certains de mes soucils il a utilisé des <code class="highlighter-rouge">path</code> et pour d’autres des <code class="highlighter-rouge">polygon</code>. J’ai décidé de garder cette structure afin de me familiariser un peu plus avec les fonctionnalités de base de Snap.svg.</p>
+<p>Sketch a un peu compliqué les choses sur cette partie, puisque pour certains de mes soucils il a utilisé des <code>path</code> et pour d&rsquo;autres des <code>polygon</code>. J&rsquo;ai décidé de garder cette structure afin de me familiariser un peu plus avec les fonctionnalités de base de Snap.svg.</p>
 
-<p>Pour les <code class="highlighter-rouge">path</code>, j’ai comme pour ma bouche simplement modifié mon attribut <code class="highlighter-rouge">d</code>. Pour les <code class="highlighter-rouge">polygon</code>, j’ai dû appliquer des transformations pour que le sourcil en question se déplace à l’endroit voulu.</p>
+<p>Pour les <code>path</code>, j&rsquo;ai comme pour ma bouche simplement modifié mon attribut <code>d</code>. Pour les <code>polygon</code>, j&rsquo;ai dû appliquer des transformations pour que le sourcil en question se déplace à l&rsquo;endroit voulu.</p>
 
 <pre><code class="js">function smileyToggle() {
   smileyLeftEyebrow.animate({transform: 't0,-30', fill: '#5B9020'}, 150, mina.ease);
 }
 </code></pre>
 
-<p>Les transformations sur Snap.svg ont une syntaxe assez spéciale. Ainsi, <code class="highlighter-rouge">t0,-30</code> désigne une translation des valeurs x et y à 0 et -30 dans l’espace. Pour plus d’infos sur le sujet, je vous conseille de lire cet <a href="http://stackoverflow.com/questions/20302801/how-do-i-understand-transform-properties-in-snap-svg">article <sup>EN</sup></a> sur Stackoverflow.</p>
+<p>Les transformations sur Snap.svg ont une syntaxe assez spéciale. Ainsi, <code>t0,-30</code> désigne une translation des valeurs x et y à 0 et -30 dans l&rsquo;espace. Pour plus d&rsquo;infos sur le sujet, je vous conseille de lire cet <a href="http://stackoverflow.com/questions/20302801/how-do-i-understand-transform-properties-in-snap-svg">article&nbsp;<sup>EN</sup></a> sur Stackoverflow.</p>
 
 <h2 id="quelques-précisions-pour-finir">Quelques précisions pour finir</h2>
 
-<p>Puisque mes animations sont basée sur un retour à l’état initial, il est nécessaire de prévoir une fonction qui réinitialisera les valeurs par défaut du SVG. (D’où la fonction <code class="highlighter-rouge">smileyDef()</code>).</p>
+<p>Puisque mes animations sont basée sur un retour à l&rsquo;état initial, il est nécessaire de prévoir une fonction qui réinitialisera les valeurs par défaut du SVG. (D&rsquo;où la fonction <code>smileyDef()</code>).</p>
 
-<p>Le détail de mon code est disponible ci-dessous, mais gardez en tête que ça n’est qu’une démo et que je n’ai pas vraiment cherché à l’optimiser. J’imagine qu’il sera plus facile à lire ainsi.</p>
+<p>Le détail de mon code est disponible ci-dessous, mais gardez en tête que ça n&rsquo;est qu&rsquo;une démo et que je n&rsquo;ai pas vraiment cherché à l&rsquo;optimiser. J&rsquo;imagine qu&rsquo;il sera plus facile à lire ainsi.</p>
 
 <script src="/demos/snapsvg.min.js"></script>
 
@@ -265,16 +265,17 @@ smiley.click(function() {
 
         </div>
       </article>
-        
-  <footer class="mainFooter">
-  
-    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
-  </footer>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
 
     </div>
   </div>
 
-  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
-  </body>
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
 </html>
 

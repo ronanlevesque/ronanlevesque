@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Article du blog on Ronan Levesque - Front-end &amp; Webdesign</title>
+    <link>http://ronanlevesque.fr/articles/</link>
+    <description>Recent content in Article du blog on Ronan Levesque - Front-end &amp; Webdesign</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 10 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ronanlevesque.fr/articles/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CSS « fonctionnel » et responsive design</title>
+      <link>http://ronanlevesque.fr/articles/css-fonctionnel-et-responsive-design/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/css-fonctionnel-et-responsive-design/</guid>
+      <description>J&amp;rsquo;ai lu aujourd&amp;rsquo;hui un article très intéressant qui soulignait les bénéfices du CSS dit « fonctionnel » (on entend par fonctionnel l&amp;rsquo;utilisation généralisée de classes utilitaires à but unique). Le hic, c&amp;rsquo;est qu&amp;rsquo;il néglige également de parler d&amp;rsquo;un inconvénient majeur et de la manière de le traiter.
+Un exemple pour commencer&amp;hellip; Avant de rentrer dans le vif du sujet il peut être utile de faire un rappel de ce qu&amp;rsquo;est le CSS fonctionnel, cf.</description>
+    </item>
+    
+    <item>
+      <title>Sprites SVG inline et filtres</title>
+      <link>http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres/</link>
+      <pubDate>Thu, 19 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/sprites-svg-inline-et-filtres/</guid>
+      <description>Je me suis récemment arraché quelques cheveux sur un bug qui me semblait assez incompréhensible lorsque j&amp;rsquo;essayais d&amp;rsquo;utiliser des sprites SVG inline (directement intégrés dans mes pages) et que ceux-ci utilisaient des filtres&amp;nbsp;: le sprite appelé ne s&amp;rsquo;affichait tout simplement pas. Ayant réussi à trouver d&amp;rsquo;où le problème venait, je le partage donc; ça peut toujours aider.
+Les exemples suivants font usage de symbol et use pour afficher les icônes. Si vous n&#39;êtes pas à l&#39;aise avec le sujet, je vous invite à lire en amont cet article de CSS-Tricks.</description>
+    </item>
+    
+    <item>
+      <title>Nommage et architecture CSS</title>
+      <link>http://ronanlevesque.fr/articles/nommage-et-architecture-css/</link>
+      <pubDate>Wed, 19 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/nommage-et-architecture-css/</guid>
+      <description>A ma connaissance, il n&amp;rsquo;y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme BEM ou SUIT, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j&amp;rsquo;ai adapté ces techniques à mon workflow.
+Les bases&amp;nbsp;: BEM et SUIT Si ces deux acronymes ne vous évoquent rien, je vous suggère avant toute chose de lire mon article sur le premier ainsi que la documentation Github du deuxième.</description>
+    </item>
+    
+    <item>
+      <title>Une gestion responsable des webfonts</title>
+      <link>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</guid>
+      <description>Jusqu&amp;rsquo;à très récemment, j&amp;rsquo;avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l&amp;rsquo;apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j&amp;rsquo;ai mise en place dernièrement, et dont je suis pleinement satisfait.
+Quelques précisions La notion de FOIT ne parlant pas à tout le monde, commençons par une petite explication&amp;nbsp;: tant que votre navigateur n&amp;rsquo;a pas téléchargé les webfonts de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d&amp;rsquo;afficher les polices que vous avez définies par défaut.</description>
+    </item>
+    
+    <item>
+      <title>Les principales nouveautés de ES6</title>
+      <link>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/</guid>
+      <description>JavaScript s&amp;rsquo;apprête à vivre une petite révolution avec l&amp;rsquo;arrivée d&amp;rsquo;ES6, la prochaine version du standard ECMAScript. Et pour cause&amp;nbsp;: c&amp;rsquo;est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en cours d&amp;rsquo;implémentation dans les différents moteurs JS.
+Si vous êtes comme moi du genre impatient, il existe de nombreux transpilers qui permettent à l&amp;rsquo;heure actuelle d&amp;rsquo;écrire de l&amp;rsquo;ES6 qui sera compilé en ES5&amp;hellip; Une très bonne raison, à mes yeux, de tester cette nouvelle syntaxe dès aujourd&amp;rsquo;hui.</description>
+    </item>
+    
+    <item>
+      <title>Dropbox et node_modules</title>
+      <link>http://ronanlevesque.fr/articles/dropbox-et-node-modules/</link>
+      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/dropbox-et-node-modules/</guid>
+      <description>J&amp;rsquo;utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j&amp;rsquo;utilise. J&amp;rsquo;ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux node_modules&amp;nbsp;: ce dernier a tendance à se compter en milliers de fichiers, ce qui n&amp;rsquo;est pas idéal pour la synchronisation de Dropbox.
+Heureusement il est possible d&amp;rsquo;ignorer ces fichiers; je vais vous montrer dans cet article comment faire.</description>
+    </item>
+    
+    <item>
+      <title>Mettre ses assets en cache avec Jekyll</title>
+      <link>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</link>
+      <pubDate>Wed, 17 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</guid>
+      <description>Je partage aujourd&amp;rsquo;hui une solution assez simple que l&amp;rsquo;on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l&amp;rsquo;on utilise soient correctement mis à jour.
+Mise à jour (01/07/2015) : depuis l&#39;écriture de cette article, j&#39;ai mis en place un système bien plus pertinent que je détaille ci-dessous.</description>
+    </item>
+    
+    <item>
+      <title>Animer ses SVG avec Snap.svg</title>
+      <link>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/</link>
+      <pubDate>Mon, 21 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/</guid>
+      <description>Ces derniers temps, j&amp;rsquo;ai un peu expérimenté l&amp;rsquo;animation de SVG. Mon premier essai a été cet oiseau, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités&amp;nbsp;: si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j&amp;rsquo;ai trouvée est Snap.svg. Je vais vous expliquer le processus en détails.
+Attention, pour bien saisir ce tutoriel il est préférable d&#39;être à l&#39;aise sur le mode de fonctionnement des SVG.</description>
+    </item>
+    
+    <item>
+      <title>Abandonner le support d&#39;IE8</title>
+      <link>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/</link>
+      <pubDate>Fri, 20 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/abandonner-le-support-d-ie8/</guid>
+      <description>La décision de Microsoft de ne plus assurer le support d&amp;rsquo;XP a eu pour conséquence de sonner le glas définitif d&amp;rsquo;Internet Explorer 8. En effet, sans mises à jour, il deviendra de plus en plus exposé à d&amp;rsquo;éventuels virus ou failles, ce qui forcera ses utilisateurs à migrer vers d&amp;rsquo;autres navigateurs. Pour nous, webdesigners et développeurs, c&amp;rsquo;est un vrai soulagement et surtout un gros pas en avant&amp;hellip;
+En intro&amp;nbsp;: quelques statistiques Concrètement, si on décide d&amp;rsquo;arrêter tout support pour IE8, on se prive en moyenne de 3% de nos visiteurs (données France).</description>
+    </item>
+    
+    <item>
+      <title>Responsive design : adoptez un process intelligent !</title>
+      <link>http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/</link>
+      <pubDate>Thu, 13 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/</guid>
+      <description>Ce n&amp;rsquo;est plus vraiment une nouveauté&amp;nbsp;: le responsive design est la tendance hype du moment. De plus en plus d&amp;rsquo;acteurs du web ont réalisé qu&amp;rsquo;il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n&amp;rsquo;est pas toujours le cas.
+Les processes décrits ci-dessous interviennent entre la définition des besoins client et de la stratégie (contenu, architecture etc.</description>
+    </item>
+    
+    <item>
+      <title>Ma configuration Gulp</title>
+      <link>http://ronanlevesque.fr/articles/ma-configuration-gulp/</link>
+      <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/ma-configuration-gulp/</guid>
+      <description>Quand Grunt a commencé à faire parler de lui, j&amp;rsquo;ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l&amp;rsquo;outil idéal pour l&amp;rsquo;automatisation de mes tâches front-end; j&amp;rsquo;ai d&amp;rsquo;ailleurs très vite créé ma boilerplate suite à ça. Mais la donne a un peu changé avec l&amp;rsquo;arrivée d&amp;rsquo;un petit nouveau&amp;nbsp;: Gulp.
+Mise à jour (14/03/2014)&amp;nbsp;: j&#39;ai créé une boilerplate pour Gulp, avec une configuration bien plus poussée que celle décrite ci-dessous.</description>
+    </item>
+    
+    <item>
+      <title>Des colonnes de même taille en Vanilla JS</title>
+      <link>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/</link>
+      <pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/</guid>
+      <description>CSS3 a apporté son lot de nouveautés, parmi lesquelles flexbox, un modèle qui propose de nombreuses solutions de mise en page dont celle qui nous intéresse aujourd&amp;rsquo;hui&amp;nbsp;: la création de colonnes de hauteur égale. Malheureusement l&amp;rsquo;utilisation de flexbox en production est encore mitigée. Du coup, la meilleure alternative reste pour l&amp;rsquo;instant le recours au JavaScript.
+Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la même hauteur. L&amp;rsquo;idée que j&amp;rsquo;avais en tête était de basculer cette façon de faire en Vanilla JS et pousser le concept un peu plus loin en mixant ma mise en page à du responsive design.</description>
+    </item>
+    
+    <item>
+      <title>Dans l&#39;enfer de @font-face</title>
+      <link>http://ronanlevesque.fr/articles/dans-l-enfer-de-font-face/</link>
+      <pubDate>Thu, 30 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/dans-l-enfer-de-font-face/</guid>
+      <description>L&amp;rsquo;utilisation de fontes personnalisées a explosé ces dernières années sur le web grâce à la déclaration CSS @font-face, dont l&amp;rsquo;utilisation a été rendue simple par des sites tels que FontSquirrel et son désormais célèbre webfont generator. Pourtant, la méthode proposée ne me paraît pas idéale.
+Si l&amp;rsquo;on reprend l&amp;rsquo;exemple de FontSquirrel, le code généré par le kit téléchargé est le suivant&amp;nbsp;:
+@font-face { font-family: &#39;merriweather&#39;; src: url(&#39;merriweather.eot&#39;); src: url(&#39;merriweather.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;), url(&#39;merriweather.</description>
+    </item>
+    
+    <item>
+      <title>Nouvelle année, nouveau site</title>
+      <link>http://ronanlevesque.fr/articles/nouvelle-annee-nouveau-site/</link>
+      <pubDate>Tue, 21 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/nouvelle-annee-nouveau-site/</guid>
+      <description>2014 est un bon prétexte pour mettre en place une énième refonte de mon site. Cette fois-ci, le but était de tester l&amp;rsquo;intégration de polices enfin lissées sous Chrome ainsi que le passage au Vanilla JS. Je vais aussi profiter de l&amp;rsquo;occasion pour revenir sur les différents designs que le site a connu (avec plus ou moins de réussite je dois dire&amp;nbsp;:))
+L&amp;rsquo;aspect technique 1er point&amp;nbsp;: le lissage des polices Chrome accuse un retard catastrophique sur ce point par rapport à Firefox ou IE.</description>
+    </item>
+    
+    <item>
+      <title>Jekyll et UTF-8 sous Windows</title>
+      <link>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</link>
+      <pubDate>Fri, 29 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</guid>
+      <description>La première fois que j&amp;rsquo;ai installé et lancé Jekyll pour mon blog sous Windows, je suis tombé sur une erreur liée à UTF-8. En fouillant un peu, j&amp;rsquo;ai trouvé la raison de ce problème dans cet article&amp;nbsp;: il semblerait que la console Ruby ne fonctionne pas avec les caractères UTF-8, d&amp;rsquo;une manière ou d&amp;rsquo;une autre.
+L&amp;rsquo;erreur affichée était la suivante&amp;nbsp;:
+Liquid Exception: incompatible character encodings: UTF-8 and IBM437 in whatever.html La solution à ce problème est facile.</description>
+    </item>
+    
+    <item>
+      <title>Premiers pas avec AngularJS</title>
+      <link>http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/</link>
+      <pubDate>Tue, 26 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/</guid>
+      <description>J&amp;rsquo;ai commencé à m&amp;rsquo;intéresser il y a peu à AngularJS, un framework JavaScript &amp;ldquo;client-side&amp;rdquo; orienté MVC/MVVM dont j&amp;rsquo;entends beaucoup parler en ce moment. Angular est parfait pour créer des SPA (single pages apps), voire même des sites complets. J&amp;rsquo;ai voulu tester son potentiel en créant pour l&amp;rsquo;occasion une app de A à Z.
+Attention, cet article n&amp;rsquo;est pas un tutoriel. Je cherche simplement à décrire ici l&amp;rsquo;app que j&amp;rsquo;ai créée, sa mise en place ainsi que les obstacles que j&amp;rsquo;ai rencontrés.</description>
+    </item>
+    
+    <item>
+      <title>Les anciens navigateurs</title>
+      <link>http://ronanlevesque.fr/articles/les-anciens-navigateurs/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/les-anciens-navigateurs/</guid>
+      <description>La vie serait beaucoup plus simple si on n&amp;rsquo;avait plus à assurer le support des antiquités que sont IE6, 7 et 8. Malheureusement au quotidien ça n&amp;rsquo;est pas toujours possible; on se retrouve souvent contraints de réaliser le grand écart entre moderne et vieux. Si l&amp;rsquo;on souhaite se tourner vers une conception moderne en responsive design, comment s&amp;rsquo;assurer du meilleur support possible&amp;nbsp;?
+Cet article s&#39;attardera uniquement sur la gestion des media queries en responsive design; je ne parlerai pas ici d&#39;autres propriétés CSS3 non supportés par certains de ces navigateurs, par exemple flexbox, border-box etc.</description>
+    </item>
+    
+    <item>
+      <title>Like, Plus, Share...</title>
+      <link>http://ronanlevesque.fr/articles/like-plus-share/</link>
+      <pubDate>Tue, 08 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/like-plus-share/</guid>
+      <description>J&amp;rsquo;ai récemment lu un article intitulé &amp;ldquo;Sweep the Sleaze&amp;rdquo; (balayer les ordures), écrit par Oliver Reichenstein de chez iA. Dans cet article, Oliver tire à boulets rouges sur les boutons de partage qui ont envahi nos pages depuis quelques temps. Et je dois dire que je partage en effet la plupart de ses réticences.
+ Un aperçu désormais incontournable...  Il est aujourd&amp;rsquo;hui rare de voir un site qui n&amp;rsquo;est pas affublé de la ribambelles de boutons de partage en tout genre&amp;nbsp;: Twitter, Facebook, Google+, Pinterest, voire des réseaux moins connus&amp;hellip; ceux-ci paraissent être rentrés dans nos moeurs, mais sont-ils réellement indispensables&amp;nbsp;?</description>
+    </item>
+    
+    <item>
+      <title>Goodbye WordPress, hello Jekyll</title>
+      <link>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</link>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</guid>
+      <description>Cela fait un moment que je vois de plus en plus de bloggeurs tech se tourner vers Jekyll comme solution de blogging et abandonner leur ancienne plateforme pour l&amp;rsquo;occasion (souvent Tumblr ou WordPress). Mon site ayant besoin d&amp;rsquo;un sacré rafraîchissement au niveau de son code, j&amp;rsquo;en ai donc profité pour faire d&amp;rsquo;un pierre deux coups et le basculer sous Jekyll. Je listerai ici tous les avantages que j&amp;rsquo;y ai trouvé a par rapport à mon ancien CMS.</description>
+    </item>
+    
+    <item>
+      <title>Automatiser son workflow avec Grunt</title>
+      <link>http://ronanlevesque.fr/articles/automatiser-son-workflow-avec-grunt/</link>
+      <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/automatiser-son-workflow-avec-grunt/</guid>
+      <description>Grunt est un task runner dont le but est d&amp;rsquo;automatiser certaines tâches répétitives (compilation, minification etc). Il est écrit en JavaScript et fonctionne avec Node.js. Dans cet article j&amp;rsquo;expliquerai comment le configurer et le lancer de manière basique.
+Un outil extrêmement puissant Le gros avantage de Grunt est donc son automatisation. En quelques secondes et une ligne de commande, il sera capable de conduire un très large nombre de tâches&amp;nbsp;:</description>
+    </item>
+    
+    <item>
+      <title>CSS et notation BEM</title>
+      <link>http://ronanlevesque.fr/articles/css-et-notation-bem/</link>
+      <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/css-et-notation-bem/</guid>
+      <description>Un des gros points noirs du CSS est la complexité que sa maintenance peut parfois engendrer. Cela s&amp;rsquo;avère surtout vrai pour de gros sites, pour lesquels éditer un simple style peut vite tourner au cauchemar, au risque de casser entièrement votre mise en page. C&amp;rsquo;est là que des concepts tels que BEM interviennent&amp;hellip;
+Le principe BEM est une méthodologie mise au point par Yandex. &amp;ldquo;BEM&amp;rdquo; signifie Block, Element, Modifier. l&amp;rsquo;idée derrière cette méthodologie est de faciliter la lecture (et la ré-usabilité) du code par d&amp;rsquo;autres développeurs.</description>
+    </item>
+    
+    <item>
+      <title>Android &amp; Ergonomie</title>
+      <link>http://ronanlevesque.fr/articles/android-ergonomie/</link>
+      <pubDate>Tue, 13 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/android-ergonomie/</guid>
+      <description>J&amp;rsquo;ai changé depuis quelques mois mon vieil iPhone 3GS pour un Motorola Razr HD tournant avec Android. Je ne suis pas pleinement satisfait de ce changement pour pas mal de petits détails. Celui dont je vais parler aujourd&amp;rsquo;hui est assez pénible à mes yeux&amp;nbsp;: il concerne l&amp;rsquo;utilisation du clavier tactile du téléphone.
+Avant de rentrer plus en profondeur dans le sujet je tiens à préciser que ce problème est propre à mon Motorola et à la façon dont il a été conçu.</description>
+    </item>
+    
+    <item>
+      <title>I hate U flat !</title>
+      <link>http://ronanlevesque.fr/articles/i-hate-u-flat/</link>
+      <pubDate>Fri, 12 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/i-hate-u-flat/</guid>
+      <description>I hate U flat ! est un petit projet - 7ko compressé - se présentant sous la forme d&amp;rsquo;une librairie de boutons en CSS, que j&amp;rsquo;ai créé récemment à force d&amp;rsquo;entendre parler de flat design à peu près partout sur le web depuis de longs mois.
+Personnellement, je n&amp;rsquo;ai rien contre cette tendance, mon site suivant d&amp;rsquo;ailleurs un peu la mode du flat, mais je trouve dommage de se priver totalement des effets d&amp;rsquo;ombres et de dégradés alors qu&amp;rsquo;on a enfin de quoi obtenir de jolis effets depuis l&amp;rsquo;arrivée de CSS3.</description>
+    </item>
+    
+    <item>
+      <title>Plugins utiles pour Sublime Text 2</title>
+      <link>http://ronanlevesque.fr/articles/plugins-utiles-pour-sublime-text-2/</link>
+      <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/plugins-utiles-pour-sublime-text-2/</guid>
+      <description>Plus besoin de présenter Sublime Text 2 (la v3 est en bêta), un éditeur de texte qui peut rapidement devenir surpuissant grâce à ses nombreux plugins. Voici ci-dessous une liste de ceux que j&amp;rsquo;utilise au quotidien.
+Les incontournables Hayaku Indispensable lorsque l&amp;rsquo;on écrit du CSS à longueur de journée&amp;nbsp;: Hayaku permet d&amp;rsquo;utiliser des abbréviations pour écrire des propriétés. L&amp;rsquo;outil est très intuitif et devine facilement les abréviations utilisées. Par exemple&amp;nbsp;:</description>
+    </item>
+    
+    <item>
+      <title>Font-size : quelles solutions ?</title>
+      <link>http://ronanlevesque.fr/articles/font-size-quelles-solutions/</link>
+      <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/font-size-quelles-solutions/</guid>
+      <description>Le choix est large quand on s&amp;rsquo;intéresse à la propriété CSS font-size&amp;nbsp;: on peut tout aussi bien lui attribuer des valeurs prédéfinies (small, medium etc.) que des valeurs absolues (pt, cm, mm etc.) ou encore des valeurs relatives (px, em, %, etc.). Le but de mon article est de faire un point sur les unités em et rem et leurs usages.
+Em et Rem&amp;nbsp;: un rappel Ces unités sont parfois un peu dures à appréhender car leur définition reste plutôt abstraite.</description>
+    </item>
+    
+    <item>
+      <title>FOX CSS est passé sous Sass</title>
+      <link>http://ronanlevesque.fr/articles/fox-css-est-passe-sous-sass/</link>
+      <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/fox-css-est-passe-sous-sass/</guid>
+      <description>J&amp;rsquo;ai lancé depuis quelques mois mon petit &amp;ldquo;framework&amp;rdquo; CSS perso, FOX CSS, et après l&amp;rsquo;avoir utilisé pour la création de sites allant de sites d&amp;rsquo;une page à des projets bien plus complexes, je le trouve parfaitement viable par rapport à mes besoins. En parallèle, j&amp;rsquo;ai aussi passé tous mes projets sous Sass; la suite logique était donc de mixer FOX CSS et Sass.
+Ce que je considère comme le point fort de ce framework, c&amp;rsquo;est sa modularité.</description>
+    </item>
+    
+    <item>
+      <title>Text-align: justify pour une nouvelle technique de grilles</title>
+      <link>http://ronanlevesque.fr/articles/text-align-justify-pour-une-nouvelle-technique-de-grilles/</link>
+      <pubDate>Mon, 03 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/text-align-justify-pour-une-nouvelle-technique-de-grilles/</guid>
+      <description>Je suis tombé sur une nouvelle technique publiée par l&amp;rsquo;agence new-yorkaise Barrel pour créer des grilles qui évitent ENFIN les prises de têtes que sont les marges horizontales. Je la partage aujourd&amp;rsquo;hui en français et surtout je la conseille vivement comme méthode de remplacement des techniques traditionnelles.
+Les techniques habituelles En fait quand je crée des grilles, par exemple de listings produits (le plus souvent responsive), j&amp;rsquo;utilise une des deux techniques suivantes&amp;nbsp;:</description>
+    </item>
+    
+    <item>
+      <title>Un @mixin Sass simple pour les media queries</title>
+      <link>http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries/</link>
+      <pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries/</guid>
+      <description>J&amp;rsquo;avais chanté les louanges du préprocesseur Sass il y a quelques mois, convaincu de l&amp;rsquo;intérêt de cet outil. Depuis je l&amp;rsquo;ai intégré en production sur quelques projets, et son intérêt ne se dément vraiment pas. Combiné à les logiciels simples (je vous conseille vivement Prepros sur Windows) c&amp;rsquo;est un bonheur à utiliser.
+Les @mixins sont un vrai plus de Sass. Pour rappel ils permettent de réutiliser grâce à @include une partie de notre CSS, qu&amp;rsquo;on peut par exemple combiner avec des variables.</description>
+    </item>
+    
+    <item>
+      <title>return false VS e.preventDefault</title>
+      <link>http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault/</link>
+      <pubDate>Mon, 13 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault/</guid>
+      <description>J&amp;rsquo;ai été confronté récemment à un problème plutôt pénible en écrivant une fonction jQuery pour un projet en cours, problème lié à l&amp;rsquo;utilisation de return false. Pour rappel celui-ci permet d&amp;rsquo;empêcher le comportement par défaut de l&amp;rsquo;objet appelé par une fonction, par exemple il évitera un retour en haut de page si on utilise un &amp;lt;a href=&amp;ldquo;#&amp;rdquo;&amp;gt;. Le hic, c&amp;rsquo;est qu&amp;rsquo;il bloquera du coup la propagation à l&amp;rsquo;utilisation d&amp;rsquo;événements clicks additionnels.</description>
+    </item>
+    
+    <item>
+      <title>Animations en CSS : un cas pratique</title>
+      <link>http://ronanlevesque.fr/articles/animations-en-css-un-cas-pratique/</link>
+      <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/animations-en-css-un-cas-pratique/</guid>
+      <description>J&amp;rsquo;avais posté il y a quelques temps un bref tutoriel sur les animations en CSS. Depuis je n&amp;rsquo;avais pas vraiment creusé la question, mais en refaisant le site récemment j&amp;rsquo;ai décidé d&amp;rsquo;ajouter un peu de vie dans la bannière, en faisant bouger quelques-uns des éléments du paysage (nuage, fumée de l&amp;rsquo;usine, drapeau et montgolfière). L&amp;rsquo;idée ici est de montrer comment ça fonctionne, concrètement.
+Attention, comme pour le tuto précédent, dans les exemples qui suivent je n&amp;rsquo;ai rien préfixé pour plus de simplicité.</description>
+    </item>
+    
+    <item>
+      <title>Refonte graphique du site</title>
+      <link>http://ronanlevesque.fr/articles/refonte-graphique-du-site/</link>
+      <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/refonte-graphique-du-site/</guid>
+      <description>J&amp;rsquo;avais depuis quelques mois un peu mis mon site entre parenthèses, pour des raisons de vacances méritées / changement de boulot. Il est maintenant grand temps de reprendre tout ça en main, et pour ça j&amp;rsquo;ai décidé de refondre (une fois de plus) mon site pour lui redonner quelques couleurs.
+Le but de la refonte était de faire de ce site quelque chose de clair et simple, centré autour de son contenu.</description>
+    </item>
+    
+    <item>
+      <title>Les animations en CSS</title>
+      <link>http://ronanlevesque.fr/articles/les-animations-en-css/</link>
+      <pubDate>Fri, 21 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/les-animations-en-css/</guid>
+      <description>Pendant longtemps, les animations d&amp;rsquo;un site ont été faites en flash ou via des gifs animés, mais tout cela est en passe d&amp;rsquo;être remplacé grâce à deux nouveaux modules introduits par CSS3, animation et transition. Dans cet article je me concentrerai sur le premier pour vous montrer comment, grâce à une syntaxe claire est simple, il est dorénavant facile de mettre un peu de mouvement sur vos pages&amp;hellip;
+Le principe La déclaration de l&amp;rsquo;animation dans le CSS se fait en 2 étapes&amp;nbsp;:</description>
+    </item>
+    
+    <item>
+      <title>Le scrolling, ce mal absolu.</title>
+      <link>http://ronanlevesque.fr/articles/le-scrolling-ce-mal-absolu/</link>
+      <pubDate>Sun, 09 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/le-scrolling-ce-mal-absolu/</guid>
+      <description>Voilà une croyance qui semble ancrée dure comme fer dans l&amp;rsquo;esprit de beaucoup de gens avec qui j&amp;rsquo;ai eu l&amp;rsquo;occasion de discuter récemment, que ce soit dans le cadre de mon travail ou autre&amp;nbsp;: le scrolling, c&amp;rsquo;est le mal ! D&amp;rsquo;après ce que j&amp;rsquo;ai pu entendre, il faudrait donc éviter à tout prix les ascenseurs verticaux, ils compliquent la tâche du lecteur et risqueraient de le faire quitter votre site plus tôt qu&amp;rsquo;escompté.</description>
+    </item>
+    
+    <item>
+      <title>Le jour où j&#39;ai testé Sass</title>
+      <link>http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass/</link>
+      <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass/</guid>
+      <description>J&amp;rsquo;ai lu récemment pas mal de débats sur l&amp;rsquo;intérêt d&amp;rsquo;intégrer ou non les préprocesseurs CSS dans nos workflows. Certains pour, d&amp;rsquo;autres contre, bref, les avis semblaient vraiment partagés sur le sujet. D&amp;rsquo;après ce que j&amp;rsquo;avais pu en lire, ils pouvaient pourtant présenter un réel intérêt dans certains cas, notamment sur de gros projets. Curieux d&amp;rsquo;en savoir un peu plus sur le sujet, j&amp;rsquo;ai récemment plongé mon nez dans Sass, qui semblait le plus populaire des différents préprocesseurs.</description>
+    </item>
+    
+    <item>
+      <title>Un template complexe pour le responsive design</title>
+      <link>http://ronanlevesque.fr/articles/un-template-complexe-pour-le-responsive-design/</link>
+      <pubDate>Mon, 24 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/un-template-complexe-pour-le-responsive-design/</guid>
+      <description>J&amp;rsquo;ai intégré un template pour approche &amp;ldquo;mobile first&amp;rdquo; dans FOX CSS, le framework que j&amp;rsquo;ai créé (cf. mon article précédent). Par exemple, un élément de type bloc s&amp;rsquo;étant vu attribuer la classe .r50 occupera 100% de la largeur de son parent jusqu&amp;rsquo;à 640px de largeur, puis il passera à 50% au-dessus. C&amp;rsquo;est un bon début, mais comment faire si on veut plus de possibilités sur des résolutions supérieures&amp;nbsp;?
+Ainsi, avec cette classe .</description>
+    </item>
+    
+    <item>
+      <title>FOX CSS : un framework CSS light</title>
+      <link>http://ronanlevesque.fr/articles/fox-css-un-framework-css-light/</link>
+      <pubDate>Fri, 14 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/fox-css-un-framework-css-light/</guid>
+      <description>J&amp;rsquo;ai bossé ces dernières semaines sur la création d&amp;rsquo;un framework CSS adapté à mes besoins. L&amp;rsquo;idée m&amp;rsquo;est venue quand le framework KNACSS a été publié. Avant cela, j&amp;rsquo;utilisais un simple reset, celui d&amp;rsquo;Eric Meyer. Mais le fait de repartir à zéro, et de manière aussi extrême, n&amp;rsquo;était pas la solution la plus satisfaisante à mes yeux. A l&amp;rsquo;opposé, utiliser des frameworks complexes, comme Twitter Bootstrap, ne répondait pas non plus à mes besoins.</description>
+    </item>
+    
+    <item>
+      <title>Les atouts de box-sizing: border-box</title>
+      <link>http://ronanlevesque.fr/articles/les-atouts-de-box-sizing-border-box/</link>
+      <pubDate>Wed, 15 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/les-atouts-de-box-sizing-border-box/</guid>
+      <description>Par défaut, la largeur totale d&amp;rsquo;une boîte sera égale à la largeur qui lui a été attribuée + son padding (box-sizing: content-box). Par exemple, si l&amp;rsquo;on veut avoir une boîte d&amp;rsquo;une largeur de 100px, avec un padding de 10px, il faudra spécifier dans le css une width:80px pour celle-ci (80px + 10 px + 10px). Pas vraiment pratique, surtout lorsqu&amp;rsquo;on veut utiliser des boîtes de taille fluide avec des paddings fixes&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Webdesign : liste de ressources utiles</title>
+      <link>http://ronanlevesque.fr/articles/webdesign-liste-de-ressources-utiles/</link>
+      <pubDate>Mon, 06 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/webdesign-liste-de-ressources-utiles/</guid>
+      <description>Avant de se lancer dans la création d&amp;rsquo;un site, il est important de s&amp;rsquo;assurer qu&amp;rsquo;on a en notre possession tous les éléments qui permettront de se simplifier la vie&amp;nbsp;: wireframes, bibliothèques de polices, d&amp;rsquo;icônes, outils de génération de couleurs, de dégradés, d&amp;rsquo;effets CSS3 etc. J&amp;rsquo;ai réuni ci-dessous un grand nombre de ressources webdesign que j&amp;rsquo;utilise de manière régulière, en espérant que cela puisse également vous aider.
+Wireframes Le wireframe, de son petit nom français &amp;ldquo;maquette en fil de fer&amp;rdquo;, est le procédé qui consiste à créer un schéma d&amp;rsquo;un site ou d&amp;rsquo;une page Internet, en définissant ses différentes zones et composants.</description>
+    </item>
+    
+    <item>
+      <title>A propos du responsive design</title>
+      <link>http://ronanlevesque.fr/articles/a-propos-du-responsive-design/</link>
+      <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/a-propos-du-responsive-design/</guid>
+      <description>Ce site a été construit sur le principe du responsive design. Cela signifie en fait qu&amp;rsquo;il est construit de manière à s&amp;rsquo;adapter automatiquement à la résolution des différents écrans. A partir du moment où vous êtes équipés d&amp;rsquo;un navigateur moderne (c&amp;rsquo;est à dire à peu près tous les navigateurs à part Internet Explorer 8 et versions inférieures), il s&amp;rsquo;ajustera de lui-même à votre écran.
+Pour tester cela il vous suffit simplement de redimensionner la fenêtre de votre navigateur pour voir si les éléments se repositionnent automatiquement d&amp;rsquo;eux-même afin de respecter la largeur de la fenêtre.</description>
+    </item>
+    
+    <item>
+      <title>Mise en page et positionnement</title>
+      <link>http://ronanlevesque.fr/articles/mise-en-page-et-positionnement/</link>
+      <pubDate>Thu, 12 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/mise-en-page-et-positionnement/</guid>
+      <description>Il existe plusieurs manières de positionner différents éléments au sein d&amp;rsquo;une page. Certaines, telles que l&amp;rsquo;utilisation des tableaux sont décriées, à tort ou à raison selon les points de vue, d&amp;rsquo;autres sont fortement plébiscitées et très souvent utilisées. Le but de cet article et de faire un point sur les différentes méthodes mises à notre disposition, et de finir par un cas pratique centré autour de la position: absolute.</description>
+    </item>
+    
+    <item>
+      <title>Créer un menu avec dropdown en CSS3</title>
+      <link>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</link>
+      <pubDate>Mon, 02 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</guid>
+      <description>Les menus avec dropdown sont de nos jours fortement utilisés sur les sites possédant beaucoup de contenu. Ils s&amp;rsquo;appuient en général sur du JavaScript pour fonctionner. Pourtant il existe un moyen simple de créer des dropdown uniquement en CSS3 (malgré une très légère exception en fin d&amp;rsquo;article). Dans cet article nous allons voir comment mettre ce type de dropdown en place.
+Voir la démo
+Voici le tutoriel détaillé pour arriver à ce résultat.</description>
+    </item>
+    
+    <item>
+      <title>Styler les formulaires sur iPhone</title>
+      <link>http://ronanlevesque.fr/articles/styler-les-formulaires-sur-iphone/</link>
+      <pubDate>Sat, 30 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/styler-les-formulaires-sur-iphone/</guid>
+      <description>J&amp;rsquo;ai monté ce site dans l&amp;rsquo;optique d&amp;rsquo;en faire un site accessible aussi bien par les ordinateurs que les machines nomades (téléphones, tablettes)&amp;hellip; Pour plus d&amp;rsquo;infos sur le sujet vous pouvez consulter l&amp;rsquo;article sur le responsive design que j&amp;rsquo;ai publié sur ce blog. L&amp;rsquo;idée est que le contenu reste le même quel que soit le support, mais que la façon dont il s&amp;rsquo;affiche s&amp;rsquo;ajuste d&amp;rsquo;elle-même.
+Etant possesseur d&amp;rsquo;un iPhone, j&amp;rsquo;ai beaucoup testé mon site sur celui-ci pendant son développement.</description>
+    </item>
+    
+    <item>
+      <title>Ouverture du blog</title>
+      <link>http://ronanlevesque.fr/articles/ouverture-du-blog/</link>
+      <pubDate>Fri, 29 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/ouverture-du-blog/</guid>
+      <description>J&amp;rsquo;ai décidé il y a peu d&amp;rsquo;ouvrir une section &amp;ldquo;Blog&amp;rdquo; sur mon site. Tout ça est parti d&amp;rsquo;un constat assez simple&amp;nbsp;: quand je recherche des informations sur tout ce qui touche au développement de sites Internet, je remarque que la communauté anglophone est souvent très riche à ce niveau-là. Je souhaite donc mettre ces éléments à disposition des francophones en traduisant les articles qui me semblent les plus pertinents, si leur auteur le permet bien sûr.</description>
+    </item>
+    
+  </channel>
+</rss>

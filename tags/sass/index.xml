@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sass on Ronan Levesque - Front-end &amp; Webdesign</title>
+    <link>http://ronanlevesque.fr/tags/sass/</link>
+    <description>Recent content in Sass on Ronan Levesque - Front-end &amp; Webdesign</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 20 Jun 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ronanlevesque.fr/tags/sass/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Font-size : quelles solutions ?</title>
+      <link>http://ronanlevesque.fr/articles/font-size-quelles-solutions/</link>
+      <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/font-size-quelles-solutions/</guid>
+      <description>Le choix est large quand on s&amp;rsquo;intéresse à la propriété CSS font-size&amp;nbsp;: on peut tout aussi bien lui attribuer des valeurs prédéfinies (small, medium etc.) que des valeurs absolues (pt, cm, mm etc.) ou encore des valeurs relatives (px, em, %, etc.). Le but de mon article est de faire un point sur les unités em et rem et leurs usages.
+Em et Rem&amp;nbsp;: un rappel Ces unités sont parfois un peu dures à appréhender car leur définition reste plutôt abstraite.</description>
+    </item>
+    
+    <item>
+      <title>FOX CSS est passé sous Sass</title>
+      <link>http://ronanlevesque.fr/articles/fox-css-est-passe-sous-sass/</link>
+      <pubDate>Wed, 12 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/fox-css-est-passe-sous-sass/</guid>
+      <description>J&amp;rsquo;ai lancé depuis quelques mois mon petit &amp;ldquo;framework&amp;rdquo; CSS perso, FOX CSS, et après l&amp;rsquo;avoir utilisé pour la création de sites allant de sites d&amp;rsquo;une page à des projets bien plus complexes, je le trouve parfaitement viable par rapport à mes besoins. En parallèle, j&amp;rsquo;ai aussi passé tous mes projets sous Sass; la suite logique était donc de mixer FOX CSS et Sass.
+Ce que je considère comme le point fort de ce framework, c&amp;rsquo;est sa modularité.</description>
+    </item>
+    
+    <item>
+      <title>Un @mixin Sass simple pour les media queries</title>
+      <link>http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries/</link>
+      <pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/un-mixin-sass-simple-pour-les-media-queries/</guid>
+      <description>J&amp;rsquo;avais chanté les louanges du préprocesseur Sass il y a quelques mois, convaincu de l&amp;rsquo;intérêt de cet outil. Depuis je l&amp;rsquo;ai intégré en production sur quelques projets, et son intérêt ne se dément vraiment pas. Combiné à les logiciels simples (je vous conseille vivement Prepros sur Windows) c&amp;rsquo;est un bonheur à utiliser.
+Les @mixins sont un vrai plus de Sass. Pour rappel ils permettent de réutiliser grâce à @include une partie de notre CSS, qu&amp;rsquo;on peut par exemple combiner avec des variables.</description>
+    </item>
+    
+    <item>
+      <title>Le jour où j&#39;ai testé Sass</title>
+      <link>http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass/</link>
+      <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/le-jour-ou-jai-teste-sass/</guid>
+      <description>J&amp;rsquo;ai lu récemment pas mal de débats sur l&amp;rsquo;intérêt d&amp;rsquo;intégrer ou non les préprocesseurs CSS dans nos workflows. Certains pour, d&amp;rsquo;autres contre, bref, les avis semblaient vraiment partagés sur le sujet. D&amp;rsquo;après ce que j&amp;rsquo;avais pu en lire, ils pouvaient pourtant présenter un réel intérêt dans certains cas, notamment sur de gros projets. Curieux d&amp;rsquo;en savoir un peu plus sur le sujet, j&amp;rsquo;ai récemment plongé mon nez dans Sass, qui semblait le plus populaire des différents préprocesseurs.</description>
+    </item>
+    
+  </channel>
+</rss>

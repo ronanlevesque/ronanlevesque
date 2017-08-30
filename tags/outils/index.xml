@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Outils on Ronan Levesque - Front-end &amp; Webdesign</title>
+    <link>http://ronanlevesque.fr/tags/outils/</link>
+    <description>Recent content in Outils on Ronan Levesque - Front-end &amp; Webdesign</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 02 Apr 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ronanlevesque.fr/tags/outils/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dropbox et node_modules</title>
+      <link>http://ronanlevesque.fr/articles/dropbox-et-node-modules/</link>
+      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/dropbox-et-node-modules/</guid>
+      <description>J&amp;rsquo;utilise très souvent Dropbox pour garder mes différents projets synchronisés quelle que soit la machine que j&amp;rsquo;utilise. J&amp;rsquo;ai cependant rencontré il y a quelques temps un souci en voulant utiliser Gulp et son volumineux node_modules&amp;nbsp;: ce dernier a tendance à se compter en milliers de fichiers, ce qui n&amp;rsquo;est pas idéal pour la synchronisation de Dropbox.
+Heureusement il est possible d&amp;rsquo;ignorer ces fichiers; je vais vous montrer dans cet article comment faire.</description>
+    </item>
+    
+    <item>
+      <title>Mettre ses assets en cache avec Jekyll</title>
+      <link>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</link>
+      <pubDate>Wed, 17 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</guid>
+      <description>Je partage aujourd&amp;rsquo;hui une solution assez simple que l&amp;rsquo;on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l&amp;rsquo;on utilise soient correctement mis à jour.
+Mise à jour (01/07/2015) : depuis l&#39;écriture de cette article, j&#39;ai mis en place un système bien plus pertinent que je détaille ci-dessous.</description>
+    </item>
+    
+    <item>
+      <title>Ma configuration Gulp</title>
+      <link>http://ronanlevesque.fr/articles/ma-configuration-gulp/</link>
+      <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/ma-configuration-gulp/</guid>
+      <description>Quand Grunt a commencé à faire parler de lui, j&amp;rsquo;ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l&amp;rsquo;outil idéal pour l&amp;rsquo;automatisation de mes tâches front-end; j&amp;rsquo;ai d&amp;rsquo;ailleurs très vite créé ma boilerplate suite à ça. Mais la donne a un peu changé avec l&amp;rsquo;arrivée d&amp;rsquo;un petit nouveau&amp;nbsp;: Gulp.
+Mise à jour (14/03/2014)&amp;nbsp;: j&#39;ai créé une boilerplate pour Gulp, avec une configuration bien plus poussée que celle décrite ci-dessous.</description>
+    </item>
+    
+    <item>
+      <title>Jekyll et UTF-8 sous Windows</title>
+      <link>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</link>
+      <pubDate>Fri, 29 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</guid>
+      <description>La première fois que j&amp;rsquo;ai installé et lancé Jekyll pour mon blog sous Windows, je suis tombé sur une erreur liée à UTF-8. En fouillant un peu, j&amp;rsquo;ai trouvé la raison de ce problème dans cet article&amp;nbsp;: il semblerait que la console Ruby ne fonctionne pas avec les caractères UTF-8, d&amp;rsquo;une manière ou d&amp;rsquo;une autre.
+L&amp;rsquo;erreur affichée était la suivante&amp;nbsp;:
+Liquid Exception: incompatible character encodings: UTF-8 and IBM437 in whatever.html La solution à ce problème est facile.</description>
+    </item>
+    
+    <item>
+      <title>Premiers pas avec AngularJS</title>
+      <link>http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/</link>
+      <pubDate>Tue, 26 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/</guid>
+      <description>J&amp;rsquo;ai commencé à m&amp;rsquo;intéresser il y a peu à AngularJS, un framework JavaScript &amp;ldquo;client-side&amp;rdquo; orienté MVC/MVVM dont j&amp;rsquo;entends beaucoup parler en ce moment. Angular est parfait pour créer des SPA (single pages apps), voire même des sites complets. J&amp;rsquo;ai voulu tester son potentiel en créant pour l&amp;rsquo;occasion une app de A à Z.
+Attention, cet article n&amp;rsquo;est pas un tutoriel. Je cherche simplement à décrire ici l&amp;rsquo;app que j&amp;rsquo;ai créée, sa mise en place ainsi que les obstacles que j&amp;rsquo;ai rencontrés.</description>
+    </item>
+    
+    <item>
+      <title>Les anciens navigateurs</title>
+      <link>http://ronanlevesque.fr/articles/les-anciens-navigateurs/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/les-anciens-navigateurs/</guid>
+      <description>La vie serait beaucoup plus simple si on n&amp;rsquo;avait plus à assurer le support des antiquités que sont IE6, 7 et 8. Malheureusement au quotidien ça n&amp;rsquo;est pas toujours possible; on se retrouve souvent contraints de réaliser le grand écart entre moderne et vieux. Si l&amp;rsquo;on souhaite se tourner vers une conception moderne en responsive design, comment s&amp;rsquo;assurer du meilleur support possible&amp;nbsp;?
+Cet article s&#39;attardera uniquement sur la gestion des media queries en responsive design; je ne parlerai pas ici d&#39;autres propriétés CSS3 non supportés par certains de ces navigateurs, par exemple flexbox, border-box etc.</description>
+    </item>
+    
+    <item>
+      <title>Goodbye WordPress, hello Jekyll</title>
+      <link>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</link>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</guid>
+      <description>Cela fait un moment que je vois de plus en plus de bloggeurs tech se tourner vers Jekyll comme solution de blogging et abandonner leur ancienne plateforme pour l&amp;rsquo;occasion (souvent Tumblr ou WordPress). Mon site ayant besoin d&amp;rsquo;un sacré rafraîchissement au niveau de son code, j&amp;rsquo;en ai donc profité pour faire d&amp;rsquo;un pierre deux coups et le basculer sous Jekyll. Je listerai ici tous les avantages que j&amp;rsquo;y ai trouvé a par rapport à mon ancien CMS.</description>
+    </item>
+    
+    <item>
+      <title>Automatiser son workflow avec Grunt</title>
+      <link>http://ronanlevesque.fr/articles/automatiser-son-workflow-avec-grunt/</link>
+      <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/automatiser-son-workflow-avec-grunt/</guid>
+      <description>Grunt est un task runner dont le but est d&amp;rsquo;automatiser certaines tâches répétitives (compilation, minification etc). Il est écrit en JavaScript et fonctionne avec Node.js. Dans cet article j&amp;rsquo;expliquerai comment le configurer et le lancer de manière basique.
+Un outil extrêmement puissant Le gros avantage de Grunt est donc son automatisation. En quelques secondes et une ligne de commande, il sera capable de conduire un très large nombre de tâches&amp;nbsp;:</description>
+    </item>
+    
+    <item>
+      <title>CSS et notation BEM</title>
+      <link>http://ronanlevesque.fr/articles/css-et-notation-bem/</link>
+      <pubDate>Thu, 29 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/css-et-notation-bem/</guid>
+      <description>Un des gros points noirs du CSS est la complexité que sa maintenance peut parfois engendrer. Cela s&amp;rsquo;avère surtout vrai pour de gros sites, pour lesquels éditer un simple style peut vite tourner au cauchemar, au risque de casser entièrement votre mise en page. C&amp;rsquo;est là que des concepts tels que BEM interviennent&amp;hellip;
+Le principe BEM est une méthodologie mise au point par Yandex. &amp;ldquo;BEM&amp;rdquo; signifie Block, Element, Modifier. l&amp;rsquo;idée derrière cette méthodologie est de faciliter la lecture (et la ré-usabilité) du code par d&amp;rsquo;autres développeurs.</description>
+    </item>
+    
+    <item>
+      <title>Plugins utiles pour Sublime Text 2</title>
+      <link>http://ronanlevesque.fr/articles/plugins-utiles-pour-sublime-text-2/</link>
+      <pubDate>Thu, 27 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/plugins-utiles-pour-sublime-text-2/</guid>
+      <description>Plus besoin de présenter Sublime Text 2 (la v3 est en bêta), un éditeur de texte qui peut rapidement devenir surpuissant grâce à ses nombreux plugins. Voici ci-dessous une liste de ceux que j&amp;rsquo;utilise au quotidien.
+Les incontournables Hayaku Indispensable lorsque l&amp;rsquo;on écrit du CSS à longueur de journée&amp;nbsp;: Hayaku permet d&amp;rsquo;utiliser des abbréviations pour écrire des propriétés. L&amp;rsquo;outil est très intuitif et devine facilement les abréviations utilisées. Par exemple&amp;nbsp;:</description>
+    </item>
+    
+    <item>
+      <title>Webdesign : liste de ressources utiles</title>
+      <link>http://ronanlevesque.fr/articles/webdesign-liste-de-ressources-utiles/</link>
+      <pubDate>Mon, 06 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/webdesign-liste-de-ressources-utiles/</guid>
+      <description>Avant de se lancer dans la création d&amp;rsquo;un site, il est important de s&amp;rsquo;assurer qu&amp;rsquo;on a en notre possession tous les éléments qui permettront de se simplifier la vie&amp;nbsp;: wireframes, bibliothèques de polices, d&amp;rsquo;icônes, outils de génération de couleurs, de dégradés, d&amp;rsquo;effets CSS3 etc. J&amp;rsquo;ai réuni ci-dessous un grand nombre de ressources webdesign que j&amp;rsquo;utilise de manière régulière, en espérant que cela puisse également vous aider.
+Wireframes Le wireframe, de son petit nom français &amp;ldquo;maquette en fil de fer&amp;rdquo;, est le procédé qui consiste à créer un schéma d&amp;rsquo;un site ou d&amp;rsquo;une page Internet, en définissant ses différentes zones et composants.</description>
+    </item>
+    
+  </channel>
+</rss>

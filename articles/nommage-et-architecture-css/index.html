@@ -4,17 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ronan Levesque &ndash; Nommage et architecture CSS</title>
+  
   <meta name="description" content="Explications sur la façon dont je structure mon CSS pour une maintenance optimale" />
+  
   <meta name="author" content="Ronan Levesque" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Nommage et architecture CSS" />
+  
   <meta property="og:description" content="Explications sur la façon dont je structure mon CSS pour une maintenance optimale" />
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/nommage-et-architecture-css/" />
+  
+
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-4cd2471f642278b18e21b6558acff2b9.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles-9e724f46.css" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -43,129 +48,125 @@
   </script>
 </head>
 
-
-<body id="top">
-
+<body>
 
 
   <div class="js-content">
     <div class="wrapper">
-        <header class="mainHeader">
-    <div class="mainHeader-logo">
-      <a href="/">
-        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-      </a>
-    </div>
-    <nav class="mainNav">
-        <ul class="mainNav-list">
-          
-          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
-          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
-          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
-        </ul>
-    </nav>
-  </header>
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      
       <article class="article">
-      
         <header class="article-header">
           <time class="article-date">19 août 2015</time>
           <h1 class="article-title">Nommage et architecture CSS</h1>
         </header>
-        
         <div class="article-content">
-        
-          <p>A ma connaissance, il n’y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme <abbr title="Block, Element, Modifier">BEM</abbr> ou <abbr title="Structured class names and meaningful hyphens">SUIT</abbr>, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j’ai adapté ces techniques à mon workflow.</p>
+          
+
+<p>A ma connaissance, il n&rsquo;y a rien de plus casse-tête côté front que de trouver la bonne structure et le nommage correct pour assurer une maintenabilité et une lisibilité optimales de mes CSS. Certaines méthodologies, comme <abbr title="Block, Element, Modifier">BEM</abbr> ou <abbr title="Structured class names and meaningful hyphens">SUIT</abbr>, permettent cependant de faciliter ça. Je vais décrire ici la façon dont j&rsquo;ai adapté ces techniques à mon workflow.</p>
 
 <hr />
 
-<h2 id="les-bases-bem-et-suit">Les bases : BEM et SUIT</h2>
+<h2 id="les-bases-nbsp-bem-et-suit">Les bases&nbsp;: BEM et SUIT</h2>
 
 <p>Si ces deux acronymes ne vous évoquent rien, je vous suggère avant toute chose de lire mon <a href="/articles/css-notation-bem/">article</a> sur le premier ainsi que la <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">documentation Github</a> du deuxième.</p>
 
-<p>J’ai pour ma part commencé par utiliser BEM de manière traditionnelle avant d’y incorporer une part de SUIT, ce qui me donnait quelque chose de ce genre :</p>
+<p>J&rsquo;ai pour ma part commencé par utiliser BEM de manière traditionnelle avant d&rsquo;y incorporer une part de SUIT, ce qui me donnait quelque chose de ce genre&nbsp;:</p>
 
 <pre><code class="css">.blockName {}
 .blockName-element {}
 .blockName--modifier {}</code></pre>
 
-<p>Je préfère cette syntaxe par rapport au BEM classique, où l’utilisation des <kbd>_</kbd> ne facilite pas vraiment l’édition du nom des classes.</p>
+<p>Je préfère cette syntaxe par rapport au BEM classique, où l&rsquo;utilisation des <kbd>_</kbd> ne facilite pas vraiment l&rsquo;édition du nom des classes.</p>
 
 <h2 id="pousser-plus-loin-le-concept-des-modifiers">Pousser plus loin le concept des Modifiers</h2>
 
-<p>Le souci avec les <em>Modifiers</em>, c’est qu’ils créent des classes à rallonge, par exemple :</p>
+<p>Le souci avec les <em>Modifiers</em>, c&rsquo;est qu&rsquo;ils créent des classes à rallonge, par exemple&nbsp;:</p>
 
 <pre><code class="html">&lt;button class="button button--small button--green button--caps"&gt;</code></pre>
 
-<p>J’ai récemment vu passer un article d’<a href="http://www.envato.com/">Envato</a> dans lequel était décrit le principe des <em><a href="http://webuild.envato.com/blog/chainable-bem-modifiers/">Chainable Modifiers</a></em>, principe qu’ils ont mis en place pour Envato Market.</p>
+<p>J&rsquo;ai récemment vu passer un article d&rsquo;<a href="http://www.envato.com/">Envato</a> dans lequel était décrit le principe des <em><a href="http://webuild.envato.com/blog/chainable-bem-modifiers/">Chainable Modifiers</a></em>, principe qu&rsquo;ils ont mis en place pour Envato Market.</p>
 
-<p>En se basant sur cette convention, le code ci-dessus se transformerait en :</p>
+<p>En se basant sur cette convention, le code ci-dessus se transformerait en&nbsp;:</p>
 
 <pre><code class="html">&lt;button class="button -small -green -caps"&gt;</code></pre>
 
-<p>C’est quand même plus agréable à lire, non ?</p>
+<p>C&rsquo;est quand même plus agréable à lire, non&nbsp;?</p>
 
-<p>Et si vous utilisez Sass, le mettre en place et en assurer la maintenabilité devient un jeu d’enfant.</p>
+<p>Et si vous utilisez Sass, le mettre en place et en assurer la maintenabilité devient un jeu d&rsquo;enfant.</p>
 
 <pre><code class="scss">.button {
   padding: 2rem;
 
-  &amp;.-small {
+  &.-small {
     font-size: 1rem;
   }
 
-  &amp;.-green {
+  &.-green {
     background-color: green;
   }
 
-  &amp;.-caps {
+  &.-caps {
     text-transform: uppercase;
   }
 }</code></pre>
 
 <h2 id="autres-emprunts-à-suit">Autres emprunts à SUIT</h2>
 
-<p>J’utilise également deux autres conventions provenant de SUIT : les classes utilitaires et les classes d’état.</p>
+<p>J&rsquo;utilise également deux autres conventions provenant de SUIT&nbsp;: les classes utilitaires et les classes d&rsquo;état.</p>
 
 <h3 id="classes-utilitaires">Classes utilitaires</h3>
 
-<p>Ce sont des classes génériques, identifiables par un préfixe <code class="highlighter-rouge">u-</code> :</p>
+<p>Ce sont des classes génériques, identifiables par un préfixe <code>u-</code>&nbsp;:</p>
 
 <pre><code class="css">.u-white {}
 .u-floatLeft {}
 ...</code></pre>
 
-<h3 id="classes-détat">Classes d’état</h3>
+<h3 id="classes-d-état">Classes d&rsquo;état</h3>
 
-<p>Celles-ci permettent d’identifier le changement d’état d’un composant; elles sont préfixées par <code class="highlighter-rouge">is-</code> :</p>
+<p>Celles-ci permettent d&rsquo;identifier le changement d&rsquo;état d&rsquo;un composant; elles sont préfixées par <code>is-</code>&nbsp;:</p>
 
 <pre><code class="html">&lt;button class="button is-disabled"&gt;</code></pre>
 
 <h2 id="sélecteurs-javascript">Sélecteurs JavaScript</h2>
 
-<p>Pour tous les sélecteurs que je vais cibler en JS, j’ajoute une classe (ou une id) préfixée par <code class="highlighter-rouge">js-</code>. Cette classe ne doit jamais apparaître dans mes CSS afin de maintenir une séparation claire des rôles.</p>
+<p>Pour tous les sélecteurs que je vais cibler en JS, j&rsquo;ajoute une classe (ou une id) préfixée par <code>js-</code>. Cette classe ne doit jamais apparaître dans mes CSS afin de maintenir une séparation claire des rôles.</p>
 
-<h2 id="whats-next">What’s next ?</h2>
+<h2 id="what-s-next-nbsp">What&rsquo;s next&nbsp;?</h2>
 
-<p>Même si la mise en place de cette méthodologie m’a procuré un gain énorme en termes de maintenabilité et de lisibilité sur des grosses bases de code CSS, elle n’est pas infaillible, et les risques de non-isolation et de spécificité du code existent toujours.</p>
+<p>Même si la mise en place de cette méthodologie m&rsquo;a procuré un gain énorme en termes de maintenabilité et de lisibilité sur des grosses bases de code CSS, elle n&rsquo;est pas infaillible, et les risques de non-isolation et de spécificité du code existent toujours.</p>
 
-<p>Pour contourner – entre autres – ces problèmes, <a href="http://glenmaddern.com/articles/css-modules">Glenn Maddern</a> a créé un système de <a href="http://glenmaddern.com/articles/css-modules">modules CSS</a>. Grâce à du JS, les styles sont maintenus à leur création dans un <em>scope</em> local qui permet de résoudre les questions de nommage et d’héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d’en rebuter certains.</p>
+<p>Pour contourner &ndash; entre autres &ndash; ces problèmes, <a href="http://glenmaddern.com/articles/css-modules">Glenn Maddern</a> a créé un système de <a href="http://glenmaddern.com/articles/css-modules">modules CSS</a>. Grâce à du JS, les styles sont maintenus à leur création dans un <em>scope</em> local qui permet de résoudre les questions de nommage et d&rsquo;héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d&rsquo;en rebuter certains.</p>
 
-<p>Reste a espérer qu’un standard verra enfin le jour pour corriger ce casse-tête…</p>
+<p>Reste a espérer qu&rsquo;un standard verra enfin le jour pour corriger ce casse-tête&hellip;</p>
 
         </div>
       </article>
-        
-  <footer class="mainFooter">
-  
-    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
-  </footer>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
 
     </div>
   </div>
 
-  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
-  </body>
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
 </html>
 

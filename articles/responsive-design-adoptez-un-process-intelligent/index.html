@@ -3,18 +3,23 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Ronan Levesque &ndash; Responsive design&nbsp;: adoptez un process intelligent !</title>
-  <meta name="description" content="Cet article s'attarde sur les problèmes que certains processes classiques en webdesign peuvent poser en responsive design." />
+  <title>Ronan Levesque &ndash; Responsive design : adoptez un process intelligent !</title>
+  
+  <meta name="description" content="Cet article s&#39;attarde sur les problèmes que certains processes classiques en webdesign peuvent poser en responsive design." />
+  
   <meta name="author" content="Ronan Levesque" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
-  <meta property="og:title" content="Responsive design&nbsp;: adoptez un process intelligent !" />
-  <meta property="og:description" content="Cet article s'attarde sur les problèmes que certains processes classiques en webdesign peuvent poser en responsive design." />
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/responsive-design-adoptez-un-process-intelligent/" />
+  <meta property="og:title" content="Responsive design : adoptez un process intelligent !" />
+  
+  <meta property="og:description" content="Cet article s&#39;attarde sur les problèmes que certains processes classiques en webdesign peuvent poser en responsive design." />
+  
+
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-4cd2471f642278b18e21b6558acff2b9.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles-9e724f46.css" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -43,40 +48,35 @@
   </script>
 </head>
 
-
-<body id="top">
-
+<body>
 
 
   <div class="js-content">
     <div class="wrapper">
-        <header class="mainHeader">
-    <div class="mainHeader-logo">
-      <a href="/">
-        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-      </a>
-    </div>
-    <nav class="mainNav">
-        <ul class="mainNav-list">
-          
-          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
-          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
-          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
-        </ul>
-    </nav>
-  </header>
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      
       <article class="article">
-      
         <header class="article-header">
           <time class="article-date">13 mars 2014</time>
-          <h1 class="article-title">Responsive design&nbsp;: adoptez un process intelligent !</h1>
+          <h1 class="article-title">Responsive design : adoptez un process intelligent !</h1>
         </header>
-        
         <div class="article-content">
-        
-          <p>Ce n’est plus vraiment une nouveauté : le responsive design est la tendance <em>hype</em> du moment. De plus en plus d’acteurs du web ont réalisé qu’il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n’est pas toujours le cas.</p>
+          
+
+<p>Ce n&rsquo;est plus vraiment une nouveauté&nbsp;: le responsive design est la tendance <em>hype</em> du moment. De plus en plus d&rsquo;acteurs du web ont réalisé qu&rsquo;il devenait incontournable dans un contexte où les supports numériques se multiplient de manière phénoménale. Mais pour que sa mise en place soit effective, il faut pouvoir adapter nos processes à ses exigences. Malheureusement ça n&rsquo;est pas toujours le cas.</p>
 
 <hr />
 
@@ -84,61 +84,62 @@
 
 <hr />
 
-<h2 id="responsive-the-wrong-way">Responsive : the wrong way</h2>
+<h2 id="responsive-nbsp-the-wrong-way">Responsive&nbsp;: the wrong way</h2>
 
-<p>Je vais partir d’un modèle que j’ai hélas rencontré fréquemment par le passé, dans le cadre d’une relation agence/client.</p>
+<p>Je vais partir d&rsquo;un modèle que j&rsquo;ai hélas rencontré fréquemment par le passé, dans le cadre d&rsquo;une relation agence/client.</p>
 
 <ol>
-  <li>L’équipe créative propose des maquettes en version <em>desktop</em> au client.</li>
-  <li>Le client fait ses retours, les maquettes sont validées.</li>
-  <li>Les versions “petit écran” sont maquettées.</li>
-  <li>Les maquettes sont transmises pour intégration / développement.</li>
-  <li>Les problèmes commencent.</li>
+<li>L&rsquo;équipe créative propose des maquettes en version <em>desktop</em> au client.</li>
+<li>Le client fait ses retours, les maquettes sont validées.</li>
+<li>Les versions &ldquo;petit écran&rdquo; sont maquettées.</li>
+<li>Les maquettes sont transmises pour intégration / développement.</li>
+<li>Les problèmes commencent.</li>
 </ol>
 
-<p><strong>Qu’est ce qui cloche avec cette façon de faire ?</strong> Le problème saute d’emblée aux yeux, l’équipe technique est intégrée en fin de boucle. Pour comprendre pourquoi cela est un gros souci, il est nécessaire de bien saisir la nuance entre responsive design et adaptive design. Rien de mieux qu’un schéma pour ça :</p>
+<p><strong>Qu&rsquo;est ce qui cloche avec cette façon de faire&nbsp;?</strong> Le problème saute d&rsquo;emblée aux yeux, l&rsquo;équipe technique est intégrée en fin de boucle. Pour comprendre pourquoi cela est un gros souci, il est nécessaire de bien saisir la nuance entre responsive design et adaptive design. Rien de mieux qu&rsquo;un schéma pour ça&nbsp;:</p>
 
 <figure>
-	<img src="/assets/img/responsive-iceberg.jpg" alt="Responsive Iceberg" />
-	<figcaption>Responsive Iceberg, &copy; Brad Frost</figcaption>
+    <img src="/assets/img/responsive-iceberg.jpg" alt="Responsive Iceberg">
+    <figcaption>Responsive Iceberg, &copy; Brad Frost</figcaption>
 </figure>
 
-<p>Le responsive design n’est en réalité qu’une partie de ce qu’on appelle l’adaptive design. Celui-ci ajoute une forte touche de complexité qui ne doit pas être prise à la légère : gestion des performances, des médias (notamment images), primauté du contenu sur le contenant, chargement conditionnel, amélioration progressive etc.</p>
+<p>Le responsive design n&rsquo;est en réalité qu&rsquo;une partie de ce qu&rsquo;on appelle l&rsquo;adaptive design. Celui-ci ajoute une forte touche de complexité qui ne doit pas être prise à la légère&nbsp;: gestion des performances, des médias (notamment images), primauté du contenu sur le contenant, chargement conditionnel, amélioration progressive etc.</p>
 
-<p>Les deux notions sont indissociables si l’on veut pouvoir fournir une bonne expérience aux utilisateurs. L’équipe technique doit donc se trouver au centre des processes, sinon on court droit à la catastrophe. En partant directement d’une version <em>desktop</em>, on occulte les petits écrans et toutes les contraintes qui y sont liées.</p>
+<p>Les deux notions sont indissociables si l&rsquo;on veut pouvoir fournir une bonne expérience aux utilisateurs. L&rsquo;équipe technique doit donc se trouver au centre des processes, sinon on court droit à la catastrophe. En partant directement d&rsquo;une version <em>desktop</em>, on occulte les petits écrans et toutes les contraintes qui y sont liées.</p>
 
-<h2 id="responsive-the-good-way">Responsive : the good way</h2>
+<h2 id="responsive-nbsp-the-good-way">Responsive&nbsp;: the good way</h2>
 
-<p>En prenant en compte ces informations, le schéma de création d’un site devrait être le suivant, ou au moins s’en approcher :</p>
+<p>En prenant en compte ces informations, le schéma de création d&rsquo;un site devrait être le suivant, ou au moins s&rsquo;en approcher&nbsp;:</p>
 
 <ol>
-  <li>Création de wireframes grossiers faisant intervenir l’équipe créa, l’équipe technique et idéalement l’équipe UX; le tout dans une démarche <em>mobile first</em>.</li>
-  <li>Créations de prototypes HTML afin d’identifier les interactions intervenant de manière responsive.</li>
-  <li>Mise en place du design visuel, création de guides de styles.</li>
-  <li>Création des différents blocs réutilisables à travers toutes les pages.</li>
-  <li>Intégration et développement.</li>
+<li>Création de wireframes grossiers faisant intervenir l&rsquo;équipe créa, l&rsquo;équipe technique et idéalement l&rsquo;équipe UX; le tout dans une démarche <em>mobile first</em>.</li>
+<li>Créations de prototypes HTML afin d&rsquo;identifier les interactions intervenant de manière responsive.</li>
+<li>Mise en place du design visuel, création de guides de styles.</li>
+<li>Création des différents blocs réutilisables à travers toutes les pages.</li>
+<li>Intégration et développement.</li>
 </ol>
 
-<p>Cette façon de faire apporte une flexibilité vitale à la réalisation d’un site adaptable au plus large nombre de supports.</p>
+<p>Cette façon de faire apporte une flexibilité vitale à la réalisation d&rsquo;un site adaptable au plus large nombre de supports.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Le responsive design doit être réfléchi en amont pour pouvoir être efficient. Il est impératif que nos processes s’adaptent à cette nouvelle façon de réfléchir, <strong>et non l’inverse</strong>. Dans le cas contraire, on se retrouvera avec des sites plus lourds que nécessaires, difficilement modifiables, fonctionnant grâce à des bidouillages bancals.</p>
+<p>Le responsive design doit être réfléchi en amont pour pouvoir être efficient. Il est impératif que nos processes s&rsquo;adaptent à cette nouvelle façon de réfléchir, <strong>et non l&rsquo;inverse</strong>. Dans le cas contraire, on se retrouvera avec des sites plus lourds que nécessaires, difficilement modifiables, fonctionnant grâce à des bidouillages bancals.</p>
 
-<p>Pour une description complète d’un process responsive, je vous invite à consulter <a href="http://responsiveprocess.com/">responsiveprocess.com</a>.</p>
+<p>Pour une description complète d&rsquo;un process responsive, je vous invite à consulter <a href="http://responsiveprocess.com/">responsiveprocess.com</a>.</p>
 
         </div>
       </article>
-        
-  <footer class="mainFooter">
-  
-    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
-  </footer>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
 
     </div>
   </div>
 
-  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
-  </body>
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
 </html>
 

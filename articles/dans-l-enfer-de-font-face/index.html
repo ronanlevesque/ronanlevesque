@@ -3,18 +3,23 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Ronan Levesque &ndash; Dans l'enfer de @font-face</title>
-  <meta name="description" content="Gérer les fontes n'a vraiment rien de simple, surtout si on supporte IE8..." />
+  <title>Ronan Levesque &ndash; Dans l&#39;enfer de @font-face</title>
+  
+  <meta name="description" content="Gérer les fontes n&#39;a vraiment rien de simple, surtout si on supporte IE8..." />
+  
   <meta name="author" content="Ronan Levesque" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
-  <meta property="og:title" content="Dans l'enfer de @font-face" />
-  <meta property="og:description" content="Gérer les fontes n'a vraiment rien de simple, surtout si on supporte IE8..." />
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/dans-l-enfer-de-font-face/" />
+  <meta property="og:title" content="Dans l&#39;enfer de @font-face" />
+  
+  <meta property="og:description" content="Gérer les fontes n&#39;a vraiment rien de simple, surtout si on supporte IE8..." />
+  
+
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-4cd2471f642278b18e21b6558acff2b9.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles-9e724f46.css" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -43,44 +48,39 @@
   </script>
 </head>
 
-
-<body id="top">
-
+<body>
 
 
   <div class="js-content">
     <div class="wrapper">
-        <header class="mainHeader">
-    <div class="mainHeader-logo">
-      <a href="/">
-        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-      </a>
-    </div>
-    <nav class="mainNav">
-        <ul class="mainNav-list">
-          
-          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
-          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
-          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
-        </ul>
-    </nav>
-  </header>
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      
       <article class="article">
-      
         <header class="article-header">
           <time class="article-date">30 janvier 2014</time>
-          <h1 class="article-title">Dans l'enfer de @font-face</h1>
+          <h1 class="article-title">Dans l&#39;enfer de @font-face</h1>
         </header>
-        
         <div class="article-content">
-        
-          <p>L’utilisation de fontes personnalisées a explosé ces dernières années sur le web grâce à la déclaration CSS <code class="highlighter-rouge">@font-face</code>, dont l’utilisation a été rendue simple par des sites tels que <a href="http://www.fontsquirrel.com/">FontSquirrel</a> et son désormais célèbre webfont generator. Pourtant, la méthode proposée ne me paraît pas idéale.</p>
+          
+
+<p>L&rsquo;utilisation de fontes personnalisées a explosé ces dernières années sur le web grâce à la déclaration CSS <code>@font-face</code>, dont l&rsquo;utilisation a été rendue simple par des sites tels que <a href="http://www.fontsquirrel.com/">FontSquirrel</a> et son désormais célèbre webfont generator. Pourtant, la méthode proposée ne me paraît pas idéale.</p>
 
 <hr />
 
-<p>Si l’on reprend l’exemple de FontSquirrel, le code généré par le kit téléchargé est le suivant :</p>
+<p>Si l&rsquo;on reprend l&rsquo;exemple de FontSquirrel, le code généré par le kit téléchargé est le suivant&nbsp;:</p>
 
 <pre><code class="css">@font-face {
   font-family: 'merriweather';
@@ -93,18 +93,18 @@
   font-style: normal;
 }</code></pre>
 
-<p>Lorsque l’on veut définir différents types de cette police, on spécifie une <code class="highlighter-rouge">@font-face</code> propre à chacun (merriweather-italic, merriweather-bold etc.). Puis dans notre CSS, par exemple :</p>
+<p>Lorsque l&rsquo;on veut définir différents types de cette police, on spécifie une <code>@font-face</code> propre à chacun (merriweather-italic, merriweather-bold etc.). Puis dans notre CSS, par exemple&nbsp;:</p>
 
 <pre><code class="css">strong {
   font-family: merriweather-bold, Serif;
   font-weight: normal;
 }</code></pre>
 
-<p>Le hic avec cette façon de faire, c’est qu’en cas d’impossibilité pour le navigateur d’afficher les fontes personnalisées, la police de <em>fallback</em> s’affichera sans italique ou sans gras.</p>
+<p>Le hic avec cette façon de faire, c&rsquo;est qu&rsquo;en cas d&rsquo;impossibilité pour le navigateur d&rsquo;afficher les fontes personnalisées, la police de <em>fallback</em> s&rsquo;affichera sans italique ou sans gras.</p>
 
-<h2 id="une-autre-solution">Une autre solution ?</h2>
+<h2 id="une-autre-solution-nbsp">Une autre solution&nbsp;?</h2>
 
-<p>En fouillant un peu, j’ai trouvé cette <a href="http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles">solution</a>, bien plus intéressante car elle évitera la suppression ou le passage en <em>faux</em> (c’est-à-dire simulé par le navigateur) des styles italiques et gras :</p>
+<p>En fouillant un peu, j&rsquo;ai trouvé cette <a href="http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles">solution</a>, bien plus intéressante car elle évitera la suppression ou le passage en <em>faux</em> (c&rsquo;est-à-dire simulé par le navigateur) des styles italiques et gras&nbsp;:</p>
 
 <pre><code class="css">@font-face {
   font-family: 'Whatever';
@@ -127,26 +127,27 @@
   font-style: normal;
 }</code></pre>
 
-<p>On utilise un seul nom unique de <code class="highlighter-rouge">font-family</code> pour toutes nos <code class="highlighter-rouge">@font-face</code>, puis on y applique nos <code class="highlighter-rouge">font-weight</code> et <code class="highlighter-rouge">font-style</code> désirés. Problème réglé… Du moins sur la plupart des navigateurs.</p>
+<p>On utilise un seul nom unique de <code>font-family</code> pour toutes nos <code>@font-face</code>, puis on y applique nos <code>font-weight</code> et <code>font-style</code> désirés. Problème réglé&hellip; Du moins sur la plupart des navigateurs.</p>
 
-<h2 id="ie-léternel-vilain-petit-canard">IE, l’éternel vilain petit canard</h2>
+<h2 id="ie-l-éternel-vilain-petit-canard">IE, l&rsquo;éternel vilain petit canard</h2>
 
-<p>Comme d’habitude, là où ça coince, c’est avec Internet Explorer (du moins jusqu’à la version 8). La raison, c’est que ce cher IE ne prend pas en compte <code class="highlighter-rouge">font-style</code> et <code class="highlighter-rouge">font-weight</code> dans la déclaration <code class="highlighter-rouge">@font-face</code> (<a href="http://itsravenous.com/blog/banishing-faux-italic-and-faux-bold--on-css3-fonts-in-IE-8-and-below">source</a>).</p>
+<p>Comme d&rsquo;habitude, là où ça coince, c&rsquo;est avec Internet Explorer (du moins jusqu&rsquo;à la version 8). La raison, c&rsquo;est que ce cher IE ne prend pas en compte <code>font-style</code> et <code>font-weight</code> dans la déclaration <code>@font-face</code> (<a href="http://itsravenous.com/blog/banishing-faux-italic-and-faux-bold--on-css3-fonts-in-IE-8-and-below">source</a>).</p>
 
-<p>Pour contourner le problème, il va falloir avoir recours aux commentaires conditionnels et une feuille de styles séparés pour IE. C’est dans celle-ci qu’on intégrera les polices sur le format proposé par FontSquirrel, avec un nom de <code class="highlighter-rouge">font-family</code> par type de police. <em>Problem solved</em> !</p>
+<p>Pour contourner le problème, il va falloir avoir recours aux commentaires conditionnels et une feuille de styles séparés pour IE. C&rsquo;est dans celle-ci qu&rsquo;on intégrera les polices sur le format proposé par FontSquirrel, avec un nom de <code>font-family</code> par type de police. <em>Problem solved</em> !</p>
 
         </div>
       </article>
-        
-  <footer class="mainFooter">
-  
-    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
-  </footer>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
 
     </div>
   </div>
 
-  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
-  </body>
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
 </html>
 

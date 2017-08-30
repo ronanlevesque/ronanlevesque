@@ -4,17 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ronan Levesque &ndash; I hate U flat !</title>
-  <meta name="description" content="Présentation de la librairie de boutons CSS&nbsp;: I hate U flat !" />
+  
+  <meta name="description" content="Présentation de la librairie de boutons CSS&amp;nbsp;: I hate U flat !" />
+  
   <meta name="author" content="Ronan Levesque" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="I hate U flat !" />
-  <meta property="og:description" content="Présentation de la librairie de boutons CSS&nbsp;: I hate U flat !" />
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/i-hate-u-flat/" />
+  
+  <meta property="og:description" content="Présentation de la librairie de boutons CSS&amp;nbsp;: I hate U flat !" />
+  
+
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-4cd2471f642278b18e21b6558acff2b9.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles-9e724f46.css" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -43,69 +48,63 @@
   </script>
 </head>
 
-
-<body id="top">
-
+<body>
 
 
   <div class="js-content">
     <div class="wrapper">
-        <header class="mainHeader">
-    <div class="mainHeader-logo">
-      <a href="/">
-        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-      </a>
-    </div>
-    <nav class="mainNav">
-        <ul class="mainNav-list">
-          
-          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
-          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
-          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
-        </ul>
-    </nav>
-  </header>
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      
       <article class="article">
-      
         <header class="article-header">
           <time class="article-date">12 juillet 2013</time>
           <h1 class="article-title">I hate U flat !</h1>
         </header>
-        
         <div class="article-content">
-        
-          <p>I hate U flat ! est un petit projet - 7ko compressé - se présentant sous la forme d’une librairie de boutons en CSS, que j’ai créé récemment à force d’entendre parler de <a href="http://www.creads.org/blog/actualite-pub-marketing/le-flat-design-la-nouvelle-tendance/">flat design</a> à peu près partout sur le web depuis de longs mois.</p>
+          <p>I hate U flat ! est un petit projet - 7ko compressé - se présentant sous la forme d&rsquo;une librairie de boutons en CSS, que j&rsquo;ai créé récemment à force d&rsquo;entendre parler de <a href="http://www.creads.org/blog/actualite-pub-marketing/le-flat-design-la-nouvelle-tendance/">flat design</a> à peu près partout sur le web depuis de longs mois.</p>
 
 <hr />
 
-<p>Personnellement, je n’ai rien contre cette tendance, mon site suivant d’ailleurs un peu la mode du flat, mais je trouve dommage de se priver totalement des effets d’ombres et de dégradés alors qu’on a enfin de quoi obtenir de jolis effets depuis l’arrivée de CSS3. D’ailleurs c’est une idée que j’ai déjà vue passer sur Twitter :</p>
+<p>Personnellement, je n&rsquo;ai rien contre cette tendance, mon site suivant d&rsquo;ailleurs un peu la mode du flat, mais je trouve dommage de se priver totalement des effets d&rsquo;ombres et de dégradés alors qu&rsquo;on a enfin de quoi obtenir de jolis effets depuis l&rsquo;arrivée de CSS3. D&rsquo;ailleurs c&rsquo;est une idée que j&rsquo;ai déjà vue passer sur Twitter&nbsp;:</p>
 
 <blockquote>
-  <p>I feel bad for the W3C. For years we begged for gradients, so they gave us gradients. So what do we do? FLATTEN ALL THE THINGS.<br />— Nick Pettit (@nickrp) <a href="https://twitter.com/nickrp/statuses/345354597491167233">June 14, 2013</a></p>
+<p>I feel bad for the W3C. For years we begged for gradients, so they gave us gradients. So what do we do? FLATTEN ALL THE THINGS.<br>&mdash; Nick Pettit (@nickrp) <a href="https://twitter.com/nickrp/statuses/345354597491167233">June 14, 2013</a></p>
 </blockquote>
 
-<p>Je trouve notamment que de cette manière les boutons &amp; autres <em>call to action</em> perdent un peu de leur interactivité et de leur impact. Je précise que ce n’est qu’un ressenti et que je n’ai aucun chiffre pour étayer cette théorie, si ce n’est l’anecdote suivante : je suis tombé il y a quelques semaines sur un site (dont j’ai perdu l’adresse) mettant côte à côte un bouton flat et un bouton en relief, et qui demandait à l’internaute de cliquer sur l’un des deux. De mémoire le bouton en relief était largement plus cliqué. Ensuite, l’étude est sans doute biaisée dès le départ : il serait sans doute plus pertinent de faire de l’A/B testing sur une page dont tous les boutons sont flat vs une page avec boutons en relief.</p>
+<p>Je trouve notamment que de cette manière les boutons &amp; autres <em>call to action</em> perdent un peu de leur interactivité et de leur impact. Je précise que ce n&rsquo;est qu&rsquo;un ressenti et que je n&rsquo;ai aucun chiffre pour étayer cette théorie, si ce n&rsquo;est l&rsquo;anecdote suivante&nbsp;: je suis tombé il y a quelques semaines sur un site (dont j&rsquo;ai perdu l&rsquo;adresse) mettant côte à côte un bouton flat et un bouton en relief, et qui demandait à l&rsquo;internaute de cliquer sur l&rsquo;un des deux. De mémoire le bouton en relief était largement plus cliqué. Ensuite, l&rsquo;étude est sans doute biaisée dès le départ&nbsp;: il serait sans doute plus pertinent de faire de l&rsquo;A/B testing sur une page dont tous les boutons sont flat vs une page avec boutons en relief.</p>
 
 <hr />
 
-<p>Toujours est-il que j’ai trouvé amusant d’aller un peu à contre-courant des tendances actuelles et de redonner à nouveau du relief aux boutons. La liste complète de ceux que j’ai créé est disponible sur le <a href="http://ronanlevesque.fr/ihateuflat/">site</a> ou sur <a href="https://github.com/eskiiss/IhateUflat">Github</a>.</p>
+<p>Toujours est-il que j&rsquo;ai trouvé amusant d&rsquo;aller un peu à contre-courant des tendances actuelles et de redonner à nouveau du relief aux boutons. La liste complète de ceux que j&rsquo;ai créé est disponible sur le <a href="http://ronanlevesque.fr/ihateuflat/">site</a> ou sur <a href="https://github.com/eskiiss/IhateUflat">Github</a>.</p>
 
 <p class="link"><a href="/projets/ihateuflat/">Voir le projet</a></p>
 
         </div>
       </article>
-        
-  <footer class="mainFooter">
-  
-    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
-  </footer>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
 
     </div>
   </div>
 
-  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
-  </body>
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
 </html>
 

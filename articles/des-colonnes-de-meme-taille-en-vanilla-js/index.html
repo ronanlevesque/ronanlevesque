@@ -4,17 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ronan Levesque &ndash; Des colonnes de même taille en Vanilla JS</title>
+  
   <meta name="description" content="Cet article décrit comment facilement mettre en place un système de colonnes de hauteur égale en Vanilla JS, tout en prenant en compte le responsive design." />
+  
   <meta name="author" content="Ronan Levesque" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Des colonnes de même taille en Vanilla JS" />
+  
   <meta property="og:description" content="Cet article décrit comment facilement mettre en place un système de colonnes de hauteur égale en Vanilla JS, tout en prenant en compte le responsive design." />
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/" />
+  
+
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-4cd2471f642278b18e21b6558acff2b9.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles-9e724f46.css" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -43,56 +48,49 @@
   </script>
 </head>
 
-
-<body id="top">
-
+<body>
 
 
   <div class="js-content">
     <div class="wrapper">
-        <header class="mainHeader">
-    <div class="mainHeader-logo">
-      <a href="/">
-        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-      </a>
-    </div>
-    <nav class="mainNav">
-        <ul class="mainNav-list">
-          
-          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
-          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
-          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
-        </ul>
-    </nav>
-  </header>
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      
       <article class="article">
-      
         <header class="article-header">
-          <time class="article-date">04 février 2014</time>
+          <time class="article-date">4 février 2014</time>
           <h1 class="article-title">Des colonnes de même taille en Vanilla JS</h1>
         </header>
-        
         <div class="article-content">
-        
-          <p>CSS3 a apporté son lot de nouveautés, parmi lesquelles <code class="highlighter-rouge">flexbox</code>, un modèle qui propose de <a href="http://philipwalton.github.io/solved-by-flexbox/">nombreuses solutions</a> de mise en page dont celle qui nous intéresse aujourd’hui : la création de colonnes de hauteur égale. Malheureusement l’utilisation de <code class="highlighter-rouge">flexbox</code> en production est encore <a href="http://caniuse.com/flexbox">mitigée</a>. Du coup, la meilleure alternative reste pour l’instant le recours au JavaScript.</p>
+          <p>CSS3 a apporté son lot de nouveautés, parmi lesquelles <code>flexbox</code>, un modèle qui propose de <a href="http://philipwalton.github.io/solved-by-flexbox/">nombreuses solutions</a> de mise en page dont celle qui nous intéresse aujourd&rsquo;hui&nbsp;: la création de colonnes de hauteur égale. Malheureusement l&rsquo;utilisation de <code>flexbox</code> en production est encore <a href="http://caniuse.com/flexbox">mitigée</a>. Du coup, la meilleure alternative reste pour l&rsquo;instant le recours au JavaScript.</p>
 
 <hr />
 
-<p>Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la même hauteur. L’idée que j’avais en tête était de basculer cette façon de faire en Vanilla JS et pousser le concept un peu plus loin en mixant ma mise en page à du responsive design. Pour résumer le principe : En dessous d’une certaine résolution, les blocs sont positionnés les uns en dessous des autres. Au-dessus, ils sont alignés côte-à-côte et prennent la même hauteur. Je vais disséquer ici le code créé pour l’occasion.</p>
+<p>Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la même hauteur. L&rsquo;idée que j&rsquo;avais en tête était de basculer cette façon de faire en Vanilla JS et pousser le concept un peu plus loin en mixant ma mise en page à du responsive design. Pour résumer le principe&nbsp;: En dessous d&rsquo;une certaine résolution, les blocs sont positionnés les uns en dessous des autres. Au-dessus, ils sont alignés côte-à-côte et prennent la même hauteur. Je vais disséquer ici le code créé pour l&rsquo;occasion.</p>
 
-<p>On commence par sélectionner toutes nos div possédant la classe <code class="highlighter-rouge">.column</code> :</p>
+<p>On commence par sélectionner toutes nos div possédant la classe <code>.column</code>&nbsp;:</p>
 
 <pre><code class="js">var column = document.querySelectorAll('.column');</code></pre>
 
-<p>Puis on crée la fonction qui va récupérer la taille maximum de <code class="highlighter-rouge">.column</code> et on applique cette taille à toutes les autres (on boucle à travers toutes nos <code class="highlighter-rouge">.column</code> grâce à <code class="highlighter-rouge">for</code>) :</p>
+<p>Puis on crée la fonction qui va récupérer la taille maximum de <code>.column</code> et on applique cette taille à toutes les autres (on boucle à travers toutes nos <code>.column</code> grâce à <code>for</code>)&nbsp;:</p>
 
 <pre><code class="js">function sameHeight(el) {
   var maxHeight = 0;
     for (var i = 0; i &lt; el.length; i++) {
       thisHeight = el[i].clientHeight;
-      if(thisHeight &gt; maxHeight) {
+      if(thisHeight > maxHeight) {
         maxHeight = thisHeight;
       }
     }
@@ -102,14 +100,14 @@
 }
 </code></pre>
 
-<p>La fonction n’est appelée qu’au dessus d’une certaine résolution :</p>
+<p>La fonction n&rsquo;est appelée qu&rsquo;au dessus d&rsquo;une certaine résolution&nbsp;:</p>
 
 <pre><code class="js">if (window.matchMedia("(min-width: 30em)").matches) {
   sameHeight(column);
 }
 </code></pre>
 
-<p>Histoire de garder tout ça propre, on applique une fonction au resize de la fenêtre, tout en continuant de prendre en compte nos media queries :</p>
+<p>Histoire de garder tout ça propre, on applique une fonction au resize de la fenêtre, tout en continuant de prendre en compte nos media queries&nbsp;:</p>
 
 <pre><code class="js">window.addEventListener('resize', function () {
   if (window.matchMedia("(min-width: 30em)").matches) {
@@ -126,7 +124,7 @@
 }, false);
 </code></pre>
 
-<p>Et pour finir, dans notre CSS on définit nos <code class="highlighter-rouge">.column</code> de la manière suivante :</p>
+<p>Et pour finir, dans notre CSS on définit nos <code>.column</code> de la manière suivante&nbsp;:</p>
 
 <pre><code class="css">.column {
   border: 1px solid red;
@@ -134,9 +132,9 @@
 
 @media screen and (min-width: 30em) {
   .column {
-	display: inline-block;
-	width: 32%;
-	vertical-align: top;
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
   }
 }
 </code></pre>
@@ -149,16 +147,17 @@
 
         </div>
       </article>
-        
-  <footer class="mainFooter">
-  
-    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
-  </footer>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
 
     </div>
   </div>
 
-  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
-  </body>
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
 </html>
 

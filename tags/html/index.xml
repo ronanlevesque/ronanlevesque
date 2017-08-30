@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html on Ronan Levesque - Front-end &amp; Webdesign</title>
+    <link>http://ronanlevesque.fr/tags/html/</link>
+    <description>Recent content in Html on Ronan Levesque - Front-end &amp; Webdesign</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 25 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ronanlevesque.fr/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Une gestion responsable des webfonts</title>
+      <link>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</guid>
+      <description>Jusqu&amp;rsquo;à très récemment, j&amp;rsquo;avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l&amp;rsquo;apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j&amp;rsquo;ai mise en place dernièrement, et dont je suis pleinement satisfait.
+Quelques précisions La notion de FOIT ne parlant pas à tout le monde, commençons par une petite explication&amp;nbsp;: tant que votre navigateur n&amp;rsquo;a pas téléchargé les webfonts de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d&amp;rsquo;afficher les polices que vous avez définies par défaut.</description>
+    </item>
+    
+    <item>
+      <title>A propos du responsive design</title>
+      <link>http://ronanlevesque.fr/articles/a-propos-du-responsive-design/</link>
+      <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/a-propos-du-responsive-design/</guid>
+      <description>Ce site a été construit sur le principe du responsive design. Cela signifie en fait qu&amp;rsquo;il est construit de manière à s&amp;rsquo;adapter automatiquement à la résolution des différents écrans. A partir du moment où vous êtes équipés d&amp;rsquo;un navigateur moderne (c&amp;rsquo;est à dire à peu près tous les navigateurs à part Internet Explorer 8 et versions inférieures), il s&amp;rsquo;ajustera de lui-même à votre écran.
+Pour tester cela il vous suffit simplement de redimensionner la fenêtre de votre navigateur pour voir si les éléments se repositionnent automatiquement d&amp;rsquo;eux-même afin de respecter la largeur de la fenêtre.</description>
+    </item>
+    
+    <item>
+      <title>Mise en page et positionnement</title>
+      <link>http://ronanlevesque.fr/articles/mise-en-page-et-positionnement/</link>
+      <pubDate>Thu, 12 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/mise-en-page-et-positionnement/</guid>
+      <description>Il existe plusieurs manières de positionner différents éléments au sein d&amp;rsquo;une page. Certaines, telles que l&amp;rsquo;utilisation des tableaux sont décriées, à tort ou à raison selon les points de vue, d&amp;rsquo;autres sont fortement plébiscitées et très souvent utilisées. Le but de cet article et de faire un point sur les différentes méthodes mises à notre disposition, et de finir par un cas pratique centré autour de la position: absolute.</description>
+    </item>
+    
+    <item>
+      <title>Créer un menu avec dropdown en CSS3</title>
+      <link>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</link>
+      <pubDate>Mon, 02 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</guid>
+      <description>Les menus avec dropdown sont de nos jours fortement utilisés sur les sites possédant beaucoup de contenu. Ils s&amp;rsquo;appuient en général sur du JavaScript pour fonctionner. Pourtant il existe un moyen simple de créer des dropdown uniquement en CSS3 (malgré une très légère exception en fin d&amp;rsquo;article). Dans cet article nous allons voir comment mettre ce type de dropdown en place.
+Voir la démo
+Voici le tutoriel détaillé pour arriver à ce résultat.</description>
+    </item>
+    
+  </channel>
+</rss>

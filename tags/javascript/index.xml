@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Ronan Levesque - Front-end &amp; Webdesign</title>
+    <link>http://ronanlevesque.fr/tags/javascript/</link>
+    <description>Recent content in Javascript on Ronan Levesque - Front-end &amp; Webdesign</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 25 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ronanlevesque.fr/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Une gestion responsable des webfonts</title>
+      <link>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</guid>
+      <description>Jusqu&amp;rsquo;à très récemment, j&amp;rsquo;avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l&amp;rsquo;apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j&amp;rsquo;ai mise en place dernièrement, et dont je suis pleinement satisfait.
+Quelques précisions La notion de FOIT ne parlant pas à tout le monde, commençons par une petite explication&amp;nbsp;: tant que votre navigateur n&amp;rsquo;a pas téléchargé les webfonts de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d&amp;rsquo;afficher les polices que vous avez définies par défaut.</description>
+    </item>
+    
+    <item>
+      <title>Les principales nouveautés de ES6</title>
+      <link>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/les-principales-nouveautes-de-es6/</guid>
+      <description>JavaScript s&amp;rsquo;apprête à vivre une petite révolution avec l&amp;rsquo;arrivée d&amp;rsquo;ES6, la prochaine version du standard ECMAScript. Et pour cause&amp;nbsp;: c&amp;rsquo;est une grosse mise à jour du langage (la dernière datant de 2009 avec ES5). ES6 est à ce jour en cours d&amp;rsquo;implémentation dans les différents moteurs JS.
+Si vous êtes comme moi du genre impatient, il existe de nombreux transpilers qui permettent à l&amp;rsquo;heure actuelle d&amp;rsquo;écrire de l&amp;rsquo;ES6 qui sera compilé en ES5&amp;hellip; Une très bonne raison, à mes yeux, de tester cette nouvelle syntaxe dès aujourd&amp;rsquo;hui.</description>
+    </item>
+    
+    <item>
+      <title>Ma configuration Gulp</title>
+      <link>http://ronanlevesque.fr/articles/ma-configuration-gulp/</link>
+      <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/ma-configuration-gulp/</guid>
+      <description>Quand Grunt a commencé à faire parler de lui, j&amp;rsquo;ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l&amp;rsquo;outil idéal pour l&amp;rsquo;automatisation de mes tâches front-end; j&amp;rsquo;ai d&amp;rsquo;ailleurs très vite créé ma boilerplate suite à ça. Mais la donne a un peu changé avec l&amp;rsquo;arrivée d&amp;rsquo;un petit nouveau&amp;nbsp;: Gulp.
+Mise à jour (14/03/2014)&amp;nbsp;: j&#39;ai créé une boilerplate pour Gulp, avec une configuration bien plus poussée que celle décrite ci-dessous.</description>
+    </item>
+    
+    <item>
+      <title>Des colonnes de même taille en Vanilla JS</title>
+      <link>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/</link>
+      <pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/</guid>
+      <description>CSS3 a apporté son lot de nouveautés, parmi lesquelles flexbox, un modèle qui propose de nombreuses solutions de mise en page dont celle qui nous intéresse aujourd&amp;rsquo;hui&amp;nbsp;: la création de colonnes de hauteur égale. Malheureusement l&amp;rsquo;utilisation de flexbox en production est encore mitigée. Du coup, la meilleure alternative reste pour l&amp;rsquo;instant le recours au JavaScript.
+Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la même hauteur. L&amp;rsquo;idée que j&amp;rsquo;avais en tête était de basculer cette façon de faire en Vanilla JS et pousser le concept un peu plus loin en mixant ma mise en page à du responsive design.</description>
+    </item>
+    
+    <item>
+      <title>Premiers pas avec AngularJS</title>
+      <link>http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/</link>
+      <pubDate>Tue, 26 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/premiers-pas-avec-angularjs/</guid>
+      <description>J&amp;rsquo;ai commencé à m&amp;rsquo;intéresser il y a peu à AngularJS, un framework JavaScript &amp;ldquo;client-side&amp;rdquo; orienté MVC/MVVM dont j&amp;rsquo;entends beaucoup parler en ce moment. Angular est parfait pour créer des SPA (single pages apps), voire même des sites complets. J&amp;rsquo;ai voulu tester son potentiel en créant pour l&amp;rsquo;occasion une app de A à Z.
+Attention, cet article n&amp;rsquo;est pas un tutoriel. Je cherche simplement à décrire ici l&amp;rsquo;app que j&amp;rsquo;ai créée, sa mise en place ainsi que les obstacles que j&amp;rsquo;ai rencontrés.</description>
+    </item>
+    
+    <item>
+      <title>Automatiser son workflow avec Grunt</title>
+      <link>http://ronanlevesque.fr/articles/automatiser-son-workflow-avec-grunt/</link>
+      <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/automatiser-son-workflow-avec-grunt/</guid>
+      <description>Grunt est un task runner dont le but est d&amp;rsquo;automatiser certaines tâches répétitives (compilation, minification etc). Il est écrit en JavaScript et fonctionne avec Node.js. Dans cet article j&amp;rsquo;expliquerai comment le configurer et le lancer de manière basique.
+Un outil extrêmement puissant Le gros avantage de Grunt est donc son automatisation. En quelques secondes et une ligne de commande, il sera capable de conduire un très large nombre de tâches&amp;nbsp;:</description>
+    </item>
+    
+    <item>
+      <title>return false VS e.preventDefault</title>
+      <link>http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault/</link>
+      <pubDate>Mon, 13 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/return-false-vs-e-preventdefault/</guid>
+      <description>J&amp;rsquo;ai été confronté récemment à un problème plutôt pénible en écrivant une fonction jQuery pour un projet en cours, problème lié à l&amp;rsquo;utilisation de return false. Pour rappel celui-ci permet d&amp;rsquo;empêcher le comportement par défaut de l&amp;rsquo;objet appelé par une fonction, par exemple il évitera un retour en haut de page si on utilise un &amp;lt;a href=&amp;ldquo;#&amp;rdquo;&amp;gt;. Le hic, c&amp;rsquo;est qu&amp;rsquo;il bloquera du coup la propagation à l&amp;rsquo;utilisation d&amp;rsquo;événements clicks additionnels.</description>
+    </item>
+    
+  </channel>
+</rss>

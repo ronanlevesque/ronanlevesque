@@ -3,18 +3,23 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Ronan Levesque &ndash; Les atouts de box-sizing&nbsp;: border-box</title>
-  <meta name="description" content="Présentation d'une propriété CSS maintenant devenue incontournable" />
+  <title>Ronan Levesque &ndash; Les atouts de box-sizing: border-box</title>
+  
+  <meta name="description" content="Présentation d&#39;une propriété CSS maintenant devenue incontournable" />
+  
   <meta name="author" content="Ronan Levesque" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
-  <meta property="og:title" content="Les atouts de box-sizing&nbsp;: border-box" />
-  <meta property="og:description" content="Présentation d'une propriété CSS maintenant devenue incontournable" />
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/les-atouts-de-box-sizing-border-box/" />
+  <meta property="og:title" content="Les atouts de box-sizing: border-box" />
+  
+  <meta property="og:description" content="Présentation d&#39;une propriété CSS maintenant devenue incontournable" />
+  
+
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-4cd2471f642278b18e21b6558acff2b9.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles-9e724f46.css" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -43,79 +48,73 @@
   </script>
 </head>
 
-
-<body id="top">
-
+<body>
 
 
   <div class="js-content">
     <div class="wrapper">
-        <header class="mainHeader">
-    <div class="mainHeader-logo">
-      <a href="/">
-        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-      </a>
-    </div>
-    <nav class="mainNav">
-        <ul class="mainNav-list">
-          
-          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
-          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
-          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
-        </ul>
-    </nav>
-  </header>
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      
       <article class="article">
-      
         <header class="article-header">
           <time class="article-date">15 août 2012</time>
-          <h1 class="article-title">Les atouts de box-sizing&nbsp;: border-box</h1>
+          <h1 class="article-title">Les atouts de box-sizing: border-box</h1>
         </header>
-        
         <div class="article-content">
-        
-          <p>Par défaut, la largeur totale d’une boîte sera égale à la largeur qui lui a été attribuée + son padding (<code class="highlighter-rouge">box-sizing: content-box</code>). Par exemple, si l’on veut avoir une boîte d’une largeur de 100px, avec un padding de 10px, il faudra spécifier dans le css une <code>width:80px</code> pour celle-ci (80px + 10 px + 10px). Pas vraiment pratique, surtout lorsqu’on veut utiliser des boîtes de taille fluide avec des paddings fixes…</p>
+          <p>Par défaut, la largeur totale d&rsquo;une boîte sera égale à la largeur qui lui a été attribuée + son padding (<code>box-sizing: content-box</code>). Par exemple, si l&rsquo;on veut avoir une boîte d&rsquo;une largeur de 100px, avec un padding de 10px, il faudra spécifier dans le css une <code>width:80px</code> pour celle-ci (80px + 10 px + 10px). Pas vraiment pratique, surtout lorsqu&rsquo;on veut utiliser des boîtes de taille fluide avec des paddings fixes&hellip;</p>
 
 <hr />
 
-<p>Heureusement, La valeur <code>border-box</code> de la propriété CSS <code>box-sizing</code>, apparemment peu connue et peu utilisée jusqu’à assez récemment, présente des atouts considérables dans la gestion des <code>width</code> et <code>padding</code>. Le <a href="https://developer.mozilla.org/fr/docs/CSS/-moz-box-sizing">journal des développeurs</a> de Mozilla en donne la définition suivante :</p>
+<p>Heureusement, La valeur <code>border-box</code> de la propriété CSS <code>box-sizing</code>, apparemment peu connue et peu utilisée jusqu&rsquo;à assez récemment, présente des atouts considérables dans la gestion des <code>width</code> et <code>padding</code>. Le <a href="https://developer.mozilla.org/fr/docs/CSS/-moz-box-sizing">journal des développeurs</a> de Mozilla en donne la définition suivante&nbsp;:</p>
 
 <blockquote>
-  <p>Les propriétés de largeur et de hauteur incluent la taille du padding et la bordure, en excluant la marge. C’est le modèle de boîte utilisé par Internet Explorer lorsque le document n’est pas en mode de compatibilité des standards.</p>
+<p>Les propriétés de largeur et de hauteur incluent la taille du padding et la bordure, en excluant la marge. C&rsquo;est le modèle de boîte utilisé par Internet Explorer lorsque le document n&rsquo;est pas en mode de compatibilité des standards.</p>
 </blockquote>
 
-<p>Ainsi, si l’on reprend le premier exemple, une boîte à qui on a attribué cette propriété fera toujours une largeur de 100px, quelque soit le padding et la bordure qu’on lui attribue. Même chose pour une boîte de largeur fluide, par exemple de 100% : si on lui attribue un padding de 5px, elle ne débordera pas de sa taille d’origine.</p>
+<p>Ainsi, si l&rsquo;on reprend le premier exemple, une boîte à qui on a attribué cette propriété fera toujours une largeur de 100px, quelque soit le padding et la bordure qu&rsquo;on lui attribue. Même chose pour une boîte de largeur fluide, par exemple de 100%&nbsp;: si on lui attribue un padding de 5px, elle ne débordera pas de sa taille d&rsquo;origine.</p>
 
-<p>Je me suis mis à récemment utiliser <code>box-sizing: border-box</code> pour un projet sur lequel je travaille. C’est peu dire qu’elle a complètement changé mon mode de fonctionnement, et je vous invite aussi à tester ça au plus vite.</p>
+<p>Je me suis mis à récemment utiliser <code>box-sizing: border-box</code> pour un projet sur lequel je travaille. C&rsquo;est peu dire qu&rsquo;elle a complètement changé mon mode de fonctionnement, et je vous invite aussi à tester ça au plus vite.</p>
 
 <h2>Utilisation</h2>
 
-<p><a href="http://paulirish.com">Paul Irish</a>, dans son <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">article <sup>EN</sup></a> vantant les mérites de <code>box-sizing: border-box</code>, préconise d’utiliser le CSS suivant :</p>
+<p><a href="http://paulirish.com">Paul Irish</a>, dans son <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">article&nbsp;<sup>EN</sup></a> vantant les mérites de <code>box-sizing: border-box</code>, préconise d&rsquo;utiliser le CSS suivant&nbsp;:</p>
 
 <pre><code class="css">* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }</code></pre>
 
-<p>De cette manière, tous les éléments seront concernés par ce changement, et vous n’aurez plus besoin de vous casser la tête pour calculer leurs tailles.</p>
+<p>De cette manière, tous les éléments seront concernés par ce changement, et vous n&rsquo;aurez plus besoin de vous casser la tête pour calculer leurs tailles.</p>
 
 <h2>Support par les navigateurs</h2>
 
-<p>Les navigateurs récents, IE8 compris, supportent ce mode de fonctionnement. Pour IE 6/7, on pourra avoir recours au <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> pour contourner le problème. Je l’ai personnellement testé avec succès sur IE7.</p>
+<p>Les navigateurs récents, IE8 compris, supportent ce mode de fonctionnement. Pour IE <sup>6</sup>&frasl;<sub>7</sub>, on pourra avoir recours au <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> pour contourner le problème. Je l&rsquo;ai personnellement testé avec succès sur IE7.</p>
 
-<p>Pour résumer, à mes yeux cette méthode est à utiliser sans aucun risque. Elle présente énormément d’atouts, et aucun bug à ma connaissance (il existait un bug avec jQuery mais celui-ci <a href="http://bugs.jquery.com/ticket/11004">semble avoir été corrigé <sup>EN</sup></a> depuis). Je ne peux donc que vous recommander de passer à <code>box-sizing: border-box</code> pour vos futurs projets :)</p>
+<p>Pour résumer, à mes yeux cette méthode est à utiliser sans aucun risque. Elle présente énormément d&rsquo;atouts, et aucun bug à ma connaissance (il existait un bug avec jQuery mais celui-ci <a href="http://bugs.jquery.com/ticket/11004">semble avoir été corrigé&nbsp;<sup>EN</sup></a> depuis). Je ne peux donc que vous recommander de passer à <code>box-sizing: border-box</code> pour vos futurs projets&nbsp;:)</p>
 
         </div>
       </article>
-        
-  <footer class="mainFooter">
-  
-    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
-  </footer>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
 
     </div>
   </div>
 
-  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
-  </body>
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
 </html>
 

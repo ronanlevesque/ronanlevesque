@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutoriels on Ronan Levesque - Front-end &amp; Webdesign</title>
+    <link>http://ronanlevesque.fr/tags/tutoriels/</link>
+    <description>Recent content in Tutoriels on Ronan Levesque - Front-end &amp; Webdesign</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 25 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ronanlevesque.fr/tags/tutoriels/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Une gestion responsable des webfonts</title>
+      <link>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</link>
+      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/</guid>
+      <description>Jusqu&amp;rsquo;à très récemment, j&amp;rsquo;avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l&amp;rsquo;apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j&amp;rsquo;ai mise en place dernièrement, et dont je suis pleinement satisfait.
+Quelques précisions La notion de FOIT ne parlant pas à tout le monde, commençons par une petite explication&amp;nbsp;: tant que votre navigateur n&amp;rsquo;a pas téléchargé les webfonts de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d&amp;rsquo;afficher les polices que vous avez définies par défaut.</description>
+    </item>
+    
+    <item>
+      <title>Animer ses SVG avec Snap.svg</title>
+      <link>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/</link>
+      <pubDate>Mon, 21 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/animer-ses-svg-avec-snap-svg/</guid>
+      <description>Ces derniers temps, j&amp;rsquo;ai un peu expérimenté l&amp;rsquo;animation de SVG. Mon premier essai a été cet oiseau, dont les différents éléments sont animés avec des keyframes. Mais ça reste limité en termes de possibilités&amp;nbsp;: si je veux pouvoir modifier le tracé même de mon SVG de manière fluide, la meilleure solution que j&amp;rsquo;ai trouvée est Snap.svg. Je vais vous expliquer le processus en détails.
+Attention, pour bien saisir ce tutoriel il est préférable d&#39;être à l&#39;aise sur le mode de fonctionnement des SVG.</description>
+    </item>
+    
+    <item>
+      <title>Ma configuration Gulp</title>
+      <link>http://ronanlevesque.fr/articles/ma-configuration-gulp/</link>
+      <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/ma-configuration-gulp/</guid>
+      <description>Quand Grunt a commencé à faire parler de lui, j&amp;rsquo;ai été vite enthousiasmé par ses possibilités et sa puissance. Il représentait l&amp;rsquo;outil idéal pour l&amp;rsquo;automatisation de mes tâches front-end; j&amp;rsquo;ai d&amp;rsquo;ailleurs très vite créé ma boilerplate suite à ça. Mais la donne a un peu changé avec l&amp;rsquo;arrivée d&amp;rsquo;un petit nouveau&amp;nbsp;: Gulp.
+Mise à jour (14/03/2014)&amp;nbsp;: j&#39;ai créé une boilerplate pour Gulp, avec une configuration bien plus poussée que celle décrite ci-dessous.</description>
+    </item>
+    
+    <item>
+      <title>Des colonnes de même taille en Vanilla JS</title>
+      <link>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/</link>
+      <pubDate>Tue, 04 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/des-colonnes-de-meme-taille-en-vanilla-js/</guid>
+      <description>CSS3 a apporté son lot de nouveautés, parmi lesquelles flexbox, un modèle qui propose de nombreuses solutions de mise en page dont celle qui nous intéresse aujourd&amp;rsquo;hui&amp;nbsp;: la création de colonnes de hauteur égale. Malheureusement l&amp;rsquo;utilisation de flexbox en production est encore mitigée. Du coup, la meilleure alternative reste pour l&amp;rsquo;instant le recours au JavaScript.
+Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la même hauteur. L&amp;rsquo;idée que j&amp;rsquo;avais en tête était de basculer cette façon de faire en Vanilla JS et pousser le concept un peu plus loin en mixant ma mise en page à du responsive design.</description>
+    </item>
+    
+    <item>
+      <title>Les anciens navigateurs</title>
+      <link>http://ronanlevesque.fr/articles/les-anciens-navigateurs/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/les-anciens-navigateurs/</guid>
+      <description>La vie serait beaucoup plus simple si on n&amp;rsquo;avait plus à assurer le support des antiquités que sont IE6, 7 et 8. Malheureusement au quotidien ça n&amp;rsquo;est pas toujours possible; on se retrouve souvent contraints de réaliser le grand écart entre moderne et vieux. Si l&amp;rsquo;on souhaite se tourner vers une conception moderne en responsive design, comment s&amp;rsquo;assurer du meilleur support possible&amp;nbsp;?
+Cet article s&#39;attardera uniquement sur la gestion des media queries en responsive design; je ne parlerai pas ici d&#39;autres propriétés CSS3 non supportés par certains de ces navigateurs, par exemple flexbox, border-box etc.</description>
+    </item>
+    
+    <item>
+      <title>Automatiser son workflow avec Grunt</title>
+      <link>http://ronanlevesque.fr/articles/automatiser-son-workflow-avec-grunt/</link>
+      <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/automatiser-son-workflow-avec-grunt/</guid>
+      <description>Grunt est un task runner dont le but est d&amp;rsquo;automatiser certaines tâches répétitives (compilation, minification etc). Il est écrit en JavaScript et fonctionne avec Node.js. Dans cet article j&amp;rsquo;expliquerai comment le configurer et le lancer de manière basique.
+Un outil extrêmement puissant Le gros avantage de Grunt est donc son automatisation. En quelques secondes et une ligne de commande, il sera capable de conduire un très large nombre de tâches&amp;nbsp;:</description>
+    </item>
+    
+    <item>
+      <title>Animations en CSS : un cas pratique</title>
+      <link>http://ronanlevesque.fr/articles/animations-en-css-un-cas-pratique/</link>
+      <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/animations-en-css-un-cas-pratique/</guid>
+      <description>J&amp;rsquo;avais posté il y a quelques temps un bref tutoriel sur les animations en CSS. Depuis je n&amp;rsquo;avais pas vraiment creusé la question, mais en refaisant le site récemment j&amp;rsquo;ai décidé d&amp;rsquo;ajouter un peu de vie dans la bannière, en faisant bouger quelques-uns des éléments du paysage (nuage, fumée de l&amp;rsquo;usine, drapeau et montgolfière). L&amp;rsquo;idée ici est de montrer comment ça fonctionne, concrètement.
+Attention, comme pour le tuto précédent, dans les exemples qui suivent je n&amp;rsquo;ai rien préfixé pour plus de simplicité.</description>
+    </item>
+    
+    <item>
+      <title>Les animations en CSS</title>
+      <link>http://ronanlevesque.fr/articles/les-animations-en-css/</link>
+      <pubDate>Fri, 21 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/les-animations-en-css/</guid>
+      <description>Pendant longtemps, les animations d&amp;rsquo;un site ont été faites en flash ou via des gifs animés, mais tout cela est en passe d&amp;rsquo;être remplacé grâce à deux nouveaux modules introduits par CSS3, animation et transition. Dans cet article je me concentrerai sur le premier pour vous montrer comment, grâce à une syntaxe claire est simple, il est dorénavant facile de mettre un peu de mouvement sur vos pages&amp;hellip;
+Le principe La déclaration de l&amp;rsquo;animation dans le CSS se fait en 2 étapes&amp;nbsp;:</description>
+    </item>
+    
+    <item>
+      <title>Créer un menu avec dropdown en CSS3</title>
+      <link>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</link>
+      <pubDate>Mon, 02 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/</guid>
+      <description>Les menus avec dropdown sont de nos jours fortement utilisés sur les sites possédant beaucoup de contenu. Ils s&amp;rsquo;appuient en général sur du JavaScript pour fonctionner. Pourtant il existe un moyen simple de créer des dropdown uniquement en CSS3 (malgré une très légère exception en fin d&amp;rsquo;article). Dans cet article nous allons voir comment mettre ce type de dropdown en place.
+Voir la démo
+Voici le tutoriel détaillé pour arriver à ce résultat.</description>
+    </item>
+    
+  </channel>
+</rss>

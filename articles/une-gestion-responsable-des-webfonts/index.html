@@ -4,17 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ronan Levesque &ndash; Une gestion responsable des webfonts</title>
-  <meta name="description" content="Une solution mise en place pour éviter l'apparition d'un FOIT avec les webfonts" />
+  
+  <meta name="description" content="Une solution mise en place pour éviter l&#39;apparition d&#39;un FOIT avec les webfonts" />
+  
   <meta name="author" content="Ronan Levesque" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Une gestion responsable des webfonts" />
-  <meta property="og:description" content="Une solution mise en place pour éviter l'apparition d'un FOIT avec les webfonts" />
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/une-gestion-responsable-des-webfonts/" />
+  
+  <meta property="og:description" content="Une solution mise en place pour éviter l&#39;apparition d&#39;un FOIT avec les webfonts" />
+  
+
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-4cd2471f642278b18e21b6558acff2b9.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles-9e724f46.css" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -43,61 +48,56 @@
   </script>
 </head>
 
-
-<body id="top">
-
+<body>
 
 
   <div class="js-content">
     <div class="wrapper">
-        <header class="mainHeader">
-    <div class="mainHeader-logo">
-      <a href="/">
-        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-      </a>
-    </div>
-    <nav class="mainNav">
-        <ul class="mainNav-list">
-          
-          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
-          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
-          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
-        </ul>
-    </nav>
-  </header>
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      
       <article class="article">
-      
         <header class="article-header">
           <time class="article-date">25 juin 2015</time>
           <h1 class="article-title">Une gestion responsable des webfonts</h1>
         </header>
-        
         <div class="article-content">
-        
-          <p>Jusqu’à très récemment, j’avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l’apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j’ai mise en place dernièrement, et dont je suis pleinement satisfait.</p>
+          
+
+<p>Jusqu&rsquo;à très récemment, j&rsquo;avais tendance à gérer mes webfonts de manière basique en les appelant directement dans mon CSS, que ce soit via CDN (Google webfonts) ou en hébergement personnel. Mais cette manière de faire est propice à l&rsquo;apparition du FOIT, qui peut être très pénalisant selon les navigateurs. Voici une solution que j&rsquo;ai mise en place dernièrement, et dont je suis pleinement satisfait.</p>
 
 <hr />
 
 <h2 id="quelques-précisions">Quelques précisions</h2>
 
-<p>La notion de <em>FOIT</em> ne parlant pas à tout le monde, commençons par une petite explication : tant que votre navigateur n’a pas téléchargé les <em>webfonts</em> de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d’afficher les polices que vous avez définies par défaut. C’est ce qu’on appelle le <em>FOIT</em>, pour <em>Flash Of Invisible Text</em>.</p>
+<p>La notion de <em>FOIT</em> ne parlant pas à tout le monde, commençons par une petite explication&nbsp;: tant que votre navigateur n&rsquo;a pas téléchargé les <em>webfonts</em> de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d&rsquo;afficher les polices que vous avez définies par défaut. C&rsquo;est ce qu&rsquo;on appelle le <em>FOIT</em>, pour <em>Flash Of Invisible Text</em>.</p>
 
-<p>Le problème, c’est que ce temps varie selon les navigateurs; et s’il reste raisonnable sur Chrome ou Firefox (de l’ordre de 3 secondes), il peut aller jusqu’à 30 secondes pour Safari iOS par exemple.</p>
+<p>Le problème, c&rsquo;est que ce temps varie selon les navigateurs; et s&rsquo;il reste raisonnable sur Chrome ou Firefox (de l&rsquo;ordre de 3 secondes), il peut aller jusqu&rsquo;à 30 secondes pour Safari iOS par exemple.</p>
 
 <figure>
-  <img src="/assets/img/webfonts-invision.jpg" alt="Exemple de site avec FOIT" />
+  <img src="/assets/img/webfonts-invision.jpg" alt="Exemple de site avec FOIT">
   <figcaption>Exemple de FOIT&nbsp;: sur ce site, il m'a fallu une dizaine de secondes pour pouvoir accéder au contenu - malgré ma connexion en WiFi.</figcaption>
 </figure>
 
-<p>Si l’on considère en outre qu’un site doit en moyenne se charger en 1 seconde avec une connexion rapide, ne pas pouvoir accéder au contenu du site avant 3 secondes n’est de toute façon pas l’idéal.</p>
+<p>Si l&rsquo;on considère en outre qu&rsquo;un site doit en moyenne se charger en 1 seconde avec une connexion rapide, ne pas pouvoir accéder au contenu du site avant 3 secondes n&rsquo;est de toute façon pas l&rsquo;idéal.</p>
 
 <h2 id="la-solution-au-problème">La solution au problème</h2>
 
 <p><a href="http://crocodillon.com/blog/non-blocking-web-fonts-using-localstorage">Plusieurs</a> <a href="http://jaicab.com/localFont/">techniques</a> ont émergé récemment, mais celle qui a retenu mon attention est celle mise en place par <a href="https://www.filamentgroup.com/lab/font-events.html">filament group</a>.</p>
 
-<p>L’idée est d’utiliser par défaut les polices <em>websafe</em> (cf. <a href="http://www.cssfontstack.com/">CSS Font Stack</a>) et de prévoir une classe contenant les <em>webfonts</em>, par exemple :</p>
+<p>L&rsquo;idée est d&rsquo;utiliser par défaut les polices <em>websafe</em> (cf. <a href="http://www.cssfontstack.com/">CSS Font Stack</a>) et de prévoir une classe contenant les <em>webfonts</em>, par exemple&nbsp;:</p>
 
 <pre><code class="css">body {
   font-family: Sans-serif;
@@ -107,28 +107,28 @@
   font-family: 'Open Sans', Sans-serif;
 }</code></pre>
 
-<p>On utilise ensuite le loader JS <a href="https://github.com/bramstein/fontfaceobserver">Font Face Observer</a> créé par <a href="https://twitter.com/bram_stein">Bram Stein</a> pour détecter le moment où toutes les <em>webfonts</em> seront loadées, et une fois que c’est fait on ajoute notre classe <code class="highlighter-rouge">font-loaded</code> :</p>
+<p>On utilise ensuite le loader JS <a href="https://github.com/bramstein/fontfaceobserver">Font Face Observer</a> créé par <a href="https://twitter.com/bram_stein">Bram Stein</a> pour détecter le moment où toutes les <em>webfonts</em> seront loadées, et une fois que c&rsquo;est fait on ajoute notre classe <code>font-loaded</code>&nbsp;:</p>
 
 <pre><code class="js">(function(w) {
-  if (w.document.documentElement.className.indexOf('fonts-loaded') &gt; -1) {
-  	return;
+  if (w.document.documentElement.className.indexOf('fonts-loaded') > -1) {
+    return;
   }
   var fontA = new w.FontFaceObserver('Open Sans', {
-  	weight: 300
+    weight: 300
   });
   var fontB = new w.FontFaceObserver('Open Sans', {
-  	weight: 300,
-  	style: 'italic'
+    weight: 300,
+    style: 'italic'
   });
   w.Promise
   .all([fontA.check(), fontB.check()])
   .then(function() {
-  	w.document.documentElement.className += ' fonts-loaded';
+    w.document.documentElement.className += ' fonts-loaded';
     localStorage.setItem('fontsLoaded', true);
   });
 }(this));</code></pre>
 
-<p>L’approche de filament group privilégie l’utilisation de cookies, mais quant à moi j’ai préféré me rabattre sur <em>localStorage</em>. On crée avec celui-ci un item <code class="highlighter-rouge">fontsLoaded</code> grâce auquel on pourra ajouter dans notre <code class="highlighter-rouge">&lt;head&gt;</code> la classe <code class="highlighter-rouge">fonts-loaded</code> à notre html, comme ceci :</p>
+<p>L&rsquo;approche de filament group privilégie l&rsquo;utilisation de cookies, mais quant à moi j&rsquo;ai préféré me rabattre sur <em>localStorage</em>. On crée avec celui-ci un item <code>fontsLoaded</code> grâce auquel on pourra ajouter dans notre <code>&lt;head&gt;</code> la classe <code>fonts-loaded</code> à notre html, comme ceci&nbsp;:</p>
 
 <pre><code class="html">&lt;script&gt;
   if (localStorage.getItem('fontsLoaded')) {
@@ -140,20 +140,21 @@
 
 <h2 id="une-future-alternative">Une future alternative</h2>
 
-<p>L’approche décrite ici me paraît pour l’instant la plus efficace, en attendant une meilleure solution… Celle-ci pourrait bien venir de la proposition <em>CSS font-rendering</em> dont le but est de contrôler directement via CSS le comportement d’affichage de nos <em>webfonts</em>. Je vous invite à consulter son <a href="https://github.com/KenjiBaheux/css-font-rendering">repo Github</a> pour de plus amples informations.</p>
+<p>L&rsquo;approche décrite ici me paraît pour l&rsquo;instant la plus efficace, en attendant une meilleure solution&hellip; Celle-ci pourrait bien venir de la proposition <em>CSS font-rendering</em> dont le but est de contrôler directement via CSS le comportement d&rsquo;affichage de nos <em>webfonts</em>. Je vous invite à consulter son <a href="https://github.com/KenjiBaheux/css-font-rendering">repo Github</a> pour de plus amples informations.</p>
 
         </div>
       </article>
-        
-  <footer class="mainFooter">
-  
-    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
-  </footer>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
 
     </div>
   </div>
 
-  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
-  </body>
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
 </html>
 

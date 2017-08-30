@@ -4,17 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ronan Levesque &ndash; Le scrolling, ce mal absolu.</title>
+  
   <meta name="description" content="Décryptage du mythe du scrolling et de la ligne de flottaison" />
+  
   <meta name="author" content="Ronan Levesque" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Le scrolling, ce mal absolu." />
+  
   <meta property="og:description" content="Décryptage du mythe du scrolling et de la ligne de flottaison" />
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/le-scrolling-ce-mal-absolu/" />
+  
+
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-4cd2471f642278b18e21b6558acff2b9.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles-9e724f46.css" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -43,80 +48,73 @@
   </script>
 </head>
 
-
-<body id="top">
-
+<body>
 
 
   <div class="js-content">
     <div class="wrapper">
-        <header class="mainHeader">
-    <div class="mainHeader-logo">
-      <a href="/">
-        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-      </a>
-    </div>
-    <nav class="mainNav">
-        <ul class="mainNav-list">
-          
-          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
-          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
-          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
-        </ul>
-    </nav>
-  </header>
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      
       <article class="article">
-      
         <header class="article-header">
-          <time class="article-date">09 décembre 2012</time>
+          <time class="article-date">9 décembre 2012</time>
           <h1 class="article-title">Le scrolling, ce mal absolu.</h1>
         </header>
-        
         <div class="article-content">
-        
-          <p>Voilà une croyance qui semble ancrée dure comme fer dans l’esprit de beaucoup de gens avec qui j’ai eu l’occasion de discuter récemment, que ce soit dans le cadre de mon travail ou autre : le scrolling, c’est le mal ! D’après ce que j’ai pu entendre, il faudrait donc éviter à tout prix les ascenseurs verticaux, ils compliquent la tâche du lecteur et risqueraient de le faire quitter votre site plus tôt qu’escompté. Je suis pour ma part assez farouchement opposé à cette vision…</p>
+          <p>Voilà une croyance qui semble ancrée dure comme fer dans l&rsquo;esprit de beaucoup de gens avec qui j&rsquo;ai eu l&rsquo;occasion de discuter récemment, que ce soit dans le cadre de mon travail ou autre&nbsp;: le scrolling, c&rsquo;est le mal ! D&rsquo;après ce que j&rsquo;ai pu entendre, il faudrait donc éviter à tout prix les ascenseurs verticaux, ils compliquent la tâche du lecteur et risqueraient de le faire quitter votre site plus tôt qu&rsquo;escompté. Je suis pour ma part assez farouchement opposé à cette vision&hellip;</p>
 
 <hr />
 
-<p>C’est pourtant un argument qui revient régulièrement dans la construction de pages : “Ne pas faire de page trop haute, l’internaute ne scrollera pas”. Tiens donc ? Il resterait bloqué en haut de sa page, à l’affût de l’info dont il a besoin, et faute de ne pouvoir la trouver, quitterait cette page sans autre forme de procès ? Voilà une vision qui me semble un peu désuette. Alors, oui, cela était effectivement vrai par le passé, lorsque nos souris n’étaient pas équipées de molettes. Il était alors plus compliqué de naviguer sur un site de manière verticale, car il fallait alors déplacer sa souris sur l’ascenseur pour se rendre à la partie de la page que l’on souhaitait atteindre. Mais les choses ont évolué : la très grande majorité des souris sont maintenant pourvues par défaut d’une molette; quant aux smartphones, un simple mouvement du doigt suffit pour scroller.</p>
+<p>C&rsquo;est pourtant un argument qui revient régulièrement dans la construction de pages&nbsp;: &ldquo;Ne pas faire de page trop haute, l&rsquo;internaute ne scrollera pas&rdquo;. Tiens donc&nbsp;? Il resterait bloqué en haut de sa page, à l&rsquo;affût de l&rsquo;info dont il a besoin, et faute de ne pouvoir la trouver, quitterait cette page sans autre forme de procès&nbsp;? Voilà une vision qui me semble un peu désuette. Alors, oui, cela était effectivement vrai par le passé, lorsque nos souris n&rsquo;étaient pas équipées de molettes. Il était alors plus compliqué de naviguer sur un site de manière verticale, car il fallait alors déplacer sa souris sur l&rsquo;ascenseur pour se rendre à la partie de la page que l&rsquo;on souhaitait atteindre. Mais les choses ont évolué&nbsp;: la très grande majorité des souris sont maintenant pourvues par défaut d&rsquo;une molette; quant aux smartphones, un simple mouvement du doigt suffit pour scroller.</p>
 
-<p>En fait, la véritable réponse à tout ça est un peu plus subtile : dans cet article sur les <a href="http://blog.academy-ecommerce.com/ergonomie-web-les-mythes-et-legendes-ont-la-vie-dure">mythes et légendes de l’ergonomie web</a>, l’idée soulevée et que l’internaute n’aura aucun souci à scroller, <strong>si il est conscient qu’il existe du contenu en dessous de la “ligne de flottaison”</strong>.</p>
+<p>En fait, la véritable réponse à tout ça est un peu plus subtile&nbsp;: dans cet article sur les <a href="http://blog.academy-ecommerce.com/ergonomie-web-les-mythes-et-legendes-ont-la-vie-dure">mythes et légendes de l&rsquo;ergonomie web</a>, l&rsquo;idée soulevée et que l&rsquo;internaute n&rsquo;aura aucun souci à scroller, <strong>si il est conscient qu&rsquo;il existe du contenu en dessous de la &ldquo;ligne de flottaison&rdquo;</strong>.</p>
 
-<p>Grosso modo, il faut donc s’assurer que notre contenu s’écoule harmonieusement et suggère que tout ce qui n’est pas directement visible à l’écran reste tout de même accessible en scrollant.</p>
+<p>Grosso modo, il faut donc s&rsquo;assurer que notre contenu s&rsquo;écoule harmonieusement et suggère que tout ce qui n&rsquo;est pas directement visible à l&rsquo;écran reste tout de même accessible en scrollant.</p>
 
-<p>Là où, en revanche, mon point de vue diffère de l’article ci-dessus, c’est sur cette fameuse “ligne de flottaison” dont on entend sans cesse parler : selon cette théorie, tous les éléments importants doivent être directement visibles par l’internaute. Je pense, comme beaucoup d’autres, que cette vision est-elle aussi en train de devenir peu à peu désuette, notamment en raison de la multiplication des supports (tablettes, smartphones, consoles…) et de l’avènement du responsive design. En fait, comme le résume parfaitement <a href="http://bradfrostweb.com/">Brad Fost</a>, <em><a href="http://www.thereisnopagefold.com/">there is no fold</a></em> (Il n’y a plus de ligne de flottaison). Ou, pour être exact, cette fameuse ligne changera d’un support à un autre. Finie, cette vision poussiéreuse d’un site ancré dans sa largeur de 960px, avec une résolution d’écran de 1280x720 :</p>
+<p>Là où, en revanche, mon point de vue diffère de l&rsquo;article ci-dessus, c&rsquo;est sur cette fameuse &ldquo;ligne de flottaison&rdquo; dont on entend sans cesse parler&nbsp;: selon cette théorie, tous les éléments importants doivent être directement visibles par l&rsquo;internaute. Je pense, comme beaucoup d&rsquo;autres, que cette vision est-elle aussi en train de devenir peu à peu désuette, notamment en raison de la multiplication des supports (tablettes, smartphones, consoles&hellip;) et de l&rsquo;avènement du responsive design. En fait, comme le résume parfaitement <a href="http://bradfrostweb.com/">Brad Fost</a>, <em><a href="http://www.thereisnopagefold.com/">there is no fold</a></em> (Il n&rsquo;y a plus de ligne de flottaison). Ou, pour être exact, cette fameuse ligne changera d&rsquo;un support à un autre. Finie, cette vision poussiéreuse d&rsquo;un site ancré dans sa largeur de 960px, avec une résolution d&rsquo;écran de 1280x720&nbsp;:</p>
 
 <blockquote>
-  <p>Bienvenue dans le World Wide Web, un médium interactif dans lequel les statistiques de résolution d’écran sont insignifiantes, les <em>viewports </em> de nos navigateurs sont variables, et où le fait de scroller est devenu un standard.</p>
+<p>Bienvenue dans le World Wide Web, un médium interactif dans lequel les statistiques de résolution d&rsquo;écran sont insignifiantes, les <em>viewports </em> de nos navigateurs sont variables, et où le fait de scroller est devenu un standard.</p>
 </blockquote>
 
-<p>Je n’aurais pas mieux dit :) Prenons un exemple concret, basé sur un template responsive.</p>
+<p>Je n&rsquo;aurais pas mieux dit&nbsp;:) Prenons un exemple concret, basé sur un template responsive.</p>
 
 <p><img alt="tablet vs pc" src="/assets/img/pc-vs-tablet.png" style="border:none" /></p>
 
-<p>Sur l’écran de gauche (ordinateur), la ligne de flottaison se situera en-dessous des deux premiers paragraphes. Sur l’écran de droite (tablette), elle se situera en-dessous du premier paragraphe. Alors attention : je ne dis surtout pas qu’il ne sert à rien de mettre les informations en haut de page, au contraire. Mais je pense que vouloir les faire apparaître au-dessus du <em>fold </em>a de moins en moins de sens aujourd’hui.</p>
+<p>Sur l&rsquo;écran de gauche (ordinateur), la ligne de flottaison se situera en-dessous des deux premiers paragraphes. Sur l&rsquo;écran de droite (tablette), elle se situera en-dessous du premier paragraphe. Alors attention&nbsp;: je ne dis surtout pas qu&rsquo;il ne sert à rien de mettre les informations en haut de page, au contraire. Mais je pense que vouloir les faire apparaître au-dessus du <em>fold </em>a de moins en moins de sens aujourd&rsquo;hui.</p>
 
-<p>Pour résumer tout ça : en gros, non, le scrolling n’est pas un crime, au contraire… il est maintenant totalement rentré dans nos mœurs. Quant à la notion de ligne de flottaison, elle ne signifie plus grand chose aujourd’hui, ou du moins est-elle amenée à évoluer pour s’adapter à l’évolution de nos technos. Si vous pensez comme moi, n’hésitez surtout pas à diffuser la bonne parole ! :)</p>
+<p>Pour résumer tout ça&nbsp;: en gros, non, le scrolling n&rsquo;est pas un crime, au contraire&hellip; il est maintenant totalement rentré dans nos mœurs. Quant à la notion de ligne de flottaison, elle ne signifie plus grand chose aujourd&rsquo;hui, ou du moins est-elle amenée à évoluer pour s&rsquo;adapter à l&rsquo;évolution de nos technos. Si vous pensez comme moi, n&rsquo;hésitez surtout pas à diffuser la bonne parole !&nbsp;:)</p>
 
 <hr />
 
-<p class="info">Mise à jour (08/02/2013)&nbsp;: pour plus de détails et d'études appuyant mes dires je vous invite à consulter cet article de <a href="http://uxmyths.com/post/654047943/myth-people-dont-scroll">UXmyths.com&nbsp;<sup>EN</sup></a>.
-</p>
+<p><p class="info">Mise à jour (08/02/2013)&nbsp;: pour plus de détails et d&rsquo;études appuyant mes dires je vous invite à consulter cet article de <a href="http://uxmyths.com/post/654047943/myth-people-dont-scroll">UXmyths.com&nbsp;<sup>EN</sup></a>.</p>
 
         </div>
       </article>
-        
-  <footer class="mainFooter">
-  
-    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
-  </footer>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
 
     </div>
   </div>
 
-  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
-  </body>
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
 </html>
 

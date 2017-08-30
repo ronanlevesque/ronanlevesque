@@ -4,17 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ronan Levesque &ndash; Créer un menu avec dropdown en CSS3</title>
-  <meta name="description" content="Tutoriel de création d'un menu complexe en dropdown, avec CSS3" />
+  
+  <meta name="description" content="Tutoriel de création d&#39;un menu complexe en dropdown, avec CSS3" />
+  
   <meta name="author" content="Ronan Levesque" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ronan Levesque" />
   <meta property="og:title" content="Créer un menu avec dropdown en CSS3" />
-  <meta property="og:description" content="Tutoriel de création d'un menu complexe en dropdown, avec CSS3" />
-  <meta property="og:url" content="http://ronanlevesque.fr/articles/creer-un-menu-avec-dropdown-en-css3/" />
+  
+  <meta property="og:description" content="Tutoriel de création d&#39;un menu complexe en dropdown, avec CSS3" />
+  
+
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link href="/assets/css/styles-4cd2471f642278b18e21b6558acff2b9.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles-9e724f46.css" />
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
   <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
@@ -43,40 +48,35 @@
   </script>
 </head>
 
-
-<body id="top">
-
+<body>
 
 
   <div class="js-content">
     <div class="wrapper">
-        <header class="mainHeader">
-    <div class="mainHeader-logo">
-      <a href="/">
-        <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
-      </a>
-    </div>
-    <nav class="mainNav">
-        <ul class="mainNav-list">
-          
-          <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
-          <li class="mainNav-item"><a href="/articles/" class="mainNav-link selected">Articles</a></li>
-          <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
-        </ul>
-    </nav>
-  </header>
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      
       <article class="article">
-      
         <header class="article-header">
-          <time class="article-date">02 juillet 2012</time>
+          <time class="article-date">2 juillet 2012</time>
           <h1 class="article-title">Créer un menu avec dropdown en CSS3</h1>
         </header>
-        
         <div class="article-content">
-        
-          <p>Les menus avec dropdown sont de nos jours fortement utilisés sur les sites possédant beaucoup de contenu. Ils s’appuient en général sur du JavaScript pour fonctionner. Pourtant il existe un moyen simple de créer des dropdown uniquement en CSS3 (malgré une très légère exception en fin d’article). Dans cet article nous allons voir comment mettre ce type de dropdown en place.</p>
+          
+
+<p>Les menus avec dropdown sont de nos jours fortement utilisés sur les sites possédant beaucoup de contenu. Ils s&rsquo;appuient en général sur du JavaScript pour fonctionner. Pourtant il existe un moyen simple de créer des dropdown uniquement en CSS3 (malgré une très légère exception en fin d&rsquo;article). Dans cet article nous allons voir comment mettre ce type de dropdown en place.</p>
 
 <hr />
 
@@ -88,7 +88,7 @@
 
 <h2 id="la-structure-html">La structure HTML</h2>
 
-<p>Le but est de commencer par une structure HTML claire et simple sous forme de liste :</p>
+<p>Le but est de commencer par une structure HTML claire et simple sous forme de liste&nbsp;:</p>
 
 <pre><code class="html">&lt;ul id="menu"&gt;
   &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
@@ -107,15 +107,15 @@
 &lt;/ul&gt;
 </code></pre>
 
-<p>Pour l’instant, aucun style n’a été appliqué, mais l’important est ici que le code respecte la <a href="http://en.wikipedia.org/wiki/Semantic_HTML">sémantique HTML <sup>EN</sup></a>.</p>
+<p>Pour l&rsquo;instant, aucun style n&rsquo;a été appliqué, mais l&rsquo;important est ici que le code respecte la <a href="http://en.wikipedia.org/wiki/Semantic_HTML">sémantique HTML&nbsp;<sup>EN</sup></a>.</p>
 
 <p><img src="/assets/img/menu-dropdown-css-2.jpg" alt="Menu dropdown CSS 2" class="imgb" /></p>
 
-<p>Dans cet exemple, une seule sous-catégorie a été créée, mais rien ne vous empêche d’en créer plus en respectant la sémantique initiale.</p>
+<p>Dans cet exemple, une seule sous-catégorie a été créée, mais rien ne vous empêche d&rsquo;en créer plus en respectant la sémantique initiale.</p>
 
 <h2 id="le-css">Le CSS</h2>
 
-<p>Il va ensuite falloir appliquer vos styles CSS à cette liste, histoire de rendre tout ça un peu plus sexy, attention restez bien concentrés…</p>
+<p>Il va ensuite falloir appliquer vos styles CSS à cette liste, histoire de rendre tout ça un peu plus sexy, attention restez bien concentrés&hellip;</p>
 
 <pre><code class="css">#menu {
   width: 100%;
@@ -151,7 +151,7 @@
   text-shadow: 0 1px 0 #000;
 }
 
-#menu li:hover &gt; a {
+#menu li:hover > a {
   color: #fafafa;
 }
 
@@ -159,7 +159,7 @@
   color: #fafafa;
 }
 
-#menu li:hover &gt; ul {
+#menu li:hover > ul {
   display: block;
 }
 
@@ -237,12 +237,12 @@
   background: linear-gradient(#04acec,  #0186ba);
 }
 
-#menu ul li:first-child &gt; a {
+#menu ul li:first-child > a {
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
 
-#menu ul li:first-child &gt; a:after {
+#menu ul li:first-child > a:after {
   content: '';
   position: absolute;
   left: 30px;
@@ -274,7 +274,7 @@
   border-bottom-color: transparent;
 }
 
-#menu ul li:last-child &gt; a {
+#menu ul li:last-child > a {
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
 }
@@ -292,11 +292,11 @@
 *:first-child+html #menu { zoom: 1; } /* IE7 */
 </code></pre>
 
-<p>En regardant la démo de près, vous avez sans doute pu remarquer une flèche située juste en dessous ou à côté du menu principal ou des menus secondaires, afin d’améliorer la lisibilité du menu :</p>
+<p>En regardant la démo de près, vous avez sans doute pu remarquer une flèche située juste en dessous ou à côté du menu principal ou des menus secondaires, afin d&rsquo;améliorer la lisibilité du menu&nbsp;:</p>
 
-<p><img class="imgb" src="/assets/img/menu-dropdown-css-3.jpg" alt="Menu dropdown CSS 3" /></p>
+<p><img class="imgb" src="/assets/img/menu-dropdown-css-3.jpg" alt="Menu dropdown CSS 3" class="imgb" /></p>
 
-<p>Cette flèche est simplement créée en utilisant le pseudo-élément <code>after</code>. Voici un zoom sur le code en question :</p>
+<p>Cette flèche est simplement créée en utilisant le pseudo-élément <code>after</code>. Voici un zoom sur le code en question&nbsp;:</p>
 
 <pre><code class="css">#menu ul ul li:first-child a:after {
   left: -8px;
@@ -310,11 +310,11 @@
 }
 </code></pre>
 
-<p>Cela marchera sur la plupart des navigateurs récents, et jusqu’à IE8 compris.</p>
+<p>Cela marchera sur la plupart des navigateurs récents, et jusqu&rsquo;à IE8 compris.</p>
 
 <h2 id="fallback-pour-ie6">Fallback pour IE6</h2>
 
-<p>Bien évidemment, IE6 va poser (comme souvent) un problème si on en reste là. En effet, les sous-menus s’affichent quand on survole les éléments <code>li</code> du menu. Or IE6 ne supporte pas le survol d’éléments sans ancre. Pour s’assurer que ce menu fonctionne correctement sous ce dernier, il va donc falloir utiliser un peu de JavaScript, couplé à la librairie <a href="http://jquery.com/">jQuery</a> :</p>
+<p>Bien évidemment, IE6 va poser (comme souvent) un problème si on en reste là. En effet, les sous-menus s&rsquo;affichent quand on survole les éléments <code>li</code> du menu. Or IE6 ne supporte pas le survol d&rsquo;éléments sans ancre. Pour s&rsquo;assurer que ce menu fonctionne correctement sous ce dernier, il va donc falloir utiliser un peu de JavaScript, couplé à la librairie <a href="http://jquery.com/">jQuery</a>&nbsp;:</p>
 
 <pre><code class="html">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;
@@ -331,7 +331,7 @@
 &lt;/script&gt;
 </code></pre>
 
-<p>Vous pouvez choisir de sauter cette étape, en effet IE6 est en passe de disparaître complètement de notre paysage (vivement qu’IE7 suive la même voie…).</p>
+<p>Vous pouvez choisir de sauter cette étape, en effet IE6 est en passe de disparaître complètement de notre paysage (vivement qu&rsquo;IE7 suive la même voie&hellip;).</p>
 
 <hr />
 
@@ -339,16 +339,17 @@
 
         </div>
       </article>
-        
-  <footer class="mainFooter">
-  
-    <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
-  </footer>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
 
     </div>
   </div>
 
-  <script src="/assets/js/bundle-813ef0093ffb9aea8484e28d6257b967.js"></script>
-  </body>
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
 </html>
 
