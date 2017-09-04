@@ -5,7 +5,7 @@
     <link>http://ronanlevesque.fr/</link>
     <description>Recent content on Ronan Levesque - Front-end &amp; Webdesign</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://ronanlevesque.fr/index.xml" rel="self" type="application/rss+xml" />
     
@@ -38,6 +38,16 @@ Voir le projet
       <guid>http://ronanlevesque.fr/a-propos/</guid>
       <description>Posé, à Prague.   Je suis un développeur front-end passionné par tout ce qui touche au web. Mes compétences vont du design de site à sa mise en place et intègrent différents composants&amp;nbsp;: développement web multi-supports (responsive design, application web ou mobiles), optimisation du référencement naturel, gestion de CMS (WordPress, Locomotive...), recommandations stratégiques, marketing et ergonomiques.
  Mon parcours professionnel est atypique&amp;nbsp;: avant de basculer du côté technique, j&#39;ai eu plusieurs expériences dans le domaine du marketing, chez lastminute.</description>
+    </item>
+    
+    <item>
+      <title>De Jekyll à Hugo</title>
+      <link>http://ronanlevesque.fr/articles/de-jekyll-a-hugo/</link>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/de-jekyll-a-hugo/</guid>
+      <description>Mon site est sous Jekyll depuis un bon moment, mais j&amp;rsquo;ai remarqué qu&amp;rsquo;il devenait de plus en plus lent pour compiler tout le contenu que j&amp;rsquo;ai créé au fil du temps. J&amp;rsquo;ai donc décidé de le migrer sous Hugo, dont j&amp;rsquo;ai eu de bons échos en termes de performances. J&amp;rsquo;en profite également pour faire un tuto de migration pour les personnes intéressées.
+Cet article part du principe que vous êtes à l&#39;aise avec certains mécanismes également utilisés par Jekyll (Markdown, YAML, partials, etc.</description>
     </item>
     
     <item>

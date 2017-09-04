@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jekyll on Ronan Levesque - Front-end &amp; Webdesign</title>
+    <link>http://ronanlevesque.fr/tags/jekyll/</link>
+    <description>Recent content in Jekyll on Ronan Levesque - Front-end &amp; Webdesign</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 02 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://ronanlevesque.fr/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>De Jekyll à Hugo</title>
+      <link>http://ronanlevesque.fr/articles/de-jekyll-a-hugo/</link>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/de-jekyll-a-hugo/</guid>
+      <description>Mon site est sous Jekyll depuis un bon moment, mais j&amp;rsquo;ai remarqué qu&amp;rsquo;il devenait de plus en plus lent pour compiler tout le contenu que j&amp;rsquo;ai créé au fil du temps. J&amp;rsquo;ai donc décidé de le migrer sous Hugo, dont j&amp;rsquo;ai eu de bons échos en termes de performances. J&amp;rsquo;en profite également pour faire un tuto de migration pour les personnes intéressées.
+Cet article part du principe que vous êtes à l&#39;aise avec certains mécanismes également utilisés par Jekyll (Markdown, YAML, partials, etc.</description>
+    </item>
+    
+    <item>
+      <title>Mettre ses assets en cache avec Jekyll</title>
+      <link>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</link>
+      <pubDate>Wed, 17 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/mettre-ses-assets-en-cache-avec-jekyll/</guid>
+      <description>Je partage aujourd&amp;rsquo;hui une solution assez simple que l&amp;rsquo;on peut mettre en place avec Jekyll pour générer une unique ID utilisable sur nos assets pour contourner les éventuels problèmes de cache, et ainsi faire en sorte que les différents assets que l&amp;rsquo;on utilise soient correctement mis à jour.
+Mise à jour (01/07/2015) : depuis l&#39;écriture de cette article, j&#39;ai mis en place un système bien plus pertinent que je détaille ci-dessous.</description>
+    </item>
+    
+    <item>
+      <title>Jekyll et UTF-8 sous Windows</title>
+      <link>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</link>
+      <pubDate>Fri, 29 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/jekyll-et-utf-8-sous-windows/</guid>
+      <description>La première fois que j&amp;rsquo;ai installé et lancé Jekyll pour mon blog sous Windows, je suis tombé sur une erreur liée à UTF-8. En fouillant un peu, j&amp;rsquo;ai trouvé la raison de ce problème dans cet article&amp;nbsp;: il semblerait que la console Ruby ne fonctionne pas avec les caractères UTF-8, d&amp;rsquo;une manière ou d&amp;rsquo;une autre.
+L&amp;rsquo;erreur affichée était la suivante&amp;nbsp;:
+Liquid Exception: incompatible character encodings: UTF-8 and IBM437 in whatever.html La solution à ce problème est facile.</description>
+    </item>
+    
+    <item>
+      <title>Goodbye WordPress, hello Jekyll</title>
+      <link>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</link>
+      <pubDate>Sat, 28 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/articles/goodbye-wordpress-hello-jekyll/</guid>
+      <description>Cela fait un moment que je vois de plus en plus de bloggeurs tech se tourner vers Jekyll comme solution de blogging et abandonner leur ancienne plateforme pour l&amp;rsquo;occasion (souvent Tumblr ou WordPress). Mon site ayant besoin d&amp;rsquo;un sacré rafraîchissement au niveau de son code, j&amp;rsquo;en ai donc profité pour faire d&amp;rsquo;un pierre deux coups et le basculer sous Jekyll. Je listerai ici tous les avantages que j&amp;rsquo;y ai trouvé a par rapport à mon ancien CMS.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Ronan Levesque &ndash; De Jekyll à Hugo</title>
+  
+  <meta name="description" content="Tutoriel sur la manière dont j&#39;ai remplacé Jekyll, devenu trop lent, par Hugo." />
+  
+  <meta name="author" content="Ronan Levesque" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ronan Levesque" />
+  <meta property="og:title" content="De Jekyll à Hugo" />
+  
+  <meta property="og:description" content="Tutoriel sur la manière dont j&#39;ai remplacé Jekyll, devenu trop lent, par Hugo." />
+  
+
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="stylesheet" href="/assets/css/styles-b9bafce7.css" />
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400italic,700%7CFira+Sans:400,400italic,700%7CFira+Mono:400,700' rel='stylesheet' type='text/css' />
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png" />
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194" />
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192" />
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+  <link rel="manifest" href="/favicons/manifest.json" />
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#343838" />
+  <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png" />
+  <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+    if (localStorage.getItem('fontsLoaded')) { document.documentElement.className += ' fonts-loaded'; }
+  </script>
+</head>
+
+<body>
+
+
+  <div class="js-content">
+    <div class="wrapper">
+      <header class="mainHeader">
+  <div class="mainHeader-logo">
+    <a href="/">
+      <svg class="logo -header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.003 200.003"><path fill="#f45858" d="M0 200.003V0h200.003v200.003H0zm32.206-43.22h69.816v-44.457h8.694c8.168 14.967 16.288 29.842 24.266 44.458h32.442l-29.188-48.008c15.59-6.675 22.125-14.804 23.02-28.047 1.174-17.415-7.585-30.084-24.567-34.44-6.053-1.553-12.474-2.124-18.746-2.264-14.3-.322-28.613-.102-43.577-.102v86.617h-42.16v26.244z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M32.206 156.784v-26.242h42.16V43.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H134.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H32.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#f45858" d="M101.973 91.753V67.32c7.965-.204 15.734-.836 23.37 1.064 5.497 1.37 8.464 5.177 8.62 10.223.166 5.387-2.52 9.46-7.958 11.33-7.692 2.647-15.66 2.057-24.032 1.816z"/></svg>
+    </a>
+  </div>
+  <nav class="mainNav">
+    <ul class="mainNav-list">
+      <li class="mainNav-item"><a href="/projets/" class="mainNav-link">Projets</a></li>
+      <li class="mainNav-item"><a href="/articles/" class="mainNav-link -selected">Articles</a></li>
+      <li class="mainNav-item"><a href="/a-propos/" class="mainNav-link">A propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+      <article class="article">
+        <header class="article-header">
+          <time class="article-date">2 septembre 2017</time>
+          <h1 class="article-title">De Jekyll à Hugo</h1>
+        </header>
+        <div class="article-content">
+          
+
+<p>Mon site est sous Jekyll depuis <a href="/articles/goodbye-wordpress-hello-jekyll">un bon moment</a>, mais j&rsquo;ai remarqué qu&rsquo;il devenait de plus en plus lent pour compiler tout le contenu que j&rsquo;ai créé au fil du temps. J&rsquo;ai donc décidé de le migrer sous <a href="https://gohugo.io/">Hugo</a>, dont j&rsquo;ai eu de bons échos en termes de performances. J&rsquo;en profite également pour faire un tuto de migration pour les personnes intéressées.</p>
+
+<hr />
+
+<p class="info">Cet article part du principe que vous êtes à l'aise avec certains mécanismes également utilisés par Jekyll (Markdown, YAML, <em>partials</em>, etc.)</p>
+
+<h2 id="pourquoi-hugo">Pourquoi Hugo ?</h2>
+
+<p>Il existe <a href="https://www.staticgen.com/">une énorme quantité</a> de générateurs sites statiques, et parmi ceux-ci le choix peut s&rsquo;avérer difficile. J&rsquo;étais à la recherche du générateur qui m&rsquo;apporterait <strong>d&rsquo;excellentes performances</strong> en termes de compilation tout en évitant d&rsquo;avoir à changer trop de choses dans le code de mon site.</p>
+
+<p>Hugo revient régulièrement dans les discussions en ligne, surtout quand il s&rsquo;agit de faire un comparatif avec <a href="https://novelist.xyz/tech/hugo-vs-jekyll-static-site-generator/">Jekyll</a>. Ecrit en Go, Hugo offre des temps de compilation réduits drastiquement par rapport à ce dernier.</p>
+
+<p>La transition de l&rsquo;un à l&rsquo;autre semble également se faire relativement en douceur, comme vous le verrez en détails ci-dessous.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>On commence par télécharger et installer Hugo&nbsp;:</p>
+
+<pre><code class="nohighlight">brew install hugo</code></pre>
+
+<p>Ou pour ceux qui sont sous Windows,</p>
+
+<pre><code class="nohighlight">choco install hugo -confirm</code></pre>
+
+<p>Ensuite, pour importer le contenu d&rsquo;un site Jekyll vers un site Hugo, il existe une autre commande&nbsp;:</p>
+
+<pre><code class="nohighlight">hugo import jekyll [chemin-jekyll] [chemin-cible]</code></pre>
+
+<p>Qui va créer l&rsquo;arborescence suivante&nbsp;:</p>
+
+<pre><code class="nohighlight">archetypes
+content
+data
+layouts
+static
+themes
+config.toml</code></pre>
+
+<p>Dans mon cas, les articles ont été placés dans <code>content/post</code>, et les fichiers et dossiers situés à la racine du site Jekyll ont été placés dans <code>static</code>&hellip; J&rsquo;ai dû faire un peu de nettoyage pour redéplacer ce qu&rsquo;il fallait au bon endroit (je reviendrai sur l&rsquo;arborescence ci-dessus un peu plus tard).</p>
+
+<p>Notez qu&rsquo;il est aussi possible de créer un nouveau site directement si il vous prend l&rsquo;envie saugrenue de migrer tous vos articles à la main&nbsp;:</p>
+
+<pre><code class="nohighlight">hugo new site mon-site</code></pre>
+
+<p>Pour finir on lance un serveur pour surveiller tout nouveau changement (accessible sur <code>localhost:1313</code>) &nbsp;:</p>
+
+<pre><code class="nohighlight">hugo server</code></pre>
+
+<h2 id="création-de-contenu">Création de contenu</h2>
+
+<p>C&rsquo;est dans le dossier <code>content</code> que vont se placer tous les types de contenu&nbsp;: articles de blog, pages statiques, 404, page d&rsquo;accueil etc., le tout au format <code>.md</code>.</p>
+
+<p>Pour que ces pages ressemblent à quelque chose, il faudra leur créer des <strong>templates</strong>. Ceux-ci sont placés dans le dossier <code>layouts</code>. C&rsquo;est également là-dedans que sont placés les <em>partials</em> réutilisables (header, footer, etc.).</p>
+
+<p>Le template utilisé par chaque page de contenu est défini dans son <em>front matter</em> par la propriété <strong>type</strong>, qui peut être écrit au format <code>yaml</code> ou <code>toml</code>.</p>
+
+<p>Par exemple, voici ma page <code>projets.md</code>&nbsp;:</p>
+
+<pre><code class="nohighlight">---
+type: "static"
+title: "Projets récents"
+description&nbsp;: "Découvrez mes derniers projets et réalisations web."
+---
+
+Bla bla bla écrit en Markdown</code></pre>
+
+<p>Le template en question est un fichier <code>single.html</code> situé dans le dossier <code>layouts/static</code>. Voilà à quoi il pourrait ressembler&nbsp;:</p>
+
+<pre><code class="nohighlight">{{ partial "header.html" . }}
+
+{{ .Content }}
+
+{{ partial "footer.html" . }}</code></pre>
+
+<p><code>.Content</code> insère le contenu de <code>projets.md</code>, et les <em>partials</em>, comme leur nom l&rsquo;indique&hellip; importent les <em>partials</em> en question.</p>
+
+<p class="info">Pour plus de détails sur les différents templates utilisés par Hugo je vous invite à consulter la doc officielle.</p>
+
+<p>Pour ce qui est des pages du blog, le principe est à peu près similaire. J&rsquo;ai créé dans le dossier <code>layouts</code> un sous-dossier intitulé <code>articles</code>. Celui-ci contient deux templates&nbsp;: <code>list.html</code> et <code>single.html</code>.</p>
+
+<h3 id="liste-d-articles">Liste d&rsquo;articles</h3>
+
+<p>J&rsquo;ai sur mon site une page qui contient une liste de tous les articles publiés, triés par année. Voilà le code (simplifié)&nbsp;:</p>
+
+<pre><code>{{ partial &quot;header.html&quot; . }}
+
+&lt;h1&gt;{{ .Page.Title }}&lt;/h1&gt;
+
+{{ range (.Data.Pages.GroupByDate &quot;2006&quot;) }}
+&lt;h2&gt;{{ .Key }}&lt;/h2&gt;
+&lt;ul&gt;
+  {{ range .Pages }}
+  &lt;li&gt;
+    &lt;a href=&quot;{{ .RelPermalink }}&quot;&gt;
+      &lt;h3&gt;{{ .Title }}&lt;/h3&gt;
+      &lt;p&gt;{{ .Date.Format &quot;02.01&quot; }}&lt;/p&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  {{ end }}
+&lt;/ul&gt;
+{{ end }}
+
+{{ partial &quot;footer.html&quot; . }}
+</code></pre>
+
+<p>Les deux <code>range</code> permettent d&rsquo;itérer, pour le premier sur les dates par années, et pour le deuxième sur la liste des articles.</p>
+
+<p>Et le résultat&nbsp;:</p>
+
+<pre><code>2015
+
+NOMMAGE ET ARCHITECTURE CSS  19.08
+UNE GESTION RESPONSABLE DES WEBFONTS  25.06
+LES PRINCIPALES NOUVEAUTÉS DE ES6  27.04
+DROPBOX ET NODE_MODULES  02.04
+
+2014
+
+METTRE SES ASSETS EN CACHE AVEC JEKYLL  17.12
+ANIMER SES SVG AVEC SNAP.SVG  21.07
+
+etc.
+</code></pre>
+
+<h3 id="page-d-article">Page d&rsquo;article</h3>
+
+<p>Voilà le template, là aussi simplifié&nbsp;:</p>
+
+<pre><code>{{ partial &quot;header.html&quot; . }}
+
+&lt;time&gt;
+  {{ .Date.Day }}
+  {{ index .Site.Data.mois (printf &quot;%d&quot; .Date.Month) }}
+  {{ .Date.Year }}
+&lt;/time&gt;
+&lt;h1&gt;{{ .Page.Title }}&lt;/h1&gt;
+{{ .Content }}
+
+{{ partial &quot;footer.html&quot; . }}
+</code></pre>
+
+<p>Celui-ci m&rsquo;a posé un peu plus de soucis car je souhaitais afficher la date de publication de l&rsquo;article en français, au format <em>01 janvier 2017</em>. J&rsquo;ai trouvé un moyen de contourner le problème en utilisant la variable <code>.Site.Data</code>. Il m&rsquo;a suffit de créer un fichier <code>mois.yaml</code> dans le dossier <code>data</code>, avec le contenu suivant&nbsp;:</p>
+
+<pre><code>1: &quot;janvier&quot;
+2: &quot;février&quot;
+3: &quot;mars&quot;
+etc.
+</code></pre>
+
+<p>La fonction <code>printf</code> m&rsquo;a ensuite permis de récupérer les bonnes traductions.</p>
+
+<h2 id="gestion-du-cache">Gestion du cache</h2>
+
+<p class="info">J'utilise Gulp pour compiler et optimiser les <em>assets</em> de mon site. Si jamais votre workflow est différent (webpack ou autre), il vous sera à priori facile d'adapter l'exemple ci-dessous à votre cas précis.</p>
+
+<p>Pour rappel, le but ici est d&rsquo;ajouter un <em>fingerprint</em> au nom des fichiers voulus. Par exemple&nbsp;:</p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/styles.css&quot;&gt;
+</code></pre>
+
+<p>Doit être transformé en&nbsp;:</p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/styles-b9bafce7.css&quot;&gt;
+</code></pre>
+
+<p>Les <em>assets</em> de mon site Jekyll (CSS, JS, etc.) étaient <em>fingerprintés</em> grâce à <a href="https://github.com/tkareine/jekyll-minibundle">jekyll-minibundle</a>. Avec Hugo j&rsquo;ai dû chercher une nouvelle solution pour arriver à un résultat équivalent. Je me suis servi pour ça de <code>gulp-hash</code> et <code>del</code>.</p>
+
+<p>Pour arriver à la solution voulue, il faut pouvoir stocker dans le dossier <code>data</code> un fichier qui mappera les noms d&rsquo;<em>assets</em> avec le dernier <em>hash</em> créé. Ces informations seront ensuite accessibles à Hugo grâce à la variable globale <code>.Site.Data</code>.</p>
+
+<p>Voici par exemple ma tâche Gulp pour la gestion des styles&nbsp;:</p>
+
+<pre><code>gulp.task('styles', () =&gt; {
+  // On supprime l'ancien fichier CSS
+  del(distFolder.css + '**/*')
+  return gulp.src(devFolder.scss + 'styles.scss')
+  .pipe($$.sass())
+  .pipe($$.autoprefixer())
+  .pipe($$.cssnano())
+  // On crée un hash
+  .pipe($$.hash())
+  .pipe(gulp.dest(distFolder.css))
+  // On mappe le fichier
+  .pipe($$.hash.manifest('hashcss.json'))
+  // On le place dans data
+  .pipe(gulp.dest('data'));
+});
+</code></pre>
+
+<p>Ensuite, il suffit d&rsquo;aller modifier le template pour y intégrer cette donnée&nbsp;:</p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/{{ index .Site.Data.hashcss &quot;styles.css&quot; }}&quot; /&gt;
+</code></pre>
+
+<p>Le principe est le même pour vos autres fichiers statiques à cacher.</p>
+
+<h2 id="mise-en-production">Mise en production</h2>
+
+<p>Hugo crée un dossier <code>public</code> qui contiendra l&rsquo;ensemble du site. Il suffit de lancer la commande <code>hugo</code> pour cela.</p>
+
+<h2 id="autres-infos-utiles">Autres infos utiles</h2>
+
+<p>Je ne me suis pas encore penché sur trois dossiers présents à la racine d&rsquo;un site lors de sa création: <code>archetypes</code> , <code>static</code> et <code>themes</code>.</p>
+
+<h3 id="archétypes">Archétypes</h3>
+
+<p>Cette fonctionnalité permet de créer du nouveau contenu en utilisant un front-matter prédéfini. Par exemple, j&rsquo;ai créé un archétype spécifique pour mes articles comme ceci&nbsp;:</p>
+
+<pre><code class="nohighlight">touch archetypes/articles.md</code></pre>
+
+<p>Celui-ci contient le front-matter que je souhaite utiliser pour toute nouvelle création.</p>
+
+<pre><code class="nohighlight">---
+title: ""
+description: ""
+date: {{ .Date }}
+tags: []
+---</code></pre>
+
+<p>Puis&nbsp;:</p>
+
+<pre><code class="nohighlight">hugo new articles/mon-nouvel-article</code></pre>
+
+<h3 id="static">Static</h3>
+
+<p>Ce dossier contient par exemple dans mon cas les fichier CSS, JS, JSON, images ainsi que les pages que je veux garder indépendantes de Hugo. Ils seront placés à la racine du dossier <code>public</code> lors de la mise en production.</p>
+
+<h3 id="thèmes">Thèmes</h3>
+
+<p>C&rsquo;est une fonctionnalité de Hugo que je n&rsquo;ai pas du tout utilisée car j&rsquo;ai mon propre thème maison, mais si vous voulez en savoir plus je vous invite à aller visiter la <a href="https://gohugo.io/themes/">documentation</a> écrite là-dessus.</p>
+
+<hr />
+
+<p>Voilà, je pense avoir fait le tour des points principaux pour créer un site avec Hugo sans trop de prise de tête. Si jamais vous voyez des <strong>détails que j&rsquo;aurais oublié</strong>, n&rsquo;hésitez pas à venir m&rsquo;en parler sur <a href="https://twitter.com/ronanlevesque">Twitter</a>.</p>
+
+        </div>
+      </article>
+      
+<footer class="mainFooter">
+
+  <svg class="logo -footer" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#f45858" fill-rule="evenodd"/></svg>
+</footer>
+
+    </div>
+  </div>
+
+  <script src="/assets/js/bundle-80be27f2.js"></script>
+</body>
+
+</html>
+

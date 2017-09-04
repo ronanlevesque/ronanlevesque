@@ -22,7 +22,7 @@
     <item>
       <title>Divers</title>
       <link>http://ronanlevesque.fr/tags/divers/</link>
-      <pubDate>Wed, 17 Dec 2014 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://ronanlevesque.fr/tags/divers/</guid>
       <description></description>
@@ -47,6 +47,15 @@
     </item>
     
     <item>
+      <title>Hugo</title>
+      <link>http://ronanlevesque.fr/tags/hugo/</link>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Javascript</title>
       <link>http://ronanlevesque.fr/tags/javascript/</link>
       <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
@@ -56,9 +65,18 @@
     </item>
     
     <item>
+      <title>Jekyll</title>
+      <link>http://ronanlevesque.fr/tags/jekyll/</link>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://ronanlevesque.fr/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Outils</title>
       <link>http://ronanlevesque.fr/tags/outils/</link>
-      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://ronanlevesque.fr/tags/outils/</guid>
       <description></description>
@@ -94,7 +112,7 @@
     <item>
       <title>Tutoriels</title>
       <link>http://ronanlevesque.fr/tags/tutoriels/</link>
-      <pubDate>Thu, 25 Jun 2015 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 02 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://ronanlevesque.fr/tags/tutoriels/</guid>
       <description></description>
