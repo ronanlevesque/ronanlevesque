@@ -368,3 +368,5 @@ Redirect 301 /articles/friday-links-2/ /articles/
 Redirect 301 /articles/friday-links-3/ /articles/
 Redirect 301 /articles/friday-links-4/ /articles/
 Redirect 301 /articles/friday-links-5/ /articles/
+Redirect 301 /articles/friday-links-5/ /articles/
+Redirect 301 /articles/css-notation-bem/ /articles/css-et-notation-bem/
