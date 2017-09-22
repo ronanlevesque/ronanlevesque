@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ronan Levesque - Front-end &amp; Webdesign</title>
+    <title>Front-end &amp; Webdesign</title>
     <link>http://ronanlevesque.fr/</link>
-    <description>Recent content on Ronan Levesque - Front-end &amp; Webdesign</description>
+    <description>Recent content on Front-end &amp; Webdesign</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 02 Sep 2017 00:00:00 +0000</lastBuildDate>
     
@@ -16,9 +16,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ronanlevesque.fr/projets/</guid>
-      <description>FOX CSS FOX CSS est un framework CSS poids-plume dont j&#39;ai eu l&#39;idée en voyant la complexité et la taille que certains frameworks connus pouvaient posséder. L&#39;idée était d&#39;avoir une base simple, flexible et modulable, tournée vers le responsive design, et adaptable à des petits comme des gros sites. Il est également disponible en version Sass.
+      <description>FOX CSS est un framework CSS poids-plume dont j&amp;rsquo;ai eu l&amp;rsquo;idée en voyant la complexité et la taille que certains frameworks connus pouvaient posséder. L&amp;rsquo;idée était d&amp;rsquo;avoir une base simple, flexible et modulable, tournée vers le responsive design, et adaptable à des petits comme des gros sites. Il est également disponible en version Sass.
 Voir le projet
-    FOX Boilerplate J&#39;ai développé FOX Boilerplate avec comme noyau central Gulp, un outil de gestion des tâches front-end.</description>
+J&amp;rsquo;ai développé FOX Boilerplate avec comme noyau central Gulp, un outil de gestion des tâches front-end.</description>
     </item>
     
     <item>
