@@ -17,7 +17,7 @@
       
       <guid>http://ronanlevesque.fr/projets/</guid>
       <description>FOX CSS est un framework CSS poids-plume dont j&amp;rsquo;ai eu l&amp;rsquo;idée en voyant la complexité et la taille que certains frameworks connus pouvaient posséder. L&amp;rsquo;idée était d&amp;rsquo;avoir une base simple, flexible et modulable, tournée vers le responsive design, et adaptable à des petits comme des gros sites. Il est également disponible en version Sass.
-Voir le projet
+
 J&amp;rsquo;ai développé FOX Boilerplate avec comme noyau central Gulp, un outil de gestion des tâches front-end.</description>
     </item>
     
