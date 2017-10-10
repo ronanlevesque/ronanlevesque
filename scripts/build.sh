@@ -2,7 +2,7 @@
 
 set -e # exit when error
 
-rm -rf public node_modules
+rm -rf public css node_modules
 
 echo "➡️  Installing dependencies"
 
