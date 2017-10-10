@@ -1,0 +1,70 @@
+.NavBar-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.NavBar-item {
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+
+  + .NavBar-item {
+    @include fluid-type(margin-left, 320, 1920, 15, 80);
+  }
+}
+
+.NavBar-link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  @include dosis;
+  @include fluid-type(font-size, 320, 1920, 14, 22);
+  font-weight: bold;
+  letter-spacing: .05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $white;
+
+  &.-selected {
+    &:before, &:after {
+      padding-bottom: 12%;
+      position: absolute;
+      top: 120%;
+      right: 50%;
+      pointer-events: none;
+    }
+
+    &:before {
+      content: '';
+      width: 70%;
+      background-image: url(/assets/img/backgrounds/brush.svg);
+      background-size: cover;
+      transform: translateX(50%);
+    }
+
+    &:after {
+      content: '';
+      width: 70%;
+      opacity: 0;
+      background-color: $dark-blue;
+      animation: NavBarAfter .4s ease-out 1;
+      animation-fill-mode: both;
+      transform: translateX(50%) skew(-15deg);
+    }
+  }
+}
+
+@keyframes NavBarAfter {
+  from {
+    opacity: 1;
+    width: 70%;
+    right: 50%;
+  }
+  to {
+    opacity: 1;
+    width: 0;
+    right: 0;
+  }
+}

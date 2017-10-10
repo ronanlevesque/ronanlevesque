@@ -1,0 +1,30 @@
+{{ partial "head.html" . }}
+
+<div class="Wrapper">
+  {{ partial "header.html" . }}
+  <main>
+    <article class="Article">
+      <header class="Article-header">
+        <h1 class="Article-title">{{ .Page.Title }}</h1>
+      </header>
+      <div class="Article-content">
+        {{ range (.Data.Pages.GroupByDate "2006") }}
+        <h2>{{ .Key }}</h2>
+        <ul class="ArticlesList">
+          {{ range .Pages }}
+          <li class="ArticlesList-item">
+            <a href="{{ .RelPermalink }}" class="ArticlesList-link">
+              <h3 class="ArticlesList-title">{{ .Title }}</h3>
+              <div class="ArticlesList-date">{{ .Date.Format "02.01" }}</div>
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+    </article>
+  </main>
+  {{ partial "logo-footer.html" . }}
+</div>
+
+{{ partial "foot.html" . }}

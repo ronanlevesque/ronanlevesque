@@ -1,0 +1,412 @@
+.Article-header {
+  @include fluid-type(padding-top, 320, 1920, 50, 160);
+  @include fluid-type(padding-bottom, 320, 1920, 50, 160);
+}
+
+.Article-date {
+  margin: 0 0 0.2em;
+  display: block;
+  @include robotom;
+  @include fluid-type(font-size, 320, 1920, 12, 20);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $light-green;
+}
+
+.Article-title {
+  margin: 0 auto;
+  @include dosis;
+  @include fluid-type(font-size, 320, 1920, 23, 46);
+  @include fluid-type(max-width, 320, 1920, 600, 900);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.Article-content {
+  h2 {
+    @include dosis;
+    @include fluid-type(font-size, 320, 1920, 19, 30);
+    text-transform: uppercase;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  h3 {
+    @include dosis;
+    @include fluid-type(font-size, 320, 1920, 14, 22);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  p,
+  ul,
+  ol,
+  h2,
+  h3,
+  blockquote,
+  pre,
+  figcaption,
+  .example,
+  .cp_embed_wrapper {
+    margin: 0 auto;
+    @include fluid-type(max-width, 320, 1920, 500, 785);
+  }
+
+  ul,
+  ol {
+    padding: 0;
+    list-style: none;
+  }
+
+  ul {
+    li {
+      padding-left: 1.2em;
+      position: relative;
+
+      &:before {
+        content: '\25A0';
+        font-family: 'Times New Roman', Serif;
+        font-size: 75%;
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        color: $light-green;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: numbers;
+
+    li {
+      padding-left: 1.5em;
+      position: relative;
+      counter-increment: numbers;
+
+      &:before {
+        margin-right: 0.5em;
+        content: counter(numbers)'.';
+        position: absolute;
+        left: 0;
+        color: darken($light-green, 10%);
+      }
+    }
+  }
+
+  p a,
+  li a,
+  blockquote a {
+    color: $light-green;
+    text-decoration: none;
+    border-bottom: 1px solid $light-green;
+    transition: color 0.2s ease-out, border-color 0.2s ease-out;
+
+    &:hover,
+    &:focus {
+      color: $dark-green;
+      border-color: $dark-green;
+    }
+  }
+
+  img {
+    display: block;
+    @include fluid-type(margin-top, 320, 1920, 20, 35);
+    @include fluid-type(margin-bottom, 320, 1920, 20, 35);
+  }
+
+  blockquote {
+    @include fluid-type(margin-top, 320, 1920, 20, 35);
+    @include fluid-type(margin-bottom, 320, 1920, 20, 35);
+    padding-left: 1.5em;
+    @include fluid-type(font-size, 320, 1920, 16, 25);
+    font-style: italic;
+    @include fluid-type(border-left-width, 320, 1920, 2, 6);
+    border-left-style: solid;
+    border-color: $light-green;
+
+    code,
+    kbd {
+      font-style: normal;
+    }
+  }
+
+  hr {
+    margin: 0 auto;
+    height: auto;
+    @include fluid-type(margin-top, 320, 1920, 30, 60);
+    @include fluid-type(margin-bottom, 320, 1920, 30, 60);
+    text-align: center;
+    border: none;
+
+    &:before {
+      content: '···';
+      display: block;
+      @include fluid-type(font-size, 320, 1920, 22, 30);
+      letter-spacing: 0.5em;
+      color: $light-green;
+    }
+  }
+
+  code {
+    padding: 0 0.2em;
+    display: inline-block;
+    font-size: 90%;
+    display: inline-block;
+    @include robotom;
+    color: $light-blue;
+    background-color: darken($dark-blue, 8%);
+    border-radius: 3px;
+  }
+
+  pre {
+    padding: 0;
+    @include fluid-type(margin-top, 320, 1920, 20, 35);
+    @include fluid-type(margin-bottom, 320, 1920, 20, 35);
+    position: relative;
+    background-color: darken($dark-blue, 8%);
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 1em;
+      bottom: 1em;
+      width: 1em;
+    }
+
+    &:before {
+      left: 0;
+      background: linear-gradient(
+        to left,
+        rgba(darken($dark-blue, 8%), 0),
+        rgba(darken($dark-blue, 8%), 1) 70%
+      );
+    }
+
+    &:after {
+      right: 0;
+      background: linear-gradient(
+        to right,
+        rgba(darken($dark-blue, 8%), 0),
+        rgba(darken($dark-blue, 8%), 1) 70%
+      );
+    }
+
+    code {
+      padding: 1.1em;
+      display: block;
+      color: $white;
+      overflow: auto;
+    }
+  }
+
+  kbd {
+    padding: 0 0.5em;
+    display: inline-block;
+    @include robotom;
+    font-size: 90%;
+    line-height: 1.2;
+    color: $dark-blue;
+    background-color: $white;
+    border: 1px solid lighten($dark-blue, 50%);
+    border-radius: 3px;
+    box-shadow: 0 3px 0 0 lighten($dark-blue, 50%);
+  }
+
+  abbr {
+    cursor: help;
+    border-bottom: 1px dotted $light-green;
+    text-decoration: none;
+  }
+
+  figure {
+    margin: 0 auto;
+    @include fluid-type(margin-top, 320, 1920, 20, 35);
+    @include fluid-type(margin-bottom, 320, 1920, 20, 35);
+    padding: 0;
+    @include fluid-type(max-width, 320, 1920, 600, 900);
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+    }
+
+    figcaption {
+      margin-top: 0.5em;
+      @include robotom;
+      font-size: 80%;
+      color: lighten($dark-blue, 55%);
+    }
+  }
+
+  * + p,
+  * + ul,
+  * + ol,
+  * + h3 {
+    @include fluid-type(margin-top, 320, 1920, 15, 30);
+  }
+
+  * + h2 {
+    @include fluid-type(margin-top, 320, 1920, 30, 60);
+  }
+
+  > *:first-child {
+    margin-top: 0;
+
+    img {
+      margin-top: 0;
+    }
+  }
+
+  > *:last-child,
+  > .demo:last-child,
+  > .link:last-child,
+  > .info:last-child,
+  > *:last-child img {
+    margin-bottom: 0;
+  }
+
+  .info {
+    @include fluid-type(margin-top, 320, 1920, 20, 35);
+    @include fluid-type(margin-bottom, 320, 1920, 20, 35);
+    padding: 1em;
+    background-color: lighten($dark-blue, 10%);
+
+    &:before {
+      content: 'Info';
+      margin-right: 0.5em;
+      padding: 0.1em 0.3em;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 80%;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $white;
+      background-color: darken($dark-blue, 2%);
+      border-radius: 3px;
+    }
+
+    code {
+      background-color: darken($dark-blue, 2%);
+    }
+  }
+
+  .demo,
+  .link {
+    @include fluid-type(margin-top, 320, 1920, 20, 35);
+    @include fluid-type(margin-bottom, 320, 1920, 20, 35);
+
+    a {
+      padding: 0.8em 2em;
+      display: inline-block;
+      position: relative;
+      z-index: 0;
+      @include fluid-type(font-size, 320, 1920, 10, 16);
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      border: none;
+      color: darken($dark-blue, 5%);
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        transform: translateZ(0);
+      }
+
+      &:before {
+        background-image: url(/assets/img/backgrounds/brush-cta.svg);
+      }
+
+      &:after {
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+        background-image: url(/assets/img/backgrounds/brush-cta-hover.svg);
+      }
+
+      &:hover,
+      &:focus {
+        color: darken($dark-blue, 5%);
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .example {
+    @include fluid-type(margin-top, 320, 1920, 20, 35);
+    @include fluid-type(margin-bottom, 320, 1920, 20, 35);
+    background-color: darken($dark-blue, 8%);
+  }
+
+  .cp_embed_wrapper {
+    @include fluid-type(margin-top, 320, 1920, 20, 35);
+    @include fluid-type(margin-bottom, 320, 1920, 20, 35);
+    line-height: .7;
+  }
+
+  .ArticlesList {
+    @include fluid-type(margin-top, 320, 1920, 15, 30);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ArticlesList-item {
+    padding: 0;
+    border-top: 1px solid lighten($dark-blue, 20%);
+    border-bottom: 1px solid lighten($dark-blue, 20%);
+
+    + .ArticlesList-item {
+      border-top: 0;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .ArticlesList-link {
+    padding: 0.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $light-green;
+    }
+  }
+
+  .ArticlesList-title {
+    margin: 0;
+    padding-right: 1em;
+    @include ellipsis;
+  }
+
+  .ArticlesList-date {
+    margin: 0;
+    @include robotom;
+    @include fluid-type(font-size, 320, 1920, 12, 20);
+  }
+}

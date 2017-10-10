@@ -1,0 +1,15 @@
+<div class="Wrapper">
+  {{ partial "header.html" . }}
+  <main>
+    <article class="Article">
+      <header class="Article-header">
+        {{ if .Params.date }}<time class="Article-date">{{ .Date.Day }} {{ index .Site.Data.mois (printf "%d" .Date.Month) }} {{ .Date.Year }}</time>{{ end }}
+        <h1 class="Article-title">{{ .Page.Title }}</h1>
+      </header>
+      <div class="Article-content {{ if .Params.date }} -articlePage{{ end }}">
+        {{ .Content }}
+      </div>
+    </article>
+  </main>
+  {{ partial "logo-footer.html" . }}
+</div>

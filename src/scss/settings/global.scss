@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(1em * .625);
+}
+
+body {
+  margin: 0;
+  @include roboto;
+  @include fluid-type(font-size, 320, 1920, 14, 22);
+  line-height: 1.5;
+  color: $white;
+  background-color: lighten($dark-blue, 10%);
+  @include antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2 {
+  line-height: 1.2;
+  letter-spacing: .05em;
+}

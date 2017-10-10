@@ -1,0 +1,32 @@
+.Logo {
+  display: block;
+
+  &.-header {
+    @include fluid-type(width, 320, 1920, 25, 40);
+  }
+
+  &.-footer {
+    margin-left: auto;
+    margin-right: auto;
+    @include fluid-type(margin-top, 320, 1920, 50, 160);
+    @include fluid-type(width, 320, 1920, 15, 30);
+    fill: lighten($dark-blue, 10%);
+  }
+
+  path {
+    transition: fill 0.2s ease-out;
+  }
+}
+
+.Logo-background {
+  fill: $light-green;
+
+  .MainHeader-logo:hover &,
+  .MainHeader-logo:focus & {
+    fill: $dark-green;
+  }
+}
+
+.Logo-inner {
+  fill: darken($dark-green, 23%);
+}

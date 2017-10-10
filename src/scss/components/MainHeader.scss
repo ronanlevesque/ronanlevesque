@@ -1,0 +1,21 @@
+.MainHeader {
+  text-align: center;
+  line-height: normal;
+
+  @include bp(500) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.MainHeader-logo {
+  margin: 2rem 0 3.5rem;
+  display: inline-block;
+  vertical-align: middle;
+
+  @include bp(500) {
+    margin: 0;
+    display: inline;
+  }
+}

@@ -1,0 +1,9 @@
+.Wrapper {
+  @include fluid-type(padding, 320, 1960, 15, 80);
+  @include fluid-type(padding-bottom, 320, 1920, 25, 60);
+  min-height: 100vh;
+  background-color: $dark-blue;
+  @include fluid-type(border-width, 320, 1960, 10, 25);
+  border-style: solid;
+  border-color: lighten($dark-blue, 10%);
+}
