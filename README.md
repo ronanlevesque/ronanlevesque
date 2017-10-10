@@ -6,7 +6,7 @@
 yarn
 ```
 
-## Launch demo site + assets
+## Launch site + assets
 
 ```
 yarn dev
@@ -14,7 +14,7 @@ yarn dev
 
 Available at http://localhost:1313
 
-## Build demo site + assets
+## Build site + assets
 
 ```
 yarn build

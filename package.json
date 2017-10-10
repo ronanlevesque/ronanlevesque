@@ -28,7 +28,7 @@
     "promise-polyfill": "^6.0.2"
   },
   "engines": {
-    "node": "8.6.0",
-    "yarn": "1.1.0"
+    "node": ">=8.6.0",
+    "yarn": ">=1.0.0"
   }
 }
