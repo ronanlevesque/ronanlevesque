@@ -1,0 +1,348 @@
+---
+---
+
+<!DOCTYPE html>
+
+<!--
+
+  Good old tables and inline-styles.
+  (Don't worry, it's not my usual coding style :))
+
+  Side note: this page is W3C valid.
+
+-->
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ronan Levesque - CV</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Lato, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #333;
+      background-color: #333;
+      border: 20px solid transparent;
+    }
+    button {
+      margin: 0 auto 20px;
+      padding: 5px;
+      display: block;
+      font-size: 10px;
+      -webkit-appearance: none;
+      background-color: #fff;
+      border: none;
+    }
+    table {
+      margin: auto;
+      width: 100%;
+      max-width: 1200px;
+      background-color: #fff;
+      border-collapse: collapse;
+    }
+    table + table {
+      margin-top: 20px;
+    }
+    td {
+      padding: 10px;
+    }
+    tr > td:first-child {
+      width: 250px;
+      font-weight: bold;
+    }
+    img {
+      display: block;
+    }
+    .details td {
+      padding: 20px;
+      vertical-align: top;
+    }
+    .section-title {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      background-color: #d5d5d5;
+    }
+    .logo {
+      margin: 60px auto 40px;
+      display: block;
+      width: 25px;
+    }
+    @media print {
+      tr > td:first-child {
+        width: 150px;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="no-print" onclick=window.print();>Print me ?</button>
+  <table class="intro">
+    <tr>
+      <td class="no-print">
+        <img src="https://www.gravatar.com/avatar/59e808c09f2f0746b5418c6e1047803b?s=250" alt="Photo Ronan Levesque">
+      </td>
+      <td>
+        <strong>Ronan LEVESQUE</strong><br />
+        <a href="http://ronanlevesque.fr">ronanlevesque.fr</a><br />
+        <br />
+        57, avenue Victor Cresson<br />
+        92130 Issy les Moulineaux<br />
+        <br />
+        tel : 06 14 07 32 74<br />
+        mail : ronan.levesque@gmail.com<br />
+        nationalité française<br />
+        32 ans
+      </td>
+      <td>
+        <h1>Lead développeur Front-end</h1>
+      </td>
+    </tr>
+  </table>
+  <table class="details">
+    <tr>
+      <td colspan="2" class="section-title">
+        Expériences
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Depuis mai 2015
+      </td>
+      <td>
+        <strong>Lead développeur Front-end</strong>, société <strong>MFG Labs</strong> (groupe <strong>HAVAS</strong>)
+        <ul>
+          <li>refonte du site <a href="http://mfglabs.com">mfglabs.com</a>
+          <li>mise en place et maintenance de sites et applications REST (Vanilla JS, jQuery, React/Redux...)
+          <li>définition et mise en place des orientations techniques au niveau front-end
+          <li>veille technologique permanente
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Mai 2014 à mai 2015
+      </td>
+      <td>
+        <strong>Développeur Front-end</strong>, société <strong>Tigerlily</strong>
+        <ul>
+          <li>refonte et développement de tous les composants de l'interface de Sleek (application AngularJS)
+          <li>refonte du site Tigerlily ainsi que du site marketing de Sleek sur le CMS Locomotive (développement front-end et back-end)
+          <li>veille technologique permanente
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Mars 2013 à mai 2014
+      </td>
+      <td>
+        <strong>Développeur Front-end</strong>, agence <strong>Avent Media</strong>
+        <ul>
+          <li>découpage et intégration de maquettes au format XHTML/HTML5 et CSS3
+          <li>compatibilité entre les différents supports (responsive design) et navigateurs
+          <li>développement JavaScript/jQuery
+          <li>intégration de données dynamiques en corrélation avec le développement Back-end
+          <li>optimisation technique pour le référencement naturel
+          <li>veille technologique permanente
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Décembre 2012 à janvier 2013
+      </td>
+      <td>
+        <strong>Website manager</strong>, <strong>coolcadeau.fr</strong> (groupe <strong>Smartbox</strong>)
+        <ul>
+          <li>refonte du site Internet
+          <li>gestion de projet sur l’ensemble des évolutions graphiques et technologiques du site
+          <li>suivi et encadrement des équipes graphistes
+          <li>gestion du merchandising et de l’animation promotionnelle du site
+          <li>gestion du référencement naturel du site
+          <li>définition des indices clefs de performance
+          <li>conception et suivi de tableaux de bord à partir des outils de tracking et des données internes
+          <li>analyse des données marketing, ventes, et des indicateurs (taux de clics, transformation, trafic, etc.)
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Février 2009 à décembre 2010
+      </td>
+      <td>
+        <strong>Chargé de marketing digital</strong>, service Internet de <strong>Disneyland Paris</strong>
+        <ul>
+          <li>gestion et optimisation des campagnes de référencement payant du site
+          <li>mise en place et suivi de la stratégie de référencement naturel de disneylandparis.com et des mini-sites associés
+          <li>gestion des campagnes pan-européennes d'affiliation du site (7 pays ciblés)
+          <li>gestion des actions de synergie online avec les autres entités Disney
+          <li>médias sociaux : développement de la présence de Disneyland Paris sur les forums, les réseaux sociaux et les sites de fans de Disneyland
+          <li>optimisation de la politique globale d’acquisition de trafic et du budget marketing digital
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Mars 2006 à février 2009
+      </td>
+      <td>
+        <strong>Responsable merchandising</strong>, service Loisirs du site <strong>lastminute.com</strong>
+        <ul>
+          <li>merchandising des offres et optimisation de la section Loisirs
+          <li>gestion des projets associés
+          <li>suivi journalier des statistiques de ventes/trafic, analyse et actions (en collaboration avec les chefs de produits)
+          <li>gestion de la communication interne avec le marketing (User Interface, CRM, partenaires et affiliés) ainsi que les Relations Publiques
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Février à juillet 2005
+      </td>
+      <td>
+        <strong>Assistant merchandising</strong>, service Séjours à l’Etranger du site <strong>lastminute.com</strong>
+        <ul>
+          <li>mises à jour de la partie « Séjours à l’Etranger »
+          <li>statistiques et suivis journaliers des résultats de cette section
+          <li>gestion de partenariats (Auchan)
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <table class="details">
+    <tr>
+      <td colspan="2" class="section-title">
+        Formation
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2005/2006
+      </td>
+      <td>
+        Troisième cycle Marketing et Commerce sur Internet au Pôle Universitaire Léonard de Vinci (La Défense)
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2001/2005
+      </td>
+      <td>
+        Maîtrise de Commerce et Gestion à l'école de management Léonard de Vinci (la Défense)
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2000/2001
+      </td>
+      <td>
+        Obtention d’un Baccalauréat général, série Economique et Sociale, options Mathématiques appliquées à l’économie (Lycée Florent Schmitt, Saint-Cloud)
+      </td>
+    </tr>
+  </table>
+  <table class="details">
+    <tr>
+      <td colspan="2" class="section-title">
+        Compétences
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Globales
+      </td>
+      <td>
+        Responsive design et développement web mobile, A/B testing (Visual Website Optimizer), développement cross-browsers, amélioration progressive/dégradation gracieuse, respect des normes W3C, notions d'accessibilité (WAI), maintenabilité du code (méthodologies BEM et SUIT), animations (CSS et JavaScript)
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Langages
+      </td>
+      <td>
+        Programmation en HTML (XHTML strict/transitional ou HTML5), CSS (2.1 et 3), JavaScript (et jQuery), utilisation de préprocesseurs (Sass, Haml...), SVG, PHP (notions), RoR (notions), Scala (notions)
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Outils de développement
+      </td>
+      <td>
+        CLI tools, IDE (Atom, Sublime text etc.), CMS (WordPress, Jekyll), build tools (Grunt, Gulp, webpack), Node.js/npm, React, Redux, Angular, Git & Github, AWS, intégration continue (Jenkins), MySQL (notions)
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Outils analytiques
+      </td>
+      <td>
+        Omniture, Google Analytics, Google WMT
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Marketing
+      </td>
+      <td>
+        Définition des KPI d'un site, création de tableaux de bord et de rapports d'analyse, merchandising (optimisation et animation commerciale), Search Engine Optimization (SEO), gestion de campagnes de référencement payant et d'affiliation
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Autres
+      </td>
+      <td>
+        Photoshop, Sketch, Illustrator, Pack Office...
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Langues parlées
+      </td>
+      <td>
+        Anglais : <strong>courant</strong>. Obtention du TOEIC (score de 840)<br />
+        Allemand : niveau scolaire
+      </td>
+    </tr>
+  </table>
+  <table class="details">
+    <tr>
+      <td colspan="2" class="section-title">
+        Centres d'intérêt
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Passions
+      </td>
+      <td>
+        Veille technologique (Twitter), rédactions d'articles autour du webdesign sur mon site personnel, dessin
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Sports pratiqués
+      </td>
+      <td>
+        Jogging, football, musculation
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Vie associative
+      </td>
+      <td>
+        Deux ans dans un journal gratuit en tant que dessinateur
+      </td>
+    </tr>
+  </table>
+  <svg class="logo" viewBox="0 0 136 114" xmlns="http://www.w3.org/2000/svg"><path d="M.206 113.784V87.542h42.16V.925c14.965 0 29.277-.22 43.578.102 6.272.14 12.693.71 18.745 2.264 16.98 4.356 25.74 17.026 24.565 34.44-.894 13.243-7.428 21.372-23.02 28.047l29.19 48.008H102.98c-7.978-14.616-16.098-29.49-24.266-44.458h-8.694v44.458H.206zm69.767-65.03c8.372.24 16.34.83 24.032-1.815 5.438-1.87 8.124-5.945 7.958-11.332-.156-5.046-3.123-8.854-8.62-10.223-7.636-1.9-15.405-1.27-23.37-1.063v24.43z" fill="#fff" fill-rule="evenodd"/></svg>
+</body>
+</html>

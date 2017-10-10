@@ -1,0 +1,161 @@
+.list-details {
+	margin: 1em auto 0 auto;
+	padding: 0;
+	max-width: 1200px;
+
+	li {
+		vertical-align: top;
+		padding: 2em 1em;
+		width: 100%;
+		text-align: left;
+		position: relative;
+	}
+
+	.placeholder {
+		margin: 0;
+		padding: 0;
+	}
+
+	img {
+		margin: 0 auto;
+		display: block;
+		width: 50px;
+		position: absolute;
+		left: 1em;
+		top: 1.35em;
+	}
+
+	h3 {
+		margin: 0;
+		padding-left: 65px;
+		@include fs(25);
+		font-weight: normal;
+		line-height: 1.2em;
+		color: $color1;
+
+  		&:after {
+			content: '';
+			display: block;
+			width: 50px;
+			height: .4em;
+			border-bottom: 2px solid lighten($color2, 15%);
+		}
+	}
+
+	p {
+		margin-top: .7em;
+		padding-left: 65px;
+		color: #444;
+	}
+
+	.learn-more {
+		margin-left: 65px;
+		padding: .3em .5em;
+		display: inline-block;
+		@include fs(12);
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 2px;
+		color: #fff;
+		background: lighten($color2, 10%);
+		@include rounded(3px);
+
+		&:after {
+			content: '>';
+			padding-left: .5em;
+			//font-family: Arial, Helvetica, sans-serif;
+		}
+
+		&:hover, &:active, &:focus {
+			background: $color2;
+		}
+	}
+
+	@include bp(580) {
+
+		li {
+			width: 49%;
+		}
+	}
+
+	@include bp(800) {
+
+		li {
+			width: 32%;
+		}		
+	}
+
+	@include bp(1000) {
+
+		h3 {
+			@include fs(30);
+		}
+
+		p {
+			@include fs(15);
+		}
+	}
+
+	@include bp(1200) {
+
+		img {
+			top: 2.5em;
+		}
+
+		li {
+			padding: 3em 1em;
+			width: 24%;
+		}
+
+		p {
+			margin-top: .8em;
+		}
+
+		.learn-more {
+			@include fs(14);
+		}
+	}
+}
+
+/* .ie8 .list-details .learn-more:after {
+	display: none;
+} */
+
+.ie8 .list-details img {
+	max-width: 50px;
+	width: 50px;
+	height: 50px;
+}
+
+footer {
+	margin-top: 2em;
+	padding: 1.5em 0 6em 0;
+	@include fs(14);
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	background: $color1;
+
+	@include bp(1000)  {
+		margin-top: 3em;
+		padding: 1.5em 0 8em 0;
+		@include fs(17);
+	}
+
+	&:after {
+		margin: 1em auto 0;
+		content: '* * *';
+		display: block;
+		text-align: center;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+
+		&:hover, &:active, &:focus {
+			color: lighten($color2, 15%);
+		}
+	}
+}
+

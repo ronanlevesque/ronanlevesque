@@ -1,0 +1,599 @@
+/*
+FOX CSS 2.0
+by Ronan Levesque - CC BY 3.0 license
+
+Credits:
+- Normalize by Nicolas Gallagher http://bit.ly/PbZ7Pf
+- KNACSS by Raphael Goetter/Alsacreations http://knacss.com/
+*/
+
+// MIXINS
+
+@import "mixins";
+
+$main: #2980b9;
+
+// IMPORT CHOSEN FOX CSS MODULES
+
+@import "reset";
+@import "formatting";
+@import "layout";
+@import "responsive-layout";
+@import "ie";
+
+// YOUR STYLES OR PARTIAL SCSS FILES GO HERE
+
+@font-face {
+	font-family: 'aller';
+	src: url('../fonts/aller.eot');
+	src: url('../fonts/aller.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/aller.woff') format('woff'),
+	url('../fonts/aller.otf') format('opentype'),
+	url('../fonts/aller.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'aller-bold';
+	src: url('../fonts/aller-bold.eot');
+	src: url('../fonts/aller-bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/aller-bold.woff') format('woff'),
+	url('../fonts/aller-bold.otf') format('opentype'),
+	url('../fonts/aller-bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'aller-italic';
+	src: url('../fonts/aller-italic.eot');
+	src: url('../fonts/aller-italic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/aller-italic.woff') format('woff'),
+	url('../fonts/aller-italic.otf') format('opentype'),
+	url('../fonts/aller-italic.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Icomoon';
+    src: url('../fonts/icomoon.eot');
+    src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/icomoon.woff') format('woff'),
+         url('../fonts/icomoon.ttf') format('truetype'),
+         url('../fonts/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: "aller", Arial, Sans-serif;
+	color: #555;
+}
+
+p, li {
+	@include pxrem(font-size, 14);
+
+	@include bp(1000) {
+		@include pxrem(font-size, 16);			
+	}
+}
+
+::-webkit-input-placeholder {
+	color: #555;
+}
+
+:-moz-placeholder {
+	opacity: 1;
+	color: #555;
+}
+
+::-moz-placeholder {
+	opacity: 1;
+	color: #555;
+}
+
+:-ms-input-placeholder {  
+	color: #555;
+}
+
+[required], [invalid] {
+    box-shadow:none;
+}
+
+.back {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	background: rgba(0, 0, 0, .7);
+	z-index: 2;
+	cursor: default; 
+}
+
+.popup {
+	margin: 0 auto;
+	padding: 2.5em 1em 1em;
+	width: calc(100% - 2em);
+	max-width: 400px;
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	left: 1em;
+	display: none;
+	@include pxrem(font-size, 16);
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .7);
+	z-index: 2;
+
+	@include bp(1000) {
+		top: 3em;
+	}
+
+	.close {
+		position: absolute;
+		top: 0;
+		right: .2em;
+		font-family: Arial, Sans-serif;
+		@include pxrem(font-size, 20);
+		text-decoration: none;
+		color: #bbb;
+
+		&:hover, &:focus {
+			color: #999;
+		}
+
+		@include bp(1000) {
+			@include pxrem(font-size, 25);	
+		}
+	}
+
+	input[type=text], input[type=password], select {
+		@include pxrem(margin-bottom, 1em);
+		padding: .6em;
+		height: 40px;
+		width: 100%;
+		font-family: "aller", Arial, Sans-serif;
+		@include pxrem(font-size, 14);
+		color: #555;
+		background: #fff;
+		border: 1px solid #bbb;
+		border-radius: 3px;
+
+		@include bp(1000) {
+			@include pxrem(font-size, 16);			
+			height: 50px;			
+		}
+	}
+
+	input[type=submit] {
+		margin: 0 auto;
+		padding: .5em;
+		display: block;
+		width: 100px;
+		font-family: "aller", Arial, Sans-serif;
+		@include pxrem(font-size, 14);
+		color: #fff;
+		background: $main;
+		border: none;
+		cursor: pointer;
+		border-radius: 3px;
+		-webkit-appearance: none;
+
+		&:hover, &:focus {
+			background: darken($main, 5%);
+		}
+
+		@include bp(1000) {
+			@include pxrem(font-size, 16);		
+		}
+	}
+
+	.erreur {
+		margin: 0 0 1em;
+		display: none;
+		text-align: center;
+		color: #d60303;
+	}
+}
+
+.popup--login {
+	padding: 1em;
+}
+
+.success {
+	margin: 0 auto;
+	padding: 1em;
+	width: calc(100% - 2em);
+	max-width: 300px;
+	position: fixed;
+	top: 1em;
+	left: 1em;
+	right: 1em;
+	display: none;
+	text-align: center;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .7);
+	z-index: 2;
+
+	@include bp(1000) {
+		top: 3em;
+	}
+
+	p {
+		margin: 0;
+		font-style: normal;
+		text-align: center;
+	}
+}
+
+.pred {
+	color: #d60303;
+}
+
+.pgreen {
+	color: #299218;
+}
+
+.suppr-film {
+	margin: 0 auto;
+	padding: 1em;
+	width: calc(100% - 2em);
+	max-width: 300px;
+	position: fixed;
+	top: 1em;
+	left: 1em;
+	right: 1em;
+	display: none;
+	text-align: center;
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .7);
+	z-index: 2;
+
+	@include bp(1000) {
+		top: 3em;
+	}
+
+	p {
+		margin: 0 0 1em;
+		color: #555;
+		font-family: "aller", Arial, Sans-serif;
+		text-align: center;
+	}
+
+	.suppr-film__oui, .suppr-film__non {
+		margin: 0 .4em;
+		padding: .5em;
+		width: 80px;
+		display: inline-block;
+		font-family: "aller", Arial, Sans-serif;
+		@include pxrem(font-size, 14);
+		text-decoration: none;
+		color: #fff;
+		background: $main;
+		border: none;
+		border-radius: 3px;
+		-webkit-appearance: none;
+		cursor: pointer;
+
+		&:hover, &:focus {
+			background: darken($main, 5%);
+		}
+
+		@include bp(1000) {
+			@include pxrem(font-size, 16);		
+		}
+	}
+
+	.suppr-film__oui {
+
+		background: #af0808;
+
+		&:hover, &:focus {
+			background: darken(#af0808, 5%);
+		}
+	}
+}
+
+header {
+	padding: 4em 0;
+	position: relative;
+	background: $main;
+	text-align: center;
+	border-bottom: 2px solid darken($main, 10%);
+
+	@include bp(1000) {
+		padding: 5em 0;
+	}
+
+	.header__options {
+		position: absolute;
+		top: .7em;
+		right: .7em;
+		font-family: Icomoon;
+		@include pxrem(font-size, 16);
+
+		@include bp(1000) {
+			@include pxrem(font-size, 20);
+		}
+
+		a {
+			margin-left: .7em;
+			padding: .5em;
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			background: darken($main, 10%);
+
+			&:hover, &:focus {
+				background: darken($main, 15%);
+			}
+		}
+	}
+
+	h1 {
+		margin: 0;
+		display: inline-block;
+		font-family: "aller-bold", Arial, Sans-serif;
+		color: #fff;
+		text-shadow: 2px 2px 2px darken($main, 15%);
+
+		@include bp(1000) {
+			@include pxrem(font-size, 60);
+		}
+
+		&:after {
+			content: ':)';
+			margin-left: .5em;
+			display: inline-block;
+			position: relative;
+			top: -2px;
+			font-size: 50%;
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.search {
+	background: #ddd;
+	border-bottom: 2px solid darken(#ddd, 10%);
+
+	@include bp(700) {
+		text-align: center;
+	}
+
+	input, select {
+		padding: .6em;
+		height: 40px;
+		width: 100%;
+		font-family: "aller", Arial, Sans-serif;
+		@include pxrem(font-size, 14);
+		color: #555;
+		background: #fff;
+		border: 1px solid #bbb;
+		border-radius: 3px;
+
+		@include bp(700) {
+			margin-top: 0;
+			width: 30%;
+		}
+
+		@include bp(1000) {
+			padding: .7em;
+			@include pxrem(font-size, 16);			
+			height: 50px;			
+		}
+	}
+
+	select {
+		margin-top: 1em;
+
+		@include bp(700) {
+			margin-left: 3.333333%;
+			margin-top: 0;
+		}
+	}
+}
+
+.search__inner {
+	margin: 0 auto;
+	padding: 1em;
+	max-width: 800px;
+
+	@include bp(1000) {
+		padding: 2em;
+	}
+}
+
+ul {
+	margin: 0 auto;
+	padding: 1em 1em 0;
+	max-width: 1400px;
+	list-style-type: none;
+
+	@include bp(800) {
+		padding: 0 1% 0;
+
+		&:after {
+			content: '';
+			display: block;
+			padding-bottom: 2%;
+		}
+	}
+}
+
+li {
+	@include pxrem(margin-bottom, 16);
+	padding: 1em;
+	position: relative;
+	text-align: right;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+
+	@include bp(800) {
+		margin: 2% 1% 0;
+		display: inline-block;
+		vertical-align: top;
+		width: 48%;
+	}
+
+	@include bp(1000) {
+		padding: 1.5em;
+	}
+
+	.close-2 {
+		position: absolute;
+		top: .3em;
+		right: .5em;
+		font-family: Icomoon;
+		@include pxrem(font-size, 12);
+
+
+		a {
+			text-decoration: none;
+			color: #bbb;
+
+			&:hover, &:focus {
+				color: #999;
+			}		
+		}
+
+		@include bp(1000) {
+			@include pxrem(font-size, 16);	
+		}
+	}
+
+	h2 {
+		margin: 0;
+		padding-right: 1.5em;
+		font-family: "aller-bold", Arial, Sans-serif;
+		@include pxrem(font-size, 20);
+		line-height: 1.2;
+		text-align: left;
+		color: $main;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		word-wrap: normal;
+		overflow: hidden;
+
+		@include bp(1000) {
+			@include pxrem(font-size, 32);			
+		}
+	}
+
+	p {
+		margin: 0;
+		font-family: "aller-italic", Arial, Sans-serif;
+		text-align: left;
+		color: #777;
+	}
+
+	.voir-lien, span {
+		margin-top: 1em;
+		padding: .5em .7em;
+		min-width: 100px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		color: #fff;
+		background: $main;
+		border-radius: 3px;
+		-webkit-font-smoothing: antialiased;
+
+		@include bp(1000) {
+			min-width: 120px;
+		}
+	}
+
+	.voir-lien:hover, .voir-lien:focus {
+		background: darken($main, 5%);
+	}
+
+	span {
+		color: #888;
+		background: #d1d1d1;
+	}
+}
+
+.chargement {
+	margin: 3em 0;
+	text-align: center;
+}
+
+.ie7 header, .ie8 header, .ie9 header,
+.ie7 .search, .ie8 .search, .ie9 .search,
+.ie7 ul, .ie8 ul, .ie9 ul
+ {
+	display: none;
+}
+
+.ie-warning {
+	margin: 1em auto;
+	padding: 1em;
+	max-width: 800px;
+	display: none;
+	border: 1px solid #ccc;
+}
+
+.ie7 .ie-warning, .ie8 .ie-warning, .ie9 .ie-warning {
+	display: block;
+}
+
+$spinner-background-color: #ddd !default;
+$spinner-stroke: 2px !default;
+$spinner-sides: 1 !default;
+
+@mixin spinner(
+	$color: $main,
+	$background-color: $spinner-background-color,
+	$stroke: $spinner-stroke,
+	$sides: $spinner-sides
+) {
+	margin: 1em auto;
+	border: $stroke solid $background-color;
+	font-size: 30px;
+	width: 1em;
+	height: 1em;
+	border-radius: .5em;
+	-webkit-animation: spin 1s linear infinite;
+	-moz-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+	border-top-color: $color;
+	@if $sides >= 2 {
+		border-right-color: $color;
+	}
+	@if $sides >= 3 {
+		border-bottom-color: $color;
+	}
+
+	@include bp(1000) {
+		margin: 2em auto;
+		font-size: 40px;
+	}
+}
+
+.spinner {
+  @include spinner();
+}
+
+@keyframes spin {
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+.edit-film {
+
+	.close {
+		top: -.15em;
+	}
+}
+
+
+

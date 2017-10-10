@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html class="ie9" lang="fr"> <![endif]-->
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>FOX CSS - A light CSS framework</title>
+  <meta name="description" content="FOX CSS - A light CSS framework by Ronan Levesque" />
+  <meta name="author" content="Ronan Levesque" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,500" />
+  <link rel="stylesheet" href="../fox.css" />
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="/js/modernizr.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header role="banner">
+    <a href="/projets/fox-css"><h1 class="logo">FOX CSS</h1></a>
+    <div class="wrap-icon">
+      <div class="menu-icon">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </header>
+</header>
+<nav class="main-nav" role="navigation">
+  <ul class="main-nav__ul">
+    <li><a href="">Documents</a></li><!--
+    --><li><a href="https://github.com/ronanlevesque/FOX-CSS">View on Github</a></li><!--
+  --><li><a href="https://github.com/ronanlevesque/FOX-CSS/archive/master.zip" class="last">Download</a></li>
+</ul>
+</nav>
+<h2 class="intro">Documents</h2>
+<div class="docs" role="main">
+  <aside>
+    <h3>Table of contents</h3>
+    <ol>
+      <li><a href="#">Introduction</a></li>
+      <li><a href="#resets">Resets</a></li>
+      <li><a href="#normalize">Normalize</a></li>
+      <li><a href="#utilities">Utilities</a></li>
+      <li><a href="#grid-system">Grid system</a></li>
+      <li><a href="#mixins">Mixins</a></li>
+    </ol>
+  </aside><article>
+<div class="fox-boilerplate"><a href="http://ronanlevesque.fr/fox-bp">FOX CSS now has its own Gulp/Sass Boilerplate. Try it ?</a><a class="close" id="close" href="#">&times;</a></div>
+
+<h3 id="introduction">1. Introduction</h3>
+
+<p>FOX CSS was created after I realized most famous CSS frameworks out there were not the perfect tools for the projects I was working on &ndash; their size and huge content being the main issue for me. I really wanted a light yet powerful base for both my personal and professional projects.</p>
+
+<p>This is the reason why I decided to build something which would gather the following characteristics :</p>
+
+<ul>
+    <li>"mobile first" approach</li>
+    <li>support for IE9+</li>
+    <li>HTML5 ready</li>
+    <li>modular template</li>
+    <li>light resets</li>
+    <li>inconsistency bugs fixes</li>
+    <li>efficient grid system</li>
+</ul>
+
+<p>The whole framework is built with <a href="http://sass-lang.com">Sass</a> (but can be used as a Vanilla CSS framework too). Sass is a CSS preprocessor which brings things like variables, operators or nesting into CSS. A part of FOX CSS is composed of what Sass calls "mixins". For more information, make sure to check the <a href="#mixins">dedicated section</a>.</p>
+
+<p>FOX CSS is divided into several partials. Each one of them (minus <code>mixins</code> and <code>variables</code>) can easily be removed from the framework in case you don't need it.</p>
+
+<h3 id="reset-normalize">2. Resets</h3>
+
+<p>Some resets out there seem a bit too strong. I consider that not every element needs to be reset. This is an idea I first saw with <a href="">KNACSS</a>, a french CSS framework, and I decided to follow the same path.</p>
+
+<p>No more annoying padding + width calculations:</p>
+
+<pre><code>* {
+  box-sizing: border-box;
+}</code></pre>
+
+<p>Default body styling:</p>
+
+<pre><code>body {
+  font-family: Arial, Helvetica, Sans-serif;
+  color: #000;
+  background: #fff;
+}</code></pre>
+
+<p>Smooth resets on margins and paddings (elements such as <code>p</code> or <code>li</code> will keep their default behavior):</p>
+
+<pre><code>html, body, blockquote, form {
+  margin: 0;
+  padding: 0;
+}</code></pre>
+
+<p>Max-size and auto-height resize:</p>
+
+<pre><code>blockquote, code, embed, iframe, img, input, object, pre, table, td, textarea, video {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+
+<p>Remove unwanted borders:</p>
+
+<pre><code>a img, form, fieldset {
+  border: none;
+}</code></pre>
+
+<p>Form styling:</p>
+
+<pre><code>input, button, select {
+  vertical-align: middle;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}</code></pre>
+
+<p>Browsers consistency:</p>
+
+<pre><code>abbr {
+  cursor: help;
+  border-bottom: 1px dotted #bbb;
+}</code></pre>
+
+<p>Give child elements their parents size:</p>
+
+<pre><code>blockquote p, button, input, li h1, li h2, li h3, li h4, li h5, li h6, li li, li p, select, td p, th p {
+  font-size: 100%;
+}</code></pre>
+
+<h3 id="normalize">3. Normalize</h3>
+
+<p>In addition to the light resets, I've also included <a href="http://necolas.github.io/normalize.css/">Normalize v3.0.2</a>, which purpose is to make browsers render all elements more consistently.</p>
+
+<p>If you want more details about it, I suggest you take a look at the <a href="https://github.com/necolas/normalize.css/">Github Repository</a>.</p>
+
+<h3 id="utilities">4. Utilities</h3>
+
+<p>FOX CSS comes with a few global utilities. Each one is namespaced with <code>fx-</code> to avoid possible conflicts with other CSS libraries.</p>
+
+<p>Align text to the left, right, or center it:</p>
+
+<pre><code>.fx-txt-left {
+  text-align: left;
+}
+
+.fx-txt-right {
+  text-align: right;
+}
+
+.fx-txt-center {
+  text-align: center;
+}</code></pre>
+
+<p>Support for text ellipsis:</p>
+
+<pre><code>.fx-ellip {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}</code></pre>
+
+<p>Align blocks to the left, right or center them:</p>
+
+<pre><code>.fx-left {
+  float: left;
+}
+
+.fx-right {
+  float: right;
+}
+
+.fx-center {
+  margin: auto;
+}</code></pre>
+
+<p>Support for clearfix:</p>
+
+<pre><code>.fx-clearfix:before, .fx-clearfix:after {
+  content: "";
+  display: table;
+}
+
+.fx-clearfix:after {
+  clear: both;
+}</code></pre>
+
+<p>Or use this after floated elements:</p>
+
+<pre><code>.fx-clear {
+  clear: both;
+}</code></pre>
+
+<p>Various display options:</p>
+
+<pre><code>.fx-inline {
+  display: inline;
+}
+
+.fx-inlineb {
+  display: inline-block;
+}
+
+.fx-valign {
+  vertical-align: middle;
+}
+
+.fx-hidden {
+  position: absolute;
+  left: -9999px;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.fx-no-display {
+  display: none;
+}</code></pre>
+
+<h3 id="grid-system">5. Grid system</h3>
+
+<p>FOX CSS provides a solid responsive grid system based on Flexbox. It also comes with a fallback solution for IE9 (you'll need to use <a href="#grid-ie9">conditional comments</a> to activate it).</p>
+
+<p>Default grid:</p>
+
+<div class="row-example">
+  <div class="fx-row">
+    <div class="fx-col-50-xs"><span>1</span></div>
+    <div class="fx-col-50-xs"><span>2</span></div>
+  </div><div class="fx-row">
+    <div class="fx-col-100-xs"><span>3</span></div>
+  </div>
+</div>
+
+<pre><code>&lt;div class="fx-row"&gt;
+  &lt;div class="fx-col-50-xs"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-50-xs"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="fx-row"&gt;
+  &lt;div class="fx-col-100-xs"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Let Flexbox decide the right size:</p>
+
+<div class="row-example">
+  <div class="fx-row">
+    <div class="fx-col"><span>Some content</span></div>
+    <div class="fx-col"><span>This is some content with more text, bla bla bla bla bla !</span></div>
+  </div>
+</div>
+
+<pre><code>&lt;div class="fx-row"&gt;
+  &lt;div class="fx-col"&gt;&lt;span&gt;Some content&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col"&gt;&lt;span&gt;This is some content with more text, bla bla bla bla !&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Responsive grid (resize!). Please note that each class with a size mentioned in it can be used responsively.</p>
+
+<div class="row-example">
+  <div class="fx-row">
+    <div class="fx-col-100-xs fx-col-30-s"><span>1</span></div>
+    <div class="fx-col-100-xs fx-col-70-s"><span>2</span></div>
+  </div>
+  <div class="fx-row">
+    <div class="fx-col-100-xs fx-col-60-m"><span>3</span></div>
+    <div class="fx-col-100-xs fx-col-40-m"><span>4</span></div>
+  </div>
+</div>
+
+<pre><code>&lt;div class="fx-row"&gt;
+  &lt;div class="fx-col-100-xs fx-col-30-s"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-100-xs fx-col-70-s"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="fx-row"&gt;
+  &lt;div class="fx-col-100-xs fx-col-60-m"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-100-xs fx-col-40-m"&gt;&lt;span&gt;4&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Items aligned to the left, center, right, or with space around or between them:</p>
+
+<div class="row-example">
+  <div class="fx-row fx-row-start-xs">
+    <div class="fx-col-25-xs"><span>1</span></div>
+    <div class="fx-col-25-xs"><span>2</span></div>
+    <div class="fx-col-25-xs"><span>3</span></div>
+  </div>
+</div>
+
+<div class="row-example">
+  <div class="fx-row fx-row-center-xs">
+    <div class="fx-col-25-xs"><span>4</span></div>
+    <div class="fx-col-25-xs"><span>5</span></div>
+    <div class="fx-col-25-xs"><span>6</span></div>
+  </div>
+</div>
+
+<div class="row-example">
+  <div class="fx-row fx-row-end-xs">
+    <div class="fx-col-25-xs"><span>7</span></div>
+    <div class="fx-col-25-xs"><span>8</span></div>
+    <div class="fx-col-25-xs"><span>9</span></div>
+  </div>
+</div>
+
+<div class="row-example">
+  <div class="fx-row fx-row-between-xs">
+    <div class="fx-col-25-xs"><span>1</span></div>
+    <div class="fx-col-25-xs"><span>2</span></div>
+    <div class="fx-col-25-xs"><span>3</span></div>
+  </div>
+</div>
+
+<div class="row-example">
+  <div class="fx-row fx-row-around-xs">
+    <div class="fx-col-25-xs"><span>1</span></div>
+    <div class="fx-col-25-xs"><span>2</span></div>
+    <div class="fx-col-25-xs"><span>3</span></div>
+  </div>
+</div>
+
+<pre><code>&lt;div class="fx-row fx-row-start-xs"&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="fx-row fx-row-center-xs"&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;7&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;8&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;9&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="fx-row fx-row-end-xs"&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;4&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;5&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;6&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="fx-row fx-row-between-xs"&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="fx-row fx-row-around-xs"&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-25-xs"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Reversed items:</p>
+
+<div class="row-example">
+  <div class="fx-row fx-row-reverse-xs">
+    <div class="fx-col-33-xs"><span>1</span></div>
+    <div class="fx-col-33-xs"><span>2</span></div>
+    <div class="fx-col-33-xs"><span>3</span></div>
+  </div>
+</div>
+
+<pre><code>&lt;div class="fx-row fx-row-reverse-xs"&gt;
+  &lt;div class="fx-col-33-xs"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-33-xs"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-33-xs"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Item aligned to the top, center, or bottom:</p>
+
+<div class="row-example">
+  <div class="fx-row" style="height:200px;">
+    <div class="fx-col fx-col-top-xs"><span>1</span></div>
+    <div class="fx-col fx-col-center-xs"><span>2</span></div>
+    <div class="fx-col fx-col-bottom-xs"><span>3</span></div>
+  </div>
+</div>
+
+<pre><code>&lt;div class="fx-row" style="height:200px;"&gt;
+  &lt;div class="fx-col-top-xs"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-center-xs"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+  &lt;div class="fx-col-bottom-xs"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>Easy customization of gutter and grid breakpoints in <code>_variables.scss</code>:</p>
+
+<pre><code class="sass">// Change those numbers as you want
+$fx-grid-gutter: 16;
+$fx-grid-breakpoints: (s: 768, m: 940, l: 1200);</code></pre>
+
+<p id="grid-ie9">Fallback solution for IE9 : add the following line in your HTML, right above <code>&lt;html&gt;</code>.</p>
+
+<pre><code>&lt;!--[if IE 9]&gt; &lt;html class="ie9"&gt; &lt;![endif]--&gt;
+<html lang="fr"></code></pre>
+
+<h3 id="mixins">6. Mixins</h3>
+
+<p>Mixins let you create groups of CSS declarations that can easily be reused throughout your site. If you need more details about them, I suggest you check their <a href="http://sass-lang.com/guide">Sass documentation</a> before reading further.</p>
+
+<p>Min and max-width media queries :</p>
+
+<pre><code class="sass">@mixin fx-bp($point)
+@mixin fx-bpmax($point)</code></pre>
+
+<pre><code class="sass">// USAGE
+
+@include fx-bp(1200) {
+    p {color: red;}
+}
+
+@include fx-bpmax(320) {
+    p {color: blue;}
+}
+
+// OUTPUT
+
+@media screen and (min-width: 75em) {
+    p {color: red;}
+}
+
+@media screen and (max-width: 20em) {
+    p {color: blue;}
+}</code></pre>
+
+<p>High-Definition background images :</p>
+
+<pre><code>@mixin fx-img-2x($image, $width, $height)</code></pre>
+<pre><code class="sass">// USAGE
+
+.box {
+    @include fx-img-2x('back.jpg', 300px, 200px);
+}
+
+// OUTPUT
+
+@media (-moz-min-device-pixel-ratio: 1.3),
+(-o-min-device-pixel-ratio: 2.6 / 2),
+(-webkit-min-device-pixel-ratio: 1.3),
+(min-device-pixel-ratio: 1.3),
+(min-resolution: 1.3dppx) {
+    .box {
+        background-image: url("back.jpg");
+        background-size: 300px 200px;
+    }
+}
+</code></pre>
+</article></div>
+
+  <footer role="contentinfo">
+      &copy; <a href="http://ronanlevesque.fr">Ronan Levesque</a> 2016<br>
+      <a href="https://twitter.com/ronanlevesque" class="twitter-follow-button" data-show-count="false">Follow @ronanlevesque</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </footer>
+  <script src="../main.js"></script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35080408-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+
+</html>

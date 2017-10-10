@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="utf-8" />
+<title>Exemple animations CSS3 &ndash; Ronan Levesque</title>
+<meta name="description" content="" />
+
+<style type="text/css">
+
+.blue {
+	display: inline-block;
+	-webkit-animation: bluemove 3s infinite;
+	-moz-animation: bluemove 3s infinite;
+	animation: bluemove 3s infinite;
+}
+
+@keyframes bluemove {
+	from {transform: translateY(-5px);; color: black;}
+	50% {transform: translateY(5px);; color: #1785BF;}
+	to {transform: translateY(-5px);; color: black;}
+}
+
+@-webkit-keyframes bluemove /* Safari and Chrome */ {
+	from {-webkit-transform: translateY(-5px);; color: black;}
+	50% {-webkit-transform: translateY(5px);; color: #1785BF;}
+	to {-webkit-transform: translateY(-5px);; color: black;}
+}
+
+@-moz-keyframes bluemove /* Firefox */ {
+	from {-moz-transform: translateY(-5px);; color: black;}
+	50% {-moz-transform: translateY(5px);; color: #1785BF;}
+	to {-moz-transform: translateY(-5px);; color: black;}
+}
+
+@-o-keyframes bluemove /* Opera */ {
+	from {transform: translateY(-5px);; color: black;}
+	50% {transform: translateY(5px);; color: #1785BF;}
+	to {transform: translateY(-5px);; color: black;}
+}
+
+/*Styles additionnels*/
+
+body {
+	margin: 0;
+	background: #eee;
+}
+
+h2 {
+	margin-top: 1em;
+	font-size: 5em;
+	font-family: Arial;
+	text-align: center;
+}
+
+#cred {
+text-align : center;
+font-family : Arial, sans-serif;
+font-size : 0.8em;
+padding : 5px 0;
+background : #eaeaea;
+width : 160px;
+position : fixed;
+right : 20px;
+bottom : 20px;
+}
+
+#logo {
+width : 60px;
+height : 60px;
+vertical-align : -20px;
+margin : 0 0.5em 0 0;
+}
+
+h1 {
+margin : 0.7em;
+font-family : Arial, sans-serif;
+color : #555;
+}
+
+h1 a {
+color : #555;
+}
+
+a img {
+border : none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1><img src="/img/logo-ronan-levesque.svg" alt="logo" id="logo" />Animations en CSS - <small><a href="http://ronanlevesque.fr/les-animations-en-css/">Revenir &agrave; l'article</a></small></h1>
+
+<h2>Big<span class="blue">Blue</span></h2>
+
+</body>
+</html>
