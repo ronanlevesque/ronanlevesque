@@ -1,21 +1,23 @@
 .Cta {
-  padding: .7em 2em;
+  padding: 0.7em 2em;
   display: inline-block;
   position: relative;
   @include fluid-type(font-size, 320, 1920, 10, 16);
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   color: darken($dark-blue, 5%);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     &:after {
       opacity: 1;
     }
   }
 
-  &:before, &:after {
+  &:before,
+  &:after {
     content: '';
     position: absolute;
     z-index: -1;
@@ -33,7 +35,7 @@
 
   &:after {
     opacity: 0;
-    transition: opacity .2s ease-out;
+    transition: opacity 0.2s ease-out;
     background-image: url(/assets/img/backgrounds/brush-cta-hover.svg);
   }
 

@@ -9,7 +9,6 @@
   border-color: lighten($dark-blue, 10%);
 }
 
-
 .Intro-text {
   position: relative;
   margin: auto;
@@ -33,7 +32,7 @@
   @include fluid-type(font-size, 320, 1920, 14, 28);
   @include fluid-type(margin-bottom, 320, 1920, 15, 40);
   font-weight: normal;
-  letter-spacing: .11em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
   color: $light-blue;
 }
@@ -44,7 +43,7 @@
   left: -150%;
   right: -150%;
   transform: translateY(-50%);
-  opacity: .1;
+  opacity: 0.1;
 
   &:before {
     content: '';

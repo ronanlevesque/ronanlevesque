@@ -18,4 +18,4 @@ User-agent: Mediapartners-Google*
 Disallow:
 Allow: /*
 
-Sitemap: http://www.ronanlevesque.fr/sitemap.xml
+Sitemap: http://ronanlevesque.fr/sitemap.xml

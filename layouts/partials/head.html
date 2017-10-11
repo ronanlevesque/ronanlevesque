@@ -25,9 +25,14 @@
   <meta name="msapplication-config" content="/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <script>
-    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
-    if (localStorage.getItem('fontsLoaded')) { document.documentElement.className += ' fonts-loaded'; }
-  </script>
+  document.documentElement.className = document.documentElement.className.replace(
+  /(\s|^)no-js(\s|$)/,
+  '$1js$2'
+);
+if (localStorage.getItem('fontsLoaded')) {
+  document.documentElement.className += ' fonts-loaded';
+}
+</script>
 </head>
 
 <body>

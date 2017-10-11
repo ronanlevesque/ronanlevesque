@@ -3,7 +3,7 @@
 }
 
 html {
-  font-size: calc(1em * .625);
+  font-size: calc(1em * 0.625);
 }
 
 body {
@@ -21,7 +21,8 @@ img {
   height: auto;
 }
 
-h1, h2 {
+h1,
+h2 {
   line-height: 1.2;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }

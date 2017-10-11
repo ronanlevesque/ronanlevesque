@@ -1,17 +1,22 @@
 @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
   @each $property in $properties {
-    #{$property}: $min-value * .1rem;
+    #{$property}: $min-value * 0.1rem;
   }
 
   @media screen and (min-width: $min-vw / 16 + em) {
     @each $property in $properties {
-      #{$property}: calc(#{$min-value * .1rem} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}px) / #{strip-unit($max-vw - $min-vw)});
+      #{$property}: calc(
+        #{$min-value * 0.1rem} + #{strip-unit($max-value - $min-value)} *
+          (
+            100vw - #{$min-vw}px
+          ) / #{strip-unit($max-vw - $min-vw)}
+      );
     }
   }
 
   @media screen and (min-width: $max-vw / 16 + em) {
     @each $property in $properties {
-      #{$property}: $max-value * .1rem;
+      #{$property}: $max-value * 0.1rem;
     }
   }
 }
@@ -53,7 +58,7 @@
 @mixin fontvariants {
   font-kerning: normal;
   font-variant-ligatures: common-ligatures, contextual;
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
 
 @mixin antialiased {

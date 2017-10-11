@@ -1,7 +1,7 @@
 import FontFaceObserver from 'fontfaceobserver';
 
 function testFonts() {
-  if (document.documentElement.className.indexOf('fonts-loaded' ) > -1) {
+  if (document.documentElement.className.indexOf('fonts-loaded') > -1) {
     return;
   }
 

@@ -1,15 +1,15 @@
-@import "settings/variables";
-@import "settings/mixins";
-@import "settings/global";
+@import 'settings/variables';
+@import 'settings/mixins';
+@import 'settings/global';
 
-@import "vendor/highlight";
-@import "vendor/normalize";
+@import 'vendor/highlight';
+@import 'vendor/normalize';
 
-@import "components/Intro";
-@import "components/Cta";
-@import "components/Wrapper";
-@import "components/MainHeader";
-@import "components/Logo";
-@import "components/NavBar";
-@import "components/Article";
-@import "components/BorderedImg";
+@import 'components/Intro';
+@import 'components/Cta';
+@import 'components/Wrapper';
+@import 'components/MainHeader';
+@import 'components/Logo';
+@import 'components/NavBar';
+@import 'components/Article';
+@import 'components/BorderedImg';

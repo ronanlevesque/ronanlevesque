@@ -22,13 +22,14 @@
   @include dosis;
   @include fluid-type(font-size, 320, 1920, 14, 22);
   font-weight: bold;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   text-decoration: none;
   text-transform: uppercase;
   color: $white;
 
   &.-selected {
-    &:before, &:after {
+    &:before,
+    &:after {
       padding-bottom: 12%;
       position: absolute;
       top: 120%;
@@ -49,7 +50,7 @@
       width: 70%;
       opacity: 0;
       background-color: $dark-blue;
-      animation: NavBarAfter .4s ease-out 1;
+      animation: NavBarAfter 0.4s ease-out 1;
       animation-fill-mode: both;
       transform: translateX(50%) skew(-15deg);
     }

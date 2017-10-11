@@ -361,7 +361,7 @@
   .cp_embed_wrapper {
     @include fluid-type(margin-top, 320, 1920, 20, 35);
     @include fluid-type(margin-bottom, 320, 1920, 20, 35);
-    line-height: .7;
+    line-height: 0.7;
   }
 
   .ArticlesList {
