@@ -28,15 +28,15 @@ La transition de l'un à l'autre semble également se faire relativement en douc
 
 On commence par télécharger et installer Hugo&nbsp;:
 
-<pre><code class="nohighlight">brew install hugo</code></pre>
+<pre><code class="bash">brew install hugo</code></pre>
 
 Ou pour ceux qui sont sous Windows,
 
-<pre><code class="nohighlight">choco install hugo -confirm</code></pre>
+<pre><code class="bash">choco install hugo -confirm</code></pre>
 
 Ensuite, pour importer le contenu d'un site Jekyll vers un site Hugo, il existe une autre commande&nbsp;:
 
-<pre><code class="nohighlight">hugo import jekyll [chemin-jekyll] [chemin-cible]</code></pre>
+<pre><code class="bash">hugo import jekyll [chemin-jekyll] [chemin-cible]</code></pre>
 
 Qui va créer l'arborescence suivante&nbsp;:
 
@@ -52,11 +52,11 @@ Dans mon cas, les articles ont été placés dans `content/post`, et les fichier
 
 Notez qu'il est aussi possible de créer un nouveau site directement si il vous prend l'envie saugrenue de migrer tous vos articles à la main&nbsp;:
 
-<pre><code class="nohighlight">hugo new site mon-site</code></pre>
+<pre><code class="bash">hugo new site mon-site</code></pre>
 
 Pour finir on lance un serveur pour surveiller tout nouveau changement (accessible sur `localhost:1313`) &nbsp;:
 
-<pre><code class="nohighlight">hugo server</code></pre>
+<pre><code class="bash">hugo server</code></pre>
 
 ## Création de contenu
 
@@ -211,7 +211,7 @@ Je ne me suis pas encore penché sur trois dossiers présents à la racine d'un 
 
 Cette fonctionnalité permet de créer du nouveau contenu en utilisant un front-matter prédéfini. Par exemple, j'ai créé un archétype spécifique pour mes articles comme ceci&nbsp;:
 
-<pre><code class="nohighlight">touch archetypes/articles.md</code></pre>
+<pre><code class="bash">touch archetypes/articles.md</code></pre>
 
 Celui-ci contient le front-matter que je souhaite utiliser pour toute nouvelle création.
 
@@ -224,7 +224,7 @@ tags: []
 
 Puis&nbsp;:
 
-<pre><code class="nohighlight">hugo new articles/mon-nouvel-article</code></pre>
+<pre><code class="bash">hugo new articles/mon-nouvel-article</code></pre>
 
 ### Static
 

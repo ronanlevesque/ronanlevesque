@@ -11,7 +11,7 @@ J'avais depuis quelques mois un peu mis mon site entre parenthèses, pour des ra
 
 ---
 
-Le but de la refonte était de faire de ce site quelque chose de clair et simple, centré autour de son contenu. J'ai suivi les grandes tendances du moment en adoptant un design presque flat, et les couleurs qui vont avec (Bleu <em>Belize Hole</em>, cf. <a href="http://flatuicolors.com/">Flat UI Colors</a>). Mais bon j'imagine que cette mode ne durera pas, et me connaissant dans quelques mois le site aura droit à une nouvelle refonte&nbsp;:)
+Le but de la refonte était de faire de ce site quelque chose de clair et simple, centré autour de son contenu. J'ai suivi les grandes tendances du moment en adoptant un design presque flat, et les couleurs qui vont avec (Bleu *Belize Hole*, cf. <a href="http://flatuicolors.com/">Flat UI Colors</a>). Mais bon j'imagine que cette mode ne durera pas, et me connaissant dans quelques mois le site aura droit à une nouvelle refonte&nbsp;:)
 
 ## La page d'accueil
 
@@ -33,7 +33,7 @@ Comme je le disais, le but du blog est de mettre en avant son contenu. J'ai fait
 
 ## Navigation & recherche
 
-La barre de recherche a été regroupée avec la navigation dans un menu <em>slider</em> à la Facebook, accessible via l'icône de menu en haut à gauche. Cela permet de se débarrasser de ces éléments pour mieux se centrer sur le contenu.
+La barre de recherche a été regroupée avec la navigation dans un menu *slider* à la Facebook, accessible via l'icône de menu en haut à gauche. Cela permet de se débarrasser de ces éléments pour mieux se centrer sur le contenu.
 
 ---
 

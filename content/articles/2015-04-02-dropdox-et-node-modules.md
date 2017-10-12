@@ -18,10 +18,10 @@ Mettons que ayez un projet Gulp avec son `package.json`. Une simple commande `np
 
 Ensuite, dans les préférences de Dropdox, direction `Compte > Synchronisation sélective` et décochez le dossier `node_modules`&nbsp;:
 
-<img src="/assets/img/screen-dropbox-1.png" alt="Préférences Dropbox" style="border: none;">
+![Préférences Dropbox](/assets/img/screen-dropbox-1.png)
 
 Celui-ci va être supprimé du dossier dans lequel il se trouvait. Il ne vous reste plus qu'à lancer votre `npm install`; lorsque ceci est fait, le dossier node_modules apparaîtra comme ignoré par Dropbox&nbsp;:
 
-<img src="/assets/img/screen-node-modules.png" alt="Dossier node_modules" style="border: none;">
+![Dossier node_modules](/assets/img/screen-node-modules.png)
 
 La démarche peut sembler un brin fastidieuse, mais c'est à ma connaissance la seule solution pour éviter d'avoir à synchroniser à chaque fois vos `node_modules`.

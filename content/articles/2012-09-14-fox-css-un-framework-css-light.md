@@ -12,19 +12,17 @@ J'ai bossé ces dernières semaines sur la création d'un framework CSS adapté 
 
 ---
 
-L'approche de <a href="http://knacss.com">KNACSS</a> est à mes yeux l'idéal&nbsp;: on a une base solide mais simple, pas trop contraignante, et légère. Elle est facilement modulable, bref elle n'a que des avantages. J'ai donc suivi ce modèle pour créer mon framework. En l'écrivant, j'ai voulu qu'il réponde aux impératifs suivants:
+L'approche de [KNACSS](http://knacss.com) est à mes yeux l'idéal&nbsp;: on a une base solide mais simple, pas trop contraignante, et légère. Elle est facilement modulable, bref elle n'a que des avantages. J'ai donc suivi ce modèle pour créer mon framework. En l'écrivant, j'ai voulu qu'il réponde aux impératifs suivants:
 
-<ul>
-	<li>un framework facilement adaptable selon les contraintes</li>
-	<li>des resets légers, réduits au minimum</li>
-	<li>la correction de quelques inconsistances entre les différents navigateurs</li>
-	<li>l'intégration de HTML5</li>
-	<li>le passage à <code>border-box</code> pour se simplifier la vie</li>
-	<li>différentes possibilités de mise en page (<code>float</code>, <code>inline-block</code>, colonnes en % et px...)</li>
-	<li>un template "mobile-first" pour le RWD</li>
-	<li>l'ajout de styles basiques pour couleurs / boutons</li>
-	<li>le support de IE, à partir de IE7 (c'est une volonté personnelle de mon côté de complètement abandonner IE6 dans mes projets)</li>
-</ul>
+* un framework facilement adaptable selon les contraintes
+* des resets légers, réduits au minimum
+* la correction de quelques inconsistances entre les différents navigateurs
+* l'intégration de HTML5
+* le passage à <code>border-box</code> pour se simplifier la vie
+* différentes possibilités de mise en page (<code>float</code>, <code>inline-block</code>, colonnes en % et px...)
+* un template "mobile-first" pour le RWD
+* l'ajout de styles basiques pour couleurs / boutons
+* le support de IE, à partir de IE7 (c'est une volonté personnelle de mon côté de complètement abandonner IE6 dans mes projets)
 
 <p class="link"><a href="/fox-css/">Voir le Framework FOX CSS</a></p>
 
@@ -32,4 +30,4 @@ Je l'étofferai sans doute dans un futur plus ou moins proche. J'aimerais notamm
 
 ---
 
-<p class="info">Je vous invite fortement à aller consulter <a href="http://knacss.com">KNACSS</a>, l'exemple sur lequel je me suis appuyé pour la base de FOX CSS, et <a href="http://necolas.github.com/normalize.css/">Normalize</a>, dont le but est d'uniformiser les comportements entre différents navigateurs.</p>
+<p class="info">Je vous invite fortement à aller consulter <a href="http://knacss.com"></a>, l'exemple sur lequel je me suis appuyé pour la base de FOX CSS, et <a href="http://necolas.github.com/normalize.css/">Normalize</a>, dont le but est d'uniformiser les comportements entre différents navigateurs.</p>

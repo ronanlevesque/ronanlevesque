@@ -9,7 +9,7 @@ tags:
 title: Goodbye WordPress, hello Jekyll
 ---
 
-Cela fait un moment que je vois de plus en plus de bloggeurs tech se tourner vers <a href="http://jekyllrb.com/">Jekyll</a> comme solution de blogging et abandonner leur ancienne plateforme pour l'occasion (souvent Tumblr ou WordPress). Mon site ayant besoin d'un sacré rafraîchissement au niveau de son code, j'en ai donc profité pour faire d'un pierre deux coups et le basculer sous Jekyll. Je listerai ici tous les avantages que j'y ai trouvé a par rapport à mon ancien CMS.
+Cela fait un moment que je vois de plus en plus de bloggeurs tech se tourner vers [Jekyll](http://jekyllrb.com/) comme solution de blogging et abandonner leur ancienne plateforme pour l'occasion (souvent Tumblr ou WordPress). Mon site ayant besoin d'un sacré rafraîchissement au niveau de son code, j'en ai donc profité pour faire d'un pierre deux coups et le basculer sous Jekyll. Je listerai ici tous les avantages que j'y ai trouvé a par rapport à mon ancien CMS.
 
 ---
 
@@ -49,7 +49,7 @@ Jekyll peut être hébergé sur n'importe quel serveur qui peut servir des fichi
 
 ### Format d'écriture
 
-Dernier point fort de Jekyll, mais non pas le moindre&nbsp;: outre le format HTML, les articles ou pages peuvent être rédigés au format <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> ou <a href="http://fr.wikipedia.org/wiki/Textile_(langage)">Textile</a>. Jekyll s'occupera tout seul de les convertir en fichiers HTML.
+Dernier point fort de Jekyll, mais non pas le moindre&nbsp;: outre le format HTML, les articles ou pages peuvent être rédigés au format [Markdown](http://daringfireball.net/projects/markdown/syntax) ou [Textile](http://fr.wikipedia.org/wiki/Textile_(langage)). Jekyll s'occupera tout seul de les convertir en fichiers HTML.
 
 ## En conclusion
 

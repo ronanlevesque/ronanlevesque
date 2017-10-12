@@ -29,8 +29,8 @@ Je vais partir d'un modèle que j'ai hélas rencontré fréquemment par le pass�
 **Qu'est ce qui cloche avec cette façon de faire&nbsp;?** Le problème saute d'emblée aux yeux, l'équipe technique est intégrée en fin de boucle. Pour comprendre pourquoi cela est un gros souci, il est nécessaire de bien saisir la nuance entre responsive design et adaptive design. Rien de mieux qu'un schéma pour ça&nbsp;:
 
 <figure>
-	<img src="/assets/img/responsive-iceberg.jpg" alt="Responsive Iceberg">
-	<figcaption>Responsive Iceberg, &copy; Brad Frost</figcaption>
+  <img src="/assets/img/responsive-iceberg.jpg" alt="Responsive Iceberg">
+  <figcaption>Responsive Iceberg, &copy; Brad Frost</figcaption>
 </figure>
 
 Le responsive design n'est en réalité qu'une partie de ce qu'on appelle l'adaptive design. Celui-ci ajoute une forte touche de complexité qui ne doit pas être prise à la légère&nbsp;: gestion des performances, des médias (notamment images), primauté du contenu sur le contenant, chargement conditionnel, amélioration progressive etc.

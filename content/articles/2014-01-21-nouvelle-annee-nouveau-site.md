@@ -24,7 +24,7 @@ Chrome accuse un retard catastrophique sur ce point par rapport à Firefox ou IE
 
 ### 2ème point&nbsp;: Vanilla JS
 
-Exit jQuery, le JS de ce site ne sera plus que du Vanilla histoire de mettre en place de bonnes pratiques. A vrai dire, pour cette première version le JS du site est assez réduit. Entre autres détails, j'ai notamment appliqué à ma navigation sur mobile le principe de <em>toggle</em> d'un état en JS via l'attribut HTML5 `data-*`, comme recommandé dans cet excellent [article](http://toddmotto.com/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/) de Todd Motto.
+Exit jQuery, le JS de ce site ne sera plus que du Vanilla histoire de mettre en place de bonnes pratiques. A vrai dire, pour cette première version le JS du site est assez réduit. Entre autres détails, j'ai notamment appliqué à ma navigation sur mobile le principe de *toggle* d'un état en JS via l'attribut HTML5 `data-*`, comme recommandé dans cet excellent [article](http://toddmotto.com/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/) de Todd Motto.
 
 ## Regard vers le passé
 
@@ -32,31 +32,31 @@ J'ai créé ce site il y a maintenant près de deux ans; le moment semble bon po
 
 ### Version 1
 
-<p><img src="/assets/img/site-v1.jpg" alt="Site v1" style="border:none"></p>
+![Site v1](/assets/img/site-v1.jpg)
 
 ### Version 2
 
-<p><img src="/assets/img/site-v2.jpg" alt="Site v2" style="border:none"></p>
+![Site v2](/assets/img/site-v2.jpg)
 
 ### Version 3
 
-<p><img src="/assets/img/site-v3.jpg" alt="Site v3" style="border:none"></p>
+![Site v3](/assets/img/site-v3.jpg)
 
 ### Version 4
 
-<p><img src="/assets/img/site-v4.jpg" alt="Site v4" style="border:none"></p>
+![Site v4](/assets/img/site-v4.jpg)
 
 ### Version 5
 
-<p><img src="/assets/img/site-v5.jpg" alt="Site v5" style="border:none"></p>
+![Site v5](/assets/img/site-v5.jpg)
 
 ### Version 6
 
-<p><img src="/assets/img/site-v6.jpg" alt="Site v6" style="border:none"></p>
+![Site v6](/assets/img/site-v6.jpg)
 
 ### Version 7
 
-<p><img src="/assets/img/site-v7.jpg" alt="Site v7" style="border:none"></p>
+![Site v7](/assets/img/site-v7.jpg)
 
 ---
 

@@ -32,42 +32,42 @@ Si l'on considère en outre qu'un site doit en moyenne se charger en 1 seconde a
 
 L'idée est d'utiliser par défaut les polices *websafe* (cf. [CSS Font Stack](http://www.cssfontstack.com/)) et de prévoir une classe contenant les *webfonts*, par exemple&nbsp;:
 
-<pre><code class="css">body {
-  font-family: Sans-serif;
-}
+    body {
+      font-family: Sans-serif;
+    }
 
-.font-loaded {
-  font-family: 'Open Sans', Sans-serif;
-}</code></pre>
+    .font-loaded {
+      font-family: 'Open Sans', Sans-serif;
+    }
 
 On utilise ensuite le loader JS [Font Face Observer](https://github.com/bramstein/fontfaceobserver) créé par [Bram Stein](https://twitter.com/bram_stein) pour détecter le moment où toutes les *webfonts* seront loadées, et une fois que c'est fait on ajoute notre classe `font-loaded`&nbsp;:
 
-<pre><code class="js">(function(w) {
-  if (w.document.documentElement.className.indexOf('fonts-loaded') > -1) {
-  	return;
-  }
-  var fontA = new w.FontFaceObserver('Open Sans', {
-  	weight: 300
-  });
-  var fontB = new w.FontFaceObserver('Open Sans', {
-  	weight: 300,
-  	style: 'italic'
-  });
-  w.Promise
-  .all([fontA.check(), fontB.check()])
-  .then(function() {
-  	w.document.documentElement.className += ' fonts-loaded';
-    localStorage.setItem('fontsLoaded', true);
-  });
-}(this));</code></pre>
+    (function(w) {
+      if (w.document.documentElement.className.indexOf('fonts-loaded') > -1) {
+      	return;
+      }
+      var fontA = new w.FontFaceObserver('Open Sans', {
+      	weight: 300
+      });
+      var fontB = new w.FontFaceObserver('Open Sans', {
+      	weight: 300,
+      	style: 'italic'
+      });
+      w.Promise
+      .all([fontA.check(), fontB.check()])
+      .then(function() {
+      	w.document.documentElement.className += ' fonts-loaded';
+        localStorage.setItem('fontsLoaded', true);
+      });
+    }(this));
 
 L'approche de filament group privilégie l'utilisation de cookies, mais quant à moi j'ai préféré me rabattre sur *localStorage*. On crée avec celui-ci un item `fontsLoaded` grâce auquel on pourra ajouter dans notre `<head>` la classe `fonts-loaded` à notre html, comme ceci&nbsp;:
 
-<pre><code class="html">&lt;script&gt;
-  if (localStorage.getItem('fontsLoaded')) {
-    document.documentElement.className += ' fonts-loaded';
-  }
-&lt;/script&gt;</code></pre>
+    <script>
+      if (localStorage.getItem('fontsLoaded')) {
+        document.documentElement.className += ' fonts-loaded';
+      }
+    </script>
 
 Ainsi, tant que cet item sera encore présent dans notre *localStorage*, la classe en question sera appliquée avant le rendu de la page.
 

@@ -21,15 +21,15 @@ Je partage aujourd'hui une solution assez simple que l'on peut mettre en place a
 
 Celle-ci se base sur les formats date du système de templating <a href="http://liquidmarkup.org/">liquid</a> pour générer une ID. Ainsi, au lieu de :
 
-<pre><code class="html">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css"&gt;</code></pre>
+    <link rel="stylesheet" href="/css/myawesomestylesheet.css"&>
 
 Il nous suffira d'utiliser :
 
-<pre><code class="html">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css?v=&#123;&#123; site.time | date: '%y%m%d%k%M%S' &#125;&#125;"&gt;</code></pre>
+    <link rel="stylesheet" href="/css/myawesomestylesheet.css?v={{ site.time | date: '%y%m%d%k%M%S' }}">
 
 Ce qui générera, dans l'ordre : l'année, le mois, le jour, et l'heure avec minutes et secondes. Ainsi le résultat obtenu sera de ce type :
 
-<pre><code class="html">&lt;link rel="stylesheet" href="/css/myawesomestylesheet.css?v=141217192112"&gt;</code></pre>
+    <link rel="stylesheet" href="/css/myawesomestylesheet.css?v=141217192112">
 
 De cette manière, on est sûr d'avoir une ID *presque* unique puisqu'à chaque seconde passée elle sera différente.
 
@@ -41,8 +41,8 @@ En appliquant cette façon de faire, tous les fichiers HTML seront mis à jour a
 
 Je suis allé chercher du côté des plugins Jekyll et j'ai déniché [Jekyll-minibundle](https://github.com/tkareine/jekyll-minibundle), qui fait exactement ce que je cherche. Une fois le plugin installé, les *fingerprints* s'ajoutent de cette manière :
 
-<pre class="html"><code>&lt;link href="&#123;&#37; ministamp /_assets/css/fox.css /assets/css/fox.css &#37;&#125;" rel="stylesheet"&gt;</code></pre>
+    <link href="{% ministamp /_assets/css/fox.css /assets/css/fox.css %}" rel="stylesheet">
 
 Le premier lien est le fichier source, le deuxième est le fichier de destination. Le code généré donne ça :
 
-<pre class="html"><code>&lt;link href="/assets/css/fox-86e4c5e39ca8a41719996d783a87c702.css" rel="stylesheet"&gt;</code></pre>
+    <link href="/assets/css/fox-86e4c5e39ca8a41719996d783a87c702.css" rel="stylesheet">

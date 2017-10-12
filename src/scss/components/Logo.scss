@@ -3,6 +3,7 @@
 
   &.-header {
     @include fluid-type(width, 320, 1920, 25, 40);
+    height: auto;
   }
 
   &.-footer {
@@ -10,6 +11,7 @@
     margin-right: auto;
     @include fluid-type(margin-top, 320, 1920, 50, 160);
     @include fluid-type(width, 320, 1920, 15, 30);
+    height: auto;
     fill: lighten($dark-blue, 10%);
   }
 

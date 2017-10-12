@@ -16,62 +16,58 @@ Quelques lignes de jQuery suffisent pour appliquer à plusieurs colonnes la mêm
 
 On commence par sélectionner toutes nos div possédant la classe `.column`&nbsp;:
 
-<pre><code class="js">var column = document.querySelectorAll('.column');</code></pre>
+    var column = document.querySelectorAll('.column');
 
 Puis on crée la fonction qui va récupérer la taille maximum de `.column` et on applique cette taille à toutes les autres (on boucle à travers toutes nos `.column` grâce à `for`)&nbsp;:
 
-<pre><code class="js">function sameHeight(el) {
-  var maxHeight = 0;
-    for (var i = 0; i &lt; el.length; i++) {
-      thisHeight = el[i].clientHeight;
-      if(thisHeight > maxHeight) {
-        maxHeight = thisHeight;
-      }
+    function sameHeight(el) {
+      var maxHeight = 0;
+        for (var i = 0; i &lt; el.length; i++) {
+          thisHeight = el[i].clientHeight;
+          if(thisHeight > maxHeight) {
+            maxHeight = thisHeight;
+          }
+        }
+        for (var i = 0; i &lt; el.length; i++) {
+          el[i].style.height = maxHeight + 'px';
+        }
     }
-    for (var i = 0; i &lt; el.length; i++) {
-      el[i].style.height = maxHeight + 'px';
-    }
-}
-</code></pre>
 
 La fonction n'est appelée qu'au dessus d'une certaine résolution&nbsp;:
 
-<pre><code class="js">if (window.matchMedia("(min-width: 30em)").matches) {
-  sameHeight(column);
-}
-</code></pre>
+    if (window.matchMedia("(min-width: 30em)").matches) {
+      sameHeight(column);
+    }
 
 Histoire de garder tout ça propre, on applique une fonction au resize de la fenêtre, tout en continuant de prendre en compte nos media queries&nbsp;:
 
-<pre><code class="js">window.addEventListener('resize', function () {
-  if (window.matchMedia("(min-width: 30em)").matches) {
-    for (var i = 0; i &lt; column.length; i++) {
-      column[i].style.height = 'auto';
-    }
-    sameHeight(column);
-  }
-  else {
-    for (var i = 0; i &lt; column.length; i++) {
-      column[i].style.height = 'auto';
-    }
-  }
-}, false);
-</code></pre>
+    window.addEventListener('resize', function () {
+      if (window.matchMedia("(min-width: 30em)").matches) {
+        for (var i = 0; i &lt; column.length; i++) {
+          column[i].style.height = 'auto';
+        }
+        sameHeight(column);
+      }
+      else {
+        for (var i = 0; i &lt; column.length; i++) {
+          column[i].style.height = 'auto';
+        }
+      }
+    }, false);
 
 Et pour finir, dans notre CSS on définit nos `.column` de la manière suivante&nbsp;:
 
-<pre><code class="css">.column {
-  border: 1px solid red;
-}
+    .column {
+      border: 1px solid red;
+    }
 
-@media screen and (min-width: 30em) {
-  .column {
-	display: inline-block;
-	width: 32%;
-	vertical-align: top;
-  }
-}
-</code></pre>
+    @media screen and (min-width: 30em) {
+      .column {
+        display: inline-block;
+        width: 32%;
+        vertical-align: top;
+      }
+    }
 
 <p class="link"><a href="http://jsfiddle.net/JFLQu/1/">Voir l'exemple sur JSFiddle</a></p>
 

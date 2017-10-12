@@ -14,26 +14,26 @@ Etant possesseur d'un iPhone, j'ai beaucoup testé mon site sur celui-ci pendant
 
 Voilà par exemple les styles appliqués au bouton "Go" de la barre de recherche du blog&nbsp;:
 
-<pre><code class="css">#submit {
-  background: #333;
-  -moz-border-radius: 0px 8px 8px 0px;
-  border-radius: 0px 8px 8px 0px;
-  border: 1px solid #333;
-  height: 35px;
-  margin: 0;
-  padding: 0;
-  width: 35px;
-  cursor: pointer;
-  font: bold 13px "Gudea", Arial, Sans-serif;
-  color: #fff;
-}</code></pre>
+    #submit {
+      background: #333;
+      -moz-border-radius: 0px 8px 8px 0px;
+      border-radius: 0px 8px 8px 0px;
+      border: 1px solid #333;
+      height: 35px;
+      margin: 0;
+      padding: 0;
+      width: 35px;
+      cursor: pointer;
+      font: bold 13px "Gudea", Arial, Sans-serif;
+      color: #fff;
+    }
 
 Le résultat est plutôt décevant&nbsp;:
 
-<img src="/assets/img/formulaire-iphone.png" alt="Formulaire iPone" class="imgb" />
+![Formulaire iPhone](/assets/img/formulaire-iphone.png)
 
 Il suffit pourtant de rajouter une simple ligne au style concerné pour contourner le problème. Cela permet de réinitialiser les styles par défaut pour l'iPhone (à confirmer si cela fonctionne également sur iPad...). Voici la ligne en question&nbsp;:
 
-<pre><code class="css">-webkit-appearance: none;</code></pre>
+    -webkit-appearance: none;
 
 Simple, non&nbsp;? Voilà, j'espère que cela vous sera aussi utile qu'à moi&nbsp;:)

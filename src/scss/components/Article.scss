@@ -3,15 +3,42 @@
   @include fluid-type(padding-bottom, 320, 1920, 50, 160);
 }
 
-.Article-date {
+.Article-info {
   margin: 0 0 0.2em;
-  display: block;
   @include robotom;
   @include fluid-type(font-size, 320, 1920, 12, 20);
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.05em;
   color: $light-green;
+}
+
+.Article-date {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.Article-pr {
+  display: inline-block;
+  vertical-align: middle;
+  color: $light-green;
+  text-decoration: none;
+}
+
+.Article-iconGH {
+  display: block;
+  @include fluid-type(width, 320, 1920, 12, 20);
+  height: auto;
+  fill: $light-green;
+
+  path {
+    transition: fill 0.2s ease-out;
+  }
+
+  .Article-pr:hover &,
+  .Article-pr:focus & {
+    fill: $dark-green;
+  }
 }
 
 .Article-title {

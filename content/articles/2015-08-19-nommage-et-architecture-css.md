@@ -25,35 +25,35 @@ Je préfère cette syntaxe par rapport au BEM classique, où l'utilisation des <
 
 ## Pousser plus loin le concept des Modifiers
 
-Le souci avec les <em>Modifiers</em>, c'est qu'ils créent des classes à rallonge, par exemple&nbsp;:
+Le souci avec les *Modifiers*, c'est qu'ils créent des classes à rallonge, par exemple&nbsp;:
 
-<pre><code class="html">&lt;button class="button button--small button--green button--caps"&gt;</code></pre>
+    <button class="button button--small button--green button--caps">Texte</button>
 
-J'ai récemment vu passer un article d'[Envato](http://www.envato.com/) dans lequel était décrit le principe des <em>[Chainable Modifiers](http://webuild.envato.com/blog/chainable-bem-modifiers/)</em>, principe qu'ils ont mis en place pour Envato Market.
+J'ai récemment vu passer un article d'[Envato](http://www.envato.com/) dans lequel était décrit le principe des *[Chainable Modifiers](http://webuild.envato.com/blog/chainable-bem-modifiers/)*, principe qu'ils ont mis en place pour Envato Market.
 
 En se basant sur cette convention, le code ci-dessus se transformerait en&nbsp;:
 
-<pre><code class="html">&lt;button class="button -small -green -caps"&gt;</code></pre>
+    <button class="button -small -green -caps">Texte</button>
 
 C'est quand même plus agréable à lire, non&nbsp;?
 
 Et si vous utilisez Sass, le mettre en place et en assurer la maintenabilité devient un jeu d'enfant.
 
-<pre><code class="scss">.button {
-  padding: 2rem;
+    .button {
+      padding: 2rem;
 
-  &.-small {
-    font-size: 1rem;
-  }
+      &.-small {
+        font-size: 1rem;
+      }
 
-  &.-green {
-    background-color: green;
-  }
+      &.-green {
+        background-color: green;
+      }
 
-  &.-caps {
-    text-transform: uppercase;
-  }
-}</code></pre>
+      &.-caps {
+        text-transform: uppercase;
+      }
+    }
 
 ## Autres emprunts à SUIT
 
@@ -71,7 +71,7 @@ Ce sont des classes génériques, identifiables par un préfixe `u-`&nbsp;:
 
 Celles-ci permettent d'identifier le changement d'état d'un composant; elles sont préfixées par `is-`&nbsp;:
 
-<pre><code class="html">&lt;button class="button is-disabled"&gt;</code></pre>
+    <button class="button is-disabled">Text</button>
 
 ## Sélecteurs JavaScript
 
@@ -81,6 +81,6 @@ Pour tous les sélecteurs que je vais cibler en JS, j'ajoute une classe (ou une 
 
 Même si la mise en place de cette méthodologie m'a procuré un gain énorme en termes de maintenabilité et de lisibilité sur des grosses bases de code CSS, elle n'est pas infaillible, et les risques de non-isolation et de spécificité du code existent toujours.
 
-Pour contourner &ndash; entre autres &ndash; ces problèmes, [Glenn Maddern](http://glenmaddern.com/articles/css-modules) a créé un système de [modules CSS](http://glenmaddern.com/articles/css-modules). Grâce à du JS, les styles sont maintenus à leur création dans un <em>scope</em> local qui permet de résoudre les questions de nommage et d'héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d'en rebuter certains.
+Pour contourner &ndash; entre autres &ndash; ces problèmes, [Glenn Maddern](http://glenmaddern.com/articles/css-modules) a créé un système de [modules CSS](http://glenmaddern.com/articles/css-modules). Grâce à du JS, les styles sont maintenus à leur création dans un *scope* local qui permet de résoudre les questions de nommage et d'héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d'en rebuter certains.
 
 Reste a espérer qu'un standard verra enfin le jour pour corriger ce casse-tête...
