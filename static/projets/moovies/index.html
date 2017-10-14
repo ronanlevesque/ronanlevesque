@@ -35,11 +35,8 @@
 	<script src="https://cdn.firebase.com/v0/firebase.js"></script>
 	<script src="https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
 	<script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
-	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/controllers.js"></script>
-	<!--[if (gte IE 6)&(lte IE 8)]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
- 	<![endif]-->
 </head>
 <body ng-controller="MyController">
 	<a class="back" id="back" href="" ng-click="closePopup()"></a></div>
@@ -111,7 +108,7 @@
 	<ul>
 	 	<li ng-repeat="item in items | filter:query | filter:categoryFilter | orderBy:orderProp">
 	 		<div class="close-2" ng-if="adminOn">
-	 			<a href="" ng-click="editFilm($event)">e</a>	 			
+	 			<a href="" ng-click="editFilm($event)">e</a>
 	 			<a href="" ng-click="removeFilm($event)">x</a>
 	 		</div>
 	 		<h2>{{item.titre}}</h2>
@@ -143,7 +140,7 @@
 					<option value="Western">Western</option>
 				</select>
 				<input type="submit" ng-click="editClose()" value="Confirmer">
-			</form>				
+			</form>
 		</li>
 		<div class="spinner" ng-hide="items.length"></div>
 <!-- 		<p class="chargement" id="chargement--2" ng-show="(items | filter:query).length == 0">Aucun résultat...</p> -->
