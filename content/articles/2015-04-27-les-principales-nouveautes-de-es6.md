@@ -62,7 +62,7 @@ Ceux-ci bénéficient de quelques nouveautés&nbsp;: définition du prototype à
       // Equivalent à prop: prop
       prop,
       // Nom de propriété dynamique
-      &#91;'foo' + 'bar'&#93;: 1,
+      ['foo' + 'bar']: 1,
       // Méthode
       myMethod() {}
     };
@@ -115,7 +115,7 @@ Ils permettent de représenter un nombre illimité de paramètres, sous forme d'
 
     fn(); // Log 0
     fn(1, 2, 3, 4, 5); // Log 5
-    fn(...&#91;1, 2, 3, 4, 5&#93;); // Log 5 également
+    fn(...[1, 2, 3, 4, 5]); // Log 5 également
 
 ## Déstructuration
 

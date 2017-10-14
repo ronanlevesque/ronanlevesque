@@ -1,3 +1,15 @@
+.NavBar {
+  &:before {
+    content: '';
+    display: block;
+    @include fluid-type(height, 320, 1960, 15, 80);
+
+    @include bp(500) {
+      display: none;
+    }
+  }
+}
+
 .NavBar-list {
   margin: 0;
   padding: 0;
