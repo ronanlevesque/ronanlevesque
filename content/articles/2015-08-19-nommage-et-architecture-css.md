@@ -17,9 +17,9 @@ Si ces deux acronymes ne vous évoquent rien, je vous suggère avant toute chose
 
 J'ai pour ma part commencé par utiliser BEM de manière traditionnelle avant d'y incorporer une part de SUIT, ce qui me donnait quelque chose de ce genre&nbsp;:
 
-<pre><code class="css">.blockName {}
-.blockName-element {}
-.blockName--modifier {}</code></pre>
+<pre><code class="css">.Component {}
+.Component-element {}
+.Component--modifier {}</code></pre>
 
 Je préfère cette syntaxe par rapport au BEM classique, où l'utilisation des <kbd>_</kbd> ne facilite pas vraiment l'édition du nom des classes.
 
@@ -27,19 +27,19 @@ Je préfère cette syntaxe par rapport au BEM classique, où l'utilisation des <
 
 Le souci avec les *Modifiers*, c'est qu'ils créent des classes à rallonge, par exemple&nbsp;:
 
-    <button class="button button--small button--green button--caps">Texte</button>
+    <button class="Button Button--small Button--green Button--caps">Texte</button>
 
 J'ai récemment vu passer un article d'[Envato](http://www.envato.com/) dans lequel était décrit le principe des *[Chainable Modifiers](http://webuild.envato.com/blog/chainable-bem-modifiers/)*, principe qu'ils ont mis en place pour Envato Market.
 
 En se basant sur cette convention, le code ci-dessus se transformerait en&nbsp;:
 
-    <button class="button -small -green -caps">Texte</button>
+    <button class="Button -small -green -caps">Texte</button>
 
 C'est quand même plus agréable à lire, non&nbsp;?
 
 Et si vous utilisez Sass, le mettre en place et en assurer la maintenabilité devient un jeu d'enfant.
 
-    .button {
+    .Button {
       padding: 2rem;
 
       &.-small {
