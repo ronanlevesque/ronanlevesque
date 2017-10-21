@@ -208,6 +208,21 @@
       top: 1em;
       bottom: 1em;
       width: 1em;
+
+      // Target FF
+      @supports (-moz-appearance:meterbar) {
+        display: none;
+      }
+
+      // Target IE
+      @media screen\9 {
+        display: none;
+      }
+
+      // Target Edge
+      @supports (-ms-ime-align: auto) {
+        display: none;
+      }
     }
 
     &:before {
