@@ -154,11 +154,28 @@
     @include fluid-type(margin-top, 320, 1920, 20, 35);
     @include fluid-type(margin-bottom, 320, 1920, 20, 35);
     padding-left: 1.5em;
-    @include fluid-type(font-size, 320, 1920, 16, 25);
+    position: relative;
     font-style: italic;
     @include fluid-type(border-left-width, 320, 1920, 2, 6);
     border-left-style: solid;
     border-color: $light-green;
+
+    &:after {
+      content: '\201d';
+      font-family: sans-serif;
+      font-size: 7em;
+      font-style: normal;
+      position: absolute;
+      top: 0;
+      right: 0;
+      line-height: 0.75;
+      color: lighten($dark-blue, 10%);
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+    }
 
     code,
     kbd {
@@ -175,7 +192,7 @@
     border: none;
 
     &:before {
-      content: '···';
+      content: '\00b7\00b7\00b7';
       display: block;
       @include fluid-type(font-size, 320, 1920, 22, 30);
       letter-spacing: 0.5em;
@@ -210,7 +227,7 @@
       width: 1em;
 
       // Target FF
-      @supports (-moz-appearance:meterbar) {
+      @supports (-moz-appearance: meterbar) {
         display: none;
       }
 
