@@ -8,7 +8,7 @@ apropos: true
 ---
 
 <figure>
-  <img src="/assets/img/ronan-levesque.jpg" data-layzr="/assets/img/ronan-levesque.jpg" alt="Photo de Ronan Levesque à Prague" class="BorderedImg">
+  <img src="/assets/img/ronan-levesque.jpg" alt="Photo de Ronan Levesque à Prague" class="BorderedImg">
   <figcaption>Posé, à Prague.</figcaption>
 </figure>
 
