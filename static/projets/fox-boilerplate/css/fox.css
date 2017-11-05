@@ -18,12 +18,16 @@ body {
   font-family: Arial, Helvetica, Sans-serif;
 }
 
-html, body, blockquote, form {
+html,
+body,
+blockquote,
+form {
   margin: 0;
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 1em 0;
   padding-left: 2em;
 }
@@ -32,20 +36,45 @@ ul {
   list-style-type: square;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
   display: block;
 }
 
-blockquote, code, embed, iframe, img, input, object, pre, table, td, textarea, video {
+blockquote,
+code,
+embed,
+iframe,
+img,
+input,
+object,
+pre,
+table,
+td,
+textarea,
+video {
   max-width: 100%;
   height: auto;
 }
 
-a img, form, fieldset {
+a img,
+form,
+fieldset {
   border: none;
 }
 
-input, button, select {
+input,
+button,
+select {
   vertical-align: middle;
 }
 
@@ -63,11 +92,26 @@ figure {
   margin: 0;
 }
 
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
 }
 
-blockquote p, button, input, li h1, li h2, li h3, li h4, li h5, li h6, li li, li p, select, td p, th p {
+blockquote p,
+button,
+input,
+li h1,
+li h2,
+li h3,
+li h4,
+li h5,
+li h6,
+li li,
+li p,
+select,
+td p,
+th p {
   font-size: 100%;
 }
 
@@ -75,15 +119,20 @@ small {
   font-size: 80%;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: Monospace, Serif;
 }
 
-sub, sup {
+sub,
+sup {
   position: relative;
   font-size: 75%;
   line-height: 0;
@@ -125,12 +174,27 @@ h6 {
   font-size: 1.2em;
 }
 
-blockquote, caption, li, p, pre, td, textarea, th {
+blockquote,
+caption,
+li,
+p,
+pre,
+td,
+textarea,
+th {
   font-size: 1em;
   line-height: 1.5em;
 }
 
-code, div, p, pre, table, td, textarea, th, samp {
+code,
+div,
+p,
+pre,
+table,
+td,
+textarea,
+th,
+samp {
   word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -139,7 +203,9 @@ code, div, p, pre, table, td, textarea, th, samp {
   hyphens: auto;
 }
 
-code, pre, samp {
+code,
+pre,
+samp {
   white-space: pre-wrap;
 }
 
@@ -150,11 +216,11 @@ table {
 }
 
 th {
-  padding: .5em 0;
+  padding: 0.5em 0;
 }
 
 td {
-  padding: .5em 0;
+  padding: 0.5em 0;
   border-top: 1px solid #ccc;
 }
 
@@ -272,8 +338,9 @@ td {
   clear: both;
 }
 
-.clearfix:before, .clearfix:after {
-  content: "";
+.clearfix:before,
+.clearfix:after {
+  content: '';
   display: table;
 }
 
@@ -410,7 +477,8 @@ td {
   height: 0;
 }
 
-.grid li, .grid div {
+.grid li,
+.grid div {
   display: inline-block;
 }
 
@@ -482,7 +550,21 @@ td {
     width: 66.666666%;
   }
 
-  .r10, .r20, .r25, .r30, .r33, .r40, .r50, .r60, .r66, .r70, .r80, .r50-25, .r50-33, .r33-33, .r66-33 {
+  .r10,
+  .r20,
+  .r25,
+  .r30,
+  .r33,
+  .r40,
+  .r50,
+  .r60,
+  .r66,
+  .r70,
+  .r80,
+  .r50-25,
+  .r50-33,
+  .r33-33,
+  .r66-33 {
     display: inline-block;
   }
 }
@@ -514,13 +596,16 @@ td {
 /*-------------------------*/
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/btn-icomoon.eot");
-  src: url("fonts/btn-icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/btn-icomoon.woff") format("woff"), url("fonts/btn-icomoon.ttf") format("truetype"), url("fonts/btn-icomoon.svg") format("svg");
+  src: url('fonts/btn-icomoon.eot');
+  src: url('fonts/btn-icomoon.eot?#iefix') format('embedded-opentype'),
+    url('fonts/btn-icomoon.woff') format('woff'),
+    url('fonts/btn-icomoon.ttf') format('truetype'),
+    url('fonts/btn-icomoon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 .btn {
-  padding: .6em .9em;
+  padding: 0.6em 0.9em;
   display: inline;
   zoom: 1;
   display: inline-block;
@@ -549,7 +634,8 @@ td {
   box-shadow: 0 0 1px rgba(255, 255, 255, 0.8) inset, 0 1px 0 #111111;
 }
 
-.btn-white, .btn-github {
+.btn-white,
+.btn-github {
   color: #555;
   text-shadow: -1px -1px 0 #fff;
   background: #fff;
@@ -560,14 +646,17 @@ td {
   -webkit-box-shadow: 0 1px 0 white inset, 0 3px 0 #d4d4d4;
   box-shadow: 0 1px 0 white inset, 0 3px 0 #d4d4d4;
 }
-.btn-white:active, .btn-github:active {
+.btn-white:active,
+.btn-github:active {
   position: relative;
   top: 2px;
   -webkit-box-shadow: 0 0 1px white inset, 0 1px 0 #d4d4d4;
   box-shadow: 0 0 1px white inset, 0 1px 0 #d4d4d4;
 }
 
-.btn-info, .btn-info-1, .btn-info-2 {
+.btn-info,
+.btn-info-1,
+.btn-info-2 {
   color: #fff;
   text-shadow: 1px 1px 0 #1d6fa5;
   background: #3498db;
@@ -578,12 +667,16 @@ td {
   -webkit-box-shadow: 0 0 1px white inset, 0 3px 0 #217dbb;
   box-shadow: 0 0 1px white inset, 0 3px 0 #217dbb;
 }
-.btn-info:active, .btn-info-1:active, .btn-info-2:active {
+.btn-info:active,
+.btn-info-1:active,
+.btn-info-2:active {
   -webkit-box-shadow: 0 0 1px white inset, 0 1px 0 #217dbb;
   box-shadow: 0 0 1px white inset, 0 1px 0 #217dbb;
 }
 
-.btn-ok, .btn-ok-1, .btn-ok-2 {
+.btn-ok,
+.btn-ok-1,
+.btn-ok-2 {
   color: #fff;
   text-shadow: 1px 1px 0 #19703e;
   background: #27ae60;
@@ -594,12 +687,16 @@ td {
   -webkit-box-shadow: 0 0 1px white inset, 0 3px 0 #1e8449;
   box-shadow: 0 0 1px white inset, 0 3px 0 #1e8449;
 }
-.btn-ok:active, .btn-ok-1:active, .btn-ok-2:active {
+.btn-ok:active,
+.btn-ok-1:active,
+.btn-ok-2:active {
   -webkit-box-shadow: 0 0 1px white inset, 0 1px 0 #1e8449;
   box-shadow: 0 0 1px white inset, 0 1px 0 #1e8449;
 }
 
-.btn-warning, .btn-warning-1, .btn-warning-2 {
+.btn-warning,
+.btn-warning-1,
+.btn-warning-2 {
   color: #fff;
   text-shadow: 1px 1px 0 #863600;
   background: #d35400;
@@ -610,12 +707,16 @@ td {
   -webkit-box-shadow: 0 0 1px white inset, 0 3px 0 #a04000;
   box-shadow: 0 0 1px white inset, 0 3px 0 #a04000;
 }
-.btn-warning:active, .btn-warning-1:active, .btn-warning-2:active {
+.btn-warning:active,
+.btn-warning-1:active,
+.btn-warning-2:active {
   -webkit-box-shadow: 0 0 1px white inset, 0 1px 0 #a04000;
   box-shadow: 0 0 1px white inset, 0 1px 0 #a04000;
 }
 
-.btn-error, .btn-error-1, .btn-error-2 {
+.btn-error,
+.btn-error-1,
+.btn-error-2 {
   color: #fff;
   text-shadow: 1px 1px 0 #7a0f0f;
   background: #be1818;
@@ -626,15 +727,51 @@ td {
   -webkit-box-shadow: 0 0 1px white inset, 0 3px 0 #911212;
   box-shadow: 0 0 1px white inset, 0 3px 0 #911212;
 }
-.btn-error:active, .btn-error-1:active, .btn-error-2:active {
+.btn-error:active,
+.btn-error-1:active,
+.btn-error-2:active {
   -webkit-box-shadow: 0 0 1px white inset, 0 1px 0 #911212;
   box-shadow: 0 0 1px white inset, 0 1px 0 #911212;
 }
 
-.btn-info-1:before, .btn-ok-1:before, .btn-warning-1:before, .btn-error-1:before, .btn-info-2:before, .btn-ok-2:before, .btn-warning-2:before, .btn-error-2:before, .btn-chrome:before, .btn-firefox:before, .btn-ie:before, .btn-safari:before, .btn-opera:before, .btn-windows:before, .btn-apple:before, .btn-facebook:before, .btn-twitter:before, .btn-google:before, .btn-github:before, .btn-reload:before, .btn-download:before, .btn-add:before, .btn-remove:before, .btn-cancel:before, .btn-delete:before, .btn-power:before, .btn-search:before, .btn-basket:before, .btn-password:before, .btn-options:before, .btn-favorite:before, .btn-logoff:before, .btn-volume:before, .btn-mute:before, .btn-attach:before {
+.btn-info-1:before,
+.btn-ok-1:before,
+.btn-warning-1:before,
+.btn-error-1:before,
+.btn-info-2:before,
+.btn-ok-2:before,
+.btn-warning-2:before,
+.btn-error-2:before,
+.btn-chrome:before,
+.btn-firefox:before,
+.btn-ie:before,
+.btn-safari:before,
+.btn-opera:before,
+.btn-windows:before,
+.btn-apple:before,
+.btn-facebook:before,
+.btn-twitter:before,
+.btn-google:before,
+.btn-github:before,
+.btn-reload:before,
+.btn-download:before,
+.btn-add:before,
+.btn-remove:before,
+.btn-cancel:before,
+.btn-delete:before,
+.btn-power:before,
+.btn-search:before,
+.btn-basket:before,
+.btn-password:before,
+.btn-options:before,
+.btn-favorite:before,
+.btn-logoff:before,
+.btn-volume:before,
+.btn-mute:before,
+.btn-attach:before {
   margin-right: 0.5em;
   position: relative;
-  top: .05em;
+  top: 0.05em;
   font-family: icomoon;
 }
 
@@ -670,7 +807,13 @@ td {
   content: '\e006';
 }
 
-.btn-chrome, .btn-firefox, .btn-ie, .btn-safari, .btn-opera, .btn-windows, .btn-apple {
+.btn-chrome,
+.btn-firefox,
+.btn-ie,
+.btn-safari,
+.btn-opera,
+.btn-windows,
+.btn-apple {
   color: #777;
   text-shadow: -1px -1px 0 #fff;
   background: #fff;
@@ -681,7 +824,13 @@ td {
   -webkit-box-shadow: 0 1px 0 white inset, 0 3px 0 #d4d4d4;
   box-shadow: 0 1px 0 white inset, 0 3px 0 #d4d4d4;
 }
-.btn-chrome:active, .btn-firefox:active, .btn-ie:active, .btn-safari:active, .btn-opera:active, .btn-windows:active, .btn-apple:active {
+.btn-chrome:active,
+.btn-firefox:active,
+.btn-ie:active,
+.btn-safari:active,
+.btn-opera:active,
+.btn-windows:active,
+.btn-apple:active {
   position: relative;
   top: 2px;
   -webkit-box-shadow: 0 1px 0 white inset, 0 1px 0 #d4d4d4;
@@ -868,85 +1017,133 @@ td {
 /*-------------------------*/
 /* +IE SUPPORT             */
 /*-------------------------*/
-.ie7 .inlineb, .ie7 .grid li {
+.ie7 .inlineb,
+.ie7 .grid li {
   display: inline;
   zoom: 1;
 }
 
-.ie7 .r10, .ie7 .r20, .ie7 .r25, .ie7 .r30, .ie7 .r33, .ie7 .r40, .ie7 .r50, .ie7 .r60, .ie7 .r66, .ie7 .r70, .ie7 .r80, .ie7 .r50-25, .ie7 .r50-33, .ie7 .r33-33, .ie7 .r66-33, .ie7 .r100-33 {
+.ie7 .r10,
+.ie7 .r20,
+.ie7 .r25,
+.ie7 .r30,
+.ie7 .r33,
+.ie7 .r40,
+.ie7 .r50,
+.ie7 .r60,
+.ie7 .r66,
+.ie7 .r70,
+.ie7 .r80,
+.ie7 .r50-25,
+.ie7 .r50-33,
+.ie7 .r33-33,
+.ie7 .r66-33,
+.ie7 .r100-33 {
   display: inline;
   zoom: 1;
 }
 
-.ie8 .r10, .ie8 .r20, .ie8 .r25, .ie8 .r30, .ie8 .r33, .ie8 .r40, .ie8 .r50, .ie8 .r60, .ie8 .r66, .ie8 .r70, .ie8 .r80, .ie8 .r50-25, .ie8 .r50-33, .ie8 .r33-33, .ie8 .r66-33, .ie8 .r100-33 {
+.ie8 .r10,
+.ie8 .r20,
+.ie8 .r25,
+.ie8 .r30,
+.ie8 .r33,
+.ie8 .r40,
+.ie8 .r50,
+.ie8 .r60,
+.ie8 .r66,
+.ie8 .r70,
+.ie8 .r80,
+.ie8 .r50-25,
+.ie8 .r50-33,
+.ie8 .r33-33,
+.ie8 .r66-33,
+.ie8 .r100-33 {
   display: inline-block;
 }
 
-.ie7 .r10, .ie8 .r10 {
+.ie7 .r10,
+.ie8 .r10 {
   width: 10%;
 }
 
-.ie7 .r20, .ie8 .r20 {
+.ie7 .r20,
+.ie8 .r20 {
   width: 20%;
 }
 
-.ie7 .r25, .ie8 .r25 {
+.ie7 .r25,
+.ie8 .r25 {
   width: 25%;
 }
 
-.ie7 .r30, .ie8 .r30 {
+.ie7 .r30,
+.ie8 .r30 {
   width: 30%;
 }
 
-.ie7 .r33, .ie8 .r33 {
+.ie7 .r33,
+.ie8 .r33 {
   width: 33.333333%;
 }
 
-.ie7 .r40, .ie8 .r40 {
+.ie7 .r40,
+.ie8 .r40 {
   width: 40%;
 }
 
-.ie7 .r50, .ie8 .r50 {
+.ie7 .r50,
+.ie8 .r50 {
   width: 50%;
 }
 
-.ie7 .r60, .ie8 .r60 {
+.ie7 .r60,
+.ie8 .r60 {
   width: 60%;
 }
 
-.ie7 .r66, .ie8 .r66 {
+.ie7 .r66,
+.ie8 .r66 {
   width: 66.666666%;
 }
 
-.ie7 .r70, .ie8 .r70 {
+.ie7 .r70,
+.ie8 .r70 {
   width: 70%;
 }
 
-.ie7 .r75, .ie8 .r75 {
+.ie7 .r75,
+.ie8 .r75 {
   width: 75%;
 }
 
-.ie7 .r80, .ie8 .r80 {
+.ie7 .r80,
+.ie8 .r80 {
   width: 80%;
 }
 
-.ie7 .r50-25, .ie8 .r50-25 {
+.ie7 .r50-25,
+.ie8 .r50-25 {
   width: 25%;
 }
 
-.ie7 .r50-33, .ie8 .r50-33 {
+.ie7 .r50-33,
+.ie8 .r50-33 {
   width: 33.333333%;
 }
 
-.ie7 .r33-33, .ie8 .r33-33 {
+.ie7 .r33-33,
+.ie8 .r33-33 {
   width: 33.333333%;
 }
 
-.ie7 .r66-33, .ie8 .r66-33 {
+.ie7 .r66-33,
+.ie8 .r66-33 {
   width: 33.333333%;
 }
 
-.ie7 .r100-33, .ie8 .r100-33 {
+.ie7 .r100-33,
+.ie8 .r100-33 {
   width: 33.333333%;
 }
 
@@ -956,29 +1153,33 @@ td {
 
 @font-face {
   font-family: 'Icomoon';
-  src: url("../fonts/icomoon.eot");
-  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg") format("svg");
+  src: url('../fonts/icomoon.eot');
+  src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 body {
-  font-family: "Open Sans", Arial, Sans-serif;
+  font-family: 'Open Sans', Arial, Sans-serif;
   color: #333;
 }
 
-p, li {
+p,
+li {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
 a {
-  transition: color .3s linear, background .3s linear;
+  transition: color 0.3s linear, background 0.3s linear;
 }
 
 .logo {
   margin: 0 auto;
-  padding: .5em .4em;
-  font-family: "Open Sans", Arial, Sans-serif;
+  padding: 0.5em 0.4em;
+  font-family: 'Open Sans', Arial, Sans-serif;
   font-weight: 300;
   font-size: 30px;
   font-size: 1.875rem;
@@ -989,7 +1190,7 @@ a {
 }
 .logo:before {
   content: '';
-  margin-right: .3em;
+  margin-right: 0.3em;
   display: inline-block;
   vertical-align: -9px;
   width: 40px;
@@ -1016,7 +1217,7 @@ a {
 }
 
 .main-header__intro {
-  padding: .3em 1em;
+  padding: 0.3em 1em;
   font-family: Arvo, Arial, Sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -1038,11 +1239,11 @@ a {
 }
 @media screen and (min-width: 38.75em) {
   .main-header__intro {
-    padding: 1.2em .2em;
+    padding: 1.2em 0.2em;
   }
   .main-header__intro small {
     display: block;
-    font-family: "Open Sans", Arial, Sans-serif;
+    font-family: 'Open Sans', Arial, Sans-serif;
     font-size: 23px;
     font-size: 1.4375rem;
     font-weight: 300;
@@ -1052,7 +1253,7 @@ a {
 }
 @media screen and (min-width: 62.5em) {
   .main-header__intro {
-    padding: 4em .5em;
+    padding: 4em 0.5em;
   }
   .main-header__intro h2 {
     font-size: 61px;
@@ -1065,7 +1266,7 @@ a {
 }
 @media screen and (min-width: 75em) {
   .main-header__intro {
-    padding: 3.5em .5em;
+    padding: 3.5em 0.5em;
   }
   .main-header__intro h2 {
     font-size: 79px;
@@ -1096,7 +1297,8 @@ a {
   }
 }
 
-.dl-github, .dl-zip {
+.dl-github,
+.dl-zip {
   padding: 1em 0;
   display: block;
   text-align: center;
@@ -1105,23 +1307,31 @@ a {
   background: #27ae60;
   border-radius: 4px;
 }
-.dl-github:hover, .dl-github:active, .dl-github:focus, .dl-zip:hover, .dl-zip:active, .dl-zip:focus {
+.dl-github:hover,
+.dl-github:active,
+.dl-github:focus,
+.dl-zip:hover,
+.dl-zip:active,
+.dl-zip:focus {
   background: #229955;
 }
 @media screen and (min-width: 31.25em) {
-  .dl-github, .dl-zip {
+  .dl-github,
+  .dl-zip {
     width: 190px;
     display: inline-block;
   }
 }
 @media screen and (min-width: 62.5em) {
-  .dl-github, .dl-zip {
+  .dl-github,
+  .dl-zip {
     width: 230px;
   }
 }
-.dl-github:before, .dl-zip:before {
+.dl-github:before,
+.dl-zip:before {
   content: '\e000';
-  margin-right: .5em;
+  margin-right: 0.5em;
   display: inline-block;
   vertical-align: -1px;
   font-family: Icomoon;
@@ -1131,7 +1341,9 @@ a {
   margin-top: 1em;
   background: #333;
 }
-.dl-zip:hover, .dl-zip:active, .dl-zip:focus {
+.dl-zip:hover,
+.dl-zip:active,
+.dl-zip:focus {
   background: #262626;
 }
 .dl-zip:before {
@@ -1186,17 +1398,17 @@ a {
   content: '';
   display: block;
   width: 50px;
-  height: .4em;
+  height: 0.4em;
   border-bottom: 2px solid #e0713b;
 }
 .list-details p {
-  margin-top: .7em;
+  margin-top: 0.7em;
   padding-left: 65px;
   color: #444;
 }
 .list-details .learn-more {
   margin-left: 65px;
-  padding: .3em .5em;
+  padding: 0.3em 0.5em;
   display: inline-block;
   font-size: 12px;
   font-size: 0.75rem;
@@ -1210,9 +1422,11 @@ a {
 }
 .list-details .learn-more:after {
   content: '>';
-  padding-left: .5em;
+  padding-left: 0.5em;
 }
-.list-details .learn-more:hover, .list-details .learn-more:active, .list-details .learn-more:focus {
+.list-details .learn-more:hover,
+.list-details .learn-more:active,
+.list-details .learn-more:focus {
   background: #b34d1c;
 }
 @media screen and (min-width: 36.25em) {
@@ -1244,7 +1458,7 @@ a {
     width: 24%;
   }
   .list-details p {
-    margin-top: .8em;
+    margin-top: 0.8em;
   }
   .list-details .learn-more {
     font-size: 14px;
@@ -1289,6 +1503,8 @@ footer a {
   color: #fff;
   text-decoration: none;
 }
-footer a:hover, footer a:active, footer a:focus {
+footer a:hover,
+footer a:active,
+footer a:focus {
   color: #e0713b;
 }

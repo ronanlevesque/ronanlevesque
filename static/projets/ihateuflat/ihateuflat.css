@@ -1,13 +1,16 @@
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/btn-icomoon.eot");
-  src: url("fonts/btn-icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/btn-icomoon.woff") format("woff"), url("fonts/btn-icomoon.ttf") format("truetype"), url("fonts/btn-icomoon.svg") format("svg");
+  src: url('fonts/btn-icomoon.eot');
+  src: url('fonts/btn-icomoon.eot?#iefix') format('embedded-opentype'),
+    url('fonts/btn-icomoon.woff') format('woff'),
+    url('fonts/btn-icomoon.ttf') format('truetype'),
+    url('fonts/btn-icomoon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 .btn {
-  padding: .6em .9em;
+  padding: 0.6em 0.9em;
   display: inline;
   zoom: 1;
   display: inline-block;
@@ -36,7 +39,8 @@
   box-shadow: 0 0 1px rgba(255, 255, 255, 0.8) inset, 0 1px 0 #111111;
 }
 
-.btn-white, .btn-github {
+.btn-white,
+.btn-github {
   color: #555;
   text-shadow: -1px -1px 0 #fff;
   background: #fff;
@@ -47,14 +51,17 @@
   -webkit-box-shadow: 0 1px 0 white inset, 0 3px 0 #d4d4d4;
   box-shadow: 0 1px 0 white inset, 0 3px 0 #d4d4d4;
 }
-.btn-white:active, .btn-github:active {
+.btn-white:active,
+.btn-github:active {
   position: relative;
   top: 2px;
   -webkit-box-shadow: 0 0 1px white inset, 0 1px 0 #d4d4d4;
   box-shadow: 0 0 1px white inset, 0 1px 0 #d4d4d4;
 }
 
-.btn-info, .btn-info-1, .btn-info-2 {
+.btn-info,
+.btn-info-1,
+.btn-info-2 {
   color: #fff;
   text-shadow: 1px 1px 0 #1d6fa5;
   background: #3498db;
@@ -65,12 +72,16 @@
   -webkit-box-shadow: 0 0 1px white inset, 0 3px 0 #217dbb;
   box-shadow: 0 0 1px white inset, 0 3px 0 #217dbb;
 }
-.btn-info:active, .btn-info-1:active, .btn-info-2:active {
+.btn-info:active,
+.btn-info-1:active,
+.btn-info-2:active {
   -webkit-box-shadow: 0 0 1px white inset, 0 1px 0 #217dbb;
   box-shadow: 0 0 1px white inset, 0 1px 0 #217dbb;
 }
 
-.btn-ok, .btn-ok-1, .btn-ok-2 {
+.btn-ok,
+.btn-ok-1,
+.btn-ok-2 {
   color: #fff;
   text-shadow: 1px 1px 0 #19703e;
   background: #27ae60;
@@ -81,12 +92,16 @@
   -webkit-box-shadow: 0 0 1px white inset, 0 3px 0 #1e8449;
   box-shadow: 0 0 1px white inset, 0 3px 0 #1e8449;
 }
-.btn-ok:active, .btn-ok-1:active, .btn-ok-2:active {
+.btn-ok:active,
+.btn-ok-1:active,
+.btn-ok-2:active {
   -webkit-box-shadow: 0 0 1px white inset, 0 1px 0 #1e8449;
   box-shadow: 0 0 1px white inset, 0 1px 0 #1e8449;
 }
 
-.btn-warning, .btn-warning-1, .btn-warning-2 {
+.btn-warning,
+.btn-warning-1,
+.btn-warning-2 {
   color: #fff;
   text-shadow: 1px 1px 0 #863600;
   background: #d35400;
@@ -97,12 +112,16 @@
   -webkit-box-shadow: 0 0 1px white inset, 0 3px 0 #a04000;
   box-shadow: 0 0 1px white inset, 0 3px 0 #a04000;
 }
-.btn-warning:active, .btn-warning-1:active, .btn-warning-2:active {
+.btn-warning:active,
+.btn-warning-1:active,
+.btn-warning-2:active {
   -webkit-box-shadow: 0 0 1px white inset, 0 1px 0 #a04000;
   box-shadow: 0 0 1px white inset, 0 1px 0 #a04000;
 }
 
-.btn-error, .btn-error-1, .btn-error-2 {
+.btn-error,
+.btn-error-1,
+.btn-error-2 {
   color: #fff;
   text-shadow: 1px 1px 0 #7a0f0f;
   background: #be1818;
@@ -113,15 +132,51 @@
   -webkit-box-shadow: 0 0 1px white inset, 0 3px 0 #911212;
   box-shadow: 0 0 1px white inset, 0 3px 0 #911212;
 }
-.btn-error:active, .btn-error-1:active, .btn-error-2:active {
+.btn-error:active,
+.btn-error-1:active,
+.btn-error-2:active {
   -webkit-box-shadow: 0 0 1px white inset, 0 1px 0 #911212;
   box-shadow: 0 0 1px white inset, 0 1px 0 #911212;
 }
 
-.btn-info-1:before, .btn-ok-1:before, .btn-warning-1:before, .btn-error-1:before, .btn-info-2:before, .btn-ok-2:before, .btn-warning-2:before, .btn-error-2:before, .btn-chrome:before, .btn-firefox:before, .btn-ie:before, .btn-safari:before, .btn-opera:before, .btn-windows:before, .btn-apple:before, .btn-facebook:before, .btn-twitter:before, .btn-google:before, .btn-github:before, .btn-reload:before, .btn-download:before, .btn-add:before, .btn-remove:before, .btn-cancel:before, .btn-delete:before, .btn-power:before, .btn-search:before, .btn-basket:before, .btn-password:before, .btn-options:before, .btn-favorite:before, .btn-logoff:before, .btn-volume:before, .btn-mute:before, .btn-attach:before {
+.btn-info-1:before,
+.btn-ok-1:before,
+.btn-warning-1:before,
+.btn-error-1:before,
+.btn-info-2:before,
+.btn-ok-2:before,
+.btn-warning-2:before,
+.btn-error-2:before,
+.btn-chrome:before,
+.btn-firefox:before,
+.btn-ie:before,
+.btn-safari:before,
+.btn-opera:before,
+.btn-windows:before,
+.btn-apple:before,
+.btn-facebook:before,
+.btn-twitter:before,
+.btn-google:before,
+.btn-github:before,
+.btn-reload:before,
+.btn-download:before,
+.btn-add:before,
+.btn-remove:before,
+.btn-cancel:before,
+.btn-delete:before,
+.btn-power:before,
+.btn-search:before,
+.btn-basket:before,
+.btn-password:before,
+.btn-options:before,
+.btn-favorite:before,
+.btn-logoff:before,
+.btn-volume:before,
+.btn-mute:before,
+.btn-attach:before {
   margin-right: 0.5em;
   position: relative;
-  top: .05em;
+  top: 0.05em;
   font-family: icomoon;
 }
 
@@ -157,7 +212,13 @@
   content: '\e006';
 }
 
-.btn-chrome, .btn-firefox, .btn-ie, .btn-safari, .btn-opera, .btn-windows, .btn-apple {
+.btn-chrome,
+.btn-firefox,
+.btn-ie,
+.btn-safari,
+.btn-opera,
+.btn-windows,
+.btn-apple {
   color: #777;
   text-shadow: -1px -1px 0 #fff;
   background: #fff;
@@ -168,7 +229,13 @@
   -webkit-box-shadow: 0 1px 0 white inset, 0 3px 0 #d4d4d4;
   box-shadow: 0 1px 0 white inset, 0 3px 0 #d4d4d4;
 }
-.btn-chrome:active, .btn-firefox:active, .btn-ie:active, .btn-safari:active, .btn-opera:active, .btn-windows:active, .btn-apple:active {
+.btn-chrome:active,
+.btn-firefox:active,
+.btn-ie:active,
+.btn-safari:active,
+.btn-opera:active,
+.btn-windows:active,
+.btn-apple:active {
   position: relative;
   top: 2px;
   -webkit-box-shadow: 0 1px 0 white inset, 0 1px 0 #d4d4d4;

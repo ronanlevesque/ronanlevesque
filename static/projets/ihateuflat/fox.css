@@ -18,12 +18,16 @@ body {
   font-family: Arial, Helvetica, Sans-serif;
 }
 
-html, body, blockquote, form {
+html,
+body,
+blockquote,
+form {
   margin: 0;
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 1em 0;
   padding-left: 2em;
 }
@@ -32,20 +36,45 @@ ul {
   list-style-type: square;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
   display: block;
 }
 
-blockquote, code, embed, iframe, img, input, object, pre, table, td, textarea, video {
+blockquote,
+code,
+embed,
+iframe,
+img,
+input,
+object,
+pre,
+table,
+td,
+textarea,
+video {
   max-width: 100%;
   height: auto;
 }
 
-a img, form, fieldset {
+a img,
+form,
+fieldset {
   border: none;
 }
 
-input, button, select {
+input,
+button,
+select {
   vertical-align: middle;
 }
 
@@ -63,11 +92,26 @@ figure {
   margin: 0;
 }
 
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
 }
 
-blockquote p, button, input, li h1, li h2, li h3, li h4, li h5, li h6, li li, li p, select, td p, th p {
+blockquote p,
+button,
+input,
+li h1,
+li h2,
+li h3,
+li h4,
+li h5,
+li h6,
+li li,
+li p,
+select,
+td p,
+th p {
   font-size: 100%;
 }
 
@@ -75,15 +119,20 @@ small {
   font-size: 80%;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: 'Droid Sans Mono', Monospace, Serif;
 }
 
-sub, sup {
+sub,
+sup {
   position: relative;
   font-size: 75%;
   line-height: 0;
@@ -125,12 +174,27 @@ h6 {
   font-size: 1.2em;
 }
 
-blockquote, caption, li, p, pre, td, textarea, th {
+blockquote,
+caption,
+li,
+p,
+pre,
+td,
+textarea,
+th {
   font-size: 1em;
   line-height: 1.5em;
 }
 
-code, div, p, pre, table, td, textarea, th, samp {
+code,
+div,
+p,
+pre,
+table,
+td,
+textarea,
+th,
+samp {
   word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -139,7 +203,9 @@ code, div, p, pre, table, td, textarea, th, samp {
   hyphens: auto;
 }
 
-code, pre, samp {
+code,
+pre,
+samp {
   white-space: pre-wrap;
 }
 
@@ -150,11 +216,11 @@ table {
 }
 
 th {
-  padding: .5em 0;
+  padding: 0.5em 0;
 }
 
 td {
-  padding: .5em 0;
+  padding: 0.5em 0;
   border-top: 1px solid #ccc;
 }
 
@@ -301,8 +367,9 @@ td {
   clear: both;
 }
 
-.clearfix:before, .clearfix:after {
-  content: "";
+.clearfix:before,
+.clearfix:after {
+  content: '';
   display: table;
 }
 
@@ -485,7 +552,21 @@ td {
     width: 66.666666%;
   }
 
-  .r10, .r20, .r25, .r30, .r33, .r40, .r50, .r60, .r66, .r70, .r80, .r50-25, .r50-33, .r33-33, .r66-33 {
+  .r10,
+  .r20,
+  .r25,
+  .r30,
+  .r33,
+  .r40,
+  .r50,
+  .r60,
+  .r66,
+  .r70,
+  .r80,
+  .r50-25,
+  .r50-33,
+  .r33-33,
+  .r66-33 {
     display: inline-block;
   }
 }
@@ -535,85 +616,133 @@ td {
 /*-------------------------*/
 /* +IE SUPPORT             */
 /*-------------------------*/
-.ie7 .inlineb, .ie7 .grid li {
+.ie7 .inlineb,
+.ie7 .grid li {
   display: inline;
   zoom: 1;
 }
 
-.ie7 .r10, .ie7 .r20, .ie7 .r25, .ie7 .r30, .ie7 .r33, .ie7 .r40, .ie7 .r50, .ie7 .r60, .ie7 .r66, .ie7 .r70, .ie7 .r80, .ie7 .r50-25, .ie7 .r50-33, .ie7 .r33-33, .ie7 .r66-33, .ie7 .r100-33 {
+.ie7 .r10,
+.ie7 .r20,
+.ie7 .r25,
+.ie7 .r30,
+.ie7 .r33,
+.ie7 .r40,
+.ie7 .r50,
+.ie7 .r60,
+.ie7 .r66,
+.ie7 .r70,
+.ie7 .r80,
+.ie7 .r50-25,
+.ie7 .r50-33,
+.ie7 .r33-33,
+.ie7 .r66-33,
+.ie7 .r100-33 {
   display: inline;
   zoom: 1;
 }
 
-.ie8 .r10, .ie8 .r20, .ie8 .r25, .ie8 .r30, .ie8 .r33, .ie8 .r40, .ie8 .r50, .ie8 .r60, .ie8 .r66, .ie8 .r70, .ie8 .r80, .ie8 .r50-25, .ie8 .r50-33, .ie8 .r33-33, .ie8 .r66-33, .ie8 .r100-33 {
+.ie8 .r10,
+.ie8 .r20,
+.ie8 .r25,
+.ie8 .r30,
+.ie8 .r33,
+.ie8 .r40,
+.ie8 .r50,
+.ie8 .r60,
+.ie8 .r66,
+.ie8 .r70,
+.ie8 .r80,
+.ie8 .r50-25,
+.ie8 .r50-33,
+.ie8 .r33-33,
+.ie8 .r66-33,
+.ie8 .r100-33 {
   display: inline-block;
 }
 
-.ie7 .r10, .ie8 .r10 {
+.ie7 .r10,
+.ie8 .r10 {
   width: 10%;
 }
 
-.ie7 .r20, .ie8 .r20 {
+.ie7 .r20,
+.ie8 .r20 {
   width: 20%;
 }
 
-.ie7 .r25, .ie8 .r25 {
+.ie7 .r25,
+.ie8 .r25 {
   width: 25%;
 }
 
-.ie7 .r30, .ie8 .r30 {
+.ie7 .r30,
+.ie8 .r30 {
   width: 30%;
 }
 
-.ie7 .r33, .ie8 .r33 {
+.ie7 .r33,
+.ie8 .r33 {
   width: 33.333333%;
 }
 
-.ie7 .r40, .ie8 .r40 {
+.ie7 .r40,
+.ie8 .r40 {
   width: 40%;
 }
 
-.ie7 .r50, .ie8 .r50 {
+.ie7 .r50,
+.ie8 .r50 {
   width: 50%;
 }
 
-.ie7 .r60, .ie8 .r60 {
+.ie7 .r60,
+.ie8 .r60 {
   width: 60%;
 }
 
-.ie7 .r66, .ie8 .r66 {
+.ie7 .r66,
+.ie8 .r66 {
   width: 66.666666%;
 }
 
-.ie7 .r70, .ie8 .r70 {
+.ie7 .r70,
+.ie8 .r70 {
   width: 70%;
 }
 
-.ie7 .r75, .ie8 .r75 {
+.ie7 .r75,
+.ie8 .r75 {
   width: 75%;
 }
 
-.ie7 .r80, .ie8 .r80 {
+.ie7 .r80,
+.ie8 .r80 {
   width: 80%;
 }
 
-.ie7 .r50-25, .ie8 .r50-25 {
+.ie7 .r50-25,
+.ie8 .r50-25 {
   width: 25%;
 }
 
-.ie7 .r50-33, .ie8 .r50-33 {
+.ie7 .r50-33,
+.ie8 .r50-33 {
   width: 33.333333%;
 }
 
-.ie7 .r33-33, .ie8 .r33-33 {
+.ie7 .r33-33,
+.ie8 .r33-33 {
   width: 33.333333%;
 }
 
-.ie7 .r66-33, .ie8 .r66-33 {
+.ie7 .r66-33,
+.ie8 .r66-33 {
   width: 33.333333%;
 }
 
-.ie7 .r100-33, .ie8 .r100-33 {
+.ie7 .r100-33,
+.ie8 .r100-33 {
   width: 33.333333%;
 }
 
@@ -622,11 +751,12 @@ td {
 }
 
 body {
-  font-family: "Droid Sans", Arial, Sans-serif;
+  font-family: 'Droid Sans', Arial, Sans-serif;
   color: #444;
 }
 
-p, li {
+p,
+li {
   font-size: 14px;
   font-size: 0.875rem;
 }
@@ -637,7 +767,7 @@ p, li {
 }
 
 code {
-  padding: .1em .3em;
+  padding: 0.1em 0.3em;
   font-size: 12px;
   font-size: 0.75rem;
   background: #f6f6f6;
@@ -661,7 +791,11 @@ header h1 img {
   max-width: 300px;
 }
 
-@media (-moz-min-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+@media (-moz-min-device-pixel-ratio: 1.3),
+  (-o-min-device-pixel-ratio: 2.6 / 2),
+  (-webkit-min-device-pixel-ratio: 1.3),
+  (min-device-pixel-ratio: 1.3),
+  (min-resolution: 1.3dppx) {
   header {
     background: #454545 url(img/escheresque_ste_@2X.png) 0 0;
     background-size: 46px 29px;
@@ -713,13 +847,13 @@ main {
   padding: 0 1em 1em 1em;
 }
 main h2 {
-  font-family: "Grand Hotel", "Times New Roman", Serif;
+  font-family: 'Grand Hotel', 'Times New Roman', Serif;
   font-size: 30px;
   font-size: 1.875rem;
   font-weight: normal;
 }
 main .btn {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 pre {
@@ -749,7 +883,7 @@ aside:before {
 }
 aside h2 {
   padding-top: 1em;
-  font-family: "Grand Hotel", "Times New Roman", Serif;
+  font-family: 'Grand Hotel', 'Times New Roman', Serif;
   font-size: 30px;
   font-size: 1.875rem;
   font-weight: normal;
@@ -811,7 +945,8 @@ footer a {
   .intro {
     padding: 2em 1em 2.5em 1em;
   }
-  .intro .bloc-left, .intro .bloc-right {
+  .intro .bloc-left,
+  .intro .bloc-right {
     display: inline;
     zoom: 1;
     display: inline-block;
@@ -838,7 +973,8 @@ footer a {
   }
 }
 @media screen and (min-width: 60em) {
-  p, li {
+  p,
+  li {
     font-size: 16px;
     font-size: 1rem;
   }
