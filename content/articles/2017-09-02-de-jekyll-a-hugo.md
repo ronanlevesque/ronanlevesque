@@ -62,9 +62,9 @@ Pour finir on lance un serveur pour surveiller tout nouveau changement (accessib
 
 C'est dans le dossier `content` que vont se placer tous les types de contenu&nbsp;: articles de blog, pages statiques, 404, page d'accueil etc., le tout au format `.md`.
 
-Pour que ces pages ressemblent à quelque chose, il faudra leur créer des **templates**. Ceux-ci sont placés dans le dossier `layouts`. C'est également là-dedans que sont placés les *partials* réutilisables (header, footer, etc.).
+Pour que ces pages ressemblent à quelque chose, il faudra leur créer des **templates**. Ceux-ci sont placés dans le dossier `layouts`. C'est également là-dedans que sont placés les _partials_ réutilisables (header, footer, etc.).
 
-Le template utilisé par chaque page de contenu est défini dans son *front matter* par la propriété **type**, qui peut être écrit au format `yaml` ou `toml`.
+Le template utilisé par chaque page de contenu est défini dans son _front matter_ par la propriété **type**, qui peut être écrit au format `yaml` ou `toml`.
 
 Par exemple, voici ma page `projets.md`&nbsp;:
 
@@ -84,9 +84,7 @@ Le template en question est un fichier `single.html` situé dans le dossier `lay
 
 {{ partial "footer.html" . }}</code></pre>
 
-
-
-`.Content` insère le contenu de `projets.md`, et les *partials*, comme leur nom l'indique... importent les *partials* en question.
+`.Content` insère le contenu de `projets.md`, et les _partials_, comme leur nom l'indique... importent les _partials_ en question.
 
 <p class="info">Pour plus de détails sur les différents templates utilisés par Hugo je vous invite à consulter la doc officielle.</p>
 
@@ -150,7 +148,7 @@ Voilà le template, là aussi simplifié&nbsp;:
 
     {{ partial "footer.html" . }}
 
-Celui-ci m'a posé un peu plus de soucis car je souhaitais afficher la date de publication de l'article en français, au format *01 janvier 2017*. J'ai trouvé un moyen de contourner le problème en utilisant la variable `.Site.Data`. Il m'a suffit de créer un fichier `mois.yaml` dans le dossier `data`, avec le contenu suivant&nbsp;:
+Celui-ci m'a posé un peu plus de soucis car je souhaitais afficher la date de publication de l'article en français, au format _01 janvier 2017_. J'ai trouvé un moyen de contourner le problème en utilisant la variable `.Site.Data`. Il m'a suffit de créer un fichier `mois.yaml` dans le dossier `data`, avec le contenu suivant&nbsp;:
 
 <pre><code class="nohighlight">1: "janvier"
 2: "février"
@@ -163,7 +161,7 @@ La fonction `printf` m'a ensuite permis de récupérer les bonnes traductions.
 
 <p class="info">J'utilise Gulp pour compiler et optimiser les <em>assets</em> de mon site. Si jamais votre workflow est différent (webpack ou autre), il vous sera à priori facile d'adapter l'exemple ci-dessous à votre cas précis.</p>
 
-Pour rappel, le but ici est d'ajouter un *fingerprint* au nom des fichiers voulus. Par exemple&nbsp;:
+Pour rappel, le but ici est d'ajouter un _fingerprint_ au nom des fichiers voulus. Par exemple&nbsp;:
 
     <link rel="stylesheet" href="/assets/css/styles.css">
 
@@ -171,9 +169,9 @@ Doit être transformé en&nbsp;:
 
     <link rel="stylesheet" href="/assets/css/styles-b9bafce7.css">
 
-Les *assets* de mon site Jekyll (CSS, JS, etc.) étaient *fingerprintés* grâce à [jekyll-minibundle](https://github.com/tkareine/jekyll-minibundle). Avec Hugo j'ai dû chercher une nouvelle solution pour arriver à un résultat équivalent. Je me suis servi pour ça de `gulp-hash` et `del`.
+Les _assets_ de mon site Jekyll (CSS, JS, etc.) étaient _fingerprintés_ grâce à [jekyll-minibundle](https://github.com/tkareine/jekyll-minibundle). Avec Hugo j'ai dû chercher une nouvelle solution pour arriver à un résultat équivalent. Je me suis servi pour ça de `gulp-hash` et `del`.
 
-Pour arriver à la solution voulue, il faut pouvoir stocker dans le dossier `data` un fichier qui mappera les noms d'*assets* avec le dernier *hash* créé. Ces informations seront ensuite accessibles à Hugo grâce à la variable globale `.Site.Data`.
+Pour arriver à la solution voulue, il faut pouvoir stocker dans le dossier `data` un fichier qui mappera les noms d'_assets_ avec le dernier _hash_ créé. Ces informations seront ensuite accessibles à Hugo grâce à la variable globale `.Site.Data`.
 
 Voici par exemple ma tâche Gulp pour la gestion des styles&nbsp;:
 

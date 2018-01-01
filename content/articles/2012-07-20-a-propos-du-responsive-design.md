@@ -39,7 +39,6 @@ Le surf "nomade" tend à se développer de plus en plus, il y a donc un enjeu cl
 
 Le site e-commerce de [Sony](http://www.sony.com/index.php) est un bel exemple de site appliquant ces techniques. En voici d'autres pêle-mêle&nbsp;:
 
-
 * [Convergese](http://convergese.com/)
 * [Vivelohoy](http://www.vivelohoy.com/)
 * [Brickartist](http://brickartist.com/)

@@ -8,7 +8,7 @@ title: Like, Plus, Share...
 url: "/articles/like-plus-share"
 ---
 
-J'ai récemment lu un article intitulé *[Sweep the Sleaze](http://ia.net/blog/sweep-the-sleaze/)* (balayer les ordures), écrit par Oliver Reichenstein de chez [iA](http://ia.net/). Dans cet article, Oliver tire à boulets rouges sur les boutons de partage qui ont envahi nos pages depuis quelques temps. Et je dois dire que je partage en effet la plupart de ses réticences.
+J'ai récemment lu un article intitulé _[Sweep the Sleaze](http://ia.net/blog/sweep-the-sleaze/)_ (balayer les ordures), écrit par Oliver Reichenstein de chez [iA](http://ia.net/). Dans cet article, Oliver tire à boulets rouges sur les boutons de partage qui ont envahi nos pages depuis quelques temps. Et je dois dire que je partage en effet la plupart de ses réticences.
 
 ---
 

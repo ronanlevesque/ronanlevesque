@@ -15,7 +15,7 @@ Jusqu'à très récemment, j'avais tendance à gérer mes webfonts de manière b
 
 ## Quelques précisions
 
-La notion de *FOIT* ne parlant pas à tout le monde, commençons par une petite explication&nbsp;: tant que votre navigateur n'a pas téléchargé les *webfonts* de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d'afficher les polices que vous avez définies par défaut. C'est ce qu'on appelle le *FOIT*, pour *Flash Of Invisible Text*.
+La notion de _FOIT_ ne parlant pas à tout le monde, commençons par une petite explication&nbsp;: tant que votre navigateur n'a pas téléchargé les _webfonts_ de votre site, le texte ainsi stylé reste invisible pendant un certain temps avant que le navigateur décide d'afficher les polices que vous avez définies par défaut. C'est ce qu'on appelle le _FOIT_, pour _Flash Of Invisible Text_.
 
 Le problème, c'est que ce temps varie selon les navigateurs; et s'il reste raisonnable sur Chrome ou Firefox (de l'ordre de 3 secondes), il peut aller jusqu'à 30 secondes pour Safari iOS par exemple.
 
@@ -30,7 +30,7 @@ Si l'on considère en outre qu'un site doit en moyenne se charger en 1 seconde a
 
 [Plusieurs](http://crocodillon.com/blog/non-blocking-web-fonts-using-localstorage) [techniques](http://jaicab.com/localFont/) ont émergé récemment, mais celle qui a retenu mon attention est celle mise en place par [filament group](https://www.filamentgroup.com/lab/font-events.html).
 
-L'idée est d'utiliser par défaut les polices *websafe* (cf. [CSS Font Stack](http://www.cssfontstack.com/)) et de prévoir une classe contenant les *webfonts*, par exemple&nbsp;:
+L'idée est d'utiliser par défaut les polices _websafe_ (cf. [CSS Font Stack](http://www.cssfontstack.com/)) et de prévoir une classe contenant les _webfonts_, par exemple&nbsp;:
 
     body {
       font-family: Sans-serif;
@@ -40,7 +40,7 @@ L'idée est d'utiliser par défaut les polices *websafe* (cf. [CSS Font Stack](h
       font-family: 'Open Sans', Sans-serif;
     }
 
-On utilise ensuite le loader JS [Font Face Observer](https://github.com/bramstein/fontfaceobserver) créé par [Bram Stein](https://twitter.com/bram_stein) pour détecter le moment où toutes les *webfonts* seront loadées, et une fois que c'est fait on ajoute notre classe `font-loaded`&nbsp;:
+On utilise ensuite le loader JS [Font Face Observer](https://github.com/bramstein/fontfaceobserver) créé par [Bram Stein](https://twitter.com/bram_stein) pour détecter le moment où toutes les _webfonts_ seront loadées, et une fois que c'est fait on ajoute notre classe `font-loaded`&nbsp;:
 
     (function(w) {
       if (w.document.documentElement.className.indexOf('fonts-loaded') > -1) {
@@ -61,7 +61,7 @@ On utilise ensuite le loader JS [Font Face Observer](https://github.com/bramstei
       });
     }(this));
 
-L'approche de filament group privilégie l'utilisation de cookies, mais quant à moi j'ai préféré me rabattre sur *localStorage*. On crée avec celui-ci un item `fontsLoaded` grâce auquel on pourra ajouter dans notre `<head>` la classe `fonts-loaded` à notre html, comme ceci&nbsp;:
+L'approche de filament group privilégie l'utilisation de cookies, mais quant à moi j'ai préféré me rabattre sur _localStorage_. On crée avec celui-ci un item `fontsLoaded` grâce auquel on pourra ajouter dans notre `<head>` la classe `fonts-loaded` à notre html, comme ceci&nbsp;:
 
     <script>
       if (localStorage.getItem('fontsLoaded')) {
@@ -69,8 +69,8 @@ L'approche de filament group privilégie l'utilisation de cookies, mais quant à
       }
     </script>
 
-Ainsi, tant que cet item sera encore présent dans notre *localStorage*, la classe en question sera appliquée avant le rendu de la page.
+Ainsi, tant que cet item sera encore présent dans notre _localStorage_, la classe en question sera appliquée avant le rendu de la page.
 
 ## Une future alternative
 
-L'approche décrite ici me paraît pour l'instant la plus efficace, en attendant une meilleure solution... Celle-ci pourrait bien venir de la proposition *CSS font-rendering* dont le but est de contrôler directement via CSS le comportement d'affichage de nos *webfonts*. Je vous invite à consulter son [repo Github](https://github.com/KenjiBaheux/css-font-rendering) pour de plus amples informations.
+L'approche décrite ici me paraît pour l'instant la plus efficace, en attendant une meilleure solution... Celle-ci pourrait bien venir de la proposition _CSS font-rendering_ dont le but est de contrôler directement via CSS le comportement d'affichage de nos _webfonts_. Je vous invite à consulter son [repo Github](https://github.com/KenjiBaheux/css-font-rendering) pour de plus amples informations.

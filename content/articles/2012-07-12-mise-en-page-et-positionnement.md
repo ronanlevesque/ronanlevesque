@@ -71,7 +71,7 @@ Pour ma part j'ai très souvent recours à cette méthode pour deux raisons prin
 * Elle est simple à visualiser dans l'espace (imaginons qu'on cherche tout simplement à disposer divers éléments au sein d'un même bloc).
 * Elle génère à ma connaissance peu, voire pas de bugs, même sur d'anciens navigateurs.
 
-Prenons un cas concret&nbsp;: nous souhaitons construire un bloc mettant en avant une offre promotionnelle pour la vente d'un de mes splendides dessins avec image, titre, court descriptif, prix et *call to action*. Le résultat souhaité est visible ci-dessous.
+Prenons un cas concret&nbsp;: nous souhaitons construire un bloc mettant en avant une offre promotionnelle pour la vente d'un de mes splendides dessins avec image, titre, court descriptif, prix et _call to action_. Le résultat souhaité est visible ci-dessous.
 
 ![Wire 2](/assets/img/wire-1.jpg)
 

@@ -24,7 +24,7 @@ Chrome accuse un retard catastrophique sur ce point par rapport à Firefox ou IE
 
 ### 2ème point&nbsp;: Vanilla JS
 
-Exit jQuery, le JS de ce site ne sera plus que du Vanilla histoire de mettre en place de bonnes pratiques. A vrai dire, pour cette première version le JS du site est assez réduit. Entre autres détails, j'ai notamment appliqué à ma navigation sur mobile le principe de *toggle* d'un état en JS via l'attribut HTML5 `data-*`, comme recommandé dans cet excellent [article](http://toddmotto.com/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/) de Todd Motto.
+Exit jQuery, le JS de ce site ne sera plus que du Vanilla histoire de mettre en place de bonnes pratiques. A vrai dire, pour cette première version le JS du site est assez réduit. Entre autres détails, j'ai notamment appliqué à ma navigation sur mobile le principe de _toggle_ d'un état en JS via l'attribut HTML5 `data-*`, comme recommandé dans cet excellent [article](http://toddmotto.com/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/) de Todd Motto.
 
 ## Regard vers le passé
 

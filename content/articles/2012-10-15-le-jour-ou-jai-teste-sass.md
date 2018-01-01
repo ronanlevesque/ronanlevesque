@@ -7,7 +7,7 @@ tags:
 title: Le jour où j'ai testé Sass
 ---
 
-J'ai lu récemment pas mal de débats sur l'intérêt d'intégrer ou non les préprocesseurs CSS dans nos workflows. Certains  pour, d'autres contre, bref, les avis semblaient vraiment partagés sur le sujet. D'après ce que j'avais pu en lire, ils pouvaient pourtant présenter un réel intérêt dans certains cas, notamment sur de gros projets. Curieux d'en savoir un peu plus sur le sujet, j'ai récemment plongé mon nez dans Sass, qui semblait le plus populaire des différents préprocesseurs.
+J'ai lu récemment pas mal de débats sur l'intérêt d'intégrer ou non les préprocesseurs CSS dans nos workflows. Certains pour, d'autres contre, bref, les avis semblaient vraiment partagés sur le sujet. D'après ce que j'avais pu en lire, ils pouvaient pourtant présenter un réel intérêt dans certains cas, notamment sur de gros projets. Curieux d'en savoir un peu plus sur le sujet, j'ai récemment plongé mon nez dans Sass, qui semblait le plus populaire des différents préprocesseurs.
 
 ---
 
@@ -35,7 +35,7 @@ Le nesting, qu'on pourrait plus ou moins traduire par imbrication, permet de reg
 
     ul {
       padding: 2em;
-      a {color: white;}
+      a { color: white; }
     }
 
 Il se traduira en CSS par&nbsp;:
@@ -59,8 +59,8 @@ Sass permet d'intégrer la notion de variables en CSS, variables qui peuvent êt
 Ils permettent de réutiliser une partie de notre CSS n'importe où grâce à la fonction `@include`. Ainsi le SCSS suivant&nbsp;:
 
     @mixin list-padd {
-      ul {padding: 2em;}
-      li {padding: 1em;}
+      ul { padding: 2em; }
+      li { padding: 1em; }
     }
 
     nav {

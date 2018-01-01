@@ -20,7 +20,7 @@ Angular est comme précisé plus haut un framework JS MVC. Il est développé en
 
 <blockquote><p>Angular adapte et étend le HTML traditionnel pour servir le contenu dynamique de façon améliorée grâce à un data-binding bidirectionnel qui permet la synchronisation automatique des modèles et des vues.</p></blockquote>
 
-Pour résumer cela&nbsp;: la vue mettra à jour le modèle, et vice-versa. Angular a baptisé ça "*Two-way Data Binding*".
+Pour résumer cela&nbsp;: la vue mettra à jour le modèle, et vice-versa. Angular a baptisé ça "_Two-way Data Binding_".
 
 De plus, grâce à l'injection de dépendances, beaucoup de fonctionnalités traditionnellement gérées côté serveur vont pouvoir l'être côté client, allégeant ainsi le code du premier pour des applications plus légères et rapides.
 
@@ -59,7 +59,7 @@ Angular utilise des données au format JSON comme structure de bases. C'est trè
 
 Pour **Moovies**, la première piste que j'ai suivie a été de créer un tableau de données sur Google Spreadsheets, puis de lier l'un et l'autre (oui, Angular permet de faire ça&nbsp;:)). En fin de compte, cela s'est avéré moyennement intéressant, car pour ajouter ou supprimer un film il fallait à chaque fois repasser par Spreadsheets. Ca s'accordait peu avec mon envie de tout centraliser sur une page.
 
-La deuxième piste a été de passer par [Firebase](https://www.firebase.com), un backend externalisé qui a en plus développé spécifiquement un module pour Angular&nbsp;: [AngularFire](http://angularfire.com/). L'avantage de cette solution, c'est qu'il n'y presque aucun code à écrire, ni aucune gestion à effectuer côté serveur. Son énorme atout, c'est qu'elle permet de créer du "*Three-way Data Binding*", en ajoutant au *Binding* d'Angular ses propres données backend. Pour faire simple, une modification dans l'app mettra à jour les bases de données et réciproquement. En gros&nbsp;: surpuissant&nbsp;:)
+La deuxième piste a été de passer par [Firebase](https://www.firebase.com), un backend externalisé qui a en plus développé spécifiquement un module pour Angular&nbsp;: [AngularFire](http://angularfire.com/). L'avantage de cette solution, c'est qu'il n'y presque aucun code à écrire, ni aucune gestion à effectuer côté serveur. Son énorme atout, c'est qu'elle permet de créer du "_Three-way Data Binding_", en ajoutant au _Binding_ d'Angular ses propres données backend. Pour faire simple, une modification dans l'app mettra à jour les bases de données et réciproquement. En gros&nbsp;: surpuissant&nbsp;:)
 
 ## Une question de sécurité
 

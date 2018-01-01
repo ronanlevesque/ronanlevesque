@@ -14,7 +14,6 @@ Je suis tombé sur une nouvelle technique publiée par l'agence new-yorkaise [Ba
 
 En fait quand je crée des grilles, par exemple de listings produits (le plus souvent responsive), j'utilise une des deux techniques suivantes&nbsp;:
 
-
 1. Je fais flotter tous mes blocs à gauche à coups de `float:left` puis j'applique une méthode de [clearfix](http://nicolasgallagher.com/micro-clearfix-hack/) au bloc conteneur pour éviter les effets annexes liés à l'utilisation de mes `floats`.
 2. Ou j'utilise le pseudo-sélecteur `nth-child` pour cibler chaque premier élément de ma ligne de produits et supprimer sa marge gauche.
 

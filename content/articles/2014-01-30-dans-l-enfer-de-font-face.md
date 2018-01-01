@@ -32,11 +32,11 @@ Lorsque l'on veut définir différents types de cette police, on spécifie une `
       font-weight: normal;
     }
 
-Le hic avec cette façon de faire, c'est qu'en cas d'impossibilité pour le navigateur d'afficher les fontes personnalisées, la police de *fallback* s'affichera sans italique ou sans gras.
+Le hic avec cette façon de faire, c'est qu'en cas d'impossibilité pour le navigateur d'afficher les fontes personnalisées, la police de _fallback_ s'affichera sans italique ou sans gras.
 
 ## Une autre solution&nbsp;?
 
-En fouillant un peu, j'ai trouvé cette [solution](http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles), bien plus intéressante car elle évitera la suppression ou le passage en *faux* (c'est-à-dire simulé par le navigateur) des styles italiques et gras&nbsp;:
+En fouillant un peu, j'ai trouvé cette [solution](http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles), bien plus intéressante car elle évitera la suppression ou le passage en _faux_ (c'est-à-dire simulé par le navigateur) des styles italiques et gras&nbsp;:
 
     @font-face {
       font-family: 'Whatever';
@@ -65,4 +65,4 @@ On utilise un seul nom unique de `font-family` pour toutes nos `@font-face`, pui
 
 Comme d'habitude, là où ça coince, c'est avec Internet Explorer (du moins jusqu'à la version 8). La raison, c'est que ce cher IE ne prend pas en compte `font-style` et `font-weight` dans la déclaration `@font-face` ([source](http://itsravenous.com/blog/banishing-faux-italic-and-faux-bold--on-css3-fonts-in-IE-8-and-below)).
 
-Pour contourner le problème, il va falloir avoir recours aux commentaires conditionnels et une feuille de styles séparés pour IE. C'est dans celle-ci qu'on intégrera les polices sur le format proposé par FontSquirrel, avec un nom de `font-family` par type de police. *Problem solved* !
+Pour contourner le problème, il va falloir avoir recours aux commentaires conditionnels et une feuille de styles séparés pour IE. C'est dans celle-ci qu'on intégrera les polices sur le format proposé par FontSquirrel, avec un nom de `font-family` par type de police. _Problem solved_ !

@@ -49,7 +49,7 @@ Jekyll peut être hébergé sur n'importe quel serveur qui peut servir des fichi
 
 ### Format d'écriture
 
-Dernier point fort de Jekyll, mais non pas le moindre&nbsp;: outre le format HTML, les articles ou pages peuvent être rédigés au format [Markdown](http://daringfireball.net/projects/markdown/syntax) ou [Textile](http://fr.wikipedia.org/wiki/Textile_(langage)). Jekyll s'occupera tout seul de les convertir en fichiers HTML.
+Dernier point fort de Jekyll, mais non pas le moindre&nbsp;: outre le format HTML, les articles ou pages peuvent être rédigés au format [Markdown](http://daringfireball.net/projects/markdown/syntax) ou [Textile](<http://fr.wikipedia.org/wiki/Textile_(langage)>). Jekyll s'occupera tout seul de les convertir en fichiers HTML.
 
 ## En conclusion
 

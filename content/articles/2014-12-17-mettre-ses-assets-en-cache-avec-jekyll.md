@@ -31,15 +31,15 @@ Ce qui générera, dans l'ordre : l'année, le mois, le jour, et l'heure avec mi
 
     <link rel="stylesheet" href="/css/myawesomestylesheet.css?v=141217192112">
 
-De cette manière, on est sûr d'avoir une ID *presque* unique puisqu'à chaque seconde passée elle sera différente.
+De cette manière, on est sûr d'avoir une ID _presque_ unique puisqu'à chaque seconde passée elle sera différente.
 
 ## Les limites de cette solution
 
-En appliquant cette façon de faire, tous les fichiers HTML seront mis à jour avec une nouvelle version du CSS, même si celui-ci n'a pas changé. La mise en cache perd un peu de son intérêt... Autre argument, Google [conseille](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching) d'éviter les *query parameters* au profit des *fingerprints*.
+En appliquant cette façon de faire, tous les fichiers HTML seront mis à jour avec une nouvelle version du CSS, même si celui-ci n'a pas changé. La mise en cache perd un peu de son intérêt... Autre argument, Google [conseille](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching) d'éviter les _query parameters_ au profit des _fingerprints_.
 
 ## Un autre système
 
-Je suis allé chercher du côté des plugins Jekyll et j'ai déniché [Jekyll-minibundle](https://github.com/tkareine/jekyll-minibundle), qui fait exactement ce que je cherche. Une fois le plugin installé, les *fingerprints* s'ajoutent de cette manière :
+Je suis allé chercher du côté des plugins Jekyll et j'ai déniché [Jekyll-minibundle](https://github.com/tkareine/jekyll-minibundle), qui fait exactement ce que je cherche. Une fois le plugin installé, les _fingerprints_ s'ajoutent de cette manière :
 
     <link href="{% ministamp /_assets/css/fox.css /assets/css/fox.css %}" rel="stylesheet">
 

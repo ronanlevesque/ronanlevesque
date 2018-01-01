@@ -134,13 +134,18 @@
   blockquote a {
     color: $light-green;
     text-decoration: none;
-    border-bottom: 1px solid $light-green;
-    transition: color 0.2s ease-out, border-color 0.2s ease-out;
+    text-shadow: 0px 0.05em $dark-blue, 0.05em 0 $dark-blue,
+      -0.05em 0 $dark-blue, 0px 0.1em $dark-blue, 0.1em 0 $dark-blue,
+      -0.1em 0 $dark-blue;
+    background-image: linear-gradient(to right, $light-green, $light-green);
+    background-position: 0 1.08em;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    transition: color 0.2s ease-out, background-size 0.2s ease-out;
 
     &:hover,
     &:focus {
-      color: $dark-green;
-      border-color: $dark-green;
+      background-size: 0% 1px;
     }
   }
 
@@ -357,6 +362,13 @@
     code {
       background-color: darken($dark-blue, 2%);
     }
+
+    a {
+      text-shadow: 0px 0.05em lighten($dark-blue, 10%),
+        0.05em 0 lighten($dark-blue, 10%), -0.05em 0 lighten($dark-blue, 10%),
+        0px 0.1em lighten($dark-blue, 10%), 0.1em 0 lighten($dark-blue, 10%),
+        -0.1em 0 lighten($dark-blue, 10%);
+    }
   }
 
   .demo,
@@ -372,9 +384,9 @@
       @include fluid-type(font-size, 320, 1920, 10, 16);
       font-weight: bold;
       text-transform: uppercase;
-      text-decoration: none;
+      text-shadow: none;
+      background-image: none;
       letter-spacing: 0.05em;
-      border: none;
       color: darken($dark-blue, 5%);
 
       &:before,
@@ -448,8 +460,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 0;
+    text-shadow: none;
     color: $white;
+    background-image: none;
 
     &:hover,
     &:focus {

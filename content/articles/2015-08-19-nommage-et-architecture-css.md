@@ -21,15 +21,15 @@ J'ai pour ma part commencé par utiliser BEM de manière traditionnelle avant d'
 .Component-element {}
 .Component--modifier {}</code></pre>
 
-Je préfère cette syntaxe par rapport au BEM classique, où l'utilisation des <kbd>_</kbd> ne facilite pas vraiment l'édition du nom des classes.
+Je préfère cette syntaxe par rapport au BEM classique, où l'utilisation des <kbd>\_</kbd> ne facilite pas vraiment l'édition du nom des classes.
 
 ## Pousser plus loin le concept des Modifiers
 
-Le souci avec les *Modifiers*, c'est qu'ils créent des classes à rallonge, par exemple&nbsp;:
+Le souci avec les _Modifiers_, c'est qu'ils créent des classes à rallonge, par exemple&nbsp;:
 
     <button class="Button Button--small Button--green Button--caps">Texte</button>
 
-J'ai récemment vu passer un article d'[Envato](http://www.envato.com/) dans lequel était décrit le principe des *[Chainable Modifiers](http://webuild.envato.com/blog/chainable-bem-modifiers/)*, principe qu'ils ont mis en place pour Envato Market.
+J'ai récemment vu passer un article d'[Envato](http://www.envato.com/) dans lequel était décrit le principe des _[Chainable Modifiers](http://webuild.envato.com/blog/chainable-bem-modifiers/)_, principe qu'ils ont mis en place pour Envato Market.
 
 En se basant sur cette convention, le code ci-dessus se transformerait en&nbsp;:
 
@@ -81,6 +81,6 @@ Pour tous les sélecteurs que je vais cibler en JS, j'ajoute une classe (ou une 
 
 Même si la mise en place de cette méthodologie m'a procuré un gain énorme en termes de maintenabilité et de lisibilité sur des grosses bases de code CSS, elle n'est pas infaillible, et les risques de non-isolation et de spécificité du code existent toujours.
 
-Pour contourner &ndash; entre autres &ndash; ces problèmes, [Glenn Maddern](http://glenmaddern.com/articles/css-modules) a créé un système de [modules CSS](http://glenmaddern.com/articles/css-modules). Grâce à du JS, les styles sont maintenus à leur création dans un *scope* local qui permet de résoudre les questions de nommage et d'héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d'en rebuter certains.
+Pour contourner &ndash; entre autres &ndash; ces problèmes, [Glenn Maddern](http://glenmaddern.com/articles/css-modules) a créé un système de [modules CSS](http://glenmaddern.com/articles/css-modules). Grâce à du JS, les styles sont maintenus à leur création dans un _scope_ local qui permet de résoudre les questions de nommage et d'héritage. Malheureusement, cette solution rajoute un niveau de complexité supplémentaire qui risque d'en rebuter certains.
 
 Reste a espérer qu'un standard verra enfin le jour pour corriger ce casse-tête...

@@ -13,7 +13,7 @@ Un des gros points noirs du CSS est la complexité que sa maintenance peut parfo
 
 ## Le principe
 
-[BEM](http://bem.info/method/) est une méthodologie mise au point par [Yandex](http://www.yandex.com/). "BEM" signifie *Block, Element, Modifier*. l'idée derrière cette méthodologie est de faciliter la lecture (et la ré-usabilité) du code par d'autres développeurs. BEM met l'accent sur la relation qui existe entre différents blocs et éléments. La convention de nommage que j'utilise est la suivante&nbsp;:
+[BEM](http://bem.info/method/) est une méthodologie mise au point par [Yandex](http://www.yandex.com/). "BEM" signifie _Block, Element, Modifier_. l'idée derrière cette méthodologie est de faciliter la lecture (et la ré-usabilité) du code par d'autres développeurs. BEM met l'accent sur la relation qui existe entre différents blocs et éléments. La convention de nommage que j'utilise est la suivante&nbsp;:
 
 <pre><code class="css">.block {}
 .block__element {}

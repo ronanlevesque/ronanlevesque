@@ -28,7 +28,7 @@ Ceci n'est qu'un petit aperçu, sachant qu'il existe des centaines de tâches di
 
 ## Installation
 
-Avant toute chose, il vous faudra installer [Node.js et NPM](http://nodejs.org/) sur votre ordinateur. NPM est le *package manager* de Node, qui va permettre d'installer Grunt.
+Avant toute chose, il vous faudra installer [Node.js et NPM](http://nodejs.org/) sur votre ordinateur. NPM est le _package manager_ de Node, qui va permettre d'installer Grunt.
 
 Ensuite, il va falloir installer l'interface de commande de Grunt. Depuis votre ligne de commande habituelle, entrez la commande suivante&nbsp;:
 

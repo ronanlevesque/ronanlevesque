@@ -32,7 +32,7 @@ Le wireframe, de son petit nom français "maquette en fil de fer", est le procé
 
 [Balsamiq](http://www.balsamiq.com/products/mockups) est un autre outil très complet de création de maquettes et wireframes, qui propose par exemple 75 composants d'interface et 187 icônes. Il existe une version gratuite et une version payante (79$ pour une licence une personne).
 
-[En savoir plus sur les wireframes...](http://www.smashingmagazine.com/2009/09/01/35-excellent-wireframing-resources/)
+<p class="link"><a href="http://www.smashingmagazine.com/2009/09/01/35-excellent-wireframing-resources/">En savoir plus sur les wireframes...</a></p>
 
 ## Typographie
 
@@ -118,7 +118,6 @@ Les icônes sont une composante importante de votre site, elles permettent de sc
 
 ## Ressources supplémentaires
 
-
 * [Box Shadows](http://www.westciv.com/tools/boxshadows/index.html)&nbsp;: générateurs de box-shadows CSS en ligne
 * [Ultimate CSS gradient editor](http://www.colorzilla.com/gradient-editor/)&nbsp;: générateur de dégradés CSS en ligne
 * [CSS3 buttons](http://hellohappy.org/css3-buttons/)&nbsp;: différents exemples de boutons en CSS3
@@ -128,7 +127,6 @@ Les icônes sont une composante importante de votre site, elles permettent de sc
 * [Raphaël Icon set](http://icons.marekventur.de/)&nbsp;: icônes disponibles en tant que fonte web.
 * [Juicebox](http://www.juicebox.net/)&nbsp;: pour créer facilement des galeries d'images sur différents supports.
 * [Patternry](http://patternry.com/patterns/)&nbsp;: une bibliothèque de ressources front-end open-source (pagination, barres de progression, formulaires de contact...).
-
 
 ---
 

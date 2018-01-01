@@ -22,7 +22,7 @@ Ce que je considère comme le point fort de ce framework, c'est sa modularité. 
 
 J'ai déjà chanté haut et fort [toute](/articles/le-jour-ou-jai-teste-sass/) [l'estime](/articles/un-mixin-sass-simple-pour-les-media-queries/) que je porte à Sass, je ne vais pas revenir dessus mais une chose est sûre&nbsp;: Sass est idéal pour concrétiser la modularité que je cherchais à intégrer dans FOX CSS.
 
-Celle-ci prend la forme de fichiers partiels, identifiés par un <kbd>_</kbd> devant leur nom, qui sont ensuite tous appelés dans le fichier SCSS principal. En gros, si un des modules ci-dessus ne nous intéresse pas, on supprime son appel dans le fichier SCSS.
+Celle-ci prend la forme de fichiers partiels, identifiés par un <kbd>\_</kbd> devant leur nom, qui sont ensuite tous appelés dans le fichier SCSS principal. En gros, si un des modules ci-dessus ne nous intéresse pas, on supprime son appel dans le fichier SCSS.
 
 J'ai également intégré un fichier mixin regroupant certains mixins faits maison ou récupérés à gauche à droite afin de compléter le projet.
 

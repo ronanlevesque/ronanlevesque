@@ -38,7 +38,7 @@ Du coup je ne touche du coup plus à la `font-size` de mon body et je la laisse 
 
 `Em` est donc une unité intéressante à utiliser, à un détail près&nbsp;: sa base variera selon la taille de la police, pouvant engendrer des différences de mise en page parfois pénibles (par exemple sur les margins et paddings d'un texte d'une certaine taille).
 
-Cet inconvénient est toutefois corrigé par l'unité `rem` (pour *root em*). Celle-ci fonctionne sur le même principe que les `em`, à la différence près qu'elle utilise comme base de départ la racine html. Elle est donc moins source d'erreurs de calcul. Par contre elle n'est pas supportée par IE8- (mais un [polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill) existe).
+Cet inconvénient est toutefois corrigé par l'unité `rem` (pour _root em_). Celle-ci fonctionne sur le même principe que les `em`, à la différence près qu'elle utilise comme base de départ la racine html. Elle est donc moins source d'erreurs de calcul. Par contre elle n'est pas supportée par IE8- (mais un [polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill) existe).
 
 Si on ne souhaite pas utiliser de polyfill, on se retrouve donc face à un casse-tête à chaque fois qu'on utilise des `rem`, car il faudra également prévoir et calculer un fallback en `px` pour les navigateurs ne reconnaissant pas cette unité...
 
@@ -55,7 +55,7 @@ Il suffit ainsi d'écrire `@include fs(16)` pour que nos `rem` soient convertis 
 
 L'avantage du responsive design, c'est que si l'on utilise `em` ou `rem` pour nos tailles de police, un changement de taille du `body` grâce aux `@media queries` permet d'impacter l'ensemble de nos éléments.
 
-On peut ainsi définir dès le départ une taille pour chacun de nos éléments, et puis changer leur tailles à différents *breakpoints*.
+On peut ainsi définir dès le départ une taille pour chacun de nos éléments, et puis changer leur tailles à différents _breakpoints_.
 
 L'inconvénient de cette méthode, c'est que si on utilise un fallback en `px`, les éléments calculés de cette manière ne seront pas affectés par le changement de `font-size` du `body`, ce qui signifie qu'ils devront être redéfinis ensuite.
 
