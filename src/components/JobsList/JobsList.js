@@ -8,14 +8,11 @@ const JobsList = ({ data }) => (
     {data.map(item => (
       <li css={helperStyles.gradientLine} key={item.node.company}>
         <span className="d-flex jc-between ai-center pv-8 fsz-12 md:pv-12 md:fsz-14 lg:pv-16 lg:fsz-16">
-          <span>
-            <span
-              css={styles.job}
-              className="d-block fw-bold color-sanJuan sm:d-inline-flex"
-            >
+          <span className="sm:d-flex sm:ai-center">
+            <span css={styles.job} className="d-block fw-bold color-sanJuan">
               {item.node.company}
             </span>
-            <span className="d-block mt-4 color-blueBayoux sm:d-inline-flex fst-italic">
+            <span className="d-block mt-4 color-blueBayoux fst-italic sm:mt-0">
               {item.node.job}
             </span>
           </span>
