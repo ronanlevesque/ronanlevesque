@@ -1,21 +1,2 @@
 User-agent: *
-Disallow: /old
-
-User-agent: Googlebot
-Disallow: /*.php$
-Disallow: /*.inc$
-Disallow: /*.gz$
-Disallow: /*.swf$
-Disallow: /*.wmv$
-Disallow: /*.cgi$
-Disallow: /*.xhtml$
-
-User-agent: Googlebot-Image
 Disallow:
-Allow: /*
-
-User-agent: Mediapartners-Google*
-Disallow:
-Allow: /*
-
-Sitemap: http://ronanlevesque.fr/sitemap.xml
