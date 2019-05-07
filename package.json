@@ -25,7 +25,6 @@
     "classnames": "^2.2.6",
     "gatsby": "^2.3.5",
     "gatsby-plugin-emotion": "^4.0.6",
-    "gatsby-plugin-feed": "^2.1.0",
     "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.11",
