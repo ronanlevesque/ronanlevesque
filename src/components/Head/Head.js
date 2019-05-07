@@ -21,21 +21,13 @@ const Head = ({ metaDescription, pageTitle, url }) => {
       <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
       <meta content="summary_large_image" name="twitter:card" />
       <meta content={social.twitter} name="twitter:site" />
-      <meta content={pageTitle} name="twitter:title" />
+      <meta content={`${pageTitle} | ${title}`} name="twitter:title" />
       <meta content={metaDescription} name="twitter:description" />
       <meta content={siteUrl} name="twitter:domain" />
       <meta content={url} property="og:url" />
       <meta content={title} property="og:site_name" />
-      <meta content={pageTitle} property="og:title" />
+      <meta content={`${pageTitle} | ${title}`} property="og:title" />
       <meta content={metaDescription} property="og:description" />
-      <meta
-        content="https://res.cloudinary.com/hilnmyskv/image/upload/v1527077656/Algolia_OG_image_m3xgjb.png"
-        property="og:image"
-      />
-      <meta
-        content="https://res.cloudinary.com/hilnmyskv/image/upload/v1527077656/Algolia_OG_image_m3xgjb.png"
-        name="twitter:image"
-      />
       <meta content="1200" property="og:image:width" />
       <meta content="500" property="og:image:height" />
       <link
