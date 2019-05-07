@@ -17,7 +17,7 @@ const renderIcon = (icon, link) => (
       data-before={icon}
     >
       <Svg
-        className="d-block w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
+        className="d-block w-20 h-20 lg:w-24 lg:h-24"
         name={icon.toLowerCase()}
         aria-label={`${icon} icon`}
       />
@@ -33,7 +33,7 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
 
   return (
     <nav css={helperStyles.gradientLine} {...other}>
-      <div className="h-40 d-flex jc-between ai-center md:h-48 lg:h-64">
+      <div className="pv-12 d-flex jc-between ai-center md:pv-16 lg:pv-20">
         <SmallText as={textTag} className="m-0 color-sanJuan fw-semibold">
           {textLink ? (
             <Link
@@ -42,7 +42,7 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
             >
               <Svg
                 name="arrow-left"
-                className="color-blueBayoux mr-8 d-inline w-12 h-12 md:w-16 md:h-16 md:mr-10 lg:w-20 lg:h-20 lg:mr-12"
+                className="color-blueBayoux mr-8 d-inline w-20 h-20 md:mr-10 lg:w-24 lg:h-24 lg:mr-12"
               />
               {text}
             </Link>
