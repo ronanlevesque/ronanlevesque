@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Ronan Levesque',
-    description: 'A starter blog demonstrating what Gatsby can do.',
+    description:
+      'I’m a Sr. Software Engineer, currently working as Tech Lead at Algolia. I ❤️ pushing pixels around and playing with React to build fast and powerful web applications.',
     siteUrl: 'https://ronanlevesque.com',
     social: {
       GitHub: 'https://github.com/ronanlevesque',
