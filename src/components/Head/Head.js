@@ -19,7 +19,6 @@ const Head = ({ metaDescription, pageTitle, url }) => {
         name="viewport"
       />
       <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-      <meta content="summary_large_image" name="twitter:card" />
       <meta content={social.twitter} name="twitter:site" />
       <meta content={`${pageTitle} | ${title}`} name="twitter:title" />
       <meta content={metaDescription} name="twitter:description" />
@@ -28,8 +27,6 @@ const Head = ({ metaDescription, pageTitle, url }) => {
       <meta content={title} property="og:site_name" />
       <meta content={`${pageTitle} | ${title}`} property="og:title" />
       <meta content={metaDescription} property="og:description" />
-      <meta content="1200" property="og:image:width" />
-      <meta content="500" property="og:image:height" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
