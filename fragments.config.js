@@ -433,8 +433,7 @@ module.exports = {
           16: '16px',
           18: '18px',
           24: '24px',
-          36: '36px',
-          56: '56px',
+          32: '32px',
         },
       },
       fontStyle: {

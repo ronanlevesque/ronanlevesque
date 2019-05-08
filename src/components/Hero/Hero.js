@@ -12,7 +12,7 @@ const Hero = ({ children, navText, navTextLink, navTextTag, navWithIcons }) => (
       withIcons={navWithIcons}
     />
     <div className="fxg-1 d-flex">
-      <p className="w-100p mh-0 pv-48 fsz-18 mv-auto ta-center lh-bigger color-sanJuan md:fsz-24 md:pv-80 lg:pv-120 lg:fsz-36">
+      <p className="w-100p mh-0 pv-48 fsz-18 mv-auto ta-center lh-bigger color-sanJuan md:fsz-24 md:pv-80 lg:pv-120 lg:fsz-32">
         {children}
       </p>
     </div>

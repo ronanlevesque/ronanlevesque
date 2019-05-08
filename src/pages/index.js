@@ -16,13 +16,13 @@ const IndexPage = ({ data }) => {
     <DefaultLayout title="Home" url={routes.HOME}>
       <Container>
         <Hero navText={title} navTextTag="h1">
-          Hello! I&rsquo;m a Sr. Software Engineer, currently working as Tech
-          Lead at{' '}
+          Hello! I&rsquo;m a Sr. Software Engineer, currently working as
+          Technical Lead at{' '}
           <a className="color-sanJuan" href="https://www.algolia.com">
             Algolia
           </a>
-          . I ❤️ pushing pixels around and playing with React to build fast and
-          powerful web applications.
+          . I ❤️ pushing pixels around and playing with React to build fast,
+          accessible and powerful web applications.
         </Hero>
         <section>
           <SectionTitle>Previous experiences</SectionTitle>
