@@ -2,6 +2,7 @@ import React from 'react';
 import * as routes from 'constants/routes';
 import Container from 'components/Container';
 import Hero from 'components/Hero';
+import Title from 'components/Title';
 import DefaultLayout from 'layouts/DefaultLayout';
 
 const ErrorPage = () => {
@@ -13,7 +14,7 @@ const ErrorPage = () => {
           navTextLink={routes.HOME}
           navWithIcons={false}
         >
-          This page doesn&rsquo;t exist.
+          <Title>This page doesn&rsquo;t exist.</Title>
         </Hero>
       </Container>
     </DefaultLayout>

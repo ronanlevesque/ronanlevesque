@@ -1,9 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import Nav from 'components/Nav';
 
-const Hero = ({ children, navText, navTextLink, navTextTag, navWithIcons }) => (
-  <header className="d-flex fxd-column mih-100vh">
+const Hero = ({
+  children,
+  fullScreen,
+  navText,
+  navTextLink,
+  navTextTag,
+  navWithIcons,
+}) => (
+  <header className={cx('d-flex fxd-column', fullScreen && 'mih-100vh')}>
     <Nav
       className="fxs-1"
       text={navText}
@@ -11,16 +19,13 @@ const Hero = ({ children, navText, navTextLink, navTextTag, navWithIcons }) => (
       textTag={navTextTag}
       withIcons={navWithIcons}
     />
-    <div className="fxg-1 d-flex">
-      <p className="w-100p mh-0 pv-48 fsz-18 mv-auto ta-center lh-bigger color-sanJuan md:fsz-24 md:pv-80 lg:pv-120 lg:fsz-32">
-        {children}
-      </p>
-    </div>
+    <div className="fxg-1 d-flex">{children}</div>
   </header>
 );
 
 Hero.propTypes = {
   children: PropTypes.node.isRequired,
+  fullScreen: PropTypes.bool,
   navText: PropTypes.string.isRequired,
   navTextLink: PropTypes.string,
   navTextTag: PropTypes.string,
@@ -28,6 +33,7 @@ Hero.propTypes = {
 };
 
 Hero.defaultProps = {
+  fullScreen: true,
   navTextTag: 'span',
   navWithIcons: true,
 };

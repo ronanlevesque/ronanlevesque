@@ -2,6 +2,7 @@ import React from 'react';
 import * as routes from 'constants/routes';
 import Container from 'components/Container';
 import Hero from 'components/Hero';
+import Title from 'components/Title';
 import DefaultLayout from 'layouts/DefaultLayout';
 
 const ArticlesPage = () => {
@@ -13,7 +14,7 @@ const ArticlesPage = () => {
           navTextLink={routes.HOME}
           navWithIcons={false}
         >
-          Work in progress, come back later&hellip;
+          <Title>Work in progress, come back later&hellip;</Title>
         </Hero>
       </Container>
     </DefaultLayout>
