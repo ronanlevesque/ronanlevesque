@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import helperStyles from 'css/helpers.css';
 import styles from './JobsList.css';
+import ListItem from 'components/ListItem';
 
 const JobsList = ({ data }) => (
   <ul className="m-0 p-0 lis-none">
     {data.map(item => (
-      <li css={helperStyles.gradientLine} key={item.node.company}>
+      <ListItem key={item.node.company}>
         <span className="d-flex jc-between ai-center pv-12 fsz-14 md:pv-14 lg:pv-16 lg:fsz-16">
           <span className="sm:d-flex sm:ai-center">
             <span css={styles.job} className="d-block fw-bold color-sanJuan">
@@ -24,7 +24,7 @@ const JobsList = ({ data }) => (
             </span>
           </span>
         </span>
-      </li>
+      </ListItem>
     ))}
   </ul>
 );
