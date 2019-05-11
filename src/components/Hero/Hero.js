@@ -19,7 +19,9 @@ const Hero = ({
       textTag={navTextTag}
       withIcons={navWithIcons}
     />
-    <div className="fxg-1 d-flex">{children}</div>
+    <div className="pv-48 fxg-1 d-flex md:pv-80 lg:pv-120">
+      <div className="w-100p mv-auto ta-center">{children}</div>
+    </div>
   </header>
 );
 

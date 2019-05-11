@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 const Title = ({ as: Component, children, className, ...other }) => (
   <Component
-    className="fw-normal w-100p mh-0 pv-48 fsz-20 mv-auto ta-center lh-bigger color-sanJuan md:fsz-24 md:pv-80 lg:pv-120 lg:fsz-32"
+    className={cx(
+      'fw-normal mv-0 fsz-20 lh-bigger color-sanJuan md:fsz-24 lg:fsz-32',
+      className
+    )}
     {...other}
   >
     {children}
