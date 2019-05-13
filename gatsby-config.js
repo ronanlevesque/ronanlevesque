@@ -17,7 +17,7 @@ module.exports = {
       options: {
         fonts: [
           'Libre Baskerville:400,400i,700',
-          'Roboto:400,600',
+          'Roboto:400,500',
           'Roboto Mono:400',
         ],
       },

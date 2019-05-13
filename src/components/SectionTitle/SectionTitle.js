@@ -7,7 +7,7 @@ const Container = ({ children, ...other }) => (
   <SmallText
     as="h2"
     css={helperStyles.gradientLine}
-    className="m-0 color-manatee fw-semibold"
+    className="m-0 color-manatee fw-medium"
     {...other}
   >
     <span className="pv-12 d-flex ai-center md:pv-16 lg:pv-20">{children}</span>

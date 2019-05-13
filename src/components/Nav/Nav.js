@@ -34,7 +34,7 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
   return (
     <nav css={helperStyles.gradientLine} {...other}>
       <div className="pv-12 d-flex jc-between ai-center md:pv-16 lg:pv-20">
-        <SmallText as={textTag} className="m-0 color-sanJuan fw-semibold">
+        <SmallText as={textTag} className="m-0 color-sanJuan fw-medium">
           {textLink ? (
             <Link
               className="color-sanJuan td-none d-flex ai-center jc-between"
