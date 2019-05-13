@@ -1,3 +1,5 @@
+const pxToRem = px => `${px * 0.0625}rem`;
+
 const config = {
   // General settings for the compiled code
   options: {
@@ -27,31 +29,31 @@ const config = {
   // Spacing is used mainly for paddings and margins
   spacing: {
     0: 0,
-    4: '4px',
-    8: '8px',
-    10: '10px',
-    12: '12px',
-    14: '14px',
-    16: '16px',
-    20: '20px',
-    24: '24px',
-    32: '32px',
-    48: '48px',
-    80: '80px',
-    120: '120px',
+    4: pxToRem(4),
+    8: pxToRem(8),
+    10: pxToRem(10),
+    12: pxToRem(12),
+    14: pxToRem(14),
+    16: pxToRem(16),
+    20: pxToRem(20),
+    24: pxToRem(24),
+    32: pxToRem(32),
+    48: pxToRem(48),
+    80: pxToRem(80),
+    120: pxToRem(120),
   },
   // Sizes are for widths and heights mostly
   sizes: {
     0: 0,
-    12: '12px',
-    16: '16px',
-    20: '20px',
-    24: '24px',
-    28: '28px',
-    32: '32px',
-    40: '40px',
-    48: '48px',
-    64: '64px',
+    12: pxToRem(12),
+    16: pxToRem(16),
+    20: pxToRem(20),
+    24: pxToRem(24),
+    28: pxToRem(28),
+    32: pxToRem(32),
+    40: pxToRem(40),
+    48: pxToRem(48),
+    64: pxToRem(64),
     '100p': '100%',
   },
 };
@@ -387,9 +389,9 @@ module.exports = {
       maxWidth: {
         responsive: true,
         classes: {
-          600: '600px',
-          800: '800px',
-          1200: '1200px',
+          600: pxToRem(600),
+          800: pxToRem(800),
+          1200: pxToRem(1200),
         },
       },
       minHeight: {
@@ -426,14 +428,14 @@ module.exports = {
       fontSize: {
         responsive: true,
         classes: {
-          0: '0px',
-          10: '10px',
-          12: '12px',
-          14: '14px',
-          16: '16px',
-          20: '20px',
-          24: '24px',
-          32: '32px',
+          0: 0,
+          10: pxToRem(10),
+          12: pxToRem(12),
+          14: pxToRem(14),
+          16: pxToRem(16),
+          20: pxToRem(20),
+          24: pxToRem(24),
+          32: pxToRem(32),
         },
       },
       fontStyle: {
@@ -445,7 +447,7 @@ module.exports = {
       letterSpacing: {
         responsive: true,
         classes: {
-          big: '1.5px',
+          big: '0.16em',
         },
       },
       lineClamp: {
