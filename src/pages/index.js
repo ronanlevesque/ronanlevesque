@@ -6,6 +6,7 @@ import Container from 'components/Container';
 import Footer from 'components/Footer';
 import Hero from 'components/Hero';
 import JobsList from 'components/JobsList';
+import Link from 'components/Link';
 import SectionTitle from 'components/SectionTitle';
 import Title from 'components/Title';
 import DefaultLayout from 'layouts/DefaultLayout';
@@ -20,11 +21,14 @@ const IndexPage = ({ data }) => {
           <Title as="p">
             Hello! I&rsquo;m a Sr. Software Engineer, currently working as
             Technical Lead at{' '}
-            <a className="color-sanJuan" href="https://www.algolia.com">
+            <Link className="color-sanJuan" to="https://www.algolia.com">
               Algolia
-            </a>
-            . I ❤️ pushing pixels around and playing with React to build fast,
-            accessible and powerful web applications.
+            </Link>
+            . I ❤️ pushing pixels around and playing with{' '}
+            <Link className="color-sanJuan" to="https://reactjs.org/">
+              React
+            </Link>{' '}
+            to build fast, accessible and powerful web applications.
           </Title>
         </Hero>
         <section>
