@@ -26,8 +26,5 @@ export default {
         padding-right: 20px;
       }
     }
-    #gatsby-noscript {
-      display: none;
-    }
   `,
 };
