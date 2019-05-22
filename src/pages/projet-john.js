@@ -14,11 +14,11 @@ const JohnPage = () => {
         <p>Je t&rsquo;ai mis ci-dessous les deux tatouages en question :</p>
         <div className="d-grid ggap-20 sm:g-2">
           <img
-            src={'john/tatouage-fleche.jpg'}
+            src="/john/tatouage-fleche.jpg"
             className="w-100p d-block bxs-default"
           />
           <img
-            src={'john/tatouage-soldat.jpg'}
+            src="/john/tatouage-soldat.jpg"
             className="w-100p d-block bxs-default"
           />
         </div>
@@ -36,11 +36,11 @@ const JohnPage = () => {
         </p>
         <div className="d-grid ggap-20 sm:g-2">
           <img
-            src={'john/exemple-1.jpg'}
+            src="/john/exemple-1.jpg"
             className="w-100p d-block bxs-default"
           />
           <img
-            src={'john/exemple-2.jpg'}
+            src="/john/exemple-2.jpg"
             className="w-100p d-block bxs-default"
           />
         </div>
@@ -63,7 +63,7 @@ const JohnPage = () => {
         </p>
         <div className="d-grid ggap-20 sm:g-2">
           <img
-            src={'john/symbole-sagittaire.png'}
+            src="/john/symbole-sagittaire.png"
             className="w-100p d-block bxs-default"
           />
         </div>
@@ -73,27 +73,27 @@ const JohnPage = () => {
         </p>
         <div className="d-grid ggap-20 sm:g-2">
           <img
-            src={'john/inspiration-1.jpg'}
+            src="/john/inspiration-1.jpg"
             className="w-100p d-block bxs-default"
           />
           <img
-            src={'john/inspiration-2.jpg'}
+            src="/john/inspiration-2.jpg"
             className="w-100p d-block bxs-default"
           />
           <img
-            src={'john/inspiration-3.jpg'}
+            src="/john/inspiration-3.jpg"
             className="w-100p d-block bxs-default"
           />
           <img
-            src={'john/inspiration-4.jpg'}
+            src="/john/inspiration-4.jpg"
             className="w-100p d-block bxs-default"
           />
           <img
-            src={'john/inspiration-5.jpg'}
+            src="/john/inspiration-5.jpg"
             className="w-100p d-block bxs-default"
           />
           <img
-            src={'john/inspiration-6.jpg'}
+            src="/john/inspiration-6.jpg"
             className="w-100p d-block bxs-default"
           />
         </div>
