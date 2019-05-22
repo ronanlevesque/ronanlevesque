@@ -19,8 +19,8 @@ const IndexPage = ({ data }) => {
       <Container>
         <Hero navText={title} navTextTag="h1">
           <Title as="p">
-            Hello! I&rsquo;m a Sr. Software Engineer, currently working as
-            Technical Lead at{' '}
+            Hello! I’m a Sr. Software Engineer, currently working as Technical
+            Lead at{' '}
             <Link className="color-sanJuan" to="https://www.algolia.com">
               Algolia
             </Link>
@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
           <JobsList data={data.allWorkJson.edges} />
         </section>
         <section className="mt-48 md:mt-80 lg:mt-120">
-          <SectionTitle>In another life&hellip;</SectionTitle>
+          <SectionTitle>In another life…</SectionTitle>
           <JobsList data={data.allPreviousWorkJson.edges} />
         </section>
         <Footer />

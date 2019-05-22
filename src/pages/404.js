@@ -14,7 +14,7 @@ const ErrorPage = () => {
           navTextLink={routes.HOME}
           navWithIcons={false}
         >
-          <Title>This page doesn&rsquo;t exist.</Title>
+          <Title>This page doesn’t exist.</Title>
         </Hero>
       </Container>
     </DefaultLayout>

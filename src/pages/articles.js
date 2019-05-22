@@ -14,7 +14,7 @@ const ArticlesPage = () => {
           navTextLink={routes.HOME}
           navWithIcons={false}
         >
-          <Title>Work in progress, come back later&hellip;</Title>
+          <Title>Work in progress, come back later…</Title>
         </Hero>
       </Container>
     </DefaultLayout>
