@@ -19,7 +19,7 @@ const JobsList = ({ data }) => (
           <span>
             <span className="ff-mono">
               ’{item.node.start}
-              <span className="color-manatee">—</span>’{item.node.end}
+              <span className="color-manatee">–</span>’{item.node.end}
             </span>
           </span>
         </span>
