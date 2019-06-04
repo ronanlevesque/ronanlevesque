@@ -1,4 +1,7 @@
-const pxToRem = px => `${px * 0.0625}rem`;
+/* eslint-disable import/no-commonjs */
+const helpers = require('./src/helpers');
+
+const pxToRem = helpers.pxToRem;
 
 const config = {
   // General settings for the compiled code

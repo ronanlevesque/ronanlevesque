@@ -1,16 +1,17 @@
 import { css } from '@emotion/core';
 import * as breakpoints from 'constants/breakpoints';
+import { pxToRem } from 'helpers';
 
 export default {
   job: css`
     @media (min-width: ${breakpoints.SM}) {
-      width: 190px;
+      width: ${pxToRem(190)};
     }
     @media (min-width: ${breakpoints.MD}) {
-      width: 220px;
+      width: ${pxToRem(220)};
     }
     @media (min-width: ${breakpoints.LG}) {
-      width: 250px;
+      width: ${pxToRem(250)};
     }
   `,
 };
