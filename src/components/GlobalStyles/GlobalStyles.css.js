@@ -27,5 +27,9 @@ export default {
         padding-right: ${pxToRem(20)};
       }
     }
+    ::selection {
+      background-color: ${colors.SAN_JUAN};
+      color: white;
+    }
   `,
 };

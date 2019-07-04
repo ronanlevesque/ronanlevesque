@@ -20,6 +20,7 @@ module.exports = {
           'Roboto:400,500',
           'Roboto Mono:400',
         ],
+        display: 'swap',
       },
     },
     'gatsby-transformer-json',
