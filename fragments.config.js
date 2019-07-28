@@ -450,7 +450,7 @@ module.exports = {
       letterSpacing: {
         responsive: true,
         classes: {
-          big: '0.16em',
+          big: '0.14em',
         },
       },
       lineClamp: {
