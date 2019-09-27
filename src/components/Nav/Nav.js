@@ -24,11 +24,14 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
     <nav css={helperStyles.gradientLine} {...other}>
       <div
         className={cx(
-          'pv-12 d-flex jc-between ai-center md:pv-16 lg:pv-20',
+          'd-flex jc-between ai-center h-40 md:h-48 lg:h-64',
           darkMode.value ? 'color-zircon' : 'color-sanJuan'
         )}
       >
-        <SmallText as={textTag} className="m-0 fw-medium">
+        <SmallText
+          as={textTag}
+          className="m-0 fw-medium ws-nowrap ov-hidden to-ellipsis"
+        >
           {textLink ? (
             <Link
               className={cx(

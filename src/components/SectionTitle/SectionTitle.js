@@ -19,9 +19,7 @@ const Container = ({ children, ...other }) => {
       )}
       {...other}
     >
-      <span className="pv-12 d-flex ai-center md:pv-16 lg:pv-20">
-        {children}
-      </span>
+      <span className="d-flex ai-center h-40 md:h-48 lg:h-64">{children}</span>
     </SmallText>
   );
 };
