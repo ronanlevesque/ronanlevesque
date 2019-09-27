@@ -1,8 +1,9 @@
 import React from 'react';
-import * as routes from 'constants/routes';
+
 import Container from 'components/Container';
 import Hero from 'components/Hero';
 import Title from 'components/Title';
+import * as routes from 'constants/routes';
 import DefaultLayout from 'layouts/DefaultLayout';
 
 const ErrorPage = () => {

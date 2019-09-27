@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import GlobalStyles from 'components/GlobalStyles';
 import Head from 'components/Head';
 

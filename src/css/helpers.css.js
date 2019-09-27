@@ -14,8 +14,13 @@ export default {
       display: block;
       height: 1px;
     }
-  `,
-  colorTransition: css`
-    transition: color 0.2s ease-out;
+    .dark-mode &:after {
+      background-image: linear-gradient(
+        to left,
+        ${colors.SAN_JUAN} 10%,
+        ${colors.BLUE_BAYOUX},
+        ${colors.SAN_JUAN} 90%
+      );
+    }
   `,
 };

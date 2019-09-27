@@ -21,6 +21,8 @@ const config = {
   },
   // Define your brand colors and any others you might want to reuse across your project
   colors: {
+    transparent: 'transparent',
+    white: '#FFF',
     zircon: '#ECEDEF',
     linkWater: '#C6CACF',
     manatee: '#8D96A0',

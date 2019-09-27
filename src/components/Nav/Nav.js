@@ -1,48 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as routes from 'constants/routes';
+import cx from 'classnames';
+import useDarkMode from 'use-dark-mode';
+
 import Link from 'components/Link';
+import NavItem from 'components/NavItem';
 import SmallText from 'components/SmallText';
 import Svg from 'components/Svg';
-import { useSiteMetadata } from 'hooks';
-import styles from './Nav.css';
+import * as routes from 'constants/routes';
 import helperStyles from 'css/helpers.css';
+import { useSiteMetadata } from 'hooks';
 
-const renderIcon = (icon, link) => (
-  <li className="ml-12 md:ml-16 lg:ml-20" key={icon}>
-    <Link
-      to={link}
-      css={[helperStyles.colorTransition, styles.iconLink]}
-      className="d-block color-blueBayoux td-none hover:color-blackPearl"
-      data-before={icon}
-    >
-      <Svg
-        className="d-block w-20 h-20 lg:w-24 lg:h-24"
-        name={icon.toLowerCase()}
-        aria-label={`${icon} icon`}
-      />
-    </Link>
-  </li>
-);
-
-const renderSocialIcons = social =>
-  Object.keys(social).map(icon => renderIcon(icon, social[icon]));
+const renderSocialNavItems = social =>
+  Object.keys(social).map(icon => (
+    <NavItem key={icon} icon={icon} link={social[icon]} />
+  ));
 
 const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
   const { social } = useSiteMetadata();
+  const darkMode = useDarkMode(false);
 
   return (
     <nav css={helperStyles.gradientLine} {...other}>
-      <div className="pv-12 d-flex jc-between ai-center md:pv-16 lg:pv-20">
-        <SmallText as={textTag} className="m-0 color-sanJuan fw-medium">
+      <div
+        className={cx(
+          'pv-12 d-flex jc-between ai-center md:pv-16 lg:pv-20',
+          darkMode.value ? 'color-zircon' : 'color-sanJuan'
+        )}
+      >
+        <SmallText as={textTag} className="m-0 fw-medium">
           {textLink ? (
             <Link
-              className="color-sanJuan td-none d-flex ai-center jc-between"
+              className={cx(
+                'td-none d-flex ai-center jc-between',
+                darkMode.value ? 'color-zircon' : 'color-sanJuan'
+              )}
               to={textLink}
             >
               <Svg
                 name="arrow-left"
-                className="color-blueBayoux mr-8 d-inline w-20 h-20 md:mr-10 lg:w-24 lg:h-24 lg:mr-12"
+                className={cx(
+                  'mr-8 d-block w-20 h-20 md:mr-10 lg:w-24 lg:h-24 lg:mr-12',
+                  darkMode.value ? 'color-manatee' : 'color-blueBayoux'
+                )}
               />
               {text}
             </Link>
@@ -52,8 +52,16 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
         </SmallText>
         {withIcons && (
           <ul className="d-flex m-0 p-0 lis-none pos-relative">
-            {renderSocialIcons(social)}
-            {renderIcon('Articles', routes.ARTICLES)}
+            {renderSocialNavItems(social)}
+            <NavItem icon="Articles" link={routes.ARTICLES} />
+            <NavItem
+              as="button"
+              dataBefore={`${darkMode.value ? 'Light' : 'Dark'} theme`}
+              icon={darkMode.value ? 'sun' : 'moon'}
+              isLast
+              onClick={darkMode.toggle}
+              onMouseLeave={e => e.target.blur()}
+            />
           </ul>
         )}
       </div>

@@ -27,9 +27,17 @@ export default {
         padding-right: ${pxToRem(20)};
       }
     }
+    body.dark-mode {
+      background-color: ${colors.MIDNIGHT};
+      color: ${colors.LINK_WATER};
+    }
     ::selection {
       background-color: ${colors.SAN_JUAN};
       color: white;
+    }
+    body.dark-mode *::selection {
+      background-color: white;
+      color: ${colors.MIDNIGHT};
     }
   `,
 };
