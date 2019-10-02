@@ -27,7 +27,7 @@ export default {
         padding-right: ${pxToRem(20)};
       }
     }
-    body.dark-mode {
+    body[data-theme='dark'] {
       background-color: ${colors.MIDNIGHT};
       color: ${colors.LINK_WATER};
     }
@@ -35,7 +35,7 @@ export default {
       background-color: ${colors.SAN_JUAN};
       color: white;
     }
-    body.dark-mode *::selection {
+    body[data-theme='dark'] *::selection {
       background-color: white;
       color: ${colors.MIDNIGHT};
     }

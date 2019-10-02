@@ -31,7 +31,7 @@ export default {
         font-size: 16px;
       }
     }
-    .dark-mode &:before {
+    body[data-theme='dark'] &:before {
       color: ${colors.MANATEE};
     }
   `,
@@ -47,7 +47,7 @@ export default {
         margin-right: 20px;
       }
     }
-    .dark-mode &:before {
+    body[data-theme='dark'] &:before {
       color: ${colors.MANATEE};
     }
   `,

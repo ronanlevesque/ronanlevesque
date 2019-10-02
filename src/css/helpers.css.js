@@ -14,7 +14,7 @@ export default {
       display: block;
       height: 1px;
     }
-    .dark-mode &:after {
+    body[data-theme='dark'] &:after {
       background-image: linear-gradient(
         to left,
         ${colors.SAN_JUAN} 10%,
