@@ -15,7 +15,7 @@ const NavItem = ({
   link,
   ...other
 }) => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode(true);
 
   return (
     <li

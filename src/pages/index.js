@@ -17,7 +17,7 @@ import DefaultLayout from 'layouts/DefaultLayout';
 
 const IndexPage = ({ data }) => {
   const { title } = useSiteMetadata();
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode(true);
 
   return (
     <DefaultLayout title="Home" url={routes.HOME}>

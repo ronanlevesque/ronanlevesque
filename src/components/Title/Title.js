@@ -4,7 +4,7 @@ import cx from 'classnames';
 import useDarkMode from 'use-dark-mode';
 
 const Title = ({ as: Component, children, className, ...other }) => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode(true);
 
   return (
     <Component

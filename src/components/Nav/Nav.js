@@ -18,7 +18,7 @@ const renderSocialNavItems = social =>
 
 const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
   const { social } = useSiteMetadata();
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode(true);
 
   return (
     <nav css={helperStyles.gradientLine} {...other}>

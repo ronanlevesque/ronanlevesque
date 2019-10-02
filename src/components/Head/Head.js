@@ -7,7 +7,7 @@ import { useSiteMetadata } from 'hooks';
 
 const Head = ({ metaDescription, pageTitle, url }) => {
   const { description, siteUrl, social, title } = useSiteMetadata();
-  const darkMode = useDarkMode();
+  const darkMode = useDarkMode(true);
 
   return (
     <Helmet>
