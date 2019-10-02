@@ -7,7 +7,7 @@ import SmallText from 'components/SmallText';
 import helperStyles from 'css/helpers.css';
 
 const Container = ({ children, ...other }) => {
-  const darkMode = useDarkMode(true);
+  const darkMode = { value: true };
 
   return (
     <SmallText

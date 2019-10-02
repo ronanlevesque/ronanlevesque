@@ -18,7 +18,7 @@ const renderSocialNavItems = social =>
 
 const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
   const { social } = useSiteMetadata();
-  const darkMode = useDarkMode(true);
+  const darkMode = { value: true };
 
   return (
     <nav css={helperStyles.gradientLine} {...other}>
@@ -57,14 +57,14 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
           <ul className="d-flex m-0 p-0 lis-none pos-relative">
             {renderSocialNavItems(social)}
             <NavItem icon="Articles" link={routes.ARTICLES} />
-            <NavItem
+            {/* <NavItem
               as="button"
               dataBefore={`${darkMode.value ? 'Light' : 'Dark'} theme`}
               icon={darkMode.value ? 'sun' : 'moon'}
               isLast
               onClick={darkMode.toggle}
               onMouseLeave={e => e.target.blur()}
-            />
+            /> */}
           </ul>
         )}
       </div>

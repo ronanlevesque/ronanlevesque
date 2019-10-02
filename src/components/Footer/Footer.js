@@ -5,7 +5,7 @@ import useDarkMode from 'use-dark-mode';
 import Svg from 'components/Svg';
 
 const Footer = () => {
-  const darkMode = useDarkMode(true);
+  const darkMode = { value: true };
 
   return (
     <footer className="pt-48 pb-24 md:pt-80 md:pb-32 lg:pt-120 lg:pb-48">

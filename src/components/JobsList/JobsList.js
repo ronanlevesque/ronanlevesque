@@ -7,7 +7,7 @@ import styles from './JobsList.css';
 import ListItem from 'components/ListItem';
 
 const JobsList = ({ data }) => {
-  const darkMode = useDarkMode(true);
+  const darkMode = { value: true };
 
   return (
     <ul className="m-0 p-0 lis-none">
