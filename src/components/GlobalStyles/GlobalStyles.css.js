@@ -9,6 +9,9 @@ export default {
     * {
       box-sizing: border-box;
     }
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
     body {
       background-color: ${colors.MIDNIGHT};
       color: ${colors.LINK_WATER};
