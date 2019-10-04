@@ -1,8 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
-import useDarkMode from 'use-dark-mode';
+import { css } from '@emotion/core';
 
 import Container from 'components/Container';
 import Footer from 'components/Footer';
@@ -11,13 +10,21 @@ import JobsList from 'components/JobsList';
 import Link from 'components/Link';
 import SectionTitle from 'components/SectionTitle';
 import Title from 'components/Title';
+import * as colors from 'constants/colors';
 import * as routes from 'constants/routes';
 import { useSiteMetadata } from 'hooks';
 import DefaultLayout from 'layouts/DefaultLayout';
 
+const styles = {
+  link: css`
+    body.light-mode & {
+      color: ${colors.SAN_JUAN};
+    }
+  `,
+};
+
 const IndexPage = ({ data }) => {
   const { title } = useSiteMetadata();
-  const darkMode = { value: true };
 
   return (
     <DefaultLayout title="Home" url={routes.HOME}>
@@ -27,14 +34,16 @@ const IndexPage = ({ data }) => {
             Hello! I’m a Sr. Software Engineer, currently working as Technical
             Lead at{' '}
             <Link
-              className={cx(darkMode.value ? 'color-zircon' : 'color-sanJuan')}
+              css={styles.link}
+              className="color-zircon"
               to="https://www.algolia.com"
             >
               Algolia
             </Link>
             . I ❤️ pushing pixels around and playing with{' '}
             <Link
-              className={cx(darkMode.value ? 'color-zircon' : 'color-sanJuan')}
+              css={styles.link}
+              className="color-zircon"
               to="https://reactjs.org/"
             >
               React

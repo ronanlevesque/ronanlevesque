@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import useDarkMode from 'use-dark-mode';
 
 import { useSiteMetadata } from 'hooks';
 
 const Head = ({ metaDescription, pageTitle, url }) => {
   const { description, siteUrl, social, title } = useSiteMetadata();
-  const darkMode = { value: true };
+
+  const themeStorage =
+    typeof window !== 'undefined' && window.localStorage.getItem('theme');
 
   return (
     <Helmet>
@@ -57,7 +58,11 @@ const Head = ({ metaDescription, pageTitle, url }) => {
       <meta name="msapplication-TileColor" content="#b91d47" />
       <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
-      <body data-theme={darkMode.value ? 'dark' : 'light'} />
+      <script>
+        {themeStorage &&
+          themeStorage === 'light' &&
+          document.querySelector('body').classList.add('light-mode')}
+      </script>
     </Helmet>
   );
 };

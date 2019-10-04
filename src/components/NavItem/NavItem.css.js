@@ -5,6 +5,13 @@ import * as colors from 'constants/colors';
 export default {
   cta: css`
     outline: none;
+    body.light-mode & {
+      color: ${colors.BLUE_BAYOUX};
+    }
+    body.light-mode &:hover,
+    body.light-mode &:focus {
+      color: ${colors.BLACK_PEARL};
+    }
     &:hover:before,
     &:focus:before {
       opacity: 1;
@@ -12,9 +19,9 @@ export default {
     }
     &:before {
       display: none;
+      color: ${colors.MANATEE};
       @media (min-width: ${breakpoints.MD}) {
         content: attr(data-before);
-        color: ${colors.BLUE_BAYOUX};
         display: block;
         position: absolute;
         top: 50%;
@@ -31,14 +38,15 @@ export default {
         font-size: 16px;
       }
     }
-    body[data-theme='dark'] &:before {
-      color: ${colors.MANATEE};
+    body.light-mode &:before {
+      color: ${colors.BLUE_BAYOUX};
     }
   `,
   last: css`
     &:before {
       margin-right: 12px;
-      color: ${colors.BLUE_BAYOUX};
+      color: ${colors.MANATEE};
+
       content: '·';
       @media (min-width: ${breakpoints.MD}) {
         margin-right: 16px;
@@ -47,8 +55,8 @@ export default {
         margin-right: 20px;
       }
     }
-    body[data-theme='dark'] &:before {
-      color: ${colors.MANATEE};
+    body.light-mode &:before {
+      color: ${colors.BLUE_BAYOUX};
     }
   `,
 };

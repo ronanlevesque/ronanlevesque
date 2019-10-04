@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
-import useDarkMode from 'use-dark-mode';
 
+import styles from './Nav.css';
 import Link from 'components/Link';
 import NavItem from 'components/NavItem';
 import SmallText from 'components/SmallText';
@@ -17,16 +16,16 @@ const renderSocialNavItems = social =>
   ));
 
 const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
+  const themeStorage =
+    typeof window !== 'undefined' && window.localStorage.getItem('theme');
   const { social } = useSiteMetadata();
-  const darkMode = { value: true };
+  const [theme, setTheme] = useState(themeStorage);
 
   return (
     <nav css={helperStyles.gradientLine} {...other}>
       <div
-        className={cx(
-          'd-flex jc-between ai-center h-40 md:h-48 lg:h-64',
-          darkMode.value ? 'color-zircon' : 'color-sanJuan'
-        )}
+        css={styles.wrapper}
+        className="d-flex jc-between ai-center h-40 md:h-48 lg:h-64 color-zircon"
       >
         <SmallText
           as={textTag}
@@ -34,18 +33,14 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
         >
           {textLink ? (
             <Link
-              className={cx(
-                'td-none d-flex ai-center jc-between',
-                darkMode.value ? 'color-zircon' : 'color-sanJuan'
-              )}
+              css={styles.link}
+              className="td-none d-flex ai-center jc-between color-zircon"
               to={textLink}
             >
               <Svg
                 name="arrow-left"
-                className={cx(
-                  'mr-8 d-block w-20 h-20 md:mr-10 lg:w-24 lg:h-24 lg:mr-12',
-                  darkMode.value ? 'color-manatee' : 'color-blueBayoux'
-                )}
+                css={styles.icon}
+                className="mr-8 d-block w-20 h-20 md:mr-10 lg:w-24 lg:h-24 lg:mr-12 color-manatee"
               />
               {text}
             </Link>
@@ -57,14 +52,21 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
           <ul className="d-flex m-0 p-0 lis-none pos-relative">
             {renderSocialNavItems(social)}
             <NavItem icon="Articles" link={routes.ARTICLES} />
-            {/* <NavItem
+            <NavItem
               as="button"
-              dataBefore={`${darkMode.value ? 'Light' : 'Dark'} theme`}
-              icon={darkMode.value ? 'sun' : 'moon'}
+              dataBefore={`${theme === 'light' ? 'Dark' : 'Light'} mode`}
+              icon={theme === 'light' ? 'moon' : 'sun'}
               isLast
-              onClick={darkMode.toggle}
+              onClick={() => {
+                setTheme(theme === 'light' ? 'dark' : 'light');
+                document.querySelector('body').classList.toggle('light-mode');
+                localStorage.setItem(
+                  'theme',
+                  themeStorage === 'light' ? 'dark' : 'light'
+                );
+              }}
               onMouseLeave={e => e.target.blur()}
-            /> */}
+            />
           </ul>
         )}
       </div>

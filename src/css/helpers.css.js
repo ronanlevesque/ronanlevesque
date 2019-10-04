@@ -6,20 +6,20 @@ export default {
     &:after {
       background-image: linear-gradient(
         to left,
-        ${colors.ZIRCON} 10%,
-        ${colors.LINK_WATER},
-        ${colors.ZIRCON} 90%
+        ${colors.SAN_JUAN} 10%,
+        ${colors.BLUE_BAYOUX},
+        ${colors.SAN_JUAN} 90%
       );
       content: '';
       display: block;
       height: 1px;
     }
-    body[data-theme='dark'] &:after {
+    body.light-mode &:after {
       background-image: linear-gradient(
         to left,
-        ${colors.SAN_JUAN} 10%,
-        ${colors.BLUE_BAYOUX},
-        ${colors.SAN_JUAN} 90%
+        ${colors.ZIRCON} 10%,
+        ${colors.LINK_WATER},
+        ${colors.ZIRCON} 90%
       );
     }
   `,

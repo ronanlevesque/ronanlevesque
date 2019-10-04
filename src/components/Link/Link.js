@@ -10,9 +10,9 @@ const Link = ({ children, to, ...other }) => {
 
   return (
     <CustomTag
-      {...other}
       href={!isInternal ? to : null}
       to={isInternal ? to : null}
+      {...other}
     >
       {children}
     </CustomTag>

@@ -10,8 +10,8 @@ export default {
       box-sizing: border-box;
     }
     body {
-      background-color: #fff;
-      color: ${colors.SAN_JUAN};
+      background-color: ${colors.MIDNIGHT};
+      color: ${colors.LINK_WATER};
       font-family: ${fonts.LIBRE_BASKERVILLE};
       margin: 0;
       padding-left: ${pxToRem(12)};
@@ -27,17 +27,17 @@ export default {
         padding-right: ${pxToRem(20)};
       }
     }
-    body[data-theme='dark'] {
-      background-color: ${colors.MIDNIGHT};
-      color: ${colors.LINK_WATER};
+    body.light-mode {
+      background-color: #fff;
+      color: ${colors.SAN_JUAN};
     }
     ::selection {
-      background-color: ${colors.SAN_JUAN};
-      color: white;
-    }
-    body[data-theme='dark'] *::selection {
       background-color: white;
       color: ${colors.MIDNIGHT};
+    }
+    body.light-mode *::selection {
+      background-color: ${colors.SAN_JUAN};
+      color: white;
     }
   `,
 };
