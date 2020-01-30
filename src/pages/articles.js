@@ -11,6 +11,7 @@ const ArticlesPage = () => {
     <DefaultLayout title="Articles" url={routes.ARTICLES}>
       <Container>
         <Hero
+          fullScreen
           navText="Back to homepage"
           navTextLink={routes.HOME}
           navWithIcons={false}

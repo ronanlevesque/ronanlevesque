@@ -75,7 +75,7 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
 };
 
 Nav.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.node.isRequired,
   textTag: PropTypes.string,
   textLink: PropTypes.string,
   withIcons: PropTypes.bool,

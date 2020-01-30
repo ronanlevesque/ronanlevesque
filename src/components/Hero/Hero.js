@@ -5,6 +5,7 @@ import cx from 'classnames';
 import Nav from 'components/Nav';
 
 const Hero = ({
+  alignLeft,
   children,
   fullScreen,
   navText,
@@ -20,23 +21,30 @@ const Hero = ({
       textTag={navTextTag}
       withIcons={navWithIcons}
     />
-    <div className="pv-48 fxg-1 d-flex md:pv-80 lg:pv-120">
-      <div className="w-100p mv-auto ta-center">{children}</div>
+    <div className="pv-80 fxg-1 d-flex md:pv-120 lg:pv-160">
+      <div
+        className={cx(
+          'w-100p xs:w-80p m-auto',
+          alignLeft ? 'ta-left' : 'ta-center'
+        )}
+      >
+        {children}
+      </div>
     </div>
   </header>
 );
 
 Hero.propTypes = {
+  alignLeft: PropTypes.bool,
   children: PropTypes.node.isRequired,
   fullScreen: PropTypes.bool,
-  navText: PropTypes.string.isRequired,
+  navText: PropTypes.node.isRequired,
   navTextLink: PropTypes.string,
   navTextTag: PropTypes.string,
   navWithIcons: PropTypes.bool,
 };
 
 Hero.defaultProps = {
-  fullScreen: true,
   navTextTag: 'span',
   navWithIcons: true,
 };

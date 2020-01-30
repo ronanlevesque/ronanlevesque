@@ -6,7 +6,7 @@ import styles from './Title.css';
 const Title = ({ as: Component, children, className, ...other }) => (
   <Component
     css={styles.root}
-    className="fw-normal mv-0 fsz-20 lh-bigger md:fsz-24 lg:fsz-32 color-zircon"
+    className="fw-normal mv-0 fsz-18 lh-bigger md:fsz-24 lg:fsz-32 color-manatee"
     {...other}
   >
     {children}

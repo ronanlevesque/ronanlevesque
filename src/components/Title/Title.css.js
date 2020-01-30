@@ -4,7 +4,7 @@ import * as colors from 'constants/colors';
 export default {
   root: css`
     body.light-mode & {
-      color: ${colors.SAN_JUAN};
+      color: ${colors.BLUE_BAYOUX};
     }
   `,
 };
