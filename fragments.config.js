@@ -29,7 +29,7 @@ const config = {
     blueBayoux: '#677481',
     sanJuan: '#415161',
     midnight: '#1E2935',
-    blackPearl: '#0D1217',
+    blackPearl: '#1a242e',
   },
   // Spacing is used mainly for paddings and margins
   spacing: {

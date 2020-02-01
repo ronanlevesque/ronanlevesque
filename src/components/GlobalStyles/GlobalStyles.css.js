@@ -13,7 +13,7 @@ export default {
       -webkit-text-size-adjust: 100%;
     }
     body {
-      background-color: ${colors.MIDNIGHT};
+      background-color: ${colors.BLACK_PEARL};
       color: ${colors.LINK_WATER};
       font-family: ${fonts.LIBRE_BASKERVILLE};
       margin: 0;

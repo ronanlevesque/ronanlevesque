@@ -6,9 +6,9 @@ export default {
     &:after {
       background-image: linear-gradient(
         to left,
-        ${colors.SAN_JUAN} 10%,
+        ${colors.MIDNIGHT} 10%,
         ${colors.BLUE_BAYOUX},
-        ${colors.SAN_JUAN} 90%
+        ${colors.MIDNIGHT} 90%
       );
       content: '';
       display: block;
