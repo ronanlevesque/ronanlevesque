@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Ronan Levesque',
     description:
-      'I’m a Sr. Software Engineer, currently working as Tech Lead at Algolia. I ❤️ pushing pixels around and playing with React to build fast and powerful web applications.',
+      'I’m a Sr. Software Engineer, currently working as Technical and Team Lead at Algolia. I ❤️ pushing pixels around and playing with React to build fast and powerful web applications.',
     siteUrl: 'https://ronanlevesque.com',
     social: {
       GitHub: 'https://github.com/ronanlevesque',
