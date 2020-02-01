@@ -7,7 +7,7 @@ export default {
       background-image: linear-gradient(
         to left,
         ${colors.MIDNIGHT} 10%,
-        ${colors.BLUE_BAYOUX},
+        ${colors.SAN_JUAN},
         ${colors.MIDNIGHT} 90%
       );
       content: '';
