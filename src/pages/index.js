@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
             >
               React
             </Link>{' '}
-            to build fast, accessible and powerful web applications.
+            to build fast and powerful web applications.
           </Title>
         </Hero>
         <section>

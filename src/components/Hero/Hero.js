@@ -23,7 +23,7 @@ const Hero = ({
     <div className="pv-80 fxg-1 d-flex md:pv-120 lg:pv-160">
       <div
         className={cx(
-          'w-100p xs:w-80p m-auto',
+          'w-100p xs:w-90p m-auto',
           alignLeft ? 'ta-left' : 'ta-center'
         )}
       >
