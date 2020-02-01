@@ -13,7 +13,7 @@ const Head = ({ metaDescription, pageTitle, url }) => {
   return (
     <Helmet>
       <meta charSet="utf-8" />
-      <title>{`${pageTitle} | ${title}`}</title>
+      <title>{url !== '/' ? `${pageTitle} | ${title}` : title}</title>
       <meta
         content={metaDescription ? metaDescription : description}
         name="description"
