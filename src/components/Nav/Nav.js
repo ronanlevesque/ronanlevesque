@@ -6,7 +6,6 @@ import Link from 'components/Link';
 import NavItem from 'components/NavItem';
 import SmallText from 'components/SmallText';
 import Svg from 'components/Svg';
-import * as routes from 'constants/routes';
 import helperStyles from 'css/helpers.css';
 import { useSiteMetadata } from 'hooks';
 
@@ -51,7 +50,7 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
         {withIcons && (
           <ul className="d-flex m-0 p-0 lis-none pos-relative">
             {renderSocialNavItems(social)}
-            <NavItem icon="Articles" link={routes.ARTICLES} />
+            {/* <NavItem icon="Articles" link={routes.ARTICLES} /> */}
             <NavItem
               as="button"
               dataBefore={`${theme === 'light' ? 'Dark' : 'Light'} mode`}

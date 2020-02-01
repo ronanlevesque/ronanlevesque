@@ -12,6 +12,7 @@ import SectionTitle from 'components/SectionTitle';
 import Title from 'components/Title';
 import * as colors from 'constants/colors';
 import * as routes from 'constants/routes';
+import { useSiteMetadata } from 'hooks';
 import DefaultLayout from 'layouts/DefaultLayout';
 
 const styles = {
@@ -23,19 +24,12 @@ const styles = {
 };
 
 const IndexPage = ({ data }) => {
+  const { title } = useSiteMetadata();
+
   return (
     <DefaultLayout title="Home" url={routes.HOME}>
       <Container>
-        <Hero
-          alignLeft
-          navText={
-            <>
-              Ronan L<span className="d-none xs:d-inline">evesque</span>
-              <span className="xs:d-none">.</span>
-            </>
-          }
-          navTextTag="h1"
-        >
+        <Hero alignLeft navText={title} navTextTag="h1">
           <Title as="p">
             Hello! I’m a Sr. Software Engineer, currently working as Technical
             and Team Lead at{' '}

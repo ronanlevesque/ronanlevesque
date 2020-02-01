@@ -7,13 +7,12 @@ import Nav from 'components/Nav';
 const Hero = ({
   alignLeft,
   children,
-  fullScreen,
   navText,
   navTextLink,
   navTextTag,
   navWithIcons,
 }) => (
-  <header className={cx('d-flex fxd-column', fullScreen && 'mih-100vh')}>
+  <header className="d-flex fxd-column">
     <Nav
       className="fxs-1"
       text={navText}
@@ -37,7 +36,6 @@ const Hero = ({
 Hero.propTypes = {
   alignLeft: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  fullScreen: PropTypes.bool,
   navText: PropTypes.node.isRequired,
   navTextLink: PropTypes.string,
   navTextTag: PropTypes.string,
