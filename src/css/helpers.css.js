@@ -14,13 +14,5 @@ export default {
       display: block;
       height: 1px;
     }
-    body.light-mode &:after {
-      background-image: linear-gradient(
-        to left,
-        ${colors.ZIRCON} 10%,
-        ${colors.LINK_WATER},
-        ${colors.ZIRCON} 90%
-      );
-    }
   `,
 };

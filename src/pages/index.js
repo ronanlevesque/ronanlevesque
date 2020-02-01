@@ -10,18 +10,9 @@ import JobsList from 'components/JobsList';
 import Link from 'components/Link';
 import SectionTitle from 'components/SectionTitle';
 import Title from 'components/Title';
-import * as colors from 'constants/colors';
 import * as routes from 'constants/routes';
 import { useSiteMetadata } from 'hooks';
 import DefaultLayout from 'layouts/DefaultLayout';
-
-const styles = {
-  link: css`
-    body.light-mode & {
-      color: ${colors.SAN_JUAN};
-    }
-  `,
-};
 
 const IndexPage = ({ data }) => {
   const { title } = useSiteMetadata();
@@ -33,19 +24,11 @@ const IndexPage = ({ data }) => {
           <Title as="p">
             Hello! I’m a Sr. Software Engineer, currently working as Technical
             and Team Lead at{' '}
-            <Link
-              css={styles.link}
-              className="color-zircon td-none"
-              to="https://www.algolia.com"
-            >
+            <Link className="color-zircon td-none" to="https://www.algolia.com">
               Algolia
             </Link>
             . I ❤️ pushing pixels around and playing with{' '}
-            <Link
-              css={styles.link}
-              className="color-zircon td-none"
-              to="https://reactjs.org/"
-            >
+            <Link className="color-zircon td-none" to="https://reactjs.org/">
               React
             </Link>{' '}
             to build fast and powerful web applications.

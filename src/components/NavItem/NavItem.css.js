@@ -5,13 +5,6 @@ import * as colors from 'constants/colors';
 export default {
   cta: css`
     outline: none;
-    body.light-mode & {
-      color: ${colors.BLUE_BAYOUX};
-    }
-    body.light-mode &:hover,
-    body.light-mode &:focus {
-      color: ${colors.BLACK_PEARL};
-    }
     &:hover:before,
     &:focus:before {
       opacity: 1;
@@ -38,9 +31,6 @@ export default {
         font-size: 16px;
       }
     }
-    body.light-mode &:before {
-      color: ${colors.BLUE_BAYOUX};
-    }
   `,
   last: css`
     &:before {
@@ -54,9 +44,6 @@ export default {
       @media (min-width: ${breakpoints.LG}) {
         margin-right: 20px;
       }
-    }
-    body.light-mode &:before {
-      color: ${colors.BLUE_BAYOUX};
     }
   `,
 };

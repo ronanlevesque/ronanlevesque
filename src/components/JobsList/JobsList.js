@@ -13,20 +13,14 @@ const JobsList = ({ data }) => (
             <span css={styles.job} className="d-block fw-bold color-zircon">
               {item.node.company}
             </span>
-            <span
-              css={styles.company}
-              className="d-block mt-4 fst-italic sm:mt-0 color-manatee"
-            >
+            <span className="d-block mt-4 fst-italic sm:mt-0 color-manatee">
               {item.node.job}
             </span>
           </span>
           <span>
             <span className="ff-mono">
               ′{item.node.start}
-              <span css={styles.dash} className="color-manatee">
-                –
-              </span>
-              ′{item.node.end}
+              <span className="color-manatee">–</span>′{item.node.end}
             </span>
           </span>
         </span>

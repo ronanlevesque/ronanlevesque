@@ -58,11 +58,6 @@ const Head = ({ metaDescription, pageTitle, url }) => {
       <meta name="msapplication-TileColor" content="#b91d47" />
       <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
-      <script>
-        {themeStorage &&
-          themeStorage === 'light' &&
-          document.querySelector('body').classList.add('light-mode')}
-      </script>
     </Helmet>
   );
 };

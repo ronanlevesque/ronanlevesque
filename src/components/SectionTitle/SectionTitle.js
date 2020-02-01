@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './SectionTitle.css';
 import SmallText from 'components/SmallText';
 import helperStyles from 'css/helpers.css';
 
 const Container = ({ children, ...other }) => (
   <SmallText
     as="h2"
-    css={[helperStyles.gradientLine, styles.root]}
+    css={helperStyles.gradientLine}
     className="m-0 fw-medium color-manatee"
     {...other}
   >

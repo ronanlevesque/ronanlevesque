@@ -30,17 +30,9 @@ export default {
         padding-right: ${pxToRem(20)};
       }
     }
-    body.light-mode {
-      background-color: #fff;
-      color: ${colors.SAN_JUAN};
-    }
     ::selection {
       background-color: white;
       color: ${colors.MIDNIGHT};
-    }
-    body.light-mode *::selection {
-      background-color: ${colors.SAN_JUAN};
-      color: white;
     }
   `,
 };
