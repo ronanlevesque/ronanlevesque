@@ -15,6 +15,11 @@ const NavItem = ({ as: Component, dataBefore, icon, isLast, ...other }) => (
       css={styles.cta}
       className="p-0 bdw-0 app-none bgc-transparent cursor-pointer d-block td-none ff-libre color-linkWater hover:color-white"
       data-before={dataBefore ? dataBefore : icon}
+      onClick={e => {
+        e.target.blur();
+      }}
+      rel={other.href ? 'noopener noreferrer' : null}
+      target={other.href ? '_blank' : null}
       {...other}
     >
       <Svg

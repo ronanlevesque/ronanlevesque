@@ -58,7 +58,6 @@ export const pageQuery = graphql`
         node {
           company
           job
-          url
           start
           end
         }
@@ -69,7 +68,6 @@ export const pageQuery = graphql`
         node {
           company
           job
-          url
           start
           end
         }
