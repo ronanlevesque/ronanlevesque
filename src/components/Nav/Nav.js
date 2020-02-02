@@ -11,7 +11,7 @@ import { useSiteMetadata } from 'hooks';
 
 const renderSocialNavItems = social =>
   Object.keys(social).map(icon => (
-    <NavItem key={icon} icon={icon} link={social[icon]} />
+    <NavItem key={icon} icon={icon} href={social[icon]} />
   ));
 
 const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
@@ -42,7 +42,7 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
         {withIcons && (
           <ul className="d-flex m-0 p-0 lis-none pos-relative">
             {renderSocialNavItems(social)}
-            <NavItem icon="Articles" link={routes.ARTICLES} />
+            <NavItem icon="Articles" to={routes.ARTICLES} />
           </ul>
         )}
       </div>

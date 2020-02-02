@@ -5,24 +5,18 @@ import styles from './NavItem.css';
 import Link from 'components/Link';
 import Svg from 'components/Svg';
 
-const NavItem = ({
-  as: Component,
-  dataBefore,
-  icon,
-  isLast,
-  link,
-  ...other
-}) => (
+const NavItem = ({ as: Component, dataBefore, icon, isLast, ...other }) => (
   <li
     css={isLast && styles.last}
     className="d-flex ai-center ml-12 md:ml-16 lg:ml-20"
   >
     <Component
       aria-label={icon}
-      to={link ? link : null}
       css={styles.cta}
       className="p-0 bdw-0 app-none bgc-transparent cursor-pointer d-block td-none ff-libre color-linkWater hover:color-white"
       data-before={dataBefore ? dataBefore : icon}
+      rel={other.href ? 'noopener noreferrer' : null}
+      target={other.href ? '_blank' : null}
       {...other}
     >
       <Svg
