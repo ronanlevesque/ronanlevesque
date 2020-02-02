@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
 
 import Container from 'components/Container';
 import Footer from 'components/Footer';
