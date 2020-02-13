@@ -12,9 +12,8 @@ const Hero = ({
   navTextTag,
   navWithIcons,
 }) => (
-  <header className="d-flex fxd-column">
+  <header>
     <Nav
-      className="fxs-1"
       text={navText}
       textLink={navTextLink}
       textTag={navTextTag}
@@ -22,10 +21,7 @@ const Hero = ({
     />
     <div className="pv-80 fxg-1 d-flex md:pv-120 lg:pv-160">
       <div
-        className={cx(
-          'w-100p xs:w-90p m-auto',
-          alignLeft ? 'ta-left' : 'ta-center'
-        )}
+        className={cx('xs:w-90p m-auto', alignLeft ? 'ta-left' : 'ta-center')}
       >
         {children}
       </div>
