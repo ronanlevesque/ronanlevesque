@@ -7,9 +7,6 @@ import { useSiteMetadata } from 'hooks';
 const Head = ({ metaDescription, pageTitle, url }) => {
   const { description, siteUrl, social, title } = useSiteMetadata();
 
-  const themeStorage =
-    typeof window !== 'undefined' && window.localStorage.getItem('theme');
-
   return (
     <Helmet>
       <meta charSet="utf-8" />
