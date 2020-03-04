@@ -59,6 +59,7 @@ const config = {
     32: pxToRem(32),
     40: pxToRem(40),
     48: pxToRem(48),
+    56: pxToRem(56),
     64: pxToRem(64),
     '90p': '90%',
     '100p': '100%',

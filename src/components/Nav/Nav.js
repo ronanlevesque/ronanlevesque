@@ -19,7 +19,7 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
 
   return (
     <div css={helperStyles.gradientLine} {...other}>
-      <div className="d-flex jc-between ai-center h-40 md:h-48 lg:h-64 color-zircon">
+      <div className="d-flex jc-between ai-center h-48 md:h-56 lg:h-64 color-zircon">
         <SmallText
           as={textTag}
           className="m-0 fw-medium ws-nowrap ov-hidden to-ellipsis"

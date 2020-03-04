@@ -11,7 +11,7 @@ const Container = ({ children, ...other }) => (
     className="m-0 fw-medium color-manatee"
     {...other}
   >
-    <span className="d-flex ai-center h-40 md:h-48 lg:h-64">{children}</span>
+    <span className="d-flex ai-center h-48 md:h-56 lg:h-64">{children}</span>
   </SmallText>
 );
 
