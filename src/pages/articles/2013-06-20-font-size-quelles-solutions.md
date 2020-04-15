@@ -19,11 +19,15 @@ De mon point de vue, il est préférable d’utiliser des `em` afin de permettre
 
 Afin de simplifier les calculs de taille de police en utilisant les `em`, une solution souvent utilisée est de définir le code suivant :
 
-    body {font-size: 62.5%}
+```
+body {font-size: 62.5%}
+```
 
 Sachant que la taille de police par défaut des navigateurs modernes est ([presque ?](http://isitrwd.com/rfs/)) tout le temps `16px` pour `1em`, la conversion est donc beaucoup plus simple suite à ce calcul et donnera le résultat suivant :
 
-<pre><code class="nohighlight">10 px = 1 em</code></pre>
+```
+10 px = 1 em
+```
 
 L’inconvénient de cette méthode, c’est que suite à ce changement la taille par défaut du texte sera de `10px` à part si on ne le précise pas ailleurs. Utilisé en production, je trouve ça plutôt pénible et potentiellement source d’erreurs.
 
@@ -39,10 +43,12 @@ Si on ne souhaite pas utiliser de polyfill, on se retrouve donc face à un casse
 
 Et c’est précisément là que Sass intervient : il va faire le calcul à notre place grâce à un `@mixin`. Celui que j’utilise est le suivant :
 
-    @mixin fs($fontsize: 16, $fontbase: 16) {
-      font-size: $fontsize + px;
-      font-size: ($fontsize / $fontbase) * 1rem;
-    }
+```scss
+@mixin fs($fontsize: 16, $fontbase: 16) {
+  font-size: $fontsize + px;
+  font-size: ($fontsize / $fontbase) * 1rem;
+}
+```
 
 Il suffit ainsi d’écrire `@include fs(16)` pour que nos `rem` soient convertis en l’équivalent de `16px`, avec le fallback en `px` pour les vieux navigateurs.
 

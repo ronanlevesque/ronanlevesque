@@ -11,10 +11,14 @@ Un des gros points noirs du CSS est la complexité que sa maintenance peut parfo
 
 [BEM](http://bem.info/method/) est une méthodologie mise au point par [Yandex](http://www.yandex.com/). "BEM" signifie _Block, Element, Modifier_. l’idée derrière cette méthodologie est de faciliter la lecture (et la ré-usabilité) du code par d’autres développeurs. BEM met l’accent sur la relation qui existe entre différents blocs et éléments. La convention de nommage que j’utilise est la suivante :
 
-<pre><code class="css">.block {}
-.block__element {}
-.block--modifier {}
-</code></pre>
+```css
+.block {
+}
+.block__element {
+}
+.block--modifier {
+}
+```
 
 La notation originale proposée par Yandex était différente, mais je préfère celle-ci (utilisée par [Harry Roberts](http://csswizardry.com/)) :
 
@@ -24,13 +28,14 @@ La notation originale proposée par Yandex était différente, mais je préfère
 
 Comme je le disais, l’idée est de concrétiser la relation qui va exister entre différents éléments. Prenons l’exemple d’un bloc d’informations contenant un titre, une image présentant différentes variations de style et un paragraphe de texte. Avec BEM, cela va donner :
 
-<pre><code class="css">.bloc-infos
+```
+.bloc-infos
 .bloc-infos__titre
 .bloc-infos__img
 .bloc-infos__img--var-1
 .bloc-infos__img--var-2
 .bloc-infos__texte
-</code></pre>
+```
 
 Ici il est facile d’interpréter que `.bloc-infos__titre`, `.bloc-infos__img` et `.bloc-infos__texte` sont des éléments descendants de `.bloc-infos` et que `.bloc-infos__img--var-1` et `.bloc-infos__img--var-2` sont des variations de `.bloc-infos__img`. Rien qu’en changeant le nommage des classes, les relations entre les différents éléments sont maintenant évidentes.
 

@@ -18,7 +18,7 @@ module.exports = {
         fonts: [
           'Libre Baskerville:400,400i,700',
           'Roboto:400,400i,500,700',
-          'Roboto Mono:400',
+          'Roboto Mono:400,700',
         ],
         display: 'swap',
       },
@@ -37,11 +37,17 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
               backgroundColor: 'none',
               quality: 70,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbers: false,
             },
           },
         ],

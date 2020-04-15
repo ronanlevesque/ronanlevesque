@@ -21,15 +21,21 @@ La transition de l’un à l’autre semble également se faire relativement en 
 
 On commence par télécharger et installer Hugo :
 
-<pre><code class="bash">brew install hugo</code></pre>
+```bash
+brew install hugo
+```
 
 Ou pour ceux qui sont sous Windows,
 
-<pre><code class="bash">choco install hugo -confirm</code></pre>
+```bash
+choco install hugo -confirm
+```
 
 Ensuite, pour importer le contenu d’un site Jekyll vers un site Hugo, il existe une autre commande :
 
-<pre><code class="bash">hugo import jekyll [chemin-jekyll] [chemin-cible]</code></pre>
+```bash
+hugo import jekyll [chemin-jekyll] [chemin-cible]
+```
 
 Qui va créer l’arborescence suivante :
 
@@ -45,11 +51,15 @@ Dans mon cas, les articles ont été placés dans `content/post`, et les fichier
 
 Notez qu’il est aussi possible de créer un nouveau site directement si il vous prend l’envie saugrenue de migrer tous vos articles à la main :
 
-<pre><code class="bash">hugo new site mon-site</code></pre>
+```bash
+hugo new site mon-site
+```
 
 Pour finir on lance un serveur pour surveiller tout nouveau changement (accessible sur `localhost:1313`) :
 
-<pre><code class="bash">hugo server</code></pre>
+```bash
+hugo server
+```
 
 ## Création de contenu
 
@@ -61,21 +71,25 @@ Le template utilisé par chaque page de contenu est défini dans son _front matt
 
 Par exemple, voici ma page `projets.md` :
 
-<pre><code class="nohighlight">---
+```markdown
 type: "static"
 title: "Projets récents"
 description : "Découvrez mes derniers projets et réalisations web."
+
 ---
 
-Bla bla bla écrit en Markdown</code></pre>
+## Bla bla bla écrit en Markdown
+```
 
 Le template en question est un fichier `single.html` situé dans le dossier `layouts/static`. Voilà à quoi il pourrait ressembler :
 
-<pre><code class="nohighlight">{{ partial "header.html" . }}
+```go
+{{ partial "header.html" . }}
 
 {{ .Content }}
 
-{{ partial "footer.html" . }}</code></pre>
+{{ partial "footer.html" . }}
+```
 
 `.Content` insère le contenu de `projets.md`, et les _partials_, comme leur nom l’indique… importent les _partials_ en question.
 
@@ -87,25 +101,27 @@ Pour ce qui est des pages du blog, le principe est à peu près similaire. J’a
 
 J’ai sur mon site une page qui contient une liste de tous les articles publiés, triés par année. Voilà le code (simplifié) :
 
-    {{ partial "header.html" . }}
+```go
+{{ partial "header.html" . }}
 
-    <h1>{{ .Page.Title }}</h1>
+<h1>{{ .Page.Title }}</h1>
 
-    {{ range (.Data.Pages.GroupByDate "2006") }}
-    <h2>{{ .Key }}</h2>
-    <ul>
-      {{ range .Pages }}
-      <li>
-        <a href="{{ .RelPermalink }}">
-          <h3>{{ .Title }}</h3>
-          <p>{{ .Date.Format "02.01" }}</p>
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-    {{ end }}
+{{ range (.Data.Pages.GroupByDate "2006") }}
+<h2>{{ .Key }}</h2>
+<ul>
+  {{ range .Pages }}
+  <li>
+    <a href="{{ .RelPermalink }}">
+      <h3>{{ .Title }}</h3>
+      <p>{{ .Date.Format "02.01" }}</p>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
 
-    {{ partial "footer.html" . }}
+{{ partial "footer.html" . }}
+```
 
 Les deux `range` permettent d’itérer, pour le premier sur les dates par années, et pour le deuxième sur la liste des articles.
 
@@ -129,24 +145,28 @@ etc.</code></pre>
 
 Voilà le template, là aussi simplifié :
 
-    {{ partial "header.html" . }}
+```go
+{{ partial "header.html" . }}
 
-    <time>
-      {{ .Date.Day }}
-      {{ index .Site.Data.mois (printf "%d" .Date.Month) }}
-      {{ .Date.Year }}
-    </time>
-    <h1>{{ .Page.Title }}</h1>
-    {{ .Content }}
+<time>
+  {{ .Date.Day }}
+  {{ index .Site.Data.mois (printf "%d" .Date.Month) }}
+  {{ .Date.Year }}
+</time>
+<h1>{{ .Page.Title }}</h1>
+{{ .Content }}
 
-    {{ partial "footer.html" . }}
+{{ partial "footer.html" . }}
+```
 
 Celui-ci m’a posé un peu plus de soucis car je souhaitais afficher la date de publication de l’article en français, au format _01 janvier 2017_. J’ai trouvé un moyen de contourner le problème en utilisant la variable `.Site.Data`. Il m’a suffit de créer un fichier `mois.yaml` dans le dossier `data`, avec le contenu suivant :
 
-<pre><code class="nohighlight">1: "janvier"
+```yaml
+1: "janvier"
 2: "février"
 3: "mars"
-etc.</code></pre>
+etc.
+```
 
 La fonction `printf` m’a ensuite permis de récupérer les bonnes traductions.
 
@@ -156,11 +176,15 @@ La fonction `printf` m’a ensuite permis de récupérer les bonnes traductions.
 
 Pour rappel, le but ici est d’ajouter un _fingerprint_ au nom des fichiers voulus. Par exemple :
 
-    <link rel="stylesheet" href="/assets/css/styles.css">
+```html
+<link rel="stylesheet" href="/assets/css/styles.css" />
+```
 
 Doit être transformé en :
 
-    <link rel="stylesheet" href="/assets/css/styles-b9bafce7.css">
+```html
+<link rel="stylesheet" href="/assets/css/styles-b9bafce7.css" />
+```
 
 Les _assets_ de mon site Jekyll (CSS, JS, etc.) étaient _fingerprintés_ grâce à [jekyll-minibundle](https://github.com/tkareine/jekyll-minibundle). Avec Hugo j’ai dû chercher une nouvelle solution pour arriver à un résultat équivalent. Je me suis servi pour ça de `gulp-hash` et `del`.
 
@@ -168,10 +192,13 @@ Pour arriver à la solution voulue, il faut pouvoir stocker dans le dossier `dat
 
 Voici par exemple ma tâche Gulp pour la gestion des styles :
 
-    gulp.task('styles', () => {
-      // On supprime l’ancien fichier CSS
-      del(distFolder.css + '**/*')
-      return gulp.src(devFolder.scss + 'styles.scss')
+```js
+gulp.task('styles', () => {
+  // On supprime l’ancien fichier CSS
+  del(distFolder.css + '**/*');
+  return (
+    gulp
+      .src(devFolder.scss + 'styles.scss')
       .pipe($$.sass())
       .pipe($$.autoprefixer())
       .pipe($$.cssnano())
@@ -181,12 +208,16 @@ Voici par exemple ma tâche Gulp pour la gestion des styles :
       // On mappe le fichier
       .pipe($$.hash.manifest('hashcss.json'))
       // On le place dans data
-      .pipe(gulp.dest('data'));
-    });
+      .pipe(gulp.dest('data'))
+  );
+});
+```
 
 Ensuite, il suffit d’aller modifier le template pour y intégrer cette donnée :
 
-    <link rel="stylesheet" href="/assets/css/{{ index .Site.Data.hashcss "styles.css" }}" />
+```go
+<link rel="stylesheet" href="/assets/css/{{ index .Site.Data.hashcss "styles.css" }}" />
+```
 
 Le principe est le même pour vos autres fichiers statiques à cacher.
 
@@ -202,20 +233,27 @@ Je ne me suis pas encore penché sur trois dossiers présents à la racine d’u
 
 Cette fonctionnalité permet de créer du nouveau contenu en utilisant un _front matter_ prédéfini. Par exemple, j’ai créé un archétype spécifique pour mes articles comme ceci :
 
-<pre><code class="bash">touch archetypes/articles.md</code></pre>
+```bash
+touch archetypes/articles.md
+```
 
 Celui-ci contient le _front matter_ que je souhaite utiliser pour toute nouvelle création.
 
-<pre><code class="nohighlight">---
-title: ""
-description: ""
-date: {{ .Date }}
+```yaml
+---
+title: ''
+description: ''
+date: { { .Date } }
 tags: []
----</code></pre>
+---
+
+```
 
 Puis :
 
-<pre><code class="bash">hugo new articles/mon-nouvel-article</code></pre>
+```bash
+hugo new articles/mon-nouvel-article
+```
 
 ### Static
 

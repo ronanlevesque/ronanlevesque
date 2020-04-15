@@ -19,7 +19,13 @@ Je me suis mis à récemment utiliser `box-sizing: border-box` pour un projet su
 
 [Paul Irish](http://paulirish.com), dans son [article](http://paulirish.com/2012/box-sizing-border-box-ftw/) vantant les mérites de `box-sizing: border-box`, préconise d’utiliser le CSS suivant :
 
-    * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+```css
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+```
 
 De cette manière, tous les éléments seront concernés par ce changement, et vous n’aurez plus besoin de vous casser la tête pour calculer leurs tailles.
 

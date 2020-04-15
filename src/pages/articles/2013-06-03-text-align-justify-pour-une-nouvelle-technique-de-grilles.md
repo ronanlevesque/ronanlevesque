@@ -26,38 +26,43 @@ La technique proposée par Barrel est la suivante : appliquer la propriété `te
 
 Pour reprendre l’exemple de Barrel il faudrait donc avoir le code suivant :
 
-    <ul class="grid">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li class="break"></li>
-    <ul>
+```html
+<ul class="grid">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li class="break"></li>
+  <ul></ul>
+</ul>
+```
 
-<p></p>
+```css
+.grid {
+  text-align: justify;
+  font-size: 0.1px; /* supprimer l’espace entre les différents éléments */
+}
 
-    .grid {
-      text-align: justify;
-      font-size: 0.1px; /* supprimer l’espace entre les différents éléments */
-    }
+.grid li {
+  display: inline-block;
+  width: 23%;
+}
 
-    .grid li {
-      display: inline-block;
-      width: 23%;
-    }
-
-    .grid .break {
-      width: 100%;
-      height: 0;
-    }
+.grid .break {
+  width: 100%;
+  height: 0;
+}
+```
 
 Ou, pour une sémantique plus propre, se passer de l’élément `.break` et ajouter un `:after` au conteneur :
 
-    .grid:after {
-      content: '';
-      display: inline-block;
-      width: 100%;
-    }
+```css
+.grid:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+```
 
 Un autre souci à contourner, c’est le nombre d’éléments par ligne. Mettons qu’on ait 4 éléments par ligne et que la dernière ligne n’en affiche que 2. Les 2 éléments vont se justifier sur la longueur de la ligne, donnant un résultat plutôt indésirable :
 
@@ -69,20 +74,24 @@ Pour éviter ce problème il faudra rajouter des "placeholders" invisibles qui p
 
 Le code ressemblera donc à :
 
-    <ul class="grid">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li class="placeholder"></li>
-        <li class="placeholder"></li>
-    </ul>
+```html
+<ul class="grid">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li class="placeholder"></li>
+  <li class="placeholder"></li>
+</ul>
+```
 
 La formule à appliquer pour connaitre le nombre de placeholders à utiliser, et ce quelque soit le nombre d’items présents sur la dernière ligne, est la suivante :
 
-<pre><code class="nohighlight">nombre de placeholders = nombre maximum d’éléments par ligne - 2</code></pre>
+```
+nombre de placeholders = nombre maximum d’éléments par ligne - 2
+```
 
 Pourquoi 2 ? Parce que si un seul produit s’affiche sur la dernière ligne, il s’affichera de toute façon tout à gauche.
 
@@ -90,31 +99,33 @@ Pourquoi 2 ? Parce que si un seul produit s’affiche sur la dernière ligne, il
 
 L’énorme avantage de cette technique, c’est qu’elle est très facilement adaptable au responsive design, par exemple :
 
-    .grid li {
-      width: 100%;
-      margin-bottom: 5%;
-    }
+```css
+.grid li {
+  width: 100%;
+  margin-bottom: 5%;
+}
 
-    @media (min-width: 400px) {
-      .grid li {
-        width: 48%;
-        margin-bottom: 4%;
-      }
-    }
+@media (min-width: 400px) {
+  .grid li {
+    width: 48%;
+    margin-bottom: 4%;
+  }
+}
 
-    @media (min-width: 600px) {
-      .grid li {
-        width: 31%;
-        margin-bottom: 3%;
-      }
-    }
+@media (min-width: 600px) {
+  .grid li {
+    width: 31%;
+    margin-bottom: 3%;
+  }
+}
 
-    @media (min-width: 800px) {
-      .grid li {
-        width: 23%;
-        margin-bottom: 2.5%;
-      }
-    }
+@media (min-width: 800px) {
+  .grid li {
+    width: 23%;
+    margin-bottom: 2.5%;
+  }
+}
+```
 
 Beaucoup plus simple et moins casse-tête que les `nth-child` :) Par contre les marges horizontales sont calculées automatiquement, il faut donc un peu tâtonner pour trouver les valeurs exactes à appliquer aux `width` de nos éléments…
 

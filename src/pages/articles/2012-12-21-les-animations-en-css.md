@@ -18,9 +18,11 @@ La déclaration de l’animation dans le CSS se fait en 2 étapes :
 
 La syntaxe est la suivante :
 
-    @keyframes <identifiant>;  {
-      [ [ from | to | <pourcentage>; ] [, from | to | <pourcentage&>; ]* bloc ]*
-    }
+```css
+@keyframes <identifiant>;  {
+  [ [ from | to | <pourcentage>; ] [, from | to | <pourcentage&>; ]* bloc ]*
+}
+```
 
 Regardons ça en détails :
 
@@ -37,22 +39,37 @@ Puisque rien n’est plus parlant qu’un exemple concret, voyons donc un cas pr
 
 On cible d’abord en HTML l’élément que l’on souhaite animer :
 
-    <h1>Big<span class="blue">Blue</span></h1>
+```html
+<h1>Big<span class="blue">Blue</span></h1>
+```
 
 On définit ensuite dans notre CSS les valeurs d’animation: nom de l’animation, durée et boucle souhaitée (de 1, valeur par défaut, à infinite). Ici j’ai regroupé ensemble les 3 propriétés sous la propriété `animation`.
 
-    .blue {
-      display: inline-block; /* nécessaire dans cet exemple pour l’animation mouvement */
-      animation: bluemove 3s infinite;
-    }
+```css
+.blue {
+  display: inline-block; /* nécessaire dans cet exemple pour l’animation mouvement */
+  animation: bluemove 3s infinite;
+}
+```
 
 Puis on définit notre `@keyframes`, avec l’état de départ, l’état que l’on souhaite à la moitié de l’animation et l’état de fin (identique à l’état de départ afin de boucler la boucle proprement) :
 
-    @keyframes bluemove {
-      from {transform: translateY(-5px); color: black;}
-      50% {transform: translateY(5px); color: #1785BF;}
-      to {transform: translateY(-5px); color: black;}
-    }
+```css
+@keyframes bluemove {
+  from {
+    transform: translateY(-5px);
+    color: black;
+  }
+  50% {
+    transform: translateY(5px);
+    color: #1785bf;
+  }
+  to {
+    transform: translateY(-5px);
+    color: black;
+  }
+}
+```
 
 Attention, dans cet exemple je n’ai volontairement rien préfixé, mais pensez bien à rajouter les préfixes nécessaires de votre côté pour que cela fonctionne (`@-webkit-keyframes`, `@-moz-keyframes` etc).
 

@@ -9,23 +9,26 @@ L’utilisation de fontes personnalisées a explosé ces dernières années sur 
 
 Si l’on reprend l’exemple de FontSquirrel, le code généré par le kit téléchargé est le suivant :
 
-    @font-face {
-      font-family: 'merriweather';
-      src: url('merriweather.eot');
-      src: url('merriweather.eot?#iefix') format('embedded-opentype'),
-      url('merriweather.woff') format('woff'),
-      url('merriweather.ttf') format('truetype'),
-      url('merriweather.svg#merriweatherheavy') format('svg');
-      font-weight: normal;
-      font-style: normal;
-    }
+```css
+@font-face {
+  font-family: 'merriweather';
+  src: url('merriweather.eot');
+  src: url('merriweather.eot?#iefix') format('embedded-opentype'), url('merriweather.woff')
+      format('woff'), url('merriweather.ttf') format('truetype'), url('merriweather.svg#merriweatherheavy')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+```
 
 Lorsque l’on veut définir différents types de cette police, on spécifie une `@font-face` propre à chacun (merriweather-italic, merriweather-bold etc.). Puis dans notre CSS, par exemple :
 
-    strong {
-      font-family: merriweather-bold, Serif;
-      font-weight: normal;
-    }
+```css
+strong {
+  font-family: merriweather-bold, Serif;
+  font-weight: normal;
+}
+```
 
 Le hic avec cette façon de faire, c’est qu’en cas d’impossibilité pour le navigateur d’afficher les fontes personnalisées, la police de _fallback_ s’affichera sans italique ou sans gras.
 
@@ -33,26 +36,28 @@ Le hic avec cette façon de faire, c’est qu’en cas d’impossibilité pour l
 
 En fouillant un peu, j’ai trouvé cette [solution](http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles), bien plus intéressante car elle évitera la suppression ou le passage en _faux_ (c’est-à-dire simulé par le navigateur) des styles italiques et gras :
 
-    @font-face {
-      font-family: 'Whatever';
-      src: url('whatever.eot');
-      font-weight: normal;
-      font-style: normal;
-    }
+```css
+@font-face {
+  font-family: 'Whatever';
+  src: url('whatever.eot');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    @font-face {
-      font-family: 'Whatever';
-      src: url('whatever-italic.eot');
-      font-weight: normal;
-      font-style: italic;
-    }
+@font-face {
+  font-family: 'Whatever';
+  src: url('whatever-italic.eot');
+  font-weight: normal;
+  font-style: italic;
+}
 
-    @font-face {
-      font-family: 'Whatever';
-      src: url('whatever-bold.eot');
-      font-weight: bold;
-      font-style: normal;
-    }
+@font-face {
+  font-family: 'Whatever';
+  src: url('whatever-bold.eot');
+  font-weight: bold;
+  font-style: normal;
+}
+```
 
 On utilise un seul nom unique de `font-family` pour toutes nos `@font-face`, puis on y applique nos `font-weight` et `font-style` désirés. Problème réglé… Du moins sur la plupart des navigateurs.
 

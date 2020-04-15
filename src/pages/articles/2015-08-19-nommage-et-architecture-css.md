@@ -13,9 +13,16 @@ Si ces deux acronymes ne vous évoquent rien, je vous suggère avant toute chose
 
 J’ai pour ma part commencé par utiliser BEM de manière traditionnelle avant d’y incorporer une part de SUIT, ce qui me donnait quelque chose de ce genre :
 
-<pre><code class="css">.Component {}
-.Component-element {}
-.Component--modifier {}</code></pre>
+```css
+.Component {
+}
+
+.Component-element {
+}
+
+.Component--modifier {
+}
+```
 
 Je préfère cette syntaxe par rapport au BEM classique, où l’utilisation des <kbd>\_</kbd> ne facilite pas vraiment l’édition du nom des classes.
 
@@ -23,33 +30,39 @@ Je préfère cette syntaxe par rapport au BEM classique, où l’utilisation des
 
 Le souci avec les _Modifiers_, c’est qu’ils créent des classes à rallonge, par exemple :
 
-    <button class="Button Button--small Button--green Button--caps">Texte</button>
+```html
+<button class="Button Button--small Button--green Button--caps">Texte</button>
+```
 
 J’ai récemment vu passer un article d’[Envato](http://www.envato.com/) dans lequel était décrit le principe des _[Chainable Modifiers](http://webuild.envato.com/blog/chainable-bem-modifiers/)_, principe qu’ils ont mis en place pour Envato Market.
 
 En se basant sur cette convention, le code ci-dessus se transformerait en :
 
-    <button class="Button -small -green -caps">Texte</button>
+```html
+<button class="Button -small -green -caps">Texte</button>
+```
 
 C’est quand même plus agréable à lire, non ?
 
 Et si vous utilisez Sass, le mettre en place et en assurer la maintenabilité devient un jeu d’enfant.
 
-    .Button {
-      padding: 2rem;
+```scss
+.Button {
+  padding: 2rem;
 
-      &.-small {
-        font-size: 1rem;
-      }
+  &.-small {
+    font-size: 1rem;
+  }
 
-      &.-green {
-        background-color: green;
-      }
+  &.-green {
+    background-color: green;
+  }
 
-      &.-caps {
-        text-transform: uppercase;
-      }
-    }
+  &.-caps {
+    text-transform: uppercase;
+  }
+}
+```
 
 ## Autres emprunts à SUIT
 
@@ -59,15 +72,22 @@ J’utilise également deux autres conventions provenant de SUIT : les classes u
 
 Ce sont des classes génériques, identifiables par un préfixe `u-` :
 
-<pre><code class="css">.u-white {}
-.u-floatLeft {}
-…</code></pre>
+```css
+.u-white {
+}
+
+.u-floatLeft {
+}
+...
+```
 
 ### Classes d’état
 
 Celles-ci permettent d’identifier le changement d’état d’un composant; elles sont préfixées par `is-` :
 
-    <button class="button is-disabled">Text</button>
+```html
+<button class="button is-disabled">Text</button>
+```
 
 ## Sélecteurs JavaScript
 

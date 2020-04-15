@@ -21,9 +21,11 @@ A priori, cette approche n’est pas idéale, puisque les utilisateurs risquent 
 
 Grâce aux [commentaires conditionnels](http://briangelhaus.com/blog/target-ie-in-css/) dont je parlais ci-dessus, il est assez facile de créer des classes spécifiques, par exemple :
 
-    .ie8 .header {
-      // bla bla bla
-    }
+```css
+.ie8 .header {
+  // bla bla bla
+}
+```
 
 Cette approche est toutefois assez fastidieuse, elle nécessite en effet de réecrire toutes les propriétés css comprises dans les _media queries_ qui se situent autour des dimensions "habituelles" de ces navigateurs (1000-1200 px). Niveau maintenance, ça n’est pas non plus idéal puisque l’on doit mettre à jour le CSS spécifique à IE en même temps que le CSS global.
 
@@ -35,13 +37,15 @@ Il est ainsi facile de définir les _media queries_ que l’on souhaite intégre
 
 Cette méthode implique en revanche d’écrire des _media queries_ propres à chaque élément, par exemple :
 
-    .element {
-      color: red;
+```css
+.element {
+  color: red;
 
-      @media screen and (min-width: 1100px) {
-        color: blue;
-      }
-    }
+  @media screen and (min-width: 1100px) {
+    color: blue;
+  }
+}
+```
 
 Un "inconvénient" quasiment négligeable si vous prenez soin de minifier et gzipper vos CSS, sans compter un gros gain en maintenabilité.
 

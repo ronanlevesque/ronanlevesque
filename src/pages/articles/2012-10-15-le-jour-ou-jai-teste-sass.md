@@ -29,20 +29,26 @@ La page d’accueil de Sass en dénombre 4. Il suffit en effet de les mettre en 
 
 Le nesting, qu’on pourrait plus ou moins traduire par imbrication, permet de regrouper ensemble plusieurs sélecteurs en les imbriquant pour plus de clarté. Par exemple, prenons le SCSS suivant :
 
-    ul {
-      padding: 2em;
-      a { color: white; }
-    }
+```scss
+ul {
+  padding: 2em;
+  a {
+    color: white;
+  }
+}
+```
 
 Il se traduira en CSS par :
 
-    ul {
-      padding: 2em;
-    }
+```css
+ul {
+  padding: 2em;
+}
 
-    ul a {
-      color: white;
-    }
+ul a {
+  color: white;
+}
+```
 
 Le nesting est donc un bon moyen d’organiser clairement ses informations. Par ailleurs, il marche non seulement avec les sélecteurs mais également avec leurs propriétés.
 
@@ -54,24 +60,32 @@ Sass permet d’intégrer la notion de variables en CSS, variables qui peuvent �
 
 Ils permettent de réutiliser une partie de notre CSS n’importe où grâce à la fonction `@include`. Ainsi le SCSS suivant :
 
-    @mixin list-padd {
-      ul { padding: 2em; }
-      li { padding: 1em; }
-    }
+```scss
+@mixin list-padd {
+  ul {
+    padding: 2em;
+  }
+  li {
+    padding: 1em;
+  }
+}
 
-    nav {
-      @include list-padd;
-    }
+nav {
+  @include list-padd;
+}
+```
 
 Sera traduit en CSS par :
 
-    nav ul {
-      padding: 2em;
-    }
+```css
+nav ul {
+  padding: 2em;
+}
 
-    nav li {
-      padding: 1em;
-    }
+nav li {
+  padding: 1em;
+}
+```
 
 Simple non ? :)
 
@@ -79,26 +93,31 @@ Simple non ? :)
 
 Fonctionnant un peu sur le même principe que les `@mixins`, la fonction `@extend` permet d’étendre les styles d’un sélecteur à un autre. Par exemple, le SCSS suivant :
 
-    .red {
-      color: white;
-      background: red;
-    }
+```scss
+.red {
+  color: white;
+  background: red;
+}
 
-    .button {
-      padding: 2em;
-      @extend .red;
-    }
+.button {
+  padding: 2em;
+  @extend .red;
+}
+```
 
 donnera ce CSS :
 
-    .red, .button {
-      color: white;
-      background: red;
-    }
+```css
+.red,
+.button {
+  color: white;
+  background: red;
+}
 
-    .button {
-      padding: 2em;
-    }
+.button {
+  padding: 2em;
+}
+```
 
 Une fonction pratique donc, qui permet d’éviter d’avoir à copier/coller 20 fois le même code au moindre changement.
 

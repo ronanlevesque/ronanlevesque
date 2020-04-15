@@ -11,41 +11,57 @@ Les `@mixins` sont un vrai plus de Sass. Pour rappel ils permettent de réutilis
 
 Je suis notamment tombé sur un `@mixin` assez intéressant pour gérer les media queries, publié dans un article de [Web Design Weekly](http://web-design-weekly.com/2013/05/12/handy-sass-mixins/). Le `@mixin` utilisé est le suivant :
 
-    @mixin breakpoint($point) {
-      @if $point == large {
-        @media (min-width: 64.375em) { @content; }
-      }
-      @else if $point == medium {
-        @media (min-width: 50em) { @content; }
-      }
-      @else if $point == small {
-        @media (min-width: 37.5em)  { @content; }
-      }
+```scss
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (min-width: 64.375em) {
+      @content;
     }
+  } @else if $point == medium {
+    @media (min-width: 50em) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  }
+}
+```
 
 Il permet donc d’ajouter facilement des breakpoints à un design responsive. Ainsi pour reprendre l’exemple de l’article, le SCSS suivant :
 
-    .page-wrap {
-      width: 75%;
-      @include breakpoint(large) { width: 60%; }
-    }
+```scss
+.page-wrap {
+  width: 75%;
+  @include breakpoint(large) {
+    width: 60%;
+  }
+}
+```
 
 Se transformera en :
 
-    .page-wrap {
-      width: 75%;
-    }
+```css
+.page-wrap {
+  width: 75%;
+}
 
-    @media (min-width: 64.375em) {
-      .page-wrap {
-        width: 60%;
-      }
-    }
+@media (min-width: 64.375em) {
+  .page-wrap {
+    width: 60%;
+  }
+}
+```
 
 C’est un `@mixin` très utile mais je voulais le simplifier et le rendre un peu plus flexible, histoire de l’adapter sur mesure à différents media queries. Je l’ai donc transformé en ceci :
 
-    @mixin bp($point) {
-      @media screen and (min-width: $point / 16 + em) { @content; }
-    }
+```scss
+@mixin bp($point) {
+  @media screen and (min-width: $point / 16 + em) {
+    @content;
+  }
+}
+```
 
 Il suffit ensuite simplement de remplacer la variable `$point` par la taille que l’on souhaite pour notre media queries (query ?) en pixels, et celle-ci sera automatiquement convertie en `em`.
