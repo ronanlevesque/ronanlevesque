@@ -15,7 +15,7 @@ const BlogPostTemplate = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <DefaultLayout title="Articles" url={post.frontmatter.path}>
+    <DefaultLayout title={post.frontmatter.title} url={post.frontmatter.path}>
       <Container>
         <Nav
           text="Back to articles"
