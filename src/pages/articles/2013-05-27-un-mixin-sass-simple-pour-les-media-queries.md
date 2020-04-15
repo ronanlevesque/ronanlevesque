@@ -1,0 +1,51 @@
+---
+title: 'Un @mixin Sass simple pour les media queries'
+date: 2013-05-27T00:00:00Z
+path: '/articles/un-mixin-sass-simple-pour-les-media-queries'
+archive: true
+---
+
+J’avais [chanté les louanges](/articles/le-jour-ou-jai-teste-sass/) du préprocesseur Sass il y a quelques mois, convaincu de l’intérêt de cet outil. Depuis je l’ai intégré en production sur quelques projets, et son intérêt ne se dément vraiment pas. Combiné à les logiciels simples (je vous conseille vivement [Prepros](http://alphapixels.com/prepros/) sur Windows) c’est un bonheur à utiliser.
+
+Les `@mixins` sont un vrai plus de Sass. Pour rappel ils permettent de réutiliser grâce à `@include` une partie de notre CSS, qu’on peut par exemple combiner avec des variables. J’ai pu en récupérer quelques-uns assez utiles à droite et à gauche, que je partagerai prochainement ici.
+
+Je suis notamment tombé sur un `@mixin` assez intéressant pour gérer les media queries, publié dans un article de [Web Design Weekly](http://web-design-weekly.com/2013/05/12/handy-sass-mixins/). Le `@mixin` utilisé est le suivant :
+
+    @mixin breakpoint($point) {
+      @if $point == large {
+        @media (min-width: 64.375em) { @content; }
+      }
+      @else if $point == medium {
+        @media (min-width: 50em) { @content; }
+      }
+      @else if $point == small {
+        @media (min-width: 37.5em)  { @content; }
+      }
+    }
+
+Il permet donc d’ajouter facilement des breakpoints à un design responsive. Ainsi pour reprendre l’exemple de l’article, le SCSS suivant :
+
+    .page-wrap {
+      width: 75%;
+      @include breakpoint(large) { width: 60%; }
+    }
+
+Se transformera en :
+
+    .page-wrap {
+      width: 75%;
+    }
+
+    @media (min-width: 64.375em) {
+      .page-wrap {
+        width: 60%;
+      }
+    }
+
+C’est un `@mixin` très utile mais je voulais le simplifier et le rendre un peu plus flexible, histoire de l’adapter sur mesure à différents media queries. Je l’ai donc transformé en ceci :
+
+    @mixin bp($point) {
+      @media screen and (min-width: $point / 16 + em) { @content; }
+    }
+
+Il suffit ensuite simplement de remplacer la variable `$point` par la taille que l’on souhaite pour notre media queries (query ?) en pixels, et celle-ci sera automatiquement convertie en `em`.
