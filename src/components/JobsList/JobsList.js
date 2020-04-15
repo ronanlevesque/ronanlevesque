@@ -17,10 +17,8 @@ const JobsList = ({ data }) => (
               {item.node.job}
             </span>
           </span>
-          <span className="fx-3 ta-right ff-mono fsz-12 lg:fsz-14">
-            {item.node.start}
-            <span className="color-manatee"> – </span>
-            {item.node.end}
+          <span className="fx-3 ta-right ff-mono fsz-12 color-manatee lg:fsz-14">
+            {item.node.start} – {item.node.end}
           </span>
         </span>
       </ListItem>

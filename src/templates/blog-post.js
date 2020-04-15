@@ -27,7 +27,7 @@ const BlogPostTemplate = ({ data }) => {
           navTextLink={routes.ARTICLES}
           navWithIcons={false}
         >
-          <Title className="color-linkWater">{post.frontmatter.title}</Title>
+          <Title className="color-zircon">{post.frontmatter.title}</Title>
           <time className="d-block ff-mono tt-upper lsp-big fsz-12 color-blueBayoux md:mt-4 md:fsz-14 lg:fsz-16 lg:mt-8">
             {post.frontmatter.date}
           </time>

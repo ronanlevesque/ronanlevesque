@@ -21,7 +21,7 @@ const ArticlesPage = ({ data }) => {
       <Container>
         <Nav text="Back to homepage" textLink={routes.HOME} withIcons={false} />
         <Hero>
-          <Title className="color-linkWater">Articles on web development</Title>
+          <Title className="color-zircon">Articles on web development</Title>
         </Hero>
         <main>
           <section>

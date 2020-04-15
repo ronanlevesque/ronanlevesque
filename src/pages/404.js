@@ -12,7 +12,7 @@ const ErrorPage = () => (
     <Container>
       <Nav text="Back to homepage" textLink={routes.HOME} withIcons={false} />
       <Hero>
-        <Title className="color-linkWater">This page doesn’t exist.</Title>
+        <Title className="color-zircon">This page doesn’t exist.</Title>
       </Hero>
     </Container>
   </DefaultLayout>

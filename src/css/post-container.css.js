@@ -21,7 +21,7 @@ export default {
       margin-top: 2em;
       font-family: ${fonts.LIBRE_BASKERVILLE};
       font-weight: normal;
-      color: ${colors.LINK_WATER};
+      color: ${colors.ZIRCON};
     }
     h2 {
       font-size: ${pxToRem(16)};
