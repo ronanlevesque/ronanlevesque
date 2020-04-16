@@ -1,5 +1,6 @@
 ---
 title: 'Text-align: justify pour une nouvelle technique de grilles'
+description: 'Une nouvelle technique CSS pour facilement créer des grilles.'
 date: 2013-06-03T00:00:00Z
 path: '/articles/text-align-justify-pour-une-nouvelle-technique-de-grilles'
 archive: true

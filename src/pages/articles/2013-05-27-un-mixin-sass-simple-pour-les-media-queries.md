@@ -1,5 +1,6 @@
 ---
 title: 'Un @mixin Sass simple pour les media queries'
+description: 'Comment facilement gérer ses media queries avec Sass et un @mixin.'
 date: 2013-05-27T00:00:00Z
 path: '/articles/un-mixin-sass-simple-pour-les-media-queries'
 archive: true

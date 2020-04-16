@@ -1,5 +1,6 @@
 ---
 title: 'Les animations en CSS'
+description: 'Explication, tutoriel à l’appui, des principes de base des animations en CSS3.'
 date: 2012-12-21T00:00:00Z
 path: '/articles/les-animations-en-css'
 archive: true

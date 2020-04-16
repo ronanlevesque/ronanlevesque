@@ -1,5 +1,6 @@
 ---
 title: 'Mettre ses assets en cache avec Jekyll'
+description: 'Cet article montre une astuce toute simple que j’utilise pour contourner les problèmes de cache que l’on peut rencontrer sur Jekyll avec différents assets.'
 date: 2014-12-17T00:00:00Z
 path: '/articles/mettre-ses-assets-en-cache-avec-jekyll'
 archive: true

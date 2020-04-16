@@ -1,5 +1,6 @@
 ---
 title: 'Le jour où j’ai testé Sass'
+description: 'Retour d’expérience sur ma première expérience approfondie de Sass.'
 date: 2012-10-15T00:00:00Z
 path: '/articles/le-jour-ou-j-ai-teste-sass'
 archive: true

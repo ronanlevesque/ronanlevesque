@@ -1,5 +1,6 @@
 ---
 title: 'Des colonnes de même taille en Vanilla JS'
+description: 'Cet article décrit comment facilement mettre en place un système de colonnes de hauteur égale en Vanilla JS, tout en prenant en compte le responsive design.'
 date: 2014-02-04T00:00:00Z
 path: '/articles/des-colonnes-de-meme-taille-en-vanilla-js'
 archive: true

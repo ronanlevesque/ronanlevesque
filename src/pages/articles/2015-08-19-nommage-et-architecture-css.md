@@ -1,5 +1,6 @@
 ---
 title: 'Nommage et architecture CSS'
+description: 'Explications sur la façon dont je structure mon CSS pour une maintenance optimale.'
 date: 2015-08-19T00:00:00Z
 path: '/articles/nommage-et-architecture-css'
 archive: true

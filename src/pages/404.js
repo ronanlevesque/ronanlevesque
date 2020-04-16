@@ -8,7 +8,11 @@ import * as routes from 'constants/routes';
 import DefaultLayout from 'layouts/DefaultLayout';
 
 const ErrorPage = () => (
-  <DefaultLayout title="Page not found" url={routes.ERROR}>
+  <DefaultLayout
+    metaDescription="This page doesn’t exist or was removed from the website."
+    title="Page not found"
+    url={routes.ERROR}
+  >
     <Container>
       <Nav text="Back to homepage" textLink={routes.HOME} withIcons={false} />
       <Hero>

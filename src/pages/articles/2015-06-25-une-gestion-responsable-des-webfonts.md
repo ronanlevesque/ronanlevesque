@@ -1,5 +1,6 @@
 ---
 title: 'Une gestion responsable des webfonts'
+description: 'Une solution mise en place pour éviter l’apparition d’un FOIT avec les webfonts.'
 date: 2015-06-25T00:00:00Z
 path: '/articles/une-gestion-responsable-des-webfonts'
 archive: true

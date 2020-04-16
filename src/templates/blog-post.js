@@ -15,7 +15,12 @@ const BlogPostTemplate = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <DefaultLayout title={post.frontmatter.title} url={post.frontmatter.path}>
+    <DefaultLayout
+      metaDescription={post.frontmatter.description}
+      lang={post.frontmatter.archive && 'fr'}
+      title={post.frontmatter.title}
+      url={post.frontmatter.path}
+    >
       <Container>
         <Nav
           text="Back to articles"
@@ -55,6 +60,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        description
         path
         title
         archive

@@ -1,5 +1,6 @@
 ---
 title: 'Abandonner le support d’IE8'
+description: 'Cet article revient sur la présence de plus en plus faible d’Internet Explorer 8 dans le paysage web ainsi que ses implications pour nous, webdesigners.'
 date: 2014-06-20T00:00:00Z
 path: '/articles/abandonner-le-support-d-ie8'
 archive: true

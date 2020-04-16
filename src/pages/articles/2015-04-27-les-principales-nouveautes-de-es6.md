@@ -1,5 +1,6 @@
 ---
 title: 'Les principales nouveautés de ES6'
+description: 'Petit tour d’horizon des principales nouveautés d’ES6.'
 date: 2015-04-27T00:00:00Z
 path: '/articles/les-principales-nouveautes-de-es6'
 archive: true

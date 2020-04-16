@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 import { useSiteMetadata } from 'hooks';
 
-const Head = ({ metaDescription, pageTitle, url }) => {
+const Head = ({ lang, metaDescription, pageTitle, url }) => {
   const { description, siteUrl, social, title } = useSiteMetadata();
 
   return (
@@ -55,14 +55,20 @@ const Head = ({ metaDescription, pageTitle, url }) => {
       <meta name="msapplication-TileColor" content="#b91d47" />
       <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
+      <html lang={lang} />
     </Helmet>
   );
 };
 
 Head.propTypes = {
+  lang: PropTypes.string,
   metaDescription: PropTypes.string,
   pageTitle: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+};
+
+Head.defaultProps = {
+  lang: 'en',
 };
 
 export default Head;

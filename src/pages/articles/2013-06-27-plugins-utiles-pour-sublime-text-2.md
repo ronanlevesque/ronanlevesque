@@ -1,5 +1,6 @@
 ---
 title: 'Plugins utiles pour Sublime Text 2'
+description: 'Optimiser l’utilisation de Sublime Text 2 grâce à ses nombreux plugins.'
 date: 2013-06-27T00:00:00Z
 path: '/articles/plugins-utiles-pour-sublime-text-2'
 archive: true

@@ -1,5 +1,6 @@
 ---
 title: 'Ma configuration Gulp'
+description: 'Cet article décrit la façon dont j'ai configuré Gulp pour optimiser au maximum mon workflow au quotidien. Il inclut compilation, compression et concaténation des fichiers.'
 date: 2014-02-24T00:00:00Z
 path: '/articles/ma-configuration-gulp'
 archive: true

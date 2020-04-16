@@ -1,5 +1,6 @@
 ---
 title: 'Animer ses SVG avec Snap.svg'
+description: 'Cet article montre les possibilités offertes par Snap.svg pour animer sans prise de tête vos SVG de manière convaincante (avec des exemples à l’appui).'
 date: 2014-07-21T00:00:00Z
 path: '/articles/animer-ses-svg-avec-snap-svg'
 archive: true

@@ -1,5 +1,6 @@
 ---
 title: 'Le scrolling, ce mal absolu ?'
+description: 'Décryptage du mythe du scrolling et de la ligne de flottaison.'
 date: 2012-12-09T00:00:00Z
 path: '/articles/le-scrolling-ce-mal-absolu'
 archive: true

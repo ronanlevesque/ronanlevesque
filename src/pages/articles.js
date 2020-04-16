@@ -6,7 +6,6 @@ import ArticlesList from 'components/ArticlesList';
 import Container from 'components/Container';
 import Footer from 'components/Footer';
 import Hero from 'components/Hero';
-import ListItem from 'components/ListItem';
 import Nav from 'components/Nav';
 import SectionTitle from 'components/SectionTitle';
 import Title from 'components/Title';
@@ -17,7 +16,11 @@ const ArticlesPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
-    <DefaultLayout title="Articles" url={routes.ARTICLES}>
+    <DefaultLayout
+      metaDescription="Tips, tutorials, useful resources, thoughts and questions around front-end development tools and languages."
+      title="Articles"
+      url={routes.ARTICLES}
+    >
       <Container>
         <Nav text="Back to homepage" textLink={routes.HOME} withIcons={false} />
         <Hero>
