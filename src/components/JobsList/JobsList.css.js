@@ -5,13 +5,13 @@ import { pxToRem } from 'helpers';
 export default {
   job: css`
     @media (min-width: ${breakpoints.SM}) {
-      width: ${pxToRem(190)};
+      width: ${pxToRem(200)};
     }
     @media (min-width: ${breakpoints.MD}) {
-      width: ${pxToRem(220)};
+      width: ${pxToRem(230)};
     }
     @media (min-width: ${breakpoints.LG}) {
-      width: ${pxToRem(250)};
+      width: ${pxToRem(260)};
     }
   `,
 };

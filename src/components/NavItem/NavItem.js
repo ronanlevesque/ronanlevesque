@@ -18,8 +18,6 @@ const NavItem = ({ as: Component, dataBefore, icon, isLast, ...other }) => (
       onClick={e => {
         e.target.blur();
       }}
-      rel={other.href ? 'noopener noreferrer' : null}
-      target={other.href ? '_blank' : null}
       {...other}
     >
       <Svg

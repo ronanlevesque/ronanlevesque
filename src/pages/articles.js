@@ -28,7 +28,13 @@ const ArticlesPage = ({ data }) => {
         </Hero>
         <main>
           <section>
-            <SectionTitle>Archives (french)</SectionTitle>
+            <SectionTitle>Recent articles</SectionTitle>
+            <ArticlesList
+              posts={posts.filter(post => !post.node.frontmatter.archive)}
+            />
+          </section>
+          <section className="mt-48 md:mt-80 lg:mt-120">
+            <SectionTitle>Archives (French)</SectionTitle>
             <ArticlesList
               posts={posts.filter(post => post.node.frontmatter.archive)}
             />
