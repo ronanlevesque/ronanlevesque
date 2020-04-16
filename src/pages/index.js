@@ -1,12 +1,13 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 
 import Container from 'components/Container';
 import Footer from 'components/Footer';
 import Hero from 'components/Hero';
 import JobsList from 'components/JobsList';
 import Link from 'components/Link';
+import Nav from 'components/Nav';
 import SectionTitle from 'components/SectionTitle';
 import Title from 'components/Title';
 import * as routes from 'constants/routes';
@@ -19,8 +20,9 @@ const IndexPage = ({ data }) => {
   return (
     <DefaultLayout title="Home" url={routes.HOME}>
       <Container>
-        <Hero alignLeft navText={title} navTextTag="h1">
-          <Title as="p">
+        <Nav text={title} textTag="h1" />
+        <Hero alignLeft>
+          <Title as="p" className="color-manatee">
             Hello! I’m a Sr. Software Engineer, currently working as Technical
             and Team Lead at{' '}
             <Link
@@ -43,14 +45,16 @@ const IndexPage = ({ data }) => {
             to build fast and powerful web applications.
           </Title>
         </Hero>
-        <section>
-          <SectionTitle>Previous experiences</SectionTitle>
-          <JobsList data={data.allWorkJson.edges} />
-        </section>
-        <section className="mt-48 md:mt-80 lg:mt-120">
-          <SectionTitle>In another life…</SectionTitle>
-          <JobsList data={data.allPreviousWorkJson.edges} />
-        </section>
+        <main>
+          <section>
+            <SectionTitle>Previous experiences</SectionTitle>
+            <JobsList data={data.allWorkJson.edges} />
+          </section>
+          <section className="mt-48 md:mt-80 lg:mt-120">
+            <SectionTitle>In another life…</SectionTitle>
+            <JobsList data={data.allPreviousWorkJson.edges} />
+          </section>
+        </main>
         <Footer />
       </Container>
     </DefaultLayout>
@@ -60,6 +64,8 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
 };
+
+export default IndexPage;
 
 export const pageQuery = graphql`
   query {
@@ -85,5 +91,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-export default IndexPage;

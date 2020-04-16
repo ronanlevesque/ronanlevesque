@@ -30,6 +30,7 @@ const config = {
     sanJuan: '#415161',
     midnight: '#1E2935',
     blackPearl: '#1a242e',
+    bunker: '#141c24',
   },
   // Spacing is used mainly for paddings and margins
   spacing: {
@@ -399,6 +400,7 @@ module.exports = {
         classes: {
           600: pxToRem(600),
           800: pxToRem(800),
+          1000: pxToRem(1000),
           1200: pxToRem(1200),
         },
       },

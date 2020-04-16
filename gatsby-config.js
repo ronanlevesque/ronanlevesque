@@ -17,18 +17,62 @@ module.exports = {
       options: {
         fonts: [
           'Libre Baskerville:400,400i,700',
-          'Roboto:400,500',
-          'Roboto Mono:400',
+          'Roboto:400,400i,500,700',
+          'Roboto Mono:400,700',
         ],
         display: 'swap',
       },
     },
     'gatsby-transformer-json',
     {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 70,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 800,
+              backgroundColor: 'none',
+              quality: 70,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbers: false,
+              classPrefix: '',
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'data',
         path: `${__dirname}/src/data/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'articles',
+        path: `${__dirname}/src/pages/articles`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`,
       },
     },
     {

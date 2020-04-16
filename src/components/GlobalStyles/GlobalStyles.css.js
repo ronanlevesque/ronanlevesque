@@ -10,6 +10,7 @@ export default {
       box-sizing: border-box;
     }
     html {
+      font-size: 16px;
       -webkit-text-size-adjust: 100%;
     }
     body {
