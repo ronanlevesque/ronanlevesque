@@ -1,8 +1,8 @@
 ---
-title: 'Back to blogging'
+title: 'Reviving my blog'
 description: 'Tutoriel sur la manière dont j’ai remplacé Jekyll, devenu trop lent, par Hugo.'
 date: 2020-04-16T00:00:00Z
-path: '/articles/back-to-blogging'
+path: '/articles/reviving-my-blog'
 ---
 
 I used to write a lot of articles on front-end development back in the days (some of them are still available in the French archive section of my [articles](/articles)). The thing is, writing requires a lot of time and good discipline. Adding 2 kids in the mix kind of broke that dynamic, and I ended up completely removing my blog section when I migrated over to [Gatsby](https://www.gatsbyjs.org/) last year.

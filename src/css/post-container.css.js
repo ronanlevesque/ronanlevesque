@@ -138,12 +138,18 @@ export default {
     figcaption {
       margin-left: auto;
       margin-right: auto;
-      margin-top: 1em;
+      margin-top: 0.8em;
       width: 90%;
       font-family: ${fonts.LIBRE_BASKERVILLE};
-      font-size: 0.9em;
+      font-size: ${pxToRem(12)};
       font-style: italic;
       text-align: center;
+      @media (min-width: ${breakpoints.MD}) {
+        font-size: ${pxToRem(14)};
+      }
+      @media (min-width: ${breakpoints.LG}) {
+        font-size: ${pxToRem(16)};
+      }
     }
     blockquote {
       font-family: ${fonts.LIBRE_BASKERVILLE};
