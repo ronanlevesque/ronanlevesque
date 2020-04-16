@@ -31,7 +31,7 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
             >
               <Svg
                 name="arrow-left"
-                className="mr-8 d-block w-20 h-20 md:mr-10 lg:w-24 lg:h-24 lg:mr-12 color-manatee"
+                className="mr-8 d-block color-manatee w-16 h-16 md:w-20 md:h-20 md:mr-10 lg:w-24 lg:h-24 lg:mr-12"
               />
               {text}
             </Link>

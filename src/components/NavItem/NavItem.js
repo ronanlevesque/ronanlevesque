@@ -24,7 +24,7 @@ const NavItem = ({ as: Component, dataBefore, icon, isLast, ...other }) => (
     >
       <Svg
         aria-hidden
-        className="pe-none d-block w-20 h-20 lg:w-24 lg:h-24"
+        className="pe-none d-block w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
         name={icon.toLowerCase()}
       />
     </Component>

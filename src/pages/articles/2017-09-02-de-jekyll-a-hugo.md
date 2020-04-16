@@ -39,13 +39,14 @@ hugo import jekyll [chemin-jekyll] [chemin-cible]
 
 Qui va créer l’arborescence suivante :
 
-<pre><code class="nohighlight">archetypes
+```text
 content
 data
 layouts
 static
 themes
-config.toml</code></pre>
+config.toml
+```
 
 Dans mon cas, les articles ont été placés dans `content/post`, et les fichiers et dossiers situés à la racine du site Jekyll ont été placés dans `static`… J’ai dû faire un peu de nettoyage pour redéplacer ce qu’il fallait au bon endroit (je reviendrai sur l’arborescence ci-dessus un peu plus tard).
 
@@ -127,7 +128,8 @@ Les deux `range` permettent d’itérer, pour le premier sur les dates par anné
 
 Et le résultat :
 
-<pre><code class="nohighlight">2015
+```text
+2015
 
 NOMMAGE ET ARCHITECTURE CSS  19.08
 UNE GESTION RESPONSABLE DES WEBFONTS  25.06
@@ -139,7 +141,8 @@ DROPBOX ET NODE_MODULES  02.04
 METTRE SES ASSETS EN CACHE AVEC JEKYLL  17.12
 ANIMER SES SVG AVEC SNAP.SVG  21.07
 
-etc.</code></pre>
+etc.
+```
 
 ### Page d’article
 

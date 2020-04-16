@@ -28,7 +28,7 @@ const BlogPostTemplate = ({ data }) => {
           navWithIcons={false}
         >
           <Title className="color-zircon">{post.frontmatter.title}</Title>
-          <time className="d-block ff-mono tt-upper lsp-big fsz-12 color-blueBayoux md:mt-4 md:fsz-14 lg:fsz-16 lg:mt-8">
+          <time className="d-block ff-mono tt-upper lsp-big fsz-12 color-blueBayoux mt-4 md:mt-8 md:fsz-14 lg:fsz-16 lg:mt-12">
             {post.frontmatter.date}
           </time>
         </Hero>

@@ -9,15 +9,15 @@ const JobsList = ({ data }) => (
     {data.map(item => (
       <ListItem key={item.node.company}>
         <span className="d-flex jc-between ai-center pv-12 md:pv-14 lg:pv-16">
-          <span className="fx-9 pr-8 fsz-14 xs:d-flex xs:ai-center lg:fsz-16">
+          <span className="fxg-1 pr-12 fsz-14 sm:d-flex sm:ai-center md:fsz-16 lg:fsz-18">
             <span css={styles.job} className="d-block color-zircon">
               {item.node.company}
             </span>
-            <span className="d-block mt-4 fst-italic color-manatee xs:mt-0 xs:ml-8 sm:ml-0">
+            <span className="d-block mt-4 fst-italic color-manatee sm:mt-0">
               {item.node.job}
             </span>
           </span>
-          <span className="fx-3 ta-right ff-mono fsz-12 color-manatee lg:fsz-14">
+          <span className="fxs-0 ta-right ff-mono fsz-12 color-manatee md:fsz-14 lg:fsz-16">
             {item.node.start} – {item.node.end}
           </span>
         </span>

@@ -149,21 +149,17 @@ export default {
       font-family: ${fonts.LIBRE_BASKERVILLE};
       font-style: italic;
     }
-    .info,
-    blockquote {
+    blockquote,
+    .info {
       margin-left: 0;
       margin-right: 0;
       padding-left: 1.5em;
       font-style: italic;
       border-left: 2px solid ${colors.SAN_JUAN};
-      p {
-        &:before {
-          content: '“';
-        }
-        &:after {
-          content: '”';
-        }
-      }
+    }
+    pre,
+    blockquote,
+    .info {
       &:before {
         margin-bottom: 0.8em;
         display: block;
@@ -172,7 +168,6 @@ export default {
         font-size: ${pxToRem(10)};
         font-style: normal;
         letter-spacing: 0.14em;
-        color: ${colors.LINK_WATER};
         @media (min-width: ${breakpoints.MD}) {
           font-size: ${pxToRem(12)};
         }
@@ -181,8 +176,23 @@ export default {
         }
       }
     }
-    blockquote:before {
-      content: 'Quote';
+    blockquote {
+      &:before {
+        content: 'Quote';
+        color: ${colors.LINK_WATER};
+      }
+      p {
+        &:before {
+          content: '“';
+        }
+        &:after {
+          content: '”';
+        }
+      }
+    }
+    pre:before {
+      content: attr(class);
+      color: ${colors.BLUE_BAYOUX};
     }
     .info {
       code {
@@ -190,6 +200,7 @@ export default {
       }
       &:before {
         content: 'Information';
+        color: ${colors.LINK_WATER};
       }
     }
   `,

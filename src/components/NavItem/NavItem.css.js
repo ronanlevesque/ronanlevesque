@@ -27,8 +27,11 @@ export default {
         transition: opacity 0.2s ease-out, transform 0.2s ease-out;
         white-space: nowrap;
       }
-      @media (min-width: ${breakpoints.LG}) {
+      @media (min-width: ${breakpoints.MD}) {
         font-size: 16px;
+      }
+      @media (min-width: ${breakpoints.LG}) {
+        font-size: 18px;
       }
     }
   `,
