@@ -20,13 +20,13 @@ De mon point de vue, il est préférable d’utiliser des `em` afin de permettre
 
 Afin de simplifier les calculs de taille de police en utilisant les `em`, une solution souvent utilisée est de définir le code suivant :
 
-```
+```text
 body {font-size: 62.5%}
 ```
 
 Sachant que la taille de police par défaut des navigateurs modernes est ([presque ?](http://isitrwd.com/rfs/)) tout le temps `16px` pour `1em`, la conversion est donc beaucoup plus simple suite à ce calcul et donnera le résultat suivant :
 
-```
+```text
 10 px = 1 em
 ```
 

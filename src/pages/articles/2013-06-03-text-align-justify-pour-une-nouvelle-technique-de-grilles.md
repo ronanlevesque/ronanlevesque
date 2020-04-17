@@ -90,7 +90,7 @@ Le code ressemblera donc à :
 
 La formule à appliquer pour connaitre le nombre de placeholders à utiliser, et ce quelque soit le nombre d’items présents sur la dernière ligne, est la suivante :
 
-```
+```text
 nombre de placeholders = nombre maximum d’éléments par ligne - 2
 ```
 
