@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data }) => {
   return (
     <DefaultLayout
       metaDescription={post.frontmatter.description}
-      lang={post.frontmatter.archive && 'fr'}
+      lang={post.frontmatter.archive ? 'fr' : 'en'}
       title={post.frontmatter.title}
       url={post.frontmatter.path}
     >
@@ -39,7 +39,7 @@ const BlogPostTemplate = ({ data }) => {
         </Hero>
         <main
           css={postContainerStyles.root}
-          className="post-container maw-800 m-auto lh-bigger ff-roboto color-manatee"
+          className="post-container maw-800 m-auto lh-bigger ff-roboto color-manatee ph-8 md:ph-10 lg:ph-0"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <Footer />

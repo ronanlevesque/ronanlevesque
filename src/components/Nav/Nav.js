@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './Nav.css';
 import Link from 'components/Link';
 import NavItem from 'components/NavItem';
 import SmallText from 'components/SmallText';
@@ -19,14 +20,15 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
 
   return (
     <div css={helperStyles.gradientLine} {...other}>
-      <div className="d-flex jc-between ai-center h-48 md:h-56 lg:h-64 color-zircon">
+      <div className="ph-8 d-flex jc-between ai-center h-48 color-zircon md:ph-10 md:h-56 lg:h-64 lg:ph-12">
         <SmallText
           as={textTag}
+          css={styles.SmallText}
           className="m-0 fw-medium ws-nowrap ov-hidden to-ellipsis"
         >
           {textLink ? (
             <Link
-              className="td-none d-flex ai-center jc-between color-zircon"
+              className="td-none d-flex ai-center jc-between color-zircon hover:color-white"
               to={textLink}
             >
               <Svg

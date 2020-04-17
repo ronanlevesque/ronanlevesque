@@ -25,11 +25,17 @@ const IndexPage = ({ data }) => {
           <Title as="p" className="color-manatee">
             Hello! I’m a Sr. Software Engineer, currently working as Technical
             and Team Lead at{' '}
-            <Link className="color-zircon td-none" to="https://www.algolia.com">
+            <Link
+              className="color-zircon td-none hover:color-white"
+              to="https://www.algolia.com"
+            >
               Algolia
             </Link>
             . I ❤️ pushing pixels around and playing with{' '}
-            <Link className="color-zircon td-none" to="https://reactjs.org/">
+            <Link
+              className="color-zircon td-none hover:color-white"
+              to="https://reactjs.org/"
+            >
               React
             </Link>{' '}
             to build fast and powerful web applications.

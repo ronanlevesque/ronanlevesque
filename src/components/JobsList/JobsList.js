@@ -8,7 +8,7 @@ const JobsList = ({ data }) => (
   <ul className="m-0 p-0 lis-none">
     {data.map(item => (
       <ListItem key={item.node.company}>
-        <span className="d-flex jc-between ai-center pv-12 md:pv-14 lg:pv-16">
+        <span className="d-flex jc-between ai-center pv-12 ph-8 md:pv-14 md:ph-10 lg:pv-16 lg:ph-12">
           <span className="fxg-1 pr-12 fsz-14 sm:d-flex sm:ai-center md:fsz-16 lg:fsz-18">
             <span css={styles.job} className="d-block color-zircon">
               {item.node.company}

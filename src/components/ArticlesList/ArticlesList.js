@@ -9,7 +9,7 @@ const ArticlesList = ({ posts }) => (
     {posts.map(({ node: post }) => (
       <ListItem key={post.id}>
         <Link
-          className="d-block pv-12 td-none xs:d-flex xs:jc-between xs:ai-center md:pv-14 lg:pv-16"
+          className="d-block pv-12 ph-8 td-none hover:bgc-midnight xs:d-flex xs:jc-between xs:ai-center md:pv-14 md:ph-10 lg:pv-16 lg:ph-12"
           to={post.frontmatter.path}
         >
           <span className="d-block fx-8 pr-8 color-zircon fsz-14 md:fsz-16 lg:fsz-18">
