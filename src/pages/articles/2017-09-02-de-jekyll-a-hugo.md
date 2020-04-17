@@ -2,7 +2,7 @@
 title: 'De Jekyll à Hugo'
 description: 'Tutoriel sur la manière dont j’ai remplacé Jekyll, devenu trop lent, par Hugo.'
 date: 2017-09-02T00:00:00Z
-path: '/articles/de-jekyll-a-hugo'
+path: '/articles/de-jekyll-a-hugo/'
 archive: true
 ---
 

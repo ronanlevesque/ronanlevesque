@@ -2,7 +2,7 @@
 title: 'Les anciens navigateurs'
 description: 'Support des anciens navigateurs grâce à différentes méthodes.'
 date: 2013-10-12T00:00:00Z
-path: '/articles/les-anciens-navigateurs'
+path: '/articles/les-anciens-navigateurs/'
 archive: true
 ---
 

@@ -2,7 +2,7 @@
 title: 'Webdesign: liste de ressources utiles'
 description: 'Liste de ressources utiles pour le webdesign, allant des wireframes aux couleurs, polices etc.'
 date: 2012-08-06T00:00:00Z
-path: '/articles/webdesign-liste-de-ressources-utiles'
+path: '/articles/webdesign-liste-de-ressources-utiles/'
 archive: true
 ---
 

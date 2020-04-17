@@ -2,7 +2,7 @@
 title: 'Font-size : quelles solutions ?'
 description: 'Comment gérer les tailles de police de votre site au mieux.'
 date: 2013-06-20T00:00:00Z
-path: '/articles/font-size-quelles-solutions'
+path: '/articles/font-size-quelles-solutions/'
 archive: true
 ---
 

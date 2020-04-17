@@ -2,7 +2,7 @@
 title: 'CSS et notation BEM'
 description: 'Décryptage de la méthode d’écriture BEM en CSS.'
 date: 2013-08-29T00:00:00Z
-path: '/articles/css-et-notation-bem'
+path: '/articles/css-et-notation-bem/'
 archive: true
 ---
 

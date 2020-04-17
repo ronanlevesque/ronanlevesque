@@ -2,7 +2,7 @@
 title: 'Dans l’enfer de @font-face'
 description: 'Gérer les fontes n’a vraiment rien de simple, surtout si on supporte IE8.'
 date: 2014-01-30T00:00:00Z
-path: '/articles/dans-l-enfer-de-font-face'
+path: '/articles/dans-l-enfer-de-font-face/'
 archive: true
 ---
 

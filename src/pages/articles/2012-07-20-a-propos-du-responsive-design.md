@@ -2,7 +2,7 @@
 title: 'A propos du responsive design'
 description: 'Article explicatif sur les grands principes et l’intérêt du responsive design.'
 date: 2012-07-20T00:00:00Z
-path: '/articles/a-propos-du-responsive-design'
+path: '/articles/a-propos-du-responsive-design/'
 archive: true
 ---
 

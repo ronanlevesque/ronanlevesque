@@ -2,7 +2,7 @@
 title: 'Les atouts de box-sizing: border-box'
 description: 'Présentation d’une propriété CSS maintenant devenue incontournable.'
 date: 2012-08-15T00:00:00Z
-path: '/articles/les-atouts-de-box-sizing-border-box'
+path: '/articles/les-atouts-de-box-sizing-border-box/'
 archive: true
 ---
 

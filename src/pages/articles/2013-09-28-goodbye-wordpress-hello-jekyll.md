@@ -2,7 +2,7 @@
 title: 'Goodbye WordPress, hello Jekyll'
 description: 'Pourquoi j’ai abandonné WordPress au profit d’une solution plus adaptée à mes besoins.'
 date: 2013-09-28T00:00:00Z
-path: '/articles/goodbye-wordpress-hello-jekyll'
+path: '/articles/goodbye-wordpress-hello-jekyll/'
 archive: true
 ---
 

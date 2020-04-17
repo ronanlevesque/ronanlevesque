@@ -2,7 +2,7 @@
 title: 'Responsive design : adoptez un process intelligent !'
 description: 'Cet article s’attarde sur les problèmes que certains processes classiques en webdesign peuvent poser en responsive design.'
 date: 2014-03-13T00:00:00Z
-path: '/articles/responsive-design-adoptez-un-process-intelligent'
+path: '/articles/responsive-design-adoptez-un-process-intelligent/'
 archive: true
 ---
 

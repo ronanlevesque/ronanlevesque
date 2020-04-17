@@ -2,7 +2,7 @@
 title: 'Like, Plus, Share…'
 description: 'Le poids et l’impact des boutons de partage sociaux sur un site.'
 date: 2013-10-08T00:00:00Z
-path: '/articles/like-plus-share'
+path: '/articles/like-plus-share/'
 archive: true
 ---
 
