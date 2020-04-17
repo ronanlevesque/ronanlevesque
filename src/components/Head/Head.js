@@ -55,6 +55,7 @@ const Head = ({ lang, metaDescription, pageTitle, url }) => {
       <meta name="msapplication-TileColor" content="#b91d47" />
       <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
+      <meta property="og:image" content="/og-image.jpg" />
       <meta name="twitter:image" content="/og-image.jpg" />
       <meta name="twitter:card" content="summary" />
       <html lang={lang} />
