@@ -69,16 +69,19 @@ export default {
     ol {
       padding: 0;
       list-style: none;
+      li:before {
+        color: ${colors.ZIRCON};
+        display: inline-block;
+      }
     }
     ul {
       li {
         padding-left: 1em;
-        position: relative;
         &:before {
           content: '•';
-          position: absolute;
-          left: 0;
-          color: ${colors.LINK_WATER};
+          margin-left: -1em;
+          width: 1em;
+          font-weight: bold;
         }
       }
     }
@@ -86,14 +89,11 @@ export default {
       counter-reset: numbers;
       li {
         padding-left: 1.5em;
-        position: relative;
         counter-increment: numbers;
         &:before {
-          margin-right: 0.5em;
           content: counter(numbers) '.';
-          position: absolute;
-          left: 0;
-          color: ${colors.LINK_WATER};
+          margin-left: -1.5em;
+          width: 1.5em;
         }
       }
     }
