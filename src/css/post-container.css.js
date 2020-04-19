@@ -185,7 +185,7 @@ export default {
     blockquote {
       &:before {
         content: 'Quote';
-        color: ${colors.LINK_WATER};
+        color: ${colors.ZIRCON};
       }
       p {
         &:before {
@@ -206,7 +206,7 @@ export default {
       }
       &:before {
         content: 'Information';
-        color: ${colors.LINK_WATER};
+        color: ${colors.ZIRCON};
       }
     }
   `,
