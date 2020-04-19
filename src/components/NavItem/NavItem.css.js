@@ -4,7 +4,6 @@ import * as colors from 'constants/colors';
 
 export default {
   cta: css`
-    outline: none;
     &:hover:before,
     &:focus:before {
       opacity: 1;
