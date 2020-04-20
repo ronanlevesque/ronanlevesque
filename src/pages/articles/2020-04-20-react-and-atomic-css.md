@@ -11,7 +11,7 @@ If I had to name one CSS methodology that has completey changed my life as a fro
 
 The most famous Atomic CSS frameworks are [ACSS](https://acss.io/), [Tachyons](http://tachyons.io/), and my personal favorite, [Tailwind](https://tailwindcss.com/).
 
-Here’s a basic example:
+Here’s what atomic classes can look like:
 
 ```css
 .color-red {
@@ -111,7 +111,7 @@ const Title = ({ children, className, color = 'zircon', ...other }) => (
 );
 ```
 
-Our component is ready to be used in any kind of context: it has a few base styles, but it can be placed within different color themes thanks to the flexibility that we just added. We didn’t have to write any kind of specific CSS, our predefined classes did the job for us. We can also be sure that design guidelines are followed, since we used values taken from our configuration file.
+`Title` is ready to be used in any kind of context: it has a few base styles, but it can be placed within different color themes thanks to the flexibility that we just added. We didn’t have to write any kind of specific CSS, our predefined classes did the job for us. We can also be sure that design guidelines are followed, since we used values taken from our configuration file.
 
 The simple example above demonstrates the power of React and Atomic CSS combined, and how they follow the same pattern (even though CSS is not considered as an actual programming language): _composition over inheritance_. Its [Wikipedia definition](https://en.wikipedia.org/wiki/Composition_over_inheritance) states:
 
@@ -121,7 +121,7 @@ That principle avoids uncontrolled side effects, something that unfortunately ha
 
 ## Limitations
 
-Even though Atomic CSS is very versatile, there are some edge cases which it won’t always be able to cover: very custom styles, pseudo-elements, etc.
+Atomic CSS is very versatile, but there are some edge cases which it won’t always be able to cover: very custom styles, pseudo-elements, etc.
 
 Going back to our `Title` example, we realize it would look really amazing if it had a beautiful “❧” right in front of it. In that kind of situation, my tool of choice is [Emotion](https://github.com/emotion-js/emotion). It allows me to create locally-scoped classes via the `css` property, like this:
 
@@ -148,7 +148,7 @@ The takeway here is that Utility-first CSS shouldn’t try and cover all CSS pos
 
 By default, an Atomic CSS framework will generate a ton of selectors, resulting in a big bundle. For this very website, the minified bundle is `312 Ko`, way too much given the small amount of content it holds. Fortunately, we have a way to ensure we **only load what we need**, thanks to [PurgeCSS](https://github.com/FullHuman/purgecss). It will read the content of your files and will only keep the selectors that show in you source code. After being cleaned, my CSS bundle goes down to `7 Ko`, way better!
 
-One thing to keep in mind with PurgeCSS: in the `Title` example above, I have interpolated some code. The tool won’t understand that, so we need to whitelist the pattern in its configuration file:
+One thing to keep in mind with PurgeCSS: in the `Title` example above, I have interpolated some code for the `color-` class name. The tool won’t understand that, so we need to whitelist the pattern in its configuration file:
 
 ```js
 module.exports = {
@@ -162,4 +162,4 @@ Like Sarah, at first I wasn’t convinced by the Utility-first CSS methodology. 
 
 Atomic and React share the same principles about componentization and modularity of code. Combined, they offer a solid way to build maintainable applications while keeping a low technical debt. For me, this really is the future of CSS.
 
-Do you think otherwise? Let’s discuss it on [Twitter](https://twitter.com/ronanlevesque)!
+Thinking otherwise? Let’s discuss it on [Twitter](https://twitter.com/ronanlevesque)!
