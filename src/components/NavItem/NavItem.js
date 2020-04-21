@@ -6,7 +6,7 @@ import Link from 'components/Link';
 import Svg from 'components/Svg';
 
 const NavItem = ({ as: Component, dataBefore, icon, isLast, ...other }) => (
-  <li className="d-flex ai-center ml-8 md:ml-10 lg:ml-12">
+  <li className="d-flex ai-center ml-4 md:ml-8 lg:ml-16">
     <Component
       aria-label={icon}
       css={styles.cta}
