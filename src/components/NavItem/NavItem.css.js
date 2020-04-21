@@ -34,18 +34,4 @@ export default {
       }
     }
   `,
-  last: css`
-    &:before {
-      margin-right: 12px;
-      color: ${colors.MANATEE};
-
-      content: '·';
-      @media (min-width: ${breakpoints.MD}) {
-        margin-right: 16px;
-      }
-      @media (min-width: ${breakpoints.LG}) {
-        margin-right: 20px;
-      }
-    }
-  `,
 };

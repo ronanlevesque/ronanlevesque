@@ -24,11 +24,11 @@ const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
         <SmallText
           as={textTag}
           css={styles.SmallText}
-          className="m-0 fw-medium ws-nowrap ov-hidden to-ellipsis"
+          className="m-0 fw-medium d-flex ai-center jc-between h-28 md:h-32 lg:h-48"
         >
           {textLink ? (
             <Link
-              className="td-none d-flex ai-center jc-between color-zircon hover:color-white"
+              className="h-100p td-none d-flex ai-center jc-between color-zircon hover:color-white"
               to={textLink}
             >
               <Svg

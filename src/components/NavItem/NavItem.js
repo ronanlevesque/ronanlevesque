@@ -6,14 +6,11 @@ import Link from 'components/Link';
 import Svg from 'components/Svg';
 
 const NavItem = ({ as: Component, dataBefore, icon, isLast, ...other }) => (
-  <li
-    css={isLast && styles.last}
-    className="d-flex ai-center ml-12 md:ml-16 lg:ml-20"
-  >
+  <li className="d-flex ai-center ml-8 md:ml-10 lg:ml-12">
     <Component
       aria-label={icon}
       css={styles.cta}
-      className="p-0 bdw-0 app-none bgc-transparent cursor-pointer d-block td-none ff-libre color-linkWater hover:color-white"
+      className="p-0 bdw-0 app-none bgc-transparent cursor-pointer d-flex ai-center jc-center td-none ff-libre color-linkWater w-24 h-32 hover:color-white md:w-28 md:h-40 lg:w-32 lg:h-48"
       data-before={dataBefore ? dataBefore : icon}
       onClick={e => {
         e.target.blur();
@@ -33,7 +30,6 @@ NavItem.propTypes = {
   as: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   dataBefore: PropTypes.string,
   icon: PropTypes.string.isRequired,
-  isLast: PropTypes.bool,
   link: PropTypes.string,
 };
 
