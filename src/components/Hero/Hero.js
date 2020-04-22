@@ -20,9 +20,4 @@ Hero.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-Hero.defaultProps = {
-  navTextTag: 'span',
-  navWithIcons: true,
-};
-
 export default Hero;

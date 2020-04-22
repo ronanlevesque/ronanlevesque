@@ -15,7 +15,7 @@ const renderSocialNavItems = social =>
     <NavItem key={icon} icon={icon} href={social[icon]} as="a" />
   ));
 
-const Nav = ({ text, textLink, textTag, withIcons, ...other }) => {
+const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => {
   const { social } = useSiteMetadata();
 
   return (
@@ -57,10 +57,6 @@ Nav.propTypes = {
   textTag: PropTypes.string,
   textLink: PropTypes.string,
   withIcons: PropTypes.bool,
-};
-
-Nav.defaultProps = {
-  withIcons: true,
 };
 
 export default Nav;

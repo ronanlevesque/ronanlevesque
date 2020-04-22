@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 
 import { useSiteMetadata } from 'hooks';
 
-const Head = ({ lang, metaDescription, pageTitle, url }) => {
+const Head = ({ lang = 'en', metaDescription, pageTitle, url }) => {
   const { description, siteUrl, social, title } = useSiteMetadata();
 
   return (
@@ -68,10 +68,6 @@ Head.propTypes = {
   metaDescription: PropTypes.string,
   pageTitle: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-};
-
-Head.defaultProps = {
-  lang: 'en',
 };
 
 export default Head;
