@@ -24,7 +24,7 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => {
         <SmallText
           as={textTag}
           css={styles.SmallText}
-          className="m-0 fw-medium d-flex ai-center jc-between h-28 md:h-32 lg:h-48"
+          className="m-0 fw-medium d-flex ai-center jc-between h-32 md:h-36 lg:h-40"
         >
           {textLink ? (
             <Link
