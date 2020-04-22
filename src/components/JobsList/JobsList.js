@@ -27,7 +27,16 @@ const JobsList = ({ data }) => (
 );
 
 JobsList.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      node: PropTypes.shape({
+        company: PropTypes.string.isRequired,
+        end: PropTypes.number.isRequired,
+        job: PropTypes.string.isRequired,
+        start: PropTypes.number.isRequired,
+      }).isRequired,
+    }).isRequired
+  ).isRequired,
 };
 
 export default JobsList;

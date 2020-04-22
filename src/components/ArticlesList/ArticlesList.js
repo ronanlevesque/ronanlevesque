@@ -24,8 +24,15 @@ const ArticlesList = ({ posts }) => (
   </ul>
 );
 
-ArticlesList.propTypes = {
-  props: PropTypes.object.isRequired,
-};
+ArticlesList.propTypes = PropTypes.arrayOf(
+  PropTypes.shape({
+    frontmatter: PropTypes.shape({
+      date: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    }).isRequired,
+    id: PropTypes.number.isRequired,
+  }).isRequired
+).isRequired;
 
 export default ArticlesList;

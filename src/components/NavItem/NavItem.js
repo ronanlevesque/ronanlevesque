@@ -5,13 +5,7 @@ import styles from './NavItem.css';
 import Link from 'components/Link';
 import Svg from 'components/Svg';
 
-const NavItem = ({
-  as: Component = Link,
-  dataBefore,
-  icon,
-  isLast,
-  ...other
-}) => (
+const NavItem = ({ as: Component = Link, dataBefore, icon, ...other }) => (
   <li className="d-flex ai-center ml-4 md:ml-8 lg:ml-16">
     <Component
       aria-label={icon}
@@ -36,7 +30,6 @@ NavItem.propTypes = {
   as: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   dataBefore: PropTypes.string,
   icon: PropTypes.string.isRequired,
-  link: PropTypes.string,
 };
 
 export default NavItem;
