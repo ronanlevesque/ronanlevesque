@@ -114,16 +114,19 @@ export default {
       margin-bottom: 1.5em;
     }
     pre {
-      padding: 1em;
       font-size: ${pxToRem(12)};
       background-color: ${colors.BUNKER};
-      border-radius: 2px;
+      border-radius: 4px;
       overflow: auto;
       @media (min-width: ${breakpoints.MD}) {
         font-size: ${pxToRem(14)};
       }
       @media (min-width: ${breakpoints.LG}) {
         font-size: ${pxToRem(16)};
+      }
+      code {
+        display: block;
+        padding: 1em;
       }
     }
     code,
@@ -167,7 +170,6 @@ export default {
     blockquote,
     .info {
       &:before {
-        margin-bottom: 0.8em;
         display: block;
         text-transform: uppercase;
         font-family: ${fonts.ROBOTO};
@@ -185,6 +187,7 @@ export default {
     blockquote {
       &:before {
         content: 'Quote';
+        margin-bottom: 0.8em;
         color: ${colors.ZIRCON};
       }
       p {
@@ -196,9 +199,20 @@ export default {
         }
       }
     }
+
     pre:before {
       content: attr(class);
+      padding: 0.5em ${pxToRem(12)};
       color: ${colors.BLUE_BAYOUX};
+      background-color: ${colors.BUNKER_DARKER};
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      @media (min-width: ${breakpoints.MD}) {
+        padding: 0.5em ${pxToRem(14)};
+      }
+      @media (min-width: ${breakpoints.LG}) {
+        padding: 0.5em ${pxToRem(16)};
+      }
     }
     .info {
       code {
@@ -206,6 +220,7 @@ export default {
       }
       &:before {
         content: 'Information';
+        margin-bottom: 0.8em;
         color: ${colors.ZIRCON};
       }
     }

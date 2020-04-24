@@ -31,6 +31,7 @@ const config = {
     midnight: '#1E2935',
     blackPearl: '#1a242e',
     bunker: '#141c24',
+    bunkerDarker: '#11181f',
   },
   // Spacing is used mainly for paddings and margins
   spacing: {
