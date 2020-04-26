@@ -1,8 +1,5 @@
 import { css } from '@emotion/core';
-import * as breakpoints from 'constants/breakpoints';
 import * as colors from 'constants/colors';
-import * as fonts from 'constants/fonts';
-import { pxToRem } from 'helpers';
 
 export default {
   root: css`

@@ -1,4 +1,4 @@
-/* eslint-disable import/no-commonjs */
+/* eslint-disable import/no-commonjs, max-params */
 
 const calcPxTorem = px => `${px * 0.0625}rem`;
 

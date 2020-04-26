@@ -1,3 +1,5 @@
+/* eslint-disable import/no-commonjs, no-console */
+
 const fs = require('fs');
 const helpers = require('./src/helpers');
 
