@@ -33,7 +33,7 @@ const ArticlesPage = ({ data }) => {
               posts={posts.filter(post => !post.node.frontmatter.archive)}
             />
           </section>
-          <section className="mt-48 md:mt-80 lg:mt-120">
+          <section className="fluid:mt-48-120">
             <SectionTitle>Archives (French)</SectionTitle>
             <ArticlesList
               posts={posts.filter(post => post.node.frontmatter.archive)}

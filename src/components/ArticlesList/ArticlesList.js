@@ -9,13 +9,13 @@ const ArticlesList = ({ posts }) => (
     {posts.map(({ node: post }) => (
       <ListItem key={post.id}>
         <Link
-          className="d-block pv-12 ph-8 td-none hover:bgc-midnight xs:d-flex xs:jc-between xs:ai-center md:pv-14 md:ph-10 lg:pv-16 lg:ph-12"
+          className="d-block td-none hover:bgc-midnight fluid:pl-8-12 fluid:pr-8-12 fluid:pt-12-16 fluid:pb-12-16 xs:d-flex xs:jc-between xs:ai-center"
           to={post.frontmatter.path}
         >
-          <p className="m-0 d-block fx-8 pr-8 color-zircon fsz-14 md:fsz-16 lg:fsz-18">
+          <p className="m-0 d-block fx-8 pr-8 color-zircon fluid:fsz-14-18">
             {post.frontmatter.title}
           </p>
-          <time className="mt-4 d-block fx-4 fxs-0 ff-mono color-manatee ws-nowrap fsz-12 xs:ta-right xs:mt-0 md:fsz-14 lg:fsz-16">
+          <time className="mt-4 d-block fx-4 fxs-0 ff-mono color-manatee ws-nowrap fluid:fsz-12-16 xs:ta-right xs:mt-0">
             {post.frontmatter.date}
           </time>
         </Link>

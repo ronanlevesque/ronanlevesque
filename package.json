@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "yarn clean:css && gatsby build",
-    "build:css": "node_modules/.bin/fragments build src/css",
+    "build:css": "node_modules/.bin/fragments build src/css && node fluid-css.config.js",
     "clean:css": "yarn build:css && node_modules/.bin/purgecss --config purgecss.config.js --out src/css",
     "lint": "eslint src",
     "serve": "yarn clean:css && gatsby serve",

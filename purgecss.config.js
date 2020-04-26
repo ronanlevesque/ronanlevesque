@@ -6,7 +6,7 @@ module.exports = {
     'src/pages/**/*.js',
     'src/templates/**/*.js',
   ],
-  css: ['src/css/fragments.css'],
+  css: ['src/css/fluid.css', 'src/css/fragments.css'],
   extractors: [
     {
       extractor: class {
