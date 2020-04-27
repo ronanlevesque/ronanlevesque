@@ -3,8 +3,8 @@ import * as colors from 'constants/colors';
 import * as fonts from 'constants/fonts';
 import { fluidCSS } from 'helpers';
 
-const generateFluidCSS = (selector, property, minValue, maxValue) =>
-  fluidCSS('', selector, property, minValue, maxValue, 500, 1200);
+const generateFluidCSS = (selector, properties, minValue, maxValue) =>
+  fluidCSS('', selector, properties, minValue, maxValue, 500, 1200);
 
 export default {
   root: css`
@@ -25,17 +25,17 @@ export default {
       font-weight: normal;
       color: ${colors.ZIRCON};
     }
-    ${generateFluidCSS('h2', 'font-size', 16, 24)}
+    ${generateFluidCSS('h2', ['font-size'], 16, 24)}
     ${generateFluidCSS(
       'h3, p, li, figure',
-      'font-size',
+      ['font-size'],
       14,
       18
     )}
     p,
     li,
     figure {
-      ${generateFluidCSS('code, kbd', 'font-size', 12, 16)}
+      ${generateFluidCSS('code, kbd', ['font-size'], 12, 16)}
       code,
       kbd {
         padding: 0.1em 0.3em;
@@ -91,7 +91,7 @@ export default {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
     }
-    ${generateFluidCSS('pre, figcaption', 'font-size', 12, 16)}
+    ${generateFluidCSS('pre, figcaption', ['font-size'], 12, 16)}
     pre {
       background-color: ${colors.BUNKER};
       border-radius: 4px;
@@ -134,7 +134,7 @@ export default {
     pre,
     blockquote,
     .info {
-      ${generateFluidCSS('&:before', 'font-size', 10, 14)}
+      ${generateFluidCSS('&:before', ['font-size'], 10, 14)}
       &:before {
         display: block;
         text-transform: uppercase;
@@ -158,8 +158,7 @@ export default {
         }
       }
     }
-    ${generateFluidCSS('pre:before', 'padding-left', 12, 16)}
-    ${generateFluidCSS('pre:before', 'padding-right', 12, 16)}
+    ${generateFluidCSS('pre:before', ['padding-left', 'padding-right'], 12, 16)}
     pre:before {
       content: attr(class);
       padding-top: 0.5em;

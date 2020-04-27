@@ -9,7 +9,7 @@ const maxBreakpoint = 1200;
 const selectors = [
   {
     className: 'fsz',
-    property: 'font-size',
+    properties: ['font-size'],
     minMax: [
       [12, 16],
       [14, 18],
@@ -18,12 +18,12 @@ const selectors = [
   },
   {
     className: 'ml',
-    property: 'margin-left',
+    properties: ['margin-left'],
     minMax: [[4, 12]],
   },
   {
     className: 'mt',
-    property: 'margin-top',
+    properties: ['margin-top'],
     minMax: [
       [4, 12],
       [48, 120],
@@ -31,46 +31,45 @@ const selectors = [
   },
   {
     className: 'mr',
-    property: 'margin-right',
+    properties: ['margin-right'],
     minMax: [[8, 12]],
   },
   {
-    className: 'pl',
-    property: 'padding-left',
+    className: 'ph',
+    properties: ['padding-left', 'padding-right'],
+    minMax: [[8, 12]],
+  },
+  {
+    className: 'pv',
+    properties: ['padding-top', 'padding-bottom'],
     minMax: [
-      [8, 12],
-      [12, 20],
+      [12, 16],
+      [80, 160],
     ],
+  },
+  {
+    className: 'pl',
+    properties: ['padding-left'],
+    minMax: [[12, 20]],
   },
   {
     className: 'pt',
-    property: 'padding-top',
-    minMax: [
-      [12, 16],
-      [48, 120],
-      [80, 160],
-    ],
+    properties: ['padding-top'],
+    minMax: [[48, 120]],
   },
   {
     className: 'pr',
-    property: 'padding-right',
-    minMax: [
-      [8, 12],
-      [12, 20],
-    ],
+    properties: ['padding-right'],
+    minMax: [[12, 20]],
   },
   {
     className: 'pb',
-    property: 'padding-bottom',
-    minMax: [
-      [12, 16],
-      [24, 48],
-      [80, 160],
-    ],
+    properties: ['padding-bottom'],
+    minMax: [[24, 48]],
   },
   {
     className: 'w',
-    property: 'width',
+    properties: ['width'],
     minMax: [
       [16, 24],
       [20, 28],
@@ -80,7 +79,7 @@ const selectors = [
   },
   {
     className: 'h',
-    property: 'height',
+    properties: ['height'],
     minMax: [
       [32, 40],
       [48, 64],
@@ -88,7 +87,7 @@ const selectors = [
   },
   {
     className: 'maw',
-    property: 'max-width',
+    properties: ['max-width'],
     minMax: [[700, 824]],
   },
 ];
@@ -100,7 +99,7 @@ const styles = selectors
         helpers.fluidCSS(
           'fluid',
           `${selector.className}-${value[0]}-${value[1]}`,
-          selector.property,
+          selector.properties,
           value[0],
           value[1],
           minBreakpoint,

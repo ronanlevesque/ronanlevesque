@@ -39,7 +39,7 @@ const BlogPostTemplate = ({ data }) => {
         </Hero>
         <main
           css={postContainerStyles.root}
-          className="post-container m-auto lh-bigger ff-roboto color-manatee fluid:pl-8-12 fluid:pr-8-12 fluid:maw-700-824"
+          className="post-container m-auto lh-bigger ff-roboto color-manatee fluid:ph-8-12 fluid:maw-700-824"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <Footer />

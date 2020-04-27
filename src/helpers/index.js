@@ -7,7 +7,7 @@ exports.pxToRem = calcPxTorem;
 exports.fluidCSS = (
   prefix,
   selector,
-  property,
+  properties,
   minValue,
   maxValue,
   minBreakpoint,
@@ -16,18 +16,27 @@ exports.fluidCSS = (
   const getPrefix = `${prefix ? `.${prefix}\\:` : ''}`;
 
   return `${getPrefix}${selector} {
-  ${property}: ${calcPxTorem(minValue)};
+  ${properties
+    .map(property => `${property}: ${calcPxTorem(minValue)};`)
+    .join('')}
 }
 @media screen and (min-width: ${minBreakpoint}px) {
   ${getPrefix}${selector} {
-    ${property}: calc(${calcPxTorem(
-    minValue
-  )} + (${maxValue} - ${minValue}) * (100vw - ${minBreakpoint}px) / (${maxBreakpoint} - ${minBreakpoint}))
+    ${properties
+      .map(
+        property =>
+          `${property}: calc(${calcPxTorem(
+            minValue
+          )} + (${maxValue} - ${minValue}) * (100vw - ${minBreakpoint}px) / (${maxBreakpoint} - ${minBreakpoint}));`
+      )
+      .join('')}
   }
 }
 @media screen and (min-width: ${maxBreakpoint}px) {
   ${getPrefix}${selector} {
-    ${property}: ${calcPxTorem(maxValue)};
+    ${properties
+      .map(property => `${property}: ${calcPxTorem(maxValue)};`)
+      .join('')}
   }
 }
 `;

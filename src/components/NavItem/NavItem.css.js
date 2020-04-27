@@ -4,8 +4,8 @@ import * as colors from 'constants/colors';
 
 import { fluidCSS } from 'helpers';
 
-const generateFluidCSS = (selector, property, minValue, maxValue) =>
-  fluidCSS('', selector, property, minValue, maxValue, 500, 1200);
+const generateFluidCSS = (selector, properties, minValue, maxValue) =>
+  fluidCSS('', selector, properties, minValue, maxValue, 500, 1200);
 
 export default {
   cta: css`
@@ -14,7 +14,7 @@ export default {
       opacity: 1;
       transform: translateX(0) translateY(-50%);
     }
-    ${generateFluidCSS('&:before', 'font-size', 14, 18)}
+    ${generateFluidCSS('&:before', ['font-size'], 14, 18)}
     &:before {
       display: none;
       color: ${colors.MANATEE};
