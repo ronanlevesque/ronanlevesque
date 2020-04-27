@@ -103,4 +103,8 @@ const styles = selectors
   )
   .join('');
 
-fs.writeFile('src/css/fluid.css', styles, err => console.log(err));
+fs.writeFile('src/css/fluid.css', styles, err =>
+  err
+    ? console.log(err)
+    : console.log('✅ Fluid CSS classes successfully generated.')
+);
