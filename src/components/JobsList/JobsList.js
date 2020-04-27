@@ -7,16 +7,16 @@ const JobsList = ({ data }) => (
   <ul className="m-0 p-0 lis-none">
     {data.map(item => (
       <ListItem key={item.node.company}>
-        <span className="d-flex jc-between ai-center fluid:pv-12-16 fluid:ph-8-12">
-          <p className="m-0 fxg-1 pr-4 fluid:fsz-14-18 sm:d-flex sm:ai-center">
-            <span className="d-block color-zircon fluid:w-180-260">
+        <span className="fluid:pv-12-16 fluid:ph-8-12 xxs:d-flex xxs:jc-between xxs:ai-center">
+          <p className="m-0 pr-12 fluid:fsz-14-18 xxs:fxg-1 sm:d-flex sm:ai-center">
+            <span className="d-block color-zircon fluid:w-200-260">
               {item.node.company}
             </span>
             <span className="d-block mt-4 fst-italic color-manatee sm:mt-0">
               {item.node.job}
             </span>
           </p>
-          <span className="fxs-0 ta-right ff-mono color-manatee fluid:fsz-12-16">
+          <span className="d-inline-flex pb-12 ta-right ff-mono color-manatee fluid:fsz-12-16 xxs:fxs-0 xxs:pb-0">
             {item.node.start} – {item.node.end}
           </span>
         </span>

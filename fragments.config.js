@@ -13,6 +13,7 @@ const config = {
   },
   // Define your breakpoints
   breakpoints: {
+    xxs: '400px',
     xs: '500px',
     sm: '768px',
     md: '960px',
