@@ -12,10 +12,10 @@ const ArticlesList = ({ posts }) => (
           className="d-block td-none hover:bgc-midnight fluid:ph-8-12 fluid:pv-12-16 xs:d-flex xs:jc-between xs:ai-center"
           to={post.frontmatter.path}
         >
-          <p className="m-0 d-block fx-8 pr-8 color-zircon fluid:fsz-14-18">
+          <p className="m-0 pr-8 color-zircon fluid:fsz-14-18 xs:fx-8">
             {post.frontmatter.title}
           </p>
-          <time className="mt-4 d-block fx-4 fxs-0 ff-mono color-manatee ws-nowrap fluid:fsz-12-16 xs:ta-right xs:mt-0">
+          <time className="mt-4 d-block ff-mono color-manatee ws-nowrap fluid:fsz-12-16 xs:fx-4 xs:fxs-0 xs:ta-right xs:mt-0">
             {post.frontmatter.date}
           </time>
         </Link>
