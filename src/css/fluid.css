@@ -206,16 +206,16 @@
     width: 2rem;
   }
 }
-.fluid\:w-200-260 {
-  width: 12.5rem;
+.fluid\:w-180-260 {
+  width: 11.25rem;
 }
 @media screen and (min-width: 500px) {
-  .fluid\:w-200-260 {
-    width: calc(12.5rem + (260 - 200) * (100vw - 500px) / (1200 - 500));
+  .fluid\:w-180-260 {
+    width: calc(11.25rem + (260 - 180) * (100vw - 500px) / (1200 - 500));
   }
 }
 @media screen and (min-width: 1200px) {
-  .fluid\:w-200-260 {
+  .fluid\:w-180-260 {
     width: 16.25rem;
   }
 }
