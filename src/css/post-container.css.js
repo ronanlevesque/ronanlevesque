@@ -40,7 +40,7 @@ export default {
       kbd {
         padding: 0.1em 0.3em;
         background-color: ${colors.BUNKER};
-        border-radius: 2px;
+        border-radius: 4px;
       }
     }
     ul,
