@@ -36,6 +36,7 @@ const ArticlesPage = ({ data }) => {
           <section className="fluid:mt-48-120">
             <SectionTitle>Archives (French)</SectionTitle>
             <ArticlesList
+              lang="fr"
               posts={posts.filter(post => post.node.frontmatter.archive)}
             />
           </section>

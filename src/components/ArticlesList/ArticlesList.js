@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import Link from 'components/Link';
 import ListItem from 'components/ListItem';
 
-const ArticlesList = ({ posts }) => (
-  <ul className="m-0 p-0 lis-none">
+const ArticlesList = ({ posts, ...other }) => (
+  <ul className="m-0 p-0 lis-none" {...other}>
     {posts.map(({ node: post }) => (
       <ListItem key={post.id}>
         <Link
