@@ -59,6 +59,7 @@ const Head = ({ lang = 'en', metaDescription, pageTitle, url }) => {
       <meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} />
       <meta name="twitter:card" content="summary" />
       <html lang={lang} />
+      <body className="m-0 ff-libre color-linkWater bgc-blackPearl fluid:ph-12-20" />
     </Helmet>
   );
 };

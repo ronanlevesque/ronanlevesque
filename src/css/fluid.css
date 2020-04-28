@@ -1,0 +1,260 @@
+.fluid\:fsz-12-16 {
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:fsz-12-16 {
+    font-size: calc(0.75rem + (16 - 12) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:fsz-12-16 {
+    font-size: 1rem;
+  }
+}
+.fluid\:fsz-14-18 {
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:fsz-14-18 {
+    font-size: calc(0.875rem + (18 - 14) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:fsz-14-18 {
+    font-size: 1.125rem;
+  }
+}
+.fluid\:fsz-18-32 {
+  font-size: 1.125rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:fsz-18-32 {
+    font-size: calc(1.125rem + (32 - 18) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:fsz-18-32 {
+    font-size: 2rem;
+  }
+}
+.fluid\:ml-4-12 {
+  margin-left: 0.25rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:ml-4-12 {
+    margin-left: calc(0.25rem + (12 - 4) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:ml-4-12 {
+    margin-left: 0.75rem;
+  }
+}
+.fluid\:mt-4-12 {
+  margin-top: 0.25rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:mt-4-12 {
+    margin-top: calc(0.25rem + (12 - 4) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:mt-4-12 {
+    margin-top: 0.75rem;
+  }
+}
+.fluid\:mt-48-120 {
+  margin-top: 3rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:mt-48-120 {
+    margin-top: calc(3rem + (120 - 48) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:mt-48-120 {
+    margin-top: 7.5rem;
+  }
+}
+.fluid\:mr-8-12 {
+  margin-right: 0.5rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:mr-8-12 {
+    margin-right: calc(0.5rem + (12 - 8) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:mr-8-12 {
+    margin-right: 0.75rem;
+  }
+}
+.fluid\:ph-8-12 {
+  padding-left: 0.5rem;padding-right: 0.5rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:ph-8-12 {
+    padding-left: calc(0.5rem + (12 - 8) * (100vw - 500px) / (1200 - 500));padding-right: calc(0.5rem + (12 - 8) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:ph-8-12 {
+    padding-left: 0.75rem;padding-right: 0.75rem;
+  }
+}
+.fluid\:ph-12-20 {
+  padding-left: 0.75rem;padding-right: 0.75rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:ph-12-20 {
+    padding-left: calc(0.75rem + (20 - 12) * (100vw - 500px) / (1200 - 500));padding-right: calc(0.75rem + (20 - 12) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:ph-12-20 {
+    padding-left: 1.25rem;padding-right: 1.25rem;
+  }
+}
+.fluid\:pv-12-16 {
+  padding-top: 0.75rem;padding-bottom: 0.75rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:pv-12-16 {
+    padding-top: calc(0.75rem + (16 - 12) * (100vw - 500px) / (1200 - 500));padding-bottom: calc(0.75rem + (16 - 12) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:pv-12-16 {
+    padding-top: 1rem;padding-bottom: 1rem;
+  }
+}
+.fluid\:pv-80-160 {
+  padding-top: 5rem;padding-bottom: 5rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:pv-80-160 {
+    padding-top: calc(5rem + (160 - 80) * (100vw - 500px) / (1200 - 500));padding-bottom: calc(5rem + (160 - 80) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:pv-80-160 {
+    padding-top: 10rem;padding-bottom: 10rem;
+  }
+}
+.fluid\:pt-48-120 {
+  padding-top: 3rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:pt-48-120 {
+    padding-top: calc(3rem + (120 - 48) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:pt-48-120 {
+    padding-top: 7.5rem;
+  }
+}
+.fluid\:pb-24-48 {
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:pb-24-48 {
+    padding-bottom: calc(1.5rem + (48 - 24) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:pb-24-48 {
+    padding-bottom: 3rem;
+  }
+}
+.fluid\:w-16-24 {
+  width: 1rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:w-16-24 {
+    width: calc(1rem + (24 - 16) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:w-16-24 {
+    width: 1.5rem;
+  }
+}
+.fluid\:w-20-28 {
+  width: 1.25rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:w-20-28 {
+    width: calc(1.25rem + (28 - 20) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:w-20-28 {
+    width: 1.75rem;
+  }
+}
+.fluid\:w-24-32 {
+  width: 1.5rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:w-24-32 {
+    width: calc(1.5rem + (32 - 24) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:w-24-32 {
+    width: 2rem;
+  }
+}
+.fluid\:w-200-260 {
+  width: 12.5rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:w-200-260 {
+    width: calc(12.5rem + (260 - 200) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:w-200-260 {
+    width: 16.25rem;
+  }
+}
+.fluid\:h-32-40 {
+  height: 2rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:h-32-40 {
+    height: calc(2rem + (40 - 32) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:h-32-40 {
+    height: 2.5rem;
+  }
+}
+.fluid\:h-48-64 {
+  height: 3rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:h-48-64 {
+    height: calc(3rem + (64 - 48) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:h-48-64 {
+    height: 4rem;
+  }
+}
+.fluid\:maw-700-824 {
+  max-width: 43.75rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:maw-700-824 {
+    max-width: calc(43.75rem + (824 - 700) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:maw-700-824 {
+    max-width: 51.5rem;
+  }
+}

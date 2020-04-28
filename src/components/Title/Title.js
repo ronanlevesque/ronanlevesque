@@ -4,10 +4,7 @@ import PropTypes from 'prop-types';
 
 const Title = ({ as: Component = 'h1', children, className, ...other }) => (
   <Component
-    className={cx(
-      'fw-normal mv-0 fsz-18 lh-bigger md:fsz-24 lg:fsz-32',
-      className
-    )}
+    className={cx('fw-normal mv-0 lh-bigger fluid:fsz-18-32', className)}
     {...other}
   >
     {children}

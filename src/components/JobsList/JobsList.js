@@ -1,23 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './JobsList.css';
 import ListItem from 'components/ListItem';
 
 const JobsList = ({ data }) => (
   <ul className="m-0 p-0 lis-none">
     {data.map(item => (
       <ListItem key={item.node.company}>
-        <span className="d-flex jc-between ai-center pv-12 ph-8 md:pv-14 md:ph-10 lg:pv-16 lg:ph-12">
-          <p className="m-0 fxg-1 pr-12 fsz-14 sm:d-flex sm:ai-center md:fsz-16 lg:fsz-18">
-            <span css={styles.job} className="d-block color-zircon">
+        <span className="d-block fluid:pv-12-16 fluid:ph-8-12 xxs:d-flex xxs:jc-between xxs:ai-center">
+          <p className="m-0 pr-12 fluid:fsz-14-18 xxs:fxg-1 sm:d-flex sm:ai-center">
+            <span className="d-block color-zircon fluid:w-200-260">
               {item.node.company}
             </span>
             <span className="d-block mt-4 fst-italic color-manatee sm:mt-0">
               {item.node.job}
             </span>
           </p>
-          <span className="fxs-0 ta-right ff-mono fsz-12 color-manatee md:fsz-14 lg:fsz-16">
+          <span className="d-inline-flex mt-8 ta-right ff-mono color-manatee fluid:fsz-12-16 xxs:fxs-0 xxs:mt-0">
             {item.node.start} – {item.node.end}
           </span>
         </span>

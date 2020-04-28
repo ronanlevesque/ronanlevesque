@@ -33,13 +33,13 @@ const BlogPostTemplate = ({ data }) => {
           navWithIcons={false}
         >
           <Title className="color-zircon">{post.frontmatter.title}</Title>
-          <time className="d-block ff-mono tt-upper lsp-big fsz-12 color-blueBayoux mt-4 md:mt-8 md:fsz-14 lg:fsz-16 lg:mt-12">
+          <time className="d-block ff-mono tt-upper lsp-big color-blueBayoux fluid:mt-4-12 fluid:fsz-12-16">
             {post.frontmatter.date}
           </time>
         </Hero>
         <main
           css={postContainerStyles.root}
-          className="post-container maw-800 m-auto lh-bigger ff-roboto color-manatee ph-8 md:ph-10 lg:ph-0"
+          className="post-container m-auto lh-bigger ff-roboto color-manatee fluid:ph-8-12 fluid:maw-700-824"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <Footer />

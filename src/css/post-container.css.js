@@ -1,8 +1,10 @@
 import { css } from '@emotion/core';
-import * as breakpoints from 'constants/breakpoints';
 import * as colors from 'constants/colors';
 import * as fonts from 'constants/fonts';
-import { pxToRem } from 'helpers';
+import { fluidCSS } from 'helpers';
+
+const generateFluidCSS = (selector, properties, minValue, maxValue) =>
+  fluidCSS('', selector, properties, minValue, maxValue, 500, 1200);
 
 export default {
   root: css`
@@ -23,46 +25,22 @@ export default {
       font-weight: normal;
       color: ${colors.ZIRCON};
     }
-    h2 {
-      font-size: ${pxToRem(16)};
-      @media (min-width: ${breakpoints.MD}) {
-        font-size: ${pxToRem(20)};
-      }
-      @media (min-width: ${breakpoints.LG}) {
-        font-size: ${pxToRem(24)};
-      }
-    }
-    h3 {
-      font-size: ${pxToRem(14)};
-      @media (min-width: ${breakpoints.MD}) {
-        font-size: ${pxToRem(16)};
-      }
-      @media (min-width: ${breakpoints.LG}) {
-        font-size: ${pxToRem(18)};
-      }
-    }
+    ${generateFluidCSS('h2', ['font-size'], 16, 24)}
+    ${generateFluidCSS(
+      'h3, p, li, figure',
+      ['font-size'],
+      14,
+      18
+    )}
     p,
     li,
     figure {
-      font-size: ${pxToRem(14)};
-      @media (min-width: ${breakpoints.MD}) {
-        font-size: ${pxToRem(16)};
-      }
-      @media (min-width: ${breakpoints.LG}) {
-        font-size: ${pxToRem(18)};
-      }
+      ${generateFluidCSS('code, kbd', ['font-size'], 12, 16)}
       code,
       kbd {
         padding: 0.1em 0.3em;
-        font-size: ${pxToRem(12)};
         background-color: ${colors.BUNKER};
         border-radius: 2px;
-        @media (min-width: ${breakpoints.MD}) {
-          font-size: ${pxToRem(14)};
-        }
-        @media (min-width: ${breakpoints.LG}) {
-          font-size: ${pxToRem(16)};
-        }
       }
     }
     ul,
@@ -113,17 +91,11 @@ export default {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
     }
+    ${generateFluidCSS('pre, figcaption', ['font-size'], 12, 16)}
     pre {
-      font-size: ${pxToRem(12)};
       background-color: ${colors.BUNKER};
       border-radius: 4px;
       overflow: auto;
-      @media (min-width: ${breakpoints.MD}) {
-        font-size: ${pxToRem(14)};
-      }
-      @media (min-width: ${breakpoints.LG}) {
-        font-size: ${pxToRem(16)};
-      }
       code {
         display: block;
         padding: 1em;
@@ -144,15 +116,8 @@ export default {
       margin-top: 0.8em;
       width: 90%;
       font-family: ${fonts.LIBRE_BASKERVILLE};
-      font-size: ${pxToRem(12)};
       font-style: italic;
       text-align: center;
-      @media (min-width: ${breakpoints.MD}) {
-        font-size: ${pxToRem(14)};
-      }
-      @media (min-width: ${breakpoints.LG}) {
-        font-size: ${pxToRem(16)};
-      }
     }
     blockquote {
       font-family: ${fonts.LIBRE_BASKERVILLE};
@@ -169,19 +134,13 @@ export default {
     pre,
     blockquote,
     .info {
+      ${generateFluidCSS('&:before', ['font-size'], 10, 14)}
       &:before {
         display: block;
         text-transform: uppercase;
         font-family: ${fonts.ROBOTO};
-        font-size: ${pxToRem(10)};
         font-style: normal;
         letter-spacing: 0.14em;
-        @media (min-width: ${breakpoints.MD}) {
-          font-size: ${pxToRem(12)};
-        }
-        @media (min-width: ${breakpoints.LG}) {
-          font-size: ${pxToRem(14)};
-        }
       }
     }
     blockquote {
@@ -199,20 +158,15 @@ export default {
         }
       }
     }
-
+    ${generateFluidCSS('pre:before', ['padding-left', 'padding-right'], 12, 16)}
     pre:before {
       content: attr(class);
-      padding: 0.5em ${pxToRem(12)};
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
       color: ${colors.BLUE_BAYOUX};
       background-color: ${colors.BUNKER_DARKER};
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
-      @media (min-width: ${breakpoints.MD}) {
-        padding: 0.5em ${pxToRem(14)};
-      }
-      @media (min-width: ${breakpoints.LG}) {
-        padding: 0.5em ${pxToRem(16)};
-      }
     }
     .info {
       code {

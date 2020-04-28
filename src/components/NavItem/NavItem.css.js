@@ -2,6 +2,11 @@ import { css } from '@emotion/core';
 import * as breakpoints from 'constants/breakpoints';
 import * as colors from 'constants/colors';
 
+import { fluidCSS } from 'helpers';
+
+const generateFluidCSS = (selector, properties, minValue, maxValue) =>
+  fluidCSS('', selector, properties, minValue, maxValue, 500, 1200);
+
 export default {
   cta: css`
     &:hover:before,
@@ -9,6 +14,7 @@ export default {
       opacity: 1;
       transform: translateX(0) translateY(-50%);
     }
+    ${generateFluidCSS('&:before', ['font-size'], 14, 18)}
     &:before {
       display: none;
       color: ${colors.MANATEE};
@@ -20,17 +26,10 @@ export default {
         right: 100%;
         transform: translateX(0.3em) translateY(-50%);
         font-style: italic;
-        font-size: 14px;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.2s ease-out, transform 0.2s ease-out;
         white-space: nowrap;
-      }
-      @media (min-width: ${breakpoints.MD}) {
-        font-size: 16px;
-      }
-      @media (min-width: ${breakpoints.LG}) {
-        font-size: 18px;
       }
     }
   `,

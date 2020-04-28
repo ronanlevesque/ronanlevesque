@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "yarn clean:css && gatsby build",
-    "build:css": "node_modules/.bin/fragments build src/css",
+    "build:css": "node_modules/.bin/fragments build src/css && node fluid-css.config.js",
     "clean:css": "yarn build:css && node_modules/.bin/purgecss --config purgecss.config.js --out src/css",
     "lint": "eslint src",
     "serve": "yarn clean:css && gatsby serve",
@@ -45,6 +45,7 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "eslint": "^5.16.0",
     "eslint-config-algolia": "^13.2.3",
     "eslint-config-prettier": "^4.1.0",

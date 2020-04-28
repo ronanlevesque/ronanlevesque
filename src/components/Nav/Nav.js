@@ -20,11 +20,11 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => {
 
   return (
     <div css={helperStyles.gradientLine} {...other}>
-      <div className="ph-8 d-flex jc-between ai-center h-48 color-zircon md:ph-10 md:h-56 lg:h-64 lg:ph-12">
+      <div className="d-flex jc-between ai-center color-zircon fluid:ph-8-12 fluid:h-48-64">
         <SmallText
           as={textTag}
           css={styles.SmallText}
-          className="m-0 fw-medium d-flex ai-center jc-between h-32 md:h-36 lg:h-40"
+          className="m-0 fw-medium d-flex ai-center jc-between fluid:h-32-40"
         >
           {textLink ? (
             <Link
@@ -33,7 +33,7 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => {
             >
               <Svg
                 name="arrow-left"
-                className="mr-8 d-block color-manatee w-16 h-16 md:w-20 md:h-20 md:mr-10 lg:w-24 lg:h-24 lg:mr-12"
+                className="d-block color-manatee h-auto fluid:w-16-24 fluid:mr-8-12"
               />
               {text}
             </Link>

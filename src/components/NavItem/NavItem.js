@@ -6,11 +6,11 @@ import Link from 'components/Link';
 import Svg from 'components/Svg';
 
 const NavItem = ({ as: Component = Link, dataBefore, icon, ...other }) => (
-  <li className="d-flex ai-center ml-4 md:ml-8 lg:ml-12">
+  <li className="d-flex ai-center fluid:ml-4-12">
     <Component
       aria-label={icon}
       css={styles.cta}
-      className="p-0 bdw-0 app-none bgc-transparent cursor-pointer d-flex ai-center jc-center td-none ff-libre color-linkWater w-24 h-32 hover:color-white md:w-28 md:h-36 lg:w-32 lg:h-40"
+      className="p-0 bdw-0 app-none bgc-transparent cursor-pointer d-flex ai-center jc-center td-none ff-libre color-linkWater hover:color-white fluid:w-24-32 fluid:h-32-40"
       data-before={dataBefore ? dataBefore : icon}
       onClick={e => {
         e.target.blur();
@@ -19,7 +19,7 @@ const NavItem = ({ as: Component = Link, dataBefore, icon, ...other }) => (
     >
       <Svg
         aria-hidden
-        className="pe-none d-block w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
+        className="pe-none d-block h-auto fluid:w-16-24"
         name={icon.toLowerCase()}
       />
     </Component>

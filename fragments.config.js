@@ -1,4 +1,5 @@
 /* eslint-disable import/no-commonjs */
+
 const helpers = require('./src/helpers');
 
 const pxToRem = helpers.pxToRem;
@@ -12,6 +13,7 @@ const config = {
   },
   // Define your breakpoints
   breakpoints: {
+    xxs: '350px',
     xs: '500px',
     sm: '768px',
     md: '960px',
