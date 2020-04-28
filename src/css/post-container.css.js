@@ -38,7 +38,7 @@ export default {
       ${generateFluidCSS('code, kbd', ['font-size'], 12, 16)}
       code,
       kbd {
-        padding: 0.1em 0.3em;
+        padding: 0.2em 0.3em;
         background-color: ${colors.BUNKER};
         border-radius: 4px;
       }
