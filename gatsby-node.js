@@ -6,10 +6,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
   const result = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allMdx(sort: { order: DESC, fields: [frontmatter___date] }, limit: 1000) {
         edges {
           node {
             frontmatter {
@@ -26,7 +23,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
@@ -37,10 +34,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode });
     createNodeField({
-      name: `slug`,
+      name: 'slug',
       node,
       value,
     });

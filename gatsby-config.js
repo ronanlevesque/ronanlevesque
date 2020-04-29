@@ -33,9 +33,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        plugins: [
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -92,8 +93,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   date: edge.node.frontmatter.date,
                   description: edge.node.frontmatter.description,
@@ -105,7 +106,7 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   sort: { order: DESC, fields: [frontmatter___date] },
                 ) {
                   edges {

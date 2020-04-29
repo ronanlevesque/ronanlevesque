@@ -13,7 +13,7 @@ import * as routes from 'constants/routes';
 import DefaultLayout from 'layouts/DefaultLayout';
 
 const ArticlesPage = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark;
+  const { edges: posts } = data.allMdx;
 
   return (
     <DefaultLayout
@@ -55,7 +55,7 @@ export default ArticlesPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           excerpt(pruneLength: 250)

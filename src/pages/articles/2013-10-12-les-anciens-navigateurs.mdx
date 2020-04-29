@@ -8,7 +8,12 @@ archive: true
 
 La vie serait beaucoup plus simple si on n’avait plus à assurer le support des antiquités que sont IE6, 7 et 8. Malheureusement au quotidien ça n’est pas toujours possible; on se retrouve souvent contraints de réaliser le grand écart entre moderne et vieux. Si l’on souhaite se tourner vers une conception moderne en responsive design, comment s’assurer du meilleur support possible ?
 
-<p class="info">Cet article s’attardera uniquement sur la gestion des media queries en responsive design; je ne parlerai pas ici d’autres propriétés CSS3 non supportés par certains de ces navigateurs, par exemple flexbox, border-box etc.</p>
+<p class="info">
+  Cet article s’attardera uniquement sur la gestion des media queries en
+  responsive design; je ne parlerai pas ici d’autres propriétés CSS3 non
+  supportés par certains de ces navigateurs, par exemple flexbox, border-box
+  etc.
+</p>
 
 J’ai identifié ci-dessous différentes approches qui permettent de partir d’un modèle de design _mobile first_ pour s’assurer que notre site ressemble quand même à quelque chose sur les vieux dinosaures du web.
 
@@ -58,4 +63,7 @@ Contrairement aux techniques ci-dessus, ce polyfill très léger (3ko) assure le
 
 Le seul bémol que je vois à son utilisation est qu’il doit être hébergé sur le même serveur que la page; si ça n’est pas le cas il faudra uploader une page proxy pour permettre la communication cross-domain (cf. l’exemple sur Github).
 
-<p class="info">Mise à jour (29/10/2015) : étant donné que ces navigateurs ne sont plus maintenus, cet article peut être considéré comme obsolète :)</p>
+<p class="info">
+  Mise à jour (29/10/2015) : étant donné que ces navigateurs ne sont plus
+  maintenus, cet article peut être considéré comme obsolète :)
+</p>
