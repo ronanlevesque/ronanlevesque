@@ -32,7 +32,7 @@ Instead, this article will focus on combining React and Atomic CSS in order to c
 There are plenty of ways to write CSS along with React components. Each one has their own specificities, as well as their pros and cons. Most famous ones are:
 
 - Inline styles, under the shape of a JavaScript object
-- CSS modules: normal CSS, but scoped locally to a specific component. Works well with methologies such as [BEM](https://css-tricks.com/bem-101/)
+- CSS modules: normal CSS, but scoped locally to a specific component. Works well with methodologies such as [BEM](https://css-tricks.com/bem-101/)
 - CSS-in-JS: CSS written as JavaScript template litterals. It was made popular by the [styled-components](https://github.com/styled-components/styled-components) library
 - Simply linking to a CSS stylesheet
 
@@ -73,7 +73,7 @@ Upon compilation it will generate the following:
 etc.
 ```
 
-Writing all those rules will provide us with a solid way to ensure that we follow design guidelines: at Algolia, if a designer wants to add a new color to the website, the only thing to do will be adding it inside my configuration file. It will be available as a single, one-purpose class.
+Writing all those rules will provide us with a solid way to ensure that we follow design guidelines: at Algolia, if a designer wants to add a new color to the website, the only thing to do will be to add it inside my configuration file. It will be available as a single, one-purpose class.
 
 To sum things up, the goal of Atomic CSS is to:
 
