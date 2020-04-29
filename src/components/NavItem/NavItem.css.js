@@ -5,7 +5,15 @@ import * as colors from 'constants/colors';
 import { fluidCSS } from 'helpers';
 
 const generateFluidCSS = (selector, properties, minValue, maxValue) =>
-  fluidCSS('', selector, properties, minValue, maxValue, 500, 1200);
+  fluidCSS(
+    '',
+    selector,
+    properties,
+    minValue,
+    maxValue,
+    breakpoints.XS.replace('px', ''),
+    breakpoints.LG.replace('px', '')
+  );
 
 export default {
   cta: css`

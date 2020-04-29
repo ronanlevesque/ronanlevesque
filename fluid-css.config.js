@@ -1,10 +1,9 @@
 /* eslint-disable import/no-commonjs, no-console */
 
 const fs = require('fs');
-const helpers = require('./src/helpers');
 
-const minBreakpoint = 500;
-const maxBreakpoint = 1200;
+const fragments = require('./fragments.config');
+const helpers = require('./src/helpers');
 
 const selectors = [
   {
@@ -95,8 +94,8 @@ const styles = selectors
           selector.properties,
           value[0],
           value[1],
-          minBreakpoint,
-          maxBreakpoint
+          fragments.config.breakpoints.xs.replace('px', ''),
+          fragments.config.breakpoints.lg.replace('px', '')
         )
       )
       .join('')
