@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Container from 'components/Container';
 import Footer from 'components/Footer';
@@ -12,7 +13,7 @@ import postContainerStyles from 'css/post-container.css';
 import DefaultLayout from 'layouts/DefaultLayout';
 
 const BlogPostTemplate = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { mdx: post } = data;
 
   return (
     <DefaultLayout
@@ -40,8 +41,9 @@ const BlogPostTemplate = ({ data }) => {
         <main
           css={postContainerStyles.root}
           className="post-container m-auto lh-bigger ff-roboto color-manatee fluid:ph-8-12 fluid:maw-700-824"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        >
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </main>
         <Footer />
       </Container>
     </DefaultLayout>
@@ -56,8 +58,8 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         description

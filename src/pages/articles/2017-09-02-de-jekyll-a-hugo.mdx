@@ -8,7 +8,10 @@ archive: true
 
 Mon site est sous Jekyll depuis [un bon moment](/articles/goodbye-wordpress-hello-jekyll), mais j’ai remarqué qu’il devenait de plus en plus lent pour compiler tout le contenu que j’ai créé au fil du temps. J’ai donc décidé de le migrer sous [Hugo](https://gohugo.io/), dont j’ai eu de bons échos en termes de performances. J’en profite également pour faire un tuto de migration pour les personnes intéressées.
 
-<p class="info">Cet article part du principe que vous êtes à l’aise avec certains mécanismes également utilisés par Jekyll (Markdown, YAML, <em>partials</em>, etc.).</p>
+<p class="info">
+  Cet article part du principe que vous êtes à l’aise avec certains mécanismes
+  également utilisés par Jekyll (Markdown, YAML, <em>partials</em>, etc.).
+</p>
 
 ## Pourquoi Hugo ?
 
@@ -95,7 +98,10 @@ Le template en question est un fichier `single.html` situé dans le dossier `lay
 
 `.Content` insère le contenu de `projets.md`, et les _partials_, comme leur nom l’indique… importent les _partials_ en question.
 
-<p class="info">Pour plus de détails sur les différents templates utilisés par Hugo je vous invite à consulter la doc officielle.</p>
+<p class="info">
+  Pour plus de détails sur les différents templates utilisés par Hugo je vous
+  invite à consulter la doc officielle.
+</p>
 
 Pour ce qui est des pages du blog, le principe est à peu près similaire. J’ai créé dans le dossier `layouts` un sous-dossier intitulé `articles`. Celui-ci contient deux templates : `list.html` et `single.html`.
 
@@ -176,7 +182,11 @@ La fonction `printf` m’a ensuite permis de récupérer les bonnes traductions.
 
 ## Gestion du cache
 
-<p class="info">J’utilise Gulp pour compiler et optimiser les <em>assets</em> de mon site. Si jamais votre workflow est différent (webpack ou autre), il vous sera à priori facile d’adapter l’exemple ci-dessous à votre cas précis.</p>
+<p class="info">
+  J’utilise Gulp pour compiler et optimiser les <em>assets</em> de mon site. Si
+  jamais votre workflow est différent (webpack ou autre), il vous sera à priori
+  facile d’adapter l’exemple ci-dessous à votre cas précis.
+</p>
 
 Pour rappel, le but ici est d’ajouter un _fingerprint_ au nom des fichiers voulus. Par exemple :
 
