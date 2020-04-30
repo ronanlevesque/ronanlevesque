@@ -1,3 +1,5 @@
+/* eslint-disable camelcase, import/no-commonjs */
+
 module.exports = {
   siteMetadata: {
     title: 'Ronan Levesque',
