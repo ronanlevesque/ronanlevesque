@@ -51,6 +51,7 @@ const config = {
     80: pxToRem(80),
     120: pxToRem(120),
     160: pxToRem(160),
+    '1em': '1em',
   },
   // Sizes are for widths and heights mostly
   sizes: {
@@ -66,6 +67,7 @@ const config = {
     48: pxToRem(48),
     56: pxToRem(56),
     64: pxToRem(64),
+    1200: pxToRem(1200),
     '90p': '90%',
     '100p': '100%',
   },

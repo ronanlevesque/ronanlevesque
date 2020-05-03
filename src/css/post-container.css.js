@@ -36,7 +36,7 @@ export default {
     }
     ${generateFluidCSS('h2', ['font-size'], 16, 24)}
     ${generateFluidCSS(
-      'h3, p, li, figure',
+      'h3, p, li, figure, div',
       ['font-size'],
       14,
       18
@@ -92,11 +92,12 @@ export default {
     a:focus {
       color: ${colors.ZIRCON};
     }
-    pre,
-    figure,
-    blockquote,
-    .info,
-    p .gatsby-resp-image-wrapper {
+    > pre,
+    > figure,
+    > blockquote,
+    > div,
+    > .info,
+    > p .gatsby-resp-image-wrapper {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
     }
@@ -114,6 +115,9 @@ export default {
     kbd {
       font-family: ${fonts.MONO};
       color: ${colors.LINK_WATER};
+    }
+    video {
+      border: 2px solid ${colors.SAN_JUAN};
     }
     figure {
       margin-left: 0;

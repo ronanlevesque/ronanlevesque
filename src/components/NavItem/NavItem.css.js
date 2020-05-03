@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
+
 import * as breakpoints from 'constants/breakpoints';
 import * as colors from 'constants/colors';
-
 import { fluidCSS } from 'helpers';
 
 const generateFluidCSS = (selector, properties, minValue, maxValue) =>

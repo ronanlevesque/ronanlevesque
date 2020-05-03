@@ -18,4 +18,5 @@ module.exports = {
       extensions: ['js'],
     },
   ],
+  whitelist: ['w-100p', 'sm:g-2'],
 };
