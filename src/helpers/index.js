@@ -8,12 +8,10 @@ exports.fluidCSS = (
   prefix,
   selector,
   properties,
-  minValue,
-  maxValue,
-  minBreakpoint,
-  maxBreakpoint
+  [minValue, maxValue],
+  [minBreakpoint, maxBreakpoint]
 ) => {
-  const getPrefix = `${prefix ? `.${prefix}\\:` : ''}`;
+  const getPrefix = `${prefix ? `.${prefix}` : ''}`;
 
   return `${getPrefix}${selector} {
   ${properties
