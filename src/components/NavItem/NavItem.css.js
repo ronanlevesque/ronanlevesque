@@ -4,15 +4,13 @@ import * as breakpoints from 'constants/breakpoints';
 import * as colors from 'constants/colors';
 import { fluidCSS } from 'helpers';
 
-const generateFluidCSS = (selector, properties, minValue, maxValue) =>
+const generateFluidCSS = (selector, properties, [minValue, maxValue]) =>
   fluidCSS(
     '',
     selector,
     properties,
-    minValue,
-    maxValue,
-    breakpoints.XS.replace('px', ''),
-    breakpoints.LG.replace('px', '')
+    [minValue, maxValue],
+    [breakpoints.XS.replace('px', ''), breakpoints.LG.replace('px', '')]
   );
 
 export default {
@@ -22,7 +20,7 @@ export default {
       opacity: 1;
       transform: translateX(0) translateY(-50%);
     }
-    ${generateFluidCSS('&:before', ['font-size'], 14, 18)}
+    ${generateFluidCSS('&:before', ['font-size'], [14, 18])}
     &:before {
       display: none;
       color: ${colors.MANATEE};
