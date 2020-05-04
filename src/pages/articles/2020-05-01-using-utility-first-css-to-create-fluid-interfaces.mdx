@@ -7,6 +7,7 @@ path: '/articles/using-utility-first-css-to-create-fluid-interface/'
 
 import ArticleOverflowContent from 'components/ArticleOverflowContent';
 import FluidResize from 'videos/fluid-resize.mp4';
+import FluidResizeNoBp from 'videos/fluid-resize-no-breakpoints.mp4';
 import ResponsiveResize from 'videos/responsive-resize.mp4';
 
 It’s been only a few days since I [last wrote](/articles/react-and-atomic-css/) about the power of Atomic / Utility-first CSS, but I feel like there is plenty left to say about that methodology and how it has become more and more popular over the last years. Frameworks based on it have been widly adopted: Tailwind has [22.2k](https://github.com/tailwindcss/tailwindcss) stars on GitHub, while Tachyons is close to [10k](https://github.com/tachyons-css/tachyons/) stars. New technologies have emerged: Atomic CSS-in-JS seems to be a thing now with libraries such as [Styletron](https://github.com/styletron/styletron), [cxs](https://github.com/cxs-css/cxs/) or [Fela](https://github.com/robinweser/fela).
@@ -15,7 +16,7 @@ However, despite the maturity of the concept, I feel like there are a few blank 
 
 ## A word on fluid UIs
 
-I first read about that idea a few years ago, in an article called [Responsive And Fluid Typography With vh And vw Units](https://www.smashingmagazine.com/2016/05/fluid-typography/), published in [Smashing Magazine](https://www.smashingmagazine.com/). As its title implies, it was however only focused on typography. Here’s the gist of it:
+I first read about that idea a few years ago, in an article called [Responsive And Fluid Typography With vh And vw Units](https://www.smashingmagazine.com/2016/05/fluid-typography/), published in [Smashing Magazine](https://www.smashingmagazine.com/). As its title implies tough, it was only focused on typography. Here’s the gist of it:
 
 > Unlike responsive typography, which changes only at set breakpoints, fluid typography resizes smoothly to match any device width. It is an intuitive option for a web in which we have a practically infinite number of screen sizes to support.
 
@@ -56,4 +57,90 @@ At its core, a fluid CSS property is based on a mathematic formula powered by th
   <figcaption>Illustration &copy; Smashing Magazine</figcaption>
 </figure>
 
-Four values need to be defined in order to make it work: minimum/maximum CSS values, and minimum/maximum breakpoints. With that formula, we tell the browser that we want our text to have a `font-size` of 16 pixels at `400px`, 24 pixels at `800px`, and that it needs to adjust fluidly in-between.
+Four values need to be defined in order to make it work: minimum/maximum CSS values, and minimum/maximum breakpoints. With that formula, we tell the browser that we want our text to have a 16 pixels `font-size` at `400px`, 24 pixels at `800px`, and that it needs to adjust fluidly in-between. Here, we are using `px` values, but the formula will work equally fine with other values, such as `em` or `rem`.
+
+However, if we simply apply that formula without adding any breakpoints, we will face an issue. Our values will keep decreasing on smaller resolutions, and increasing on higher resolutions:
+
+<figure>
+  <video className="d-block w-100p" controls>
+    <source src={FluidResizeNoBp} type="video/mp4" />
+  </video>
+  <figcaption>Fluid interface with no breakpoints</figcaption>
+</figure>
+
+If we want to avoid that, we will have to update our code and add fixed minimum and maximum values. Our CSS class will look like this:
+
+```css
+/* The font-size will stay at 16px under 400px */
+.some-class {
+  font-size: 16px;
+}
+
+/* The font-size will be fluid between 400 and 800px */
+@media screen and (min-width: 400px) {
+  .some-class {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+
+/* The font-size will become fixed again above 800px */
+@media screen and (min-width: 800px) {
+  .some-class {
+    font-size: 24px;
+  }
+}
+```
+
+Writing each fluid CSS class by hand seems a bit cumbersome though, let’s see how we can use a sprinkle of JavaScript to automate the job for us.
+
+## One small JS function
+
+The easiest way to generate the CSS above is to use a [template litteral](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). I created a function called `fluidCSS`, which takes a few parameters and spits out the result. Simple, yet enough for what we are looking to achieve.
+
+```js
+const fluidCSS = (
+  prefix,
+  selector,
+  properties,
+  [minValue, maxValue],
+  [minBreakpoint, maxBreakpoint]
+) => {
+  const getPrefix = `${prefix ? `.${prefix}` : ''}`;
+
+  return `${getPrefix}${selector} {
+  ${properties.map(property => `${property}: ${minValue};`).join('')}
+}
+@media screen and (min-width: ${minBreakpoint}px) {
+  ${getPrefix}${selector} {
+    ${properties
+      .map(
+        property =>
+          `${property}: calc(${minValue}px + (${maxValue} - ${minValue}) * (100vw - ${minBreakpoint}px) / (${maxBreakpoint} - ${minBreakpoint}));`
+      )
+      .join('')}
+  }
+}
+@media screen and (min-width: ${maxBreakpoint}px) {
+  ${getPrefix}${selector} {
+    ${properties.map(property => `${property}: ${maxValue}px;`).join('')}
+  }
+}
+`;
+};
+```
+
+We can then call it like this:
+
+```js
+fluidCSS('', '.some-class', ['font-size'], [16, 24], [400, 800]);
+```
+
+## Building utilities
+
+I wanted to be able to have
+
+In order to create a small, yet efficient Utility-first CSS framework, three things will be needed:
+
+- The `fluidCSS` helper function detailed above
+- A configuration object holding all possible values
+- A small Node script to write the actual CSS file
