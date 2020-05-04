@@ -5,13 +5,18 @@ import * as fonts from 'constants/fonts';
 import { fluidCSS } from 'helpers';
 
 const generateFluidCSS = (selector, properties, [minValue, maxValue]) =>
-  fluidCSS(
-    '',
+  fluidCSS({
     selector,
     properties,
-    [minValue, maxValue],
-    [breakpoints.XS.replace('px', ''), breakpoints.LG.replace('px', '')]
-  );
+    values: {
+      min: minValue,
+      max: maxValue,
+    },
+    breakpoints: {
+      min: breakpoints.XS.replace('px', ''),
+      max: breakpoints.LG.replace('px', ''),
+    },
+  });
 
 export default {
   root: css`

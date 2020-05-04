@@ -88,16 +88,19 @@ const styles = selectors
   .map(selector =>
     selector.minMax
       .map(value =>
-        helpers.fluidCSS(
-          'fluid\\:',
-          `${selector.className}-${value[0]}-${value[1]}`,
-          selector.properties,
-          [value[0], value[1]],
-          [
-            fragments.config.breakpoints.xs.replace('px', ''),
-            fragments.config.breakpoints.lg.replace('px', ''),
-          ]
-        )
+        helpers.fluidCSS({
+          prefix: '.fluid\\:',
+          selector: `${selector.className}-${value[0]}-${value[1]}`,
+          properties: selector.properties,
+          values: {
+            min: value[0],
+            max: value[1],
+          },
+          breakpoints: {
+            min: fragments.config.breakpoints.xs.replace('px', ''),
+            max: fragments.config.breakpoints.lg.replace('px', ''),
+          },
+        })
       )
       .join('')
   )
