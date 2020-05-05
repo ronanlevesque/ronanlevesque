@@ -1,4 +1,4 @@
-/* eslint-disable import/no-commonjs, max-params */
+/* eslint-disable import/no-commonjs */
 
 const pxToRem = px => `${px * 0.0625}rem`;
 

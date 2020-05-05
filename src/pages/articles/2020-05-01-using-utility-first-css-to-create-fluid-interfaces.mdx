@@ -45,7 +45,7 @@ Using such a methodology ensures that CSS values won’t “jump” when reachin
 
 In the side-by-side comparison above, we clearly see the benefits of a fluid UI: font-sizes and spacings are dynamically adjusted, content won’t suddenly become bigger when reaching a new breakpoint.
 
-## The power of calc()
+## How does it work?
 
 At its core, a fluid CSS property is based on a mathematic formula powered by the `calc()` CSS function and the `vw` unit:
 
@@ -95,47 +95,54 @@ Writing each fluid CSS class by hand seems a bit cumbersome though, let’s see 
 
 ## One small JS function
 
-The easiest way to generate the CSS above is to use a [template litteral](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). I created a function called `fluidCSS`, which takes a few parameters and spits out the result. Simple, yet enough for what we are looking to achieve.
+The easiest way to generate the CSS above is to use a [template litteral](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). I created a function called `fluidCSS`, which takes an object as parameter and spits out the result. Simple, yet enough for what we are looking to achieve.
 
 ```js
-const fluidCSS = (
-  prefix,
-  selector,
-  properties,
-  [minValue, maxValue],
-  [minBreakpoint, maxBreakpoint]
-) => {
-  const getPrefix = `${prefix ? `.${prefix}` : ''}`;
-
-  return `${getPrefix}${selector} {
-  ${properties.map(property => `${property}: ${minValue};`).join('')}
+const fluidCSS = ({
+  prefix = '',
+  selector = '',
+  properties = [],
+  values = { min: 0, max: 0 },
+  breakpoints = { min: 0, max: 0 },
+}) => `${prefix}${selector} {
+  ${properties.map(property => `${property}: ${values.min}px;`).join('')}
 }
-@media screen and (min-width: ${minBreakpoint}px) {
-  ${getPrefix}${selector} {
+@media screen and (min-width: ${breakpoints.min}px) {
+  ${prefix}${selector} {
     ${properties
       .map(
         property =>
-          `${property}: calc(${minValue}px + (${maxValue} - ${minValue}) * (100vw - ${minBreakpoint}px) / (${maxBreakpoint} - ${minBreakpoint}));`
+          `${property}: calc(${values.min}px + (${values.max} - ${values.min}) * (100vw - ${breakpoints.min}px) / (${breakpoints.max} - ${breakpoints.min}));`
       )
       .join('')}
   }
 }
-@media screen and (min-width: ${maxBreakpoint}px) {
-  ${getPrefix}${selector} {
-    ${properties.map(property => `${property}: ${maxValue}px;`).join('')}
+@media screen and (min-width: ${breakpoints.max}px) {
+  ${prefix}${selector} {
+    ${properties.map(property => `${property}: ${values.max}px;`).join('')}
   }
 }
 `;
-};
 ```
 
-We can then call it like this:
+The function is then called like this (`prefix` is not needed here as it defaults to an empty string):
 
 ```js
-fluidCSS('', '.some-class', ['font-size'], [16, 24], [400, 800]);
+fluidCSS({
+  selector: '.some-class',
+  properties: ['font-size'],
+  values: {
+    min: 16,
+    max: 24,
+  },
+  breakpoints: {
+    min: 400,
+    max: 800,
+  },
+});
 ```
 
-## Building utilities
+## Building an actual framework
 
 I wanted to be able to have
 
