@@ -167,17 +167,17 @@
     padding-top: 6rem;
   }
 }
-.fluid\:pb-20-36 {
+.fluid\:pb-20-40 {
   padding-bottom: 1.25rem;
 }
 @media screen and (min-width: 500px) {
-  .fluid\:pb-20-36 {
-    padding-bottom: calc(1.25rem + (36 - 20) * (100vw - 500px) / (1200 - 500));
+  .fluid\:pb-20-40 {
+    padding-bottom: calc(1.25rem + (40 - 20) * (100vw - 500px) / (1200 - 500));
   }
 }
 @media screen and (min-width: 1200px) {
-  .fluid\:pb-20-36 {
-    padding-bottom: 2.25rem;
+  .fluid\:pb-20-40 {
+    padding-bottom: 2.5rem;
   }
 }
 .fluid\:pb-48-96 {
