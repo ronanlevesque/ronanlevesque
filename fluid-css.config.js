@@ -25,7 +25,7 @@ const selectors = [
     properties: ['margin-top'],
     minMax: [
       [4, 12],
-      [48, 120],
+      [48, 96],
     ],
   },
   {
@@ -52,7 +52,7 @@ const selectors = [
   {
     className: 'pt',
     properties: ['padding-top'],
-    minMax: [[48, 120]],
+    minMax: [[48, 96]],
   },
   {
     className: 'pb',

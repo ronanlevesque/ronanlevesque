@@ -9,6 +9,7 @@ import Hero from 'components/Hero';
 import Nav from 'components/Nav';
 import Title from 'components/Title';
 import * as routes from 'constants/routes';
+import helperStyles from 'css/helpers.css';
 import postContainerStyles from 'css/post-container.css';
 import DefaultLayout from 'layouts/DefaultLayout';
 
@@ -39,7 +40,7 @@ const BlogPostTemplate = ({ data }) => {
           </time>
         </Hero>
         <main
-          css={postContainerStyles.root}
+          css={[postContainerStyles.root, helperStyles.gradientLine]}
           className="post-container m-auto lh-bigger ff-roboto color-manatee fluid:ph-8-12 fluid:maw-700-824"
         >
           <MDXRenderer>{post.body}</MDXRenderer>

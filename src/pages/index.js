@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => {
             <SectionTitle>Previous experiences</SectionTitle>
             <JobsList data={data.allWorkJson.edges} />
           </section>
-          <section className="fluid:mt-48-120">
+          <section className="fluid:mt-48-96">
             <SectionTitle>In another life…</SectionTitle>
             <JobsList data={data.allPreviousWorkJson.edges} />
           </section>
