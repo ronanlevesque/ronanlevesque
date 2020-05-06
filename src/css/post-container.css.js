@@ -20,6 +20,7 @@ const generateFluidCSS = (selector, properties, [minValue, maxValue]) =>
 
 export default {
   root: css`
+    ${generateFluidCSS('&:after', ['margin-top'], [48, 96])}
     * {
       margin-top: 0;
       margin-bottom: 0;
