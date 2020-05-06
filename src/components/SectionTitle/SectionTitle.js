@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import SmallText from 'components/SmallText';
 import helperStyles from 'css/helpers.css';
 
-const Container = ({ children, ...other }) => (
+const SectionTitle = ({ children, ...other }) => (
   <SmallText
     as="h2"
     css={helperStyles.gradientLine}
@@ -17,8 +17,8 @@ const Container = ({ children, ...other }) => (
   </SmallText>
 );
 
-Container.propTypes = {
+SectionTitle.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Container;
+export default SectionTitle;
