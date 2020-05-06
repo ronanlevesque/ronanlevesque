@@ -14,7 +14,6 @@ const Footer = ({ className, ...other }) => (
 );
 
 Footer.propTypes = {
-  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
 
