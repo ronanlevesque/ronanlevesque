@@ -59,14 +59,16 @@ At its core, a fluid CSS property is based on a mathematic formula powered by th
 
 Four values need to be defined in order to make it work: minimum/maximum CSS values, and minimum/maximum breakpoints. With that formula, we tell the browser that we want our text to have a 16 pixels `font-size` at `400px`, 24 pixels at `800px`, and that it needs to adjust fluidly in-between. Here, we are using `px` values, but the formula will work equally fine with other values, such as `em` or `rem`.
 
-However, if we simply apply that formula without adding any breakpoints, we will face an issue. Our values will keep decreasing on smaller resolutions, and increasing on higher resolutions:
+However, if we simply apply that formula without adding any breakpoint, we will face an issue. Our values will keep decreasing on smaller resolutions, and increasing on higher resolutions:
 
-<figure>
-  <video className="d-block w-100p" controls>
-    <source src={FluidResizeNoBp} type="video/mp4" />
-  </video>
-  <figcaption>Fluid interface with no breakpoints</figcaption>
-</figure>
+<ArticleOverflowContent>
+  <figure>
+    <video className="d-block w-100p" controls>
+      <source src={FluidResizeNoBp} type="video/mp4" />
+    </video>
+    <figcaption>Fluid interface with no breakpoints</figcaption>
+  </figure>
+</ArticleOverflowContent>
 
 If we want to avoid that, we will have to update our code and add fixed minimum and maximum values. Our CSS class will look like this:
 
@@ -93,9 +95,9 @@ If we want to avoid that, we will have to update our code and add fixed minimum 
 
 Writing each fluid CSS class by hand seems a bit cumbersome though, let’s see how we can use a sprinkle of JavaScript to automate the job for us.
 
-## One small JS function
+## From CSS to JS
 
-The easiest way to generate the CSS above is to use a [template litteral](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). I created a function called `fluidCSS`, which takes an object as parameter and spits out the result. Simple, yet enough for what we are looking to achieve.
+The easiest way to generate the CSS above is to use a JavaScript [template litteral](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). I have created a function called `fluidCSS`, which takes an object as parameter and spits out the result. Simple, yet enough for what we are looking to achieve.
 
 ```js
 const fluidCSS = ({
@@ -142,7 +144,9 @@ fluidCSS({
 });
 ```
 
-## Building an actual framework
+Now that we have a working helper, let’s move to the next step…
+
+## Building the CSS framework
 
 I wanted to be able to have
 
