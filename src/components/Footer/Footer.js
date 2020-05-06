@@ -5,7 +5,7 @@ import cx from 'classnames';
 import Svg from 'components/Svg';
 
 const Footer = ({ className, ...other }) => (
-  <footer className={cx('fluid:pt-48-96 fluid:pb-24-48', className)} {...other}>
+  <footer className={cx('fluid:pt-48-96 fluid:pb-20-36', className)} {...other}>
     <Svg
       className="d-block m-auto h-auto color-manatee fluid:w-20-28"
       name="logo-ronan-levesque"

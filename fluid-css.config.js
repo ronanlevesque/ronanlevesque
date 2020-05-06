@@ -62,7 +62,7 @@ const selectors = [
   {
     className: 'pb',
     properties: ['padding-bottom'],
-    minMax: [[24, 48]],
+    minMax: [[20, 36]],
   },
   {
     className: 'w',
