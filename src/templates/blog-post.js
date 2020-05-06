@@ -46,7 +46,7 @@ const BlogPostTemplate = ({ data }) => {
         >
           <article
             css={postContainerStyles.root}
-            className="post-container lh-bigger ff-roboto color-manatee fluid:ph-8-12 fluid:pb-48-96"
+            className="lh-bigger ff-roboto color-manatee fluid:ph-8-12 fluid:pb-48-96"
           >
             <MDXRenderer>{post.body}</MDXRenderer>
           </article>
