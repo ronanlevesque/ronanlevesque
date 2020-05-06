@@ -41,10 +41,15 @@ const BlogPostTemplate = ({ data }) => {
           </Subtitle>
         </Hero>
         <main
-          css={[postContainerStyles.root, helperStyles.gradientLine]}
-          className="post-container m-auto lh-bigger ff-roboto color-manatee fluid:ph-8-12 fluid:maw-700-824"
+          className="m-auto fluid:maw-700-824"
+          css={helperStyles.gradientLine}
         >
-          <MDXRenderer>{post.body}</MDXRenderer>
+          <article
+            css={postContainerStyles.root}
+            className="post-container lh-bigger ff-roboto color-manatee fluid:ph-8-12 fluid:pb-48-96"
+          >
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </article>
         </main>
         <Footer />
       </Container>
