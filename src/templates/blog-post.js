@@ -7,6 +7,7 @@ import Container from 'components/Container';
 import Footer from 'components/Footer';
 import Hero from 'components/Hero';
 import Nav from 'components/Nav';
+import Subtitle from 'components/Subtitle';
 import Title from 'components/Title';
 import * as routes from 'constants/routes';
 import helperStyles from 'css/helpers.css';
@@ -35,9 +36,9 @@ const BlogPostTemplate = ({ data }) => {
           navWithIcons={false}
         >
           <Title className="color-zircon">{post.frontmatter.title}</Title>
-          <time className="d-block ff-mono tt-upper lsp-big color-blueBayoux fluid:mt-4-12 fluid:fsz-12-16">
+          <Subtitle as="time" className="d-block">
             {post.frontmatter.date}
-          </time>
+          </Subtitle>
         </Hero>
         <main
           css={[postContainerStyles.root, helperStyles.gradientLine]}
