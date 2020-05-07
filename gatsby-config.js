@@ -109,7 +109,7 @@ module.exports = {
                   description: edge.node.frontmatter.description,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.body }],
                 });
               });
             },
@@ -121,7 +121,7 @@ module.exports = {
                   edges {
                     node {
                       excerpt
-                      html
+                      body
                       fields { slug }
                       frontmatter {
                         title

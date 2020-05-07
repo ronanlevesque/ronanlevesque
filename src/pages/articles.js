@@ -8,6 +8,7 @@ import Footer from 'components/Footer';
 import Hero from 'components/Hero';
 import Nav from 'components/Nav';
 import SectionTitle from 'components/SectionTitle';
+import Subtitle from 'components/Subtitle';
 import Title from 'components/Title';
 import * as routes from 'constants/routes';
 import DefaultLayout from 'layouts/DefaultLayout';
@@ -25,16 +26,17 @@ const ArticlesPage = ({ data }) => {
         <Nav text="Back to homepage" textLink={routes.HOME} withIcons={false} />
         <Hero>
           <Title className="color-zircon">Articles on web development</Title>
+          <Subtitle>CSS, JavaScript, React etc.</Subtitle>
         </Hero>
         <main>
           <section>
-            <SectionTitle>Recent articles</SectionTitle>
+            <SectionTitle as="h3">Recent articles</SectionTitle>
             <ArticlesList
               posts={posts.filter(post => !post.node.frontmatter.archive)}
             />
           </section>
           <section className="fluid:mt-48-96">
-            <SectionTitle>Archives (French)</SectionTitle>
+            <SectionTitle as="h3">Archives (French)</SectionTitle>
             <ArticlesList
               lang="fr"
               posts={posts.filter(post => post.node.frontmatter.archive)}
