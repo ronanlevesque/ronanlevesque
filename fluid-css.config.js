@@ -36,7 +36,10 @@ const selectors = [
   {
     className: 'p',
     properties: ['padding'],
-    minMax: [[12, 20]],
+    minMax: [
+      [8, 12],
+      [12, 20],
+    ],
   },
   {
     className: 'ph',
@@ -49,10 +52,7 @@ const selectors = [
   {
     className: 'pv',
     properties: ['padding-top', 'padding-bottom'],
-    minMax: [
-      [12, 16],
-      [80, 160],
-    ],
+    minMax: [[80, 160]],
   },
   {
     className: 'pt',

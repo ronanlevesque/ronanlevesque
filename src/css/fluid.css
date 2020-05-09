@@ -89,6 +89,19 @@
     margin-right: 0.75rem;
   }
 }
+.fluid\:p-8-12 {
+  padding: 0.5rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:p-8-12 {
+    padding: calc(0.5rem + (12 - 8) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:p-8-12 {
+    padding: 0.75rem;
+  }
+}
 .fluid\:p-12-20 {
   padding: 0.75rem;
 }
@@ -126,19 +139,6 @@
 @media screen and (min-width: 1200px) {
   .fluid\:ph-12-20 {
     padding-left: 1.25rem;padding-right: 1.25rem;
-  }
-}
-.fluid\:pv-12-16 {
-  padding-top: 0.75rem;padding-bottom: 0.75rem;
-}
-@media screen and (min-width: 500px) {
-  .fluid\:pv-12-16 {
-    padding-top: calc(0.75rem + (16 - 12) * (100vw - 500px) / (1200 - 500));padding-bottom: calc(0.75rem + (16 - 12) * (100vw - 500px) / (1200 - 500));
-  }
-}
-@media screen and (min-width: 1200px) {
-  .fluid\:pv-12-16 {
-    padding-top: 1rem;padding-bottom: 1rem;
   }
 }
 .fluid\:pv-80-160 {
