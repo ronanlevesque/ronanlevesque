@@ -15,7 +15,7 @@ const ArticlesList = ({ posts, ...other }) => (
           <p className="m-0 pr-8 color-zircon fluid:fsz-14-18 xs:fx-8">
             {post.frontmatter.title}
           </p>
-          <time className="mt-4 d-block ff-mono color-manatee ws-nowrap fluid:fsz-12-16 xs:fx-4 xs:fxs-0 xs:ta-right xs:mt-0">
+          <time className="d-block ff-mono color-manatee ws-nowrap fluid:fsz-12-16 xs:fx-4 xs:fxs-0 xs:ta-right">
             {post.frontmatter.date}
           </time>
         </Link>
