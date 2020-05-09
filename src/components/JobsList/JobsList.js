@@ -16,7 +16,7 @@ const JobsList = ({ data }) => (
               {item.node.job}
             </span>
           </p>
-          <span className="d-inline-flex mt-8 ta-right ff-mono color-manatee fluid:fsz-12-16 xxs:fxs-0 xxs:mt-0">
+          <span className="d-inline-flex ta-right ff-mono color-manatee fluid:fsz-12-16 xxs:fxs-0">
             {item.node.start} – {item.node.end}
           </span>
         </span>
