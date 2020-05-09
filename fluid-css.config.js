@@ -24,7 +24,7 @@ const selectors = [
     className: 'mt',
     properties: ['margin-top'],
     minMax: [
-      [4, 8],
+      [8, 12],
       [48, 96],
     ],
   },
