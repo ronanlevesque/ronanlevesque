@@ -152,7 +152,7 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         headers: {
-          '*.mp4': [
+          '/*.mp4': [
             'Cache-Control: public, max-age=0, must-revalidate',
             'Content-Type: video/mpeg',
           ],
