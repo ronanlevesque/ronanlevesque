@@ -10,7 +10,7 @@ import FluidResize from 'videos/fluid-resize.mp4';
 import FluidResizeNoBp from 'videos/fluid-resize-no-breakpoints.mp4';
 import ResponsiveResize from 'videos/responsive-resize.mp4';
 
-It’s been only a few days since I [last wrote](/articles/react-and-atomic-css/) about the power of Atomic / Utility-first CSS, but I feel like there is plenty left to say about that methodology and how it has become more and more popular over the last years. Frameworks based on it have been widly adopted: Tailwind has [22.2k](https://github.com/tailwindcss/tailwindcss) stars on GitHub, while Tachyons is close to [10k](https://github.com/tachyons-css/tachyons/) stars. New technologies have emerged: Atomic CSS-in-JS even seems to be a thing now with libraries such as [Styletron](https://github.com/styletron/styletron), [cxs](https://github.com/cxs-css/cxs/) or [Fela](https://github.com/robinweser/fela).
+It’s been only a few days since I [last wrote](/articles/react-and-atomic-css/) about the power of Atomic / Utility-first CSS, but I feel like there is plenty left to say about that methodology and how it has become more and more popular over the last years. Frameworks based on it have been widely adopted: Tailwind has [22.2k](https://github.com/tailwindcss/tailwindcss) stars on GitHub, while Tachyons is close to [10k](https://github.com/tachyons-css/tachyons/) stars. New technologies have emerged: Atomic CSS-in-JS even seems to be a thing now with libraries such as [Styletron](https://github.com/styletron/styletron), [cxs](https://github.com/cxs-css/cxs/) or [Fela](https://github.com/robinweser/fela).
 
 However, despite the maturity of the concept, I feel like there are a few blank spaces left around it. One of them is what I call _fluid user inferfaces_.
 
@@ -203,7 +203,7 @@ const selectors = [
 ];
 ```
 
-I went with shortcut names for my classes here, but it’s really only a matter of personal preference. I also like to use the same prefix naming convention as Tailwind, like so: `.prefix:color-red`. The class name should look like this:
+I went with shortcut names for my classes here, but it’s really only a matter of personal preference. I also like to use the same prefix naming convention as Tailwind, like so: `.prefix:color-red`. In th end, the class name should look like this:
 
 ```HTML
 <div class="fluid:classname-min-max"></div>
