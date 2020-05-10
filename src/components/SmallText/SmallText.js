@@ -9,7 +9,7 @@ const SmallText = ({
   ...other
 }) => (
   <Component
-    className={cx('ff-roboto tt-upper lsp-big fluid:fsz-12-16', className)}
+    className={cx('ff-roboto tt-upper lsp-big fluid:fsz-14-16', className)}
     {...other}
   >
     {children}
