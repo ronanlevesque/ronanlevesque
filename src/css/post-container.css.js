@@ -24,25 +24,19 @@ export default {
       margin-top: 0;
       margin-bottom: 0;
     }
-    > * + * {
-      margin-top: 1em;
-    }
+    ${generateFluidCSS('> * + *', ['margin-top'], [16, 18])}
     *:last-child {
       margin-bottom: 0;
     }
     h2,
     h3 {
-      margin-top: 2em;
       font-family: ${fonts.LIBRE_BASKERVILLE};
       font-weight: normal;
       color: ${colors.ZIRCON};
     }
+    ${generateFluidCSS('h2, h3', ['margin-top'], [36, 48])}
     ${generateFluidCSS('h2', ['font-size'], [18, 24])}
-    ${generateFluidCSS(
-      'h3, p, li, figure',
-      ['font-size'],
-      [16, 18]
-    )}
+    ${generateFluidCSS('h3, p, li, figure', ['font-size'], [16, 18])}
     p,
     li,
     figure {
@@ -94,14 +88,11 @@ export default {
     a:focus {
       color: ${colors.ZIRCON};
     }
-    pre,
-    figure,
-    blockquote,
-    .info,
-    p .gatsby-resp-image-wrapper {
-      margin-top: 1.5em;
-      margin-bottom: 1.5em;
-    }
+    ${generateFluidCSS(
+      '> pre, > figure, > blockquote, > .info, > p .gatsby-resp-image-wrapper, > div',
+      ['margin-top', 'margin-bottom'],
+      [24, 27]
+    )}
     ${generateFluidCSS('pre, figcaption', ['font-size'], [14, 16])}
     pre {
       background-color: ${colors.BUNKER};
@@ -138,7 +129,7 @@ export default {
     .info {
       margin-left: 0;
       margin-right: 0;
-      padding-left: 1.5em;
+      padding-left: 1.2em;
       font-style: italic;
       border-left: 2px solid ${colors.SAN_JUAN};
     }
