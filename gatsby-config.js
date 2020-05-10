@@ -147,17 +147,6 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-preact',
     'gatsby-plugin-webpack-bundle-analyser-v2',
-    {
-      // Has to be last
-      resolve: 'gatsby-plugin-netlify',
-      options: {
-        headers: {
-          '/*.mp4': [
-            'Cache-Control: public, max-age=0, must-revalidate',
-            'Content-Type: video/mp4',
-          ],
-        },
-      },
-    },
+    'gatsby-plugin-netlify',
   ],
 };

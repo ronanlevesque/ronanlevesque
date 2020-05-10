@@ -6,9 +6,12 @@ path: '/articles/using-utility-first-css-to-create-fluid-interface/'
 ---
 
 import ArticleOverflowContent from 'components/ArticleOverflowContent';
-import FluidResize from 'videos/fluid-resize.mp4';
-import FluidResizeNoBp from 'videos/fluid-resize-no-breakpoints.mp4';
-import ResponsiveResize from 'videos/responsive-resize.mp4';
+import FluidResizeMp4 from 'videos/fluid-resize.mp4';
+import FluidResizeWebm from 'videos/fluid-resize.webm';
+import FluidResizeNoBpMp4 from 'videos/fluid-resize-no-breakpoints.mp4';
+import FluidResizeNoBpWebm from 'videos/fluid-resize-no-breakpoints.webm';
+import ResponsiveResizeMp4 from 'videos/responsive-resize.mp4';
+import ResponsiveResizeWebm from 'videos/responsive-resize.webm';
 
 It’s been only a few days since I [last wrote](/articles/react-and-atomic-css/) about the power of Atomic / Utility-first CSS, but I feel like there is plenty left to say about that methodology and how it has become more and more popular over the last years. Frameworks based on it have been widly adopted: Tailwind has [22.2k](https://github.com/tailwindcss/tailwindcss) stars on GitHub, while Tachyons is close to [10k](https://github.com/tachyons-css/tachyons/) stars. New technologies have emerged: Atomic CSS-in-JS even seems to be a thing now with libraries such as [Styletron](https://github.com/styletron/styletron), [cxs](https://github.com/cxs-css/cxs/) or [Fela](https://github.com/robinweser/fela).
 
@@ -27,25 +30,19 @@ That kind of approach ensures that CSS values won’t “jump” when reaching a
 <ArticleOverflowContent className="d-grid sm:g-2">
   <div>
     <figure>
-      <video
-        className="d-block w-100p"
-        controls
-        muted
-        src={ResponsiveResize}
-        type="video/mp4"
-      />
+      <video className="d-block w-100p" controls muted>
+        <source src={ResponsiveResizeWebm} type="video/webm" />
+        <source src={ResponsiveResizeMp4} type="video/mp4" />
+      </video>
       <figcaption>Responsive interface</figcaption>
     </figure>
   </div>
   <div>
     <figure>
-      <video
-        className="d-block w-100p"
-        controls
-        muted
-        src={FluidResize}
-        type="video/mp4"
-      />
+      <video className="d-block w-100p" controls muted>
+        <source src={FluidResizeWebm} type="video/webm" />
+        <source src={FluidResizeMp4} type="video/mp4" />
+      </video>
       <figcaption>Fluid interface</figcaption>
     </figure>
   </div>
@@ -71,13 +68,10 @@ However, if we simply apply that formula without adding any breakpoint, we will 
 
 <ArticleOverflowContent>
   <figure>
-    <video
-      className="d-block w-100p"
-      controls
-      muted
-      src={FluidResizeNoBp}
-      type="video/mp4"
-    />
+    <video className="d-block w-100p" controls muted>
+      <source src={FluidResizeNoBpWebm} type="video/webm" />
+      <source src={FluidResizeNoBpMp4} type="video/mp4" />
+    </video>
     <figcaption>Fluid interface with no breakpoints</figcaption>
   </figure>
 </ArticleOverflowContent>
