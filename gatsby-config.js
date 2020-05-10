@@ -154,7 +154,7 @@ module.exports = {
         headers: {
           '/*.mp4': [
             'Cache-Control: public, max-age=0, must-revalidate',
-            'Content-Type: video/mpeg',
+            'Content-Type: video/mp4',
           ],
         },
       },
