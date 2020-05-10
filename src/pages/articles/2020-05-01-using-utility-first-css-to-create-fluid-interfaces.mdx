@@ -27,17 +27,25 @@ That kind of approach ensures that CSS values won’t “jump” when reaching a
 <ArticleOverflowContent className="d-grid sm:g-2">
   <div>
     <figure>
-      <video className="d-block w-100p" controls>
-        <source src={ResponsiveResize} type="video/mp4" />
-      </video>
+      <video
+        className="d-block w-100p"
+        controls
+        playsInline
+        src={ResponsiveResize}
+        type="video/mp4"
+      />
       <figcaption>Responsive interface</figcaption>
     </figure>
   </div>
   <div>
     <figure>
-      <video className="d-block w-100p" controls>
-        <source src={FluidResize} type="video/mp4" />
-      </video>
+      <video
+        className="d-block w-100p"
+        controls
+        playsInline
+        src={FluidResize}
+        type="video/mp4"
+      />
       <figcaption>Fluid interface</figcaption>
     </figure>
   </div>
@@ -63,9 +71,13 @@ However, if we simply apply that formula without adding any breakpoint, we will 
 
 <ArticleOverflowContent>
   <figure>
-    <video className="d-block w-100p" controls>
-      <source src={FluidResizeNoBp} type="video/mp4" />
-    </video>
+    <video
+      className="d-block w-100p"
+      controls
+      playsInline
+      src={FluidResizeNoBp}
+      type="video/mp4"
+    />
     <figcaption>Fluid interface with no breakpoints</figcaption>
   </figure>
 </ArticleOverflowContent>
