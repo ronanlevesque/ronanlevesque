@@ -203,10 +203,10 @@ const selectors = [
 ];
 ```
 
-I went with shortcut names for my classes here, but it’s really only a matter of personal preference. I also like to use the same prefix naming convention as Tailwind, like so: `.prefix:color-red`. In the end, the class name should look like this:
+I went with shortcut names for my classes here, but it’s really only a matter of personal preference. I also like to use the same prefix naming convention as Tailwind, like so: `.prefix:color-red`. In the end, our class name should look like this:
 
 ```HTML
-<div class="fluid:classname-min-max"></div>
+<div class="fluid:className-min-max"></div>
 ```
 
 To achieve that result, we need to map over our `selectors` array and return one big string using the `join()` method:
@@ -301,7 +301,7 @@ Of course, doing that for every property seems a bit cumbersome: it will be easi
 
 ## The future of fluid CSS
 
-During my research to write this blog post, I stumbled upon an interesting article from [CSS Tricks](https://css-tricks.com/), called [Simplified Fluid Typography](https://css-tricks.com/simplified-fluid-typography/). In it, Chris explains how the new `min()` and `max()` functions could be used to simplify the code that creates our fluid values, like this:
+During my research to write this blog post, I stumbled upon an interesting article from [CSS Tricks](https://css-tricks.com/), called [Simplified Fluid Typography](https://css-tricks.com/simplified-fluid-typography/). In it, Chris explains how the new `min()` and `max()` functions could be used to simplify the CSS code that creates our fluid values, like this:
 
 ```css
 html {
