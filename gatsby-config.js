@@ -151,8 +151,12 @@ module.exports = {
       // Has to be last
       resolve: 'gatsby-plugin-netlify',
       options: {
-        mergeSecurityHeaders: false,
-        mergeLinkHeaders: false,
+        headers: {
+          '*.mp4': [
+            'Cache-Control: public, max-age=0, must-revalidate',
+            'Content-Type: video/mpeg',
+          ],
+        },
       },
     },
   ],
