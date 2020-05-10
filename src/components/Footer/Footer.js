@@ -7,7 +7,7 @@ import Svg from 'components/Svg';
 const Footer = ({ className, ...other }) => (
   <footer className={cx('fluid:pt-48-96 fluid:pb-20-40', className)} {...other}>
     <Svg
-      className="d-block m-auto h-auto color-blueBayoux fluid:w-20-28"
+      className="d-block m-auto h-auto color-blueBayoux fluid:w-22-28"
       name="logo-ronan-levesque"
     />
   </footer>

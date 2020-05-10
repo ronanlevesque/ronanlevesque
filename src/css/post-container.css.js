@@ -37,16 +37,16 @@ export default {
       font-weight: normal;
       color: ${colors.ZIRCON};
     }
-    ${generateFluidCSS('h2', ['font-size'], [16, 24])}
+    ${generateFluidCSS('h2', ['font-size'], [18, 24])}
     ${generateFluidCSS(
       'h3, p, li, figure, div',
       ['font-size'],
-      [14, 18]
+      [16, 18]
     )}
     p,
     li,
     figure {
-      ${generateFluidCSS('code, kbd', ['font-size'], [12, 16])}
+      ${generateFluidCSS('code, kbd', ['font-size'], [14, 16])}
       code,
       kbd {
         padding: 0.2em 0.3em;
@@ -103,7 +103,7 @@ export default {
       margin-top: 1.5em;
       margin-bottom: 1.5em;
     }
-    ${generateFluidCSS('pre, figcaption', ['font-size'], [12, 16])}
+    ${generateFluidCSS('pre, figcaption', ['font-size'], [14, 16])}
     pre {
       background-color: ${colors.BUNKER};
       border-radius: 4px;
@@ -149,7 +149,7 @@ export default {
     pre,
     blockquote,
     .info {
-      ${generateFluidCSS('&:before', ['font-size'], [10, 14])}
+      ${generateFluidCSS('&:before', ['font-size'], [12, 14])}
       &:before {
         display: block;
         text-transform: uppercase;

@@ -25,7 +25,7 @@ export default {
       opacity: 1;
       transform: translateX(0) translateY(-50%);
     }
-    ${generateFluidCSS('&:before', ['font-size'], [14, 18])}
+    ${generateFluidCSS('&:before', ['font-size'], [16, 18])}
     &:before {
       display: none;
       color: ${colors.MANATEE};
