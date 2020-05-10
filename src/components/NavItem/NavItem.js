@@ -6,7 +6,7 @@ import Link from 'components/Link';
 import Svg from 'components/Svg';
 
 const NavItem = ({ as: Component = Link, dataBefore, icon, ...other }) => (
-  <li className="d-flex ai-center fluid:ml-4-12">
+  <li className="d-flex ai-center fluid:ml-8-12">
     <Component
       aria-label={icon}
       css={styles.cta}
@@ -19,7 +19,7 @@ const NavItem = ({ as: Component = Link, dataBefore, icon, ...other }) => (
     >
       <Svg
         aria-hidden
-        className="pe-none d-block h-auto fluid:w-16-24"
+        className="pe-none d-block h-auto fluid:w-18-24"
         name={icon.toLowerCase()}
       />
     </Component>

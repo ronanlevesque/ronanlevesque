@@ -10,15 +10,15 @@ const selectors = [
     className: 'fsz',
     properties: ['font-size'],
     minMax: [
-      [12, 16],
-      [14, 18],
-      [18, 32],
+      [14, 16],
+      [16, 18],
+      [22, 32],
     ],
   },
   {
     className: 'ml',
     properties: ['margin-left'],
-    minMax: [[4, 12]],
+    minMax: [[8, 12]],
   },
   {
     className: 'mt',
@@ -71,8 +71,8 @@ const selectors = [
     className: 'w',
     properties: ['width'],
     minMax: [
-      [16, 24],
-      [20, 28],
+      [18, 24],
+      [22, 28],
       [24, 32],
       [200, 260],
     ],
