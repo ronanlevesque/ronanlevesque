@@ -147,5 +147,13 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-preact',
     'gatsby-plugin-webpack-bundle-analyser-v2',
+    {
+      // Has to be last
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        mergeSecurityHeaders: false,
+        mergeLinkHeaders: false,
+      },
+    },
   ],
 };
