@@ -25,7 +25,7 @@ export default {
       margin-bottom: 0;
     }
     ${generateFluidCSS('> * + *', ['margin-top'], [16, 18])}
-    *:last-child {
+    > *:last-child {
       margin-bottom: 0;
     }
     h2,
