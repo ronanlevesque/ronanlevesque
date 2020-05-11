@@ -8,10 +8,12 @@ const ArticleOverflowContent = ({
   as: Component = 'div',
   children,
   className,
+  ...other
 }) => (
   <Component
     css={styles.root}
     className={cx('d-grid fluid:fsz-14-18 xl:w-1200 xl:ph-12', className)}
+    {...other}
   >
     {children}
   </Component>

@@ -6,6 +6,7 @@ path: '/articles/using-utility-first-css-to-create-fluid-interface/'
 ---
 
 import ArticleOverflowContent from 'components/ArticleOverflowContent';
+import CloudVideo from 'components/CloudVideo';
 
 It’s been only a few days since I [last wrote](/articles/react-and-atomic-css/) about the power of Atomic / Utility-first CSS, but I feel like there is plenty left to say about that methodology and how it has become more and more popular over the last years. Frameworks based on it have been widely adopted: Tailwind has [22.2k](https://github.com/tailwindcss/tailwindcss) stars on GitHub, while Tachyons is close to [10k](https://github.com/tachyons-css/tachyons/) stars. New technologies have emerged: Atomic CSS-in-JS even seems to be a thing now with libraries such as [Styletron](https://github.com/styletron/styletron), [cxs](https://github.com/cxs-css/cxs/) or [Fela](https://github.com/robinweser/fela).
 
@@ -24,25 +25,13 @@ That kind of approach ensures that CSS values won’t “jump” when reaching a
 <ArticleOverflowContent className="d-grid sm:g-2">
   <div>
     <figure>
-      <video
-        className="d-block w-100p"
-        controls
-        muted
-        src="https://res.cloudinary.com/dd9noepmq/video/upload/v1589118448/videos/responsive-resize_vtfzl3.mp4"
-        type="video/mp4"
-      />
+      <CloudVideo file="responsive-resize_vtfzl3" />
       <figcaption>Responsive interface</figcaption>
     </figure>
   </div>
   <div>
     <figure>
-      <video
-        className="d-block w-100p"
-        controls
-        muted
-        src="https://res.cloudinary.com/dd9noepmq/video/upload/v1589118339/videos/fluid-resize_a3kcpv.mp4"
-        type="video/mp4"
-      />
+      <CloudVideo file="fluid-resize_a3kcpv" />
       <figcaption>Fluid interface</figcaption>
     </figure>
   </div>
@@ -68,13 +57,7 @@ However, if we simply apply that formula without adding any breakpoint, we will 
 
 <ArticleOverflowContent>
   <figure>
-    <video
-      className="d-block w-100p"
-      controls
-      muted
-      src="https://res.cloudinary.com/dd9noepmq/video/upload/v1589118448/videos/fluid-resize-no-breakpoints_fvhjxj.mp4"
-      type="video/mp4"
-    />
+    <CloudVideo file="fluid-resize-no-breakpoints_fvhjxj" />
     <figcaption>Fluid interface with no breakpoints</figcaption>
   </figure>
 </ArticleOverflowContent>
