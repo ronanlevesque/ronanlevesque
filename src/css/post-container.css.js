@@ -36,7 +36,7 @@ export default {
     }
     ${generateFluidCSS('h2, h3', ['margin-top'], [36, 48])}
     ${generateFluidCSS('h2', ['font-size'], [18, 24])}
-    ${generateFluidCSS('h3, p, li, figure', ['font-size'], [16, 18])}
+    ${generateFluidCSS('h3, p, li, figure, div', ['font-size'], [16, 18])}
     p,
     li,
     figure {
@@ -107,6 +107,9 @@ export default {
     kbd {
       font-family: ${fonts.MONO};
       color: ${colors.LINK_WATER};
+    }
+    video {
+      border: 2px solid ${colors.SAN_JUAN};
     }
     figure {
       margin-left: 0;

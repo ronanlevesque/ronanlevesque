@@ -141,5 +141,6 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-preact',
     'gatsby-plugin-webpack-bundle-analyser-v2',
+    'gatsby-plugin-netlify',
   ],
 };
