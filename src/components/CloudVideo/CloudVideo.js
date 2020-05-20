@@ -8,8 +8,7 @@ const CloudVideo = ({ file, ...other }) => (
     className="d-block w-100p"
     controls
     muted
-    poster={`${CLOUDINARY_URL}/${file}.jpg`}
-    src={`${CLOUDINARY_URL}/${file}.mp4`}
+    src={`${CLOUDINARY_URL}/${file}.mp4#t=0.1`}
     type="video/mp4"
     {...other}
   />
