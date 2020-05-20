@@ -19,7 +19,7 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => {
   const { social } = useSiteMetadata();
 
   return (
-    <div css={helperStyles.gradientLine} {...other}>
+    <nav css={helperStyles.gradientLine} {...other}>
       <div className="d-flex jc-between ai-center color-zircon fluid:ph-8-12 fluid:h-48-64">
         <SmallText
           as={textTag}
@@ -48,7 +48,7 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => {
           </ul>
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 
