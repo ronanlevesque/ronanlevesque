@@ -28,15 +28,23 @@ export default {
     > *:last-child {
       margin-bottom: 0;
     }
+    h2 {
+      font-weight: normal;
+      font-family: ${fonts.LIBRE_BASKERVILLE};
+    }
     h2,
     h3 {
-      font-family: ${fonts.LIBRE_BASKERVILLE};
-      font-weight: normal;
       color: ${colors.ZIRCON};
+    }
+    h3 {
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
     }
     ${generateFluidCSS('h2, h3', ['margin-top'], [36, 48])}
     ${generateFluidCSS('h2', ['font-size'], [18, 24])}
-    ${generateFluidCSS('h3, p, li, figure, div', ['font-size'], [16, 18])}
+    ${generateFluidCSS('h3', ['font-size'], [14, 16])}
+    ${generateFluidCSS('p, li, figure, div', ['font-size'], [16, 18])}
     p,
     li,
     figure {
