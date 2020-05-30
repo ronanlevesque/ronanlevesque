@@ -30,11 +30,7 @@ const BlogPostTemplate = ({ data }) => {
           textLink={routes.ARTICLES}
           withIcons={false}
         />
-        <Hero
-          navText="Back to articles"
-          navTextLink={routes.ARTICLES}
-          navWithIcons={false}
-        >
+        <Hero>
           <Title className="color-zircon">{post.frontmatter.title}</Title>
           <Subtitle as="time" className="d-block">
             {post.frontmatter.date}
