@@ -104,7 +104,8 @@ export default {
     ${generateFluidCSS('pre, figcaption', ['font-size'], [14, 16])}
     pre {
       background-color: ${colors.BUNKER};
-      border-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
       overflow: auto;
       code {
         display: block;
@@ -144,8 +145,8 @@ export default {
       font-style: italic;
       border-left: 2px solid ${colors.SAN_JUAN};
     }
-    pre,
     blockquote,
+    .gatsby-highlight,
     .info {
       ${generateFluidCSS('&:before', ['font-size'], [12, 14])}
       &:before {
@@ -172,12 +173,12 @@ export default {
       }
     }
     ${generateFluidCSS(
-      'pre:before',
+      '.gatsby-highlight:before',
       ['padding-left', 'padding-right'],
       [12, 16]
     )}
-    pre:before {
-      content: attr(class);
+    .gatsby-highlight:before {
+      content: attr(data-language);
       padding-top: 0.5em;
       padding-bottom: 0.5em;
       color: ${colors.BLUE_BAYOUX};
