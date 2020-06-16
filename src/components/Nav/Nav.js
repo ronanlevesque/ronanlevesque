@@ -8,6 +8,7 @@ import SmallText from 'components/SmallText';
 import Svg from 'components/Svg';
 import * as routes from 'constants/routes';
 import helperStyles from 'css/helpers.css';
+import { copyToClipboard } from 'helpers';
 import { useSiteMetadata } from 'hooks';
 
 const renderSocialNavItems = social =>
@@ -48,12 +49,7 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => {
               as="button"
               icon="Mail"
               onClick={() => {
-                const el = document.createElement('textarea');
-                el.value = 'ronan.levesque@gmail.com';
-                document.body.appendChild(el);
-                el.select();
-                document.execCommand('copy');
-                document.body.removeChild(el);
+                copyToClipboard('ronan.levesque@gmail.com');
                 // eslint-disable-next-line no-alert
                 alert('Email address successfully copied to clipboard.');
               }}
