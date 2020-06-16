@@ -5,7 +5,13 @@ import styles from './NavItem.css';
 import Link from 'components/Link';
 import Svg from 'components/Svg';
 
-const NavItem = ({ as: Component = Link, dataBefore, icon, ...other }) => (
+const NavItem = ({
+  as: Component = Link,
+  dataBefore,
+  icon,
+  onClick,
+  ...other
+}) => (
   <li className="d-flex ai-center fluid:ml-8-12">
     <Component
       aria-label={icon}
@@ -14,6 +20,7 @@ const NavItem = ({ as: Component = Link, dataBefore, icon, ...other }) => (
       data-before={dataBefore ? dataBefore : icon}
       onClick={e => {
         e.target.blur();
+        if (onClick) onClick(e);
       }}
       {...other}
     >
@@ -30,6 +37,7 @@ NavItem.propTypes = {
   as: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   dataBefore: PropTypes.string,
   icon: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
 };
 
 export default NavItem;

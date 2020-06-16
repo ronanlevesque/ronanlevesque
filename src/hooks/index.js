@@ -13,7 +13,6 @@ export const useSiteMetadata = () => {
               GitHub
               CodePen
               Twitter
-              Mail
             }
           }
         }

@@ -10,7 +10,6 @@ module.exports = {
       GitHub: 'https://github.com/ronanlevesque',
       CodePen: 'https://codepen.io/eskiiss/',
       Twitter: 'https://twitter.com/ronanlevesque',
-      Mail: 'mailto:ronan.levesque@gmail.com',
     },
   },
   plugins: [

@@ -44,6 +44,20 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => {
         {withIcons && (
           <ul className="d-flex m-0 p-0 lis-none pos-relative">
             {renderSocialNavItems(social)}
+            <NavItem
+              as="button"
+              icon="Mail"
+              onClick={() => {
+                const el = document.createElement('textarea');
+                el.value = 'ronan.levesque@gmail.com';
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+                // eslint-disable-next-line no-alert
+                alert('Email address successfully copied to clipboard.');
+              }}
+            />
             <NavItem icon="Articles" to={routes.ARTICLES} />
           </ul>
         )}
