@@ -18,7 +18,7 @@ const DrawingList = ({ drawings, folder, className, ...other }) => (
       >
         <li className="p-0 lis-none">
           <img
-            className="d-block w-100p h-auto"
+            className="d-block w-100p h-auto bdw-0"
             src={`/images/drawing/${folder}/small/${drawing.node.name}-small.jpg`}
           />
         </li>
