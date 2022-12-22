@@ -10,11 +10,7 @@ module.exports = {
   css: ['src/css/fluid.css', 'src/css/fragments.css'],
   extractors: [
     {
-      extractor: class {
-        static extract(content) {
-          return content.match(/[A-z0-9-:/]+/g);
-        }
-      },
+      extractor: content => content.match(/[A-z0-9-:/]+/g) || [],
       extensions: ['js'],
     },
   ],
