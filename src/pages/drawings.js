@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 import Board from '../components/Board/Board';
 import Container from 'components/Container';
-import DrawingList from '../components/DrawingList';
+import DrawingsList from '../components/DrawingsList';
 import Footer from 'components/Footer';
 import Hero from 'components/Hero';
 import Nav from 'components/Nav';
@@ -28,11 +28,11 @@ const DrawingsPage = ({ data }) => {
         <main>
           <section>
             <SectionTitle as="h3">Colored</SectionTitle>
-            <DrawingList drawings={data} folder="colored" />
+            <DrawingsList drawings={data} folder="colored" />
           </section>
           <section className="fluid:mt-48-96">
             <SectionTitle as="h3">Archives</SectionTitle>
-            <DrawingList drawings={data} folder="archives" />
+            <DrawingsList drawings={data} folder="archives" />
           </section>
           <section className="fluid:mt-48-96">
             <SectionTitle as="h3">The Rite (board)</SectionTitle>

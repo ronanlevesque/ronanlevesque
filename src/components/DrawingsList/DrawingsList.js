@@ -12,8 +12,9 @@ const DrawingList = ({ drawings, folder, className, ...other }) => (
   >
     {drawings[folder].edges.map(drawing => (
       <a
-        key={drawing.node.name}
+        className="td-none"
         href={`/images/drawing/${folder}/${drawing.node.name}.jpg`}
+        key={drawing.node.name}
       >
         <li className="p-0 lis-none">
           <img
