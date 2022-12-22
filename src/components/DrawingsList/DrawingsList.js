@@ -12,7 +12,7 @@ const DrawingList = ({ drawings, folder, className, ...other }) => (
   >
     {drawings[folder].edges.map(drawing => (
       <a
-        className="d-block td-none bds-solid bdw-1 bdc-white"
+        className="d-block td-none color-white bds-solid bdw-1 bdc-white"
         href={`/images/drawing/${folder}/${drawing.node.name}.jpg`}
         key={drawing.node.name}
       >
