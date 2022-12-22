@@ -16,6 +16,11 @@ const selectors = [
     ],
   },
   {
+    className: 'ggap',
+    properties: ['grid-gap'],
+    minMax: [[12, 32]],
+  },
+  {
     className: 'ml',
     properties: ['margin-left'],
     minMax: [[8, 12]],
@@ -24,6 +29,7 @@ const selectors = [
     className: 'mt',
     properties: ['margin-top'],
     minMax: [
+      [12, 32],
       [12, 16],
       [48, 96],
     ],
@@ -57,7 +63,10 @@ const selectors = [
   {
     className: 'pt',
     properties: ['padding-top'],
-    minMax: [[48, 96]],
+    minMax: [
+      [12, 32],
+      [48, 96],
+    ],
   },
   {
     className: 'pb',

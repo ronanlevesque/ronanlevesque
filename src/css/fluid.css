@@ -37,6 +37,19 @@
     font-size: 2rem;
   }
 }
+.fluid\:ggap-12-32 {
+  grid-gap: 0.75rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:ggap-12-32 {
+    grid-gap: calc(0.75rem + (32 - 12) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:ggap-12-32 {
+    grid-gap: 2rem;
+  }
+}
 .fluid\:ml-8-12 {
   margin-left: 0.5rem;
 }
@@ -48,6 +61,19 @@
 @media screen and (min-width: 1200px) {
   .fluid\:ml-8-12 {
     margin-left: 0.75rem;
+  }
+}
+.fluid\:mt-12-32 {
+  margin-top: 0.75rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:mt-12-32 {
+    margin-top: calc(0.75rem + (32 - 12) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:mt-12-32 {
+    margin-top: 2rem;
   }
 }
 .fluid\:mt-12-16 {
@@ -152,6 +178,19 @@
 @media screen and (min-width: 1200px) {
   .fluid\:pv-80-160 {
     padding-top: 10rem;padding-bottom: 10rem;
+  }
+}
+.fluid\:pt-12-32 {
+  padding-top: 0.75rem;
+}
+@media screen and (min-width: 500px) {
+  .fluid\:pt-12-32 {
+    padding-top: calc(0.75rem + (32 - 12) * (100vw - 500px) / (1200 - 500));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fluid\:pt-12-32 {
+    padding-top: 2rem;
   }
 }
 .fluid\:pt-48-96 {
