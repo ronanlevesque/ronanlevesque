@@ -16,8 +16,8 @@ import DefaultLayout from 'layouts/DefaultLayout';
 const DrawingsPage = ({ data }) => {
   return (
     <DefaultLayout
-      metaDescription="Tips, tutorials, useful resources, thoughts and questions around front-end development tools and languages."
-      title="Articles"
+      metaDescription="A selection of various old drawings from the past."
+      title="Drawings"
       url={routes.ARTICLES}
     >
       <Container>
