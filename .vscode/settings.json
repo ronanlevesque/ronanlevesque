@@ -1,0 +1,20 @@
+{
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "wordWrapColumn",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "public/**": true,
+    "node_modules/**": true
+  }
+  // "typescript.tsserver.experimental.enableProjectDiagnostics": true
+}
