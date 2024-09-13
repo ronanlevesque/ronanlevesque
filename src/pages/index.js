@@ -23,8 +23,7 @@ const IndexPage = ({ data }) => {
         <Nav text={title} textTag="h1" />
         <Hero alignLeft>
           <Title as="p" className="color-manatee">
-            Hello! I’m a Sr. Software Engineer, currently working as Technical
-            and Team Lead at{' '}
+            Hello! I’m an Engineering Manager and former Senior Software Engineer, currently working at{' '}
             <Link
               className="color-zircon td-none hover:color-white"
               to="https://www.algolia.com"
@@ -38,7 +37,7 @@ const IndexPage = ({ data }) => {
             >
               React
             </Link>{' '}
-            to build fast and powerful web applications.
+            to build fast and powerful web apps.
           </Title>
         </Hero>
         <main>
