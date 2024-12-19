@@ -1,6 +1,28 @@
 import { pxToRem } from '../helpers';
 
-const colors = {};
+const breakpoints = {
+  xxs: '350px',
+  xs: '500px',
+  sm: '768px',
+  md: '960px',
+  lg: '1200px',
+  xl: '1440px',
+  xxl: '1920px',
+};
+
+const colors = {
+  transparent: 'transparent',
+  white: '#FFF',
+  zircon: '#ECEDEF',
+  linkWater: '#C6CACF',
+  manatee: '#8D96A0',
+  blueBayoux: '#677481',
+  sanJuan: '#415161',
+  midnight: '#1E2935',
+  blackPearl: '#1a242e',
+  bunker: '#141c24',
+  bunkerDarker: '#11181f',
+};
 
 const spacing = {
   0: 0,
@@ -23,7 +45,13 @@ module.exports = {
   corePlugins: {
     preflight: true,
   },
+  colors: {
+    ...colors,
+  },
   padding: {
     ...spacing,
+  },
+  screens: {
+    ...breakpoints,
   },
 };
