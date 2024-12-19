@@ -1,5 +1,7 @@
 import { pxToRem } from '../helpers';
 
+const colors = {};
+
 const spacing = {
   0: 0,
   4: pxToRem(4),
