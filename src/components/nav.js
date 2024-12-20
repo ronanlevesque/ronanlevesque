@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import Svg from './svg';
+
 import SmallText from './small-text';
+import Svg from './svg';
 
 const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => (
   <nav {...other}>
@@ -12,11 +13,11 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => (
       >
         {textLink ? (
           <Link
-            className="h-100p flex items-center justify-between text-zircon no-underline hover:text-white"
+            className="flex h-100p items-center justify-between text-zircon no-underline hover:text-white"
             href={textLink}
           >
             <Svg
-              className="~w-18/24 block h-auto text-manatee ~mr-8/12  group-hover:text-linkWater group-focus:text-linkWater"
+              className="~w-18/24 h-auto block text-manatee ~mr-8/12  group-hover:text-linkWater group-focus:text-linkWater"
               name="arrow-left"
             />
             {text}

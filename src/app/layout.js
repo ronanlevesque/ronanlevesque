@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import { Roboto } from 'next/font/google';
+
 import '../globals.css';
 
 const roboto = Roboto({
@@ -17,7 +18,7 @@ export default function RootLayout({ children, lang = 'en' }) {
   return (
     <html lang={lang}>
       <body className={cx(roboto.className, 'm-0 bg-blackPearl ~px-12/20')}>
-        <div className="max-w-1200 m-auto">{children}</div>
+        <div className="m-auto max-w-1200">{children}</div>
       </body>
     </html>
   );

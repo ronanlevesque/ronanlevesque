@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 
 const SmallText = ({
   as: Component = 'span',
@@ -8,7 +8,7 @@ const SmallText = ({
   ...other
 }) => (
   <Component
-    className={cx('~text-14/16 uppercase tracking-widest', className)}
+    className={cx('uppercase tracking-widest ~text-14/16', className)}
     {...other}
   >
     {children}
