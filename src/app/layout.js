@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={cx(inter.className, 'm-0 bg-blackPearl')}>
-        <div class="m-auto max-w-screen-xl">{children}</div>
+        <div className="m-auto max-w-screen-xl">{children}</div>
       </body>
     </html>
   );

@@ -1,13 +1,13 @@
 import { pxToRem } from '../helpers';
 
 const breakpoints = {
-  xxs: '350px',
-  xs: '500px',
-  sm: '768px',
-  md: '960px',
-  lg: '1200px',
-  xl: '1440px',
-  xxl: '1920px',
+  xxs: pxToRem(350),
+  xs: pxToRem(500),
+  sm: pxToRem(768),
+  md: pxToRem(960),
+  lg: pxToRem(1200),
+  xl: pxToRem(1440),
+  xxl: pxToRem(1920),
 };
 
 const colors = {
