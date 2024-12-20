@@ -1,8 +1,13 @@
-import Nav from './components/nav';
+import Nav from '../components/nav';
+
+export const metadata = {
+  description: '',
+  title: 'Ronan Levesque',
+};
+
 const Home = () => (
   <>
-    <Nav />
-    <div className="p-4">Home</div>
+    <Nav text="Ronan Levesque" textTag="h1" />
   </>
 );
 

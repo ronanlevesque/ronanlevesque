@@ -41,6 +41,24 @@ const spacing = {
   160: pxToRem(160),
 };
 
+const sizes = {
+  0: 0,
+  12: pxToRem(12),
+  16: pxToRem(16),
+  20: pxToRem(20),
+  24: pxToRem(24),
+  28: pxToRem(28),
+  32: pxToRem(32),
+  36: pxToRem(36),
+  40: pxToRem(40),
+  48: pxToRem(48),
+  56: pxToRem(56),
+  64: pxToRem(64),
+  1200: pxToRem(1200),
+  '90p': '90%',
+  '100p': '100%',
+};
+
 module.exports = {
   corePlugins: {
     preflight: true,
@@ -48,10 +66,39 @@ module.exports = {
   colors: {
     ...colors,
   },
+  fontSize: {
+    0: 0,
+    10: pxToRem(10),
+    12: pxToRem(12),
+    14: pxToRem(14),
+    16: pxToRem(16),
+    18: pxToRem(18),
+    20: pxToRem(20),
+    24: pxToRem(24),
+    32: pxToRem(32),
+  },
+  height: {
+    ...sizes,
+  },
+  letterSpacing: {
+    widest: '0.14em',
+  },
+  maxWidth: {
+    600: pxToRem(600),
+    800: pxToRem(800),
+    1000: pxToRem(1000),
+    1200: pxToRem(1200),
+  },
   padding: {
+    ...spacing,
+  },
+  margin: {
     ...spacing,
   },
   screens: {
     ...breakpoints,
+  },
+  width: {
+    ...sizes,
   },
 };
