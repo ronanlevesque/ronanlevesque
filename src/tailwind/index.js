@@ -35,17 +35,21 @@ const spacing = {
   20: pxToRem(20),
   24: pxToRem(24),
   32: pxToRem(32),
+  40: pxToRem(40),
   48: pxToRem(48),
   80: pxToRem(80),
+  96: pxToRem(96),
   120: pxToRem(120),
   160: pxToRem(160),
 };
 
 const sizes = {
   0: 0,
+  1: '1px',
   12: pxToRem(12),
   16: pxToRem(16),
   20: pxToRem(20),
+  22: pxToRem(22),
   24: pxToRem(24),
   28: pxToRem(28),
   32: pxToRem(32),
@@ -54,6 +58,8 @@ const sizes = {
   48: pxToRem(48),
   56: pxToRem(56),
   64: pxToRem(64),
+  200: pxToRem(200),
+  260: pxToRem(260),
   1200: pxToRem(1200),
   '90p': '90%',
   '100p': '100%',
@@ -65,6 +71,11 @@ module.exports = {
   },
   colors: {
     ...colors,
+  },
+  fontFamily: {
+    libre: ['var(--font-libre)'],
+    roboto: ['var(--font-roboto)'],
+    'roboto-mono': ['var(--font-roboto-mono)'],
   },
   fontSize: {
     0: 0,
@@ -78,10 +89,20 @@ module.exports = {
     32: pxToRem(32),
   },
   height: {
+    auto: 'auto',
     ...sizes,
   },
   letterSpacing: {
     widest: '0.14em',
+  },
+  lineHeight: {
+    small: 1,
+    big: 1.33,
+    bigger: 1.78,
+  },
+  margin: {
+    auto: 'auto',
+    ...spacing,
   },
   maxWidth: {
     600: pxToRem(600),
@@ -90,9 +111,6 @@ module.exports = {
     1200: pxToRem(1200),
   },
   padding: {
-    ...spacing,
-  },
-  margin: {
     ...spacing,
   },
   screens: {

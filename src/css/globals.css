@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .withBorder {
+    @apply after:h-1 after:block after:bg-gradient-to-r after:from-midnight after:from-10% after:via-sanJuan after:to-midnight after:to-90%;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
