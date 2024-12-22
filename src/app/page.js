@@ -21,8 +21,8 @@ const Home = () => (
     <Nav text="Ronan Levesque" textTag="h1" />
     <Hero alignLeft>
       <Title as="p" className="text-manatee">
-        Hello! I’m an Engineering Manager and former Senior Software Engineer. I
-        ❤️ pushing pixels around and playing with{' '}
+        Hi and welcome! I’m Ronan, an Engineering Manager and former Senior
+        Software Engineer. I ❤️ pushing pixels around and playing with{' '}
         <Link
           className={cx(
             'text-zircon no-underline transition',

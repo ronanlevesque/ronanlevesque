@@ -7,13 +7,7 @@ import PropTypes from 'prop-types';
 
 import Svg from '@/components/svg';
 
-const NavItem = ({
-  as: Component = Link,
-  dataBefore,
-  icon,
-  onClick,
-  ...other
-}) => (
+const NavItem = ({ as: Component = Link, icon, onClick, ...other }) => (
   <li className="flex items-center ~ml-8/12">
     <Component
       aria-label={icon}
@@ -24,7 +18,7 @@ const NavItem = ({
         'before:hidden',
         'md:before:pointer-events-none md:before:absolute md:before:right-full md:before:top-1/2 md:before:block md:before:-translate-y-1/2 md:before:translate-x-[0.3em] md:before:whitespace-nowrap md:before:italic md:before:text-manatee md:before:opacity-0 md:before:transition md:before:content-[attr(data-before)] md:before:~text-16/18'
       )}
-      data-before={dataBefore ?? icon}
+      data-before={icon}
       onClick={(e) => {
         e.target.blur();
         if (onClick) onClick(e);
@@ -33,7 +27,7 @@ const NavItem = ({
     >
       <Svg
         aria-hidden
-        className="h-auto ~w-18/24 pointer-events-none block"
+        className="~w-18/24 pointer-events-none block h-auto"
         name={icon.toLowerCase()}
       />
     </Component>
@@ -42,7 +36,6 @@ const NavItem = ({
 
 NavItem.propTypes = {
   as: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  dataBefore: PropTypes.string,
   icon: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };

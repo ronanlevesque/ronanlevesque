@@ -12,10 +12,8 @@ import * as routes from '@/constants/routes';
 
 import socialData from '@/data/social';
 
-import { copyToClipboard } from '@/helpers';
-
 const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => (
-  <nav className="withBorder" {...other}>
+  <nav className="with-border" {...other}>
     <div className="flex items-center justify-between text-zircon ~h-48/64 ~px-8/12">
       <SmallText
         as={textTag}
@@ -30,8 +28,8 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => (
           >
             <Svg
               className={cx(
-                '~w-18/24 h-auto block text-manatee ~mr-8/12',
-                'transition group-hover:text-linkWater group-focus:text-linkWater'
+                '~w-18/24 block h-auto text-manatee transition ~mr-8/12',
+                'group-hover:text-linkWater group-focus:text-linkWater'
               )}
               name="arrow-left"
             />
@@ -50,7 +48,7 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => (
             as="button"
             icon="Mail"
             onClick={() => {
-              copyToClipboard('ronan.levesque@gmail.com');
+              navigator.clipboard.writeText('ronan.levesque@gmail.com');
               alert('Email address successfully copied to clipboard.');
             }}
           />

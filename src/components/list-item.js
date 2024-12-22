@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const ListItem = ({ children, ...other }) => (
-  <li className="leading-bigger withBorder" {...other}>
+  <li className="with-border leading-bigger" {...other}>
     {children}
   </li>
 );
