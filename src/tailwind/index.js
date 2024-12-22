@@ -48,6 +48,7 @@ const sizes = {
   1: '1px',
   12: pxToRem(12),
   16: pxToRem(16),
+  18: pxToRem(18),
   20: pxToRem(20),
   22: pxToRem(22),
   24: pxToRem(24),
