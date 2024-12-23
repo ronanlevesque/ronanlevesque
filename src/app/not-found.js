@@ -9,9 +9,8 @@ import Title from '@/components/title';
 import * as routes from '@/constants/routes';
 
 export const metadata = {
-  description:
-    'Tips, tutorials, useful resources, thoughts and questions around front-end development tools and languages.',
-  title: 'Articles | Ronan Levesque',
+  description: 'This page doesn’t exist or was removed from the website.',
+  title: 'Page not found | Ronan Levesque',
 };
 
 const NotFound = () => (
