@@ -18,21 +18,25 @@ export const metadata = {
 
 const Home = () => (
   <>
-    <Nav text="Ronan Levesque" textTag="h1" />
+    <Nav text="Ronan Levesque" />
     <Hero alignLeft>
-      <Title as="p" className="text-manatee">
-        Hi and welcome! I’m Ronan, an Engineering Manager and former Senior
-        Software Engineer. I ❤️ pushing pixels around and playing with{' '}
-        <Link
-          className={cx(
-            'text-zircon no-underline transition',
-            'hover:text-white'
-          )}
-          href="https://reactjs.org/"
-        >
-          React
-        </Link>{' '}
-        to build fast and powerful web apps.
+      <Title as="div" className="text-manatee">
+        <p className="m-0 inline">Hello!</p> I’m{' '}
+        <h1 className="m-0 inline">Ronan Levesque</h1>
+        <p className="m-0 inline">
+          , an Engineering Manager and former Senior Software Engineer. I ❤️
+          pushing pixels around and playing with{' '}
+          <Link
+            className={cx(
+              'text-zircon no-underline transition',
+              'hover:text-white'
+            )}
+            href="https://reactjs.org/"
+          >
+            React
+          </Link>{' '}
+          to build fast and powerful web apps.
+        </p>
       </Title>
       <Title as="p" className="text-manatee ~mt-20/32">
         I’m currently looking for new work opportunities, don’t hesitate to{' '}

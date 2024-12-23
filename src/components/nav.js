@@ -12,23 +12,20 @@ import * as routes from '@/constants/routes';
 
 import socialData from '@/data/social';
 
-const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => (
+const Nav = ({ text, link, withIcons = true, ...other }) => (
   <nav className="with-border" {...other}>
     <div className="flex items-center justify-between text-zircon ~h-48/64 ~px-8/12">
-      <SmallText
-        as={textTag}
-        className="m-0 flex items-center justify-between font-medium ~h-32/40"
-      >
-        {textLink ? (
+      <SmallText className="m-0 flex items-center justify-between font-medium ~h-32/40">
+        {link ? (
           <Link
             className={cx(
               'group flex h-100p items-center justify-between text-zircon no-underline'
             )}
-            href={textLink}
+            href={link}
           >
             <Svg
               className={cx(
-                '~w-18/24 block h-auto text-manatee transition ~mr-8/12',
+                'block h-auto text-manatee transition ~mr-8/12 ~w-18/24',
                 'group-hover:text-linkWater group-focus:text-linkWater'
               )}
               name="arrow-left"
@@ -61,8 +58,7 @@ const Nav = ({ text, textLink, textTag, withIcons = true, ...other }) => (
 
 Nav.propTypes = {
   text: PropTypes.node.isRequired,
-  textLink: PropTypes.string,
-  textTag: PropTypes.string,
+  link: PropTypes.string,
   withIcons: PropTypes.bool,
 };
 

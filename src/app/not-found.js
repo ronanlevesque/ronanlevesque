@@ -16,7 +16,7 @@ export const metadata = {
 
 const NotFound = () => (
   <>
-    <Nav text="Back to Homepage" textLink={routes.HOME} withIcons={false} />
+    <Nav text="Back to Homepage" link={routes.HOME} withIcons={false} />
     <Hero>
       <Title className="text-zircon">Sorry, this page doesn’t exist.</Title>
       <Subtitle>Meanwhile, enjoy the Pen below!</Subtitle>

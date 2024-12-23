@@ -15,7 +15,7 @@ export const metadata = {
 
 const Articles = () => (
   <>
-    <Nav text="Back to Homepage" textLink={routes.HOME} withIcons={false} />
+    <Nav text="Back to Homepage" link={routes.HOME} withIcons={false} />
     <Hero>
       <Title className="text-zircon">Articles on web development</Title>
       <Subtitle>CSS, JavaScript, React etc.</Subtitle>
