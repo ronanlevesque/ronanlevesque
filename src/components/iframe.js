@@ -19,7 +19,7 @@ const Iframe = ({ className, src, noMobile, title, ...other }) => (
         )}
       >
         <div className="overflow-auto ~p-12/20">
-          <h3 className=" m-0 text-white ~text-16/18">
+          <h3 className=" m-0 font-bold text-linkWater ~text-16/18">
             This iframe isn’t optimized for small screen sizes
           </h3>
           <p className="mb-0 text-manatee ~text-14/16 ~mt-8/12">

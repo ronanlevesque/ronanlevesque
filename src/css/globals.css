@@ -6,6 +6,131 @@
   .with-border {
     @apply after:block after:h-1 after:bg-gradient-to-r after:from-midnight after:from-10% after:via-sanJuan after:to-midnight after:to-90%;
   }
+
+  .article-container {
+    * {
+      @apply mb-0 mt-0;
+    }
+
+    > * + * {
+      @apply ~mt-16/18;
+    }
+
+    > *:last-child {
+      @apply mt-0;
+    }
+
+    h2 {
+      @apply font-libre font-normal ~text-18/24;
+    }
+
+    h2,
+    h3 {
+      @apply ~mt-36/48 text-zircon;
+    }
+
+    h3 {
+      @apply font-medium uppercase tracking-widest ~text-14/16;
+    }
+
+    p,
+    li,
+    figure,
+    div {
+      @apply ~text-16/18;
+    }
+
+    p,
+    li,
+    figure {
+      code,
+      kbd {
+        @apply rounded bg-bunker px-[0.3em] py-[0.2em] ~text-14/16;
+      }
+    }
+
+    ul,
+    ol {
+      @apply list-none p-0;
+      li:before {
+        @apply inline-block text-zircon;
+      }
+    }
+
+    ul li {
+      @apply pl-[1em];
+      &:before {
+        @apply ml-[-1em] w-[1em] font-bold content-['•'];
+      }
+    }
+
+    ol {
+      counter-reset: numbers;
+      li {
+        @apply pl-[1.5em];
+        counter-increment: numbers;
+        &:before {
+          @apply ml-[-1.5em] w-[1.5em];
+          content: counter(numbers) '.';
+        }
+      }
+    }
+
+    a,
+    figcaption {
+      @apply text-linkWater;
+    }
+
+    a {
+      @apply underline transition hover:text-zircon focus:text-zircon;
+    }
+
+    > pre,
+    > figure,
+    > blockquote,
+    > .info,
+    > div {
+      @apply ~my-24/28;
+    }
+
+    pre,
+    figcaption {
+      @apply ~text-14/16;
+    }
+
+    pre {
+      @apply overflow-auto rounded-b bg-bunker;
+      code {
+        @apply block p-[1em];
+      }
+    }
+
+    code,
+    kbd {
+      @apply font-roboto-mono text-linkWater;
+    }
+
+    video {
+      @apply border-2 border-sanJuan;
+    }
+
+    figure {
+      @apply mx-0;
+    }
+
+    figcaption {
+      @apply mx-auto mt-[0.8em] w-90p text-center font-libre italic;
+    }
+
+    blockquote {
+      @apply font-libre italic;
+    }
+
+    blockquote,
+    .info {
+      @apply mx-0 border-l-2 border-sanJuan pl-[1.2em] italic;
+    }
+  }
 }
 
 @layer utilities {

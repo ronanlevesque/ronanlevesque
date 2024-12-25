@@ -24,19 +24,19 @@ const libre = Libre_Baskerville({
   weight: ['400', '700'],
 });
 
-export default function RootLayout({ children, lang = 'en' }) {
-  return (
-    <html lang={lang}>
-      <body
-        className={cx(
-          libre.variable,
-          roboto.variable,
-          roboto_mono.variable,
-          'm-0 bg-blackPearl font-roboto ~px-12/20'
-        )}
-      >
-        <div className="m-auto max-w-1200">{children}</div>
-      </body>
-    </html>
-  );
-}
+const RootLayout = ({ children, lang = 'en' }) => (
+  <html lang={lang}>
+    <body
+      className={cx(
+        libre.variable,
+        roboto.variable,
+        roboto_mono.variable,
+        'm-0 bg-blackPearl font-roboto ~px-12/20'
+      )}
+    >
+      <div className="m-auto max-w-1200">{children}</div>
+    </body>
+  </html>
+);
+
+export default RootLayout;

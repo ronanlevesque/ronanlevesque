@@ -6,11 +6,7 @@ import config from './src/tailwind';
 module.exports = {
   content: {
     extract,
-    files: [
-      './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-      './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-      './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    ],
+    files: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   },
   theme: {
     /** @type {import('fluid-tailwind').FluidThemeConfig} */

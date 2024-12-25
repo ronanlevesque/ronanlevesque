@@ -32,9 +32,12 @@ const spacing = {
   12: pxToRem(12),
   14: pxToRem(14),
   16: pxToRem(16),
+  18: pxToRem(18),
   20: pxToRem(20),
   24: pxToRem(24),
+  28: pxToRem(28),
   32: pxToRem(32),
+  36: pxToRem(36),
   40: pxToRem(40),
   48: pxToRem(48),
   80: pxToRem(80),
@@ -88,6 +91,7 @@ module.exports = {
     20: pxToRem(20),
     24: pxToRem(24),
     32: pxToRem(32),
+    48: pxToRem(48),
   },
   height: {
     auto: 'auto',
@@ -98,7 +102,7 @@ module.exports = {
   },
   lineHeight: {
     small: 1,
-    big: 1.33,
+    big: 1.2,
     bigger: 1.78,
   },
   margin: {
@@ -107,7 +111,9 @@ module.exports = {
   },
   maxWidth: {
     600: pxToRem(600),
+    700: pxToRem(700),
     800: pxToRem(800),
+    824: pxToRem(824),
     1000: pxToRem(1000),
     1200: pxToRem(1200),
   },
