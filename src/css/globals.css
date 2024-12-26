@@ -26,7 +26,7 @@
 
     h2,
     h3 {
-      @apply ~mt-36/48 text-zircon;
+      @apply text-zircon ~mt-36/48;
     }
 
     h3 {
@@ -129,6 +129,34 @@
     blockquote,
     .info {
       @apply mx-0 border-l-2 border-sanJuan pl-[1.2em] italic;
+      &:before {
+        @apply block font-roboto uppercase not-italic tracking-widest ~text-12/14;
+      }
+    }
+
+    blockquote {
+      &:before {
+        @apply mb-[0.8em] text-zircon content-['Quote'];
+      }
+
+      p {
+        &:before {
+          @apply content-['“'];
+        }
+
+        &:after {
+          @apply content-['”'];
+        }
+      }
+
+      .info {
+        code {
+          @apply not-italic;
+        }
+        &:before {
+          @apply mb-[0.8em] text-zircon content-['Information'];
+        }
+      }
     }
   }
 }

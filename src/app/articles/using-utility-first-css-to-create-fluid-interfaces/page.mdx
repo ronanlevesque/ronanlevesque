@@ -7,16 +7,29 @@ export const metadata = {
   date: '2020-05-12T00:00:00Z',
 };
 
+```
+/* The font-size will stay at 16px under 400px */
+.some-class {
+  font-size: 16px;
+}
+
+/* The font-size will be fluid between 400 and 800px */
+@media screen and (min-width: 400px) {
+  .some-class {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
+  }
+}
+
+/* The font-size will become fix again above 800px */
+@media screen and (min-width: 800px) {
+  .some-class {
+    font-size: 24px;
+  }
+}
+```
+
 // import ArticleOverflowContent from 'components/ArticleOverflowContent';
 // import CloudVideo from 'components/CloudVideo';
-
-- One
-- Two
-- Three
-
-1. One
-2. Two
-3. Three
 
 It’s been only a few days since I [last wrote](/articles/react-and-atomic-css/) about the power of Atomic / Utility-first CSS, but I feel like there is plenty left to say about that methodology and how it has become more and more popular over the last years. Frameworks based on it have been widely adopted: Tailwind has [22.2k](https://github.com/tailwindcss/tailwindcss) stars on GitHub, while Tachyons is close to [10k](https://github.com/tachyons-css/tachyons/) stars. New technologies have emerged: Atomic CSS-in-JS even seems to be a thing now with libraries such as [Styletron](https://github.com/styletron/styletron), [cxs](https://github.com/cxs-css/cxs/) or [Fela](https://github.com/robinweser/fela).
 
