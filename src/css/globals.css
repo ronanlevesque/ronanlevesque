@@ -92,7 +92,7 @@
     > pre,
     > figure,
     > blockquote,
-    > .info,
+    > .info p,
     > div {
       @apply ~my-24/28;
     }
@@ -103,12 +103,12 @@
     }
 
     pre {
-      @apply overflow-auto rounded bg-bunker;
+      @apply rounded bg-bunker;
       code {
-        @apply block p-[1em];
+        @apply block overflow-auto p-[1em];
       }
       &:before {
-        @apply block bg-bunkerDarker py-[0.5em] text-blueBayoux content-[attr(data-lang)] ~px-12/16;
+        @apply block rounded-t bg-bunkerDarker py-[0.5em] text-blueBayoux content-[attr(data-lang)] ~px-12/16;
       }
     }
 
@@ -134,13 +134,13 @@
     }
 
     blockquote,
-    .info {
+    .info p {
       @apply mx-0 border-l-2 border-sanJuan pl-[1.2em] italic;
     }
 
     blockquote,
     pre,
-    .info {
+    .info p {
       &:before {
         @apply block font-roboto uppercase not-italic tracking-widest ~text-12/14;
       }
@@ -162,7 +162,7 @@
       }
     }
 
-    .info {
+    .info p {
       code {
         @apply not-italic;
       }
