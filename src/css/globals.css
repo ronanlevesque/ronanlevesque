@@ -16,12 +16,16 @@
       @apply ~mt-16/18;
     }
 
-    > *:last-child {
+    > *:first-child {
       @apply mt-0;
     }
 
+    > *:last-child {
+      @apply mb-0;
+    }
+
     h2 {
-      @apply font-libre font-normal ~text-18/24;
+      @apply font-bold ~text-18/24;
     }
 
     h2,
@@ -99,9 +103,12 @@
     }
 
     pre {
-      @apply overflow-auto rounded-b bg-bunker;
+      @apply overflow-auto rounded bg-bunker;
       code {
         @apply block p-[1em];
+      }
+      &:before {
+        @apply block bg-bunkerDarker py-[0.5em] text-blueBayoux content-[attr(data-lang)] ~px-12/16;
       }
     }
 
@@ -129,6 +136,11 @@
     blockquote,
     .info {
       @apply mx-0 border-l-2 border-sanJuan pl-[1.2em] italic;
+    }
+
+    blockquote,
+    pre,
+    .info {
       &:before {
         @apply block font-roboto uppercase not-italic tracking-widest ~text-12/14;
       }
@@ -148,14 +160,14 @@
           @apply content-['”'];
         }
       }
+    }
 
-      .info {
-        code {
-          @apply not-italic;
-        }
-        &:before {
-          @apply mb-[0.8em] text-zircon content-['Information'];
-        }
+    .info {
+      code {
+        @apply not-italic;
+      }
+      &:before {
+        @apply mb-[0.8em] text-zircon content-['Information'];
       }
     }
   }

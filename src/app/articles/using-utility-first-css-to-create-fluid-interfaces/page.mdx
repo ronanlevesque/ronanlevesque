@@ -1,3 +1,11 @@
+import Image from 'next/image';
+
+import ArticleOverflowContent from '@/components/article-overflow-content';
+import CloudVideo from '@/components/cloud-video';
+import Figure from '@/components/figure';
+
+import Image1 from '@/images/advanced-calc-800-opt.png';
+
 import MdxLayout from '@/layouts/mdx-layout';
 
 export const metadata = {
@@ -6,30 +14,6 @@ export const metadata = {
     'This article shows how a few lines of JavaScript can help build a small, yet solid CSS framework to handle fluid UIs.',
   date: '2020-05-12T00:00:00Z',
 };
-
-```
-/* The font-size will stay at 16px under 400px */
-.some-class {
-  font-size: 16px;
-}
-
-/* The font-size will be fluid between 400 and 800px */
-@media screen and (min-width: 400px) {
-  .some-class {
-    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (800 - 400));
-  }
-}
-
-/* The font-size will become fix again above 800px */
-@media screen and (min-width: 800px) {
-  .some-class {
-    font-size: 24px;
-  }
-}
-```
-
-// import ArticleOverflowContent from 'components/ArticleOverflowContent';
-// import CloudVideo from 'components/CloudVideo';
 
 It’s been only a few days since I [last wrote](/articles/react-and-atomic-css/) about the power of Atomic / Utility-first CSS, but I feel like there is plenty left to say about that methodology and how it has become more and more popular over the last years. Frameworks based on it have been widely adopted: Tailwind has [22.2k](https://github.com/tailwindcss/tailwindcss) stars on GitHub, while Tachyons is close to [10k](https://github.com/tachyons-css/tachyons/) stars. New technologies have emerged: Atomic CSS-in-JS even seems to be a thing now with libraries such as [Styletron](https://github.com/styletron/styletron), [cxs](https://github.com/cxs-css/cxs/) or [Fela](https://github.com/robinweser/fela).
 
@@ -45,7 +29,20 @@ A fluid interface basically follows that exact same principle, but extends it to
 
 That kind of approach ensures that CSS values won’t “jump” when reaching a breakpoint, thus offering a better rendering on different viewports:
 
-TBD
+<ArticleOverflowContent className="sm:g-2 grid">
+  <div>
+    <figure>
+      <CloudVideo file="responsive-resize_vtfzl3" />
+      <figcaption>Responsive interface</figcaption>
+    </figure>
+  </div>
+  <div>
+    <figure>
+      <CloudVideo file="fluid-resize_a3kcpv" />
+      <figcaption>Fluid interface</figcaption>
+    </figure>
+  </div>
+</ArticleOverflowContent>
 
 In the side-by-side comparison above, we clearly see the benefits of a fluid UI: font-sizes and spacings are dynamically adjusted, content won’t suddenly become bigger when reaching a new breakpoint.
 
@@ -53,19 +50,19 @@ In the side-by-side comparison above, we clearly see the benefits of a fluid UI:
 
 At its core, a fluid CSS property is based on a mathematic formula powered by the `calc()` CSS function and the `vw` unit:
 
-<figure>
-  <img
-    src="../../images/advanced-calc-800-opt.png"
-    alt="Fluid CSS calculation"
-  />
-  <figcaption>Illustration &copy; Smashing Magazine</figcaption>
-</figure>
+<Figure caption="Illustration &copy; Smashing Magazine">
+  <Image alt="Fluid CSS calculation" src={Image1} />
+</Figure>
 
 Four values need to be defined in order to make it work: minimum/maximum CSS values, and minimum/maximum breakpoints. With that formula, we tell the browser that we want our text to have a 16 pixels `font-size` at `400px`, 24 pixels at `800px`, and that it needs to adjust fluidly in-between. Here, we are using `px` values, but the formula will work equally fine with other values, such as `em` or `rem`.
 
 However, if we simply apply that formula without adding any breakpoint, we will face an issue. Our values will keep decreasing on smaller resolutions, and increasing on higher resolutions:
 
-TBD
+<ArticleOverflowContent>
+  <Figure caption="Fluid interface with no breakpoints">
+    <CloudVideo file="fluid-resize-no-breakpoints_fvhjxj" />
+  </Figure>
+</ArticleOverflowContent>
 
 In order to avoid that, we will have to update our code to add fixed minimum and maximum values. Our CSS class will look like this:
 

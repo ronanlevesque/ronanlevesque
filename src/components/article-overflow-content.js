@@ -1,10 +1,16 @@
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 
-const Subtitle = ({ as: Component = 'h2', children, className, ...other }) => (
+const ArticleOverflowContent = ({
+  as: Component = 'div',
+  children,
+  className,
+  ...other
+}) => (
   <Component
     className={cx(
-      'mb-0 font-libre italic text-blueBayoux ~text-18/24 ~mt-12/16',
+      'grid gap-[1.5em] ~text-14/18',
+      'xl:!ml-[-201px] xl:w-1200 xl:px-12',
       className
     )}
     {...other}
@@ -13,10 +19,10 @@ const Subtitle = ({ as: Component = 'h2', children, className, ...other }) => (
   </Component>
 );
 
-Subtitle.propTypes = {
+ArticleOverflowContent.propTypes = {
   as: PropTypes.string,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
 
-export default Subtitle;
+export default ArticleOverflowContent;
