@@ -22,7 +22,7 @@ const Home = () => (
         <SectionTitle>Previous experiences</SectionTitle>
         <JobsList data={workData} />
       </section>
-      <section className="~mt-48/96">
+      <section className="~mt-32/64">
         <SectionTitle>In another life…</SectionTitle>
         <JobsList data={previousWorkData} />
       </section>

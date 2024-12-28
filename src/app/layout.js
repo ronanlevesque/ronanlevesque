@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 const roboto_mono = Roboto_Mono({
-  style: ['normal'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-roboto-mono',
   weight: ['400', '700'],

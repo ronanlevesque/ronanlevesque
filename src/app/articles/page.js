@@ -32,7 +32,7 @@ const Articles = async () => {
           <SectionTitle as="h3">Recent articles</SectionTitle>
           <ArticlesList articles={articles} />
         </section>
-        <section className="~mt-48/96">
+        <section className="~mt-32/64">
           <SectionTitle as="h3">Archives (French)</SectionTitle>
           <ArticlesList articles={oldArticles} />
         </section>

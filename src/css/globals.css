@@ -92,7 +92,8 @@
     > pre,
     > figure,
     > blockquote,
-    > .info p,
+    > img,
+    > .info,
     > div {
       @apply ~my-24/28;
     }
@@ -123,6 +124,9 @@
 
     figure {
       @apply mx-0;
+      img {
+        @apply m-auto;
+      }
     }
 
     figcaption {
@@ -162,13 +166,8 @@
       }
     }
 
-    .info p {
-      code {
-        @apply not-italic;
-      }
-      &:before {
-        @apply mb-[0.8em] text-zircon content-['Information'];
-      }
+    .info p:before {
+      @apply mb-[0.8em] text-zircon content-['Information'];
     }
   }
 }

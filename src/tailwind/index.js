@@ -40,6 +40,7 @@ const spacing = {
   36: pxToRem(36),
   40: pxToRem(40),
   48: pxToRem(48),
+  64: pxToRem(64),
   80: pxToRem(80),
   96: pxToRem(96),
   120: pxToRem(120),
