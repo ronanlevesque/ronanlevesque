@@ -7,6 +7,7 @@ import SectionTitle from '@/components/section-title';
 import Subtitle from '@/components/subtitle';
 import Title from '@/components/title';
 
+import * as meta from '@/constants/meta';
 import * as routes from '@/constants/routes';
 
 import { getArticles } from '@/helpers';
@@ -14,7 +15,7 @@ import { getArticles } from '@/helpers';
 export const metadata = {
   description:
     'Tips, tutorials, useful resources, thoughts and questions around front-end development tools and languages.',
-  title: 'Articles | Ronan Levesque',
+  title: `Articles | ${meta.NAME}`,
 };
 
 const Articles = async () => {

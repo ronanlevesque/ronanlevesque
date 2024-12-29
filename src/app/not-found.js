@@ -6,11 +6,12 @@ import Iframe from '@/components/iframe';
 import Subtitle from '@/components/subtitle';
 import Title from '@/components/title';
 
+import * as meta from '@/constants/meta';
 import * as routes from '@/constants/routes';
 
 export const metadata = {
   description: 'This page doesn’t exist or was removed from the website.',
-  title: 'Page not found | Ronan Levesque',
+  title: `Page not found | ${meta.NAME}`,
 };
 
 const NotFound = () => (

@@ -3,7 +3,6 @@
 import cx from 'classnames';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-//import styles from './NavItem.css';
 
 import Svg from '@/components/svg';
 
@@ -27,7 +26,7 @@ const NavItem = ({ as: Component = Link, icon, onClick, ...other }) => (
     >
       <Svg
         aria-hidden
-        className="~w-18/24 pointer-events-none block h-auto"
+        className="pointer-events-none block h-auto ~w-18/24"
         name={icon.toLowerCase()}
       />
     </Component>

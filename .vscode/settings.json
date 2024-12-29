@@ -8,5 +8,6 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

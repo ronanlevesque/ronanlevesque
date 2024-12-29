@@ -1,6 +1,8 @@
 import Image from 'next/image';
 
 import Image1 from '@/images/justify-1.jpg';
+import Image2 from '@/images/justify-2.jpg';
+import Image3 from '@/images/justify-3.jpg';
 
 import MdxLayout from '@/layouts/mdx-layout';
 
@@ -71,11 +73,11 @@ Ou, pour une sémantique plus propre, se passer de l’élément `.break` et ajo
 
 Un autre souci à contourner, c’est le nombre d’éléments par ligne. Mettons qu’on ait 4 éléments par ligne et que la dernière ligne n’en affiche que 2. Les 2 éléments vont se justifier sur la longueur de la ligne, donnant un résultat plutôt indésirable :
 
-<Image src={Image1} alt="Justify1" />
+<Image src={Image2} alt="Justify2" />
 
 Pour éviter ce problème il faudra rajouter des "placeholders" invisibles qui permettront de rétablir l’équilibre. Dans cet exemple il en faudra donc 2 pour obtenir le résultat suivant :
 
-<Image src={Image1} alt="Justify1" />
+<Image src={Image3} alt="Justify3" />
 
 Le code ressemblera donc à :
 
@@ -132,7 +134,7 @@ L’énorme avantage de cette technique, c’est qu’elle est très facilement 
 }
 ```
 
-Beaucoup plus simple et moins casse-tête que les `nth-child` 😊 Par contre les marges horizontales sont calculées automatiquement, il faut donc un peu tâtonner pour trouver les valeurs exactes à appliquer aux `width` de nos éléments…
+Beaucoup plus simple et moins casse-tête que les `nth-child` 🙂 Par contre les marges horizontales sont calculées automatiquement, il faut donc un peu tâtonner pour trouver les valeurs exactes à appliquer aux `width` de nos éléments…
 
 ## Le support
 
