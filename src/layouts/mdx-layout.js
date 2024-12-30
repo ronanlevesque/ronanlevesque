@@ -13,9 +13,7 @@ const MdxLayout = ({ children, metadata }) => (
     <Nav text="Back to articles" link={routes.ARTICLES} withIcons={false} />
     <Hero>
       <Title className="text-zircon">{metadata.title}</Title>
-      <Subtitle as="time" className="block">
-        {formatDate(metadata.date)}
-      </Subtitle>
+      <Subtitle className="block">{formatDate(metadata.date)}</Subtitle>
     </Hero>
     <main className="with-border m-auto ~max-w-700/824">
       <article className="article-container leading-bigger text-manatee ~px-8/12 ~pb-48/96">

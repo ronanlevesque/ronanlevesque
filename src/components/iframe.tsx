@@ -1,7 +1,13 @@
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-const Iframe = ({ className, src, noMobile, title, ...other }) => (
+type IframeProps = {
+  className?: string;
+  noMobile?: boolean;
+  src: string;
+  title?: string;
+};
+
+const Iframe = ({ className, src, noMobile, title, ...other }: IframeProps) => (
   <div className={cx('relative bg-bunker pb-[60%]', className)} {...other}>
     <iframe
       className={cx(
@@ -30,12 +36,5 @@ const Iframe = ({ className, src, noMobile, title, ...other }) => (
     )}
   </div>
 );
-
-Iframe.propTypes = {
-  className: PropTypes.string,
-  noMobile: PropTypes.bool,
-  src: PropTypes.string.isRequired,
-  title: PropTypes.string,
-};
 
 export default Iframe;

@@ -1,10 +1,17 @@
 import cx from 'classnames';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 
 import ListItem from '@/components/list-item';
 
 import { formatDate } from '@/helpers';
+
+type ArticlesList = {
+  articles: Array<{
+    date: string;
+    slug: string;
+    title: string;
+  }>;
+};
 
 const ArticlesList = ({ articles, ...other }) => (
   <ul className="m-0 list-none p-0" {...other}>
@@ -38,13 +45,5 @@ const ArticlesList = ({ articles, ...other }) => (
     ))}
   </ul>
 );
-
-ArticlesList.propTypes = PropTypes.arrayOf(
-  PropTypes.shape({
-    date: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  }).isRequired
-).isRequired;
 
 export default ArticlesList;

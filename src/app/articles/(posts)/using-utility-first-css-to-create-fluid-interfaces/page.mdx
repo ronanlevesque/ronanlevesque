@@ -29,19 +29,15 @@ A fluid interface basically follows that exact same principle, but extends it to
 
 That kind of approach ensures that CSS values won’t “jump” when reaching a breakpoint, thus offering a better rendering on different viewports:
 
-<ArticleOverflowContent className="sm:g-2 grid">
-  <div>
-    <figure>
-      <CloudVideo file="responsive-resize_vtfzl3" />
-      <figcaption>Responsive interface</figcaption>
-    </figure>
-  </div>
-  <div>
-    <figure>
-      <CloudVideo file="fluid-resize_a3kcpv" />
-      <figcaption>Fluid interface</figcaption>
-    </figure>
-  </div>
+<ArticleOverflowContent className="grid sm:grid-cols-2">
+  <figure>
+    <CloudVideo file="responsive-resize_vtfzl3" />
+    <figcaption>Responsive interface</figcaption>
+  </figure>
+  <figure>
+    <CloudVideo file="fluid-resize_a3kcpv" />
+    <figcaption>Fluid interface</figcaption>
+  </figure>
 </ArticleOverflowContent>
 
 In the side-by-side comparison above, we clearly see the benefits of a fluid UI: font-sizes and spacings are dynamically adjusted, content won’t suddenly become bigger when reaching a new breakpoint.

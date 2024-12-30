@@ -1,9 +1,17 @@
 import cx from 'classnames';
-import PropTypes from 'prop-types';
 
 import ListItem from '@/components/list-item';
 
-const JobsList = ({ data }) => (
+type JobsListProps = {
+  data: Array<{
+    company: string;
+    end: number;
+    job: string;
+    start: number;
+  }>;
+};
+
+const JobsList = ({ data }: JobsListProps) => (
   <ul className="m-0 list-none p-0">
     {data.map((item) => (
       <ListItem key={`${item.company} - ${item.job}`}>
@@ -19,12 +27,12 @@ const JobsList = ({ data }) => (
               'sm:flex sm:grow sm:items-center'
             )}
           >
-            <span className="~w-200/260 block text-zircon">{item.company}</span>
+            <span className="block text-zircon ~w-200/260">{item.company}</span>
             <span className="block italic text-manatee">{item.job}</span>
           </p>
           <span
             className={cx(
-              'font-roboto-mono inline-flex text-right text-manatee ~text-14/16',
+              'inline-flex text-right font-roboto-mono text-manatee ~text-14/16',
               'xxs:shrink-0'
             )}
           >
@@ -35,18 +43,5 @@ const JobsList = ({ data }) => (
     ))}
   </ul>
 );
-
-JobsList.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      node: PropTypes.shape({
-        company: PropTypes.string.isRequired,
-        end: PropTypes.number.isRequired,
-        job: PropTypes.string.isRequired,
-        start: PropTypes.number.isRequired,
-      }).isRequired,
-    }).isRequired
-  ).isRequired,
-};
 
 export default JobsList;

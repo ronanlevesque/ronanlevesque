@@ -22,8 +22,8 @@ const Drawings = () => (
     </Hero>
     <main>
       <section>
-        <SectionTitle as="h3" withBorder={false}>
-          Colored
+        <SectionTitle asChild withBorder={false}>
+          <h3>Colored</h3>
         </SectionTitle>
       </section>
     </main>

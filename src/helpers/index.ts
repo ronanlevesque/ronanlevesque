@@ -1,6 +1,6 @@
 import { readdir } from 'fs/promises';
 
-export const formatDate = (date) => {
+export const formatDate = (date: string) => {
   const timestamp = new Date(date);
   return new Intl.DateTimeFormat('en-US', {
     day: 'numeric',
@@ -9,7 +9,7 @@ export const formatDate = (date) => {
   }).format(timestamp);
 };
 
-export const getArticles = async (folder) => {
+export const getArticles = async (folder: string) => {
   const slugs = (
     await readdir(`./src/app/articles/${folder}`, { withFileTypes: true })
   ).filter((dirent) => dirent.isDirectory());
@@ -25,4 +25,4 @@ export const getArticles = async (folder) => {
   return posts;
 };
 
-export const pxToRem = (px) => `${px * 0.0625}rem`;
+export const pxToRem = (px: number) => `${px * 0.0625}rem`;

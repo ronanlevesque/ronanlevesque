@@ -30,11 +30,15 @@ const Articles = async () => {
       </Hero>
       <main>
         <section>
-          <SectionTitle as="h3">Recent articles</SectionTitle>
+          <SectionTitle asChild>
+            <h3>Recent articles</h3>
+          </SectionTitle>
           <ArticlesList articles={articles} />
         </section>
         <section className="~mt-32/64">
-          <SectionTitle as="h3">Archives (French)</SectionTitle>
+          <SectionTitle asChild>
+            <h3>Archives (French)</h3>
+          </SectionTitle>
           <ArticlesList articles={oldArticles} />
         </section>
       </main>

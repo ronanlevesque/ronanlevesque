@@ -2,8 +2,8 @@
 
 import cx from 'classnames';
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 
+import NavIcon from '@/components/nav-icon';
 import NavItem from '@/components/nav-item';
 import SmallText from '@/components/small-text';
 import Svg from '@/components/svg';
@@ -12,7 +12,13 @@ import * as routes from '@/constants/routes';
 
 import socialData from '@/data/social';
 
-const Nav = ({ text, link, withIcons = true, ...other }) => (
+type NavProps = {
+  text: React.ReactNode;
+  link?: string;
+  withIcons?: boolean;
+};
+
+const Nav = ({ text, link, withIcons = true, ...other }: NavProps) => (
   <nav className="with-border" {...other}>
     <div className="flex items-center justify-between text-zircon ~h-48/64 ~px-8/12">
       <SmallText className="m-0 flex items-center justify-between font-medium ~h-32/40">
@@ -38,28 +44,31 @@ const Nav = ({ text, link, withIcons = true, ...other }) => (
       </SmallText>
       {withIcons ? (
         <ul className="relative m-0 flex list-none p-0">
-          {Object.keys(socialData).map((icon) => (
-            <NavItem key={icon} icon={icon} href={socialData[icon]} as="a" />
+          {Object.keys(socialData).map((name) => (
+            <NavItem asChild name={name} key={name}>
+              <Link href={socialData[name]}>
+                <NavIcon icon={name.toLowerCase()} />
+              </Link>
+            </NavItem>
           ))}
           <NavItem
-            as="button"
-            icon="Mail"
+            name="Mail"
             onClick={() => {
               navigator.clipboard.writeText('ronan.levesque@gmail.com');
               alert('Email address successfully copied to clipboard.');
             }}
-          />
-          <NavItem icon="Articles" href={routes.ARTICLES} />
+          >
+            <NavIcon icon="mail" />
+          </NavItem>
+          <NavItem asChild name="Articles">
+            <Link href={routes.ARTICLES}>
+              <NavIcon icon="articles" />
+            </Link>
+          </NavItem>
         </ul>
       ) : null}
     </div>
   </nav>
 );
-
-Nav.propTypes = {
-  text: PropTypes.node.isRequired,
-  link: PropTypes.string,
-  withIcons: PropTypes.bool,
-};
 
 export default Nav;

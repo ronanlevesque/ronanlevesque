@@ -24,8 +24,12 @@ const libre = Libre_Baskerville({
   weight: ['400', '700'],
 });
 
-const RootLayout = ({ children, lang = 'en' }) => (
-  <html lang={lang}>
+type RootLayoutProps = {
+  children: React.ReactNode;
+};
+
+const RootLayout = ({ children }: RootLayoutProps) => (
+  <html lang="en">
     <body
       className={cx(
         libre.variable,

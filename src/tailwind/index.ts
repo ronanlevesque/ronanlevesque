@@ -70,7 +70,7 @@ const sizes = {
   '100p': '100%',
 };
 
-module.exports = {
+const config = {
   corePlugins: {
     preflight: true,
   },
@@ -128,3 +128,5 @@ module.exports = {
     ...sizes,
   },
 };
+
+export default config;
