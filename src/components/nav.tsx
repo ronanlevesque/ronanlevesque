@@ -10,7 +10,7 @@ import Svg from '@/components/svg';
 
 import * as routes from '@/constants/routes';
 
-import socialData from '@/data/social';
+import socialData from '@/data/social.json';
 
 type NavProps = {
   text: React.ReactNode;

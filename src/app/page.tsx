@@ -6,8 +6,8 @@ import SectionTitle from '@/components/section-title';
 
 import * as meta from '@/constants/meta';
 
-import previousWorkData from '@/data/previous-work';
-import workData from '@/data/work';
+import previousWorkData from '@/data/previous-work.json';
+import workData from '@/data/work.json';
 
 export const metadata = {
   description:

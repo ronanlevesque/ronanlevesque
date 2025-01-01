@@ -24,6 +24,12 @@ const libre = Libre_Baskerville({
   weight: ['400', '700'],
 });
 
+export const metadata = {
+  openGraph: {
+    images: '/og-image.jpg',
+  },
+};
+
 type RootLayoutProps = {
   children: React.ReactNode;
 };

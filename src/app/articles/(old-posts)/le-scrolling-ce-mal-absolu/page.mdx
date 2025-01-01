@@ -1,7 +1,5 @@
 import Image from 'next/image';
 
-import Image1 from '@/images/pc-vs-tablet.png';
-
 import MdxLayout from '@/layouts/mdx-layout';
 
 export const metadata = {
@@ -24,7 +22,12 @@ Là où, en revanche, mon point de vue diffère de l’article ci-dessus, c’es
 
 Je n’aurais pas mieux dit 🙂 Prenons un exemple concret, basé sur un template responsive.
 
-<Image src={Image1} alt="Tablet vs pc" />
+<Image
+  src="/images/pc-vs-tablet.png"
+  alt="Tablet vs pc"
+  width={630}
+  height={272}
+/>
 
 Sur l’écran de gauche (ordinateur), la ligne de flottaison se situera en-dessous des deux premiers paragraphes. Sur l’écran de droite (tablette), elle se situera en-dessous du premier paragraphe. Alors attention : je ne dis surtout pas qu’il ne sert à rien de mettre les informations en haut de page, au contraire. Mais je pense que vouloir les faire apparaître au-dessus du *fold *a de moins en moins de sens aujourd’hui.
 

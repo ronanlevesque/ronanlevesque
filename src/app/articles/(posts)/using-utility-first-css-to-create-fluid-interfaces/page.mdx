@@ -4,8 +4,6 @@ import ArticleOverflowContent from '@/components/article-overflow-content';
 import CloudVideo from '@/components/cloud-video';
 import Figure from '@/components/figure';
 
-import Image1 from '@/images/advanced-calc-800-opt.png';
-
 import MdxLayout from '@/layouts/mdx-layout';
 
 export const metadata = {
@@ -47,7 +45,12 @@ In the side-by-side comparison above, we clearly see the benefits of a fluid UI:
 At its core, a fluid CSS property is based on a mathematic formula powered by the `calc()` CSS function and the `vw` unit:
 
 <Figure caption="Illustration &copy; Smashing Magazine">
-  <Image alt="Fluid CSS calculation" src={Image1} />
+  <Image
+    src="/images/advanced-calc-800-opt.png"
+    alt="Fluid CSS calculation"
+    width={800}
+    height={200}
+  />
 </Figure>
 
 Four values need to be defined in order to make it work: minimum/maximum CSS values, and minimum/maximum breakpoints. With that formula, we tell the browser that we want our text to have a 16 pixels `font-size` at `400px`, 24 pixels at `800px`, and that it needs to adjust fluidly in-between. Here, we are using `px` values, but the formula will work equally fine with other values, such as `em` or `rem`.

@@ -2,8 +2,6 @@ import Image from 'next/image';
 
 import Figure from '@/components/figure';
 
-import Image1 from '@/images/boutons-sociaux.jpg';
-
 import MdxLayout from '@/layouts/mdx-layout';
 
 export const metadata = {
@@ -16,7 +14,12 @@ export const metadata = {
 J’ai récemment lu un article intitulé _[Sweep the Sleaze](http://ia.net/blog/sweep-the-sleaze/)_ (balayer les ordures), écrit par Oliver Reichenstein de chez [iA](http://ia.net/). Dans cet article, Oliver tire à boulets rouges sur les boutons de partage qui ont envahi nos pages depuis quelques temps. Et je dois dire que je partage en effet la plupart de ses réticences.
 
 <Figure caption="Un aperçu désormais incontournable…">
-  <Image src={Image1} alt="Boutons sociaux" />
+  <Image
+    src="/images/boutons-sociaux.jpg"
+    alt="Boutons sociaux"
+    width={337}
+    height={65}
+  />
 </Figure>
 
 Il est aujourd’hui rare de voir un site qui n’est pas affublé de la ribambelles de boutons de partage en tout genre : Twitter, Facebook, Google+, Pinterest, voire des réseaux moins connus… ceux-ci paraissent être rentrés dans nos moeurs, mais sont-ils réellement indispensables ? Et si c’est le cas, n’existe-t-il pas de solution alternative aux solutions natives ?

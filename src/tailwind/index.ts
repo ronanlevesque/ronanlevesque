@@ -124,6 +124,9 @@ const config = {
   screens: {
     ...breakpoints,
   },
+  spacing: {
+    ...spacing,
+  },
   width: {
     ...sizes,
   },

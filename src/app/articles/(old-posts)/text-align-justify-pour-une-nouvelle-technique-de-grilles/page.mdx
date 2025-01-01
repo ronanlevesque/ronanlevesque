@@ -1,9 +1,5 @@
 import Image from 'next/image';
 
-import Image1 from '@/images/justify-1.jpg';
-import Image2 from '@/images/justify-2.jpg';
-import Image3 from '@/images/justify-3.jpg';
-
 import MdxLayout from '@/layouts/mdx-layout';
 
 export const metadata = {
@@ -29,7 +25,7 @@ Le problème de la deuxième méthode, c’est qu’elle est plutôt pénible à
 
 La technique proposée par Barrel est la suivante : appliquer la propriété `text-align:justify` (fonctionnant avec `inline` ET `inline-block`) au conteneur pour laisser le navigateur gérer tout seul les marges horizontales entre chacun des éléments d’une même ligne. Par contre, le comportement par défaut de `text-align:justify` opère sur toutes les lignes d’un texte sauf la dernière. Si il y a une seule ligne, celle-ci sera aussi considérée comme la dernière. Pour que la magie opère il faut donc créer une "ligne" invisible située en-dessous de la ligne concernée (visible en bleu ci-dessous) :
 
-<Image src={Image1} alt="Justify1" />
+<Image src="/images/justify-1.jpg" alt="Justify1" width={666} height={224} />
 
 Pour reprendre l’exemple de Barrel il faudrait donc avoir le code suivant :
 
@@ -73,11 +69,11 @@ Ou, pour une sémantique plus propre, se passer de l’élément `.break` et ajo
 
 Un autre souci à contourner, c’est le nombre d’éléments par ligne. Mettons qu’on ait 4 éléments par ligne et que la dernière ligne n’en affiche que 2. Les 2 éléments vont se justifier sur la longueur de la ligne, donnant un résultat plutôt indésirable :
 
-<Image src={Image2} alt="Justify2" />
+<Image src="/images/justify-2.jpg" alt="Justify2" width={666} height={378} />
 
 Pour éviter ce problème il faudra rajouter des "placeholders" invisibles qui permettront de rétablir l’équilibre. Dans cet exemple il en faudra donc 2 pour obtenir le résultat suivant :
 
-<Image src={Image3} alt="Justify3" />
+<Image src="/images/justify-3.jpg" alt="Justify3" width={666} height={378} />
 
 Le code ressemblera donc à :
 

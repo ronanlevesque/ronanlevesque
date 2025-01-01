@@ -2,8 +2,6 @@ import Image from 'next/image';
 
 import Figure from '@/components/figure';
 
-import Image1 from '@/images/responsive-iceberg.jpg';
-
 import MdxLayout from '@/layouts/mdx-layout';
 
 export const metadata = {
@@ -34,7 +32,12 @@ Je vais partir d’un modèle que j’ai hélas rencontré fréquemment par le p
 **Qu’est ce qui cloche avec cette façon de faire ?** Le problème saute d’emblée aux yeux, l’équipe technique est intégrée en fin de boucle. Pour comprendre pourquoi cela est un gros souci, il est nécessaire de bien saisir la nuance entre responsive design et adaptive design. Rien de mieux qu’un schéma pour ça :
 
 <Figure caption="Responsive Iceberg, &copy; Brad Frost">
-  <Image src={Image1} alt="Responsive Iceberg" />
+  <Image
+    src="/images/responsive-iceberg.jpg"
+    alt="Responsive Iceberg"
+    width={1024}
+    height={768}
+  />
 </Figure>
 
 Le responsive design n’est en réalité qu’une partie de ce qu’on appelle l’adaptive design. Celui-ci ajoute une forte touche de complexité qui ne doit pas être prise à la légère : gestion des performances, des médias (notamment images), primauté du contenu sur le contenant, chargement conditionnel, amélioration progressive etc.
