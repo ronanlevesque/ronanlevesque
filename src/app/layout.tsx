@@ -1,6 +1,8 @@
 import { Libre_Baskerville, Roboto, Roboto_Mono } from 'next/font/google';
 import cx from 'classnames';
 
+import * as meta from '@/constants/meta';
+
 import '@/css/globals.css';
 
 const roboto = Roboto({
@@ -25,7 +27,9 @@ const libre = Libre_Baskerville({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://ronanlevesque.com'),
+  metadataBase: new URL(
+    process.env.NODE_ENV === 'production' ? meta.URL : 'http://localhost:3000'
+  ),
   openGraph: {
     images: '/og-image.jpg',
   },

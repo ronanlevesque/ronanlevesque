@@ -1,7 +1,6 @@
-import path from 'path';
-
 import ArticleLayout from './article-layout';
 
+import * as directory from '@/constants/directory';
 import * as meta from '@/constants/meta';
 
 import { getSlugs } from '@/helpers';
@@ -21,16 +20,8 @@ export async function generateMetadata({ params }: ParamsProps) {
   };
 }
 
-const articlesDir = path.join(
-  process.cwd(),
-  'src',
-  'app',
-  'articles',
-  '_content'
-);
-
 export function generateStaticParams() {
-  return getSlugs(articlesDir);
+  return getSlugs(directory.ARTICLES);
 }
 
 const Article = async ({ params }: ParamsProps) => {
