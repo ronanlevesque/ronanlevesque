@@ -25,6 +25,7 @@ const libre = Libre_Baskerville({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://ronanlevesque.com'),
   openGraph: {
     images: '/og-image.jpg',
   },

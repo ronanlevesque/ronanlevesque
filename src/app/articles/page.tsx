@@ -19,8 +19,9 @@ export const metadata = {
 };
 
 const Articles = async () => {
-  const articles = await getArticles('(posts)');
-  const oldArticles = await getArticles('(old-posts)');
+  const articles = await getArticles();
+  const recentArticles = articles.filter((article) => !article.archive);
+  const oldArticles = articles.filter((article) => article.archive);
   return (
     <>
       <Nav text="Back to Homepage" link={routes.HOME} withIcons={false} />
@@ -33,7 +34,7 @@ const Articles = async () => {
           <SectionTitle asChild>
             <h3>Recent articles</h3>
           </SectionTitle>
-          <ArticlesList articles={articles} />
+          <ArticlesList articles={recentArticles} />
         </section>
         <section className="~mt-32/64">
           <SectionTitle asChild>
