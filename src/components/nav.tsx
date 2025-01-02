@@ -51,17 +51,15 @@ const Nav = ({ text, link, withIcons = true, ...other }: NavProps) => (
               </Link>
             </NavItem>
           ))}
-          {navigator?.clipboard ? (
-            <NavItem
-              name="Mail"
-              onClick={() => {
-                navigator.clipboard.writeText('ronan.levesque@gmail.com');
-                alert('Email address successfully copied to clipboard.');
-              }}
-            >
-              <NavIcon icon="mail" />
-            </NavItem>
-          ) : null}
+          <NavItem
+            name="Mail"
+            onClick={() => {
+              navigator.clipboard.writeText('ronan.levesque@gmail.com');
+              alert('Email address successfully copied to clipboard.');
+            }}
+          >
+            <NavIcon icon="mail" />
+          </NavItem>
           <NavItem asChild name="Articles">
             <Link href={routes.ARTICLES}>
               <NavIcon icon="articles" />
