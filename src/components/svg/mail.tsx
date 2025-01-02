@@ -1,4 +1,4 @@
-const SvgComponent = (props) => (
+const SvgComponent = (props: React.HTMLAttributes<SVGElement>) => (
   <svg
     fill="none"
     height="24"
