@@ -106,7 +106,7 @@
     pre {
       @apply rounded bg-bunker;
       code {
-        @apply block overflow-auto p-[1em];
+        @apply block overflow-auto rounded-b bg-bunker p-[1em];
       }
       &:before {
         @apply block rounded-t bg-bunkerDarker py-[0.5em] text-blueBayoux content-[attr(data-lang)] ~px-12/16;

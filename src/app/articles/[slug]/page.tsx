@@ -5,6 +5,8 @@ import * as meta from '@/constants/meta';
 
 import { getSlugs } from '@/helpers';
 
+import '@/css/tokyo-night-dark.css';
+
 type ParamsProps = {
   params: Promise<{
     slug: string;
