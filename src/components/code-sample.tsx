@@ -1,5 +1,5 @@
 const CodeSample = ({ children }) => (
-  <pre data-lang={children.props.className.replace('hljs language-', '')}>
+  <pre data-lang={children?.props?.className?.replace('hljs language-', '')}>
     {children}
   </pre>
 );

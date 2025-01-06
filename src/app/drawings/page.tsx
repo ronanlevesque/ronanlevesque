@@ -45,7 +45,7 @@ const Drawings = () => (
         </SectionTitle>
         <Image
           alt="Board for a movie called The Rite"
-          className="block w-100p"
+          className="block w-100p ~px-8/12"
           height={1256}
           src="/images/drawings/boards/rite.jpg"
           width={667}
@@ -57,7 +57,7 @@ const Drawings = () => (
         </SectionTitle>
         <Image
           alt="Board describing some old neighbours issues"
-          className="block w-100p"
+          className="block w-100p ~px-8/12"
           height={585}
           src="/images/drawings/boards/voisinage.jpg"
           width={314}
@@ -69,7 +69,7 @@ const Drawings = () => (
         </SectionTitle>
         <Image
           alt="Board describing the chaos in Saint-Lazare"
-          className="block w-100p"
+          className="block w-100p ~px-8/12"
           height={1270}
           src="/images/drawings/boards/saint-lazare.jpg"
           width={667}
