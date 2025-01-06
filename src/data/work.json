@@ -1,5 +1,17 @@
 [
   {
+    "company": "Algolia",
+    "job": "Engineering Manager",
+    "start": 2020,
+    "end": 2024
+  },
+  {
+    "company": "Algolia",
+    "job": "Senior Software Engineer",
+    "start": 2017,
+    "end": 2020
+  },
+  {
     "company": "MFG Labs (Havas)",
     "job": "Lead Front-end Developer",
     "start": 2015,

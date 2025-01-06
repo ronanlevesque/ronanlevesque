@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .with-border {
+    @apply after:block after:h-1 after:bg-gradient-to-r after:from-midnight after:from-10% after:via-sanJuan after:to-midnight after:to-90%;
+  }
+
+  .article-container {
+    * {
+      @apply mb-0 mt-0;
+    }
+
+    > * + * {
+      @apply ~mt-16/18;
+    }
+
+    > *:first-child {
+      @apply mt-0;
+    }
+
+    > *:last-child {
+      @apply mb-0;
+    }
+
+    h2 {
+      @apply font-bold ~text-18/24;
+    }
+
+    h2,
+    h3 {
+      @apply text-zircon ~mt-36/48;
+    }
+
+    h3 {
+      @apply font-medium uppercase tracking-widest ~text-14/16;
+    }
+
+    p,
+    li,
+    figure,
+    div {
+      @apply ~text-16/18;
+    }
+
+    p,
+    li,
+    figure {
+      code,
+      kbd {
+        @apply rounded-md bg-bunker px-[0.3em] py-[0.2em] ~text-14/16;
+      }
+    }
+
+    ul,
+    ol {
+      @apply list-none p-0;
+      li:before {
+        @apply inline-block text-zircon;
+      }
+    }
+
+    ul li {
+      @apply pl-[1em];
+      &:before {
+        @apply ml-[-1em] w-[1em] font-bold content-['•'];
+      }
+    }
+
+    ol {
+      counter-reset: numbers;
+      li {
+        @apply pl-[1.5em];
+        counter-increment: numbers;
+        &:before {
+          @apply ml-[-1.5em] w-[1.5em];
+          content: counter(numbers) '.';
+        }
+      }
+    }
+
+    a,
+    figcaption {
+      @apply text-linkWater;
+    }
+
+    a {
+      @apply underline transition hover:text-zircon focus:text-zircon;
+    }
+
+    > pre,
+    > figure,
+    > blockquote,
+    > img,
+    > .info,
+    > div {
+      @apply ~my-24/28;
+    }
+
+    pre,
+    figcaption {
+      @apply ~text-14/16;
+    }
+
+    pre {
+      @apply rounded-md bg-bunker;
+      code {
+        @apply block overflow-auto rounded-md bg-bunker p-[1em];
+      }
+      &[data-lang]:before {
+        @apply block rounded-t-md bg-bunkerDarker py-[0.5em] text-blueBayoux content-[attr(data-lang)] ~px-12/16;
+      }
+    }
+
+    code,
+    kbd {
+      @apply font-roboto-mono text-linkWater;
+    }
+
+    video {
+      @apply border-2 border-sanJuan;
+    }
+
+    figure {
+      @apply mx-0;
+      img {
+        @apply m-auto;
+      }
+    }
+
+    figcaption {
+      @apply mx-auto mt-[0.8em] w-90p text-center font-libre italic;
+    }
+
+    blockquote {
+      @apply font-libre italic;
+    }
+
+    blockquote,
+    .info p {
+      @apply mx-0 border-l-2 border-sanJuan pl-[1.2em] italic;
+    }
+
+    blockquote,
+    pre,
+    .info p {
+      &:before {
+        @apply block font-roboto uppercase not-italic tracking-widest ~text-12/14;
+      }
+    }
+
+    blockquote {
+      &:before {
+        @apply mb-[0.8em] text-zircon content-['Quote'];
+      }
+
+      p {
+        &:before {
+          @apply content-['“'];
+        }
+
+        &:after {
+          @apply content-['”'];
+        }
+      }
+    }
+
+    .info p:before {
+      @apply mb-[0.8em] text-zircon content-['Information'];
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

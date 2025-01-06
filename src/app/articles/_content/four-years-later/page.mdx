@@ -1,0 +1,179 @@
+---
+title: 'Four years later…'
+description: 'Just me reflecting on this website, as well as sharing some findings and learnings.'
+date: 2024-01-06T00:00:00Z
+---
+
+import Image from 'next/image';
+import Link from 'next/link';
+
+import ArticleOverflowContent from '@/components/article-overflow-content';
+import Figure from '@/components/figure';
+
+A few years ago, I used to write a lot about my discoveries, learnings, struggles in the magical world of front-end web developement. At one point, I would write more than one article monthly, which I guess is a decent pace. However, I recently realized that the [last piece](/articles/using-utility-first-css-to-create-fluid-interfaces) I wrote was in 2020, almost **4 years ago**. Well, that’s _a lot of time_. Why did I stop, you may ask? 🤔 Well, it’s pretty simple, and not so original:
+
+- First, Covid appeared, and many priorities (mine included) shifted.
+- And then, I had my 3rd child. At this point if you are a parent you should already know how busy the first years can be.
+
+Those two elements combined slowly moved me away from this website, and I didn’t keep much attention focused on it and its aging stack. But recently I decided it was time to get rid of all the dust and give it some attention, [once again](/articles/reviving-my-blog).
+
+<ArticleOverflowContent>
+  <Figure caption="Illustration &copy; Tom Toro">
+    <Image
+      src="/images/its-alive.jpg"
+      className="w-100p"
+      alt="Illustration of a cat, Frankenstein style"
+      width={900}
+      height={803}
+    />
+  </Figure>
+</ArticleOverflowContent>
+
+## Under the hood
+
+So, what exactly has changed? In appearance, not so much. I’m still satisfied with my old design, and I didn’t want to change it just for the sake of changing. In the end, I have tweaked a few details here and there, but the core design remains the same.
+
+<ArticleOverflowContent className="grid sm:grid-cols-2">
+  <Figure caption="Old article page">
+    <Link href="/images/old-page-before-2024.png">
+      <Image
+        src="/images/old-page-before-2024.png"
+        className="w-100p border border-sanJuan"
+        alt="Old page, before 2024"
+        width={1752}
+        height={1012}
+      />
+    </Link>
+  </Figure>
+  <Figure caption="New article page">
+    <Link href="/images/new-page-after-2024.png">
+      <Image
+        src="/images/new-page-after-2024.png"
+        className="w-100p border border-sanJuan"
+        alt="New page, after 2024"
+        width={1752}
+        height={1012}
+      />
+    </Link>
+  </Figure>
+</ArticleOverflowContent>
+
+However, under the hood, it’s a another story: _everything is now different_. I have rewritten the codebase from scratch, save for the logic, behaviour and naming of the components which power the design of this website.
+
+- The first choice I have made was to move away from [Gatsby](https://www.gatsbyjs.com/) in favor of [Next.js](https://nextjs.org/). I had been using the latter a lot over at Algolia, and it was an easy decision to make.
+- I have decided to take the occasion to move the codebase to [TypeScript](https://www.typescriptlang.org/). Even though TS can be _very annoying_ sometimes, its strong typing is just too good to be ignored. It was just a no-brainer.
+- I have ditched the CSS framework we built at Algolia, and which was not maintained anymore, in favor of… [Tailwind](https://tailwindcss.com/) (what a surprise).
+- And finally, the website is not hosted on [Netlify](https://www.netlify.com/) anymore. I have moved it to [Vercel](https://vercel.com/), which seems logical since Next.js is a Vercel product. And I do like Vercel products a lot.
+
+## Discoveries & learnings
+
+During the process of rebuilding my website, I had the opportunity to test some ideas, concepts or methodologies. I think some of them are interesting to share here, so here we go.
+
+### Next.JS App Router
+
+The first learning was an obvious one: since I had decided to make the move to Next.js, I could as well go and use their (not so) new App Router approach, as opposed to the old Pages Router one. The first one uses **server components** by default, whereas the second one uses **client components**. There are many other differences, but the most impactful one in terms of project architecture is the folder structure. Assuming you are using a `src` folder, it will look a bit like this:
+
+```
+Pages Router (files)
+--
+src
+  |_ _app.tsx
+  |_ index.tsx
+  |_ about.tsx
+  |_ another-page.tsx
+```
+
+```
+App Router (nested folders)
+--
+src
+  |_ app
+      |_ layout.tsx
+      |_ page.tsx
+      |_ about
+          |_ page.tsx
+      |_ another-page
+          |_ page.tsx
+```
+
+Even though I could have used the Pages Router for a project as simple as this one, I felt like it would be interesting to give the App Router a try so that I can get a better idea of it works. Plus, while they both support dynamic routing, I like the explicit approach of the new router better.
+
+### Bye, polymorphic components
+
+If you know what a polymorphic component is, chances are high that you felt a cold sweat running down your spine while reading the term, especially if you use TS.
+
+If you don’t, let me explain with a brief example:
+
+```jsx
+const Title = ({ as: Component = 'h1', children }) => (
+  <Component>{children}</Component>
+);
+
+// Usage
+render(<Title as="h2">My title</Title>);
+```
+
+Simple, right? A polymorphic component lets you easily change its default element by passing a new one through a property (usually `as` by convention). However it’s pretty common to make mistakes while using it by passing a prop which is not valid, eg. a `href` on a `button`.
+
+That’s why strong typing is very important when working on that kind of component. It can be quite tricky to generate sometimes though, and it also seems to have performance issues.
+
+While digging for other alternatives, I discovered the `asChild` pattern, made popular – or invented – by [Radix](https://www.radix-ui.com/primitives/docs/guides/composition). Its usage is pretty straightforward:
+
+```jsx
+render(
+  <Title>Text</Title>
+  // Will render <h1>Text</h1>
+
+  <Title asChild>
+    <h2>Text</h2>
+  </Title>
+  // Will render <h2>Text</h2>
+);
+```
+
+If you are looking for implementation details, [this article](https://medium.com/@bryanmylee/aschild-in-react-svelte-vue-and-solid-for-render-delegation-645c73650ced) helped me a lot.
+
+### MDX and layouts
+
+[MDX](https://mdxjs.com/) is basically Markdown + JSX combined, which makes perfect sense with a React stack. I was already using it on my previous stack, so the blog migration process was quite easy. The only issue I faced was with the shared layouts of the posts. This is how Next.js [tells us to do it]():
+
+```jsx
+import MdxLayout from '../components/mdx-layout';
+
+// Blog content in Markdown
+
+export default function MDXPage({ children }) {
+  return <MdxLayout>{children}</MdxLayout>;
+}
+```
+
+Definitely not a big fan of having this on every MDX file. And, luckily, it seems I’m not the only one. After some digging, I have found [this solution](https://vstollen.me/blog/advanced-mdx-layouts) by Vincent Stollenwerk, which is exactly what I was looking to achieve. By using [dynamic routes](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes) and combining them with the `generateStaticParams` function, I was able to statically generate all my routes via `[slug]/page.tsx`, while keeping my MDX files clean and easy to port. 🥳
+
+### Fluid Tailwind
+
+My website has been using a **fluid interface** for a while, and there was no doubt that I would keep it for this new iteration.
+
+<div className="info">
+  If you are not familiar with the concept of fluid interfaces, I suggest that
+  you read my [last
+  piece](/articles/using-utility-first-css-to-create-fluid-interfaces) which
+  explains what it is, and how it works.
+</div>
+
+As mentioned before, I was using an internal CSS framework, which we had built internally at Algolia. It was following the same principle as Tailwind and its utility-first approach. Unfortunately, we did not have enough time on our hands to maintain it, so at one point we switched to Tailwind, and we built a custom solution to implement a fluid interface on our projects.
+
+When I started rebuilding my website, I googled "fluid tailwind" and I was very pleased to see that there is an existing project, called [Fluid for Tailwind CSS](https://fluid.tw/), which does exactly what I wanted to achieve! The syntax is pretty easy to grasp:
+
+```html
+<div class="~p-8/16">Hello there.</div>
+```
+
+In this example, our `div` will have a padding of 8px on small resolutions, then it will grow fluidly from 8px to 16px between our two selected breakpoints, and it will stay at 16px after our largest breakpoint. Perfect!
+
+## Wrapping up
+
+As a closing word, I can definitely tell that I’m happy with this new iteration. I know it’s not perfect, and I may adjust some parts here and there, but overall it’s enough for my needs. And, more importantly, it helped me revive the flame for my side projects, which I had slowly let extinguish, because, you know, _life_.
+
+That being said, I don’t know when I will write another blog post. It might be in a week, a month, a year, but what is important is that I don’t feel pressured, and that I just enjoy doing it.
+
+That’s all for now… Oh, and **happy new year** of course! 🎉

@@ -4,17 +4,10 @@
   "editor.renderWhitespace": "boundary",
   "editor.tabSize": 2,
   "editor.wordWrap": "wordWrapColumn",
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "editor.wordWrapColumn": 80,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "search.exclude": {
-    "public/**": true,
-    "node_modules/**": true
-  }
-  // "typescript.tsserver.experimental.enableProjectDiagnostics": true
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
