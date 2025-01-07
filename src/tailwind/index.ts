@@ -40,6 +40,7 @@ const spacing = {
   36: pxToRem(36),
   40: pxToRem(40),
   48: pxToRem(48),
+  60: pxToRem(60),
   64: pxToRem(64),
   80: pxToRem(80),
   96: pxToRem(96),
@@ -66,6 +67,9 @@ const sizes = {
   200: pxToRem(200),
   260: pxToRem(260),
   1200: pxToRem(1200),
+  '40p': '40%',
+  '50p': '50%',
+  '60p': '60%',
   '90p': '90%',
   '100p': '100%',
 };
@@ -91,6 +95,7 @@ const config = {
     18: pxToRem(18),
     20: pxToRem(20),
     24: pxToRem(24),
+    28: pxToRem(28),
     32: pxToRem(32),
     48: pxToRem(48),
   },
@@ -118,6 +123,9 @@ const config = {
     1000: pxToRem(1000),
     1200: pxToRem(1200),
   },
+  minWidth: {
+    ...sizes,
+  },
   padding: {
     ...spacing,
   },
@@ -128,6 +136,7 @@ const config = {
     ...spacing,
   },
   width: {
+    auto: 'auto',
     ...sizes,
   },
 };

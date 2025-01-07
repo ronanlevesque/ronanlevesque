@@ -44,11 +44,11 @@ const Drawings = () => (
           <h3>The Rite (board)</h3>
         </SectionTitle>
         <Image
+          src="/images/drawings/boards/rite.jpg"
           alt="Board for a movie called The Rite"
           className="block w-100p ~px-8/12"
-          height={1256}
-          src="/images/drawings/boards/rite.jpg"
           width={667}
+          height={1256}
         />
       </section>
       <section className="~mt-32/64">
@@ -56,11 +56,11 @@ const Drawings = () => (
           <h3>The Rite (board)</h3>
         </SectionTitle>
         <Image
+          src="/images/drawings/boards/voisinage.jpg"
           alt="Board describing some old neighbours issues"
           className="block w-100p ~px-8/12"
-          height={585}
-          src="/images/drawings/boards/voisinage.jpg"
           width={314}
+          height={585}
         />
       </section>
       <section className="~mt-32/64">

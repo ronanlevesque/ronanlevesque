@@ -31,11 +31,11 @@ const DrawingsList = async ({
       >
         <li className="list-none p-0">
           <Image
+            src={`/images/drawings/${folder}/small/${drawing}-small.jpg`}
             alt={`Drawing named ${drawing}`}
             className="block h-auto w-100p border-0"
-            height={160}
-            src={`/images/drawings/${folder}/small/${drawing}-small.jpg`}
             width={160}
+            height={160}
           />
         </li>
       </a>
