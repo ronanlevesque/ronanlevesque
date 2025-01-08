@@ -21,28 +21,26 @@ type NavProps = {
 const Nav = ({ text, link, withIcons = true, ...other }: NavProps) => (
   <nav className="with-border" {...other}>
     <div className="flex items-center justify-between text-zircon ~h-48/64 ~px-8/12">
-      <SmallText className="m-0 flex items-center justify-between font-medium ~h-32/40">
-        {link ? (
-          <Link
+      {link ? (
+        <Link
+          className={cx(
+            'group flex h-100p items-center justify-between text-zircon no-underline'
+          )}
+          href={link}
+        >
+          <Svg
+            aria-hidden
             className={cx(
-              'group flex h-100p items-center justify-between text-zircon no-underline'
+              'block h-auto text-manatee transition ~mr-8/12 ~w-18/24',
+              'group-hover:text-linkWater group-focus:text-linkWater'
             )}
-            href={link}
-          >
-            <Svg
-              aria-hidden
-              className={cx(
-                'block h-auto text-manatee transition ~mr-8/12 ~w-18/24',
-                'group-hover:text-linkWater group-focus:text-linkWater'
-              )}
-              name="arrow-left"
-            />
-            {text}
-          </Link>
-        ) : (
-          text
-        )}
-      </SmallText>
+            name="arrow-left"
+          />
+          <SmallText className="font-medium">{text}</SmallText>
+        </Link>
+      ) : (
+        <SmallText className="font-medium">{text}</SmallText>
+      )}
       {withIcons ? (
         <ul className="relative m-0 flex list-none p-0">
           {Object.keys(socialData).map((name) => (
