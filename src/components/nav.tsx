@@ -30,6 +30,7 @@ const Nav = ({ text, link, withIcons = true, ...other }: NavProps) => (
             href={link}
           >
             <Svg
+              aria-hidden
               className={cx(
                 'block h-auto text-manatee transition ~mr-8/12 ~w-18/24',
                 'group-hover:text-linkWater group-focus:text-linkWater'
