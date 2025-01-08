@@ -8,7 +8,7 @@ type SubtitleProps = {
 const Subtitle = ({ children, className, ...other }: SubtitleProps) => (
   <h2
     className={cx(
-      'mb-0 font-libre italic text-blueBayoux ~text-18/24 ~mt-12/16',
+      'mb-0 font-libre italic text-blueBayoux ~text-18/24 ~mt-8/12',
       className
     )}
     {...other}
