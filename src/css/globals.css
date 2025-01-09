@@ -25,7 +25,7 @@
     }
 
     h2 {
-      @apply font-bold ~text-20/24;
+      @apply font-bold ~text-20/28;
     }
 
     h2,
