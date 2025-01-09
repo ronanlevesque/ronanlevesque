@@ -19,7 +19,7 @@ const Intro = () => (
       <p className="m-0 inline">Hello!</p> I’m{' '}
       <h1 className="m-0 inline">Ronan Levesque</h1>
       <p className="m-0 inline">
-        , an Engineering Manager and former Senior Software Engineer. I ❤️
+        , an Engineering Manager and former Senior Software Engineer. I love
         pushing pixels around and playing with{' '}
         <Link
           className={cx(
@@ -33,7 +33,7 @@ const Intro = () => (
         to build fast and powerful web apps.
       </p>
       <p className="text-manatee ~mt-20/32">
-        I’m currently looking for new work opportunities, don’t hesitate to{' '}
+        ➡️ I’m currently looking for new work opportunities, don’t hesitate to{' '}
         <Link
           className={cx(
             'text-zircon no-underline transition',
@@ -49,7 +49,7 @@ const Intro = () => (
     <div
       className={cx(
         'hidden ~py-32/64',
-        'md:min-w-40p md:absolute md:right-0 md:top-0 md:block md:h-100p'
+        'md:absolute md:right-0 md:top-0 md:block md:h-100p md:min-w-40p'
       )}
     >
       <Image
