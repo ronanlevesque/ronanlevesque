@@ -30,7 +30,7 @@ const Article = async ({ params }: ParamsProps) => {
   const { slug } = await params;
   const content = await import(`../_content/${slug}/page.mdx`);
   return (
-    <ArticleLayout frontmatter={content.frontmatter}>
+    <ArticleLayout frontmatter={content.frontmatter} slug={slug}>
       <content.default />
     </ArticleLayout>
   );

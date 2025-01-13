@@ -20,10 +20,7 @@ const SectionTitle = ({
   const Component = asChild ? Slot : 'h2';
   return (
     <SmallText
-      className={cx(
-        'm-0 font-medium text-manatee',
-        withBorder && 'with-border'
-      )}
+      className={cx('m-0 text-manatee', withBorder && 'with-border')}
       {...other}
     >
       <Component className="flex items-center ~h-48/64 ~px-8/12">

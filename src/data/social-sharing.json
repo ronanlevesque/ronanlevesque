@@ -1,0 +1,18 @@
+{
+  "Bluesky": {
+    "name": "bluesky-filled",
+    "url": "https://bsky.app/intent/compose?text="
+  },
+  "LinkedIn": {
+    "name": "linkedin",
+    "url": "https://www.linkedin.com/shareArticle?url="
+  },
+  "Mastodon": {
+    "name": "mastodon",
+    "url": "https://mastodonshare.com/?url="
+  },
+  "Threads": {
+    "name": "threads",
+    "url": "https://threads.net/intent/post?text="
+  }
+}

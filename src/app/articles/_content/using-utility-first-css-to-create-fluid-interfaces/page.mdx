@@ -31,7 +31,7 @@ A fluid interface basically follows that exact same principle, but extends it to
 
 That kind of approach ensures that CSS values won’t “jump” when reaching a breakpoint, thus offering a better rendering on different viewports:
 
-<ArticleOverflowContent className="grid sm:grid-cols-2">
+<div className="grid sm:grid-cols-2 sm:gap-[1.5em]">
   <figure>
     <CloudVideo file="responsive-resize_vtfzl3" />
     <figcaption>Responsive interface</figcaption>
@@ -40,7 +40,7 @@ That kind of approach ensures that CSS values won’t “jump” when reaching a
     <CloudVideo file="fluid-resize_a3kcpv" />
     <figcaption>Fluid interface</figcaption>
   </figure>
-</ArticleOverflowContent>
+</div>
 
 In the side-by-side comparison above, we clearly see the benefits of a fluid UI: font-sizes and spacings are dynamically adjusted, content won’t suddenly become bigger when reaching a new breakpoint.
 
@@ -61,11 +61,9 @@ Four values need to be defined in order to make it work: minimum/maximum CSS val
 
 However, if we simply apply that formula without adding any breakpoint, we will face an issue. Our values will keep decreasing on smaller resolutions, and increasing on higher resolutions:
 
-<ArticleOverflowContent>
-  <Figure caption="Fluid interface with no breakpoints">
-    <CloudVideo file="fluid-resize-no-breakpoints_fvhjxj" />
-  </Figure>
-</ArticleOverflowContent>
+<Figure caption="Fluid interface with no breakpoints">
+  <CloudVideo file="fluid-resize-no-breakpoints_fvhjxj" />
+</Figure>
 
 In order to avoid that, we will have to update our code to add fixed minimum and maximum values. Our CSS class will look like this:
 

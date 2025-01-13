@@ -67,11 +67,14 @@ const sizes = {
   200: pxToRem(200),
   260: pxToRem(260),
   1200: pxToRem(1200),
+  '30p': '30%',
   '40p': '40%',
   '50p': '50%',
   '60p': '60%',
+  '70p': '70%',
   '90p': '90%',
   '100p': '100%',
+  '100vh': '100vh',
 };
 
 const config = {
@@ -116,6 +119,7 @@ const config = {
     ...spacing,
   },
   maxWidth: {
+    none: 'none',
     600: pxToRem(600),
     700: pxToRem(700),
     800: pxToRem(800),
