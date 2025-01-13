@@ -62,11 +62,11 @@ const Sidebar = ({ slug, toc }) => (
       <SmallText asChild className="text-linkWater">
         <h3>Share this link:</h3>
       </SmallText>
-      <ul className={cx('~mt-8/12', 'xs:flex xs:items-center lg:block')}>
+      <ul className={cx('~mt-10/12', 'xs:flex xs:items-center lg:block')}>
         {Object.keys(socialSharingData).map((icon: string, index: number) => (
           <li
             className={cx(
-              index > 0 && 'mt-4/8 xs:mt-0 xs:~ml-16/20 lg:ml-0 lg:mt-8'
+              index > 0 && '~mt-6/8 xs:mt-0 xs:~ml-16/20 lg:ml-0 lg:mt-8'
             )}
             key={index}
           >

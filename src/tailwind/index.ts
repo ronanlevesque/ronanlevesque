@@ -27,6 +27,7 @@ const colors = {
 const spacing = {
   0: 0,
   4: pxToRem(4),
+  6: pxToRem(6),
   8: pxToRem(8),
   10: pxToRem(10),
   12: pxToRem(12),
