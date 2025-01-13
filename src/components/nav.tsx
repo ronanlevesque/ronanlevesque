@@ -36,10 +36,10 @@ const Nav = ({ text, link, withIcons = true, ...other }: NavProps) => (
             )}
             name="arrow-left"
           />
-          <SmallText className="font-medium">{text}</SmallText>
+          <SmallText>{text}</SmallText>
         </Link>
       ) : (
-        <SmallText className="font-medium">{text}</SmallText>
+        <SmallText>{text}</SmallText>
       )}
       {withIcons ? (
         <ul className="relative m-0 flex list-none p-0">

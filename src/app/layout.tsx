@@ -40,7 +40,7 @@ type RootLayoutProps = {
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => (
-  <html lang="en">
+  <html className="scroll-smooth" id="top" lang="en">
     <body
       className={cx(
         libre.variable,

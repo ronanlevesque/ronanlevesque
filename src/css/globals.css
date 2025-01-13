@@ -170,6 +170,16 @@
       @apply mb-[0.8em] text-zircon content-['Information'];
     }
   }
+
+  .toc {
+    li ul {
+      @apply lg:ml-16 lg:mt-8;
+    }
+
+    li + li {
+      @apply lg:mt-8;
+    }
+  }
 }
 
 @layer utilities {

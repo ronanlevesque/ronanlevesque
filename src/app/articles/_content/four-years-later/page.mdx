@@ -7,7 +7,6 @@ date: 2024-01-06T00:00:00Z
 import Image from 'next/image';
 import Link from 'next/link';
 
-import ArticleOverflowContent from '@/components/article-overflow-content';
 import Figure from '@/components/figure';
 
 A few years ago, I used to write a lot about my discoveries, learnings, struggles in the magical world of front-end web developement. At one point, I would write more than one article monthly, which I guess is a decent pace. However, I recently realized that the [last piece](/articles/using-utility-first-css-to-create-fluid-interfaces) I wrote was in 2020, almost **4 years ago**. Well, that’s _a lot of time_. Why did I stop, you may ask? 🤔 Well, it’s pretty simple, and not so original:
@@ -17,23 +16,21 @@ A few years ago, I used to write a lot about my discoveries, learnings, struggle
 
 Those two elements combined slowly moved me away from this website, and I didn’t keep much attention focused on it and its aging stack. But recently I decided it was time to get rid of all the dust and give it some attention, [once again](/articles/reviving-my-blog).
 
-<ArticleOverflowContent>
-  <Figure caption="Illustration &copy; Tom Toro">
-    <Image
-      src="/images/its-alive.jpg"
-      alt="Illustration of a cat, Frankenstein style"
-      className="w-100p"
-      width={900}
-      height={803}
-    />
-  </Figure>
-</ArticleOverflowContent>
+<Figure caption="Illustration &copy; Tom Toro">
+  <Image
+    src="/images/its-alive.jpg"
+    alt="Illustration of a cat, Frankenstein style"
+    className="w-100p"
+    width={900}
+    height={803}
+  />
+</Figure>
 
 ## Under the hood
 
 So, what exactly has changed? In appearance, not so much. I’m still satisfied with my old design, and I didn’t want to change it just for the sake of changing. In the end, I have tweaked a few details here and there, but the core design remains the same.
 
-<ArticleOverflowContent className="grid sm:grid-cols-2">
+<div className="grid sm:grid-cols-2 sm:gap-[1.5em]">
   <Figure caption="Old article page">
     <Link href="/images/old-page-before-2024.png">
       <Image
@@ -56,7 +53,7 @@ So, what exactly has changed? In appearance, not so much. I’m still satisfied 
       />
     </Link>
   </Figure>
-</ArticleOverflowContent>
+</div>
 
 However, under the hood, it’s a another story: _everything is now different_. I have rewritten the codebase from scratch, save for the logic, behaviour and naming of the components which power the design of this website.
 

@@ -1,6 +1,6 @@
-import React from 'react';
-
 // Credits go to https://medium.com/@bryanmylee/aschild-in-react-svelte-vue-and-solid-for-render-delegation-645c73650ced
+
+import React from 'react';
 
 type AnyProps = Record<string, any>;
 
@@ -13,15 +13,12 @@ function mergeReactProps(parentProps: AnyProps, childProps: AnyProps) {
     const childPropValue = childProps[propName];
 
     const isHandler = /^on[A-Z]/.test(propName);
-    // If it's a handler, modify the override by composing the base handler.
     if (isHandler) {
-      // Only compose the handlers if both exist.
       if (childPropValue && parentPropValue) {
         overrideProps[propName] = (...args: unknown[]) => {
           childPropValue?.(...args);
           parentPropValue?.(...args);
         };
-        // Otherwise, avoid creating an unnecessary callback.
       } else if (parentPropValue) {
         overrideProps[propName] = parentPropValue;
       }
@@ -55,7 +52,7 @@ function combinedRef<TInstance>(refs: React.Ref<TInstance>[]) {
 }
 
 type SlotProps = {
-  children?: React.ReactNode; // Only one child allowed.
+  children?: React.ReactNode;
 };
 
 const Slot = React.forwardRef<HTMLElement, SlotProps>((props, forwardedRef) => {
