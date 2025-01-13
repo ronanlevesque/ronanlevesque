@@ -126,7 +126,6 @@ const config = {
     824: pxToRem(824),
     1000: pxToRem(1000),
     1200: pxToRem(1200),
-    1400: pxToRem(1400),
   },
   minWidth: {
     ...sizes,
