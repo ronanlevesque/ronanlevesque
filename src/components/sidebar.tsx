@@ -43,7 +43,7 @@ const Sidebar = ({ slug, toc }) => (
   <aside
     className={cx(
       '~mt-36/48 ~px-8/12',
-      'lg:sticky lg:top-40 lg:mr-8 lg:mt-0 lg:max-h-[calc(100vh-80px)] lg:w-[calc(30%-8px)] lg:overflow-auto lg:px-0'
+      'lg:sticky lg:top-40 lg:mr-12 lg:mt-0 lg:max-h-[calc(100vh-80px)] lg:w-[calc(30%-12px)] lg:overflow-auto lg:px-0'
     )}
   >
     <div className={cx('rounded-md bg-bunker ~p-20/24', 'lg:ml-40')}>
@@ -78,7 +78,7 @@ const Sidebar = ({ slug, toc }) => (
                 className="~h-16/18 ~w-16/18"
                 name={socialSharingData[icon].name}
               />
-              <span className="~text-14/16 ~ml-6/8">{icon}</span>
+              <span className="~ml-6/8 ~text-14/16">{icon}</span>
             </Link>
           </li>
         ))}
