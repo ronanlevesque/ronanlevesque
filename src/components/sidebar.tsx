@@ -87,7 +87,8 @@ const Sidebar = ({ slug, toc }) => (
         className="inline-flex text-blueBayoux transition ~text-14/16 ~mt-24/32 hover:text-manatee"
         href="#top"
       >
-        ⇑ Scroll back to top
+        <span>⇑</span>
+        <span className="~ml-6/8">Scroll back to top</span>
       </a>
     </div>
   </aside>
