@@ -106,10 +106,10 @@
     pre {
       @apply rounded-md bg-bunker;
       code {
-        @apply block overflow-auto rounded-md bg-bunker p-[1em];
+        @apply block overflow-auto rounded-md bg-bunker ~p-20/24;
       }
       &[data-lang]:before {
-        @apply block rounded-t-md bg-bunkerDarker py-[0.5em] text-blueBayoux content-[attr(data-lang)] ~px-12/16;
+        @apply block rounded-t-md bg-bunkerDarker text-blueBayoux content-[attr(data-lang)] ~px-12/16 ~py-6/10;
       }
     }
 
@@ -130,7 +130,7 @@
     }
 
     figcaption {
-      @apply mx-auto mt-[0.8em] w-90p text-center font-libre italic;
+      @apply mx-auto w-90p text-center font-libre italic ~mt-12/16;
     }
 
     blockquote {
@@ -139,7 +139,7 @@
 
     blockquote,
     .info p {
-      @apply mx-0 border-l-2 border-sanJuan pl-[1.2em] italic;
+      @apply mx-0 border-l-2 border-sanJuan italic ~pl-20/24;
     }
 
     blockquote,
@@ -152,7 +152,7 @@
 
     blockquote {
       &:before {
-        @apply mb-[0.8em] text-zircon content-['Quote'];
+        @apply text-zircon content-['Quote'] ~mb-12/14;
       }
 
       p {
@@ -167,7 +167,7 @@
     }
 
     .info p:before {
-      @apply mb-[0.8em] text-zircon content-['Information'];
+      @apply text-zircon content-['Information'] ~mb-12/14;
     }
   }
 
