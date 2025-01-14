@@ -152,7 +152,7 @@
 
     blockquote {
       &:before {
-        @apply text-zircon content-['Quote'] ~mb-12/14;
+        @apply text-zircon content-['Quote'] ~mb-8/12;
       }
 
       p {
@@ -167,7 +167,7 @@
     }
 
     .info p:before {
-      @apply text-zircon content-['Information'] ~mb-12/14;
+      @apply text-zircon content-['Information'] ~mb-8/12;
     }
   }
 
