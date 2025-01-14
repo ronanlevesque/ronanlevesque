@@ -130,7 +130,7 @@
     }
 
     figcaption {
-      @apply mx-auto w-90p text-center font-libre italic ~mt-12/16;
+      @apply mx-auto w-90p text-center font-libre italic ~mt-8/12;
     }
 
     blockquote {
