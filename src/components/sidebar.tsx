@@ -78,7 +78,7 @@ const Sidebar = ({ slug, toc }) => (
                 className="~h-16/18 ~w-16/18"
                 name={socialSharingData[icon].name}
               />
-              <span className="~ml-6/8 ~text-14/16">{icon}</span>
+              <span className="~text-14/16 ~ml-6/8">{icon}</span>
             </Link>
           </li>
         ))}
