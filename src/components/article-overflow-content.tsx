@@ -12,7 +12,7 @@ const ArticleOverflowContent = ({
 }: ArticleOverflowContentProps) => (
   <div
     className={cx(
-      'grid gap-[1.5em]',
+      'grid ~gap-24/28',
       'xl:!ml-[-201px] xl:w-1200 xl:px-12',
       className
     )}
