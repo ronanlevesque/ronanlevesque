@@ -106,7 +106,7 @@
     pre {
       @apply rounded-md bg-bunker;
       code {
-        @apply block overflow-auto rounded-md bg-bunker ~p-20/24;
+        @apply block overflow-auto rounded-md bg-bunker !~p-12/16;
       }
       &[data-lang]:before {
         @apply block rounded-t-md bg-bunkerDarker text-blueBayoux content-[attr(data-lang)] ~px-12/16 ~py-6/10;
