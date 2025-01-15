@@ -1,6 +1,8 @@
 // Credits go to https://claritydev.net/blog/nextjs-blog-remark-interactive-table-of-contents
 
 import fs from 'fs';
+
+import GithubSlugger from 'github-slugger';
 import matter from 'gray-matter';
 import { toString } from 'mdast-util-to-string';
 import { remark } from 'remark';
@@ -10,15 +12,12 @@ import { visit } from 'unist-util-visit';
 import * as directory from '@/constants/directory';
 
 const addID = (node, nodes) => {
-  const id = node.children.map((c) => c.value).join('');
+  const slugger = new GithubSlugger();
+  const id = slugger.slug(node.children.map((c) => c.value).join(''));
   nodes[id] = (nodes[id] || 0) + 1;
   node.data = node.data || {
     hProperties: {
-      id: `${id}${nodes[id] > 1 ? ` ${nodes[id] - 1}` : ''}`
-        .replace(/[^a-zA-Z\d\s-]/g, '')
-        .split(' ')
-        .join('-')
-        .toLowerCase(),
+      id: `${id}${nodes[id] > 1 ? ` ${nodes[id] - 1}` : ''}`,
     },
   };
 };
