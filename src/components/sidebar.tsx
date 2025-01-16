@@ -6,6 +6,9 @@ import Link from 'next/link';
 import SmallText from '@/components/small-text';
 import Svg from '@/components/svg';
 
+import * as meta from '@/constants/meta';
+import * as routes from '@/constants/routes';
+
 import socialSharingData from '@/data/social-sharing.json';
 
 const renderNodes = (
@@ -69,7 +72,7 @@ const Sidebar = ({ slug, toc }) => (
             key={index}
           >
             <Link
-              href={`${socialSharingData[icon].url}https://ronanlevesque.com/articles/${slug}`}
+              href={`${socialSharingData[icon].url}${meta.URL}${routes.ARTICLES}${slug}`}
               className="inline-flex items-center text-blueBayoux transition hover:text-manatee"
             >
               <Svg
