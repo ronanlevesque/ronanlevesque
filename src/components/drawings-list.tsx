@@ -9,7 +9,7 @@ type DrawingsListProps = {
   folder: string;
 };
 
-const DrawingsList = async ({
+const DrawingsList = ({
   drawings,
   className,
   folder,

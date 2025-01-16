@@ -5,7 +5,7 @@ import ListItem from '@/components/list-item';
 
 import { formatDate } from '@/helpers';
 
-type ArticlesList = {
+type ArticlesListProps = {
   articles: Array<{
     date: string;
     slug: string;
@@ -13,7 +13,7 @@ type ArticlesList = {
   }>;
 };
 
-const ArticlesList = ({ articles, ...other }) => (
+const ArticlesList = ({ articles, ...other }: ArticlesListProps) => (
   <ul className="m-0 list-none p-0" {...other}>
     {articles.map(({ date, slug, title }) => (
       <ListItem key={title}>
