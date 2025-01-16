@@ -8,7 +8,7 @@ import Svg from '@/components/svg';
 
 import socialSharingData from '@/data/social-sharing.json';
 
-function renderNodes(
+const renderNodes = (
   nodes: Array<{
     data: {
       hProperties: {
@@ -18,26 +18,24 @@ function renderNodes(
     value: string;
     children?: [];
   }>
-) {
-  return (
-    <ul className="toc">
-      {nodes.map((node) => (
-        <li
-          className="lg:text-16 lg:text-blueBayoux"
-          key={node.data.hProperties.id}
+) => (
+  <ul className="toc">
+    {nodes.map((node) => (
+      <li
+        className="lg:text-16 lg:text-blueBayoux"
+        key={node.data.hProperties.id}
+      >
+        <a
+          className="lg:inline-flex lg:transition lg:hover:text-manatee"
+          href={`#${node.data.hProperties.id}`}
         >
-          <a
-            className="lg:inline-flex lg:transition lg:hover:text-manatee"
-            href={`#${node.data.hProperties.id}`}
-          >
-            {node.value}
-          </a>
-          {node.children?.length > 0 && renderNodes(node.children)}
-        </li>
-      ))}
-    </ul>
-  );
-}
+          {node.value}
+        </a>
+        {node.children?.length > 0 && renderNodes(node.children)}
+      </li>
+    ))}
+  </ul>
+);
 
 const Sidebar = ({ slug, toc }) => (
   <aside
