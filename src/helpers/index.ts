@@ -26,11 +26,11 @@ export const getArticles = async () => {
   return posts;
 };
 
-export function getSlugs(dir: string) {
+export const getSlugs = (dir: string) => {
   const allFiles = fs.readdirSync(dir, { withFileTypes: true });
   const directories = allFiles.filter((file) => file.isDirectory());
   const slugs = directories.map(({ name }) => ({ slug: name }));
   return slugs;
-}
+};
 
 export const pxToRem = (px: number) => `${px * 0.0625}rem`;
