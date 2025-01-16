@@ -54,7 +54,7 @@ const Sidebar = ({ slug, toc }) => (
       <div className={cx('hidden', 'lg:mb-32 lg:mt-12 lg:block')}>
         {!toc?.length ? (
           <p className="lg:mt-12 lg:font-libre lg:text-16 lg:italic lg:text-blueBayoux">
-            There is no table of content available for this entry.
+            There is no table of contents available for this entry.
           </p>
         ) : (
           renderNodes(toc)
