@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import SmallText from '@/components/small-text';
 import Svg from '@/components/svg';
+import TocLink from '@/components/toc-link';
 
 import * as meta from '@/constants/meta';
 import * as routes from '@/constants/routes';
@@ -28,12 +29,7 @@ const renderNodes = (
         className="lg:text-16 lg:text-blueBayoux"
         key={node.data.hProperties.id}
       >
-        <a
-          className="lg:inline-flex lg:transition lg:hover:text-manatee"
-          href={`#${node.data.hProperties.id}`}
-        >
-          {node.value}
-        </a>
+        <TocLink node={node} />
         {node.children?.length > 0 && renderNodes(node.children)}
       </li>
     ))}
