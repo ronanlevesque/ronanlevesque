@@ -30,7 +30,7 @@
 
     h2,
     h3 {
-      @apply text-zircon ~mt-36/48;
+      @apply text-zircon ~mt-24/32 ~pt-12/16;
     }
 
     h3 {
