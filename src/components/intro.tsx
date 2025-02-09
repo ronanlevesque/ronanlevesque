@@ -55,7 +55,7 @@ const Intro = () => (
       <Image
         src="/images/ronan-levesque.png"
         alt="A picture of me, being casual"
-        className="md:m-auto md:h-100p md:w-auto md:opacity-70"
+        className="md:m-auto md:h-100p md:w-auto md:opacity-75"
         blurDataURL="/images/ronan-levesque.png"
         placeholder="blur"
         width={1567}
