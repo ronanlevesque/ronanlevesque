@@ -19,8 +19,21 @@ const Intro = () => (
       <p className="m-0 inline">Hello!</p> I’m{' '}
       <h1 className="m-0 inline">Ronan Levesque</h1>
       <p className="m-0 inline">
-        , an Engineering Manager and former Senior Software Engineer. I love
-        pushing pixels around and playing with{' '}
+        , an Engineering Manager and former Senior Software Engineer, currently
+        working at{' '}
+        <Link
+          className={cx(
+            'text-zircon no-underline transition',
+            'hover:text-white'
+          )}
+          href="https://www.neoxam.com"
+        >
+          NeoXam
+        </Link>
+        .
+      </p>
+      <p className="text-manatee ~mt-20/32">
+        I love pushing pixels around and playing with{' '}
         <Link
           className={cx(
             'text-zircon no-underline transition',
@@ -30,20 +43,17 @@ const Intro = () => (
         >
           React
         </Link>{' '}
-        to build fast and powerful web apps.
-      </p>
-      <p className="text-manatee ~mt-20/32">
-        ➡️ I’m currently looking for new work opportunities, don’t hesitate to{' '}
+        or{' '}
         <Link
           className={cx(
             'text-zircon no-underline transition',
             'hover:text-white'
           )}
-          href="https://www.linkedin.com/in/ronanlevesque"
+          href="https://vuejs.org"
         >
-          contact me
-        </Link>
-        !
+          Vue
+        </Link>{' '}
+        to build fast and powerful apps.
       </p>
     </div>
     <div
